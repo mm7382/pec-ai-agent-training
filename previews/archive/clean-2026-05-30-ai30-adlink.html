@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>現在學AI，真的還不晚：30天從小白到上手！ - ADLINK 教學</title>
+  <style>
+    :root {
+      --ad-dark:#252C2E;
+      --ad-gray:#797979;
+      --ad-light:#F4F5F6;
+      --ad-line:#D8D8D8;
+      --ad-red:#D0333A;
+      --ad-cyan:#1CB9D8;
+      --ad-green:#94C11F;
+      --ad-purple:#7D3189;
+      --ad-orange:#EC672C;
+      --ad-yellow:#FAB428;
+      --white:#FFFFFF;
+      --shadow:0 18px 44px rgba(37,44,46,.13);
+      --r:12px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);
+      color:var(--ad-dark);
+      line-height:1.7;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);
+      background-size:44px 44px;
+      opacity:.42;
+      z-index:-3;
+    }
+    .ad-cover{
+      min-height:680px;
+      background:
+        linear-gradient(90deg,rgba(37,44,46,.97) 0%,rgba(37,44,46,.92) 56%,rgba(37,44,46,.70) 100%),
+        radial-gradient(circle at 74% 26%,rgba(208,51,58,.22),transparent 24rem),
+        radial-gradient(circle at 90% 78%,rgba(28,185,216,.18),transparent 22rem);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border-bottom:10px solid var(--ad-red);
+    }
+    .ad-cover::after{
+      content:"";
+      position:absolute;
+      right:0;top:0;bottom:0;
+      width:34%;
+      background:linear-gradient(135deg,transparent 0%,transparent 45%,rgba(208,51,58,.95) 45%,rgba(208,51,58,.95) 60%,rgba(28,185,216,.88) 60%,rgba(28,185,216,.88) 68%,transparent 68%);
+      opacity:.9;
+    }
+    .ad-cover-inner{max-width:1180px;margin:auto;padding:52px 24px 64px;position:relative;z-index:2;min-height:680px;display:flex;flex-direction:column}
+    .ad-cover-top{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .ad-logo-white{font-size:44px;font-weight:800;letter-spacing:.02em;color:#fff}
+    .ad-logo-white::after{content:"";display:block;width:210px;height:5px;margin-top:10px;background:linear-gradient(90deg,var(--ad-red) 0 34%,var(--ad-cyan) 34% 58%,var(--ad-green) 58% 76%,var(--ad-yellow) 76%)}
+    .ad-cover-kicker{color:#d9d9d9;font-size:15px;letter-spacing:.02em;text-align:right}
+    .ad-cover-main{margin-top:auto;margin-bottom:48px;max-width:900px}
+    .ad-cover-label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);color:#fff;font-weight:700;letter-spacing:.08em;font-size:13px;text-transform:uppercase}
+    .ad-cover-label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ad-red);box-shadow:18px 0 0 var(--ad-cyan),36px 0 0 var(--ad-green);margin-right:38px}
+    .ad-cover h1{font-size:clamp(42px,6vw,74px);line-height:1.05;letter-spacing:0;margin:26px 0 20px;max-width:980px;font-weight:800}
+    .ad-cover-subtitle{font-size:21px;line-height:1.65;color:rgba(255,255,255,.86);max-width:850px;border-left:6px solid var(--ad-red);padding-left:18px}
+    .ad-cover-footer{margin-top:auto;display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.72);font-size:15px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+    .wrap{max-width:1180px;margin:0 auto;padding:38px 24px 72px}
+    .section-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--ad-gray);letter-spacing:.08em;text-transform:uppercase;margin:34px 0 14px}
+    .section-label::before{content:"";width:26px;height:4px;background:var(--ad-red);display:inline-block}
+    .card{position:relative;overflow:hidden;border:1px solid var(--ad-line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);color:var(--ad-dark)}
+    .card h2{margin:0 0 12px;line-height:1.18}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0f1;color:#9c2028;font-weight:800;font-size:13px;margin-bottom:14px}
+    .lead{font-size:19px;color:#3b4548;max-width:860px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .chip,.tag{display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--ad-line);background:var(--ad-light);padding:6px 10px;color:var(--ad-dark);font-size:13px;font-weight:700}
+    .source-card{border-left:6px solid var(--ad-red);background:#fff;padding:18px 20px;border-radius:var(--r);border-top:1px solid var(--ad-line);border-right:1px solid var(--ad-line);border-bottom:1px solid var(--ad-line);box-shadow:var(--shadow)}
+    .quote{font-size:18px;font-weight:800;color:var(--ad-dark);line-height:1.55}
+    .section{margin-top:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{padding:24px}
+    .card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--ad-red)}
+    .card:nth-child(3n+2)::before{background:var(--ad-cyan)}
+    .card:nth-child(3n)::before{background:var(--ad-green)}
+    .card h2{font-size:24px}
+    .card p{margin:0 0 10px;color:#3b4548}
+    ul{margin:10px 0 0;padding-left:20px}
+    li{margin:6px 0;color:#3b4548}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .step{background:#fff;border:1px solid var(--ad-line);border-radius:var(--r);padding:16px;box-shadow:0 12px 24px rgba(37,44,46,.08)}
+    .step b{display:block;color:var(--ad-red);margin-bottom:8px}
+    .warning{border-left:8px solid var(--ad-yellow);background:#fffaf0}
+    .okbox{border-left:8px solid var(--ad-green);background:#fbfff5}
+    .source-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    a.btn{display:inline-flex;align-items:center;text-decoration:none;color:#fff;background:var(--ad-dark);border-radius:8px;padding:10px 12px;font-weight:800}
+    a.btn.secondary{background:var(--ad-red)}
+    @media (max-width:900px){
+      .ad-cover,.ad-cover-inner{min-height:auto}
+      .ad-cover-inner{padding:34px 20px 44px}
+      .ad-cover-top,.ad-cover-footer{flex-direction:column;align-items:flex-start;text-align:left}
+      .ad-cover::after{display:none}
+      .grid,.grid2,.flow{grid-template-columns:1fr}
+      .wrap{padding:22px 14px 48px}
+      .card{padding:20px}
+    }
+    @media print{
+      body{background:#fff}
+      body::before,.ad-cover::after{display:none}
+      .ad-cover{min-height:auto;border-bottom:6px solid var(--ad-red)}
+      .ad-cover-inner{min-height:auto;padding:28px 20px}
+      .wrap{max-width:100%;padding:12px}
+      .card,.source-card{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <section class="ad-cover" aria-label="ADLINK PPT style cover">
+    <div class="ad-cover-inner">
+      <div class="ad-cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo">ADLINK</div>
+        <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br/>May 2026</div>
+      </div>
+      <div class="ad-cover-main">
+        <div class="ad-cover-label">Engineering AI Training</div>
+        <h1>現在學AI，真的還不晚：30天從小白到上手！</h1>
+        <p class="ad-cover-subtitle">YouTube 教學教材｜ADLINK 內訓 HTML 版型</p>
+      </div>
+      <div class="ad-cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>HTML Training Material</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="section-label">Training Highlights</div>
+    <section class="section grid">
+      
+        <article class="card">
+          <h2>教學目標</h2>
+          <ul><li>把影片內容整理成 ADLINK 內訓可閱讀的 HTML 教材。若沒有逐字稿或截圖，影片細節先標記待觀看補齊，不做臆測。</li></ul>
+        </article>
+        <article class="card">
+          <h2>適合對象</h2>
+          <ul><li>需要快速吸收影片重點的工程師與 PM</li><li>需要把 YouTube 內容改寫成內部教材的人</li><li>RF / SIE / EMC / Thermal / ME / Safety 等工程角色</li></ul>
+        </article>
+        <article class="card">
+          <h2>章節地圖</h2>
+          <ul><li>先確認影片主題與學習目標</li><li>再整理核心觀念與操作步驟</li><li>最後列出截圖時間戳、待補資料與驗收清單</li></ul>
+        </article>
+    </section>
+
+    <div class="section-label">Lesson Structure</div>
+    <section class="section card">
+      <h2>課程架構建議</h2>
+      <div class="flow">
+        <div class="step"><b>01</b><span>教學目標</span></div><div class="step"><b>02</b><span>適合對象</span></div><div class="step"><b>03</b><span>章節地圖</span></div><div class="step"><b>04</b><span>操作步驟草案</span></div><div class="step"><b>05</b><span>待補資料清單</span></div>
+      </div>
+    </section>
+
+    <div class="section-label">Detailed Notes</div>
+    <section class="section grid2">
+      
+        <article class="card ">
+          <h2>操作步驟草案</h2>
+          <ul><li>觀看影片並標記關鍵段落</li><li>補上必要截圖與時間戳</li><li>將影片重點改寫成工程師可執行的步驟</li></ul>
+        </article>
+        <article class="card warning">
+          <h2>待補資料清單</h2>
+          <ul><li>影片逐字稿</li><li>關鍵時間戳截圖</li><li>需要連結到 ADLINK 工作情境的案例</li></ul>
+        </article>
+        <article class="card ">
+          <h2>驗收清單</h2>
+          <ul><li>版型符合 ADLINK 內訓風格</li><li>不輸出簡體字</li><li>不產生教學重點摘要首頁或黑色影片框</li><li>不捏造尚未確認的影片細節</li></ul>
+        </article>
+    </section>
+
+    <div class="section-label">Source</div>
+    <section class="section source-card">
+      <h2>影片來源</h2>
+      <p class="lead">此教材依 YouTube 連結建立教學架構；若要補成完整教材，請提供逐字稿或關鍵截圖。</p>
+      <div class="source-row">
+        <a class="btn secondary" href="https://youtu.be/vWzKHp9yl3M?si=uWGopDj08DsSv9Yk">開啟 YouTube</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 第二大腦：文字、圖片與 Skill 的 Agent 知識庫 - ADLINK 內容分析教材</title>
+  <style>
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:url("../assets/brand/adlink-logo-white.png");--logo-full:url("../assets/brand/adlink-logo-full.png")}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);background-size:44px 44px;opacity:.42;z-index:-1}
+    .cover{min-height:650px;background:linear-gradient(110deg,rgba(37,44,46,.98),rgba(37,44,46,.91));color:#fff;border-bottom:10px solid var(--red)}
+    .cover-inner{max-width:1180px;margin:0 auto;min-height:650px;padding:52px 24px 58px;display:flex;flex-direction:column}
+    .cover-top,.cover-footer{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .ad-logo-white{width:260px;height:78px;background:var(--logo-white) left center/contain no-repeat;flex:0 0 auto}
+    .ad-logo-full{width:min(240px,70vw);height:46px;background:var(--logo-full) left center/contain no-repeat;margin-bottom:18px}
+    .cover-kicker{font-size:15px;color:rgba(255,255,255,.74);text-align:right}
+    .cover-main{margin:auto 0 44px;max-width:980px}
+    .label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:13px;color:#fff}
+    .label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:18px 0 0 var(--cyan),36px 0 0 var(--green);margin-right:38px}
+    h1{font-size:clamp(40px,5vw,66px);line-height:1.08;margin:26px 0 20px;letter-spacing:0;overflow-wrap:anywhere;word-break:break-word}
+    .subtitle{font-size:21px;color:rgba(255,255,255,.86);border-left:6px solid var(--red);padding-left:18px;max-width:850px}
+    .cover-footer{margin-top:auto;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;color:rgba(255,255,255,.72);font-size:15px}
+    header{background:#fff;color:var(--dark);padding:42px 28px 38px;border-bottom:8px solid var(--red);box-shadow:var(--shadow)}
+    .wrap{max-width:1180px;margin:0 auto}
+    .eyebrow{display:inline-flex;padding:7px 13px;border-radius:3px;background:var(--dark);color:#fff;font-size:14px;margin-bottom:18px;font-weight:800}
+    header h1{font-size:46px;color:var(--dark);margin:0 0 14px}
+    .lead{font-size:20px;color:#4b5558;max-width:980px;margin:0 0 22px}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+    .metric{background:var(--light);border:1px solid var(--line);border-radius:8px;padding:17px}
+    .metric b{display:block;color:var(--red);font-size:28px;line-height:1}
+    .metric small{display:block;color:#596265;font-weight:800;margin-top:6px}
+    nav{position:sticky;top:0;z-index:5;background:rgba(244,245,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    nav .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:12px 20px}
+    nav a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;color:var(--dark);font-weight:800}
+    nav a:hover{color:var(--red);border-color:var(--red);background:#fff7f7}
+    main{padding:34px 20px 64px}
+    section{max-width:1180px;margin:0 auto 30px}
+    .section-title{display:flex;align-items:center;gap:14px;margin:34px 0 18px;border-bottom:1px solid var(--line);padding-bottom:12px;position:relative}
+    .section-title::after{content:"";position:absolute;left:0;bottom:-2px;width:120px;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan))}
+    .section-title span{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:2px;background:var(--red);color:#fff;font-weight:900;box-shadow:8px 8px 0 rgba(208,51,58,.16)}
+    h2{font-size:30px;line-height:1.25;margin:0;color:var(--dark);letter-spacing:0}
+    h3{font-size:21px;line-height:1.35;margin:0 0 10px;color:var(--dark);letter-spacing:0}
+    p{font-size:17px;color:#394245;margin:0 0 12px}
+    ul{margin:0;padding-left:22px}
+    li{font-size:17px;margin:8px 0;color:#394245}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:22px;color:var(--dark)}
+    .span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+    .term-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:12px}
+    .term-title{font-size:24px;font-weight:900;color:var(--dark)}
+    .term-sub{color:var(--gray);font-weight:800}
+    .pill,.tag{display:inline-flex;align-items:center;border-radius:3px;padding:4px 9px;font-size:13px;font-weight:900}
+    .pill{background:#fff0f1;color:#9c2028;border:1px solid #ffd1d5;white-space:nowrap}
+    .tag{background:#fbfff5;color:#5E7C11;border:1px solid #cce29c;margin:4px 6px 0 0}
+    .tag.blue{background:#eefbff;color:#167d96;border-color:#b9ebf5}.tag.warn{background:#fff9e8;color:#9a6500;border-color:#f4d48a}.tag.red{background:#fff0f1;color:#9c2028;border-color:#ffd1d5}
+    .example,.source-note{border-left:5px solid var(--cyan);background:#f7fcfd;padding:13px 14px;margin-top:14px;color:#3b484b;font-size:15px}
+    .warning{border-left:5px solid var(--orange);background:#fff8f4;padding:13px 14px;margin-top:14px;color:#53372d;font-size:15px}
+    .prompt-card{padding:0;overflow:hidden}
+    .prompt-head{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--dark);color:#fff;padding:14px 16px}
+    .prompt-head h3{color:#fff;margin:0;font-size:18px}
+    .copy-button{border:1px solid rgba(255,255,255,.45);background:#fff;color:var(--dark);border-radius:4px;font-weight:900;padding:7px 10px;cursor:pointer}
+    .prompt-code{margin:0;padding:16px;background:#111719;color:#eef7f8;white-space:pre-wrap;word-break:break-word;font-size:14px;line-height:1.65;overflow:auto}
+    .prompt-note{padding:12px 16px;background:#f7fcfd;border-top:1px solid var(--line);font-size:15px;color:#3b484b}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .flow-step{border:1px solid var(--line);border-top:5px solid var(--red);border-radius:8px;padding:16px;background:#fff;min-height:120px}
+    .flow-step:nth-child(2){border-top-color:var(--cyan)}.flow-step:nth-child(3){border-top-color:var(--green)}.flow-step:nth-child(4){border-top-color:var(--purple)}.flow-step:nth-child(5){border-top-color:var(--orange)}
+    .flow-step b{display:block;color:var(--red);font-size:18px;margin-bottom:8px}
+    table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;font-size:15px}
+    th{background:var(--dark);color:#fff}
+    .concept-svg{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 14px 34px rgba(37,44,46,.08)}
+    footer{padding:30px 20px;color:#fff;background:var(--dark);font-size:14px}
+    @media(max-width:900px){.cover{min-height:auto}.cover-inner{min-height:auto;padding:30px 18px 34px}.cover-top,.cover-footer{align-items:flex-start;flex-direction:column}.ad-logo-white{width:210px;height:58px}.metrics,.flow,.grid{grid-template-columns:1fr}.metric{padding:14px}.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:auto}header{padding:28px 18px 30px}header h1{font-size:32px}nav{position:static}nav .wrap{padding:10px 14px;gap:8px}nav a{font-size:13px;padding:7px 10px}main{padding:24px 14px 44px}.card{padding:18px}.prompt-card{padding:0}.prompt-head{align-items:flex-start;flex-direction:column}.term-head{display:block}.pill{margin-top:8px}.flow-step{min-height:auto}table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}h1{font-size:34px}h2{font-size:25px}h3{font-size:20px}p,li{font-size:16px}.subtitle{font-size:18px}}
+    @media print{nav{display:none}body{background:#fff}.card,table{box-shadow:none}section{page-break-inside:avoid}}
+  </style>
+  <script src="../site-config.js"></script>
+  <script src="../tutorial-gate.js"></script>
+</head>
+<body>
+  <section class="cover" aria-label="ADLINK cover">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo"></div>
+        <div class="cover-kicker">Course Material<br/>HTML Training</div>
+      </div>
+      <div class="cover-main">
+        <div class="label">Content Analysis</div>
+        <h1>AI 第二大腦：文字、圖片與 Skill 的 Agent 知識庫</h1>
+        <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
+      </div>
+      <div class="cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Research-backed Course Material</span>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="wrap">
+      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
+      <h1>AI 第二大腦：文字、圖片與 Skill 的 Agent 知識庫</h1>
+      <p class="lead">本教材聚焦 AI 第二大腦：如何把文字、圖片、素材與 Skill 收進同一個本地知識庫，並讓 agent 可讀、可分流、可回寫。</p>
+      <div class="metrics">
+        <div class="metric"><b>6</b><small>主要大綱</small></div>
+        <div class="metric"><b>5</b><small>研究資料</small></div>
+        <div class="metric"><b>6</b><small>教學卡片</small></div>
+        <div class="metric"><b>0</b><small>外部素材</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#outline">課程大綱</a>
+      <a href="#map">整體關係圖</a>
+      <a href="#terms">核心概念</a>
+      <a href="#prompts">可複製提示詞</a>
+      <a href="#extra">知識分流</a>
+      <a href="#examples">ADLINK 落地</a>
+      
+      <a href="#summary">一頁式重點</a>
+      <a href="#source">來源</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="outline">
+      <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
+      <div class="grid">
+          <article class="card span-6"><h3>AI 第二大腦不是傳統筆記庫</h3><p>傳統筆記工具多半是人讀的資料庫；AI 第二大腦要讓 agent 能讀、能分類、能提煉、能回寫成可用知識。</p><div><span class="tag blue">Second Brain</span><span class="tag blue">Claude Code</span><span class="tag blue">Knowledge Base</span></div></article><article class="card span-6"><h3>Prompt 1：建立知識庫骨架</h3><p>第一段提示詞的目標，是讓 Claude Code 在空資料夾裡建立第二大腦的目錄、規則、索引與基本工具。</p><div><span class="tag blue">Prompt</span><span class="tag blue">Scaffold</span><span class="tag blue">CLAUDE.md</span></div></article><article class="card span-6"><h3>Prompt 2：建立本地指揮台</h3><p>第二段提示詞的目標，是把資料流做成可視化面板，讓使用者看到 inbox、AI 加工、人工確認與入庫狀態。</p><div><span class="tag blue">Dashboard</span><span class="tag blue">Workflow</span><span class="tag blue">Review Queue</span></div></article><article class="card span-6"><h3>Prompt 3：建立 Slack 入庫流程</h3><p>第三段提示詞的目標，是讓手機看到的連結、圖片、視覺素材與靈感可以丟到 Slack channel，自動進入本地 inbox。</p><div><span class="tag blue">Slack</span><span class="tag blue">Ingestion</span><span class="tag blue">Automation</span></div></article><article class="card span-6"><h3>Skill 型知識：讓 agent 學會做事</h3><p>Claude Code skills 是一種可重複能力單元；第二大腦不能只存資料，也要存 agent 可以直接使用的工作方法。</p><div><span class="tag blue">Claude Skills</span><span class="tag blue">Agent Skills</span><span class="tag blue">Workflow</span></div></article><article class="card span-6"><h3>ADLINK 導入方式</h3><p>建議先用小範圍流程試行：教材素材入庫、產品資料整理、prompt/skill 沉澱，再擴到跨部門 agent workflow。</p><div><span class="tag blue">ADLINK</span><span class="tag blue">Internal Knowledge</span><span class="tag blue">Pilot</span></div></article>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="section-title"><span>2</span><h2>資料入口到 Agent 可用知識</h2></div>
+      <div class="grid">
+        <div class="card span-12">
+          <div class="flow">
+            <div class="flow-step"><b>AI 第二大腦不是傳統筆記庫</b>傳統筆記工具多半是人讀的資料庫；AI 第二大腦要讓 agent 能讀、能分類、能提煉、能回寫成可用知識。</div><div class="flow-step"><b>Prompt 1：建立知識庫骨架</b>第一段提示詞的目標，是讓 Claude Code 在空資料夾裡建立第二大腦的目錄、規則、索引與基本工具。</div><div class="flow-step"><b>Prompt 2：建立本地指揮台</b>第二段提示詞的目標，是把資料流做成可視化面板，讓使用者看到 inbox、AI 加工、人工確認與入庫狀態。</div><div class="flow-step"><b>Prompt 3：建立 Slack 入庫流程</b>第三段提示詞的目標，是讓手機看到的連結、圖片、視覺素材與靈感可以丟到 Slack channel，自動進入本地 inbox。</div><div class="flow-step"><b>Skill 型知識：讓 agent 學會做事</b>Claude Code skills 是一種可重複能力單元；第二大腦不能只存資料，也要存 agent 可以直接使用的工作方法。</div>
+          </div>
+          <div class="example"><strong>閱讀方式：</strong>先看資料如何從 inbox 進入 knowledge、skills、resources，再直接複製提示詞建立本地版本。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
+      <div class="grid">
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">AI 第二大腦不是傳統筆記庫</div><div class="term-sub">傳統筆記工具多半是人讀的資料庫；AI 第二大腦要讓 agent 能讀、能分類、能提煉、能回寫成可用知識。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Claude Code 的 memory 文件指出，CLAUDE.md 與 auto memory 會在對話開始時載入，適合放專案規則與偏好。</li><li>Claude Code 的 .claude directory 文件說明，專案與使用者層級可以放 instructions、settings、skills、subagents 與 memory。</li><li>真正可用的第二大腦要分清楚：原始 inbox、整理後 knowledge、可執行 skills、素材 resources、以及 registry/index。</li></ul>
+          <div class="example"><strong>教學提示：</strong>ADLINK 可以把產品資料、會議記錄、教材規則、圖片範例與 agent skills 放進同一套可檢索工作區。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">Prompt 1：建立知識庫骨架</div><div class="term-sub">第一段提示詞的目標，是讓 Claude Code 在空資料夾裡建立第二大腦的目錄、規則、索引與基本工具。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>重點不是一次產出很多內容，而是先有穩定結構：inbox、knowledge、skills、resources、registry、meta。</li><li>CLAUDE.md 要寫明 agent 如何處理新資料、如何分類、何時需要人工確認。</li><li>第一版就要有簡單測試或檢查指令，避免只建立空資料夾。</li></ul>
+          <div class="example"><strong>教學提示：</strong>這段適合在 Claude Code 開新資料夾時直接貼上。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">Prompt 2：建立本地指揮台</div><div class="term-sub">第二段提示詞的目標，是把資料流做成可視化面板，讓使用者看到 inbox、AI 加工、人工確認與入庫狀態。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>指揮台不只是好看，核心是降低黑箱：每筆資料在哪個狀態、為什麼被分類、是否需要人工確認。</li><li>面板應支援搜尋、標籤、狀態、來源類型與待處理清單。</li><li>這可以讓第二大腦從資料夾變成可營運的 workflow。</li></ul>
+          <div class="example"><strong>教學提示：</strong>這段適合在骨架完成後貼給 Claude Code，讓它建立本地 HTML/Node dashboard。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">Prompt 3：建立 Slack 入庫流程</div><div class="term-sub">第三段提示詞的目標，是讓手機看到的連結、圖片、視覺素材與靈感可以丟到 Slack channel，自動進入本地 inbox。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Slack Events API 可以讓 app 或 bot 回應 Slack 活動；實作時可用 Socket Mode 或 HTTP endpoint。</li><li>入庫流程要先保存 raw payload，再做分類與摘要，不要一開始就覆蓋原始資料。</li><li>每筆資料都要進 registry，保留來源、時間、傳送者、檔案路徑與處理狀態。</li></ul>
+          <div class="example"><strong>教學提示：</strong>這段適合建立 brain-inbox channel 後使用；token 與 signing secret 要放在 .env，不要寫進文件。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">Skill 型知識：讓 agent 學會做事</div><div class="term-sub">Claude Code skills 是一種可重複能力單元；第二大腦不能只存資料，也要存 agent 可以直接使用的工作方法。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Claude Code skills 文件說明，skills 可延伸 Claude 能力，也可包含自訂指令與 bundled skills。</li><li>Anthropic skills repo 說明，skills 是 instructions、scripts、resources 的資料夾，讓 Claude 在特定任務表現更穩定。</li><li>因此第二大腦要能判斷哪些內容只是資料，哪些值得沉澱成 skill。</li></ul>
+          <div class="example"><strong>教學提示：</strong>ADLINK 可以把教材格式、PM issue triage、客戶回覆草稿、PR review 都整理成 skill，而不是每次重新寫 prompt。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">ADLINK 導入方式</div><div class="term-sub">建議先用小範圍流程試行：教材素材入庫、產品資料整理、prompt/skill 沉澱，再擴到跨部門 agent workflow。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>第一階段：只做本機資料夾與 registry，先把資料放對位置。</li><li>第二階段：加 dashboard 與人工確認，避免 AI 自動亂分類。</li><li>第三階段：加 Slack 入庫與 skill_candidate 分流，讓日常素材能被 agent 使用。</li></ul>
+          <div class="example"><strong>教學提示：</strong>先從 art agent 教材產線試：每次來源素材、prompt、圖片範例、ADLINK 偏好都要能入庫並回寫成 skill。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="prompts">
+      <div class="section-title"><span>P</span><h2>可複製提示詞</h2></div>
+      <div class="grid">
+        <article class="card prompt-card span-12">
+          <div class="prompt-head"><h3>Prompt 1：建立知識庫骨架</h3><button class="copy-button" type="button">複製提示詞</button></div>
+          <pre class="prompt-code"><code>你是我的 Claude Code 架構師。請在目前空資料夾建立一套「AI 第二大腦」本地知識庫骨架，目標是讓人和 agent 都能使用。
+
+請建立以下結構：
+- inbox/：所有未整理資料入口，支援 text、link、image、file 四類來源。
+- knowledge/：整理後的 Markdown 知識，依 domain/topic/source 分類。
+- skills/：可重複使用的 agent skills，每個 skill 都要有 SKILL.md、用途、觸發條件、步驟、輸入輸出與檢查項。
+- resources/：圖片、視覺素材、參考圖與附件。
+- registry/：索引檔，追蹤每筆資料的來源、狀態、標籤、owner、最後更新時間與是否已被 agent 使用。
+- meta/：標籤系統、分類規則、命名規則、資料保留規則。
+
+請同時產生：
+1. CLAUDE.md：說明 agent 如何處理新資料、如何分類、如何避免重複、何時要問使用者。
+2. README.md：給人看的使用說明。
+3. scripts/healthcheck.mjs：檢查必要資料夾與 registry 是否存在。
+4. 一份 sample inbox item 與整理後 sample knowledge item。
+
+限制：
+- 不要使用雲端資料庫。
+- 不要刪除既有檔案。
+- 所有文件使用繁體中文，工具名保留英文。
+- 完成後請執行 healthcheck，並回報建立了哪些檔案。</code></pre>
+          <div class="prompt-note">用途：第一段提示詞的目標，是讓 Claude Code 在空資料夾裡建立第二大腦的目錄、規則、索引與基本工具。 這段適合在 Claude Code 開新資料夾時直接貼上。</div>
+        </article><article class="card prompt-card span-12">
+          <div class="prompt-head"><h3>Prompt 2：建立本地指揮台</h3><button class="copy-button" type="button">複製提示詞</button></div>
+          <pre class="prompt-code"><code>請在目前 AI 第二大腦專案中建立一個本地「知識指揮台」。
+
+目標：讓我用瀏覽器查看資料從 inbox 到 knowledge / skills / resources 的整個流程。
+
+請建立：
+1. public/dashboard.html：單頁 dashboard。
+2. scripts/dashboard-server.mjs：本地 server，預設 port 8788。
+3. scripts/scan-registry.mjs：掃描 inbox、knowledge、skills、resources，產生 registry/index.json。
+
+Dashboard 必須包含：
+- Inbox Queue：未處理資料清單。
+- AI Processing：已被 agent 摘要、分類、去重的資料。
+- Review Queue：需要人工確認的資料。
+- Knowledge Library：已入庫 Markdown 知識。
+- Skill Library：已整理好的 agent skills。
+- Resource Library：圖片、視覺素材與附件。
+- 每張卡片顯示 title、type、tags、status、source、updated_at。
+- 支援依 type/status/tag 搜尋與篩選。
+
+設計要求：
+- ADLINK 內部工具風格：白底、深灰文字、紅色主線、資訊密度高、手機也能看。
+- 不做 landing page，第一畫面就是 dashboard。
+- 不要使用外部 CDN。
+- 完成後啟動 server，告訴我 localhost URL。</code></pre>
+          <div class="prompt-note">用途：第二段提示詞的目標，是把資料流做成可視化面板，讓使用者看到 inbox、AI 加工、人工確認與入庫狀態。 這段適合在骨架完成後貼給 Claude Code，讓它建立本地 HTML/Node dashboard。</div>
+        </article><article class="card prompt-card span-12">
+          <div class="prompt-head"><h3>Prompt 3：建立 Slack 入庫流程</h3><button class="copy-button" type="button">複製提示詞</button></div>
+          <pre class="prompt-code"><code>請為目前 AI 第二大腦專案建立 Slack 入庫流程。
+
+使用情境：我在手機看到文章、圖片、GitHub 連結、靈感素材時，丟到 Slack 的 #brain-inbox channel，資料要自動進入本機 inbox，等待 agent 整理。
+
+請建立：
+1. scripts/slack-inbox-bot.mjs：監聽 Slack Events API 或 Socket Mode。
+2. .env.example：列出 SLACK_BOT_TOKEN、SLACK_APP_TOKEN、SLACK_SIGNING_SECRET、SLACK_CHANNEL_ID。
+3. inbox/raw/：保存原始 Slack payload。
+4. inbox/items/：保存整理後的 item JSON。
+5. registry/index.json 更新邏輯。
+
+每筆入庫資料要包含：
+- id
+- received_at
+- slack_channel
+- slack_user
+- message_text
+- links
+- files
+- inferred_type：text / link / image / file / skill_candidate
+- suggested_tags
+- status：new / processed / needs_review / archived
+
+處理規則：
+- 先保存 raw payload，再做加工。
+- 不要把 Slack token 寫進任何文件。
+- 圖片與檔案下載到 resources/slack/YYYY-MM-DD/。
+- 如果內容像 GitHub skill 或 prompt，標成 skill_candidate。
+- 完成後提供本機測試方式與啟動指令。</code></pre>
+          <div class="prompt-note">用途：第三段提示詞的目標，是讓手機看到的連結、圖片、視覺素材與靈感可以丟到 Slack channel，自動進入本地 inbox。 這段適合建立 brain-inbox channel 後使用；token 與 signing secret 要放在 .env，不要寫進文件。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="extra">
+      <div class="section-title"><span>4</span><h2>知識分流與治理</h2></div>
+      <div class="grid">
+        <div class="card span-4">
+          <h3>Inbox 只收原始資料</h3>
+          <p>手機丟進來的連結、視覺素材、prompt、GitHub skill 先進 inbox，保留 raw data，不要一開始就改寫。</p>
+          <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>AI 先分流再加工</h3>
+          <p>文字進 knowledge，圖片與附件進 resources，值得重複使用的方法進 skills，所有項目都寫入 registry。</p>
+          <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>人工確認後再入庫</h3>
+          <p>需要人工判斷的內容先進 review queue，避免 agent 把錯資料、重複資料或低品質 skill 直接納入正式知識庫。</p>
+          <span class="tag ">內容重點</span><span class="tag">研究依據</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="section-title"><span>5</span><h2>ADLINK 導入方式</h2></div>
+      <div class="grid">
+        <div class="card span-6">
+          <h3>教材素材庫</h3>
+          <p><strong>落地：</strong>把來源連結、提示詞、圖片範例、ADLINK 版型規則與完成後 HTML 都進 registry，後續 art agent 可重用。</p>
+          
+          
+        </div><div class="card span-6">
+          <h3>Skill 候選區</h3>
+          <p><strong>落地：</strong>把 GitHub skill、內部 SOP、使用者確認過的 prompt 標成 skill_candidate，再整理成可被 agent 觸發的 SKILL.md。</p>
+          
+          
+        </div><div class="card span-6">
+          <h3>手機入庫流程</h3>
+          <p><strong>落地：</strong>用 Slack channel 當行動入口，讓外出看到的連結或素材能先進本地 inbox，回到電腦後再由 agent 整理。</p>
+          
+          
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="summary">
+      <div class="section-title"><span>6</span><h2>一頁式重點</h2></div>
+      <div class="card span-12">
+        <h3>本課重點整理</h3>
+        <ul>
+          <li><strong>AI 第二大腦不是傳統筆記庫：</strong>傳統筆記工具多半是人讀的資料庫；AI 第二大腦要讓 agent 能讀、能分類、能提煉、能回寫成可用知識。</li><li><strong>Prompt 1：建立知識庫骨架：</strong>第一段提示詞的目標，是讓 Claude Code 在空資料夾裡建立第二大腦的目錄、規則、索引與基本工具。</li><li><strong>Prompt 2：建立本地指揮台：</strong>第二段提示詞的目標，是把資料流做成可視化面板，讓使用者看到 inbox、AI 加工、人工確認與入庫狀態。</li><li><strong>Prompt 3：建立 Slack 入庫流程：</strong>第三段提示詞的目標，是讓手機看到的連結、圖片、視覺素材與靈感可以丟到 Slack channel，自動進入本地 inbox。</li><li><strong>Skill 型知識：讓 agent 學會做事：</strong>Claude Code skills 是一種可重複能力單元；第二大腦不能只存資料，也要存 agent 可以直接使用的工作方法。</li><li><strong>ADLINK 導入方式：</strong>建議先用小範圍流程試行：教材素材入庫、產品資料整理、prompt/skill 沉澱，再擴到跨部門 agent workflow。</li>
+        </ul>
+        <div class="warning"><strong>注意：</strong>專有名詞、數字與版本資訊應以官方文件或使用者補充資料為準。</div>
+      </div>
+    </section>
+
+    <section id="source">
+      <div class="section-title"><span>7</span><h2>來源</h2></div>
+      <div class="card span-12">
+        <p>本教材依使用者提供的來源整理，正式對外分享前仍建議人工快速核對專有名詞、數字與版本資訊。</p>
+        <p><a href="https://youtu.be/L65PuBUku5s?si=K-fH_NrlwIzVih3C">開啟來源</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">ADLINK 主題研究教材｜Research-backed HTML Material</div>
+  </footer>
+  <script>
+    document.querySelectorAll('.copy-button').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const code = button.closest('.prompt-card')?.querySelector('.prompt-code')?.innerText || '';
+        try {
+          await navigator.clipboard.writeText(code);
+          button.textContent = '已複製';
+          setTimeout(() => { button.textContent = '複製提示詞'; }, 1400);
+        } catch {
+          button.textContent = '請長按選取';
+          setTimeout(() => { button.textContent = '複製提示詞'; }, 1800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

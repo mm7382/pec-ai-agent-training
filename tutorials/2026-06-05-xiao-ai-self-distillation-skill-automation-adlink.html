@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小愛agent 自我蒸餾與 Skill 自動化導入評估</title>
+  <style>
+    :root {
+      --ad-dark: #252c2e;
+      --ad-gray: #66747b;
+      --ad-light: #f4f5f6;
+      --ad-line: #d8d8d8;
+      --ad-red: #d0333a;
+      --ad-cyan: #1cb9d8;
+      --ad-green: #94c11f;
+      --ad-purple: #7d3189;
+      --ad-orange: #ec672c;
+      --ad-yellow: #fab428;
+      --ink: #172025;
+      --muted: #66747b;
+      --paper: #ffffff;
+      --soft-red: #fff0f1;
+      --soft-cyan: #e9f8fb;
+      --soft-green: #fbfff5;
+      --soft-yellow: #fffaf0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eef1f3;
+      font-family: Calibri, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    .cover {
+      min-height: 420px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(208, 51, 58, .9), rgba(37, 44, 46, .96) 42%, #101719),
+        var(--ad-dark);
+      padding: 42px clamp(22px, 5vw, 72px);
+      display: grid;
+      align-content: space-between;
+      gap: 42px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(255,255,255,.22);
+      padding-bottom: 18px;
+    }
+
+    .brand strong {
+      display: inline-block;
+      color: var(--ad-dark);
+      background: #fff;
+      padding: 8px 12px;
+      font-size: 19px;
+      letter-spacing: .04em;
+    }
+
+    .brand span {
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .cover h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .cover p {
+      max-width: 860px;
+      margin: 16px 0 0;
+      color: rgba(255,255,255,.86);
+      font-size: 19px;
+    }
+
+    .cover-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,255,255,.08);
+      padding: 7px 11px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 34px));
+      margin: 0 auto;
+      padding: 28px 0 54px;
+    }
+
+    section {
+      margin: 18px 0;
+      border: 1px solid var(--ad-line);
+      border-radius: 12px;
+      background: var(--paper);
+      box-shadow: 0 16px 38px rgba(37,44,46,.08);
+      padding: clamp(18px, 3vw, 28px);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      border-bottom: 1px solid var(--ad-line);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--ad-red);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h2, h3, p { margin-top: 0; }
+
+    h2 {
+      margin-bottom: 0;
+      color: var(--ad-dark);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.16;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--ad-dark);
+      font-size: 19px;
+    }
+
+    p, li {
+      color: var(--ad-gray);
+      font-size: 16px;
+    }
+
+    .decision {
+      display: grid;
+      grid-template-columns: minmax(260px, .9fr) minmax(0, 1.2fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .decision-score {
+      border-left: 8px solid var(--ad-green);
+      border-radius: 12px;
+      background: var(--soft-green);
+      padding: 18px;
+    }
+
+    .decision-score b {
+      display: block;
+      color: #5e7c11;
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    .decision-score span {
+      display: block;
+      margin-top: 8px;
+      color: var(--ad-dark);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .grid3,
+    .grid4,
+    .grid2 {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      border: 1px solid var(--ad-line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 16px;
+    }
+
+    .card.red { background: var(--soft-red); border-color: #f0c4c8; }
+    .card.cyan { background: var(--soft-cyan); border-color: #bfeaf2; }
+    .card.green { background: var(--soft-green); border-color: #d7eeb7; }
+    .card.yellow { background: var(--soft-yellow); border-color: #f1ddb0; }
+
+    .card strong,
+    .step strong {
+      display: block;
+      color: var(--ad-dark);
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .card span,
+    .step span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 9px;
+      color: #fff;
+      background: var(--ad-red);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .step {
+      position: relative;
+      min-height: 138px;
+      border: 1px solid var(--ad-line);
+      border-top: 6px solid var(--ad-cyan);
+      border-radius: 12px;
+      background: #fff;
+      padding: 14px;
+    }
+
+    .step:nth-child(2) { border-top-color: var(--ad-green); }
+    .step:nth-child(3) { border-top-color: var(--ad-yellow); }
+    .step:nth-child(4) { border-top-color: var(--ad-orange); }
+    .step:nth-child(5) { border-top-color: var(--ad-red); }
+
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--ad-dark);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      border-top: 1px solid var(--ad-line);
+      padding-top: 12px;
+    }
+
+    .row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .row .time {
+      color: var(--ad-red);
+      font-weight: 900;
+    }
+
+    .callout,
+    .warning,
+    .okbox {
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 14px 0;
+    }
+
+    .callout {
+      border-left: 8px solid var(--ad-red);
+      background: var(--soft-red);
+    }
+
+    .warning {
+      border-left: 8px solid var(--ad-orange);
+      background: var(--soft-yellow);
+    }
+
+    .okbox {
+      border-left: 8px solid var(--ad-green);
+      background: var(--soft-green);
+    }
+
+    .checklist {
+      display: grid;
+      gap: 9px;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      border: 1px solid var(--ad-line);
+      border-radius: 10px;
+      background: #fff;
+      padding: 11px 12px;
+    }
+
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source a {
+      color: var(--ad-cyan);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .decision,
+      .grid2,
+      .grid3,
+      .grid4,
+      .flow,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .brand,
+      .section-title {
+        display: block;
+      }
+
+      .brand span {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="cover">
+    <div class="brand">
+      <strong>art agent</strong>
+      <span>HTML Training Material<br/>小愛agent 導入評估</span>
+    </div>
+    <div>
+      <div class="cover-meta">
+        <span class="tag">自我蒸餾</span>
+        <span class="tag">Skill 化</span>
+        <span class="tag">自動化治理</span>
+        <span class="tag">小愛agent</span>
+      </div>
+      <h1>要不要把 Codex「越用越懂你」玩法導入小愛agent？</h1>
+      <p>結論：要做，但不是一次全自動。先把每天的使用紀錄蒸餾成可審核的文件，再把高頻流程變成 skill，最後才讓小愛排程執行。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Decision</p>
+          <h2>建議做，但要分三階段落地</h2>
+        </div>
+        <span class="badge">Recommendation: Do it</span>
+      </div>
+      <div class="decision">
+        <div class="decision-score">
+          <b>85%</b>
+          <span>值得導入</span>
+          <p>這不是新增一個 agent，而是補強小愛agent 的學習、治理與工具選擇能力。</p>
+        </div>
+        <div>
+          <p>這支影片對你最有用的不是某個工具，而是一套工作方法：把每天的使用經驗變成資料，把重複流程變成 skill，把固定整理變成自動化任務。</p>
+          <div class="callout">
+            <strong>一句話判斷</strong>
+            <p>如果小愛agent 要從「會推薦工具」升級成「越用越懂你的 agent 總管」，自我蒸餾與 skill 化值得做；但安裝、刪除、修改其他 agent 的動作仍要人工核准。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Three Ideas</p>
+          <h2>影片裡最適合你的三件事</h2>
+        </div>
+      </div>
+      <div class="grid3">
+        <article class="card red">
+          <strong>1. 自我蒸餾</strong>
+          <span>把每天和 agent 的互動、修正、偏好、失敗經驗整理成固定文件或 skill 草稿。</span>
+        </article>
+        <article class="card cyan">
+          <strong>2. 重複流程變成 skill</strong>
+          <span>小愛管理 agent、Wiki Agent 收資料、HTML 可視化調整，都可以沉澱成可重用工作方法。</span>
+        </article>
+        <article class="card green">
+          <strong>3. 自動化定期執行</strong>
+          <span>把每日工具建議、知識報告、Agent OS HTML 報告做成固定節奏，不靠臨時手動提醒。</span>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Priority</p>
+          <h2>優先順序：先蒸餾，再 skill，最後自動化</h2>
+        </div>
+      </div>
+      <div class="flow">
+        <div class="step">
+          <i class="num">01</i>
+          <strong>蒐集紀錄</strong>
+          <span>讀取 usage log、Telegram 指令、agent 報告、你手動修正過的地方。</span>
+        </div>
+        <div class="step">
+          <i class="num">02</i>
+          <strong>每日蒸餾</strong>
+          <span>整理成「偏好、成功流程、失敗教訓、待補 skill」四類。</span>
+        </div>
+        <div class="step">
+          <i class="num">03</i>
+          <strong>產生 skill 草稿</strong>
+          <span>只產生草稿，不直接啟用。讓你看到用途、觸發條件、風險。</span>
+        </div>
+        <div class="step">
+          <i class="num">04</i>
+          <strong>人工核准</strong>
+          <span>你核准後才安裝或掛到指定 agent，不讓系統自己長歪。</span>
+        </div>
+        <div class="step">
+          <i class="num">05</i>
+          <strong>定期回看</strong>
+          <span>每週檢查哪些 skill 有用、哪些重複、哪些應該停用。</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Implementation</p>
+          <h2>小愛agent 應該怎麼做</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="row">
+          <div class="time">第一週</div>
+          <div>
+            <h3>建立「自我蒸餾日報」</h3>
+            <p>每天整理小愛和其他 agent 的使用紀錄，輸出到本地文件。內容包含：今天做了什麼、你修正了什麼、哪些流程重複出現、有哪些候選 skill。</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="time">第二週</div>
+          <div>
+            <h3>把高頻流程轉成 skill 草稿</h3>
+            <p>先挑三個最常用流程：小愛工具治理、Wiki Agent inbox 整理、Agent OS HTML 可視化調整。每個流程都產生 SKILL.md 草稿與適用條件。</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="time">第三週</div>
+          <div>
+            <h3>加入 Telegram 核准流程</h3>
+            <p>讓小愛把候選 skill 發到 Telegram，提供「核准、忽略、放入觀察」三種選項。核准後才寫入正式 skill 目錄。</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="time">第四週</div>
+          <div>
+            <h3>接上定期自動化</h3>
+            <p>每天產生自我蒸餾日報；每週產生 skill governance report；每月清理重複或沒有使用紀錄的 skill。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">What Not To Do</p>
+          <h2>不要一開始就全自動</h2>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="warning">
+          <h3>不建議：直接照影片概念亂裝工具</h3>
+          <p>影片偏概念示範，不是安裝清單。對你來說，最有價值的是流程設計，不是新增一堆外部 agent。</p>
+        </div>
+        <div class="warning">
+          <h3>不建議：讓小愛自動改所有 agent</h3>
+          <p>小愛可以提案、蒸餾、產生 skill 草稿，但正式安裝、刪除、修改其他 agent 的權限要保留人工核准。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Mapping</p>
+          <h2>這三件事要放到哪個 agent</h2>
+        </div>
+      </div>
+      <div class="grid4">
+        <article class="card">
+          <strong>小愛agent</strong>
+          <span>負責每日蒸餾、候選 skill、工具推薦、Telegram 核准、Agent OS 報告。</span>
+        </article>
+        <article class="card">
+          <strong>Wiki Agent</strong>
+          <span>負責把已確認的經驗整理進 raw/inbox/wiki，保留來源、日期與信心。</span>
+        </article>
+        <article class="card">
+          <strong>art agent</strong>
+          <span>負責把流程和教學整理成 HTML、視覺流程圖、內訓教材。</span>
+        </article>
+        <article class="card">
+          <strong>其他 agent</strong>
+          <span>只接收被核准的 skill 或工具，不自己決定安裝新能力。</span>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Quality Gate</p>
+          <h2>導入前的驗收清單</h2>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li><b>能否解釋來源：</b>每個新 skill 草稿都要知道是從哪個任務、哪次修正或哪個失敗教訓蒸餾出來的。</li>
+        <li><b>能否人工核准：</b>安裝、刪除、修改 agent 設定前，必須有 Telegram 或本地 UI 確認。</li>
+        <li><b>能否回滾：</b>每個 skill 變更要能看到檔案位置、變更時間和影響到哪些 agent。</li>
+        <li><b>能否量化效果：</b>至少記錄使用次數、是否解決問題、是否減少你重複說明。</li>
+        <li><b>能否避免洩密：</b>蒸餾內容不得包含 token、API key、cookie、session 或私人憑證。</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Final Recommendation</p>
+          <h2>我的建議</h2>
+        </div>
+      </div>
+      <div class="okbox">
+        <h3>要做，但先做最小版本</h3>
+        <p>先讓小愛每天產生一份「自我蒸餾日報」，連續跑一週。等你確認日報真的有價值，再把高頻流程轉成 skill 草稿。最後才加自動化核准與安裝流程。</p>
+      </div>
+      <p class="source">參考主題：Codex 自我蒸餾、Skill / Agent / 自動化玩法。來源連結：<a href="https://youtu.be/zMJG9s7T7L8?si=94aERPqzVZgIlCG0">YouTube</a>。本教材依據目前已取得的主題摘要與你的本地小愛agent 架構評估製作；若要做完整影片逐字稿版，需再跑 art agent 的 YouTube 轉 HTML 流程。</p>
+    </section>
+  </main>
+</body>
+</html>

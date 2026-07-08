@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Fable 5 實測：把 AI 當資深工程師會怎樣 - ADLINK 內容分析教材</title>
+  <style>
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:url("../assets/brand/adlink-logo-white.png");--logo-full:url("../assets/brand/adlink-logo-full.png")}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);background-size:44px 44px;opacity:.42;z-index:-1}
+    .cover{min-height:650px;background:linear-gradient(110deg,rgba(37,44,46,.98),rgba(37,44,46,.91));color:#fff;border-bottom:10px solid var(--red)}
+    .cover-inner{max-width:1180px;margin:0 auto;min-height:650px;padding:52px 24px 58px;display:flex;flex-direction:column}
+    .cover-top,.cover-footer{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .ad-logo-white{width:260px;height:78px;background:var(--logo-white) left center/contain no-repeat;flex:0 0 auto}
+    .ad-logo-full{width:min(240px,70vw);height:46px;background:var(--logo-full) left center/contain no-repeat;margin-bottom:18px}
+    .cover-kicker{font-size:15px;color:rgba(255,255,255,.74);text-align:right}
+    .cover-main{margin:auto 0 44px;max-width:980px}
+    .label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:13px;color:#fff}
+    .label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:18px 0 0 var(--cyan),36px 0 0 var(--green);margin-right:38px}
+    h1{font-size:clamp(40px,5vw,66px);line-height:1.08;margin:26px 0 20px;letter-spacing:0;overflow-wrap:anywhere;word-break:break-word}
+    .subtitle{font-size:21px;color:rgba(255,255,255,.86);border-left:6px solid var(--red);padding-left:18px;max-width:850px}
+    .cover-footer{margin-top:auto;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;color:rgba(255,255,255,.72);font-size:15px}
+    header{background:#fff;color:var(--dark);padding:42px 28px 38px;border-bottom:8px solid var(--red);box-shadow:var(--shadow)}
+    .wrap{max-width:1180px;margin:0 auto}
+    .eyebrow{display:inline-flex;padding:7px 13px;border-radius:3px;background:var(--dark);color:#fff;font-size:14px;margin-bottom:18px;font-weight:800}
+    header h1{font-size:46px;color:var(--dark);margin:0 0 14px}
+    .lead{font-size:20px;color:#4b5558;max-width:980px;margin:0 0 22px}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+    .metric{background:var(--light);border:1px solid var(--line);border-radius:8px;padding:17px}
+    .metric b{display:block;color:var(--red);font-size:28px;line-height:1}
+    .metric small{display:block;color:#596265;font-weight:800;margin-top:6px}
+    nav{position:sticky;top:0;z-index:5;background:rgba(244,245,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    nav .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:12px 20px}
+    nav a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;color:var(--dark);font-weight:800}
+    nav a:hover{color:var(--red);border-color:var(--red);background:#fff7f7}
+    main{padding:34px 20px 64px}
+    section{max-width:1180px;margin:0 auto 30px}
+    .section-title{display:flex;align-items:center;gap:14px;margin:34px 0 18px;border-bottom:1px solid var(--line);padding-bottom:12px;position:relative}
+    .section-title::after{content:"";position:absolute;left:0;bottom:-2px;width:120px;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan))}
+    .section-title span{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:2px;background:var(--red);color:#fff;font-weight:900;box-shadow:8px 8px 0 rgba(208,51,58,.16)}
+    h2{font-size:30px;line-height:1.25;margin:0;color:var(--dark);letter-spacing:0}
+    h3{font-size:21px;line-height:1.35;margin:0 0 10px;color:var(--dark);letter-spacing:0}
+    p{font-size:17px;color:#394245;margin:0 0 12px}
+    ul{margin:0;padding-left:22px}
+    li{font-size:17px;margin:8px 0;color:#394245}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:22px;color:var(--dark)}
+    .span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+    .term-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:12px}
+    .term-title{font-size:24px;font-weight:900;color:var(--dark)}
+    .term-sub{color:var(--gray);font-weight:800}
+    .pill,.tag{display:inline-flex;align-items:center;border-radius:3px;padding:4px 9px;font-size:13px;font-weight:900}
+    .pill{background:#fff0f1;color:#9c2028;border:1px solid #ffd1d5;white-space:nowrap}
+    .tag{background:#fbfff5;color:#5E7C11;border:1px solid #cce29c;margin:4px 6px 0 0}
+    .tag.blue{background:#eefbff;color:#167d96;border-color:#b9ebf5}.tag.warn{background:#fff9e8;color:#9a6500;border-color:#f4d48a}.tag.red{background:#fff0f1;color:#9c2028;border-color:#ffd1d5}
+    .example,.source-note{border-left:5px solid var(--cyan);background:#f7fcfd;padding:13px 14px;margin-top:14px;color:#3b484b;font-size:15px}
+    .warning{border-left:5px solid var(--orange);background:#fff8f4;padding:13px 14px;margin-top:14px;color:#53372d;font-size:15px}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .flow-step{border:1px solid var(--line);border-top:5px solid var(--red);border-radius:8px;padding:16px;background:#fff;min-height:120px}
+    .flow-step:nth-child(2){border-top-color:var(--cyan)}.flow-step:nth-child(3){border-top-color:var(--green)}.flow-step:nth-child(4){border-top-color:var(--purple)}.flow-step:nth-child(5){border-top-color:var(--orange)}
+    .flow-step b{display:block;color:var(--red);font-size:18px;margin-bottom:8px}
+    table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;font-size:15px}
+    th{background:var(--dark);color:#fff}
+    .concept-svg{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 14px 34px rgba(37,44,46,.08)}
+    footer{padding:30px 20px;color:#fff;background:var(--dark);font-size:14px}
+    @media(max-width:900px){.cover{min-height:auto}.cover-inner{min-height:auto;padding:30px 18px 34px}.cover-top,.cover-footer{align-items:flex-start;flex-direction:column}.ad-logo-white{width:210px;height:58px}.metrics,.flow,.grid{grid-template-columns:1fr}.metric{padding:14px}.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:auto}header{padding:28px 18px 30px}header h1{font-size:32px}nav{position:static}nav .wrap{padding:10px 14px;gap:8px}nav a{font-size:13px;padding:7px 10px}main{padding:24px 14px 44px}.card{padding:18px}.term-head{display:block}.pill{margin-top:8px}.flow-step{min-height:auto}table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}h1{font-size:34px}h2{font-size:25px}h3{font-size:20px}p,li{font-size:16px}.subtitle{font-size:18px}}
+    @media print{nav{display:none}body{background:#fff}.card,table{box-shadow:none}section{page-break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <section class="cover" aria-label="ADLINK cover">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo"></div>
+        <div class="cover-kicker">Course Material<br/>HTML Training</div>
+      </div>
+      <div class="cover-main">
+        <div class="label">Content Analysis</div>
+        <h1>Claude Fable 5 實測：把 AI 當資深工程師會怎樣</h1>
+        <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
+      </div>
+      <div class="cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Research-backed Course Material</span>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="wrap">
+      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
+      <h1>Claude Fable 5 實測：把 AI 當資深工程師會怎樣</h1>
+      <p class="lead">本教材依主題資料整理，聚焦核心概念與實務導入重點。</p>
+      <div class="metrics">
+        <div class="metric"><b>7</b><small>主要大綱</small></div>
+        <div class="metric"><b>N/A</b><small>研究資料</small></div>
+        <div class="metric"><b>7</b><small>教學卡片</small></div>
+        <div class="metric"><b>0</b><small>外部素材</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#outline">課程大綱</a>
+      <a href="#map">整體關係圖</a>
+      <a href="#terms">核心概念</a>
+      <a href="#extra">延伸重點</a>
+      <a href="#examples">內容情境</a>
+      <a href="#compare">快速比較</a>
+      <a href="#summary">一頁式重點</a>
+      <a href="#source">來源</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="outline">
+      <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
+      <div class="grid">
+          <article class="card span-6"><h3>從 Benchmark 轉向真實工作流驗證</h3><p>新模型是否有價值，要用既有產線裡真正難、真正會痛的問題來測。</p></article><article class="card span-6"><h3>把 Agent 當資深同事，不是當指令執行器</h3><p>高能力 agent 的價值在於協作判斷與主動發現問題，而不只是照步驟執行。</p></article><article class="card span-6"><h3>大目標必須搭配邊界、驗收與停損</h3><p>任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</p></article><article class="card span-6"><h3>在乾淨工作區中執行長任務</h3><p>讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</p></article><article class="card span-6"><h3>用機制層修復 Corner Case</h3><p>資深工程師標準不是把輸出修到看起來對，而是找根因、改機制、補測試。</p></article><article class="card span-6"><h3>雙層驗收：程式測試加人工判斷</h3><p>AI 可以自動化大量工作，但品質判斷仍要結合測試與人的感官驗收。</p></article><article class="card span-6"><h3>成本窗口與任務選擇策略</h3><p>高成本模型應優先用在很長、很大、很複雜且過去卡住的任務。</p></article>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="section-title"><span>2</span><h2>整體關係圖</h2></div>
+      <div class="grid">
+        <div class="card span-12">
+          <div class="flow">
+            <div class="flow-step"><b>從 Benchmark 轉向真實工作流驗證</b>新模型是否有價值，要用既有產線裡真正難、真正會痛的問題來測。</div><div class="flow-step"><b>把 Agent 當資深同事，不是當指令執行器</b>高能力 agent 的價值在於協作判斷與主動發現問題，而不只是照步驟執行。</div><div class="flow-step"><b>大目標必須搭配邊界、驗收與停損</b>任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</div><div class="flow-step"><b>在乾淨工作區中執行長任務</b>讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</div><div class="flow-step"><b>用機制層修復 Corner Case</b>資深工程師標準不是把輸出修到看起來對，而是找根因、改機制、補測試。</div>
+          </div>
+          <div class="example"><strong>閱讀方式：</strong>先看課程大綱掌握順序，再依核心概念、延伸重點與比較表建立完整理解。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
+      <div class="grid">
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">從 Benchmark 轉向真實工作流驗證</div><div class="term-sub">新模型是否有價值，要用既有產線裡真正難、真正會痛的問題來測。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>官方 benchmark 與案例可以作為參考，但實際使用體驗才決定是否值得投入。</li><li>作者選擇自己長期使用的影片生產流程作為測試場景，而不是從零開始做 app demo。</li><li>從零專案沒有舊程式碼與歷史包袱，較難看出模型處理真實複雜度的能力。</li><li>真實工作流包含語音辨識、自動剪片、字幕、片頭、b roll、贅詞移除、縮圖與上架文案等多步驟。</li></ul>
+          
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">把 Agent 當資深同事，不是當指令執行器</div><div class="term-sub">高能力 agent 的價值在於協作判斷與主動發現問題，而不只是照步驟執行。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>過去使用 AI 常是下指令、檢查、修正、再循環，人的角色卡在每一步監工。</li><li>Fable-5 後，人的重點變成確認 agent 做的是對的事情、方向沒有歪掉。</li><li>使用方式要像跟同事討論：請它提出建議、切法、做法與潛在問題。</li><li>作者觀察到 agent 主動提出資料保護、驗證深度、PR 拆法、case file 切法等問題。</li></ul>
+          
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">大目標必須搭配邊界、驗收與停損</div><div class="term-sub">任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>高能力模型可直接接受較大的 goal，讓它自行找到路徑。</li><li>只給一句目標不夠，必須說清楚什麼情況算完成、何時要停下來問人。</li><li>禁區包含不要碰的資料、不要改壞的舊功能、不要刪除的檔案。</li><li>模型越強，越要講清楚設計邊界，否則只是更快把錯的事情做完。</li></ul>
+          
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">在乾淨工作區中執行長任務</div><div class="term-sub">讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>作者在實測前建立新的 Worktree，避免污染原本運作良好的主程式。</li><li>Worktree 被用來隔離新功能或修復任務，概念上像從 main 拉出乾淨工作區。</li><li>Auto Mode 的好處是不用每一步都按確認，適合明確邊界後的長任務執行。</li><li>前期討論可用 Play Mode，確認清楚後再切到 Auto Mode 開工。</li></ul>
+          
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">用機制層修復 Corner Case</div><div class="term-sub">資深工程師標準不是把輸出修到看起來對，而是找根因、改機制、補測試。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>retake 拼接難在多段重錄之間找到正確片段，並讓文字、語域、音量、底噪與停頓自然銜接。</li><li>作者把壞掉的 case 收集下來，作為考驗模型的真實測試集。</li><li>修問題的鐵律是修在機制層，不是頭痛醫頭、腳痛醫腳。</li><li>以前的模型容易只修輸出結果，甚至不改程式；這不符合資深工程師標準。</li></ul>
+          
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">雙層驗收：程式測試加人工判斷</div><div class="term-sub">AI 可以自動化大量工作，但品質判斷仍要結合測試與人的感官驗收。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>第一層驗收是人工聽五個修正後的音檔，確認原始剪接問題是否消失。</li><li>第二層驗收是跑測試程式，確認五個修正片段都 passed。</li><li>作者也執行完整測試，確保原本正常的功能沒有被改壞。</li><li>人的眼睛與耳朵仍負責界面、聽感與成果價值的判斷。</li></ul>
+          
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">成本窗口與任務選擇策略</div><div class="term-sub">高成本模型應優先用在很長、很大、很複雜且過去卡住的任務。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Fable-5 在特定訂閱方案中有時間限制，之後需透過 API 或 usage credit 支付。</li><li>來源提到價格為 input 每百萬 10 美金、output 每百萬 50 美金，是 Opus 的兩倍。</li><li>作者建議趁免費窗口挑一個真正卡很久、以前覺得 AI 做不到的任務測試。</li><li>神級模型特別適合長、大、複雜任務，而不是瑣碎小任務。</li></ul>
+          
+        </article>
+      </div>
+    </section>
+
+    <section id="extra">
+      <div class="section-title"><span>4</span><h2>延伸重點</h2></div>
+      <div class="grid">
+        <div class="card span-4">
+          <h3>大目標必須搭配邊界、驗收與停損</h3>
+          <p>任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</p>
+          <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>在乾淨工作區中執行長任務</h3>
+          <p>讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</p>
+          <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>用機制層修復 Corner Case</h3>
+          <p>資深工程師標準不是把輸出修到看起來對，而是找根因、改機制、補測試。</p>
+          <span class="tag ">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>雙層驗收：程式測試加人工判斷</h3>
+          <p>AI 可以自動化大量工作，但品質判斷仍要結合測試與人的感官驗收。</p>
+          <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>成本窗口與任務選擇策略</h3>
+          <p>高成本模型應優先用在很長、很大、很複雜且過去卡住的任務。</p>
+          <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="section-title"><span>5</span><h2>用內容情境理解重點</h2></div>
+      <div class="grid">
+        <div class="card span-6">
+          <h3>從 Benchmark 轉向真實工作流驗證</h3>
+          <p><strong>重點：</strong>新模型是否有價值，要用既有產線裡真正難、真正會痛的問題來測。</p>
+          <p><strong>分析：</strong>官方 benchmark 與案例可以作為參考，但實際使用體驗才決定是否值得投入。</p>
+          
+        </div><div class="card span-6">
+          <h3>把 Agent 當資深同事，不是當指令執行器</h3>
+          <p><strong>重點：</strong>高能力 agent 的價值在於協作判斷與主動發現問題，而不只是照步驟執行。</p>
+          <p><strong>分析：</strong>過去使用 AI 常是下指令、檢查、修正、再循環，人的角色卡在每一步監工。</p>
+          
+        </div><div class="card span-6">
+          <h3>大目標必須搭配邊界、驗收與停損</h3>
+          <p><strong>重點：</strong>任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</p>
+          <p><strong>分析：</strong>高能力模型可直接接受較大的 goal，讓它自行找到路徑。</p>
+          
+        </div><div class="card span-6">
+          <h3>在乾淨工作區中執行長任務</h3>
+          <p><strong>重點：</strong>讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</p>
+          <p><strong>分析：</strong>作者在實測前建立新的 Worktree，避免污染原本運作良好的主程式。</p>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="section-title"><span>6</span><h2>快速比較表</h2></div>
+      <table>
+        <thead><tr><th>主題</th><th>一句話解釋</th><th>教學定位</th><th>容易忽略的重點</th></tr></thead>
+        <tbody>
+          <tr><td>從 Benchmark 轉向真實工作流驗證</td><td>新模型是否有價值，要用既有產線裡真正難、真正會痛的問題來測。</td><td>課程重點</td><td>官方 benchmark 與案例可以作為參考，但實際使用體驗才決定是否值得投入。</td></tr><tr><td>把 Agent 當資深同事，不是當指令執行器</td><td>高能力 agent 的價值在於協作判斷與主動發現問題，而不只是照步驟執行。</td><td>課程重點</td><td>過去使用 AI 常是下指令、檢查、修正、再循環，人的角色卡在每一步監工。</td></tr><tr><td>大目標必須搭配邊界、驗收與停損</td><td>任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</td><td>課程重點</td><td>高能力模型可直接接受較大的 goal，讓它自行找到路徑。</td></tr><tr><td>在乾淨工作區中執行長任務</td><td>讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</td><td>課程重點</td><td>作者在實測前建立新的 Worktree，避免污染原本運作良好的主程式。</td></tr><tr><td>用機制層修復 Corner Case</td><td>資深工程師標準不是把輸出修到看起來對，而是找根因、改機制、補測試。</td><td>課程重點</td><td>retake 拼接難在多段重錄之間找到正確片段，並讓文字、語域、音量、底噪與停頓自然銜接。</td></tr><tr><td>雙層驗收：程式測試加人工判斷</td><td>AI 可以自動化大量工作，但品質判斷仍要結合測試與人的感官驗收。</td><td>課程重點</td><td>第一層驗收是人工聽五個修正後的音檔，確認原始剪接問題是否消失。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="summary">
+      <div class="section-title"><span>7</span><h2>一頁式重點</h2></div>
+      <div class="card span-12">
+        <h3>主題重點整理</h3>
+        <ul>
+          <li><strong>從 Benchmark 轉向真實工作流驗證：</strong>新模型是否有價值，要用既有產線裡真正難、真正會痛的問題來測。</li><li><strong>把 Agent 當資深同事，不是當指令執行器：</strong>高能力 agent 的價值在於協作判斷與主動發現問題，而不只是照步驟執行。</li><li><strong>大目標必須搭配邊界、驗收與停損：</strong>任務可以放大，但 prompt 必須明確定義終點、驗收標準、禁區與停損條件。</li><li><strong>在乾淨工作區中執行長任務：</strong>讓 agent 長時間自主工作前，先用版本控制與隔離工作區降低破壞風險。</li><li><strong>用機制層修復 Corner Case：</strong>資深工程師標準不是把輸出修到看起來對，而是找根因、改機制、補測試。</li><li><strong>雙層驗收：程式測試加人工判斷：</strong>AI 可以自動化大量工作，但品質判斷仍要結合測試與人的感官驗收。</li>
+        </ul>
+        <div class="warning"><strong>注意：</strong>專有名詞、數字與版本資訊應以官方文件或使用者補充資料為準。</div>
+      </div>
+    </section>
+
+    <section id="source">
+      <div class="section-title"><span>8</span><h2>來源</h2></div>
+      <div class="card span-12">
+        <p>本教材依使用者提供的來源整理，正式對外分享前仍建議人工快速核對專有名詞、數字與版本資訊。</p>
+        <p><a href="https://youtu.be/VtehqGqpcjE?si=135iwRtWwcg5aK-Q">開啟來源</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">ADLINK 主題研究教材｜Research-backed HTML Material</div>
+  </footer>
+</body>
+</html>

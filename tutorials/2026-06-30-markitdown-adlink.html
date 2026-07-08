@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarkItDown：把多格式文件整理成 AI 可讀 Markdown - ADLINK 教學檔</title>
+  <style>
+    :root {
+      --dark: #252c2e;
+      --ink: #243034;
+      --muted: #5c686c;
+      --line: #d8d8d8;
+      --light: #f4f5f6;
+      --white: #ffffff;
+      --red: #d0333a;
+      --cyan: #1cb9d8;
+      --green: #94c11f;
+      --purple: #7d3189;
+      --orange: #ec672c;
+      --yellow: #fab428;
+      --shadow: 0 18px 42px rgba(37, 44, 46, 0.11);
+      --logo-report: url("../assets/brand/adlink-report-logo-charcoal-bg.jpg");
+      --logo-full: url("../assets/brand/adlink-logo-full.png");
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #ffffff 0%, #f4f5f6 54%, #ffffff 100%);
+      font-family: Calibri, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(37,44,46,.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(37,44,46,.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity: .42;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100vw - 32px)); margin: 0 auto; }
+    .cover {
+      min-height: 650px;
+      color: #fff;
+      background:
+        linear-gradient(115deg, rgba(37,44,46,.99), rgba(37,44,46,.91)),
+        radial-gradient(circle at 86% 16%, rgba(208,51,58,.26), transparent 420px);
+      border-bottom: 10px solid var(--red);
+    }
+    .cover-inner { min-height: 650px; display: flex; flex-direction: column; padding: 48px 0 54px; }
+    .cover-top, .cover-footer { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    .report-logo { width: min(520px, 74vw); height: 114px; background: var(--logo-report) left center / contain no-repeat; flex: 0 0 auto; }
+    .cover-kicker, .cover-footer { color: rgba(255,255,255,.76); font-size: 15px; }
+    .cover-main { margin: auto 0 34px; max-width: 1020px; }
+    .label {
+      display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px; border: 1px solid rgba(255,255,255,.34);
+      border-radius: 999px; background: rgba(255,255,255,.08); font-size: 13px; font-weight: 800;
+    }
+    .label::before {
+      content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--red);
+      box-shadow: 18px 0 0 var(--cyan), 36px 0 0 var(--green); margin-right: 38px;
+    }
+    h1 { margin: 24px 0 18px; font-size: clamp(38px, 5vw, 60px); line-height: 1.08; letter-spacing: 0; overflow-wrap: anywhere; }
+    .subtitle {
+      max-width: 940px; margin: 0; padding-left: 18px; border-left: 6px solid var(--red);
+      color: rgba(255,255,255,.88); font-size: 21px; overflow-wrap: anywhere;
+    }
+    .cover-footer { margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.18); }
+    header { background: #fff; border-bottom: 8px solid var(--red); box-shadow: var(--shadow); padding: 40px 0 34px; }
+    .ad-logo-full { width: min(240px, 70vw); height: 46px; margin-bottom: 18px; background: var(--logo-full) left center / contain no-repeat; }
+    .eyebrow { display: inline-flex; margin-bottom: 18px; padding: 7px 13px; border-radius: 3px; background: var(--dark); color: #fff; font-size: 14px; font-weight: 800; }
+    header h2 { margin: 0 0 14px; color: var(--dark); font-size: clamp(28px, 4vw, 44px); line-height: 1.16; letter-spacing: 0; overflow-wrap: anywhere; }
+    .lead { max-width: 980px; margin: 0 0 20px; color: #4b5558; font-size: 20px; overflow-wrap: anywhere; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+    .metric { min-height: 118px; padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--light); }
+    .metric b { display: block; color: var(--red); font-size: 28px; line-height: 1; }
+    .metric small { display: block; margin-top: 8px; color: #596265; font-weight: 800; }
+    nav { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(244,245,246,.96); backdrop-filter: blur(10px); }
+    nav .wrap { display: flex; gap: 10px; flex-wrap: wrap; padding: 12px 0; }
+    nav a { border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--dark); font-size: 14px; font-weight: 800; padding: 8px 12px; text-decoration: none; }
+    main { padding: 34px 0 68px; }
+    section { margin: 28px 0; padding: 30px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.96); box-shadow: 0 10px 28px rgba(37,44,46,.06); }
+    section h2 { margin: 0 0 14px; color: var(--dark); font-size: clamp(26px, 3vw, 36px); line-height: 1.18; letter-spacing: 0; }
+    section h3 { margin: 0 0 8px; color: var(--dark); font-size: 21px; line-height: 1.32; }
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 10px 0 0; padding-left: 22px; }
+    li { margin: 7px 0; }
+    code, pre { font-family: "SFMono-Regular", Consolas, monospace; }
+    code { padding: 2px 6px; border-radius: 4px; background: #eef0f1; color: #1c2224; font-size: .94em; }
+    pre { margin: 0; padding: 16px; border-radius: 8px; background: #111; color: #f6f4f0; overflow: auto; line-height: 1.6; font-size: 14px; }
+    .grid-2, .grid-3, .grid-4 { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .hero-media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .88fr); gap: 24px; align-items: center; }
+    .card { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+    .card .bar { height: 7px; background: var(--red); }
+    .card.cyan .bar { background: var(--cyan); }
+    .card.green .bar { background: var(--green); }
+    .card.purple .bar { background: var(--purple); }
+    .card.orange .bar { background: var(--orange); }
+    .card.yellow .bar { background: var(--yellow); }
+    .card-body { padding: 18px; }
+    .tag {
+      display: inline-flex; align-items: center; margin: 4px 6px 4px 0; padding: 5px 9px; border-radius: 999px;
+      background: #fff0f1; color: var(--red); font-size: 13px; font-weight: 800;
+    }
+    .tag.cyan { background: #e9f8fb; color: #0b7184; }
+    .tag.green { background: #fbfff5; color: #5e7c11; }
+    .tag.purple { background: #f4e9f6; color: #6d2677; }
+    .tag.orange { background: #fff5ee; color: #9d3f18; }
+    .tag.yellow { background: #fffaf0; color: #8a6413; }
+    .soft { padding: 16px 18px; border-left: 5px solid var(--cyan); border-radius: 6px; background: #f7fcfd; }
+    .warn { padding: 16px 18px; border-left: 5px solid var(--orange); border-radius: 6px; background: #fff8f4; }
+    .callout { padding: 18px; border: 1px solid #f0c9cc; border-radius: 8px; background: #fff7f7; }
+    .callout strong { color: var(--red); }
+    .compare { width: 100%; border-collapse: collapse; margin-top: 14px; overflow: hidden; border-radius: 8px; font-size: 15px; }
+    .compare th, .compare td { border: 1px solid var(--line); padding: 12px; vertical-align: top; text-align: left; }
+    .compare th { background: var(--dark); color: #fff; }
+    .compare tr:nth-child(even) td { background: #fafafa; }
+    .screenshot { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; box-shadow: var(--shadow); }
+    .screenshot img { display: block; width: 100%; height: auto; }
+    .caption { padding: 12px 14px; border-top: 1px solid var(--line); background: #fafafa; color: #596265; font-size: 14px; }
+    .diagram { border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: var(--shadow); overflow: hidden; }
+    .diagram svg { display: block; width: 100%; height: auto; }
+    .step-list { counter-reset: item; display: grid; gap: 12px; padding-left: 0; list-style: none; }
+    .step-list li { counter-increment: item; padding: 16px 16px 16px 58px; border: 1px solid var(--line); border-radius: 8px; background: #fff; position: relative; }
+    .step-list li::before {
+      content: counter(item); position: absolute; left: 16px; top: 16px; width: 28px; height: 28px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--red); color: #fff; font-weight: 900;
+    }
+    .source-list a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); color: #2b5c7e; overflow-wrap: anywhere; text-decoration: none; }
+    footer { padding: 26px 0 38px; color: #697174; font-size: 14px; text-align: center; }
+    @media (max-width: 920px) {
+      .cover-top, .cover-footer, .hero-media { flex-direction: column; align-items: flex-start; grid-template-columns: 1fr; }
+      .metrics, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      section { padding: 24px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100vw - 24px, 1160px); }
+      .cover-inner { padding: 34px 0 42px; min-height: 620px; }
+      .report-logo { width: 100%; height: 78px; }
+      h1 { font-size: 34px; }
+      .subtitle, .lead { font-size: 18px; }
+      section { padding: 18px; }
+      nav { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="wrap cover-inner">
+      <div class="cover-top">
+        <div class="report-logo" aria-label="ADLINK logo"></div>
+        <div class="cover-kicker">Document Ingestion / ADLINK Training</div>
+      </div>
+      <div class="cover-main">
+        <span class="label">ADLINK 教學檔</span>
+        <h1>MarkItDown：把多格式文件整理成 AI 可讀 Markdown</h1>
+        <p class="subtitle">這份教材把 MarkItDown 拆成文件 ingestion 問題：不是追求高擬真轉檔，而是用一致的 Markdown 結構，讓 PDF、Office、HTML、資料檔、音訊與延伸多模態內容更適合進入 AI 與 agent workflow。</p>
+      </div>
+      <div class="cover-footer">
+        <span>整理基礎：MarkItDown GitHub / MCP README / Microsoft Learn</span>
+        <span>2026-06-30</span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <div class="ad-logo-full" aria-label="ADLINK full logo"></div>
+      <span class="eyebrow">Course Framing</span>
+      <h2>這堂課要回答的不是「怎麼把文件轉得漂亮」，而是「怎麼把各種文件整理成 AI 真正看得懂的輸入」。</h2>
+      <p class="lead">MarkItDown 最值得吸收的地方，不是它支援格式很多，而是它把文件前處理標準化。對 ADLINK 這種會碰到 PDF 規格書、PPT 簡報、Excel 資料表、HTML 文件與知識庫 ingestion 的團隊來說，這層標準化非常實用。</p>
+      <div class="metrics">
+        <div class="metric"><b>10+</b><small>核心格式類型</small></div>
+        <div class="metric"><b>CLI</b><small>一行命令可用</small></div>
+        <div class="metric"><b>MCP</b><small>本機 agent 可接入</small></div>
+        <div class="metric"><b>Azure CU</b><small>多模態高品質延伸</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#positioning">工具定位</a>
+      <a href="#formats">支援格式</a>
+      <a href="#usage">安裝與使用</a>
+      <a href="#scenarios">使用場景</a>
+      <a href="#advanced">進階功能</a>
+      <a href="#risk">限制與風險</a>
+      <a href="#adlink">ADLINK 落地</a>
+      <a href="#checklist">檢查清單</a>
+      <a href="#sources">來源</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="positioning">
+      <div class="hero-media">
+        <div>
+          <h2>MarkItDown 的正確定位：文件 ingestion layer，不是排版還原器</h2>
+          <p>官方 README 已經講得很清楚：它是給 LLM 與文字分析流程使用的 Markdown 轉換工具。這代表它的輸出重點是標題、列表、表格、連結、段落層次這些「語義與結構」，不是為了讓人眼看起來與原稿一模一樣。</p>
+          <div class="callout">
+            <strong>一句話定義</strong><br>
+            如果你的目標是讓 AI 更好讀文件，MarkItDown 是前處理工具；如果你的目標是做高擬真出版還原，它就不是主角。
+          </div>
+          <div class="soft" style="margin-top:12px">核心觀點：同樣是一份 PDF，亂掉的純文字與有結構的 Markdown，對下游 agent、RAG 與摘要流程的效果差很多。</div>
+        </div>
+        <figure class="screenshot">
+          <img src="../assets/tutorials-markitdown-preview.webp" alt="MarkItDown preview">
+          <figcaption class="caption">這個主題最重要的不是「支援很多格式」本身，而是把多格式內容統一整理成大模型更容易理解的 Markdown 介面。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>先講清楚它在解決什麼痛點</h2>
+      <div class="grid-4">
+        <div class="card">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag">原始問題</span>
+            <h3>文件格式太雜</h3>
+            <p>PDF、Word、PPT、Excel、HTML、JSON、圖片、音訊各自有不同讀取方式，人工整理很耗時。</p>
+          </div>
+        </div>
+        <div class="card cyan">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag cyan">AI 問題</span>
+            <h3>直接丟原檔常常效果差</h3>
+            <p>模型不是完全看不懂，而是對於結構混亂、版面複雜、表格破碎的輸入很容易理解失真。</p>
+          </div>
+        </div>
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag green">MarkItDown 解法</span>
+            <h3>統一轉成 Markdown</h3>
+            <p>把不同來源先轉成同一種結構化文字格式，讓後續摘要、索引、embedding、問答與 agent 調用比較穩。</p>
+          </div>
+        </div>
+        <div class="card orange">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag orange">工程價值</span>
+            <h3>減少前處理碎工</h3>
+            <p>你不用每個格式各找一套 parser，再自己拼接清洗流程。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formats">
+      <h2>支援格式很多，但要分清楚「內建支援」和「延伸能力」</h2>
+      <table class="compare">
+        <thead>
+          <tr><th>類型</th><th>官方 README 狀態</th><th>教材應該怎麼理解</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PDF / Word / PowerPoint / Excel</td>
+            <td>核心支援</td>
+            <td>最適合拿來做文件 ingestion 與知識整理前處理。</td>
+          </tr>
+          <tr>
+            <td>HTML / CSV / JSON / XML</td>
+            <td>核心支援</td>
+            <td>對資料與網頁型內容特別方便，能統一落到 Markdown。</td>
+          </tr>
+          <tr>
+            <td>ZIP / EPub</td>
+            <td>核心支援</td>
+            <td>適合做批次內容整理，但輸出仍以分析友善為主，不是人眼最佳化排版。</td>
+          </tr>
+          <tr>
+            <td>Images / Audio</td>
+            <td>支援，但能力深度有差</td>
+            <td>圖片與音訊可處理，但更高品質 OCR / transcription 往往需要 plugin 或雲端路徑。</td>
+          </tr>
+          <tr>
+            <td>影音網址</td>
+            <td>支援</td>
+            <td>屬於把影音內容拉回可分析文字的一條路，但實作品質仍受依賴與來源內容影響。</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="warn" style="margin-top:18px">這裡最容易被講太滿的是 OCR。官方 README 說得很明白，`markitdown-ocr` 是 plugin，而且沒有 `llm_client` 時會直接略過 OCR，不是每個環境都自動滿血。</div>
+    </section>
+
+    <section id="usage">
+      <h2>安裝與使用其實很直白</h2>
+      <div class="grid-2">
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>CLI 用法</h3>
+            <pre>pip install 'markitdown[all]'
+
+markitdown path-to-file.pdf &gt; document.md
+
+markitdown path-to-file.pdf -o document.md</pre>
+            <p>最適合本機快速轉檔、腳本批次化，以及接在既有的 shell workflow 後面。</p>
+          </div>
+        </div>
+        <div class="card purple">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>Python API 用法</h3>
+            <pre>from markitdown import MarkItDown
+
+md = MarkItDown()
+result = md.convert("test.xlsx")
+print(result.text_content)</pre>
+            <p>適合你要把轉換能力嵌進自己的 pipeline、agent service 或資料清洗程式裡。</p>
+          </div>
+        </div>
+      </div>
+      <div class="soft" style="margin-top:18px">如果團隊想做共用服務，不一定每個人都要各自手裝一份。官方也提供 Docker 路徑，方便變成集中式工具層。</div>
+    </section>
+
+    <section id="scenarios">
+      <h2>哪些場景最值得用，不要只把它想成 PDF 轉字工具</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag">Scenario 1</span>
+            <h3>技術文件整理</h3>
+            <p>把 PDF 白皮書、規格文件或研究報告轉成 Markdown，再匯入 Obsidian、Notion、Joplin 或向量索引流程。</p>
+          </div>
+        </div>
+        <div class="card cyan">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag cyan">Scenario 2</span>
+            <h3>簡報與匯報材料提煉</h3>
+            <p>從 PowerPoint 或 Word 中抽出重點、章節與圖表說明，讓 AI 做摘要、比對與問答。</p>
+          </div>
+        </div>
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag green">Scenario 3</span>
+            <h3>RAG / Agent ingestion</h3>
+            <p>先用 Markdown 保存結構，再做 chunk、embedding、檢索或 agent 工具調用，效果通常比原始二進位檔案穩定。</p>
+          </div>
+        </div>
+        <div class="card orange">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag orange">Scenario 4</span>
+            <h3>批量資料前處理</h3>
+            <p>配合 shell loop 或 Python，處理整個資料夾、ZIP、結構化輸入，統一輸出標準 Markdown。</p>
+          </div>
+        </div>
+        <div class="card purple">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag purple">Scenario 5</span>
+            <h3>本機 MCP 文件工具</h3>
+            <p>讓本機 agent 直接把檔案或 URL 轉成 Markdown，而不是每次手動開檔、複製、貼上。</p>
+          </div>
+        </div>
+        <div class="card yellow">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag yellow">提醒</span>
+            <h3>不是萬用排版修復器</h3>
+            <p>如果你期待「每頁版面像原稿一樣美」，那是另一類工具需求，不是 MarkItDown 的主要承諾。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="advanced">
+      <h2>進階功能真正重要的有三條：plugin、MCP、Azure cloud path</h2>
+      <div class="grid-2">
+        <div class="card orange">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>1. OCR Plugin</h3>
+            <p><code>markitdown-ocr</code> 不是預設核心能力，而是 plugin。它用 LLM Vision 來補 PDF、DOCX、PPTX、XLSX 內嵌圖片的 OCR，不提供 LLM client 時 OCR 會被跳過。</p>
+          </div>
+        </div>
+        <div class="card cyan">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>2. MCP Server</h3>
+            <p><code>markitdown-mcp</code> 讓 agent 用 <code>convert_to_markdown(uri)</code> 工具轉換本機檔、遠端 URL、甚至 data URI。重點是它預設只該跑在 <code>localhost</code> 的可信任環境。</p>
+          </div>
+        </div>
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>3. Azure Content Understanding</h3>
+            <p>當你碰到掃描 PDF、複雜表格、多頁文件、音訊、視訊與結構化欄位抽取時，官方推薦走 Azure Content Understanding。它還能輸出 YAML front matter 做欄位抽取。</p>
+          </div>
+        </div>
+        <div class="card purple">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>4. Azure Document Intelligence</h3>
+            <p>如果你主要要的是 document layout 與 cloud extraction，也有 Document Intelligence 路徑。它和 Content Understanding 不同，後者更強調多模態與欄位抽取。</p>
+          </div>
+        </div>
+      </div>
+      <div class="diagram" style="margin-top:18px">
+        <svg viewBox="0 0 1120 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MarkItDown capability map">
+          <rect width="1120" height="320" fill="#ffffff"/>
+          <text x="42" y="54" font-size="30" font-family="Calibri, Noto Sans TC, sans-serif" font-weight="700" fill="#252c2e">MarkItDown 能力分層</text>
+          <rect x="42" y="96" width="320" height="170" rx="14" fill="#eefbff" stroke="#d8d8d8"/>
+          <rect x="400" y="96" width="320" height="170" rx="14" fill="#fbfff5" stroke="#d8d8d8"/>
+          <rect x="758" y="96" width="320" height="170" rx="14" fill="#fff7f7" stroke="#d8d8d8"/>
+          <text x="72" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">Core</text>
+          <text x="72" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">CLI / Python API</text>
+          <text x="72" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">PDF / Office / HTML / data</text>
+          <text x="430" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">Extensions</text>
+          <text x="430" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">OCR plugin / image description</text>
+          <text x="430" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">MCP / 影音轉寫</text>
+          <text x="788" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">Cloud Quality Path</text>
+          <text x="788" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">Azure Document Intelligence</text>
+          <text x="788" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">Azure Content Understanding</text>
+          <path d="M362 181H390M720 181H748" stroke="#d0333a" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="risk">
+      <h2>這些限制與風險不能省略，尤其是 agent workflow</h2>
+      <table class="compare">
+        <thead>
+          <tr><th>項目</th><th>官方邊界</th><th>ADLINK 教學上要怎麼提醒</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>安全</td>
+            <td>MarkItDown 會以目前程序權限做 I/O</td>
+            <td>不能把不可信任的路徑、URL、內網資源直接交給它處理。</td>
+          </tr>
+          <tr>
+            <td>MCP server</td>
+            <td>本機可信任用途，預設綁 localhost</td>
+            <td>不要為了方便就暴露到公網或任意網段。</td>
+          </tr>
+          <tr>
+            <td>掃描 PDF / 複雜表格</td>
+            <td>高品質抽取應考慮 Azure 路徑</td>
+            <td>本地轉換不是萬能，遇到難檔案要切換策略。</td>
+          </tr>
+          <tr>
+            <td>OCR</td>
+            <td>plugin + LLM client 才完整</td>
+            <td>不要把 OCR 當成預設免費內建滿血能力。</td>
+          </tr>
+          <tr>
+            <td>輸出品質</td>
+            <td>偏向 LLM consumption，不保證人眼排版完美</td>
+            <td>如果交付給人看，通常還要再經過清理或版面整理。</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="warn" style="margin-top:18px">最容易踩坑的是把 MarkItDown 當成「任何文件都能完美還原」的轉檔器。它真正擅長的是統一 ingestion，不是所有文件都零損失重建。</div>
+    </section>
+
+    <section id="adlink">
+      <h2>對 ADLINK 最直接的落地方式</h2>
+      <table class="compare">
+        <thead>
+          <tr><th>場景</th><th>現在常見痛點</th><th>MarkItDown 可扮演的角色</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>教學教材產線</td>
+            <td>來源檔案很雜，PDF / PPT / HTML 混在一起</td>
+            <td>先統一轉 Markdown，再交給 lesson brief、summary agent 或 HTML 產線。</td>
+          </tr>
+          <tr>
+            <td>研究報告與白皮書整理</td>
+            <td>人工摘錄耗時，格式亂</td>
+            <td>把來源先轉為可索引 Markdown，方便做摘要、比對與引用整理。</td>
+          </tr>
+          <tr>
+            <td>Wiki / RAG ingestion</td>
+            <td>不同文件格式進知識庫很難一致</td>
+            <td>先標準化，再做 chunk、embedding、metadata 與檢索。</td>
+          </tr>
+          <tr>
+            <td>Agent 文件讀取</td>
+            <td>每次都手開 PDF、複製內容給 agent</td>
+            <td>可透過本機 MCP 或預處理流程，讓 agent 直接吃 Markdown 輸入。</td>
+          </tr>
+          <tr>
+            <td>客戶文件與規格表</td>
+            <td>表格、章節與重點難抽</td>
+            <td>先做文件層轉換，再把真正難的掃描件交給 Azure cloud path。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>一句話比較：它不是 Pandoc 的替代思路，而是 AI ingestion 思路</h2>
+      <div class="grid-2">
+        <div class="card orange">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>傳統文件轉檔思路</h3>
+            <pre>目標：給人看
+重點：版面接近原稿
+常見要求：字型、頁碼、段距、視覺還原</pre>
+          </div>
+        </div>
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>MarkItDown 思路</h3>
+            <pre>目標：給 AI / agent / text pipeline 用
+重點：結構穩定、內容可讀、token 友善
+常見要求：標題、列表、表格、欄位、可索引</pre>
+          </div>
+        </div>
+      </div>
+      <div class="soft" style="margin-top:18px">這個角度很重要。你一旦把目標換成 ingestion，很多工具選型與驗收標準都會跟傳統文件轉換完全不同。</div>
+    </section>
+
+    <section id="checklist">
+      <h2>導入前先過這張清單</h2>
+      <ol class="step-list">
+        <li><strong>先確認目標是 AI ingestion，不是排版還原。</strong><br>如果需求是給人類閱讀的精緻排版，後面還要再接另一層整理。</li>
+        <li><strong>先挑一批高頻文件類型。</strong><br>例如 PDF 規格書、PPT 匯報、Word 文件、Excel 表格，先用這些做轉換品質抽查。</li>
+        <li><strong>把 OCR 與掃描件分流。</strong><br>不要假設所有圖像型文件都能本地一次解決，高難度場景要預留 Azure 路徑。</li>
+        <li><strong>如果要給 agent 用，先處理權限邊界。</strong><br>MCP server 與本地轉換工具都應該設在可信任環境，不要亂開網路存取。</li>
+        <li><strong>把 Markdown 輸出接進後續流程。</strong><br>真正價值不是「轉完就放著」，而是進 chunk、embedding、RAG、summary、wiki intake 或 HTML 教材產線。</li>
+      </ol>
+    </section>
+
+    <section id="sources">
+      <h2>來源</h2>
+      <div class="source-list">
+        <a href="https://github.com/microsoft/markitdown">GitHub：microsoft / markitdown</a>
+        <a href="https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp">GitHub：markitdown-mcp README</a>
+        <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/whats-new">Microsoft Learn：What's new in Azure Content Understanding</a>
+        <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/document/markdown">Microsoft Learn：Document analysis Markdown representation</a>
+        <a href="https://pypi.org/project/markitdown/">PyPI：markitdown</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    ADLINK internal teaching draft. Grounded in MarkItDown official repository materials, MCP package notes, Microsoft Learn documentation, and source-backed content review.
+  </footer>
+</body>
+</html>

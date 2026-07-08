@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Skill：把常用工作變成 AI SOP - ADLINK 內容分析教材</title>
+  <style>
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:url("../assets/brand/adlink-logo-white.png");--logo-full:url("../assets/brand/adlink-logo-full.png")}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);background-size:44px 44px;opacity:.42;z-index:-1}
+    .cover{min-height:650px;background:linear-gradient(110deg,rgba(37,44,46,.98),rgba(37,44,46,.91));color:#fff;border-bottom:10px solid var(--red)}
+    .cover-inner{max-width:1180px;margin:0 auto;min-height:650px;padding:52px 24px 58px;display:flex;flex-direction:column}
+    .cover-top,.cover-footer{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .ad-logo-white{width:260px;height:78px;background:var(--logo-white) left center/contain no-repeat;flex:0 0 auto}
+    .ad-logo-full{width:min(240px,70vw);height:46px;background:var(--logo-full) left center/contain no-repeat;margin-bottom:18px}
+    .cover-kicker{font-size:15px;color:rgba(255,255,255,.74);text-align:right}
+    .cover-main{margin:auto 0 44px;max-width:980px}
+    .label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:13px;color:#fff}
+    .label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:18px 0 0 var(--cyan),36px 0 0 var(--green);margin-right:38px}
+    h1{font-size:clamp(40px,5vw,66px);line-height:1.08;margin:26px 0 20px;letter-spacing:0;overflow-wrap:anywhere;word-break:break-word}
+    .subtitle{font-size:21px;color:rgba(255,255,255,.86);border-left:6px solid var(--red);padding-left:18px;max-width:850px}
+    .cover-footer{margin-top:auto;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;color:rgba(255,255,255,.72);font-size:15px}
+    header{background:#fff;color:var(--dark);padding:42px 28px 38px;border-bottom:8px solid var(--red);box-shadow:var(--shadow)}
+    .wrap{max-width:1180px;margin:0 auto}
+    .eyebrow{display:inline-flex;padding:7px 13px;border-radius:3px;background:var(--dark);color:#fff;font-size:14px;margin-bottom:18px;font-weight:800}
+    header h1{font-size:46px;color:var(--dark);margin:0 0 14px}
+    .lead{font-size:20px;color:#4b5558;max-width:980px;margin:0 0 22px}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+    .metric{background:var(--light);border:1px solid var(--line);border-radius:8px;padding:17px}
+    .metric b{display:block;color:var(--red);font-size:28px;line-height:1}
+    .metric small{display:block;color:#596265;font-weight:800;margin-top:6px}
+    nav{position:sticky;top:0;z-index:5;background:rgba(244,245,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    nav .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:12px 20px}
+    nav a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;color:var(--dark);font-weight:800}
+    nav a:hover{color:var(--red);border-color:var(--red);background:#fff7f7}
+    main{padding:34px 20px 64px}
+    section{max-width:1180px;margin:0 auto 30px}
+    .section-title{display:flex;align-items:center;gap:14px;margin:34px 0 18px;border-bottom:1px solid var(--line);padding-bottom:12px;position:relative}
+    .section-title::after{content:"";position:absolute;left:0;bottom:-2px;width:120px;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan))}
+    .section-title span{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:2px;background:var(--red);color:#fff;font-weight:900;box-shadow:8px 8px 0 rgba(208,51,58,.16)}
+    h2{font-size:30px;line-height:1.25;margin:0;color:var(--dark);letter-spacing:0}
+    h3{font-size:21px;line-height:1.35;margin:0 0 10px;color:var(--dark);letter-spacing:0}
+    p{font-size:17px;color:#394245;margin:0 0 12px}
+    ul{margin:0;padding-left:22px}
+    li{font-size:17px;margin:8px 0;color:#394245}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:22px;color:var(--dark)}
+    .span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+    .term-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:12px}
+    .term-title{font-size:24px;font-weight:900;color:var(--dark)}
+    .term-sub{color:var(--gray);font-weight:800}
+    .pill,.tag{display:inline-flex;align-items:center;border-radius:3px;padding:4px 9px;font-size:13px;font-weight:900}
+    .pill{background:#fff0f1;color:#9c2028;border:1px solid #ffd1d5;white-space:nowrap}
+    .tag{background:#fbfff5;color:#5E7C11;border:1px solid #cce29c;margin:4px 6px 0 0}
+    .tag.blue{background:#eefbff;color:#167d96;border-color:#b9ebf5}.tag.warn{background:#fff9e8;color:#9a6500;border-color:#f4d48a}.tag.red{background:#fff0f1;color:#9c2028;border-color:#ffd1d5}
+    .example,.source-note{border-left:5px solid var(--cyan);background:#f7fcfd;padding:13px 14px;margin-top:14px;color:#3b484b;font-size:15px}
+    .warning{border-left:5px solid var(--orange);background:#fff8f4;padding:13px 14px;margin-top:14px;color:#53372d;font-size:15px}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .flow-step{border:1px solid var(--line);border-top:5px solid var(--red);border-radius:8px;padding:16px;background:#fff;min-height:120px}
+    .flow-step:nth-child(2){border-top-color:var(--cyan)}.flow-step:nth-child(3){border-top-color:var(--green)}.flow-step:nth-child(4){border-top-color:var(--purple)}.flow-step:nth-child(5){border-top-color:var(--orange)}
+    .flow-step b{display:block;color:var(--red);font-size:18px;margin-bottom:8px}
+    table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;font-size:15px}
+    th{background:var(--dark);color:#fff}
+    .concept-svg{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 14px 34px rgba(37,44,46,.08)}
+    footer{padding:30px 20px;color:#fff;background:var(--dark);font-size:14px}
+    @media(max-width:900px){.cover{min-height:auto}.cover-inner{min-height:auto;padding:30px 18px 34px}.cover-top,.cover-footer{align-items:flex-start;flex-direction:column}.ad-logo-white{width:210px;height:58px}.metrics,.flow,.grid{grid-template-columns:1fr}.metric{padding:14px}.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:auto}header{padding:28px 18px 30px}header h1{font-size:32px}nav{position:static}nav .wrap{padding:10px 14px;gap:8px}nav a{font-size:13px;padding:7px 10px}main{padding:24px 14px 44px}.card{padding:18px}.term-head{display:block}.pill{margin-top:8px}.flow-step{min-height:auto}table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}h1{font-size:34px}h2{font-size:25px}h3{font-size:20px}p,li{font-size:16px}.subtitle{font-size:18px}}
+    @media print{nav{display:none}body{background:#fff}.card,table{box-shadow:none}section{page-break-inside:avoid}}
+  </style>
+  <script src="../site-config.js"></script>
+  <script src="../tutorial-gate.js"></script>
+</head>
+<body>
+  <section class="cover" aria-label="ADLINK cover">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo"></div>
+        <div class="cover-kicker">Course Material<br/>HTML Training</div>
+      </div>
+      <div class="cover-main">
+        <div class="label">Content Analysis</div>
+        <h1>Codex Skill：把常用工作變成 AI SOP</h1>
+        <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
+      </div>
+      <div class="cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Research-backed Course Material</span>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="wrap">
+      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
+      <h1>Codex Skill：把常用工作變成 AI SOP</h1>
+      <p class="lead">本教材聚焦本地 agent 如何把修正紀錄、偏好與工作 know-how 回寫成 Codex Skill，讓 Codex 更懂使用者與團隊 SOP。</p>
+      <div class="metrics">
+        <div class="metric"><b>7</b><small>主要大綱</small></div>
+        <div class="metric"><b>1</b><small>研究資料</small></div>
+        <div class="metric"><b>7</b><small>教學卡片</small></div>
+        <div class="metric"><b>0</b><small>外部素材</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#outline">課程大綱</a>
+      <a href="#map">整體關係圖</a>
+      <a href="#terms">核心概念</a>
+      <a href="#extra">優化閉環</a>
+      <a href="#examples">ADLINK 落地</a>
+      
+      <a href="#summary">一頁式重點</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="outline">
+      <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
+      <div class="grid">
+          <article class="card span-6"><h3>核心問題：本地 agent 學到的東西會流失</h3><p>本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</p><div><span class="tag blue">Local Agent</span><span class="tag blue">Know-how</span><span class="tag blue">Feedback</span></div></article><article class="card span-6"><h3>為什麼回寫到 Codex Skill</h3><p>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</p><div><span class="tag blue">Codex Skill</span><span class="tag blue">OpenAI Skills</span><span class="tag blue">Reusable Workflow</span></div></article><article class="card span-6"><h3>回寫流程：從修正紀錄變成 Skill</h3><p>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</p><div><span class="tag blue">Distillation</span><span class="tag blue">Trigger</span><span class="tag blue">Quality Gate</span></div></article><article class="card span-6"><h3>好處一：Codex 更懂使用者</h3><p>當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</p><div><span class="tag blue">Personalization</span><span class="tag blue">Context</span><span class="tag blue">Consistency</span></div></article><article class="card span-6"><h3>好處二：Skill 會越用越準</h3><p>每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</p><div><span class="tag blue">Evaluation</span><span class="tag blue">Anti-pattern</span><span class="tag blue">Iteration</span></div></article><article class="card span-6"><h3>好處三：團隊 know-how 可以共用</h3><p>Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</p><div><span class="tag blue">Workspace</span><span class="tag blue">Open Standard</span><span class="tag blue">Governance</span></div></article><article class="card span-6"><h3>ADLINK 落地做法</h3><p>先從 art agent 教材產線開始，把你已確認的偏好回寫成 Codex Skill；穩定後再擴到 PR review、問題分類與客戶摘要。</p><div><span class="tag blue">ADLINK</span><span class="tag blue">Internal Workflow</span><span class="tag blue">Pilot</span></div></article>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="section-title"><span>2</span><h2>本地 agent 到 Codex Skill 閉環</h2></div>
+      <div class="grid">
+        <div class="card span-12">
+          <div class="flow">
+            <div class="flow-step"><b>核心問題：本地 agent 學到的東西會流失</b>本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</div><div class="flow-step"><b>為什麼回寫到 Codex Skill</b>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</div><div class="flow-step"><b>回寫流程：從修正紀錄變成 Skill</b>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</div><div class="flow-step"><b>好處一：Codex 更懂使用者</b>當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</div><div class="flow-step"><b>好處二：Skill 會越用越準</b>每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</div>
+          </div>
+          <div class="example"><strong>閱讀方式：</strong>先看回寫閉環，再看每一步如何把 agent 修正紀錄變成 Codex Skill 的 trigger、steps、checks 與 examples。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
+      <div class="grid">
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">核心問題：本地 agent 學到的東西會流失</div><div class="term-sub">本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>要收集的不是聊天內容本身，而是可重複的方法：觸發條件、操作順序、禁用事項、輸出格式與品質檢查。</li><li>每次人工修正都應被視為訓練資料：哪裡重複、哪裡誤判、哪個偏好要永久保留。</li><li>目標是把一次性的使用經驗，整理成 Codex 下次能自動使用的工作規則。</li></ul>
+          <div class="example"><strong>教學提示：</strong>art agent 被你修正過 ADLINK logo、禁用字、手機版面與寄信流程後，這些規則不能只留在對話裡，要進 Codex Skill。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">為什麼回寫到 Codex Skill</div><div class="term-sub">OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Skills 支援 Codex 與 API，代表這些 workflow 不只存在 ChatGPT 介面，也可以進入工程 agent 工作流。</li><li>Skills 遵循 Agent Skills open standard，可從一個產品下載後安裝到另一個產品。</li><li>Codex 是寫 code、review code、ship code 的 agent；把 SOP 寫成 skill，等於讓 Codex 先讀懂你的工作方式再動手。</li></ul>
+          <div class="example"><strong>教學提示：</strong>把「產 ADLINK HTML 前先查官方資料、禁止顯示來源時間戳、手機版不能水平溢出」寫成 skill，比每次口頭提醒穩定。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">回寫流程：從修正紀錄變成 Skill</div><div class="term-sub">不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Trigger：什麼任務要使用這個 skill，例如來源連結轉 ADLINK 教材、PR review、客戶問題摘要。</li><li>Steps：固定流程，例如先取得來源、再做 evidence notes、再上網查官方資料、最後渲染 HTML。</li><li>Checks：品質閘門，例如繁體中文、ADLINK logo、手機版無溢出、不得套錯模板。</li></ul>
+          <div class="example"><strong>教學提示：</strong>每次你說「這頁不用出現」、「不要用來源流程字眼」、「要上網找資料」，都應被歸納成 renderer rule，而不是只改單一檔案。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">好處一：Codex 更懂使用者</div><div class="term-sub">當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>使用者不用重複解釋「我要 ADLINK 格式、繁體中文、手機可讀、不要來源時間戳」。</li><li>Codex 可以更快判斷哪些內容該放進教材，哪些只是內部處理流程不能顯示。</li><li>這比單純依賴一次 prompt 更穩，因為 skill 會在相同任務反覆被套用。</li></ul>
+          <div class="example"><strong>教學提示：</strong>未來你丟新連結時，Codex 應自動知道：來源連結只是框架，實際教材要查官方資料後重寫成可教內容。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">好處二：Skill 會越用越準</div><div class="term-sub">每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>成功案例變成 examples，讓 Codex 知道什麼叫合格輸出。</li><li>失敗案例變成 anti-patterns，讓 Codex 避免舊模板、簡體字、長條式手機版與重複段落。</li><li>品質檢查可以變成固定 checklist，讓每次產出都先自查再交給使用者。</li></ul>
+          <div class="example"><strong>教學提示：</strong>這次你指出內容重複，下一版 skill 就要加入規則：同一個觀念只能在大綱、細節或總結中各出現一次，不要整頁反覆貼。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">好處三：團隊 know-how 可以共用</div><div class="term-sub">Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>一個人修正過的流程，不必只存在自己的聊天紀錄或本機 agent。</li><li>團隊可以共用教材產出、PR review、issue triage、客戶摘要等高頻 skill。</li><li>共享前要保留權限與資料邊界：不要把客戶機密、token、內部未公開資訊直接放進 skill。</li></ul>
+          <div class="example"><strong>教學提示：</strong>ADLINK 可以把 PM、FAE、SIE、教材產線各自的最佳做法收斂成不同 skill，讓新人與 agent 都照同一套標準做事。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">ADLINK 落地做法</div><div class="term-sub">先從 art agent 教材產線開始，把你已確認的偏好回寫成 Codex Skill；穩定後再擴到 PR review、問題分類與客戶摘要。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>第一版：ADLINK 教材 skill，固定處理來源理解、官方資料補充、手機版 HTML、Telegram 預覽與寄信確認。</li><li>第二版：Codex review skill，固定讀 AGENTS.md、檢查風險、跑測試、輸出問題清單。</li><li>第三版：Agent skill registry，追蹤每個本地 agent 哪些 know-how 已回寫、哪些還只是臨時 prompt。</li></ul>
+          <div class="example"><strong>教學提示：</strong>衡量方式不要只看產出速度，也要看重工次數、人工修正次數、禁用字違規、手機版可讀性與寄信成功率。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="extra">
+      <div class="section-title"><span>4</span><h2>好處與優化閉環</h2></div>
+      <div class="grid">
+        <div class="card span-4">
+          <h3>不用每次重講規則</h3>
+          <p>使用者偏好、公司格式、禁用字與完成標準進入 skill 後，Codex 每次啟動任務就先讀到同一套規則。</p>
+          <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>把失敗變成 anti-pattern</h3>
+          <p>套錯模板、內容重複、手機版溢出、顯示來源流程字眼，都要變成下一版 skill 的禁止條件。</p>
+          <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>把成功變成 examples</h3>
+          <p>被使用者確認可以的 HTML、寄信流程、ADLINK logo 規則與口語化寫法，整理成範例讓 Codex 重複使用。</p>
+          <span class="tag ">內容重點</span><span class="tag">研究依據</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="section-title"><span>5</span><h2>ADLINK 導入方式</h2></div>
+      <div class="grid">
+        <div class="card span-6">
+          <h3>第一階段：教材產線</h3>
+          <p><strong>落地：</strong>先把 art agent 的教材偏好回寫成 Codex Skill：官方資料補充、繁體中文、手機版、Telegram 預覽與寄信確認。</p>
+          
+          
+        </div><div class="card span-6">
+          <h3>第二階段：工程工作</h3>
+          <p><strong>落地：</strong>再擴到 PR review、問題分類與客戶摘要，讓 Codex 依 ADLINK 的檢查方式、輸出格式與風險語言執行。</p>
+          
+          
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="summary">
+      <div class="section-title"><span>6</span><h2>一頁式重點</h2></div>
+      <div class="card span-12">
+        <h3>本課重點整理</h3>
+        <ul>
+          <li><strong>核心問題：本地 agent 學到的東西會流失：</strong>本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</li><li><strong>為什麼回寫到 Codex Skill：</strong>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</li><li><strong>回寫流程：從修正紀錄變成 Skill：</strong>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</li><li><strong>好處一：Codex 更懂使用者：</strong>當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</li><li><strong>好處二：Skill 會越用越準：</strong>每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</li><li><strong>好處三：團隊 know-how 可以共用：</strong>Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</li>
+        </ul>
+        <div class="warning"><strong>注意：</strong>專有名詞、數字與版本資訊應以官方文件或使用者補充資料為準。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">ADLINK 主題研究教材｜Research-backed HTML Material</div>
+  </footer>
+</body>
+</html>

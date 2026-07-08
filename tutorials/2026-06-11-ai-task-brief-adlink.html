@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>你不是不會寫 Prompt，是不會定義任務 - ADLINK 內訓教材</title>
+  <style>
+    :root {
+      --dark: #252C2E;
+      --gray: #697174;
+      --line: #D8D8D8;
+      --red: #D0333A;
+      --cyan: #1CB9D8;
+      --green: #94C11F;
+      --purple: #7D3189;
+      --orange: #EC672C;
+      --yellow: #FAB428;
+      --light: #F4F5F6;
+      --white: #FFFFFF;
+      --shadow: 0 18px 44px rgba(37, 44, 46, .13);
+      --logo-report: url("../assets/brand/adlink-report-logo-charcoal-bg.jpg");
+      --logo-report-black: url("../assets/brand/adlink-report-logo-black-bg.png");
+      --logo-full: url("../assets/brand/adlink-logo-full.png");
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f5f6 56%, #ffffff 100%);
+      color: var(--dark);
+      font-family: Calibri, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.72;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(37,44,46,.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(37,44,46,.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity: .42;
+      z-index: -1;
+    }
+    a { color: inherit; }
+    .cover {
+      min-height: 660px;
+      background:
+        linear-gradient(115deg, rgba(37,44,46,.98), rgba(37,44,46,.90)),
+        radial-gradient(circle at 82% 14%, rgba(208,51,58,.24), transparent 430px);
+      color: #fff;
+      border-bottom: 10px solid var(--red);
+    }
+    .cover-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      min-height: 660px;
+      padding: 52px 24px 58px;
+      display: flex;
+      flex-direction: column;
+    }
+    .cover-top,
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+      align-items: center;
+    }
+    .report-logo {
+      width: min(520px, 72vw);
+      height: 116px;
+      background: var(--logo-report) left center / contain no-repeat;
+      flex: 0 0 auto;
+    }
+    .cover-kicker {
+      font-size: 15px;
+      color: rgba(255,255,255,.75);
+      text-align: right;
+    }
+    .cover-main {
+      margin: auto 0 44px;
+      max-width: 1010px;
+    }
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-weight: 800;
+      font-size: 13px;
+      color: #fff;
+    }
+    .label::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 18px 0 0 var(--cyan), 36px 0 0 var(--green);
+      margin-right: 38px;
+    }
+    h1 {
+      font-size: clamp(40px, 5vw, 66px);
+      line-height: 1.08;
+      margin: 26px 0 20px;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .subtitle {
+      font-size: 21px;
+      color: rgba(255,255,255,.88);
+      border-left: 6px solid var(--red);
+      padding-left: 18px;
+      max-width: 880px;
+    }
+    .cover-footer {
+      margin-top: auto;
+      border-top: 1px solid rgba(255,255,255,.18);
+      padding-top: 18px;
+      color: rgba(255,255,255,.72);
+      font-size: 15px;
+    }
+    header {
+      background: #fff;
+      color: var(--dark);
+      padding: 42px 28px 38px;
+      border-bottom: 8px solid var(--red);
+      box-shadow: var(--shadow);
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .ad-logo-full {
+      width: min(240px, 70vw);
+      height: 46px;
+      background: var(--logo-full) left center / contain no-repeat;
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 13px;
+      border-radius: 3px;
+      background: var(--dark);
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+    header h1 {
+      font-size: 46px;
+      color: var(--dark);
+      margin: 0 0 14px;
+    }
+    .lead {
+      font-size: 20px;
+      color: #4b5558;
+      max-width: 980px;
+      margin: 0 0 22px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .metric {
+      background: var(--light);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 17px;
+    }
+    .metric b {
+      display: block;
+      color: var(--red);
+      font-size: 28px;
+      line-height: 1;
+    }
+    .metric small {
+      display: block;
+      color: #596265;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(244,245,246,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    nav .wrap {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 12px 20px;
+    }
+    nav a {
+      text-decoration: none;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: var(--dark);
+      font-weight: 800;
+    }
+    nav a:hover {
+      color: var(--red);
+      border-color: var(--red);
+      background: #fff7f7;
+    }
+    main { padding: 34px 20px 64px; }
+    section {
+      max-width: 1180px;
+      margin: 0 auto 30px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 34px 0 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 120px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), var(--cyan));
+    }
+    .section-title span {
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background: var(--red);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 8px 8px 0 rgba(208,51,58,.16);
+      flex: 0 0 auto;
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      margin: 0;
+      color: var(--dark);
+      letter-spacing: 0;
+    }
+    h3 {
+      font-size: 21px;
+      line-height: 1.35;
+      margin: 0 0 10px;
+      color: var(--dark);
+      letter-spacing: 0;
+    }
+    p {
+      font-size: 17px;
+      color: #394245;
+      margin: 0 0 12px;
+    }
+    ul { margin: 0; padding-left: 22px; }
+    li {
+      font-size: 17px;
+      margin: 8px 0;
+      color: #394245;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      color: var(--dark);
+    }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+    .term-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .term-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--dark);
+    }
+    .term-sub {
+      color: var(--gray);
+      font-weight: 800;
+    }
+    .pill,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 3px;
+      padding: 4px 9px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .pill {
+      background: #fff0f1;
+      color: #9c2028;
+      border: 1px solid #ffd1d5;
+      white-space: nowrap;
+    }
+    .tag {
+      background: #fbfff5;
+      color: #5E7C11;
+      border: 1px solid #cce29c;
+      margin: 4px 6px 0 0;
+    }
+    .tag.blue {
+      background: #eefbff;
+      color: #167d96;
+      border-color: #b9ebf5;
+    }
+    .tag.warn {
+      background: #fff9e8;
+      color: #9a6500;
+      border-color: #f4d48a;
+    }
+    .tag.red {
+      background: #fff0f1;
+      color: #9c2028;
+      border-color: #ffd1d5;
+    }
+    .example,
+    .source-note {
+      border-left: 5px solid var(--cyan);
+      background: #f7fcfd;
+      padding: 13px 14px;
+      margin-top: 14px;
+      color: #3b484b;
+      font-size: 15px;
+    }
+    .warning {
+      border-left: 5px solid var(--orange);
+      background: #fff8f4;
+      padding: 13px 14px;
+      margin-top: 14px;
+      color: #53372d;
+      font-size: 15px;
+    }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .flow-step {
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--red);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+      min-height: 150px;
+    }
+    .flow-step:nth-child(2) { border-top-color: var(--cyan); }
+    .flow-step:nth-child(3) { border-top-color: var(--green); }
+    .flow-step:nth-child(4) { border-top-color: var(--purple); }
+    .flow-step b {
+      display: block;
+      color: var(--red);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .flow-step p { font-size: 15px; margin: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 15px;
+    }
+    th {
+      background: var(--dark);
+      color: #fff;
+    }
+    .brief-template {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .brief-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 14px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-left: 7px solid var(--red);
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px;
+    }
+    .brief-row:nth-child(2) { border-left-color: var(--cyan); }
+    .brief-row:nth-child(3) { border-left-color: var(--green); }
+    .brief-row:nth-child(4) { border-left-color: var(--orange); }
+    .brief-row:nth-child(5) { border-left-color: var(--purple); }
+    .brief-row b {
+      font-size: 18px;
+      color: var(--dark);
+    }
+    .brief-row code {
+      display: block;
+      color: #4b5558;
+      white-space: pre-wrap;
+      font-family: Calibri, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .source-list a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    footer {
+      padding: 30px 20px;
+      color: #fff;
+      background: var(--dark);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .cover { min-height: auto; }
+      .cover-inner {
+        min-height: auto;
+        padding: 30px 18px 34px;
+      }
+      .cover-top,
+      .cover-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .report-logo {
+        width: min(330px, 88vw);
+        height: 78px;
+      }
+      .metrics,
+      .grid,
+      .flow {
+        grid-template-columns: 1fr;
+      }
+      .span-4,
+      .span-5,
+      .span-6,
+      .span-7,
+      .span-8,
+      .span-12 {
+        grid-column: auto;
+      }
+      .brief-row {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 28px 18px 30px;
+      }
+      header h1 { font-size: 32px; }
+      nav { position: static; }
+      nav .wrap {
+        padding: 10px 14px;
+        gap: 8px;
+      }
+      nav a {
+        font-size: 13px;
+        padding: 7px 10px;
+      }
+      main { padding: 24px 14px 44px; }
+      .card { padding: 18px; }
+      .term-head { display: block; }
+      .pill { margin-top: 8px; }
+      .flow-step { min-height: auto; }
+      table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      h1 { font-size: 34px; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 20px; }
+      p,
+      li { font-size: 16px; }
+      .subtitle { font-size: 18px; }
+    }
+
+    @media print {
+      nav { display: none; }
+      body { background: #fff; }
+      .card,
+      table { box-shadow: none; }
+      section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <section class="cover" aria-label="ADLINK cover">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="report-logo" aria-label="ADLINK logo"></div>
+        <div class="cover-kicker">Course Material<br>Internal Training</div>
+      </div>
+      <div class="cover-main">
+        <div class="label">Task Definition</div>
+        <h1>你不是不會寫 Prompt，是不會定義任務</h1>
+        <p class="subtitle">把模糊需求轉成 AI 與同事都接得住的工作 brief：先定義目標、背景、素材、邊界與完成定義，再進入執行。</p>
+      </div>
+      <div class="cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Research-backed Course Material | 2026-06-11</span>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="wrap">
+      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
+      <h1>Prompt 是地板，任務定義才是產出高度</h1>
+      <p class="lead">新版 AI agent 已能連續讀資料、改內容、驗證結果並重新規劃。真正的瓶頸不再只是句子寫得漂不漂亮，而是使用者能不能把工作交辦成一份清楚的 brief。</p>
+      <div class="metrics">
+        <div class="metric"><b>5</b><small>任務欄位</small></div>
+        <div class="metric"><b>4</b><small>動手前階段</small></div>
+        <div class="metric"><b>1</b><small>ADLINK 落地模板</small></div>
+        <div class="metric"><b>0</b><small>不靠猜測補需求</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#outline">課程大綱</a>
+      <a href="#stages">四個階段</a>
+      <a href="#fields">五欄位 Brief</a>
+      <a href="#template">ADLINK 模板</a>
+      <a href="#cases">應用場景</a>
+      <a href="#sources">參考資料</a>
+      <a href="#summary">一頁式重點</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="outline">
+      <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
+      <div class="grid">
+        <article class="card span-6">
+          <h3>核心問題：AI 回答完整，但不一定可用</h3>
+          <p>很多輸出看起來段落完整、格式漂亮，卻無法支持決策。原因通常不是模型不夠強，而是任務只描述了動作，沒有描述目的、限制與完成標準。</p>
+          <div><span class="tag blue">Task Definition</span><span class="tag blue">Brief</span><span class="tag blue">Decision Support</span></div>
+        </article>
+        <article class="card span-6">
+          <h3>Prompt 技巧沒有消失，但位置變了</h3>
+          <p>格式、語氣、角色、範例仍然重要；它們是基本功。當模型變得更像 senior partner，真正決定結果品質的是交辦者有沒有把工作想清楚。</p>
+          <div><span class="tag">Prompt Engineering</span><span class="tag">Senior Partner</span></div>
+        </article>
+        <article class="card span-6">
+          <h3>先判斷工作階段，再決定怎麼餵資料</h3>
+          <p>思考、探索、決定、執行是不同工作狀態。若還在思考階段就要求完整產出，AI 只能補出一份沒有觀點的平均版本。</p>
+          <div><span class="tag warn">Thinking</span><span class="tag warn">Exploration</span><span class="tag warn">Execution</span></div>
+        </article>
+        <article class="card span-6">
+          <h3>五欄位 Brief 是執行階段的工作契約</h3>
+          <p>目標、背景、素材、邊界、完成定義會把「幫我做一份分析」轉成「支撐某個決策的一份工作」。這種交辦方式同時適用於 AI、同事、外包與跨部門合作。</p>
+          <div><span class="tag blue">Goal</span><span class="tag blue">Context</span><span class="tag blue">Done</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="stages">
+      <div class="section-title"><span>2</span><h2>動手前先判斷：我現在在哪個階段？</h2></div>
+      <div class="flow">
+        <article class="flow-step">
+          <b>01 思考</b>
+          <h3>問題還沒釐清</h3>
+          <p>讓 AI 反問問題、拆模糊語句、找出真正卡住的地方。這時不要要求完整 draft。</p>
+        </article>
+        <article class="flow-step">
+          <b>02 探索</b>
+          <h3>比較可能選項</h3>
+          <p>請 AI map options、列 trade-off、補充可能路徑。重點是拓展，不是馬上定案。</p>
+        </article>
+        <article class="flow-step">
+          <b>03 決定</b>
+          <h3>收斂方向</h3>
+          <p>提供決策邏輯、判斷準則、優先順序，讓 AI 幫忙評估哪個方案比較合理。</p>
+        </article>
+        <article class="flow-step">
+          <b>04 執行</b>
+          <h3>產出可交付物</h3>
+          <p>方向已定時，用五欄位 brief 明確交辦。這時才要求報告、程式、簡報或客戶回覆。</p>
+        </article>
+      </div>
+      <div class="warning"><strong>常見錯誤：</strong>使用者還沒有 thesis，就要求 AI 產完整內容；AI 會產出一份看似合理、但沒有判斷核心的平均答案。</div>
+    </section>
+
+    <section id="fields">
+      <div class="section-title"><span>3</span><h2>五欄位 Brief：把動作指令變成可執行工作</h2></div>
+      <div class="grid">
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">目標</div><div class="term-sub">不是動作，是成品要支撐的決策。</div></div><span class="pill">欄位 1</span></div>
+          <ul>
+            <li>不要只寫「做一份競品分析」。</li>
+            <li>要寫這份分析要支撐什麼產品、價格、資源或客戶決策。</li>
+            <li>目標清楚後，AI 才知道哪些資訊重要、哪些只是填空。</li>
+          </ul>
+          <div class="example"><strong>ADLINK 問法：</strong>這份產出要幫 PM、FAE、SIE 或主管做哪個決定？</div>
+        </article>
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">背景</div><div class="term-sub">讓聰明但陌生的合作者看懂局勢。</div></div><span class="pill">欄位 2</span></div>
+          <ul>
+            <li>交代客戶、產品線、限制、歷史決策與目前壓力。</li>
+            <li>背景不是補充資料；它決定 AI 用什麼角度看問題。</li>
+            <li>沒有背景時，AI 會回到最一般的教科書版本。</li>
+          </ul>
+          <div class="example"><strong>ADLINK 問法：</strong>這是內部決策、客戶交付、研發 debug，還是跨部門同步？</div>
+        </article>
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">素材</div><div class="term-sub">定義主要來源、次要來源與禁止來源。</div></div><span class="pill">欄位 3</span></div>
+          <ul>
+            <li>指定要根據哪些文件、數據、官網、ticket、測試 log 或會議紀錄。</li>
+            <li>明確說哪些來源不要用，避免 SEO 文章、二手摘要或過期資訊污染判斷。</li>
+            <li>找不到資料時要求留白，不要編造。</li>
+          </ul>
+          <div class="warning"><strong>高風險提醒：</strong>價格、規格、issue status、客戶承諾與法規內容必須回查來源。</div>
+        </article>
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">邊界</div><div class="term-sub">哪些不要做、不要假設、不要碰。</div></div><span class="pill">欄位 4</span></div>
+          <ul>
+            <li>邊界通常就是一串「不要」。</li>
+            <li>不要編造沒有資料的數字；不要碰公司政策已定的設計；不要寫 buzzword 堆疊。</li>
+            <li>方向給 AI 走，邊界給 AI 停。</li>
+          </ul>
+          <div class="example"><strong>ADLINK 問法：</strong>AI 做出哪些東西，我會說這不是我要的？先寫下來。</div>
+        </article>
+        <article class="card term-card span-12">
+          <div class="term-head"><div><div class="term-title">完成定義</div><div class="term-sub">Definition of Done：什麼出現在眼前就算這一步完成。</div></div><span class="pill">欄位 5</span></div>
+          <ul>
+            <li>完成定義不是微管理，它定義的是成品規格，不是每一步怎麼操作。</li>
+            <li>大型任務先要求 outline 或框架，讓人審方向，再進完整報告。</li>
+            <li>讓 AI 知道在哪裡停，能降低重跑成本，也避免一次產出太長卻方向錯誤。</li>
+          </ul>
+          <div class="source-note"><strong>工程類比：</strong>這就像 PM 與工程師先對 acceptance criteria 對齊。沒有完成定義，雙方都只能靠猜。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="template">
+      <div class="section-title"><span>4</span><h2>ADLINK 任務交辦模板</h2></div>
+      <div class="card span-12">
+        <h3>可直接貼給 AI、同事或外包廠商的 brief 格式</h3>
+        <div class="brief-template">
+          <div class="brief-row">
+            <b>目標</b>
+            <code>這份產出要支撐什麼決策？最後希望拿到什麼可行建議或交付物？</code>
+          </div>
+          <div class="brief-row">
+            <b>背景</b>
+            <code>接手的人需要知道哪些客戶、產品、部門、時程、歷史問題與限制？</code>
+          </div>
+          <div class="brief-row">
+            <b>素材</b>
+            <code>主要根據哪些文件、規格、測試資料、issue、客戶信件或官方來源？哪些來源不可用？找不到資料時要如何標記？</code>
+          </div>
+          <div class="brief-row">
+            <b>邊界</b>
+            <code>哪些內容不要推論、不要改、不要建議、不要承諾？哪些數字或事實必須留白等待確認？</code>
+          </div>
+          <div class="brief-row">
+            <b>完成定義</b>
+            <code>先交 outline、表格、草稿、完整報告，還是可直接寄出的版本？格式、篇幅、審核點與停損點是什麼？</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="section-title"><span>5</span><h2>ADLINK 落地場景</h2></div>
+      <div class="grid">
+        <article class="card span-4">
+          <h3>客戶問題摘要</h3>
+          <p>不要只說「整理這封信」。要說明此摘要要支持 escalation、FAE 回覆或內部風險判斷，並指定哪些客戶承諾不可自行推論。</p>
+          <div><span class="tag blue">Customer Issue</span><span class="tag red">No Commitment</span></div>
+        </article>
+        <article class="card span-4">
+          <h3>工程測試報告</h3>
+          <p>指定要根據哪些 test log、firmware version、thermal condition 或 reproduction steps。沒有數據就標成待確認，不要補漂亮結論。</p>
+          <div><span class="tag blue">Test Log</span><span class="tag warn">Evidence</span></div>
+        </article>
+        <article class="card span-4">
+          <h3>競品與市場分析</h3>
+          <p>先說這份分析要支撐 product positioning、pricing 或 roadmap。競品數量不必多，應挑跟客群真正重疊的產品深挖。</p>
+          <div><span class="tag blue">Competitive Analysis</span><span class="tag">Roadmap</span></div>
+        </article>
+        <article class="card span-6">
+          <h3>Codex / Agent 工作交辦</h3>
+          <p>對 coding agent 不要只說「修一下」。要給重現方式、相關檔案、不能動的邊界、驗收測試與完成後回報格式。這會直接降低來回修正次數。</p>
+          <div class="example"><strong>可用句：</strong>先讀相關檔案並提出最小修改方案；不要重構無關模組；完成後跑指定測試並列出未驗證風險。</div>
+        </article>
+        <article class="card span-6">
+          <h3>PM / 管理者交辦</h3>
+          <p>五欄位 brief 本質是管理能力。AI 只是把「沒有想清楚」的代價放大；同一份 brief 給同事、外包、跨部門窗口也有效。</p>
+          <div class="example"><strong>判斷標準：</strong>做錯重來貴不貴？會拿去開會、交客戶、讓 agent 跑半小時以上，就值得先花十分鐘寫 brief。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <div class="section-title"><span>6</span><h2>快速比較：爛 Prompt 與可執行 Brief</h2></div>
+      <table>
+        <thead>
+          <tr><th>項目</th><th>動作指令</th><th>任務 Brief</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>焦點</td><td>請幫我做一份分析</td><td>這份分析要支持哪個決策</td></tr>
+          <tr><td>資料</td><td>AI 自己找資料</td><td>指定主要來源、次要來源與禁止來源</td></tr>
+          <tr><td>限制</td><td>未說明，模型自行推論</td><td>明確列出不要編造、不要承諾、不要碰的範圍</td></tr>
+          <tr><td>完成</td><td>直接產完整內容</td><td>先交 outline 或框架，審過方向再展開</td></tr>
+          <tr><td>結果</td><td>看起來完整，但容易 generic</td><td>能進會議、能做決策、能接下一步</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <div class="section-title"><span>7</span><h2>參考資料與使用限制</h2></div>
+      <div class="grid source-list">
+        <article class="card span-6">
+          <h3>Gary Chen 主題內容</h3>
+          <p>本教材依 Gary Chen 的任務定義框架整理，核心包括四個工作階段與五欄位 brief。文中例子已改寫成 ADLINK 內訓可用的工程與管理情境。</p>
+          <p><a href="https://www.patreon.com/GaryChen/posts/ni-bu-shi-bu-hui-160793592">完整文章與提示詞模板連結</a></p>
+        </article>
+        <article class="card span-6">
+          <h3>公開文章資訊</h3>
+          <p>公開頁面標題顯示文章包含「五欄位 Brief 拆解 + 3 個任務交辦 Prompts」，發布時間為 2026-06-11。全文若需會員權限，應以作者頁面可讀版本為準。</p>
+          <div class="warning"><strong>使用限制：</strong>本教材不複製會員內容，不重現完整模板原文；只萃取可公開確認的框架與已公開講解的觀念。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="summary">
+      <div class="section-title"><span>8</span><h2>一頁式重點</h2></div>
+      <div class="card span-12">
+        <h3>本課重點整理</h3>
+        <ul>
+          <li><strong>Prompt 不是不重要：</strong>它是基本功；但任務定義才決定輸出能不能支撐工作。</li>
+          <li><strong>先判斷階段：</strong>思考、探索、決定、執行需要不同餵法，不要把所有工作都直接丟進執行。</li>
+          <li><strong>執行階段用五欄位：</strong>目標、背景、素材、邊界、完成定義。</li>
+          <li><strong>AI 可以問問題，但不能替你想：</strong>空格仍要由任務負責人填上。</li>
+          <li><strong>做錯重來很貴的工作，先寫 brief：</strong>會進會議、交客戶、讓 agent 長時間執行、跨部門協作，都值得先定義清楚。</li>
+          <li><strong>這是管理能力：</strong>同一份 brief 可以給 AI、同事、外包與跨部門窗口使用。</li>
+        </ul>
+        <div class="source-note"><strong>一句話：</strong>不要把 AI 當成猜心工具；把它當成聰明合作者，先交辦清楚，它才能交付穩定。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">ADLINK internal training draft | Task Definition Brief | Prepared 2026-06-11</div>
+  </footer>
+</body>
+</html>

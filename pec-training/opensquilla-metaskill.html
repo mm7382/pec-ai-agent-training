@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenSquilla 與 MetaSkill 技術入門 - ADLINK 內容分析教材</title>
+  <style>
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);background-size:44px 44px;opacity:.42;z-index:-1}
+    .cover{min-height:650px;background:linear-gradient(110deg,rgba(37,44,46,.98),rgba(37,44,46,.91));color:#fff;border-bottom:10px solid var(--red)}
+    .cover-inner{max-width:1180px;margin:0 auto;min-height:650px;padding:52px 24px 58px;display:flex;flex-direction:column}
+    .cover-top,.cover-footer{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .logo{font-size:44px;font-weight:900;letter-spacing:0}
+    .cover-kicker{font-size:15px;color:rgba(255,255,255,.74);text-align:right}
+    .cover-main{margin:auto 0 44px;max-width:980px}
+    .label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:13px;color:#fff}
+    .label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:18px 0 0 var(--cyan),36px 0 0 var(--green);margin-right:38px}
+    h1{font-size:clamp(40px,5vw,66px);line-height:1.08;margin:26px 0 20px;letter-spacing:0;overflow-wrap:anywhere;word-break:break-word}
+    .subtitle{font-size:21px;color:rgba(255,255,255,.86);border-left:6px solid var(--red);padding-left:18px;max-width:850px}
+    .cover-footer{margin-top:auto;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;color:rgba(255,255,255,.72);font-size:15px}
+    header{background:#fff;color:var(--dark);padding:42px 28px 38px;border-bottom:8px solid var(--red);box-shadow:var(--shadow)}
+    .wrap{max-width:1180px;margin:0 auto}
+    .eyebrow{display:inline-flex;padding:7px 13px;border-radius:3px;background:var(--dark);color:#fff;font-size:14px;margin-bottom:18px;font-weight:800}
+    header h1{font-size:46px;color:var(--dark);margin:0 0 14px}
+    .lead{font-size:20px;color:#4b5558;max-width:980px;margin:0 0 22px}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+    .metric{background:var(--light);border:1px solid var(--line);border-radius:8px;padding:17px}
+    .metric b{display:block;color:var(--red);font-size:28px;line-height:1}
+    .metric small{display:block;color:#596265;font-weight:800;margin-top:6px}
+    nav{position:sticky;top:0;z-index:5;background:rgba(244,245,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    nav .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:12px 20px}
+    nav a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;color:var(--dark);font-weight:800}
+    nav a:hover{color:var(--red);border-color:var(--red);background:#fff7f7}
+    main{padding:34px 20px 64px}
+    section{max-width:1180px;margin:0 auto 30px}
+    .section-title{display:flex;align-items:center;gap:14px;margin:34px 0 18px;border-bottom:1px solid var(--line);padding-bottom:12px;position:relative}
+    .section-title::after{content:"";position:absolute;left:0;bottom:-2px;width:120px;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan))}
+    .section-title span{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:2px;background:var(--red);color:#fff;font-weight:900;box-shadow:8px 8px 0 rgba(208,51,58,.16)}
+    h2{font-size:30px;line-height:1.25;margin:0;color:var(--dark);letter-spacing:0}
+    h3{font-size:21px;line-height:1.35;margin:0 0 10px;color:var(--dark);letter-spacing:0}
+    p{font-size:17px;color:#394245;margin:0 0 12px}
+    ul{margin:0;padding-left:22px}
+    li{font-size:17px;margin:8px 0;color:#394245}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:22px;color:var(--dark)}
+    .span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+    .term-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:12px}
+    .term-title{font-size:24px;font-weight:900;color:var(--dark)}
+    .term-sub{color:var(--gray);font-weight:800}
+    .pill,.tag{display:inline-flex;align-items:center;border-radius:3px;padding:4px 9px;font-size:13px;font-weight:900}
+    .pill{background:#fff0f1;color:#9c2028;border:1px solid #ffd1d5;white-space:nowrap}
+    .tag{background:#fbfff5;color:#5E7C11;border:1px solid #cce29c;margin:4px 6px 0 0}
+    .tag.blue{background:#eefbff;color:#167d96;border-color:#b9ebf5}.tag.warn{background:#fff9e8;color:#9a6500;border-color:#f4d48a}.tag.red{background:#fff0f1;color:#9c2028;border-color:#ffd1d5}
+    .example,.source-note{border-left:5px solid var(--cyan);background:#f7fcfd;padding:13px 14px;margin-top:14px;color:#3b484b;font-size:15px}
+    .warning{border-left:5px solid var(--orange);background:#fff8f4;padding:13px 14px;margin-top:14px;color:#53372d;font-size:15px}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .flow-step{border:1px solid var(--line);border-top:5px solid var(--red);border-radius:8px;padding:16px;background:#fff;min-height:120px}
+    .flow-step:nth-child(2){border-top-color:var(--cyan)}.flow-step:nth-child(3){border-top-color:var(--green)}.flow-step:nth-child(4){border-top-color:var(--purple)}.flow-step:nth-child(5){border-top-color:var(--orange)}
+    .flow-step b{display:block;color:var(--red);font-size:18px;margin-bottom:8px}
+    table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;font-size:15px}
+    th{background:var(--dark);color:#fff}
+    .concept-svg{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 14px 34px rgba(37,44,46,.08)}
+    footer{padding:30px 20px;color:#fff;background:var(--dark);font-size:14px}
+    @media(max-width:900px){.cover-inner{min-height:auto}.cover-top,.cover-footer{align-items:flex-start;flex-direction:column}.metrics,.flow,.grid{grid-template-columns:1fr}.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:auto}header h1{font-size:34px}nav{position:static}h2{font-size:26px}}
+    @media print{nav{display:none}body{background:#fff}.card,table{box-shadow:none}section{page-break-inside:avoid}}
+  </style>
+  <script src="../site-config.js"></script>
+  <script src="../tutorial-gate.js"></script>
+</head>
+<body>
+  <section class="cover" aria-label="ADLINK cover">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo">ADLINK</div>
+        <div class="cover-kicker">Topic Research Notebook<br/>HTML Training Material</div>
+      </div>
+      <div class="cover-main">
+        <div class="label">Content Analysis</div>
+        <h1>OpenSquilla 與 MetaSkill 技術入門</h1>
+        <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
+      </div>
+      <div class="cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Research-backed Course Material</span>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
+      <h1>OpenSquilla 與 MetaSkill 技術入門</h1>
+      <p class="lead">本教材依主題研究資料整理，聚焦產品定位、核心架構、工作流程與實務導入重點。</p>
+      <div class="metrics">
+        <div class="metric"><b>6</b><small>主要大綱</small></div>
+        <div class="metric"><b>5</b><small>研究資料</small></div>
+        <div class="metric"><b>6</b><small>教學卡片</small></div>
+        <div class="metric"><b>0</b><small>外部素材</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#outline">課程大綱</a>
+      <a href="#map">整體關係圖</a>
+      <a href="#terms">核心概念</a>
+      <a href="#extra">延伸重點</a>
+      <a href="#examples">內容情境</a>
+      <a href="#compare">快速比較</a>
+      <a href="#summary">一頁式重點</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="outline">
+      <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
+      <div class="grid">
+          <article class="card span-6"><h3>OpenSquilla 是什麼</h3><p>OpenSquilla 是一個以 token efficiency 為核心的 open-source AI agent runtime，主張在相同預算下提高 agent 的任務密度與穩定性。</p><div><span class="tag blue">OpenSquilla</span><span class="tag blue">AI Agent Runtime</span><span class="tag blue">Microkernel</span></div></article><article class="card span-6"><h3>Token efficiency 與 smart routing</h3><p>OpenSquilla 的主軸不是單純換更強模型，而是讓 agent 判斷任務複雜度，將簡單任務交給低成本模型，複雜任務才使用高階模型與更深 reasoning。</p><div><span class="tag blue">Smart Routing</span><span class="tag blue">Cost Optimization</span><span class="tag blue">Adaptive Prompt</span></div></article><article class="card span-6"><h3>Memory 與 local embeddings</h3><p>OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</p><div><span class="tag blue">Memory</span><span class="tag blue">Embedding</span><span class="tag blue">Local AI</span></div></article><article class="card span-6"><h3>MetaSkill 是什麼</h3><p>MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</p><div><span class="tag blue">MetaSkill</span><span class="tag blue">Workflow Protocol</span><span class="tag blue">Auditability</span></div></article><article class="card span-6"><h3>MetaSkill request 的四個要素</h3><p>高品質 MetaSkill request 需要 outcome、context、standard、boundaries，否則 agent 容易產生泛泛說明或越界行為。</p><div><span class="tag blue">Prompt</span><span class="tag blue">Context</span><span class="tag blue">Boundaries</span></div></article><article class="card span-6"><h3>安全與治理：reviewable output</h3><p>MetaSkill 與 agent workflow 的輸出應被視為可審查工作產物，不是直接替人做最終決策或執行高風險操作。</p><div><span class="tag blue">Governance</span><span class="tag blue">Approval</span><span class="tag blue">Sandbox</span></div></article>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="section-title"><span>2</span><h2>整體關係圖</h2></div>
+      <div class="grid">
+        <div class="card span-12">
+          <div class="flow">
+            <div class="flow-step"><b>OpenSquilla 是什麼</b>OpenSquilla 是一個以 token efficiency 為核心的 open-source AI agent runtime，主張在相同預算下提高 agent 的任務密度與穩定性。</div><div class="flow-step"><b>Token efficiency 與 smart routing</b>OpenSquilla 的主軸不是單純換更強模型，而是讓 agent 判斷任務複雜度，將簡單任務交給低成本模型，複雜任務才使用高階模型與更深 reasoning。</div><div class="flow-step"><b>Memory 與 local embeddings</b>OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</div><div class="flow-step"><b>MetaSkill 是什麼</b>MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</div><div class="flow-step"><b>MetaSkill request 的四個要素</b>高品質 MetaSkill request 需要 outcome、context、standard、boundaries，否則 agent 容易產生泛泛說明或越界行為。</div>
+          </div>
+          <div class="example"><strong>閱讀方式：</strong>先看課程大綱掌握順序，再依核心概念、延伸重點與比較表建立完整理解。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
+      <div class="grid">
+        <article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">OpenSquilla 是什麼</div><div class="term-sub">OpenSquilla 是一個以 token efficiency 為核心的 open-source AI agent runtime，主張在相同預算下提高 agent 的任務密度與穩定性。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>定位是 microkernel AI agent：核心引擎負責 orchestration 與狀態管理，其他能力透過 provider、memory、tools、MCP、sandbox、scheduler、skills 等模組延伸。</li><li>產品重點包含 smart routing、persistent memory、secure sandbox、built-in search、local embeddings，以及多 channel 介面。</li><li>適合拿來講解 agent framework 如何從單次聊天，走向可配置、可治理、可重複執行的 runtime。</li></ul>
+          <div class="example"><strong>教學提示：</strong>上課可用「作業系統核心 + 外掛能力」比喻：核心保持小而穩，工具、模型、記憶、通道與技能在外層擴充。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">Token efficiency 與 smart routing</div><div class="term-sub">OpenSquilla 的主軸不是單純換更強模型，而是讓 agent 判斷任務複雜度，將簡單任務交給低成本模型，複雜任務才使用高階模型與更深 reasoning。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Smart Routing 會依任務特徵選模型 tier，避免所有問題都用最高成本模型處理。</li><li>Hybrid feature analysis 結合手工特徵與 embedding/semantic feature，評估任務長度、語言、程式碼、關鍵字與複雜度。</li><li>Adaptive prompts 與 on-demand skills 讓 agent 只載入必要能力，降低 context 浪費。</li></ul>
+          <div class="example"><strong>教學提示：</strong>可用工程流程比喻：一般詢問走 quick check，跨檔案分析或報告產出才升級成 full analysis。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">Memory 與 local embeddings</div><div class="term-sub">OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>四層記憶可理解為 working memory、episodic memory、semantic memory、raw audit base。</li><li>Hybrid search 同時支援語意向量與全文關鍵字搜尋，讓 agent 能從過去資料找回有用 context。</li><li>Local embeddings 代表部分語意檢索可在本機完成，資料邊界比全雲端更容易控管。</li></ul>
+          <div class="example"><strong>教學提示：</strong>對工程團隊來說，memory 可存專案規則、常見測試流程與偏好輸出格式，但敏感資料要有明確邊界。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">MetaSkill 是什麼</div><div class="term-sub">MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Skill 適合單一任務模式；MetaSkill 則適合包含多個 skills、tools、LLM calls、檢查點與輸出步驟的高價值工作。</li><li>MetaSkill 不創造新的執行原子，而是定義如何組織既有 skills、tools、LLM calls 與 sub-agents。</li><li>設計目標是讓高價值工作從每次重新推理，變成可重複、可檢視、可 replay 的 protocol。</li></ul>
+          <div class="example"><strong>教學提示：</strong>可以把 MetaSkill 比喻成 Makefile：它不取代工具，而是規定工具如何被組合、檢查與交付。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">MetaSkill request 的四個要素</div><div class="term-sub">高品質 MetaSkill request 需要 outcome、context、standard、boundaries，否則 agent 容易產生泛泛說明或越界行為。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>Outcome 說明要收到什麼產物，例如 decision memo、research report、project plan。</li><li>Context 提供材料、對象、時間範圍與限制條件。</li><li>Standard 定義什麼叫做好結果；Boundaries 則列出不可捏造、不可執行、需確認的行為。</li></ul>
+          <div class="example"><strong>教學提示：</strong>上課可讓學員把「幫我研究一下」改寫成含 outcome、context、standard、boundaries 的正式 request。</div>
+        </article><article class="card term-card span-6">
+          <div class="term-head"><div><div class="term-title">安全與治理：reviewable output</div><div class="term-sub">MetaSkill 與 agent workflow 的輸出應被視為可審查工作產物，不是直接替人做最終決策或執行高風險操作。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>OpenSquilla 文件強調 MetaSkill output 是 decision-support material 或 work-product draft。</li><li>發布、安裝、付款、簽署、寄送訊息、修改 production system 等動作仍需明確授權。</li><li>實務導入時，要把 permission profile、approval、sandbox 與 replay 一起納入課程。</li></ul>
+          <div class="example"><strong>教學提示：</strong>可用 ADLINK 內部流程比喻：agent 可以整理 issue 與建議 action，但正式發信、改 BOM、提交報告仍需負責人確認。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="extra">
+      <div class="section-title"><span>4</span><h2>延伸重點</h2></div>
+      <div class="grid">
+        <div class="card span-4">
+          <h3>Memory 與 local embeddings</h3>
+          <p>OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</p>
+          <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>MetaSkill 是什麼</h3>
+          <p>MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</p>
+          <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>MetaSkill request 的四個要素</h3>
+          <p>高品質 MetaSkill request 需要 outcome、context、standard、boundaries，否則 agent 容易產生泛泛說明或越界行為。</p>
+          <span class="tag ">內容重點</span><span class="tag">研究依據</span>
+        </div><div class="card span-4">
+          <h3>安全與治理：reviewable output</h3>
+          <p>MetaSkill 與 agent workflow 的輸出應被視為可審查工作產物，不是直接替人做最終決策或執行高風險操作。</p>
+          <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="section-title"><span>5</span><h2>用內容情境理解重點</h2></div>
+      <div class="grid">
+        <div class="card span-6">
+          <h3>OpenSquilla 是什麼</h3>
+          <p><strong>重點：</strong>OpenSquilla 是一個以 token efficiency 為核心的 open-source AI agent runtime，主張在相同預算下提高 agent 的任務密度與穩定性。</p>
+          <p><strong>分析：</strong>定位是 microkernel AI agent：核心引擎負責 orchestration 與狀態管理，其他能力透過 provider、memory、tools、MCP、sandbox、scheduler、skills 等模組延伸。</p>
+          <div class="source-note"><strong>課堂講法：</strong>上課可用「作業系統核心 + 外掛能力」比喻：核心保持小而穩，工具、模型、記憶、通道與技能在外層擴充。</div>
+        </div><div class="card span-6">
+          <h3>Token efficiency 與 smart routing</h3>
+          <p><strong>重點：</strong>OpenSquilla 的主軸不是單純換更強模型，而是讓 agent 判斷任務複雜度，將簡單任務交給低成本模型，複雜任務才使用高階模型與更深 reasoning。</p>
+          <p><strong>分析：</strong>Smart Routing 會依任務特徵選模型 tier，避免所有問題都用最高成本模型處理。</p>
+          <div class="source-note"><strong>課堂講法：</strong>可用工程流程比喻：一般詢問走 quick check，跨檔案分析或報告產出才升級成 full analysis。</div>
+        </div><div class="card span-6">
+          <h3>Memory 與 local embeddings</h3>
+          <p><strong>重點：</strong>OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</p>
+          <p><strong>分析：</strong>四層記憶可理解為 working memory、episodic memory、semantic memory、raw audit base。</p>
+          <div class="source-note"><strong>課堂講法：</strong>對工程團隊來說，memory 可存專案規則、常見測試流程與偏好輸出格式，但敏感資料要有明確邊界。</div>
+        </div><div class="card span-6">
+          <h3>MetaSkill 是什麼</h3>
+          <p><strong>重點：</strong>MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</p>
+          <p><strong>分析：</strong>Skill 適合單一任務模式；MetaSkill 則適合包含多個 skills、tools、LLM calls、檢查點與輸出步驟的高價值工作。</p>
+          <div class="source-note"><strong>課堂講法：</strong>可以把 MetaSkill 比喻成 Makefile：它不取代工具，而是規定工具如何被組合、檢查與交付。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="section-title"><span>6</span><h2>快速比較表</h2></div>
+      <table>
+        <thead><tr><th>主題</th><th>一句話解釋</th><th>教學定位</th><th>容易忽略的重點</th></tr></thead>
+        <tbody>
+          <tr><td>OpenSquilla 是什麼</td><td>OpenSquilla 是一個以 token efficiency 為核心的 open-source AI agent runtime，主張在相同預算下提高 agent 的任務密度與穩定性。</td><td>OpenSquilla</td><td>定位是 microkernel AI agent：核心引擎負責 orchestration 與狀態管理，其他能力透過 provider、memory、tools、MCP、sandbox、scheduler、skills 等模組延伸。</td></tr><tr><td>Token efficiency 與 smart routing</td><td>OpenSquilla 的主軸不是單純換更強模型，而是讓 agent 判斷任務複雜度，將簡單任務交給低成本模型，複雜任務才使用高階模型與更深 reasoning。</td><td>Smart Routing</td><td>Smart Routing 會依任務特徵選模型 tier，避免所有問題都用最高成本模型處理。</td></tr><tr><td>Memory 與 local embeddings</td><td>OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</td><td>Memory</td><td>四層記憶可理解為 working memory、episodic memory、semantic memory、raw audit base。</td></tr><tr><td>MetaSkill 是什麼</td><td>MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</td><td>MetaSkill</td><td>Skill 適合單一任務模式；MetaSkill 則適合包含多個 skills、tools、LLM calls、檢查點與輸出步驟的高價值工作。</td></tr><tr><td>MetaSkill request 的四個要素</td><td>高品質 MetaSkill request 需要 outcome、context、standard、boundaries，否則 agent 容易產生泛泛說明或越界行為。</td><td>Prompt</td><td>Outcome 說明要收到什麼產物，例如 decision memo、research report、project plan。</td></tr><tr><td>安全與治理：reviewable output</td><td>MetaSkill 與 agent workflow 的輸出應被視為可審查工作產物，不是直接替人做最終決策或執行高風險操作。</td><td>Governance</td><td>OpenSquilla 文件強調 MetaSkill output 是 decision-support material 或 work-product draft。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="summary">
+      <div class="section-title"><span>7</span><h2>一頁式重點</h2></div>
+      <div class="card span-12">
+        <h3>本課重點整理</h3>
+        <ul>
+          <li><strong>OpenSquilla 是什麼：</strong>OpenSquilla 是一個以 token efficiency 為核心的 open-source AI agent runtime，主張在相同預算下提高 agent 的任務密度與穩定性。</li><li><strong>Token efficiency 與 smart routing：</strong>OpenSquilla 的主軸不是單純換更強模型，而是讓 agent 判斷任務複雜度，將簡單任務交給低成本模型，複雜任務才使用高階模型與更深 reasoning。</li><li><strong>Memory 與 local embeddings：</strong>OpenSquilla 強調 durable memory，不把所有歷史對話塞回 prompt，而是把可回憶的使用者、專案與經驗資料放進可搜尋的記憶系統。</li><li><strong>MetaSkill 是什麼：</strong>MetaSkill 是 OpenSquilla 的 reusable workflow protocol，用來把多步驟工作包裝成可觸發、可審計、可改進的任務協定。</li><li><strong>MetaSkill request 的四個要素：</strong>高品質 MetaSkill request 需要 outcome、context、standard、boundaries，否則 agent 容易產生泛泛說明或越界行為。</li><li><strong>安全與治理：reviewable output：</strong>MetaSkill 與 agent workflow 的輸出應被視為可審查工作產物，不是直接替人做最終決策或執行高風險操作。</li>
+        </ul>
+        <div class="warning"><strong>注意：</strong>專有名詞、數字與版本資訊應以官方文件或使用者補充資料為準。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">ADLINK 主題研究教材｜Research-backed HTML Material</div>
+  </footer>
+</body>
+</html>

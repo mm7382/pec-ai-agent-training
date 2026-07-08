@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>告別 AI 孤島！手把手教你建立 Claude Agentic OS，睡覺時還能自動進化！ - ADLINK 教學</title>
+  <style>
+    :root {
+      --ad-dark:#252C2E;
+      --ad-gray:#797979;
+      --ad-light:#F4F5F6;
+      --ad-line:#D8D8D8;
+      --ad-red:#D0333A;
+      --ad-cyan:#1CB9D8;
+      --ad-green:#94C11F;
+      --ad-purple:#7D3189;
+      --ad-orange:#EC672C;
+      --ad-yellow:#FAB428;
+      --white:#FFFFFF;
+      --shadow:0 18px 44px rgba(37,44,46,.13);
+      --r:12px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);
+      color:var(--ad-dark);
+      line-height:1.7;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);
+      background-size:44px 44px;
+      opacity:.42;
+      z-index:-3;
+    }
+    .ad-cover{
+      min-height:680px;
+      background:
+        linear-gradient(90deg,rgba(37,44,46,.97) 0%,rgba(37,44,46,.92) 56%,rgba(37,44,46,.70) 100%),
+        radial-gradient(circle at 74% 26%,rgba(208,51,58,.22),transparent 24rem),
+        radial-gradient(circle at 90% 78%,rgba(28,185,216,.18),transparent 22rem);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border-bottom:10px solid var(--ad-red);
+    }
+    .ad-cover::after{
+      content:"";
+      position:absolute;
+      right:0;top:0;bottom:0;
+      width:34%;
+      background:linear-gradient(135deg,transparent 0%,transparent 45%,rgba(208,51,58,.95) 45%,rgba(208,51,58,.95) 60%,rgba(28,185,216,.88) 60%,rgba(28,185,216,.88) 68%,transparent 68%);
+      opacity:.9;
+    }
+    .ad-cover-inner{max-width:1180px;margin:auto;padding:52px 24px 64px;position:relative;z-index:2;min-height:680px;display:flex;flex-direction:column}
+    .ad-cover-top{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .ad-logo-white{font-size:44px;font-weight:800;letter-spacing:.02em;color:#fff}
+    .ad-logo-white::after{content:"";display:block;width:210px;height:5px;margin-top:10px;background:linear-gradient(90deg,var(--ad-red) 0 34%,var(--ad-cyan) 34% 58%,var(--ad-green) 58% 76%,var(--ad-yellow) 76%)}
+    .ad-cover-kicker{color:#d9d9d9;font-size:15px;letter-spacing:.02em;text-align:right}
+    .ad-cover-main{margin-top:auto;margin-bottom:48px;max-width:900px}
+    .ad-cover-label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);color:#fff;font-weight:700;letter-spacing:.08em;font-size:13px;text-transform:uppercase}
+    .ad-cover-label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ad-red);box-shadow:18px 0 0 var(--ad-cyan),36px 0 0 var(--ad-green);margin-right:38px}
+    .ad-cover h1{font-size:clamp(42px,6vw,74px);line-height:1.05;letter-spacing:0;margin:26px 0 20px;max-width:980px;font-weight:800}
+    .ad-cover-subtitle{font-size:21px;line-height:1.65;color:rgba(255,255,255,.86);max-width:850px;border-left:6px solid var(--ad-red);padding-left:18px}
+    .ad-cover-footer{margin-top:auto;display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.72);font-size:15px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+    .wrap{max-width:1180px;margin:0 auto;padding:38px 24px 72px}
+    .section-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--ad-gray);letter-spacing:.08em;text-transform:uppercase;margin:34px 0 14px}
+    .section-label::before{content:"";width:26px;height:4px;background:var(--ad-red);display:inline-block}
+    .card{position:relative;overflow:hidden;border:1px solid var(--ad-line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);color:var(--ad-dark)}
+    .card h2{margin:0 0 12px;line-height:1.18}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0f1;color:#9c2028;font-weight:800;font-size:13px;margin-bottom:14px}
+    .lead{font-size:19px;color:#3b4548;max-width:860px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .chip,.tag{display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--ad-line);background:var(--ad-light);padding:6px 10px;color:var(--ad-dark);font-size:13px;font-weight:700}
+    .source-card{border-left:6px solid var(--ad-red);background:#fff;padding:18px 20px;border-radius:var(--r);border-top:1px solid var(--ad-line);border-right:1px solid var(--ad-line);border-bottom:1px solid var(--ad-line);box-shadow:var(--shadow)}
+    .quote{font-size:18px;font-weight:800;color:var(--ad-dark);line-height:1.55}
+    .section{margin-top:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{padding:24px}
+    .card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--ad-red)}
+    .card:nth-child(3n+2)::before{background:var(--ad-cyan)}
+    .card:nth-child(3n)::before{background:var(--ad-green)}
+    .card h2{font-size:24px}
+    .card p{margin:0 0 10px;color:#3b4548}
+    ul{margin:10px 0 0;padding-left:20px}
+    li{margin:6px 0;color:#3b4548}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .step{background:#fff;border:1px solid var(--ad-line);border-radius:var(--r);padding:16px;box-shadow:0 12px 24px rgba(37,44,46,.08)}
+    .step b{display:block;color:var(--ad-red);margin-bottom:8px}
+    .brief-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .visual-panel{border:1px solid var(--ad-line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);padding:24px;overflow:hidden}
+    .visual-panel h2{margin:0 0 16px;font-size:24px;line-height:1.2}
+    .route{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px}
+    .route-step{min-height:150px;border:1px solid var(--ad-line);border-top:7px solid var(--ad-red);border-radius:10px;background:linear-gradient(180deg,#fff,#f8f9fa);padding:16px;display:flex;flex-direction:column;gap:8px}
+    .route-step:nth-child(2){border-top-color:var(--ad-cyan)}
+    .route-step:nth-child(3){border-top-color:var(--ad-green)}
+    .route-step:nth-child(4){border-top-color:var(--ad-purple)}
+    .route-step b{font-size:28px;color:var(--ad-red);line-height:1}
+    .route-step span{font-weight:800;color:var(--ad-dark)}
+    .route-step p{margin:0;color:#4b5558;font-size:14px;line-height:1.55}
+    .system-loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;align-items:stretch}
+    .loop-node{border:1px solid var(--ad-line);border-radius:10px;padding:14px;background:#f9fafb;position:relative;min-height:118px}
+    .loop-node:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;width:14px;height:3px;background:var(--ad-red)}
+    .loop-node b{display:block;color:var(--ad-red);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+    .loop-node span{display:block;font-weight:800;color:var(--ad-dark);line-height:1.35}
+    .loop-node p{margin:6px 0 0;color:#566164;font-size:13px;line-height:1.45}
+    .matrix{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .matrix-item{border:1px solid var(--ad-line);border-radius:10px;background:#fff;padding:16px;min-height:146px;box-shadow:0 10px 20px rgba(37,44,46,.07)}
+    .matrix-item i{display:inline-flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;background:#fff0f1;color:var(--ad-red);font-style:normal;font-weight:900;margin-bottom:10px}
+    .matrix-item h3{font-size:17px;margin:0 0 8px;line-height:1.25}
+    .matrix-item p{font-size:14px;margin:0;color:#4b5558;line-height:1.55}
+    .report-callout{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:center;border-left:8px solid var(--ad-red);background:#fff;padding:22px;border-radius:var(--r);box-shadow:var(--shadow);border-top:1px solid var(--ad-line);border-right:1px solid var(--ad-line);border-bottom:1px solid var(--ad-line)}
+    .report-mark{width:150px;height:150px;border-radius:50%;background:conic-gradient(from 210deg,var(--ad-red),var(--ad-cyan),var(--ad-green),var(--ad-yellow),var(--ad-red));display:grid;place-items:center;color:#fff;font-size:44px;font-weight:900}
+    .warning{border-left:8px solid var(--ad-yellow);background:#fffaf0}
+    .okbox{border-left:8px solid var(--ad-green);background:#fbfff5}
+    .source-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    a.btn{display:inline-flex;align-items:center;text-decoration:none;color:#fff;background:var(--ad-dark);border-radius:8px;padding:10px 12px;font-weight:800}
+    a.btn.secondary{background:var(--ad-red)}
+    @media (max-width:900px){
+      .ad-cover,.ad-cover-inner{min-height:auto}
+      .ad-cover-inner{padding:34px 20px 44px}
+      .ad-cover-top,.ad-cover-footer{flex-direction:column;align-items:flex-start;text-align:left}
+      .ad-cover::after{display:none}
+      .grid,.grid2,.flow,.brief-grid,.route,.system-loop,.matrix,.report-callout{grid-template-columns:1fr}
+      .loop-node:not(:last-child)::after{display:none}
+      .report-mark{width:112px;height:112px;font-size:34px}
+      .wrap{padding:22px 14px 48px}
+      .card{padding:20px}
+    }
+    @media print{
+      body{background:#fff}
+      body::before,.ad-cover::after{display:none}
+      .ad-cover{min-height:auto;border-bottom:6px solid var(--ad-red)}
+      .ad-cover-inner{min-height:auto;padding:28px 20px}
+      .wrap{max-width:100%;padding:12px}
+      .card,.source-card{box-shadow:none}
+    }
+  </style>
+  <script src="../site-config.js"></script>
+  <script src="../tutorial-gate.js"></script>
+</head>
+<body>
+  <section class="ad-cover" aria-label="ADLINK PPT style cover">
+    <div class="ad-cover-inner">
+      <div class="ad-cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo">ADLINK</div>
+        <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br/>June 2026</div>
+      </div>
+      <div class="ad-cover-main">
+        <div class="ad-cover-label">Engineering AI Training</div>
+        <h1>告別 AI 孤島！手把手教你建立 Claude Agentic OS，睡覺時還能自動進化！</h1>
+        <p class="ad-cover-subtitle">工程師內訓報告｜AI 工作流導入教材</p>
+      </div>
+      <div class="ad-cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>HTML Training Material</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="section-label">Report Brief</div>
+    <section class="section brief-grid">
+      
+        <article class="card ">
+          <h2>這堂課要解決的問題</h2>
+          <ul><li>多數團隊已經同時使用 Claude、ChatGPT、Gemini、Codex、本地模型與 Telegram agent，但工具之間缺少統一狀態、任務紀錄、成本視圖與改善回饋。</li><li>真正的瓶頸不是單一 prompt 品質，而是 AI 工作流沒有像系統一樣被觀測、管理與持續改進：誰在使用、花多少 token、產生什麼價值、哪些知識已過期、哪些 skills 已失效。</li><li>本課的核心是建立 Claude Agentic OS：把模型訂閱、知識庫、skills、agent 活動與自動化改善流程集中到一個可視化控制台，讓 AI 從單點工具升級為可營運的平台。</li><li>課後輸出不應是逐字稿，而是一份能對內報告的系統設計教材：包含架構、導入步驟、資料模型、KPI、治理風險與落地情境。</li></ul>
+        </article>
+      
+        <article class="card okbox">
+          <h2>教學對象</h2>
+          <ul><li>AI Agent / Hermes / Codex / Claude Code 使用者：已經有多個 agent、skills 或工作流，需要集中管理與量化成效的人。</li><li>系統工程師與平台負責人：需要把 AI 工具納入可觀測性、權限、資料來源、排程、成本與風險控制的人。</li><li>PM / 技術主管：需要知道 AI 投資是否有產出、哪些專案使用頻率最高、哪些知識庫需要維護、哪些自動化值得擴大導入的人。</li><li>內部工具開發者：想把 agent 能力包成可交付 dashboard，讓非工程角色也能看懂 AI 工作流狀態的人。</li><li>不適合對象：只想看單一聊天工具示範、尚未累積任何 agent / skills / 知識庫，也不需要管理成本與流程的人。</li></ul>
+        </article>
+    </section>
+
+    <div class="section-label">Visual Roadmap</div>
+    <section class="section visual-panel">
+      <h2>Claude Agentic OS 架構</h2>
+      <div class="route">
+        <div class="route-step"><b>01</b><span>Layer 1</span><p>AI Usage Dashboard - 目的為建立成本與額度觀測；資料來源包含訂閱方案、token usage、模型類型與任務類型；輸出為月成本、額度壓力、模型選型建議。</p></div><div class="route-step"><b>02</b><span>Layer 2</span><p>Knowledge Hub - 目的為統一知識來源與新鮮度；資料來源包含 Obsidian、Pinecone、Notion、HTML 教材、本地記憶與專案文件；輸出為關聯圖、過期文件、缺少索引的資料。</p></div><div class="route-step"><b>03</b><span>Layer 3</span><p>Skills Registry - 目的為管理可重複能力；資料來源包含 Codex skills、Hermes tools、agent prompt、風格規範與腳本；輸出為使用頻率、成功率、冷門技能、可封存清單。</p></div><div class="route-step"><b>04</b><span>Layer 4</span><p>Agent Activity Map - 目的為追蹤 agent 實際產出；資料來源包含 Hermes Agent、Claude Code、Codex、Telegram bot、local LLM 任務紀錄；輸出為專案活動、任務類型、產物連結與 owner。</p></div><div class="route-step"><b>05</b><span>Layer 5</span><p>Dreaming Engine - 目的為自動產生改善提案；資料來源為前四層觀測資料；輸出為成本優化、知識補強、skills 重訓、專案規則修正與人工審核清單。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">System Workflow</div>
+    <section class="section visual-panel">
+      <h2>工程師操作模型</h2>
+      <div class="system-loop">
+        <div class="loop-node"><b>STEP 1</b><span>Step 1</span><p>定義導入範圍 - 先決定要管理個人工作站、單一專案，或整個 agent 團隊；同步定義 KPI，例如月成本、節省工時、知識過期率與建議採納率。</p></div><div class="loop-node"><b>STEP 2</b><span>Step 2</span><p>安裝 OS template - 放到 VS Code、Cursor 或既有專案資料夾，讓 Claude 依 `CLAUDE.md` 或專案指令建立 dashboard、本機服務與資料目錄。</p></div><div class="loop-node"><b>STEP 3</b><span>Step 3</span><p>建立工具清冊 - 掃描 Claude App、Claude Code、Codex、Gemini CLI、Telegram bot、本地 LLM、VS Code extension 與自動化腳本，標記 owner 與用途。</p></div><div class="loop-node"><b>STEP 4</b><span>Step 4</span><p>連接知識來源 - 串接 Obsidian、Pinecone、Notion、HTML 教材、會議紀錄與本機文件，並記錄更新時間、來源可信度與可檢索狀態。</p></div><div class="loop-node"><b>STEP 5</b><span>Step 5</span><p>建立價值模型 - 設定人員角色、時薪或每小時價值、任務類型與節省時間估算方式，讓每個 AI artifact 都能回推成本效益。</p></div><div class="loop-node"><b>STEP 6</b><span>Step 6</span><p>設定 Dreaming 排程 - 每日或每週掃描前四層資料，輸出改善建議；所有建議都必須包含原因、影響範圍、預期收益與 owner review 狀態。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">Engineering Applications</div>
+    <section class="section">
+      <div class="matrix">
+        <div class="matrix-item"><i>1</i><h3>成本雷達</h3><p>指標包含月成本、token 使用量、模型比例與任務分類；動作是把低風險任務移到較低成本模型，並保留高推理任務給高階模型。</p></div><div class="matrix-item"><i>2</i><h3>技能盤點</h3><p>指標包含 7/30/90 天使用次數、成功率、重複功能與最後修改日；動作是封存冷門 skills、合併重複 prompt、安排需要重訓的風格規範。</p></div><div class="matrix-item"><i>3</i><h3>專案健康檢查</h3><p>指標包含是否有 `CLAUDE.md`、是否有測試指令、是否有產物目錄、是否有 owner；動作是補 onboarding、補驗收標準與補常見任務規則。</p></div><div class="matrix-item"><i>4</i><h3>知識庫視覺化</h3><p>指標包含來源數量、更新時間、孤立節點、重複文件與引用次數；動作是補索引、標記過期內容、把教材與任務紀錄連回來源。</p></div><div class="matrix-item"><i>5</i><h3>價值計算</h3><p>指標包含節省時間、人工時薪、重工率與交付件數量；動作是把 AI 產出轉成可量化的節省金額與產能提升。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">Teaching Notes</div>
+    <section class="section grid2">
+      
+        <article class="card ">
+          <h2>核心觀念</h2>
+          <ul><li>從 AI 工具孤島升級到 AI Operating Layer：重點不是再安裝一個工具，而是把既有工具接到同一套可觀測與治理框架。</li><li>Dashboard 不是裝飾介面，而是 AI 工作流的 observability layer；它要能回答成本、價值、資料狀態、agent 活動與改善優先順序。</li><li>Dreaming 不是完全自動決策，而是排程式改善迴圈：系統先提出建議，再由 owner review，最後把採納結果回寫成下一輪資料。</li><li>Agentic OS 的成熟度來自資料品質：如果 token、任務紀錄、知識庫版本、skills 使用率與產物連結不完整，dashboard 只會變成漂亮但無法決策的頁面。</li><li>工程師導入時要把每個 AI 輸出視為 artifact：HTML 教材、prompt、腳本、會議摘要、規格整理、測試報告都應該有來源、版本、owner 與驗收狀態。</li></ul>
+        </article>
+      
+        <article class="card ">
+          <h2>資料模型與指標</h2>
+          <ul><li>ModelSubscription：記錄工具名稱、方案、額度、月費、主要模型、token 使用與續約狀態，用於成本治理。</li><li>AgentProfile：記錄 agent 名稱、入口介面、任務範圍、owner、使用模型、可用工具與最近產出，用於 agent portfolio 管理。</li><li>SkillDefinition：記錄 skill 名稱、觸發條件、依賴工具、成功案例、最後訓練日期與封存狀態，用於 skills lifecycle 管理。</li><li>KnowledgeSource：記錄文件類型、來源路徑、更新時間、可信度、索引狀態與引用次數，用於知識庫新鮮度與追溯。</li><li>ProjectActivity：記錄專案、任務、輸入來源、輸出 artifact、執行時間、人工確認結果與可重複性，用於衡量 AI 導入價值。</li><li>DreamingRecommendation：記錄建議內容、觸發原因、影響範圍、預期收益、風險、owner review 與採納結果，用於建立持續改善閉環。</li><li>核心 KPI：token 成本、訂閱利用率、agent 使用頻率、skill 成功率、過期知識比例、孤立知識節點、節省工時、建議採納率、回歸錯誤率。</li></ul>
+        </article>
+      
+        <article class="card okbox">
+          <h2>ADLINK 可落地場景</h2>
+          <ul><li>Agent 管理中心：集中查看小愛、art_bot、PM bot、Telegram bot、Codex 任務與本地 LLM 工作流，讓每個 agent 都有定位、owner、產物與使用狀態。</li><li>教學教材產線：art_bot 接收影片或文件後，自動取得內容來源、轉成 ADLINK 內訓 HTML、提供預覽、等待檔名與儲存位置確認，再存到 Mac mini 本機。</li><li>PM / 工程協作看板：把需求整理、會議紀錄、規格摘要、客戶問題與測試紀錄連到同一個任務流，降低資訊散落在聊天與本機檔案中的風險。</li><li>成本與效益看板：追蹤不同模型、agent、任務類型的 token 成本與節省工時，找出高成本低價值任務，並提出模型切換建議。</li><li>知識庫治理：檢查內訓 HTML、產品資料、會議紀錄、PM 文件是否過期、重複、缺少索引或沒有來源，避免 agent 用舊資料回答。</li><li>技能維護：找出長期不用的 skills、重複功能、失效依賴與需要重訓的 ADLINK 風格規範，讓 agent 能力庫保持乾淨。</li><li>夜間自動改善：每天或每週產出改善建議，包含重構腳本、封存技能、補文件、更新知識庫、降低成本與補驗收流程。</li></ul>
+        </article>
+      
+        <article class="card warning">
+          <h2>導入風險與控制</h2>
+          <ul><li>權限風險：API key、Telegram token、Notion token 與本地檔案權限必須分層保存；dashboard 只能顯示狀態，不應直接暴露 token 原文。</li><li>資料風險：知識庫來源要有更新時間、來源路徑與可信度；沒有來源或無法追溯的內容只能標成 draft，不能進入正式教材。</li><li>自動化風險：Dreaming 建議不得直接修改正式資料；要先進入 review queue，由 owner 確認後才可套用、封存或刪除。</li><li>成本風險：模型切換不能只看便宜；需要依任務風險分級，將高推理、客戶輸出與工程判斷保留在高可靠模型。</li><li>品質風險：每個 HTML 教材至少要檢查繁體中文、來源一致性、內容是否具體、是否出現空洞章節、是否誤把逐字稿當教案。</li><li>營運風險：agent 數量增加後必須有 owner、版本、用途、停用條件與 rollback 設計，否則控制台會變成另一個資訊孤島。</li></ul>
+        </article>
+      
+        <article class="card warning">
+          <h2>常見誤解</h2>
+          <ul><li>誤解 1：Agentic OS 是另一個聊天工具。實際上它是管理多個 AI 工具與工作流的控制台，負責觀測、治理與改善。</li><li>誤解 2：只要有 Claude Code 就夠。課程重點是把 Claude Code、Codex、知識庫、skills、成本資料與 agent 紀錄放到同一個系統中。</li><li>誤解 3：Dashboard 只是漂亮介面。真正價值在於看見成本、使用率、過期知識、閒置技能、專案健康度與可改善流程。</li><li>誤解 4：Dreaming 是自動魔法。它仍需要清楚的資料來源、工作區規則、owner review 與採納紀錄，否則只會產生大量無法執行的建議。</li><li>誤解 5：導入一定要一次做完整平台。更務實的方式是先選一個高價值流程，例如教學 HTML 產線或 agent 管理中心，做出可驗收的最小版本。</li></ul>
+        </article>
+      
+        <article class="card ">
+          <h2>工作坊設計</h2>
+          <ul><li>0-10 min：盤點目前團隊使用的 AI 工具、agent、知識庫與自動化腳本，先列出工具清冊與 owner。</li><li>10-25 min：畫出現有 AI 孤島，標記哪些工具沒有共享狀態、成本、任務紀錄、產物連結或知識來源。</li><li>25-40 min：設計第一版 Agentic OS dashboard，至少包含成本、skills、知識庫、agent activity 與 Dreaming review queue。</li><li>40-55 min：選一個真實工作區建立 `CLAUDE.md` 或 agent instruction，定義可掃描的資料目錄、測試指令、輸出格式與驗收標準。</li><li>55-75 min：建立第一版資料模型，填入 3 個 agent、5 個 skills、5 個 knowledge sources 與 3 個 project activities。</li><li>75-90 min：產生第一輪 Dreaming 建議，分成採納、拒絕、延後與需要人工確認，並定義下週要追蹤的 KPI。</li></ul>
+        </article>
+      
+        <article class="card okbox">
+          <h2>驗收清單</h2>
+          <ul><li>能說明 AI 工具孤島會造成的管理問題：成本不可見、知識不可追溯、skills 失效、agent 產物散落與改善建議無法閉環。</li><li>能畫出 Agentic OS 的五層架構：Usage、Knowledge、Skills、Agents、Dreaming，並說明每層的資料來源、輸出與 owner。</li><li>能列出 dashboard 必須追蹤的指標：token、成本、訂閱利用率、agent 活動、skill 成功率、知識庫新鮮度、節省工時、建議採納率。</li><li>能設計一個 ADLINK 內部 agent 管理中心的最小可行版本，至少包含 art_bot、小愛、PM bot、Codex 任務與本地 LLM 工作流。</li><li>能為 HTML 教材產線定義端到端流程：來源取得、內容理解、ADLINK 風格生成、預覽確認、檔名確認、儲存位置確認與本機歸檔。</li><li>能判斷哪些改善建議可自動採納，哪些必須由 owner review，並保留 audit log 與 rollback 路徑。</li><li>能辨識不合格輸出：內容空洞、與來源不相關、出現簡體字、只貼逐字稿、缺少工程應用、沒有來源或沒有驗收標準。</li></ul>
+        </article>
+    </section>
+
+    <div class="section-label">Source</div>
+    <section class="section source-card">
+      <h2>來源</h2>
+      <p class="lead">告別 AI 孤島！手把手教你建立 Claude Agentic OS，睡覺時還能自動進化！｜whisper-cpp:ggml-small.bin</p>
+      <div class="source-row">
+        <a class="btn secondary" href="https://youtu.be/9NzZqMwCTTU?si=a6q7oREjmEteJQ4t">開啟來源</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

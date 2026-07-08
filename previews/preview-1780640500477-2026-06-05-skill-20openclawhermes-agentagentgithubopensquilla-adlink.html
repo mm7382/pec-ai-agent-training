@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill 2.0時代，來了。继OpenClaw、Hermes Agent後又一個开始飞速攀升的Agent。實测GitHub最新火爆仓库OpenSquilla。 - ADLINK Teaching Deck</title>
+  <style>
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--light:#F4F5F6}
+    *{box-sizing:border-box}
+    body{margin:0;background:#e9ecef;color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.5}
+    .deck{max-width:1280px;margin:0 auto;background:#fff}
+    .slide{min-height:720px;padding:54px 64px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;background:#fff}
+    .slide::after{content:"";position:absolute;left:64px;right:64px;bottom:28px;height:5px;background:linear-gradient(90deg,var(--red) 0 28%,var(--cyan) 28% 48%,var(--green) 48% 64%,var(--purple) 64% 82%,var(--orange) 82%)}
+    .cover{background:linear-gradient(110deg,var(--dark) 0%,#30383b 58%,#fff 58%);color:#fff;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+    .cover::after{background:var(--red)}
+    .logo{font-size:42px;font-weight:900;letter-spacing:0}
+    .kicker{font-size:13px;text-transform:uppercase;letter-spacing:0;color:var(--red);font-weight:900;margin-bottom:16px}
+    .cover .kicker{color:#fff}
+    h1{font-size:58px;line-height:1.04;margin:28px 0 22px;letter-spacing:0;overflow-wrap:anywhere;word-break:break-word}
+    h2{font-size:42px;line-height:1.1;margin:0 0 24px;letter-spacing:0}
+    h3{font-size:24px;margin:0 0 10px}
+    p{font-size:20px;color:#394245;margin:0 0 14px}
+    ul{margin:0;padding-left:22px}
+    li{font-size:21px;margin:10px 0;color:#394245}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+    .three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .module{border:1px solid var(--line);border-left:8px solid var(--red);border-radius:8px;padding:18px;background:#fff;min-height:130px}
+    .module:nth-child(2n){border-left-color:var(--cyan)}
+    .module:nth-child(3n){border-left-color:var(--green)}
+    .module b{display:block;color:var(--red);font-size:16px;margin-bottom:7px}
+    .module p{font-size:17px;margin:0;color:#4f595c}
+    .note{background:var(--light);border:1px solid var(--line);border-radius:8px;padding:18px}
+    .note p{font-size:18px}
+    .concept-svg{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 14px 34px rgba(37,44,46,.08)}
+    .source{position:absolute;right:64px;bottom:42px;color:#798184;font-size:13px}
+    .tag{display:inline-flex;padding:7px 10px;border-radius:999px;background:#fff0f1;color:#9c2028;font-weight:900;font-size:13px;margin:0 8px 8px 0}
+    @media(max-width:900px){.slide{min-height:auto;padding:34px 22px 58px}.cover{background:var(--dark)}.cover,.two,.three,.module-grid{grid-template-columns:1fr}h1{font-size:34px}.cover p{color:rgba(255,255,255,.86)}h2{font-size:32px}li,p{font-size:18px}.source{position:static;margin-top:22px}}
+    @media print{body{background:#fff}.deck{max-width:none}.slide{break-after:page;min-height:680px}}
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide cover">
+      <div>
+        <div class="logo">ADLINK</div>
+        <div class="kicker">Teaching Deck / Local LLM Semantic Brief</div>
+        <h1>Skill 2.0時代，來了。继OpenClaw、Hermes Agent後又一個开始飞速攀升的Agent。實测GitHub最新火爆仓库OpenSquilla。</h1>
+        <p style="color:rgba(255,255,255,.86)">不是影片逐字稿，而是把來源消化後整理成可教學投影片。</p>
+      </div>
+      <div><svg class="concept-svg" viewBox="0 0 900 300" role="img" aria-label="Generated teaching loop">
+    <rect width="900" height="300" rx="18" fill="#ffffff"/>
+    <path d="M110 150 C210 45 350 45 450 150 C550 255 690 255 790 150" fill="none" stroke="#D8D8D8" stroke-width="16" stroke-linecap="round"/>
+    <g>
+        <circle cx="110" cy="200" r="48" fill="#D0333A"/>
+        <text x="110" y="194" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">01</text>
+        <text x="110" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">介紹OpenSquilla專案…</text>
+      </g><g>
+        <circle cx="280" cy="90" r="48" fill="#1CB9D8"/>
+        <text x="280" y="84" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">02</text>
+        <text x="280" y="106" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">介紹OpenSquilla專案…</text>
+      </g><g>
+        <circle cx="450" cy="200" r="48" fill="#94C11F"/>
+        <text x="450" y="194" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">03</text>
+        <text x="450" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Skill 2.0功能與Met…</text>
+      </g><g>
+        <circle cx="620" cy="90" r="48" fill="#7D3189"/>
+        <text x="620" y="84" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">04</text>
+        <text x="620" y="106" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Skill 2.0功能與Met…</text>
+      </g><g>
+        <circle cx="790" cy="200" r="48" fill="#EC672C"/>
+        <text x="790" y="194" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">05</text>
+        <text x="790" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">MetaSkill 使用經驗與…</text>
+      </g>
+  </svg></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Core Thesis</div>
+      <div class="two">
+        <div>
+          <h2>這支影片真正要教什麼</h2>
+          <p>整支影片的核心是把來源內容轉成可行動的技術與流程主線，而不是只摘錄零散片段。</p>
+          <div><span class="tag">完整字幕</span><span class="tag">本地 LLM 分段摘要</span><span class="tag">教學 brief</span><span class="tag">內容生成圖像</span></div>
+        </div>
+        <div><svg class="concept-svg" viewBox="0 0 900 360" role="img" aria-label="Generated application map">
+    <rect width="900" height="360" rx="18" fill="#ffffff"/>
+    <text x="48" y="54" font-size="28" font-weight="900" fill="#252C2E">從影片內容到教學圖像</text>
+    <text x="48" y="84" font-size="15" fill="#697174">每個節點都來自語意摘要與來源時間戳</text>
+    <circle cx="450" cy="190" r="68" fill="#252C2E"/>
+    <text x="450" y="184" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Teaching</text>
+    <text x="450" y="210" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Core</text>
+    <g>
+        <line x1="450" y1="190" x2="170" y2="145" stroke="#D0333A" stroke-width="5"/>
+        <rect x="50" y="107" width="240" height="76" rx="10" fill="#D0333A"/>
+        <text x="170" y="139" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">Skill 2.0功能與MetaSkill介紹</text>
+        <text x="170" y="163" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">12:00-24:00</text>
+      </g><g>
+        <line x1="450" y1="190" x2="730" y2="145" stroke="#1CB9D8" stroke-width="5"/>
+        <rect x="610" y="107" width="240" height="76" rx="10" fill="#1CB9D8"/>
+        <text x="730" y="139" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">Skill 2.0功能與MetaSkill介紹</text>
+        <text x="730" y="163" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">12:00-24:00</text>
+      </g><g>
+        <line x1="450" y1="190" x2="210" y2="282" stroke="#94C11F" stroke-width="5"/>
+        <rect x="90" y="244" width="240" height="76" rx="10" fill="#94C11F"/>
+        <text x="210" y="276" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">MetaSkill 使用經驗與專案背景</text>
+        <text x="210" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">24:00-26:59</text>
+      </g><g>
+        <line x1="450" y1="190" x2="690" y2="282" stroke="#7D3189" stroke-width="5"/>
+        <rect x="570" y="244" width="240" height="76" rx="10" fill="#7D3189"/>
+        <text x="690" y="276" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">MetaSkill 使用經驗與專案背景</text>
+        <text x="690" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">24:00-26:59</text>
+      </g>
+  </svg></div>
+      </div>
+      <div class="source">來源：E01 0:00-12:00、E02 0:00-12:00、E03 12:00-24:00、E04 12:00-24:00、E05 24:00-26:59、E06 24:00-26:59</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Teaching Map</div>
+      <h2>教學章節地圖</h2>
+      <div class="module-grid">
+        <article class="module"><b>Module 01</b><h3>Module 01</h3><p>介紹OpenSquilla專案與其核心功能 - 介紹OpenSquilla專案及其核心功能與架構設計</p></article><article class="module"><b>Module 02</b><h3>Module 02</h3><p>介紹OpenSquilla專案與其核心功能 - 介紹OpenSquilla專案及其核心功能與架構設計</p></article><article class="module"><b>Module 03</b><h3>Module 03</h3><p>Skill 2.0功能與MetaSkill介紹 - 介紹Skill 2.0的智能路由功能與MetaSkill的應用場景與實現方式</p></article><article class="module"><b>Module 04</b><h3>Module 04</h3><p>Skill 2.0功能與MetaSkill介紹 - 介紹Skill 2.0的智能路由功能與MetaSkill的應用場景與實現方式</p></article><article class="module"><b>Module 05</b><h3>Module 05</h3><p>MetaSkill 使用經驗與專案背景 - 分享MetaSkill的使用經驗與專案發展前景</p></article><article class="module"><b>Module 06</b><h3>Module 06</h3><p>MetaSkill 使用經驗與專案背景 - 分享MetaSkill的使用經驗與專案發展前景</p></article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Generated Visual</div>
+      <div class="two">
+        <div>
+          <h2>把內容轉成可教的架構</h2>
+          <ul><li>介紹OpenSquilla專案與其核心功能：介紹OpenSquilla專案及其核心功能與架構設計 OpenSquilla是繼OpenClaw和Hermes Agent後又一個快速攀升的Agent專案；專案提供2.5K的star，並在5月3…</li><li>介紹OpenSquilla專案與其核心功能：介紹OpenSquilla專案及其核心功能與架構設計 OpenSquilla是繼OpenClaw和Hermes Agent後又一個快速攀升的Agent專案；專案提供2.5K的star，並在5月3…</li><li>Skill 2.0功能與MetaSkill介紹：介紹Skill 2.0的智能路由功能與MetaSkill的應用場景與實現方式 Skill 2.0分為兩塊：0.3.0版本新增功能與普通Skills；智能路由功能可動態匹配不同層級的模型以降低…</li><li>Skill 2.0功能與MetaSkill介紹：介紹Skill 2.0的智能路由功能與MetaSkill的應用場景與實現方式 Skill 2.0分為兩塊：0.3.0版本新增功能與普通Skills；智能路由功能可動態匹配不同層級的模型以降低…</li><li>MetaSkill 使用經驗與專案背景：分享MetaSkill的使用經驗與專案發展前景 MetaSkill主要功能是幫助用戶實現特定場景的MetaSkill；官方文件內容可幫助理解MetaSkill設計原理；MetaSkill目前處於快速…</li></ul>
+        </div>
+        <div><svg class="concept-svg" viewBox="0 0 900 420" role="img" aria-label="Generated platform stack">
+    <rect width="900" height="420" rx="18" fill="#ffffff"/>
+    <text x="48" y="52" font-size="28" font-weight="900" fill="#252C2E">教學架構圖</text>
+    <text x="48" y="84" font-size="15" fill="#697174">由 Lesson Brief 自動生成，不使用影片截圖</text>
+    <g>
+        <rect x="48" y="120" width="760" height="34" rx="7" fill="#252C2E" opacity="1"/>
+        <text x="66" y="143" font-size="15" font-weight="800" fill="#fff">介紹OpenSquilla專案與其核心功能</text>
+      </g><g>
+        <rect x="48" y="165" width="718" height="34" rx="7" fill="#D0333A" opacity="0.9"/>
+        <text x="66" y="188" font-size="15" font-weight="800" fill="#fff">介紹OpenSquilla專案與其核心功能</text>
+      </g><g>
+        <rect x="48" y="210" width="676" height="34" rx="7" fill="#1CB9D8" opacity="0.9"/>
+        <text x="66" y="233" font-size="15" font-weight="800" fill="#fff">Skill 2.0功能與MetaSkill介紹</text>
+      </g><g>
+        <rect x="48" y="255" width="634" height="34" rx="7" fill="#94C11F" opacity="0.9"/>
+        <text x="66" y="278" font-size="15" font-weight="800" fill="#fff">Skill 2.0功能與MetaSkill介紹</text>
+      </g><g>
+        <rect x="48" y="300" width="592" height="34" rx="7" fill="#7D3189" opacity="0.9"/>
+        <text x="66" y="323" font-size="15" font-weight="800" fill="#fff">MetaSkill 使用經驗與專案背景</text>
+      </g><g>
+        <rect x="48" y="345" width="550" height="34" rx="7" fill="#EC672C" opacity="0.9"/>
+        <text x="66" y="368" font-size="15" font-weight="800" fill="#fff">MetaSkill 使用經驗與專案背景</text>
+      </g>
+    <path d="M780 112 L834 112 L834 390 L780 390" fill="none" stroke="#D0333A" stroke-width="4"/>
+    <text x="850" y="245" writing-mode="tb" font-size="15" font-weight="900" fill="#D0333A">ADLINK 教材主線</text>
+  </svg></div>
+      </div>
+    </section>
+
+    
+
+    <section class="slide">
+      <div class="kicker">ADLINK Application</div>
+      <h2>轉成 ADLINK 內訓與工作討論</h2>
+      <div class="module-grid">
+        <article class="module"><b>Application 1</b><p>探討如何透過OpenSquilla進行Agent架構設計與優化</p></article><article class="module"><b>Application 2</b><p>分析如何在ADLINK產品中整合MetaSkill與智能模型路由功能</p></article><article class="module"><b>Application 3</b><p>研究如何透過二次開發，將OpenSquilla與ADLINK現有系統整合</p></article><article class="module"><b>Application 4</b><p>可探討AI模型路由在ADLINK產品中的應用</p></article><article class="module"><b>Application 5</b><p>MetaSkill的架構與設計可轉化為ADLINK工程方案</p></article><article class="module"><b>Application 6</b><p>AI服務的效能優化與成本控制可與ADLINK產品結合</p></article><article class="module"><b>Application 7</b><p>可探討ADLINK產品與MetaSkill的整合方案</p></article><article class="module"><b>Application 8</b><p>分析ADLINK在開源專案中的應用場景</p></article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Workshop</div>
+      <div class="two">
+        <div>
+          <h2>授課流程</h2>
+          <ul><li>0-10 min：用 core thesis 說明影片主線。</li><li>10-45 min：依 modules 播放來源時間段，整理每段的技術與產業意義。</li><li>45-70 min：把重點轉成 ADLINK 產品、系統設計、edge AI 或 physical AI 討論。</li><li>70-90 min：回查來源 chunk id，標記待確認產品名、數字與客戶應用。</li></ul>
+        </div>
+        <div>
+          <h2>驗收</h2>
+          <ul><li>每個章節都有來源編號或 ADLINK 風格規範依據。</li><li>章節順序反映整支影片的核心故事線，不只是關鍵字命中。</li><li>沒有把舊教材模板硬套到不相干影片。</li><li>沒有簡體字殘留，工具名與模型名保留正確英文。</li><li>缺少字幕、截圖或內部案例時，明確列入待補資料，不以猜測補完。</li></ul>
+        </div>
+      </div>
+      <div class="source">來源：E01 0:00-12:00、E02 0:00-12:00、E03 12:00-24:00、E04 12:00-24:00、E05 24:00-26:59、E06 24:00-26:59 / Generated from lesson content, not video screenshots.</div>
+    </section>
+  </main>
+</body>
+</html>

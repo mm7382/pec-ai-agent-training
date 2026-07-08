@@ -1,0 +1,302 @@
+{
+  "siteTitle": "PEC AI Agent 教育訓練資料庫",
+  "updatedAt": "2026-07-08",
+  "duplicateHidden": [
+    {
+      "title": "Agent 自我蒸餾、Skill 化與定期自動化",
+      "source": "4. 優化/Agent 自我蒸餾、Skill 化與定期自動化.html",
+      "keptAs": "agent-evolution-self-distillation"
+    }
+  ],
+  "categories": [
+    "AI Agent 入門與學習路線",
+    "工具選型與上手",
+    "任務交辦、Prompt 與需求釐清",
+    "Agent 系統架構與可靠性",
+    "Skill、蒸餾與能力沉澱",
+    "知識庫、文件轉換與上下文治理",
+    "Agent 管理、可視化與營運",
+    "設計與輸出工作流"
+  ],
+  "items": [
+    {
+      "id": "ai-agent-engineering-overview",
+      "title": "AI Agent 工程應用教育訓練",
+      "category": "AI Agent 入門與學習路線",
+      "level": "入門",
+      "summary": "建立工程師學 AI Agent 的完整地圖，先知道術語、工具、資料安全與可落地工作流要怎麼串起來。",
+      "tags": ["課程大綱", "工程應用", "AI Agent", "學習路線"],
+      "url": "./pec-training/ai-agent-engineering-overview.html"
+    },
+    {
+      "id": "ai-workplace-restructure",
+      "title": "55,000 人被裁，留下的人為什麼更累？",
+      "category": "AI Agent 入門與學習路線",
+      "level": "觀念",
+      "summary": "用 AI 時代職場重組的案例，理解為什麼低槓桿工作會被壓縮，以及工程師要如何提高工作槓桿。",
+      "tags": ["職場重組", "AI 生產力", "工程師職涯", "管理"],
+      "url": "./pec-training/ai-workplace-restructure.html"
+    },
+    {
+      "id": "ai-30-day-learning-path",
+      "title": "現在學 AI，真的還不晚：30 天從小白到上手",
+      "category": "AI Agent 入門與學習路線",
+      "level": "入門",
+      "summary": "把 AI 學習拆成 30 天導入路線，從會問問題進步到能用 AI 整理資料、報告與工作流程。",
+      "tags": ["30 天", "初學者", "導入路線", "工作流"],
+      "url": "./pec-training/ai-30-day-learning-path.html"
+    },
+    {
+      "id": "ai-agent-terms",
+      "title": "AI Agent 術語與名詞解釋",
+      "category": "AI Agent 入門與學習路線",
+      "level": "入門",
+      "summary": "先搞懂 Prompt、Context、Workflow、API Key、Local LLM 等常見名詞，避免需求講不清楚或誤用工具。",
+      "tags": ["術語", "名詞解釋", "Context", "Workflow"],
+      "url": "./pec-training/ai-agent-terms.html"
+    },
+    {
+      "id": "local-vs-cloud-llm",
+      "title": "Local LLM 與 Cloud LLM 差異教學",
+      "category": "工具選型與上手",
+      "level": "入門",
+      "summary": "判斷什麼任務適合雲端模型、什麼資料該留在本地，以及工程團隊如何做混合選型。",
+      "tags": ["Local LLM", "Cloud LLM", "資料安全", "成本"],
+      "url": "./pec-training/local-vs-cloud-llm.html"
+    },
+    {
+      "id": "claude-desktop-sop",
+      "title": "Claude Desktop Chat / Cowork / Code 新手 SOP",
+      "category": "工具選型與上手",
+      "level": "入門",
+      "summary": "分清楚 Chat、Cowork、Code 什麼時候用，避免把所有任務都丟進同一個聊天框。",
+      "tags": ["Claude Desktop", "Chat", "Cowork", "Code", "SOP"],
+      "url": "./pec-training/claude-desktop-sop.html"
+    },
+    {
+      "id": "claude-code-workbench",
+      "title": "Claude Code 工作台設定與上手路線",
+      "category": "工具選型與上手",
+      "level": "入門",
+      "summary": "設定 Claude Code 的語言規則、成本觀念、CLAUDE.md、CLI、MCP、Skill 與 Subagent 上手順序。",
+      "tags": ["Claude Code", "CLAUDE.md", "MCP", "Subagent"],
+      "url": "./pec-training/claude-code-workbench.html"
+    },
+    {
+      "id": "codex-gemini-cli-intro",
+      "title": "Codex & Gemini CLI 簡介",
+      "category": "工具選型與上手",
+      "level": "入門",
+      "summary": "理解 AI CLI 如何讀專案資料夾、改檔、整理報告，並用在 RF、SIE、EMC、Thermal、ME 工作情境。",
+      "tags": ["Codex", "Gemini CLI", "工程文件", "自動化"],
+      "url": "./pec-training/codex-gemini-cli-intro.html"
+    },
+    {
+      "id": "github-beginner-open-source",
+      "title": "GitHub 入門：非工程背景也能找到、判斷、下載開源工具",
+      "category": "工具選型與上手",
+      "level": "入門",
+      "summary": "學會看 README、Release、Issues、Stars 與授權，先判斷專案可靠度，再決定是否下載或交給 agent 處理。",
+      "tags": ["GitHub", "README", "Release", "開源工具"],
+      "url": "./pec-training/github-beginner-open-source.html"
+    },
+    {
+      "id": "engineering-prompt-writing",
+      "title": "工程 Prompt 寫法教學",
+      "category": "任務交辦、Prompt 與需求釐清",
+      "level": "入門",
+      "summary": "把需求、輸入資料、輸出格式、限制條件與驗收標準寫成 AI 能穩定執行的任務規格。",
+      "tags": ["Prompt", "輸出格式", "驗收標準", "工程需求"],
+      "url": "./pec-training/engineering-prompt-writing.html"
+    },
+    {
+      "id": "task-definition-brief",
+      "title": "你不是不會寫 Prompt，是不會定義任務",
+      "category": "任務交辦、Prompt 與需求釐清",
+      "level": "進階",
+      "summary": "用五欄位 brief 先定義目標、背景、素材、邊界與完成定義，讓 AI 產出能支援決策。",
+      "tags": ["任務定義", "Brief", "交辦", "完成定義"],
+      "url": "./pec-training/task-definition-brief.html"
+    },
+    {
+      "id": "grill-me-requirement-interview",
+      "title": "AI Agent 開工前需求訪談：Grill Me 工作法",
+      "category": "任務交辦、Prompt 與需求釐清",
+      "level": "入門",
+      "summary": "讓 agent 在動手前先追問受眾、限制、輸出與成功標準，把模糊想法變成可執行 brief。",
+      "tags": ["Grill Me", "需求訪談", "Brief", "開工前"],
+      "url": "./pec-training/grill-me-requirement-interview.html"
+    },
+    {
+      "id": "brainstorming-skill-design-first",
+      "title": "Brainstorming Skill：先設計再開工",
+      "category": "任務交辦、Prompt 與需求釐清",
+      "level": "進階",
+      "summary": "把 Brainstorming 當作設計審查，先比較方案、補齊上下文、取得設計核准，再交給實作流程。",
+      "tags": ["Brainstorming", "設計審查", "方案比較", "Superpowers"],
+      "url": "./pec-training/brainstorming-skill-design-first.html"
+    },
+    {
+      "id": "voice-input-agent-context",
+      "title": "語音輸入 x AI Agent：Context 轉換工作法",
+      "category": "任務交辦、Prompt 與需求釐清",
+      "level": "入門",
+      "summary": "用語音先完整收集想法、會議和 review context，再讓 AI 轉成 SOP、issue、prompt 或 agent 任務。",
+      "tags": ["語音輸入", "Context", "任務轉換", "Typeless"],
+      "url": "./pec-training/voice-input-agent-context.html"
+    },
+    {
+      "id": "agent-harness-reliable-system",
+      "title": "Agent Harness：把聰明模型包成可靠系統",
+      "category": "Agent 系統架構與可靠性",
+      "level": "進階",
+      "summary": "理解模型外圍的上下文、工具、記憶、驗證、觀測、安全與錯誤恢復，讓 agent 不只會 demo。",
+      "tags": ["Agent Harness", "可靠性", "工具", "驗證"],
+      "url": "./pec-training/agent-harness-reliable-system.html"
+    },
+    {
+      "id": "harness-engineering-system-design",
+      "title": "Harness Engineering：讓 Agent 穩定工作的系統設計",
+      "category": "Agent 系統架構與可靠性",
+      "level": "進階",
+      "summary": "把工具、文件、評分、回饋與品質閘門包成一套系統，讓 agent 能穩定完成任務。",
+      "tags": ["Harness Engineering", "Quality Gate", "Evaluator", "Workflow"],
+      "url": "./pec-training/harness-engineering-system-design.html"
+    },
+    {
+      "id": "loop-engineering-guide",
+      "title": "Loop Engineering 實作指南",
+      "category": "Agent 系統架構與可靠性",
+      "level": "進階",
+      "summary": "從手動提示改成設計可觀察、可驗證、可停止、可回滾的 agent 工作循環。",
+      "tags": ["Loop Engineering", "閉環", "驗證", "停止條件"],
+      "url": "./pec-training/loop-engineering-guide.html"
+    },
+    {
+      "id": "claude-codex-cross-review",
+      "title": "Claude + Codex 交叉審核：把 AI 寫碼變成可管控流程",
+      "category": "Agent 系統架構與可靠性",
+      "level": "進階",
+      "summary": "把實作者、審核者與 stop gate 拆開，讓 AI 寫碼流程有攔截、放行與共識收斂條件。",
+      "tags": ["Claude", "Codex", "Code Review", "Stop Gate"],
+      "url": "./pec-training/claude-codex-cross-review.html"
+    },
+    {
+      "id": "claude-skill-engineering",
+      "title": "Claude Skill 觸發率與 Skill Engineering",
+      "category": "Skill、蒸餾與能力沉澱",
+      "level": "進階",
+      "summary": "把 Skill 當成工作協議，設計觸發描述、progressive disclosure、腳本驗證與版本化管理。",
+      "tags": ["Claude Skill", "Skill Engineering", "觸發率", "工作協議"],
+      "url": "./pec-training/claude-skill-engineering.html"
+    },
+    {
+      "id": "codex-plugin-skill-workflows",
+      "title": "Codex 插件與 Skill 入門：6 種工作流的導入判斷",
+      "category": "Skill、蒸餾與能力沉澱",
+      "level": "入門",
+      "summary": "分清楚 Plugin、Skill、Record & Replay，依任務類型判斷該裝能力包、寫流程包，還是錄製示範。",
+      "tags": ["Codex", "Plugin", "Skill", "Record & Replay"],
+      "url": "./pec-training/codex-plugin-skill-workflows.html"
+    },
+    {
+      "id": "codex-skill-feedback-loop",
+      "title": "Codex Skill：把常用工作變成 AI SOP",
+      "category": "Skill、蒸餾與能力沉澱",
+      "level": "進階",
+      "summary": "把本地 agent 的修正紀錄、偏好與 know-how 萃取成 Codex Skill，讓團隊 SOP 可以重複使用。",
+      "tags": ["Codex Skill", "SOP", "Feedback", "Know-how"],
+      "url": "./pec-training/codex-skill-feedback-loop.html"
+    },
+    {
+      "id": "nuwa-skill-distillation",
+      "title": "Nuwa Skill：把專家方法變成 AI Skill",
+      "category": "Skill、蒸餾與能力沉澱",
+      "level": "進階",
+      "summary": "把專家的說話方式、思考方法、判斷標準、拒絕邊界與局限整理成 agent 可用的 skill。",
+      "tags": ["Nuwa Skill", "專家蒸餾", "Mental Model", "Skill"],
+      "url": "./pec-training/nuwa-skill-distillation.html"
+    },
+    {
+      "id": "skillopt-trainable-skill",
+      "title": "SkillOpt：把提示詞工程變成可訓練的 Skill 系統",
+      "category": "Skill、蒸餾與能力沉澱",
+      "level": "進階",
+      "summary": "把 skill 文件當成可優化對象，用 rollout、驗證集、受控編輯與部署產物管理 prompt 治理。",
+      "tags": ["SkillOpt", "Prompt Training", "驗證集", "版本化"],
+      "url": "./pec-training/skillopt-trainable-skill.html"
+    },
+    {
+      "id": "agent-evolution-self-distillation",
+      "title": "如何讓自己的 Agent 越用越懂你",
+      "category": "Skill、蒸餾與能力沉澱",
+      "level": "進階",
+      "summary": "把日常使用經驗先蒸餾成文件，再把重複流程變成 skill，最後用安全自動化定期整理。",
+      "tags": ["自我蒸餾", "Skill 化", "自動化", "Agent Evolution"],
+      "url": "./pec-training/agent-evolution-self-distillation.html"
+    },
+    {
+      "id": "markitdown-ingestion-layer",
+      "title": "MarkItDown：把多格式文件整理成 AI 可讀 Markdown",
+      "category": "知識庫、文件轉換與上下文治理",
+      "level": "入門",
+      "summary": "把 PDF、Office、HTML、資料檔與音訊先標準化成 Markdown，讓 AI 與 agent workflow 更容易處理。",
+      "tags": ["MarkItDown", "Markdown", "文件轉換", "Ingestion"],
+      "url": "./pec-training/markitdown-ingestion-layer.html"
+    },
+    {
+      "id": "ai-second-brain-knowledge-base",
+      "title": "AI 第二大腦：文字、圖片與 Skill 的 Agent 知識庫",
+      "category": "知識庫、文件轉換與上下文治理",
+      "level": "進階",
+      "summary": "建立讓 agent 可讀、可分類、可提煉、可回寫的本地知識庫，而不是只給人看的筆記庫。",
+      "tags": ["第二大腦", "知識庫", "Inbox", "Skill 型知識"],
+      "url": "./pec-training/ai-second-brain-knowledge-base.html"
+    },
+    {
+      "id": "context-headroom",
+      "title": "Headroom：本地 Agent 的 Context Headroom 導入策略",
+      "category": "知識庫、文件轉換與上下文治理",
+      "level": "進階",
+      "summary": "把長任務中的工具輸出、log、RAG 結果與逐字稿先清理，降低 context 爆掉和摘要失焦的風險。",
+      "tags": ["Context Headroom", "上下文治理", "長任務", "摘要"],
+      "url": "./pec-training/context-headroom.html"
+    },
+    {
+      "id": "opensquilla-metaskill",
+      "title": "OpenSquilla 與 MetaSkill 技術入門",
+      "category": "知識庫、文件轉換與上下文治理",
+      "level": "進階",
+      "summary": "理解 token efficiency、smart routing、durable memory 與 MetaSkill request 如何影響 agent runtime。",
+      "tags": ["OpenSquilla", "MetaSkill", "Smart Routing", "Memory"],
+      "url": "./pec-training/opensquilla-metaskill.html"
+    },
+    {
+      "id": "agentic-os-dashboard",
+      "title": "可視化管理 Agent：Claude Agentic OS",
+      "category": "Agent 管理、可視化與營運",
+      "level": "進階",
+      "summary": "把模型訂閱、知識庫、skills、agent 活動、成本與改善流程集中到可視化控制台。",
+      "tags": ["Agentic OS", "Dashboard", "成本", "可觀測性"],
+      "url": "./pec-training/agentic-os-dashboard.html"
+    },
+    {
+      "id": "manager-agent-governance",
+      "title": "管理 agent 的 agent 入門",
+      "category": "Agent 管理、可視化與營運",
+      "level": "入門",
+      "summary": "用管理者 agent 先規劃、分工、檢查與整理，讓多 agent 系統有權限分級和交接紀錄。",
+      "tags": ["管理者 agent", "治理", "權限", "交接"],
+      "url": "./pec-training/manager-agent-governance.html"
+    },
+    {
+      "id": "claude-design-code-ui-workflow",
+      "title": "Claude Design + Claude Code：從想法到介面、再到開發交接",
+      "category": "設計與輸出工作流",
+      "level": "進階",
+      "summary": "把需求、原型、視覺規格與後續開發接成閉環，讓設計和程式能互相讀懂。",
+      "tags": ["Claude Design", "UI", "Design System", "交接"],
+      "url": "./pec-training/claude-design-code-ui-workflow.html"
+    }
+  ]
+}

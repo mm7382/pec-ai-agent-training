@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🚀Opus 4.8 + Dynamic Workflows自動生成Harness指挥上百個subagents並行工作，廉价Haiku+旗舰Opus搭配！Claude Code效率倍增一天干完一個月的活 - ADLINK 教學</title>
+  <style>
+    :root {
+      --ad-dark:#252C2E;
+      --ad-gray:#797979;
+      --ad-light:#F4F5F6;
+      --ad-line:#D8D8D8;
+      --ad-red:#D0333A;
+      --ad-cyan:#1CB9D8;
+      --ad-green:#94C11F;
+      --ad-purple:#7D3189;
+      --ad-orange:#EC672C;
+      --ad-yellow:#FAB428;
+      --white:#FFFFFF;
+      --shadow:0 18px 44px rgba(37,44,46,.13);
+      --r:12px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);
+      color:var(--ad-dark);
+      line-height:1.7;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);
+      background-size:44px 44px;
+      opacity:.42;
+      z-index:-3;
+    }
+    .ad-cover{
+      min-height:680px;
+      background:
+        linear-gradient(90deg,rgba(37,44,46,.97) 0%,rgba(37,44,46,.92) 56%,rgba(37,44,46,.70) 100%),
+        radial-gradient(circle at 74% 26%,rgba(208,51,58,.22),transparent 24rem),
+        radial-gradient(circle at 90% 78%,rgba(28,185,216,.18),transparent 22rem);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border-bottom:10px solid var(--ad-red);
+    }
+    .ad-cover::after{
+      content:"";
+      position:absolute;
+      right:0;top:0;bottom:0;
+      width:34%;
+      background:linear-gradient(135deg,transparent 0%,transparent 45%,rgba(208,51,58,.95) 45%,rgba(208,51,58,.95) 60%,rgba(28,185,216,.88) 60%,rgba(28,185,216,.88) 68%,transparent 68%);
+      opacity:.9;
+    }
+    .ad-cover-inner{max-width:1180px;margin:auto;padding:52px 24px 64px;position:relative;z-index:2;min-height:680px;display:flex;flex-direction:column}
+    .ad-cover-top{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .ad-logo-white{font-size:44px;font-weight:800;letter-spacing:.02em;color:#fff}
+    .ad-logo-white::after{content:"";display:block;width:210px;height:5px;margin-top:10px;background:linear-gradient(90deg,var(--ad-red) 0 34%,var(--ad-cyan) 34% 58%,var(--ad-green) 58% 76%,var(--ad-yellow) 76%)}
+    .ad-cover-kicker{color:#d9d9d9;font-size:15px;letter-spacing:.02em;text-align:right}
+    .ad-cover-main{margin-top:auto;margin-bottom:48px;max-width:900px}
+    .ad-cover-label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);color:#fff;font-weight:700;letter-spacing:.08em;font-size:13px;text-transform:uppercase}
+    .ad-cover-label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ad-red);box-shadow:18px 0 0 var(--ad-cyan),36px 0 0 var(--ad-green);margin-right:38px}
+    .ad-cover h1{font-size:clamp(42px,6vw,74px);line-height:1.05;letter-spacing:0;margin:26px 0 20px;max-width:980px;font-weight:800}
+    .ad-cover-subtitle{font-size:21px;line-height:1.65;color:rgba(255,255,255,.86);max-width:850px;border-left:6px solid var(--ad-red);padding-left:18px}
+    .ad-cover-footer{margin-top:auto;display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.72);font-size:15px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+    .wrap{max-width:1180px;margin:0 auto;padding:38px 24px 72px}
+    .section-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--ad-gray);letter-spacing:.08em;text-transform:uppercase;margin:34px 0 14px}
+    .section-label::before{content:"";width:26px;height:4px;background:var(--ad-red);display:inline-block}
+    .card{position:relative;overflow:hidden;border:1px solid var(--ad-line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);color:var(--ad-dark)}
+    .card h2{margin:0 0 12px;line-height:1.18}
+    .badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff0f1;color:#9c2028;font-weight:800;font-size:13px;margin-bottom:14px}
+    .lead{font-size:19px;color:#3b4548;max-width:860px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .chip,.tag{display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--ad-line);background:var(--ad-light);padding:6px 10px;color:var(--ad-dark);font-size:13px;font-weight:700}
+    .source-card{border-left:6px solid var(--ad-red);background:#fff;padding:18px 20px;border-radius:var(--r);border-top:1px solid var(--ad-line);border-right:1px solid var(--ad-line);border-bottom:1px solid var(--ad-line);box-shadow:var(--shadow)}
+    .quote{font-size:18px;font-weight:800;color:var(--ad-dark);line-height:1.55}
+    .section{margin-top:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{padding:24px}
+    .card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--ad-red)}
+    .card:nth-child(3n+2)::before{background:var(--ad-cyan)}
+    .card:nth-child(3n)::before{background:var(--ad-green)}
+    .card h2{font-size:24px}
+    .card p{margin:0 0 10px;color:#3b4548}
+    ul{margin:10px 0 0;padding-left:20px}
+    li{margin:6px 0;color:#3b4548}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .step{background:#fff;border:1px solid var(--ad-line);border-radius:var(--r);padding:16px;box-shadow:0 12px 24px rgba(37,44,46,.08)}
+    .step b{display:block;color:var(--ad-red);margin-bottom:8px}
+    .brief-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .frame-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .frame-card{border:1px solid var(--ad-line);border-radius:10px;background:#fff;overflow:hidden;box-shadow:0 12px 24px rgba(37,44,46,.08)}
+    .frame-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#111}
+    .frame-meta{padding:12px 14px}
+    .frame-meta b{display:inline-flex;color:var(--ad-red);font-size:16px;letter-spacing:0;margin-bottom:5px}
+    .frame-meta p{margin:0;color:#4b5558;font-size:14px;line-height:1.5}
+    .visual-panel{border:1px solid var(--ad-line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);padding:24px;overflow:hidden}
+    .visual-panel h2{margin:0 0 16px;font-size:24px;line-height:1.2}
+    .route{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px}
+    .route-step{min-height:150px;border:1px solid var(--ad-line);border-top:7px solid var(--ad-red);border-radius:10px;background:linear-gradient(180deg,#fff,#f8f9fa);padding:16px;display:flex;flex-direction:column;gap:8px}
+    .route-step:nth-child(2){border-top-color:var(--ad-cyan)}
+    .route-step:nth-child(3){border-top-color:var(--ad-green)}
+    .route-step:nth-child(4){border-top-color:var(--ad-purple)}
+    .route-step b{font-size:28px;color:var(--ad-red);line-height:1}
+    .route-step span{font-weight:800;color:var(--ad-dark)}
+    .route-step p{margin:0;color:#4b5558;font-size:14px;line-height:1.55}
+    .system-loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;align-items:stretch}
+    .loop-node{border:1px solid var(--ad-line);border-radius:10px;padding:14px;background:#f9fafb;position:relative;min-height:118px}
+    .loop-node:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;width:14px;height:3px;background:var(--ad-red)}
+    .loop-node b{display:block;color:var(--ad-red);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+    .loop-node span{display:block;font-weight:800;color:var(--ad-dark);line-height:1.35}
+    .loop-node p{margin:6px 0 0;color:#566164;font-size:13px;line-height:1.45}
+    .matrix{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .matrix-item{border:1px solid var(--ad-line);border-radius:10px;background:#fff;padding:16px;min-height:146px;box-shadow:0 10px 20px rgba(37,44,46,.07)}
+    .matrix-item i{display:inline-flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;background:#fff0f1;color:var(--ad-red);font-style:normal;font-weight:900;margin-bottom:10px}
+    .matrix-item h3{font-size:17px;margin:0 0 8px;line-height:1.25}
+    .matrix-item p{font-size:14px;margin:0;color:#4b5558;line-height:1.55}
+    .report-callout{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:center;border-left:8px solid var(--ad-red);background:#fff;padding:22px;border-radius:var(--r);box-shadow:var(--shadow);border-top:1px solid var(--ad-line);border-right:1px solid var(--ad-line);border-bottom:1px solid var(--ad-line)}
+    .report-mark{width:150px;height:150px;border-radius:50%;background:conic-gradient(from 210deg,var(--ad-red),var(--ad-cyan),var(--ad-green),var(--ad-yellow),var(--ad-red));display:grid;place-items:center;color:#fff;font-size:44px;font-weight:900}
+    .warning{border-left:8px solid var(--ad-yellow);background:#fffaf0}
+    .okbox{border-left:8px solid var(--ad-green);background:#fbfff5}
+    .source-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    a.btn{display:inline-flex;align-items:center;text-decoration:none;color:#fff;background:var(--ad-dark);border-radius:8px;padding:10px 12px;font-weight:800}
+    a.btn.secondary{background:var(--ad-red)}
+    @media (max-width:900px){
+      .ad-cover,.ad-cover-inner{min-height:auto}
+      .ad-cover-inner{padding:34px 20px 44px}
+      .ad-cover-top,.ad-cover-footer{flex-direction:column;align-items:flex-start;text-align:left}
+      .ad-cover::after{display:none}
+      .grid,.grid2,.flow,.brief-grid,.frame-grid,.route,.system-loop,.matrix,.report-callout{grid-template-columns:1fr}
+      .loop-node:not(:last-child)::after{display:none}
+      .report-mark{width:112px;height:112px;font-size:34px}
+      .wrap{padding:22px 14px 48px}
+      .card{padding:20px}
+    }
+    @media print{
+      body{background:#fff}
+      body::before,.ad-cover::after{display:none}
+      .ad-cover{min-height:auto;border-bottom:6px solid var(--ad-red)}
+      .ad-cover-inner{min-height:auto;padding:28px 20px}
+      .wrap{max-width:100%;padding:12px}
+      .card,.source-card{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <section class="ad-cover" aria-label="ADLINK PPT style cover">
+    <div class="ad-cover-inner">
+      <div class="ad-cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo">ADLINK</div>
+        <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br/>June 2026</div>
+      </div>
+      <div class="ad-cover-main">
+        <div class="ad-cover-label">Engineering AI Training</div>
+        <h1>🚀Opus 4.8 + Dynamic Workflows自動生成Harness指挥上百個subagents並行工作，廉价Haiku+旗舰Opus搭配！Claude Code效率倍增一天干完一個月的活</h1>
+        <p class="ad-cover-subtitle">工程師內訓報告｜AI 工作流導入教材</p>
+      </div>
+      <div class="ad-cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>HTML Training Material</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="section-label">Report Brief</div>
+    <section class="section brief-grid">
+      
+        <article class="card ">
+          <h2>這堂課要解決的問題</h2>
+          <ul><li>很多非技術角色已經會請 AI 幫忙寫文案、整理資料或回答問題，但還停在單次 prompt；真正的差距在於能不能把人的工作 SOP 設計成 agent 可以穩定執行的 workflow。</li><li>Human SOP 通常寫給人看，會省略判斷條件、例外處理、輸入格式、確認點與錯誤回報；Agentic Workflow 則必須把這些隱性判斷轉成明確規則。</li><li>本課重點不是寫程式，而是學會設計一套讓 AI agent 能執行、能追問、能檢查、能迭代修正的工作流程。</li><li>教材輸出要抓住來源內容主軸：從人的 SOP 出發，拆成任務、輸入、判斷、工具、輸出、追問與回饋迴圈。</li></ul>
+        </article>
+      
+        <article class="card okbox">
+          <h2>教學對象</h2>
+          <ul><li>PM / 業務 / 行銷 / 營運：平常有固定工作流程，但不會寫程式，想把流程交給 AI agent 協助執行的人。</li><li>內部 agent owner：需要把需求說清楚，讓工程師或 Codex 能把 SOP 轉成可運作 agent 的人。</li><li>系統工程師與自動化導入者：需要從使用者口中的流程，萃取成 agent workflow、工具權限與驗收規則的人。</li><li>不適合對象：只想問 AI 一次答案、不願意整理流程、不想定義輸入輸出與確認規則的人。</li></ul>
+        </article>
+    </section>
+
+    
+    <div class="section-label">Lesson Modules</div>
+    <section class="section visual-panel">
+      <h2>教學重點模組</h2>
+      <div class="frame-grid">
+        
+          <figure class="frame-card">
+            <img src="http://localhost:8791/assets/youtube-frames/4C7hYW5sx0o/frame-02-00654.jpg" alt="🚀Opus 4.8 + Dynamic Workflows自動生成Harness指挥上百個subagents並行工作，廉价Haiku+旗舰Opus搭配！Claude Code效率倍增一天干完一個月的活 任務拆解與需求定義" loading="lazy">
+            <figcaption class="frame-meta"><b>任務拆解與需求定義</b><p>將來源內容整理成可執行規則：定義 agent 應讀取的資料、判斷條件、輸出格式與人工確認點。</p></figcaption>
+          </figure>
+        
+          <figure class="frame-card">
+            <img src="http://localhost:8791/assets/youtube-frames/4C7hYW5sx0o/frame-01-00067.jpg" alt="🚀Opus 4.8 + Dynamic Workflows自動生成Harness指挥上百個subagents並行工作，廉价Haiku+旗舰Opus搭配！Claude Code效率倍增一天干完一個月的活 轉成 Agentic Workflow" loading="lazy">
+            <figcaption class="frame-meta"><b>轉成 Agentic Workflow</b><p>將 SOP 轉成可執行工作流：agent 依序讀取資料、判斷條件、產出結果，並保留回報與檢查點。</p></figcaption>
+          </figure>
+        
+          <figure class="frame-card">
+            <img src="http://localhost:8791/assets/youtube-frames/4C7hYW5sx0o/frame-03-00731.jpg" alt="🚀Opus 4.8 + Dynamic Workflows自動生成Harness指挥上百個subagents並行工作，廉价Haiku+旗舰Opus搭配！Claude Code效率倍增一天干完一個月的活 Decision Gate 判斷規則" loading="lazy">
+            <figcaption class="frame-meta"><b>Decision Gate 判斷規則</b><p>將來源內容整理成可執行規則：定義 agent 應讀取的資料、判斷條件、輸出格式與人工確認點。</p></figcaption>
+          </figure>
+        
+      </div>
+    </section>
+
+    <div class="section-label">Visual Roadmap</div>
+    <section class="section visual-panel">
+      <h2>Human SOP 到 Agentic Workflow 架構</h2>
+      <div class="route">
+        <div class="route-step"><b>01</b><span>Layer 1</span><p>Human SOP - 先寫出人現在怎麼做，包含觸發條件、使用資料、判斷方式、交付物與誰要確認。</p></div><div class="route-step"><b>02</b><span>Layer 2</span><p>Task Decomposition - 把 SOP 拆成 agent 可執行的小任務，例如讀取資料、分類、摘要、比對、產出草稿、提出問題。</p></div><div class="route-step"><b>03</b><span>Layer 3</span><p>Decision Rules - 把人腦中的判斷條件寫出來，例如何時用 normal 模式、何時需要進一步查資料、何時必須問使用者。</p></div><div class="route-step"><b>04</b><span>Layer 4</span><p>Tool &amp; Context - 定義 agent 可以用哪些工具、讀哪些資料、輸出到哪裡，以及不能碰哪些權限。</p></div><div class="route-step"><b>05</b><span>Layer 5</span><p>Feedback Loop - 第一版 SOP 一定會有問題，因此要設計錯誤回報、人工確認、修正紀錄與下一版 workflow。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">System Workflow</div>
+    <section class="section visual-panel">
+      <h2>工程師操作模型</h2>
+      <div class="system-loop">
+        <div class="loop-node"><b>STEP 1</b><span>Step 1</span><p>訪談使用者 - 先問現在人工怎麼做、用哪些資料、最後交付什麼、主管或客戶如何判斷好壞。</p></div><div class="loop-node"><b>STEP 2</b><span>Step 2</span><p>整理 Human SOP - 用自然語言寫出觸發條件、輸入資料、操作步驟、判斷條件、輸出格式與確認點。</p></div><div class="loop-node"><b>STEP 3</b><span>Step 3</span><p>拆成 Agent Tasks - 將流程拆成讀取、理解、分類、產出、檢查、追問、回報等 agent 可執行單元。</p></div><div class="loop-node"><b>STEP 4</b><span>Step 4</span><p>補上例外處理 - 定義資料不足、格式錯誤、衝突資訊、權限不足、結果不可信時 agent 要怎麼處理。</p></div><div class="loop-node"><b>STEP 5</b><span>Step 5</span><p>加入 Clarifying Questions - 規定 agent 在資訊不足時必須先問 2 到 3 個問題，而不是硬產生看似完整的答案。</p></div><div class="loop-node"><b>STEP 6</b><span>Step 6</span><p>設計驗收與迭代 - 每次執行後紀錄成功、錯誤與人工修改，回寫到下一版 SOP 與 prompt。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">Engineering Applications</div>
+    <section class="section">
+      <div class="matrix">
+        <div class="matrix-item"><i>1</i><h3>SOP Parser</h3><p>把人的流程文字轉成任務節點，避免 agent 只看到一段模糊需求。</p></div><div class="matrix-item"><i>2</i><h3>Decision Gate</h3><p>每個節點都要有判斷條件，例如直接執行、先查資料、先問使用者、或停止等待人工確認。</p></div><div class="matrix-item"><i>3</i><h3>Context Pack</h3><p>把必要背景、資料來源、角色、限制與輸出格式打包給 agent，降低胡亂補內容的機率。</p></div><div class="matrix-item"><i>4</i><h3>Clarification Loop</h3><p>當資訊不足時，agent 必須先問問題，補齊再繼續，而不是產生空泛結果。</p></div><div class="matrix-item"><i>5</i><h3>Review Log</h3><p>保留每次輸出、錯誤、人工修改與採納結果，讓 workflow 能持續變準。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">Teaching Notes</div>
+    <section class="section grid2">
+      
+        <article class="card ">
+          <h2>核心觀念</h2>
+          <ul><li>非技術人最該學的不是程式語法，而是 workflow design：把工作的前因後果、判斷邏輯與驗收標準說清楚。</li><li>不要在 SOP 裡寫死單一路徑；agent 需要知道什麼情況可以直接做、什麼情況要切換模式、什麼情況必須先追問。</li><li>Agent 不該只產出答案，也要能產出 2 到 3 個釐清問題，幫使用者補足缺失的背景、資料與限制。</li><li>好的 Agentic Workflow 要讓錯誤可見：如果結果不對，要能回頭知道是哪個輸入、判斷、工具或輸出規則出問題。</li><li>第一版 workflow 的目標不是完美，而是可測試、可修正、可複製；每次使用後都要把問題寫回 SOP。</li></ul>
+        </article>
+      
+      
+        <article class="card okbox">
+          <h2>ADLINK 可落地場景</h2>
+          <ul><li>art agent 教材流程：來源素材 → 內容轉錄 → 重點視覺素材 → ADLINK HTML 預覽 → 檔名確認 → 位置確認 → 是否寄信。</li><li>PM Issue Summary：讀取專案資料 → 找出 critical issue → 分類 RF/ME/Thermal/Safety → 產生 HTML → 人工確認 → 寄出。</li><li>會議紀錄整理：輸入 transcript → 萃取決議、風險、owner、due date → 產出追蹤表 → 釐清缺失資訊。</li><li>教學文件產線：把工程師口述 SOP 轉成教學章節、截圖需求、驗收清單與可重複 prompt。</li><li>Agent 需求規格：非技術人先用這套方法寫出 workflow，再交給 Codex 或工程師實作工具與自動化。</li></ul>
+        </article>
+      
+        <article class="card warning">
+          <h2>導入風險與控制</h2>
+          <ul><li>SOP 太模糊：如果只有「幫我整理資料」，agent 會自行腦補；必須補上輸入、輸出、判斷條件與例外處理。</li><li>權限太大：agent 可以讀檔、寄信或修改資料時，必須保留人工確認點，避免錯誤自動擴散。</li><li>輸出無法驗收：每個 workflow 都要定義完成標準，例如格式、欄位、來源、截圖、是否需要寄信。</li><li>第一版不可靠：課程重點提醒第一版 SOP 一定會有問題，因此要把修正流程設計進去。</li><li>缺少追問機制：資訊不足時若不追問，agent 會產生看似合理但其實錯的內容。</li></ul>
+        </article>
+      
+        <article class="card warning">
+          <h2>常見誤解</h2>
+          <ul><li>誤解 1：非技術人不能設計 agent。實際上，非技術人最懂工作流程，只要把 SOP 說清楚，就能成為 agent 設計起點。</li><li>誤解 2：Agentic Workflow 等於自動化全部流程。正確做法是先定義哪些步驟可自動，哪些步驟要人工確認。</li><li>誤解 3：寫一次 SOP 就完成。第一版一定會暴露問題，真正價值在於持續迭代。</li><li>誤解 4：越詳細越好。詳細但沒有判斷規則、輸入輸出與例外處理，仍然不是可執行 workflow。</li></ul>
+        </article>
+      
+        <article class="card ">
+          <h2>工作坊設計</h2>
+          <ul><li>0-10 min：選一個真實工作流程，例如教材製作、會議整理、PM issue summary 或客戶回覆草稿。</li><li>10-25 min：寫出 Human SOP，包含觸發條件、資料來源、人工判斷與交付物。</li><li>25-45 min：拆成 Agentic Workflow 節點，標記每一步的輸入、工具、輸出與 decision gate。</li><li>45-60 min：加入 2 到 3 個釐清問題與錯誤處理規則，避免 agent 硬做。</li><li>60-75 min：用一個測試案例跑流程，記錄哪一步資訊不足、哪一步輸出不準。</li><li>75-90 min：把修正寫回 SOP，形成第二版 workflow。</li></ul>
+        </article>
+      
+        <article class="card okbox">
+          <h2>驗收清單</h2>
+          <ul><li>能把人的 SOP 拆成 agent 可執行的任務節點。</li><li>每個節點都有輸入、處理方式、輸出與判斷條件。</li><li>資訊不足時，agent 會先問釐清問題，不會直接捏造答案。</li><li>流程中有人工確認點，尤其是寄信、對外輸出與修改正式資料前。</li><li>每次執行後會保留錯誤與修改紀錄，回寫成下一版 workflow。</li><li>HTML 教材能把來源內容整理成教學模組，並用代表性視覺素材輔助學員理解。</li></ul>
+        </article>
+    </section>
+
+    <div class="section-label">Source</div>
+    <section class="section source-card">
+      <h2>來源</h2>
+      <p class="lead">🚀Opus 4.8 + Dynamic Workflows自動生成Harness指挥上百個subagents並行工作，廉价Haiku+旗舰Opus搭配！Claude Code效率倍增一天干完一個月的活｜whisper-cpp:ggml-small.bin</p>
+      <div class="source-row">
+        <a class="btn secondary" href="https://youtu.be/4C7hYW5sx0o?si=axVTguVgFL-1wfBj">開啟來源</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
