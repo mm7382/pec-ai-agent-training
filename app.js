@@ -56,6 +56,7 @@ function formatLocalTime(date = new Date()) {
 
 async function trackEvent(type, detail = {}) {
   if (!trackingEndpoint || !state.visitor) return;
+  if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
 
   const payload = {
     type,
@@ -249,7 +250,7 @@ function setupEvents() {
     await trackEvent("signin", { source: "portal" });
 
     const returnTo = sessionStorage.getItem(returnToKey);
-    if (returnTo && returnTo.includes("/pec-training/")) {
+    if (returnTo) {
       sessionStorage.removeItem(returnToKey);
       window.location.href = returnTo;
     }

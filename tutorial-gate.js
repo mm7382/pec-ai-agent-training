@@ -27,6 +27,7 @@
 
   function trackTutorialView(visitor) {
     if (!trackingEndpoint) return;
+    if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
     const payload = {
       type: "tutorial_view",
       occurredAt: new Date().toISOString(),
@@ -50,7 +51,7 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
         keepalive: true,
-      });
+      }).catch(() => {});
     } catch {
       // Tracking must never block the lesson page.
     }
@@ -59,7 +60,12 @@
   const visitor = readVisitor();
   if (!visitor) {
     sessionStorage.setItem(returnToKey, window.location.href);
-    window.location.replace("../index.html");
+    const indexPath = window.location.pathname.includes("/pec-training/")
+      || window.location.pathname.includes("/tutorials/")
+      || window.location.pathname.includes("/previews/")
+      ? "../index.html"
+      : "./index.html";
+    window.location.replace(indexPath);
     return;
   }
 

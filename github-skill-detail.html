@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Skill 詳細內容 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="GitHub Skill 熱門專案詳細介紹與下載網址">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./site-config.js"></script>
+  <style>
+    .detail-shell{width:min(1180px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
+    .detail-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;margin-top:22px;align-items:start}
+    .detail-main,.side-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .detail-main{padding:28px}
+    .side-card{padding:18px;position:sticky;top:18px}
+    .detail-kicker{color:var(--accent-strong);font-size:12px;font-weight:950;text-transform:uppercase}
+    .repo-title{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:10px 0 12px;overflow-wrap:anywhere}
+    .repo-summary{color:var(--muted);font-size:18px;line-height:1.65}
+    .detail-section{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+    .detail-section h2{font-size:24px;margin-bottom:10px}
+    .detail-section p,.detail-section li{color:var(--muted);line-height:1.75}
+    .metric-list{display:grid;gap:8px}
+    .metric-list div{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(220,235,242,.06)}
+    .metric-list span{color:var(--muted);font-weight:800}
+    .metric-list strong{text-align:right}
+    .action-list{display:grid;gap:10px;margin-top:14px}
+    .action-list a{display:flex;justify-content:center;align-items:center;min-height:42px;border-radius:8px;text-decoration:none;font-weight:950}
+    .primary-action{background:var(--accent);color:#041216}
+    .secondary-action{border:1px solid var(--line);color:var(--ink);background:rgba(220,235,242,.08)}
+    .topic-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+    .topic-row span{border:1px solid rgba(40,198,226,.35);border-radius:999px;padding:5px 9px;color:var(--accent-strong);font-size:12px;font-weight:850}
+    .feedback-list{display:grid;gap:12px;padding:0;list-style:none}
+    .feedback-list li{border:1px solid var(--line);border-radius:8px;padding:12px;background:rgba(220,235,242,.05)}
+    .feedback-list a{color:var(--accent-strong);font-weight:900}
+    .back-link{display:inline-flex;margin-top:16px;color:var(--accent-strong);font-weight:900;text-decoration:none}
+    @media(max-width:900px){.detail-layout{grid-template-columns:1fr}.side-card{position:static}.detail-main{padding:20px}.detail-shell{width:min(100vw - 20px,1180px)}}
+  </style>
+</head>
+<body>
+  <main class="detail-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>GitHub Skill 詳細內容</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="detail-layout">
+      <article class="detail-main" id="detailMain">
+        <p class="detail-kicker">GitHub Skill Detail</p>
+        <h1 class="repo-title">載入中...</h1>
+      </article>
+      <aside class="side-card" id="sideCard"></aside>
+    </section>
+  </main>
+
+  <script src="./tutorial-gate.js"></script>
+  <script src="./github-skill-detail.js"></script>
+  <script src="./feedback-widget.js"></script>
+</body>
+</html>

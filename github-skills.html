@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Skill 熱門排行 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="GitHub 上 AI Agent / Claude / Codex Skill 相關熱門專案排行">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./site-config.js"></script>
+  <style>
+    .rank-shell{width:min(1360px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
+    .rank-hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:18px;margin-top:22px}
+    .hero-panel,.rank-panel,.method-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-panel{padding:28px;min-height:260px;display:grid;align-content:end;background:linear-gradient(135deg,rgba(40,198,226,.14),rgba(217,51,58,.10)),var(--surface)}
+    .hero-panel h1{max-width:860px}
+    .hero-panel p{max-width:900px;color:var(--muted);line-height:1.7}
+    .method-panel{padding:20px}
+    .method-panel h2{font-size:20px}
+    .method-panel p,.method-panel li{color:var(--muted);line-height:1.65}
+    .rank-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 14px}
+    .rank-tab{border:1px solid var(--line);border-radius:8px;background:rgba(220,235,242,.08);color:var(--ink);padding:10px 14px;font-weight:900}
+    .rank-tab[aria-pressed="true"]{background:var(--accent);color:#041216;border-color:var(--accent)}
+    .rank-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .rank-card{position:relative;display:grid;gap:12px;min-height:310px;padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:0 12px 32px rgba(0,0,0,.20)}
+    .rank-number{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:white;font-weight:1000}
+    .repo-name{font-size:19px;line-height:1.2;overflow-wrap:anywhere}
+    .repo-desc{color:var(--muted);line-height:1.55;font-size:14px}
+    .repo-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:auto}
+    .repo-metrics div{border:1px solid var(--line);border-radius:8px;padding:9px;background:rgba(220,235,242,.06)}
+    .repo-metrics strong{display:block;font-size:18px}
+    .repo-metrics span{display:block;color:var(--muted);font-size:11px;font-weight:800}
+    .repo-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .repo-tags span{border:1px solid rgba(40,198,226,.35);border-radius:999px;padding:4px 8px;color:var(--accent-strong);font-size:11px;font-weight:800}
+    .repo-link{display:inline-flex;justify-content:center;align-items:center;min-height:40px;border-radius:8px;background:var(--accent);color:#041216;text-decoration:none;font-weight:950}
+    .repo-source{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+    .rank-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:13px}
+    .empty-rank{padding:24px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+    @media(max-width:1180px){.rank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rank-hero{grid-template-columns:1fr}}
+    @media(max-width:640px){.rank-shell{width:min(100vw - 20px,1360px)}.rank-grid{grid-template-columns:1fr}.hero-panel{padding:20px}.repo-metrics{grid-template-columns:1fr 1fr}.repo-metrics div:last-child{grid-column:1/-1}}
+  </style>
+</head>
+<body>
+  <main class="rank-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>GitHub Skill 熱門排行</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="rank-hero">
+      <article class="hero-panel">
+        <p class="section-label">GitHub Skill Radar</p>
+        <h1>每週 / 每月熱門 Skill 排行</h1>
+        <p>追蹤 GitHub 上與 AI Agent、Claude、Codex、LLM workflow、Skill engineering 相關的熱門專案。排名頁顯示 Stars、GitHub reaction 讚數與愛心；詳細頁提供繁體中文簡介、README 摘要與下載網址。</p>
+      </article>
+      <aside class="method-panel">
+        <h2>資料說明</h2>
+        <p id="generatedAt">載入中...</p>
+        <ul id="dataNotes"></ul>
+      </aside>
+    </section>
+
+    <section>
+      <div class="rank-tabs" role="tablist" aria-label="排行區間">
+        <button class="rank-tab" type="button" data-period="weekly" aria-pressed="true">每週前五名</button>
+        <button class="rank-tab" type="button" data-period="monthly" aria-pressed="false">每月前五名</button>
+      </div>
+      <div class="rank-meta">
+        <span id="rankSource">資料來源：載入中...</span>
+        <span id="rankMethod"></span>
+      </div>
+      <section class="rank-grid" id="rankGrid" aria-label="GitHub Skill 排行"></section>
+      <p class="empty-rank" id="emptyState" hidden>目前沒有可顯示的排行資料，請稍後重新產生資料。</p>
+    </section>
+  </main>
+
+  <script src="./tutorial-gate.js"></script>
+  <script src="./github-skills.js"></script>
+  <script src="./feedback-widget.js"></script>
+</body>
+</html>

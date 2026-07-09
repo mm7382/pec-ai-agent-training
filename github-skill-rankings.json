@@ -1,0 +1,650 @@
+{
+  "generatedAt": "2026-07-09T00:20:46.247Z",
+  "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
+  "notes": [
+    "Stars 作為排名頁的主要讚數。",
+    "愛心來自該 repo 熱門 Issue/PR 的 heart reactions；GitHub repo 本身沒有獨立 heart 欄位。",
+    "簡介以 GitHub description 與 README 摘要翻譯成繁體中文，詳細下載網址保留原始 GitHub 連結。"
+  ],
+  "periods": [
+    {
+      "key": "weekly",
+      "label": "每週 Top 5",
+      "days": 7,
+      "sinceDate": "2026-07-02",
+      "rankingMethod": "GitHub Search API；條件為 AI/agent/Claude/Codex skill 相關、pushed >= 2026-07-02、非 fork、非 archived；依 stars、更新時間、forks 與關聯度綜合排序。",
+      "repos": [
+        {
+          "id": "affaan-m-ecc",
+          "rank": 1,
+          "period": "weekly",
+          "fullName": "affaan-m/ECC",
+          "name": "ECC",
+          "owner": "affaan-m",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "descriptionZh": "代理利用性能優化系統。 Claude Code、Codex、Opencode、Cursor 等的技能、直覺、記憶、安全性和研究優先的發展。",
+          "introZh": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.\n\nLanguage: English | Português (Brasil) | 简体中文 | 繁體中文 | 日本語 | 한국어 | Türkçe | Русский | Tiếng Việt | ไทย | Deutsch | Español [!WARNING] Official sources only. Install ECC only from verified channels: the GitHub repository github.com/affaan-m/ECC, the npm packages ecc-universal and ecc-agentshield, the GitHub App, the plugin slug ecc@ecc, and the project website ecc.tools. Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. 211.9K+ stars | 32.5K+ forks | 230+ contributors | 12+ language ecosystems | Cross-harness agent workflows --- Language / 语言 / 語言 / Dil / Язык / Ngôn ngữ / Idioma English | Português (Brasil) | 简体中文 | 繁體中文 | 日本語 | 한국어 | Türkçe | Русский | Tiếng Việt | ไทย | Deutsch | Español --- The harness-native operator system for agentic work. Built from real-world multi-harness engineering workflows. Not just configs. A complete system: skills, instincts, memory optimization, continuous learning, security scanning, and research-first development. Production-ready agents, skills, hooks, rules, MCP configurations, and legacy command shims evolved over 10+ months of intensive daily use building real products. Works across Codex, Claude Code, Cursor, OpenCode, Gemini, Zed, GitHub Copilot, and other AI agent harnesses. ECC v2.0.0 adds the public Hermes operator story on top of that reusable layer: start with the ...",
+          "language": "JavaScript",
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "stars": 227424,
+          "forks": 34753,
+          "watchers": 227424,
+          "openIssues": 75,
+          "likes": 52,
+          "hearts": 0,
+          "reactionTotal": 53,
+          "reactionSamples": [
+            {
+              "title": "Plugin install failes with `plugins.0.source: Invalid input`",
+              "url": "https://github.com/affaan-m/ECC/issues/15",
+              "likes": 23,
+              "hearts": 0,
+              "comments": 16
+            },
+            {
+              "title": "feat: Expand Swift/Apple support toward parity with Kotlin, Python, and TypeScript workflows",
+              "url": "https://github.com/affaan-m/ECC/issues/912",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 2
+            },
+            {
+              "title": "Plugin installation fails: Invalid manifest file - agents field validation error",
+              "url": "https://github.com/affaan-m/ECC/issues/90",
+              "likes": 3,
+              "hearts": 0,
+              "comments": 4
+            }
+          ],
+          "updatedAt": "2026-07-09T00:20:08Z",
+          "pushedAt": "2026-07-08T21:18:21Z",
+          "createdAt": "2026-01-18T00:51:51Z",
+          "homepage": "https://ecc.tools",
+          "url": "https://github.com/affaan-m/ECC",
+          "downloadUrl": "https://github.com/affaan-m/ECC/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/affaan-m/ECC.git",
+          "license": "MIT"
+        },
+        {
+          "id": "farion1231-cc-switch",
+          "rank": 2,
+          "period": "weekly",
+          "fullName": "farion1231/cc-switch",
+          "name": "cc-switch",
+          "owner": "farion1231",
+          "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
+          "descriptionZh": "一款跨平台桌面整合助手，適用於 Claude Code、Codex、OpenCode、OpenClaw、Gemini CLI 和 Hermes Agent。唯一官方網站：ccswitch.io",
+          "introZh": "一款跨平台桌面整合助手，適用於 Claude Code、Codex、OpenCode、OpenClaw、Gemini CLI 和 Hermes Agent。唯一官方網站：ccswitch.io\n\nCC Switch Claude Code、Claude Desktop、Codex、Gemini CLI、OpenCode、OpenClaw 和 Hermes Agent 的多合一管理器 🌐 唯一官方網站：ccswitch.io 中文 | 日本語 |️贊助商想出現在這裡嗎？點擊折疊 Kimi K2.7 Code 是由 Moonshot AI 開發的開源、以編碼為中心的代理模型。它提供了更強大的編碼和代理性能，並顯著改進了現實世界的長期編碼任務。這些收益轉化為複雜軟體工程工作流程中更高的端到端任務成功率。 K2.7程式碼也提高了推理效率，與K2.6相比減少了約30%的思維令牌使用。點擊此處開始使用 Kimi 主要從事程式設計工作？試試 Kimi For Coding 計劃 — 專為編碼而構建的訂閱服務！ --- 感謝 PackyCode 對本專案的贊助！ PackyCode 是一家可靠、高效的 API 中繼服務供應商，為 Claude Code、Codex、Gemini 等提供中繼服務。 PackyCode 為我們的軟體用戶提供特別折扣：使用此連結註冊並在首次充值時輸入「cc-switch」促銷代碼即可獲得 10% 的折扣。感謝AIGoCode對本計畫的贊助！ AIGoCode是一款整合Claude Code、Codex以及最新Gemini模型的一體化平台，為您提供穩定、高效、高性價比的AI編碼服務。特...",
+          "language": "Rust",
+          "topics": [
+            "ai-tools",
+            "claude-code",
+            "codex",
+            "desktop-app",
+            "hermes",
+            "hermes-agent",
+            "mcp",
+            "minimax",
+            "omo",
+            "open-source",
+            "openclaw",
+            "openclaw-ui",
+            "opencode",
+            "provider-management",
+            "rust",
+            "skills",
+            "skills-management",
+            "tauri",
+            "typescript",
+            "wsl-support"
+          ],
+          "stars": 114815,
+          "forks": 7669,
+          "watchers": 114815,
+          "openIssues": 1806,
+          "likes": 141,
+          "hearts": 0,
+          "reactionTotal": 151,
+          "reactionSamples": [
+            {
+              "title": "Support for Antigravity CLI / 支持Antigravity CLI",
+              "url": "https://github.com/farion1231/cc-switch/issues/2959",
+              "likes": 30,
+              "hearts": 0,
+              "comments": 33
+            },
+            {
+              "title": "新需求: 加入opencode, oh my opencode 的配置管理",
+              "url": "https://github.com/farion1231/cc-switch/issues/638",
+              "likes": 24,
+              "hearts": 0,
+              "comments": 18
+            },
+            {
+              "title": "opencode go套餐",
+              "url": "https://github.com/farion1231/cc-switch/issues/2260",
+              "likes": 21,
+              "hearts": 0,
+              "comments": 6
+            }
+          ],
+          "updatedAt": "2026-07-09T00:17:19Z",
+          "pushedAt": "2026-07-08T14:47:39Z",
+          "createdAt": "2025-08-04T14:16:16Z",
+          "homepage": "https://ccswitch.io",
+          "url": "https://github.com/farion1231/cc-switch",
+          "downloadUrl": "https://github.com/farion1231/cc-switch/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/farion1231/cc-switch.git",
+          "license": "MIT"
+        },
+        {
+          "id": "obra-superpowers",
+          "rank": 3,
+          "period": "weekly",
+          "fullName": "obra/superpowers",
+          "name": "superpowers",
+          "owner": "obra",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "descriptionZh": "有效的代理技能架構和軟體開發方法。",
+          "introZh": "有效的代理技能架構和軟體開發方法。\n\nSuperpowers Superpowers 是一種適用於編碼代理的完整軟體開發方法，建立在一組可組合技能和一些初始指令之上，以確保您的代理程式使用它們。我們正在招募！我們正在招募某人全職幫助 Superpowers 社群和程式碼工作。您可以在 https://primerradiant.com/jobs/superpowers-community-engineer/ 上閱讀有關該職位的資訊。如果這聽起來像是您認識的人，請務必將其發送給我們。快速入門 為您的代理提供超能力：Claude Code、Antigravity、Codex App、Codex CLI、Cursor、Factory Droid、GitHub Copilot CLI、Kimi Code、OpenCode、Pi。它是如何運作的 它從您啟動編碼代理的那一刻開始。一旦它看到您正在建立某些東西，它就不會立即嘗試編寫程式碼。相反，它會退後一步，問你真正想做什麼。一旦它從對話中挑出一個規範，它就會以足夠短的塊向您展示，以便您實際閱讀和消化。在您簽署設計後，您的代理商會制定一個實施計劃，該計劃對於一位品味差、缺乏判斷力、沒有專案背景且厭惡測試的熱情初級工程師來說足夠清晰。它強調真正的紅色/綠色 TDD、YAGNI（你不需要它）和 DRY。接下來，一旦您說“開始”，它就會啟動一個子代理驅動的開發流程，讓代理完成每個電子...",
+          "language": "Shell",
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "stars": 249797,
+          "forks": 22163,
+          "watchers": 249797,
+          "openIssues": 344,
+          "likes": 250,
+          "hearts": 20,
+          "reactionTotal": 297,
+          "reactionSamples": [
+            {
+              "title": "Support for Claude Code Agent Teams (TeammateTool, SendMessage, TaskList)",
+              "url": "https://github.com/obra/superpowers/issues/429",
+              "likes": 93,
+              "hearts": 9,
+              "comments": 21
+            },
+            {
+              "title": "New install includes deprecated slash commands that confuse users",
+              "url": "https://github.com/obra/superpowers/issues/756",
+              "likes": 36,
+              "hearts": 0,
+              "comments": 11
+            },
+            {
+              "title": "writing-plans: plans over-specify implementation, leaving no room for executor judgment",
+              "url": "https://github.com/obra/superpowers/issues/895",
+              "likes": 22,
+              "hearts": 8,
+              "comments": 17
+            }
+          ],
+          "updatedAt": "2026-07-09T00:20:02Z",
+          "pushedAt": "2026-07-06T21:53:36Z",
+          "createdAt": "2025-10-09T19:45:18Z",
+          "homepage": "",
+          "url": "https://github.com/obra/superpowers",
+          "downloadUrl": "https://github.com/obra/superpowers/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/obra/superpowers.git",
+          "license": "MIT"
+        },
+        {
+          "id": "juliusbrussee-caveman",
+          "rank": 4,
+          "period": "weekly",
+          "fullName": "JuliusBrussee/caveman",
+          "name": "caveman",
+          "owner": "JuliusBrussee",
+          "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+          "descriptionZh": "🪨 當很少的代幣可以做戲時為什麼要使用大量的代幣 — Claude Code 技能通過像穴居人一樣說話來減少 65% 的代幣",
+          "introZh": "🪨 當很少的代幣可以做戲時為什麼要使用大量的代幣 — Claude Code 技能通過像穴居人一樣說話來減少 65% 的代幣\n\n為什麼要使用很多令牌，而很少有技巧讓你的人工智慧編碼代理像穴居人一樣說話。相同的答案，輸出令牌減少 65%。腦洞還是很大的嘴巴小。查看·安裝·級別·您將獲得什麼·基準·生態系統·Caveman 2 --- Caveman 是 Claude Code、Codex、Gemini、Cursor、Windsurf、Cline、Copilot 和 30 多個其他代理的技能/插件。安裝一次。代理人會用嚴格的穴居人語言來刪除填充物和答案，從而使程式碼、命令和錯誤逐字節保持準確。您可以永遠保存每次回應的輸出標記。之前/之後🗣️ 普通代理 — 69 個令牌穴居人代理 — 19 個令牌您的 React 元件重新渲染的原因可能是因為您在每個渲染週期建立一個新的物件參考。當您將內聯物件作為 prop 傳遞時，React 的淺比較每次都會將其視為不同的對象，從而觸發重新渲染。我建議使用 useMemo 來記憶該物件。每次渲染都會引用新物件。內聯物件 prop = 新 ref = 重新渲染。包裹在 useMemo 中。當然！我很樂意為您提供協助。您遇到的問題很可能是由於您的身分驗證中間件未正確驗證令牌過期所造成的。讓我看一下並提出修復建議。身份驗證中間件中的錯誤。令牌過期檢查使用相同的修復。第三句話。沒有什麼技術損失。穴居人不會使大腦變小。穴居人把嘴巴變小。縮小代理人所說的內容，n...",
+          "language": "JavaScript",
+          "topics": [
+            "ai",
+            "anthropic",
+            "caveman",
+            "claude",
+            "claude-code",
+            "llm",
+            "meme",
+            "prompt-engineering",
+            "skill",
+            "tokens"
+          ],
+          "stars": 86812,
+          "forks": 4854,
+          "watchers": 86812,
+          "openIssues": 375,
+          "likes": 261,
+          "hearts": 22,
+          "reactionTotal": 304,
+          "reactionSamples": [
+            {
+              "title": "OpenCode plugin and manager",
+              "url": "https://github.com/JuliusBrussee/caveman/pull/67",
+              "likes": 32,
+              "hearts": 10,
+              "comments": 7
+            },
+            {
+              "title": "OpenCode install fails when `caveman-compress.md` is missing",
+              "url": "https://github.com/JuliusBrussee/caveman/issues/367",
+              "likes": 46,
+              "hearts": 2,
+              "comments": 4
+            },
+            {
+              "title": "caveman through acp in zed/jetbrains",
+              "url": "https://github.com/JuliusBrussee/caveman/issues/197",
+              "likes": 39,
+              "hearts": 0,
+              "comments": 2
+            }
+          ],
+          "updatedAt": "2026-07-09T00:19:26Z",
+          "pushedAt": "2026-07-03T11:10:42Z",
+          "createdAt": "2026-04-04T10:03:00Z",
+          "homepage": "https://caveman.so/",
+          "url": "https://github.com/JuliusBrussee/caveman",
+          "downloadUrl": "https://github.com/JuliusBrussee/caveman/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/JuliusBrussee/caveman.git",
+          "license": "MIT"
+        },
+        {
+          "id": "nextlevelbuilder-ui-ux-pro-max-skill",
+          "rank": 5,
+          "period": "weekly",
+          "fullName": "nextlevelbuilder/ui-ux-pro-max-skill",
+          "name": "ui-ux-pro-max-skill",
+          "owner": "nextlevelbuilder",
+          "description": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
+          "descriptionZh": "為建構專業 UI/UX 多平台提供設計智慧的 AI 技能",
+          "introZh": "為建構專業 UI/UX 多平台提供設計智慧的 AI 技能\n\nUI UX Pro Max 🇨🇳 簡體中文 | 🇺🇸 英文 一種人工智慧技能，為跨多個平台和框架建立專業的 UI/UX 提供設計智慧。如果您發現這有用，請考慮支援該專案：其他專案 NextLevelBuilder.io | GoClaw.sh |克勞德基特.cc | TOSE.sh v2.0 智慧設計系統產生的新功能 v2.0 的旗艦功能是設計系統產生器 - 一個人工智慧驅動的推理引擎，可以分析您的專案需求並在幾秒鐘內生成完整的客製化設計引擎，可以分析您的專案需求並在幾秒鐘內生成完整的客製化設計系統。設計系統產生的工作原理 161 特定於行業的推理規則 推理引擎包括以下專用規則： |類別 |範例 | |----------|----------| |技術與 SaaS | SaaS、Micro SaaS、B2B 服務、開發者工具/IDE、AI/聊天工具、網路安全平台 | |醫療診所、藥房、牙科、獸醫、心理健康、用藥提醒 | |電子商務|一般、豪華、市場 (P2P)、訂閱盒、食品配送 | |服務 |美容/水療、餐廳、酒店、法律、家庭服務、預訂和預約 |創意|作品集、代理、攝影、遊戲、音樂流、照片/視頻編輯器 |... |",
+          "language": "Python",
+          "topics": [
+            "ai-skills",
+            "antigravity",
+            "claude",
+            "claude-code",
+            "codex",
+            "command-line",
+            "copilot",
+            "cursor-ai",
+            "html5",
+            "kiro",
+            "landing-page",
+            "mobile-ui",
+            "qoder",
+            "react",
+            "tailwindcss",
+            "trae",
+            "ui-design",
+            "uikit",
+            "windsurf-ai"
+          ],
+          "stars": 102860,
+          "forks": 10852,
+          "watchers": 102860,
+          "openIssues": 127,
+          "likes": 101,
+          "hearts": 0,
+          "reactionTotal": 102,
+          "reactionSamples": [
+            {
+              "title": "[BUG] `error: unknown option '--global'` on install",
+              "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/issues/215",
+              "likes": 44,
+              "hearts": 0,
+              "comments": 19
+            },
+            {
+              "title": "no uninstall, no --global, and messed up my opencode client...",
+              "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/issues/304",
+              "likes": 12,
+              "hearts": 0,
+              "comments": 2
+            },
+            {
+              "title": "Request: Will you support opencode (opencode.ai)?",
+              "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/issues/28",
+              "likes": 12,
+              "hearts": 0,
+              "comments": 13
+            }
+          ],
+          "updatedAt": "2026-07-09T00:18:42Z",
+          "pushedAt": "2026-07-06T15:33:37Z",
+          "createdAt": "2025-11-30T11:36:31Z",
+          "homepage": "https://www.uupm.cc/",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "downloadUrl": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "label": "每月 Top 5",
+      "days": 30,
+      "sinceDate": "2026-06-09",
+      "rankingMethod": "GitHub Search API；條件為 AI/agent/Claude/Codex skill 相關、pushed >= 2026-06-09、非 fork、非 archived；依 stars、更新時間、forks 與關聯度綜合排序。",
+      "repos": [
+        {
+          "id": "affaan-m-ecc",
+          "rank": 1,
+          "period": "monthly",
+          "fullName": "affaan-m/ECC",
+          "name": "ECC",
+          "owner": "affaan-m",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "descriptionZh": "代理利用性能優化系統。 Claude Code、Codex、Opencode、Cursor 等的技能、直覺、記憶、安全性和研究優先的發展。",
+          "introZh": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.\n\nLanguage: English | Português (Brasil) | 简体中文 | 繁體中文 | 日本語 | 한국어 | Türkçe | Русский | Tiếng Việt | ไทย | Deutsch | Español [!WARNING] Official sources only. Install ECC only from verified channels: the GitHub repository github.com/affaan-m/ECC, the npm packages ecc-universal and ecc-agentshield, the GitHub App, the plugin slug ecc@ecc, and the project website ecc.tools. Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. 211.9K+ stars | 32.5K+ forks | 230+ contributors | 12+ language ecosystems | Cross-harness agent workflows --- Language / 语言 / 語言 / Dil / Язык / Ngôn ngữ / Idioma English | Português (Brasil) | 简体中文 | 繁體中文 | 日本語 | 한국어 | Türkçe | Русский | Tiếng Việt | ไทย | Deutsch | Español --- The harness-native operator system for agentic work. Built from real-world multi-harness engineering workflows. Not just configs. A complete system: skills, instincts, memory optimization, continuous learning, security scanning, and research-first development. Production-ready agents, skills, hooks, rules, MCP configurations, and legacy command shims evolved over 10+ months of intensive daily use building real products. Works across Codex, Claude Code, Cursor, OpenCode, Gemini, Zed, GitHub Copilot, and other AI agent harnesses. ECC v2.0.0 adds the public Hermes operator story on top of that reusable layer: start with the ...",
+          "language": "JavaScript",
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "stars": 227424,
+          "forks": 34753,
+          "watchers": 227424,
+          "openIssues": 75,
+          "likes": 52,
+          "hearts": 0,
+          "reactionTotal": 53,
+          "reactionSamples": [
+            {
+              "title": "Plugin install failes with `plugins.0.source: Invalid input`",
+              "url": "https://github.com/affaan-m/ECC/issues/15",
+              "likes": 23,
+              "hearts": 0,
+              "comments": 16
+            },
+            {
+              "title": "feat: Expand Swift/Apple support toward parity with Kotlin, Python, and TypeScript workflows",
+              "url": "https://github.com/affaan-m/ECC/issues/912",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 2
+            },
+            {
+              "title": "Plugin installation fails: Invalid manifest file - agents field validation error",
+              "url": "https://github.com/affaan-m/ECC/issues/90",
+              "likes": 3,
+              "hearts": 0,
+              "comments": 4
+            }
+          ],
+          "updatedAt": "2026-07-09T00:20:08Z",
+          "pushedAt": "2026-07-08T21:18:21Z",
+          "createdAt": "2026-01-18T00:51:51Z",
+          "homepage": "https://ecc.tools",
+          "url": "https://github.com/affaan-m/ECC",
+          "downloadUrl": "https://github.com/affaan-m/ECC/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/affaan-m/ECC.git",
+          "license": "MIT"
+        },
+        {
+          "id": "farion1231-cc-switch",
+          "rank": 2,
+          "period": "monthly",
+          "fullName": "farion1231/cc-switch",
+          "name": "cc-switch",
+          "owner": "farion1231",
+          "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
+          "descriptionZh": "一款跨平台桌面整合助手，適用於 Claude Code、Codex、OpenCode、OpenClaw、Gemini CLI 和 Hermes Agent。唯一官方網站：ccswitch.io",
+          "introZh": "一款跨平台桌面整合助手，適用於 Claude Code、Codex、OpenCode、OpenClaw、Gemini CLI 和 Hermes Agent。唯一官方網站：ccswitch.io\n\nCC Switch Claude Code、Claude Desktop、Codex、Gemini CLI、OpenCode、OpenClaw 和 Hermes Agent 的多合一管理器 🌐 唯一官方網站：ccswitch.io 中文 | 日本語 |️贊助商想出現在這裡嗎？點擊折疊 Kimi K2.7 Code 是由 Moonshot AI 開發的開源、以編碼為中心的代理模型。它提供了更強大的編碼和代理性能，並顯著改進了現實世界的長期編碼任務。這些收益轉化為複雜軟體工程工作流程中更高的端到端任務成功率。 K2.7程式碼也提高了推理效率，與K2.6相比減少了約30%的思維令牌使用。點擊此處開始使用 Kimi 主要從事程式設計工作？試試 Kimi For Coding 計劃 — 專為編碼而構建的訂閱服務！ --- 感謝 PackyCode 對本專案的贊助！ PackyCode 是一家可靠、高效的 API 中繼服務供應商，為 Claude Code、Codex、Gemini 等提供中繼服務。 PackyCode 為我們的軟體用戶提供特別折扣：使用此連結註冊並在首次充值時輸入「cc-switch」促銷代碼即可獲得 10% 的折扣。感謝AIGoCode對本計畫的贊助！ AIGoCode是一款整合Claude Code、Codex以及最新Gemini模型的一體化平台，為您提供穩定、高效、高性價比的AI編碼服務。特...",
+          "language": "Rust",
+          "topics": [
+            "ai-tools",
+            "claude-code",
+            "codex",
+            "desktop-app",
+            "hermes",
+            "hermes-agent",
+            "mcp",
+            "minimax",
+            "omo",
+            "open-source",
+            "openclaw",
+            "openclaw-ui",
+            "opencode",
+            "provider-management",
+            "rust",
+            "skills",
+            "skills-management",
+            "tauri",
+            "typescript",
+            "wsl-support"
+          ],
+          "stars": 114815,
+          "forks": 7669,
+          "watchers": 114815,
+          "openIssues": 1806,
+          "likes": 141,
+          "hearts": 0,
+          "reactionTotal": 151,
+          "reactionSamples": [
+            {
+              "title": "Support for Antigravity CLI / 支持Antigravity CLI",
+              "url": "https://github.com/farion1231/cc-switch/issues/2959",
+              "likes": 30,
+              "hearts": 0,
+              "comments": 33
+            },
+            {
+              "title": "新需求: 加入opencode, oh my opencode 的配置管理",
+              "url": "https://github.com/farion1231/cc-switch/issues/638",
+              "likes": 24,
+              "hearts": 0,
+              "comments": 18
+            },
+            {
+              "title": "opencode go套餐",
+              "url": "https://github.com/farion1231/cc-switch/issues/2260",
+              "likes": 21,
+              "hearts": 0,
+              "comments": 6
+            }
+          ],
+          "updatedAt": "2026-07-09T00:17:19Z",
+          "pushedAt": "2026-07-08T14:47:39Z",
+          "createdAt": "2025-08-04T14:16:16Z",
+          "homepage": "https://ccswitch.io",
+          "url": "https://github.com/farion1231/cc-switch",
+          "downloadUrl": "https://github.com/farion1231/cc-switch/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/farion1231/cc-switch.git",
+          "license": "MIT"
+        },
+        {
+          "id": "obra-superpowers",
+          "rank": 3,
+          "period": "monthly",
+          "fullName": "obra/superpowers",
+          "name": "superpowers",
+          "owner": "obra",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "descriptionZh": "有效的代理技能架構和軟體開發方法。",
+          "introZh": "有效的代理技能架構和軟體開發方法。\n\nSuperpowers Superpowers 是一種適用於編碼代理的完整軟體開發方法，建立在一組可組合技能和一些初始指令之上，以確保您的代理程式使用它們。我們正在招募！我們正在招募某人全職幫助 Superpowers 社群和程式碼工作。您可以在 https://primerradiant.com/jobs/superpowers-community-engineer/ 上閱讀有關該職位的資訊。如果這聽起來像是您認識的人，請務必將其發送給我們。快速入門 為您的代理提供超能力：Claude Code、Antigravity、Codex App、Codex CLI、Cursor、Factory Droid、GitHub Copilot CLI、Kimi Code、OpenCode、Pi。它是如何運作的 它從您啟動編碼代理的那一刻開始。一旦它看到您正在建立某些東西，它就不會立即嘗試編寫程式碼。相反，它會退後一步，問你真正想做什麼。一旦它從對話中挑出一個規範，它就會以足夠短的塊向您展示，以便您實際閱讀和消化。在您簽署設計後，您的代理商會制定一個實施計劃，該計劃對於一位品味差、缺乏判斷力、沒有專案背景且厭惡測試的熱情初級工程師來說足夠清晰。它強調真正的紅色/綠色 TDD、YAGNI（你不需要它）和 DRY。接下來，一旦您說“開始”，它就會啟動一個子代理驅動的開發流程，讓代理完成每個電子...",
+          "language": "Shell",
+          "topics": [
+            "ai",
+            "brainstorming",
+            "coding",
+            "obra",
+            "sdlc",
+            "skills",
+            "subagent-driven-development",
+            "superpowers"
+          ],
+          "stars": 249797,
+          "forks": 22163,
+          "watchers": 249797,
+          "openIssues": 344,
+          "likes": 250,
+          "hearts": 20,
+          "reactionTotal": 297,
+          "reactionSamples": [
+            {
+              "title": "Support for Claude Code Agent Teams (TeammateTool, SendMessage, TaskList)",
+              "url": "https://github.com/obra/superpowers/issues/429",
+              "likes": 93,
+              "hearts": 9,
+              "comments": 21
+            },
+            {
+              "title": "New install includes deprecated slash commands that confuse users",
+              "url": "https://github.com/obra/superpowers/issues/756",
+              "likes": 36,
+              "hearts": 0,
+              "comments": 11
+            },
+            {
+              "title": "writing-plans: plans over-specify implementation, leaving no room for executor judgment",
+              "url": "https://github.com/obra/superpowers/issues/895",
+              "likes": 22,
+              "hearts": 8,
+              "comments": 17
+            }
+          ],
+          "updatedAt": "2026-07-09T00:20:02Z",
+          "pushedAt": "2026-07-06T21:53:36Z",
+          "createdAt": "2025-10-09T19:45:18Z",
+          "homepage": "",
+          "url": "https://github.com/obra/superpowers",
+          "downloadUrl": "https://github.com/obra/superpowers/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/obra/superpowers.git",
+          "license": "MIT"
+        },
+        {
+          "id": "mattpocock-skills",
+          "rank": 4,
+          "period": "monthly",
+          "fullName": "mattpocock/skills",
+          "name": "skills",
+          "owner": "mattpocock",
+          "description": "Skills for Real Engineers. Straight from my .claude directory.",
+          "descriptionZh": "真正工程師的技能。直接來自我的 .claude 目錄。",
+          "introZh": "真正工程師的技能。直接來自我的 .claude 目錄。\n\n真正工程師的技能 我每天都用我的代理技能來進行真正的工程 - 而不是振動編碼。開發真正的應用程式很困難。 GSD、BMAD 和 Spec-Kit 等方法試圖透過擁有流程來提供幫助。但在這樣做時，它們會奪走您的控制權，並使流程中的錯誤難以解決。這些技能被設計得很小、易於適應且可組合。它們適用於任何模型。它們是基於數十年的工程經驗。和他們一起玩。讓它們成為你自己的。享受。如果您想跟上這些技能的變化以及我創建的任何新技能，您可以加入我的時事通訊中的 60,000 名其他開發人員：註冊時事通訊快速入門（30 秒設定） 1. 執行 Skills.sh 安裝程式： 2. 選擇您想要的技能，以及要安裝它們的程式碼代理程式。確保選擇 /setup-matt-pocock-skills。 3. 在代理程式中執行 /setup-matt-pocock-skills。它將： 詢問您要使用哪個問題追蹤器（GitHub、Linear 或本機檔案） 詢問您在對工單進行分類時套用什麼標籤（/triage 使用標籤） 詢問您要將我們建立的任何文件儲存在哪裡 4. Bam - 您已準備就緒。為什麼存在這些技能 我建立這些技能是為了修復我在 Claude Code、Codex 和其他編碼代理中看到的常見故障模式。 1：特工沒有做我想要的“沒有人確切知道他們想要什麼”大衛托馬斯和安德魯亨特，普拉格......",
+          "language": "Shell",
+          "topics": [],
+          "stars": 161288,
+          "forks": 13855,
+          "watchers": 161288,
+          "openIssues": 115,
+          "likes": 110,
+          "hearts": 30,
+          "reactionTotal": 190,
+          "reactionSamples": [
+            {
+              "title": "Add `marketplace.json` for plugin marketplace support",
+              "url": "https://github.com/mattpocock/skills/issues/21",
+              "likes": 53,
+              "hearts": 0,
+              "comments": 10
+            },
+            {
+              "title": "Split skills into model-invoked vs user-invoked",
+              "url": "https://github.com/mattpocock/skills/pull/291",
+              "likes": 0,
+              "hearts": 20,
+              "comments": 4
+            },
+            {
+              "title": "Question: Would GLOSSARY.md Be A Better Name For CONTEXT.md?",
+              "url": "https://github.com/mattpocock/skills/issues/207",
+              "likes": 10,
+              "hearts": 10,
+              "comments": 8
+            }
+          ],
+          "updatedAt": "2026-07-09T00:20:01Z",
+          "pushedAt": "2026-07-08T13:20:56Z",
+          "createdAt": "2026-02-03T11:15:53Z",
+          "homepage": "",
+          "url": "https://github.com/mattpocock/skills",
+          "downloadUrl": "https://github.com/mattpocock/skills/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/mattpocock/skills.git",
+          "license": "MIT"
+        },
+        {
+          "id": "anthropics-skills",
+          "rank": 5,
+          "period": "monthly",
+          "fullName": "anthropics/skills",
+          "name": "skills",
+          "owner": "anthropics",
+          "description": "Public repository for Agent Skills",
+          "descriptionZh": "代理技能的公共儲存庫",
+          "introZh": "代理技能的公共儲存庫\n\n注意：此儲存庫包含 Anthropic 對 Claude 技能的實作。有關代理技能標準的信息，請參閱agentskills.io。技能 技能是 Claude 動態載入的指令、腳本和資源的資料夾，以提高專門任務的效能。技能教導克勞德如何以可重複的方式完成特定任務，無論是根據公司的品牌指南建立文件、使用組織的特定工作流程分析數據，或是自動執行個人任務。欲了解更多信息，請查看：什麼是技能？在 Claude 中使用技能 如何建立自訂技能 為現實世界的代理程式配備代理技能 關於此儲存庫 此儲存庫包含的技能演示了 Claude 技能係統的可能性。這些技能範圍從創意應用程式（藝術、音樂、設計）到技術任務（測試 Web 應用程式、MCP 伺服器產生）到企業工作流程（通訊、品牌推廣等）。每個技能都獨立包含在自己的資料夾中，其中包含 SKILL.md 文件，其中包含 Claude 使用的說明和元資料。瀏覽這些技能，以獲得您自己技能的靈感或了解不同的模式和方法。此儲存庫中的許多技能都是開源的（Apache 2.0）。我們還提供了文件創建和編輯技能，為 Claude 的文檔功能提供支援...",
+          "language": "Python",
+          "topics": [
+            "agent-skills"
+          ],
+          "stars": 159484,
+          "forks": 18827,
+          "watchers": 159484,
+          "openIssues": 1011,
+          "likes": 79,
+          "hearts": 10,
+          "reactionTotal": 98,
+          "reactionSamples": [
+            {
+              "title": "Improve frontend-design skill clarity and actionability",
+              "url": "https://github.com/anthropics/skills/pull/210",
+              "likes": 23,
+              "hearts": 1,
+              "comments": 5
+            },
+            {
+              "title": "Proposal:  Executable Agent Skills",
+              "url": "https://github.com/anthropics/skills/issues/157",
+              "likes": 11,
+              "hearts": 0,
+              "comments": 1
+            },
+            {
+              "title": "skill-creator should be updated to best practice",
+              "url": "https://github.com/anthropics/skills/issues/202",
+              "likes": 1,
+              "hearts": 9,
+              "comments": 8
+            }
+          ],
+          "updatedAt": "2026-07-09T00:12:35Z",
+          "pushedAt": "2026-07-01T18:11:25Z",
+          "createdAt": "2025-09-22T15:53:31Z",
+          "homepage": "",
+          "url": "https://github.com/anthropics/skills",
+          "downloadUrl": "https://github.com/anthropics/skills/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/anthropics/skills.git",
+          "license": "未標示"
+        }
+      ]
+    }
+  ]
+}
