@@ -57,15 +57,72 @@
     }
   }
 
-  const visitor = readVisitor();
-  if (!visitor) {
-    sessionStorage.setItem(returnToKey, window.location.href);
-    const indexPath = window.location.pathname.includes("/pec-training/")
+  function homePath() {
+    return window.location.pathname.includes("/pec-training/")
       || window.location.pathname.includes("/tutorials/")
       || window.location.pathname.includes("/previews/")
       ? "../index.html"
       : "./index.html";
-    window.location.replace(indexPath);
+  }
+
+  function addHomeButton() {
+    if (document.querySelector(".training-home-button")) return;
+
+    const style = document.createElement("style");
+    style.textContent = `
+      .training-home-button {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        z-index: 1000;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid rgba(220, 235, 242, 0.22);
+        border-radius: 8px;
+        background: rgba(7, 11, 14, 0.84);
+        color: #f4f7f8;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(14px);
+        font: 900 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+        text-decoration: none;
+      }
+      .training-home-button:hover {
+        border-color: rgba(40, 198, 226, 0.52);
+        color: #28c6e2;
+      }
+      @media (max-width: 640px) {
+        .training-home-button {
+          top: 10px;
+          right: 10px;
+          min-height: 34px;
+          padding: 0 11px;
+          font-size: 12px;
+        }
+      }
+    `;
+
+    const link = document.createElement("a");
+    link.className = "training-home-button";
+    link.href = homePath();
+    link.textContent = "回首頁";
+
+    document.head.append(style);
+    if (document.body) {
+      document.body.append(link);
+    } else {
+      document.addEventListener("DOMContentLoaded", () => document.body.append(link), { once: true });
+    }
+  }
+
+  addHomeButton();
+
+  const visitor = readVisitor();
+  if (!visitor) {
+    sessionStorage.setItem(returnToKey, window.location.href);
+    window.location.replace(homePath());
     return;
   }
 

@@ -22,6 +22,7 @@ const elements = {
   searchInput: document.querySelector("#searchInput"),
   categoryFilters: document.querySelector("#categoryFilters"),
   tutorialGrid: document.querySelector("#tutorialGrid"),
+  githubHotList: document.querySelector("#githubHotList"),
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
@@ -191,14 +192,17 @@ function formatDate(value) {
 }
 
 function renderRecentUpdates() {
+  const githubItems = state.items.filter((item) => item.id === "github-skill-rankings");
   const recentItems = [...state.items]
-    .filter((item) => item.updatedAt)
+    .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
     .slice(0, 5);
 
-  const nodes = recentItems.map((item) => {
+  const createRecentNode = (item) => {
+    const row = document.createElement("li");
+    row.className = "recent-update-item";
+
     const link = document.createElement("a");
-    link.className = "recent-update-item";
     link.href = item.url;
     link.addEventListener("click", () => {
       trackEvent("recent_update_click", {
@@ -214,11 +218,16 @@ function renderRecentUpdates() {
     const meta = document.createElement("span");
     meta.textContent = [formatDate(item.updatedAt), item.category].filter(Boolean).join(" · ");
 
-    link.append(title, meta);
-    return link;
-  });
+    const summary = document.createElement("p");
+    summary.textContent = item.summary;
 
-  elements.recentUpdateList.replaceChildren(...nodes);
+    link.append(title, meta);
+    row.append(link, summary);
+    return row;
+  };
+
+  elements.githubHotList.replaceChildren(...githubItems.map(createRecentNode));
+  elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 
 function filteredItems() {

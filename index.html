@@ -6,8 +6,8 @@
   <title>PEC AI Agent 教育訓練資料庫</title>
   <meta name="description" content="PEC AI Agent 教育訓練教材搜尋入口">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=20260709-mobile">
-  <script src="./site-config.js?v=20260709-mobile"></script>
+  <link rel="stylesheet" href="./styles.css?v=20260709-list-home">
+  <script src="./site-config.js?v=20260709-list-home"></script>
 </head>
 <body>
   <main class="app-shell">
@@ -47,6 +47,15 @@
             <dd>任務分類</dd>
           </div>
         </dl>
+        <section class="recent-updates" aria-labelledby="homepageUpdatesTitle">
+          <div class="recent-updates-header">
+            <h3 id="homepageUpdatesTitle">GitHub 熱門</h3>
+            <span>點進去看細節</span>
+          </div>
+          <ul class="recent-update-list" id="githubHotList"></ul>
+          <h3 class="recent-subtitle">最近更新教材</h3>
+          <ul class="recent-update-list" id="recentUpdateList"></ul>
+        </section>
         <div class="side-notices" aria-label="使用與著作權說明">
           <p><strong>著作權：</strong>教材內容、分類整理與教學編排由 Michael Chuang 製作與維護。除原始品牌與第三方資料來源外，未經同意請勿轉載、改作或商用。</p>
           <p><strong>使用紀錄：</strong>網站會記錄姓名、部門、瀏覽頁面與時間，僅供 Michael 了解教材使用情況。</p>
@@ -59,14 +68,6 @@
             <h2>教材入口</h2>
           </div>
         </div>
-
-        <section class="recent-updates" aria-labelledby="recentUpdatesTitle">
-          <div class="recent-updates-header">
-            <h3 id="recentUpdatesTitle">最近更新</h3>
-            <span>前五項</span>
-          </div>
-          <div class="recent-update-list" id="recentUpdateList"></div>
-        </section>
 
         <label class="search-box">
           <span>搜尋教材</span>
@@ -123,7 +124,7 @@
     </form>
   </dialog>
 
-  <script src="./app.js?v=20260709-mobile"></script>
-  <script src="./feedback-widget.js?v=20260709-mobile"></script>
+  <script src="./app.js?v=20260709-list-home"></script>
+  <script src="./feedback-widget.js?v=20260709-list-home"></script>
 </body>
 </html>
