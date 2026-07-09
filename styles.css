@@ -240,6 +240,60 @@ h3 {
   align-items: start;
 }
 
+.recent-updates {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(12, 17, 22, 0.68);
+}
+
+.recent-updates-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.recent-updates-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.recent-updates-header span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.recent-update-list {
+  display: grid;
+  gap: 8px;
+}
+
+.recent-update-item {
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(16, 23, 29, 0.74);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.recent-update-item strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.recent-update-item span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .search-box {
   display: grid;
   gap: 8px;

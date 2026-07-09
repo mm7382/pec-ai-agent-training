@@ -22,6 +22,7 @@ const elements = {
   searchInput: document.querySelector("#searchInput"),
   categoryFilters: document.querySelector("#categoryFilters"),
   tutorialGrid: document.querySelector("#tutorialGrid"),
+  recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
   emptyState: document.querySelector("#emptyState"),
@@ -178,6 +179,48 @@ function createCard(item) {
   return article;
 }
 
+function formatDate(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value).slice(0, 10);
+  return new Intl.DateTimeFormat("zh-Hant-TW", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+}
+
+function renderRecentUpdates() {
+  const recentItems = [...state.items]
+    .filter((item) => item.updatedAt)
+    .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
+    .slice(0, 5);
+
+  const nodes = recentItems.map((item) => {
+    const link = document.createElement("a");
+    link.className = "recent-update-item";
+    link.href = item.url;
+    link.addEventListener("click", () => {
+      trackEvent("recent_update_click", {
+        id: item.id,
+        title: item.title,
+        url: item.url,
+      });
+    });
+
+    const title = document.createElement("strong");
+    title.textContent = item.title;
+
+    const meta = document.createElement("span");
+    meta.textContent = [formatDate(item.updatedAt), item.category].filter(Boolean).join(" · ");
+
+    link.append(title, meta);
+    return link;
+  });
+
+  elements.recentUpdateList.replaceChildren(...nodes);
+}
+
 function filteredItems() {
   const query = normalizeText(state.query);
   return state.items.filter((item) => {
@@ -201,6 +244,7 @@ async function loadIndex() {
   state.items = data.items || [];
   state.categories = data.categories || [];
   elements.totalCount.textContent = String(state.items.length);
+  renderRecentUpdates();
   renderCategoryFilters();
   renderItems();
 }
