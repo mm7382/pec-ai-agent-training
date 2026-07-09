@@ -256,14 +256,32 @@ h3 {
 
 .recent-updates-header h3 {
   margin: 0;
+  color: #7ae6f7;
   font-size: 15px;
 }
 
 .recent-subtitle {
   margin: 16px 0 8px;
-  color: var(--ink);
+  color: #b8ec72;
   font-size: 13px;
   line-height: 1.3;
+}
+
+.recent-updates-header h3,
+.recent-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.recent-updates-header h3::before,
+.recent-subtitle::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 14px currentColor;
 }
 
 .recent-updates-header span {
@@ -281,15 +299,60 @@ h3 {
 }
 
 .recent-update-item {
+  position: relative;
   display: grid;
   gap: 4px;
-  padding: 10px 0;
+  padding: 10px 0 10px 12px;
   border-top: 1px solid rgba(220, 235, 242, 0.12);
+}
+
+.recent-update-item::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 3px;
+  border-radius: 999px;
+  background: rgba(220, 235, 242, 0.25);
 }
 
 .recent-update-item:first-child {
   border-top: 0;
   padding-top: 2px;
+}
+
+.recent-update-item:first-child::before {
+  top: 4px;
+}
+
+.github-hot-list {
+  border: 1px solid rgba(40, 198, 226, 0.22);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(40, 198, 226, 0.12), rgba(40, 198, 226, 0.03));
+  padding: 0 10px;
+}
+
+.github-hot-list .recent-update-item::before {
+  background: #28c6e2;
+  box-shadow: 0 0 16px rgba(40, 198, 226, 0.55);
+}
+
+.github-hot-list .recent-update-item span {
+  color: #7ae6f7;
+}
+
+.lesson-update-list .recent-update-item {
+  background: linear-gradient(90deg, rgba(184, 236, 114, 0.08), transparent 74%);
+}
+
+.lesson-update-list .recent-update-item::before {
+  background: #9bd23c;
+  box-shadow: 0 0 14px rgba(155, 210, 60, 0.45);
+}
+
+.lesson-update-list .recent-update-item span {
+  color: #aebd9d;
 }
 
 .recent-update-item a {
