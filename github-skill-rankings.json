@@ -72,7 +72,18 @@
           "url": "https://github.com/affaan-m/ECC",
           "downloadUrl": "https://github.com/affaan-m/ECC/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/affaan-m/ECC.git",
-          "license": "MIT"
+          "license": "MIT",
+          "contentZh": [
+            "ECC 是一套給 Claude Code、Codex、OpenCode、Cursor 等 AI 編碼代理使用的工程工作流工具包。它把 skills、記憶管理、安全掃描、研究優先流程與多種 IDE/CLI 的代理設定整理在一起，目的不是做單一聊天工具，而是建立比較穩定的 agent harness。",
+            "這個專案適合想把 AI coding 從「臨時叫模型幫忙」推進到「有流程、有檢查、有記憶、有安全邊界」的人。它的價值在於把多個常見環節整理成可重複的工程流程，例如任務前先研究、修改後做安全掃描、讓 Agent 能保存上下文，並在不同工具之間維持一致設定。",
+            "用在教學時，可以把 ECC 當成 AI Agent 工程化的案例。學員不只看它有哪些檔案，而是要理解每個 skill 或 workflow 解決什麼問題：降低幻覺、保留專案背景、避免危險改動、提高 review 品質，或讓多工具協作更一致。",
+            "導入前要注意它會碰到開發流程與工具設定，應先在測試專案試用，確認安裝方式、插件格式、權限需求和團隊既有工具是否相容。"
+          ],
+          "discussionZh": [
+            "熱門討論之一是外掛安裝失敗，錯誤訊息和 manifest / source 格式有關。這代表使用者實際導入時最容易卡在安裝與設定驗證，教學中應該補一段「如何檢查 plugin manifest」與「錯誤排查流程」。",
+            "另一個討論希望擴充 Swift / Apple 支援，代表使用者想把這套 workflow 帶到更多語言與平台。這可以提醒學員：Agent workflow 不能只為單一語言設計，最好能拆成通用原則與語言特定設定。",
+            "也有人回報 agents 欄位驗證錯誤，表示專案格式與工具版本可能會有相容性問題。導入時要記錄版本、安裝方式與錯誤訊息，不能只照 README 複製貼上。"
+          ]
         },
         {
           "id": "ruvnet-ruflo",
@@ -144,7 +155,18 @@
           "url": "https://github.com/ruvnet/ruflo",
           "downloadUrl": "https://github.com/ruvnet/ruflo/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/ruvnet/ruflo.git",
-          "license": "MIT"
+          "license": "MIT",
+          "contentZh": [
+            "ruflo 聚焦在 agentic workflow 的安全帶、記憶與協調。它和 Claude Code、Codex、多代理系統、MCP server、swarm、skills 等主題有關，比較像是把多個 AI 代理放進一個可管理的工作流框架。",
+            "這個專案的核心價值在於「讓長任務不失控」。AI Agent 做長任務時容易忘記上下文、重複決策、不同代理互相打架，或缺少可追蹤紀錄。ruflo 這類框架通常會處理 session、memory、RAG、任務協調與安全邊界。",
+            "用在學習時，可以把它當成多代理工作流的參考案例：一個 agent 不一定要做完所有事，可以分工、共享記憶、透過工作流編排協作。但分工越多，越需要狀態管理與失敗恢復。",
+            "導入前要先確認它是否仍在 alpha 或快速變動階段。這類框架功能多，但也容易遇到資料庫 schema、版本更新、移除流程與設定相容性問題。"
+          ],
+          "discussionZh": [
+            "熱門討論要求加入 Claude-Flow 的正確解除安裝/移除命令，代表使用者在試用後也需要乾淨移除。這對工具導入很重要：好的 Agent 框架不只要會安裝，也要能回復環境。",
+            "有人回報 sessions table 缺少 swarm_name 欄位，表示資料庫 schema 或 migration 可能會造成實際使用卡關。教學上可以提醒學員：多代理系統一定要管理狀態資料與升級流程。",
+            "作者也發過關於 alpha software 與開源現實的說明，互動很高。這表示使用者期待很高，但專案可能仍在快速演進，導入時應以實驗心態、小範圍驗證，不宜直接放進關鍵流程。"
+          ]
         },
         {
           "id": "code-yeongyu-oh-my-openagent",
@@ -211,7 +233,18 @@
           "url": "https://github.com/code-yeongyu/oh-my-openagent",
           "downloadUrl": "https://github.com/code-yeongyu/oh-my-openagent/archive/refs/heads/dev.zip",
           "cloneUrl": "https://github.com/code-yeongyu/oh-my-openagent.git",
-          "license": "NOASSERTION"
+          "license": "NOASSERTION",
+          "contentZh": [
+            "oh-my-openagent 是一組 OpenCode、Codex、Claude Code 等 AI 編碼工具的代理設定與工作流集合。它不像單一模型或單一 IDE，而是把不同 agent 角色、指令、配置與工作方式整理成可套用的集合。",
+            "這個專案對初學者有價值，因為它能讓人快速看到「不同 coding agent 可以怎麼被設定」。例如 spec-driven workflow、不同 provider、不同 CLI 操作方式，都可以變成比較不同工具能力的教材。",
+            "用在工作流時，重點不是直接套全部設定，而是挑出可複用的模式：如何定義 agent 角色、如何把需求變成 spec、如何讓工具支援不同 provider、如何在 CLI 裡啟用或停用功能。",
+            "導入前要注意 provider、API key、CLI 指令、專案結構是否符合自己的環境。這種設定集合更新速度快，最好先用測試 repo 驗證，再決定是否納入正式開發流程。"
+          ],
+          "discussionZh": [
+            "熱門 feature request 是加入原生 OpenRouter provider 支援，代表使用者希望同一套 agent workflow 能接不同模型供應商。這反映出 provider abstraction 對 AI coding 工具越來越重要。",
+            "另一個高互動需求是用 CLI 指令停用 oh-my-opencode，表示使用者需要可控的啟用/停用機制。導入工具時，能不能快速關掉和能不能快速啟用一樣重要。",
+            "還有人提出統一的 spec-driven workflow，代表使用者不只想要 agent 角色，更想要從需求、規格、執行到驗收的一致流程。這很適合放進教學中的「先寫 spec，再讓 agent 做」章節。"
+          ]
         },
         {
           "id": "lobehub-lobehub",
@@ -281,7 +314,18 @@
           "url": "https://github.com/lobehub/lobehub",
           "downloadUrl": "https://github.com/lobehub/lobehub/archive/refs/heads/canary.zip",
           "cloneUrl": "https://github.com/lobehub/lobehub.git",
-          "license": "NOASSERTION"
+          "license": "NOASSERTION",
+          "contentZh": [
+            "LobeHub 是偏平台型的 AI agent 專案，主打把多個 agent 變成可管理、可協作、可排程的工作系統。它的方向比較接近企業型 AI 工作台，而不是單一命令列工具。",
+            "這個專案的重點是 agent collaboration、agent harness、knowledge base、MCP、skills 等概念。也就是說，它關注的是如何讓多個代理、知識庫與工具形成一個持續運作的團隊，而不是只讓一個模型回答問題。",
+            "對想學 AI Agent 的人來說，LobeHub 可以用來理解「Agent 團隊」的產品形態：任務如何分派、代理如何協作、輸出如何整理、知識如何保存，以及人如何監督整個系統。",
+            "導入時要注意它可能牽涉平台部署、模型適配、桌面端、權限和資料管理。這類工具的學習重點不是安裝，而是觀察它怎麼設計 agent operator 與工作台體驗。"
+          ],
+          "discussionZh": [
+            "熱門討論包含 LLM 適配需求，留言數高，代表使用者很在意能支援哪些模型與供應商。對平台型 agent 工具來說，模型相容性是導入關鍵。",
+            "LobeChat Desktop Public Beta 的回饋留言很多，表示桌面端體驗與部署方式是社群重點。這可提醒學員：Agent 平台不只要有能力，也要有好用的入口。",
+            "介紹 LobeHub agent teammates 的討論顯示，使用者對「能成長的 agent teammate」有興趣。教學上可以把它當成產品化方向：Agent 不只是工具，而是可被管理與培養的工作角色。"
+          ]
         },
         {
           "id": "shanraisshan-claude-code-best-practice",
@@ -353,7 +397,18 @@
           "url": "https://github.com/shanraisshan/claude-code-best-practice",
           "downloadUrl": "https://github.com/shanraisshan/claude-code-best-practice/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/shanraisshan/claude-code-best-practice.git",
-          "license": "MIT"
+          "license": "MIT",
+          "contentZh": [
+            "這個專案整理 Claude Code 的工程實務，重點是把 vibe coding 轉成更有紀律的 agentic coding。它適合已經開始用 Claude Code，但發現結果不穩、上下文混亂或 review 成本太高的人。",
+            "它的價值在於提醒使用者：AI coding 不是只靠一句 prompt，而是需要 context engineering、commands、skills、best practices 與工作流設計。越是正式開發，越需要明確任務、限制修改範圍、測試與審查。",
+            "用在教學時，可以把它拆成幾個主題：如何準備專案上下文、如何寫命令、如何讓 Claude Code 分段工作、如何避免一次改太多，以及如何建立可重複的開發節奏。",
+            "導入前要注意這類 best practice 不是固定公式，必須配合團隊語言、repo 結構、CI、測試習慣調整。最好的使用方式是把其中原則轉成自己的 SOP。"
+          ],
+          "discussionZh": [
+            "熱門討論包含新增中文 README 翻譯，代表社群希望降低語言門檻。這也符合教學網站需求：好的 AI coding 實務需要中文化，才能讓更多同事上手。",
+            "另一個討論是多語系支援計畫，表示使用者想讓 best practice 擴散到更多語言社群。這提醒我們內部教材也應該把英文概念翻成清楚的中文流程。",
+            "有些討論互動低或內容不完整，代表不是所有 GitHub issue 都有高價值。頁面應該把有意義的討論整理出來，而不是讓使用者自己逐一點開篩選。"
+          ]
         }
       ]
     },
@@ -422,7 +477,18 @@
           "url": "https://github.com/affaan-m/ECC",
           "downloadUrl": "https://github.com/affaan-m/ECC/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/affaan-m/ECC.git",
-          "license": "MIT"
+          "license": "MIT",
+          "contentZh": [
+            "ECC 是一套給 Claude Code、Codex、OpenCode、Cursor 等 AI 編碼代理使用的工程工作流工具包。它把 skills、記憶管理、安全掃描、研究優先流程與多種 IDE/CLI 的代理設定整理在一起，目的不是做單一聊天工具，而是建立比較穩定的 agent harness。",
+            "這個專案適合想把 AI coding 從「臨時叫模型幫忙」推進到「有流程、有檢查、有記憶、有安全邊界」的人。它的價值在於把多個常見環節整理成可重複的工程流程，例如任務前先研究、修改後做安全掃描、讓 Agent 能保存上下文，並在不同工具之間維持一致設定。",
+            "用在教學時，可以把 ECC 當成 AI Agent 工程化的案例。學員不只看它有哪些檔案，而是要理解每個 skill 或 workflow 解決什麼問題：降低幻覺、保留專案背景、避免危險改動、提高 review 品質，或讓多工具協作更一致。",
+            "導入前要注意它會碰到開發流程與工具設定，應先在測試專案試用，確認安裝方式、插件格式、權限需求和團隊既有工具是否相容。"
+          ],
+          "discussionZh": [
+            "熱門討論之一是外掛安裝失敗，錯誤訊息和 manifest / source 格式有關。這代表使用者實際導入時最容易卡在安裝與設定驗證，教學中應該補一段「如何檢查 plugin manifest」與「錯誤排查流程」。",
+            "另一個討論希望擴充 Swift / Apple 支援，代表使用者想把這套 workflow 帶到更多語言與平台。這可以提醒學員：Agent workflow 不能只為單一語言設計，最好能拆成通用原則與語言特定設定。",
+            "也有人回報 agents 欄位驗證錯誤，表示專案格式與工具版本可能會有相容性問題。導入時要記錄版本、安裝方式與錯誤訊息，不能只照 README 複製貼上。"
+          ]
         },
         {
           "id": "ruvnet-ruflo",
@@ -494,7 +560,18 @@
           "url": "https://github.com/ruvnet/ruflo",
           "downloadUrl": "https://github.com/ruvnet/ruflo/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/ruvnet/ruflo.git",
-          "license": "MIT"
+          "license": "MIT",
+          "contentZh": [
+            "ruflo 聚焦在 agentic workflow 的安全帶、記憶與協調。它和 Claude Code、Codex、多代理系統、MCP server、swarm、skills 等主題有關，比較像是把多個 AI 代理放進一個可管理的工作流框架。",
+            "這個專案的核心價值在於「讓長任務不失控」。AI Agent 做長任務時容易忘記上下文、重複決策、不同代理互相打架，或缺少可追蹤紀錄。ruflo 這類框架通常會處理 session、memory、RAG、任務協調與安全邊界。",
+            "用在學習時，可以把它當成多代理工作流的參考案例：一個 agent 不一定要做完所有事，可以分工、共享記憶、透過工作流編排協作。但分工越多，越需要狀態管理與失敗恢復。",
+            "導入前要先確認它是否仍在 alpha 或快速變動階段。這類框架功能多，但也容易遇到資料庫 schema、版本更新、移除流程與設定相容性問題。"
+          ],
+          "discussionZh": [
+            "熱門討論要求加入 Claude-Flow 的正確解除安裝/移除命令，代表使用者在試用後也需要乾淨移除。這對工具導入很重要：好的 Agent 框架不只要會安裝，也要能回復環境。",
+            "有人回報 sessions table 缺少 swarm_name 欄位，表示資料庫 schema 或 migration 可能會造成實際使用卡關。教學上可以提醒學員：多代理系統一定要管理狀態資料與升級流程。",
+            "作者也發過關於 alpha software 與開源現實的說明，互動很高。這表示使用者期待很高，但專案可能仍在快速演進，導入時應以實驗心態、小範圍驗證，不宜直接放進關鍵流程。"
+          ]
         },
         {
           "id": "code-yeongyu-oh-my-openagent",
@@ -561,7 +638,18 @@
           "url": "https://github.com/code-yeongyu/oh-my-openagent",
           "downloadUrl": "https://github.com/code-yeongyu/oh-my-openagent/archive/refs/heads/dev.zip",
           "cloneUrl": "https://github.com/code-yeongyu/oh-my-openagent.git",
-          "license": "NOASSERTION"
+          "license": "NOASSERTION",
+          "contentZh": [
+            "oh-my-openagent 是一組 OpenCode、Codex、Claude Code 等 AI 編碼工具的代理設定與工作流集合。它不像單一模型或單一 IDE，而是把不同 agent 角色、指令、配置與工作方式整理成可套用的集合。",
+            "這個專案對初學者有價值，因為它能讓人快速看到「不同 coding agent 可以怎麼被設定」。例如 spec-driven workflow、不同 provider、不同 CLI 操作方式，都可以變成比較不同工具能力的教材。",
+            "用在工作流時，重點不是直接套全部設定，而是挑出可複用的模式：如何定義 agent 角色、如何把需求變成 spec、如何讓工具支援不同 provider、如何在 CLI 裡啟用或停用功能。",
+            "導入前要注意 provider、API key、CLI 指令、專案結構是否符合自己的環境。這種設定集合更新速度快，最好先用測試 repo 驗證，再決定是否納入正式開發流程。"
+          ],
+          "discussionZh": [
+            "熱門 feature request 是加入原生 OpenRouter provider 支援，代表使用者希望同一套 agent workflow 能接不同模型供應商。這反映出 provider abstraction 對 AI coding 工具越來越重要。",
+            "另一個高互動需求是用 CLI 指令停用 oh-my-opencode，表示使用者需要可控的啟用/停用機制。導入工具時，能不能快速關掉和能不能快速啟用一樣重要。",
+            "還有人提出統一的 spec-driven workflow，代表使用者不只想要 agent 角色，更想要從需求、規格、執行到驗收的一致流程。這很適合放進教學中的「先寫 spec，再讓 agent 做」章節。"
+          ]
         },
         {
           "id": "lobehub-lobehub",
@@ -631,7 +719,18 @@
           "url": "https://github.com/lobehub/lobehub",
           "downloadUrl": "https://github.com/lobehub/lobehub/archive/refs/heads/canary.zip",
           "cloneUrl": "https://github.com/lobehub/lobehub.git",
-          "license": "NOASSERTION"
+          "license": "NOASSERTION",
+          "contentZh": [
+            "LobeHub 是偏平台型的 AI agent 專案，主打把多個 agent 變成可管理、可協作、可排程的工作系統。它的方向比較接近企業型 AI 工作台，而不是單一命令列工具。",
+            "這個專案的重點是 agent collaboration、agent harness、knowledge base、MCP、skills 等概念。也就是說，它關注的是如何讓多個代理、知識庫與工具形成一個持續運作的團隊，而不是只讓一個模型回答問題。",
+            "對想學 AI Agent 的人來說，LobeHub 可以用來理解「Agent 團隊」的產品形態：任務如何分派、代理如何協作、輸出如何整理、知識如何保存，以及人如何監督整個系統。",
+            "導入時要注意它可能牽涉平台部署、模型適配、桌面端、權限和資料管理。這類工具的學習重點不是安裝，而是觀察它怎麼設計 agent operator 與工作台體驗。"
+          ],
+          "discussionZh": [
+            "熱門討論包含 LLM 適配需求，留言數高，代表使用者很在意能支援哪些模型與供應商。對平台型 agent 工具來說，模型相容性是導入關鍵。",
+            "LobeChat Desktop Public Beta 的回饋留言很多，表示桌面端體驗與部署方式是社群重點。這可提醒學員：Agent 平台不只要有能力，也要有好用的入口。",
+            "介紹 LobeHub agent teammates 的討論顯示，使用者對「能成長的 agent teammate」有興趣。教學上可以把它當成產品化方向：Agent 不只是工具，而是可被管理與培養的工作角色。"
+          ]
         },
         {
           "id": "thedotmack-claude-mem",
@@ -703,7 +802,18 @@
           "url": "https://github.com/thedotmack/claude-mem",
           "downloadUrl": "https://github.com/thedotmack/claude-mem/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/thedotmack/claude-mem.git",
-          "license": "Apache-2.0"
+          "license": "Apache-2.0",
+          "contentZh": [
+            "claude-mem 主要解決 Claude Code 類工具缺乏長期記憶的問題。AI 編碼代理每次開始工作時，如果不知道專案背景、歷史決策與已踩過的坑，就容易重複犯錯或要求使用者重新說明。",
+            "這個專案和 ai-memory、embeddings、long-term-memory、RAG、SQLite、ChromaDB 等主題有關。它的核心概念是把專案記憶保存起來，讓 Agent 在後續任務中可以取回背景資訊。",
+            "對學 Agent 的人來說，這是很好的 memory 教材。你可以用它說明：記憶不只是聊天紀錄，而是要能被整理、索引、檢索、更新，並且在正確時機提供給模型。",
+            "導入前要注意記憶檔案放在哪裡、是否會污染 repo、是否可能記住不該保存的資訊，以及如何關閉或限制自動產生的記憶。Agent memory 一定要有治理規則。"
+          ],
+          "discussionZh": [
+            "熱門 PR 是實作 CLAUDE_MEM_FOLDER_CLAUDEMD_ENABLED feature flag，表示使用者需要控制記憶檔案是否生成。這對 memory 工具非常重要，因為自動寫檔可能影響 repo 整潔與隱私。",
+            "有人問為什麼到處留下 CLAUDE.md 檔案，互動也很高。這反映出 memory 工具最大的風險之一：方便保存上下文，但也可能讓檔案散落、難以治理。",
+            "另一個 feature request 是加入設定，禁止在子目錄生成 CLAUDE.md。這可以轉成導入建議：記憶系統必須有範圍控制、開關與清理策略。"
+          ]
         }
       ]
     }

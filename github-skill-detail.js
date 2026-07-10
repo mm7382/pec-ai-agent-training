@@ -38,6 +38,44 @@
     `).join("")}</ul>`;
   }
 
+  function escapeHtml(value = "") {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function fallbackContent(repo) {
+    const topics = (repo.topics || []).slice(0, 8).join("、") || "AI Agent / AI coding";
+    return [
+      repo.introZh || repo.descriptionZh || "這個專案和 AI Agent / AI coding 工作流有關。",
+      `從 topics 來看，它和 ${topics} 有關。閱讀時可以先判斷它是工具、框架、設定集合、記憶系統，還是安全治理，再決定是否適合放進自己的 Skill 或 Agent 工作流。`,
+      "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI Agent 工具通常會接觸程式碼、指令、記憶或 API key，不能只看星數決定是否採用。",
+    ];
+  }
+
+  function fallbackDiscussion(repo) {
+    const samples = repo.reactionSamples || [];
+    if (!samples.length) return ["目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"];
+    return samples.map((item) => {
+      const metrics = [`👍 ${formatNumber(item.likes)}`, `❤️ ${formatNumber(item.hearts)}`, `留言 ${formatNumber(item.comments)}`].join("　");
+      return `「${item.title}」是較多人互動的討論之一（${metrics}）。這代表使用者正在關注功能缺口、安裝問題、設定方式或專案方向，可作為導入前的需求與風險提示。`;
+    });
+  }
+
+  function renderParagraphSection(title, paragraphs, callout = false) {
+    const list = (paragraphs || []).filter(Boolean);
+    if (!list.length) return "";
+    return `
+      <section class="detail-section">
+        <h2>${escapeHtml(title)}</h2>
+        ${list.map((item) => `<p class="${callout ? "detail-callout" : ""}">${escapeHtml(item)}</p>`).join("")}
+      </section>
+    `;
+  }
+
   function render({ repo, period, data }) {
     document.title = `${repo.fullName} - GitHub Skill 詳細內容`;
     const topics = (repo.topics || []).map((topic) => `<span>${topic}</span>`).join("");
@@ -52,6 +90,8 @@
         <p>${repo.introZh || repo.descriptionZh || "暫無 README 摘要。"}</p>
       </section>
 
+      ${renderParagraphSection("中文內容整理", repo.contentZh?.length ? repo.contentZh : fallbackContent(repo))}
+
       <section class="detail-section">
         <h2>適合放進 Skill 知識庫的原因</h2>
         <ul>
@@ -65,6 +105,8 @@
         <h2>GitHub 熱門回饋</h2>
         ${renderFeedback(repo)}
       </section>
+
+      ${renderParagraphSection("熱門討論整理", repo.discussionZh?.length ? repo.discussionZh : fallbackDiscussion(repo), true)}
 
       <section class="detail-section">
         <h2>下載與來源</h2>
