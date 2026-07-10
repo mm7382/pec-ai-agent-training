@@ -6,12 +6,12 @@
   <title>AI Agent 熱門文章細節 - PEC AI Agent 教育訓練資料庫</title>
   <meta name="description" content="AI Agent 熱門文章中文簡介、原文標題與來源網址">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=20260710-daily-radar">
-  <script src="./site-config.js?v=20260710-daily-radar"></script>
+  <link rel="stylesheet" href="./styles.css?v=20260710-daily-radar-3">
+  <script src="./site-config.js?v=20260710-daily-radar-3"></script>
   <style>
     .article-shell{width:min(1180px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
     .article-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;margin-top:22px;align-items:start}
-    .article-main,.article-side{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+    .article-main,.article-side{min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
     .article-main{padding:30px}
     .article-side{padding:18px;position:sticky;top:18px}
     .article-source{color:var(--accent-strong);font-size:12px;font-weight:950;text-transform:uppercase}
@@ -20,7 +20,11 @@
     .article-summary{color:var(--muted);font-size:18px;line-height:1.7}
     .article-section{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
     .article-section h2{font-size:23px;margin-bottom:10px}
-    .article-section p,.article-section li{color:var(--muted);line-height:1.75}
+    .article-section p,.article-section li{color:var(--muted);line-height:1.75;overflow-wrap:anywhere}
+    .article-section a{overflow-wrap:anywhere}
+    .article-callout{margin-top:12px;border:1px solid rgba(40,198,226,.22);border-radius:8px;background:rgba(40,198,226,.06);padding:14px;color:rgba(220,235,242,.82);line-height:1.75}
+    .article-section ul{padding-left:22px}
+    .article-section li+li{margin-top:8px}
     .article-metrics{display:grid;gap:8px}
     .article-metrics div{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(220,235,242,.06)}
     .article-metrics span{color:var(--muted);font-weight:850}
@@ -58,8 +62,8 @@
     </section>
   </main>
 
-  <script src="./tutorial-gate.js?v=20260710-daily-radar"></script>
-  <script src="./ai-agent-daily-detail.js?v=20260710-daily-radar"></script>
-  <script src="./feedback-widget.js?v=20260710-daily-radar"></script>
+  <script src="./tutorial-gate.js?v=20260710-daily-radar-3"></script>
+  <script src="./ai-agent-daily-detail.js?v=20260710-daily-radar-3"></script>
+  <script src="./feedback-widget.js?v=20260710-daily-radar-3"></script>
 </body>
 </html>
