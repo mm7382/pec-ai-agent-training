@@ -363,23 +363,23 @@ h3 {
 }
 
 .local-subtitle {
-  color: #9bd23c;
+  color: #48cfff;
 }
 
 .local-hot-list {
-  border: 1px solid rgba(155, 210, 60, 0.24);
+  border: 1px solid rgba(72, 207, 255, 0.26);
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(155, 210, 60, 0.11), rgba(40, 198, 226, 0.04));
+  background: linear-gradient(135deg, rgba(72, 207, 255, 0.12), rgba(117, 92, 255, 0.05));
   padding: 0 10px;
 }
 
 .local-hot-list .recent-update-item::before {
-  background: #9bd23c;
-  box-shadow: 0 0 16px rgba(155, 210, 60, 0.50);
+  background: #48cfff;
+  box-shadow: 0 0 16px rgba(72, 207, 255, 0.52);
 }
 
 .local-hot-list .recent-update-item span {
-  color: #b8ec72;
+  color: #8be3ff;
 }
 
 .lesson-update-list .recent-update-item {

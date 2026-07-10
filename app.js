@@ -205,7 +205,7 @@ function renderRecentUpdates() {
   }];
   const localAgentItems = [{
     id: "local-agent-radar",
-    title: "Local Agent 每日 / 每週前五",
+    title: "Local Agent 熱門安裝",
     category: "Local-ready · Self-host",
     updatedAt: new Date().toISOString(),
     summary: "整理可本機執行、自架或下載研究的 Agent 專案，先看中文介紹與難度，再決定要不要試跑。",
