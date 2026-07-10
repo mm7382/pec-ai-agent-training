@@ -6,8 +6,8 @@
   <title>PEC AI Agent 教育訓練資料庫</title>
   <meta name="description" content="PEC AI Agent 教育訓練教材搜尋入口">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=20260710-hero-subcopy">
-  <script src="./site-config.js?v=20260710-hero-subcopy"></script>
+  <link rel="stylesheet" href="./styles.css?v=20260710-learning-path">
+  <script src="./site-config.js?v=20260710-learning-path"></script>
 </head>
 <body>
   <main class="app-shell">
@@ -47,6 +47,14 @@
             <dd>任務分類</dd>
           </div>
         </dl>
+        <section class="learning-path-section" aria-labelledby="learningPathTitle">
+          <div class="learning-path-header">
+            <h2 id="learningPathTitle">AI Agent 實作學習路線</h2>
+            <span>4 階段</span>
+          </div>
+          <p>照著路線從概念、交辦、工具到治理，一步一步把 AI Agent 做進工作流程。</p>
+          <div class="learning-stage-grid" id="learningPathGrid" aria-label="學習路線階段"></div>
+        </section>
         <section class="recent-updates" aria-labelledby="homepageUpdatesTitle">
           <div class="recent-updates-header">
             <h3 id="homepageUpdatesTitle">GitHub 熱門 Skill</h3>
@@ -128,7 +136,8 @@
     </form>
   </dialog>
 
-  <script src="./app.js?v=20260710-hero-subcopy"></script>
-  <script src="./feedback-widget.js?v=20260710-hero-subcopy"></script>
+  <script src="./learning-path.js?v=20260710-learning-path"></script>
+  <script src="./app.js?v=20260710-learning-path"></script>
+  <script src="./feedback-widget.js?v=20260710-learning-path"></script>
 </body>
 </html>

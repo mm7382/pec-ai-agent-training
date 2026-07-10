@@ -1,0 +1,167 @@
+{
+  "updatedAt": "2026-07-10",
+  "title": "AI Agent 實作學習路線",
+  "description": "從理解概念、學會交辦，到工具實作與治理沉澱，照著 4 個階段把 AI Agent 做進工作裡。",
+  "stages": [
+    {
+      "id": "foundation",
+      "number": "01",
+      "label": "入門",
+      "title": "理解 AI Agent",
+      "goal": "先建立共同語言，知道 Agent、工具、權限與工作流程為什麼重要。",
+      "buttonLabel": "開始入門階段",
+      "lessons": [
+        {
+          "id": "github-beginner-open-source",
+          "title": "GitHub 入門：非工程背景也能找到、判斷、下載開源工具",
+          "url": "./pec-training/github-beginner-open-source.html",
+          "learn": "學會看 README、Release、Issues、Stars 與授權，先判斷開源工具值不值得研究或下載。",
+          "audience": "剛開始接觸 GitHub、想用 AI 工具但不熟工程語言的人。",
+          "task": "找一個你想研究的 GitHub repo，整理它的用途、安裝方式、風險與是否值得下載。",
+          "completion": "你能用自己的話說明這個 repo 解決什麼問題，並判斷適不適合交給 AI agent 深入研究。",
+          "next": "接著看 AI Agent 術語，補齊工具、權限與 workflow 的基本概念。"
+        },
+        {
+          "id": "ai-30-day-learning-path",
+          "title": "現在學 AI，真的還不晚：30 天從小白到上手",
+          "url": "./pec-training/ai-30-day-learning-path.html",
+          "learn": "把 AI 學習拆成可執行的 30 天路線，從會問問題進步到能整理資料與工作流程。",
+          "audience": "想開始學 AI，但不知道每天要練什麼、怎麼累積的人。",
+          "task": "選一個真實工作任務，規劃未來 7 天要用 AI 練習的三個小任務。",
+          "completion": "你能列出一條自己的入門練習路線，並知道第一個可以動手做的任務是什麼。",
+          "next": "接著看任務定義教材，把練習任務寫成 AI 可以執行的 brief。"
+        },
+        {
+          "id": "ai-agent-terms",
+          "title": "AI Agent 術語與名詞解釋",
+          "url": "./pec-training/ai-agent-terms.html",
+          "learn": "搞懂 Prompt、Context、Workflow、API Key、Local LLM 等常見名詞，避免需求講不清楚。",
+          "audience": "常聽到 AI Agent 名詞，但還不確定彼此差異的人。",
+          "task": "挑 5 個你最常聽到但不熟的名詞，寫成自己的白話解釋與工作例子。",
+          "completion": "你能向同事說明 Agent、工具、權限、Context 和 Workflow 的基本差異。",
+          "next": "接著進入交辦階段，練習把模糊需求變成可執行任務。"
+        }
+      ]
+    },
+    {
+      "id": "briefing",
+      "number": "02",
+      "label": "交辦",
+      "title": "讓 AI 做對事",
+      "goal": "學會把模糊想法整理成 AI 能理解、能執行、能驗收的任務。",
+      "buttonLabel": "開始交辦階段",
+      "lessons": [
+        {
+          "id": "task-definition-brief",
+          "title": "你不是不會寫 Prompt，是不會定義任務",
+          "url": "./pec-training/task-definition-brief.html",
+          "learn": "學會先定義目標、背景、素材、限制與完成標準，再請 AI 開始做事。",
+          "audience": "常覺得 AI 答非所問、需要一直來回修正的人。",
+          "task": "拿一個真實需求，寫成包含目標、背景、素材、限制與完成定義的任務 brief。",
+          "completion": "AI 能根據你的 brief 產出可用初稿，而且不需要來回問超過 2 次。",
+          "next": "接著看工程 Prompt 寫法，把 brief 轉成更穩定的輸出規格。"
+        },
+        {
+          "id": "engineering-prompt-writing",
+          "title": "工程 Prompt 寫法教學",
+          "url": "./pec-training/engineering-prompt-writing.html",
+          "learn": "把需求、輸入資料、輸出格式、限制條件與驗收標準寫成 AI 能穩定執行的任務規格。",
+          "audience": "需要把 AI 用在報告、測試、文件、資料整理或工程任務的人。",
+          "task": "把一個工作任務改寫成含輸入、步驟、輸出格式與驗收標準的 prompt。",
+          "completion": "AI 的輸出格式符合你的要求，且你能清楚指出哪些地方需要人工驗證。",
+          "next": "接著用 Grill Me 工作法，讓 AI 在動手前先幫你補齊需求。"
+        },
+        {
+          "id": "grill-me-requirement-interview",
+          "title": "AI Agent 開工前需求訪談：Grill Me 工作法",
+          "url": "./pec-training/grill-me-requirement-interview.html",
+          "learn": "讓 agent 在動手前先追問受眾、限制、輸出與成功標準，把模糊想法變成可執行 brief。",
+          "audience": "常常需求還沒想清楚，就急著叫 AI 產出的人。",
+          "task": "挑一個新任務，請 AI 先用 Grill Me 方式問你 5 到 8 個問題，再整理成 brief。",
+          "completion": "你能得到一份比原始想法更清楚的任務 brief，並能用它開始實作。",
+          "next": "接著進入工具階段，學會把 AI 接到實際工作環境。"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "number": "03",
+      "label": "工具",
+      "title": "把 AI 接進工作",
+      "goal": "學會判斷什麼時候該看 GitHub、用 Local Agent、接 MCP，或讓 AI 操作工具。",
+      "buttonLabel": "開始工具階段",
+      "lessons": [
+        {
+          "id": "local-vs-cloud-llm",
+          "title": "Local LLM 與 Cloud LLM 差異教學",
+          "url": "./pec-training/local-vs-cloud-llm.html",
+          "learn": "理解本機模型與雲端模型的差異，判斷什麼任務適合 local、什麼任務適合 cloud。",
+          "audience": "想兼顧成本、隱私、速度與模型能力的人。",
+          "task": "列出你工作中 3 種任務，判斷它們適合 Local LLM、Cloud LLM，還是混合使用。",
+          "completion": "你能說明每種選擇的理由，包含資料安全、成本、速度與模型能力。",
+          "next": "接著看 GitHub 熱門 Skill / AI 工具，練習從開源趨勢挑可研究的工具。"
+        },
+        {
+          "id": "github-skill-rankings",
+          "title": "GitHub 熱門 Skill / AI 工具",
+          "url": "./github-skills.html",
+          "learn": "學會用白話導讀看 GitHub 上的 Skill、AI workflow、MCP 與 AI 開源工具趨勢。",
+          "audience": "想追 AI 工具趨勢，但不想直接被 repo 名稱和英文 README 淹沒的人。",
+          "task": "從每週榜挑 1 個 Skill / Workflow 和 1 個 AI 開源工具，整理它們各自適合解決什麼問題。",
+          "completion": "你能判斷一個熱門 repo 是方法、工具、框架還是可安裝 agent，並知道下一步要不要深入研究。",
+          "next": "接著看 Codex Plugin 與 Skill 工作流，學習怎麼把工具導入到自己的 agent。"
+        },
+        {
+          "id": "codex-plugin-skill-workflows",
+          "title": "Codex 插件與 Skill 入門：6 種工作流的導入判斷",
+          "url": "./pec-training/codex-plugin-skill-workflows.html",
+          "learn": "理解插件、Skill、工具授權與工作流導入的差異，避免看到功能就全部打開。",
+          "audience": "正在使用 Codex、Claude Code 或其他 agent 工具，想建立穩定工作流的人。",
+          "task": "選一個你常做的任務，判斷它需要插件、Skill、MCP、Browser Control，還是只需要更好的 brief。",
+          "completion": "你能畫出一個簡單工具導入流程，並知道每個工具權限的風險邊界。",
+          "next": "接著進入治理階段，把可重複的能力沉澱成長期系統。"
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "number": "04",
+      "label": "治理",
+      "title": "讓 Agent 穩定累積",
+      "goal": "把規則、Skill、知識庫與安全邊界整理成可維護的工作系統。",
+      "buttonLabel": "開始治理階段",
+      "lessons": [
+        {
+          "id": "claude-skill-engineering",
+          "title": "Claude Skill 觸發率與 Skill Engineering",
+          "url": "./pec-training/claude-skill-engineering.html",
+          "learn": "理解 Skill 不是一段 prompt，而是可觸發、可驗證、可維護的能力封裝。",
+          "audience": "想把常用工作方法沉澱成可重複使用 Skill 的人。",
+          "task": "挑一個常見工作流程，寫出它的觸發條件、輸入資料、操作步驟與驗收方式。",
+          "completion": "你能說明一個 Skill 什麼時候該被觸發，並知道如何降低誤觸發或不觸發。",
+          "next": "接著看 Codex Skill Feedback Loop，把使用回饋變成改版依據。"
+        },
+        {
+          "id": "codex-skill-feedback-loop",
+          "title": "Codex Skill：把常用工作變成 AI SOP",
+          "url": "./pec-training/codex-skill-feedback-loop.html",
+          "learn": "把常用工作流程變成 AI SOP，並用回饋循環讓 Skill 越用越準。",
+          "audience": "已經有常用 prompt 或 SOP，想讓 agent 更穩定執行的人。",
+          "task": "把一個常用 prompt 改寫成 Skill 草稿，並列出未來要收集的 3 種使用回饋。",
+          "completion": "你能把一次性 prompt 轉成可維護流程，並知道下一版要根據什麼訊號修正。",
+          "next": "接著看 OpenSquilla MetaSkill，學習把工作方法變成可遷移能力。"
+        },
+        {
+          "id": "opensquilla-metaskill",
+          "title": "OpenSquilla 與 MetaSkill 技術入門",
+          "url": "./pec-training/opensquilla-metaskill.html",
+          "learn": "理解 MetaSkill 如何把工作方法、判斷標準與能力邊界整理成可遷移的 agent 能力。",
+          "audience": "想把個人經驗、團隊方法或專家判斷沉澱成 agent 能力的人。",
+          "task": "挑一個你擅長的工作方法，拆成目的、觸發情境、操作原則、限制與驗收標準。",
+          "completion": "你能把一個人的經驗整理成 AI 可以讀、可以執行、可以逐步改版的能力規格。",
+          "next": "完成後回到教材庫，挑一個真實工作流程開始建立自己的 agent 系統。"
+        }
+      ]
+    }
+  ]
+}
