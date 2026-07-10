@@ -197,7 +197,7 @@ function renderRecentUpdates() {
   const githubItems = state.items.filter((item) => item.id === "github-skill-rankings");
   const dailyItems = [{
     id: "ai-agent-daily-radar",
-    title: "AI Agent 每日熱門",
+    title: "AI Agent 熱門新聞",
     category: "Hacker News · Reddit",
     updatedAt: new Date().toISOString(),
     summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，先看中文簡介，再點進來源細讀。",
@@ -205,7 +205,7 @@ function renderRecentUpdates() {
   }];
   const localAgentItems = [{
     id: "local-agent-radar",
-    title: "Local Agent 熱門安裝",
+    title: "Local Agent 熱門",
     category: "Local-ready · Self-host",
     updatedAt: new Date().toISOString(),
     summary: "整理可本機執行、自架或下載研究的 Agent 專案，先看中文介紹與難度，再決定要不要試跑。",
