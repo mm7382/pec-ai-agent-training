@@ -128,6 +128,29 @@
     return section;
   }
 
+  function createContentSection(item) {
+    const fallback = [
+      item.excerptZh || item.originalExcerpt || "",
+      `這篇內容和 ${topicSignals(item).join("、")} 有關。閱讀時可以先掌握它討論的問題、使用到的模型或工具，以及它對 AI Agent 工作流程的實際影響。`,
+      "如果要把這篇變成學習材料，建議把可操作的部分拆成：背景問題、工具/模型、實作方法、限制風險、可以自己測試的任務。",
+    ].map((text) => compactText(text, 900)).filter(Boolean);
+    const paragraphs = Array.isArray(item.contentZh) && item.contentZh.length
+      ? item.contentZh.filter(Boolean)
+      : fallback;
+    if (!paragraphs.length) return null;
+    const section = document.createElement("section");
+    section.className = "article-section";
+    const title = document.createElement("h2");
+    title.textContent = "中文內容整理";
+    section.append(title);
+    for (const paragraph of paragraphs) {
+      const text = document.createElement("p");
+      text.textContent = paragraph;
+      section.append(text);
+    }
+    return section;
+  }
+
   function render({ item, period, data }) {
     document.title = `${item.titleZh || item.originalTitle} - AI Agent 熱門文章`;
     main.replaceChildren();
@@ -158,6 +181,7 @@
     why.append(whyTitle, whyText);
 
     const breakdown = createListSection("重點拆解", detailBullets(item));
+    const translatedContent = createContentSection(item);
     const excerpt = createExcerptSection(item);
     const tips = createListSection("閱讀建議", readingTips(item));
     const questions = createListSection("可以帶走的問題", discussionQuestions(item));
@@ -192,7 +216,9 @@
     back.href = `./ai-agent-daily.html`;
     back.textContent = "返回每日熱門";
 
-    const contentSections = [source, title, original, summary, why, breakdown];
+    const contentSections = [source, title, original, summary, why];
+    if (translatedContent) contentSections.push(translatedContent);
+    contentSections.push(breakdown);
     if (excerpt) contentSections.push(excerpt);
     contentSections.push(tips, questions, sourceSection, back);
     main.append(...contentSections);
