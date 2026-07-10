@@ -362,6 +362,26 @@ h3 {
   color: #f6cf74;
 }
 
+.local-subtitle {
+  color: #9bd23c;
+}
+
+.local-hot-list {
+  border: 1px solid rgba(155, 210, 60, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(155, 210, 60, 0.11), rgba(40, 198, 226, 0.04));
+  padding: 0 10px;
+}
+
+.local-hot-list .recent-update-item::before {
+  background: #9bd23c;
+  box-shadow: 0 0 16px rgba(155, 210, 60, 0.50);
+}
+
+.local-hot-list .recent-update-item span {
+  color: #b8ec72;
+}
+
 .lesson-update-list .recent-update-item {
   background: linear-gradient(90deg, rgba(184, 236, 114, 0.08), transparent 74%);
 }

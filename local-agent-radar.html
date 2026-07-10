@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Agent 熱門 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="每日與每週整理可本機執行、自架或下載研究的 Local Agent 熱門工具">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260710-local-agent">
+  <script src="./site-config.js?v=20260710-local-agent"></script>
+  <style>
+    .local-shell{width:min(1360px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
+    .local-hero{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px}
+    .local-panel,.local-note,.local-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+    .local-panel{min-height:280px;padding:30px;display:grid;align-content:end;background:linear-gradient(135deg,rgba(155,210,60,.18),rgba(40,198,226,.08)),var(--surface)}
+    .local-panel h1{max-width:850px;margin-bottom:14px}
+    .local-panel p{max-width:900px;color:var(--muted);line-height:1.75;font-size:17px}
+    .local-note{padding:20px}
+    .local-note h2{font-size:20px}
+    .local-note p,.local-note li{color:var(--muted);line-height:1.65}
+    .local-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 14px}
+    .local-tab{border:1px solid var(--line);border-radius:8px;background:rgba(220,235,242,.08);color:var(--ink);padding:10px 14px;font-weight:900}
+    .local-tab[aria-pressed="true"]{background:#9bd23c;color:#061014;border-color:#9bd23c}
+    .local-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:14px;color:var(--muted);font-size:13px}
+    .local-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .local-card{display:grid;gap:12px;min-height:420px;padding:16px;background:linear-gradient(145deg,rgba(155,210,60,.10),rgba(12,17,22,.86) 52%);box-shadow:0 12px 32px rgba(0,0,0,.20)}
+    .local-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .local-rank{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(155,210,60,.18);color:#c9f68d;font-weight:1000}
+    .local-ready{border:1px solid rgba(155,210,60,.42);border-radius:999px;padding:5px 8px;color:#b8ec72;font-size:11px;font-weight:950}
+    .local-name{font-size:19px;line-height:1.22;overflow-wrap:anywhere}
+    .local-summary{color:var(--muted);font-size:14px;line-height:1.58}
+    .local-tags,.local-metrics{display:flex;flex-wrap:wrap;gap:6px}
+    .local-tags span{border:1px solid rgba(40,198,226,.30);border-radius:999px;padding:4px 8px;color:var(--accent-strong);font-size:11px;font-weight:850}
+    .local-metrics span{border:1px solid var(--line);border-radius:7px;padding:5px 7px;color:rgba(220,235,242,.78);font-size:11px;font-weight:850}
+    .local-card p{margin:0}
+    .local-actions{display:grid;gap:8px;margin-top:auto}
+    .local-actions a{display:flex;align-items:center;justify-content:center;min-height:40px;border-radius:8px;text-decoration:none;font-weight:950;font-size:13px}
+    .local-detail-link{background:#9bd23c;color:#061014}
+    .local-source-link{border:1px solid var(--line);color:var(--ink);background:rgba(220,235,242,.07)}
+    .empty-local{padding:18px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);background:rgba(220,235,242,.04)}
+    @media(max-width:1180px){.local-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.local-hero{grid-template-columns:1fr}}
+    @media(max-width:640px){.local-shell{width:min(100vw - 20px,1360px);padding-top:10px}.local-panel{padding:20px;min-height:240px}.local-meta{align-items:flex-start;flex-direction:column}.local-grid{grid-template-columns:1fr}.local-card{min-height:auto}}
+  </style>
+</head>
+<body>
+  <main class="local-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>Local Agent 熱門</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="local-hero">
+      <article class="local-panel">
+        <h1>Local Agent 熱門</h1>
+        <p>整理可下載、可 self-host、可在自己電腦或伺服器研究的 Agent 工具。先看中文介紹、難度、適合對象與討論重點，再決定要不要試跑。</p>
+      </article>
+      <aside class="local-note">
+        <h2>資料說明</h2>
+        <p id="generatedAt">載入中...</p>
+        <ul id="notesList"></ul>
+      </aside>
+    </section>
+
+    <section>
+      <div class="local-tabs" role="tablist" aria-label="Local Agent 排行區間">
+        <button class="local-tab" type="button" data-period="daily" aria-pressed="true">每日前五</button>
+        <button class="local-tab" type="button" data-period="weekly" aria-pressed="false">每週前五</button>
+      </div>
+      <div class="local-meta">
+        <span id="sourceText">資料來源：載入中...</span>
+        <span id="periodDescription"></span>
+      </div>
+      <section class="local-grid" id="agentGrid" aria-label="Local Agent 排行"></section>
+      <p class="empty-local" id="emptyState" hidden>目前沒有可顯示的 Local Agent 資料。</p>
+    </section>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260710-local-agent"></script>
+  <script src="./local-agent-radar.js?v=20260710-local-agent"></script>
+  <script src="./feedback-widget.js?v=20260710-local-agent"></script>
+</body>
+</html>

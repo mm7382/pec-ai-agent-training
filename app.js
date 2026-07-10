@@ -24,6 +24,7 @@ const elements = {
   tutorialGrid: document.querySelector("#tutorialGrid"),
   githubHotList: document.querySelector("#githubHotList"),
   dailyHotList: document.querySelector("#dailyHotList"),
+  localAgentHotList: document.querySelector("#localAgentHotList"),
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
@@ -202,6 +203,14 @@ function renderRecentUpdates() {
     summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，先看中文簡介，再點進來源細讀。",
     url: "./ai-agent-daily.html",
   }];
+  const localAgentItems = [{
+    id: "local-agent-radar",
+    title: "Local Agent 每日 / 每週前五",
+    category: "Local-ready · Self-host",
+    updatedAt: new Date().toISOString(),
+    summary: "整理可本機執行、自架或下載研究的 Agent 專案，先看中文介紹與難度，再決定要不要試跑。",
+    url: "./local-agent-radar.html",
+  }];
   const recentItems = [...state.items]
     .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
@@ -237,6 +246,7 @@ function renderRecentUpdates() {
 
   elements.githubHotList.replaceChildren(...githubItems.map(createRecentNode));
   elements.dailyHotList.replaceChildren(...dailyItems.map(createRecentNode));
+  elements.localAgentHotList.replaceChildren(...localAgentItems.map(createRecentNode));
   elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 
