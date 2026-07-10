@@ -129,7 +129,7 @@
   async function init() {
     setupTabs();
     const response = await fetch("./ai-agent-daily.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("無法載入 AI Agent 每日熱門資料");
+    if (!response.ok) throw new Error("無法載入 AI Agent 熱門新聞資料");
     state.data = await response.json();
     render();
   }
