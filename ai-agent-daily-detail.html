@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Agent 熱門文章細節 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="AI Agent 熱門文章中文簡介、原文標題與來源網址">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260710-daily-radar">
+  <script src="./site-config.js?v=20260710-daily-radar"></script>
+  <style>
+    .article-shell{width:min(1180px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
+    .article-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;margin-top:22px;align-items:start}
+    .article-main,.article-side{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+    .article-main{padding:30px}
+    .article-side{padding:18px;position:sticky;top:18px}
+    .article-source{color:var(--accent-strong);font-size:12px;font-weight:950;text-transform:uppercase}
+    .article-title{font-size:clamp(34px,5vw,56px);line-height:1.05;margin:10px 0 14px;overflow-wrap:anywhere}
+    .article-original{color:#7f8c94;line-height:1.55;overflow-wrap:anywhere}
+    .article-summary{color:var(--muted);font-size:18px;line-height:1.7}
+    .article-section{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+    .article-section h2{font-size:23px;margin-bottom:10px}
+    .article-section p,.article-section li{color:var(--muted);line-height:1.75}
+    .article-metrics{display:grid;gap:8px}
+    .article-metrics div{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(220,235,242,.06)}
+    .article-metrics span{color:var(--muted);font-weight:850}
+    .article-metrics strong{text-align:right;overflow-wrap:anywhere}
+    .article-actions{display:grid;gap:10px;margin-top:14px}
+    .article-actions a{display:flex;justify-content:center;align-items:center;min-height:42px;border-radius:8px;text-decoration:none;font-weight:950}
+    .article-primary{background:var(--accent);color:#041216}
+    .article-secondary{border:1px solid var(--line);color:var(--ink);background:rgba(220,235,242,.08)}
+    .back-link{display:inline-flex;margin-top:16px;color:var(--accent-strong);font-weight:900;text-decoration:none}
+    @media(max-width:900px){.article-layout{grid-template-columns:1fr}.article-side{position:static}.article-main{padding:20px}.article-shell{width:min(100vw - 20px,1180px)}}
+  </style>
+</head>
+<body>
+  <main class="article-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>熱門文章細節</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="article-layout">
+      <article class="article-main" id="articleMain">
+        <p class="article-source">Loading</p>
+        <h1 class="article-title">載入中...</h1>
+      </article>
+      <aside class="article-side" id="articleSide"></aside>
+    </section>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260710-daily-radar"></script>
+  <script src="./ai-agent-daily-detail.js?v=20260710-daily-radar"></script>
+  <script src="./feedback-widget.js?v=20260710-daily-radar"></script>
+</body>
+</html>

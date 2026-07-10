@@ -23,6 +23,7 @@ const elements = {
   categoryFilters: document.querySelector("#categoryFilters"),
   tutorialGrid: document.querySelector("#tutorialGrid"),
   githubHotList: document.querySelector("#githubHotList"),
+  dailyHotList: document.querySelector("#dailyHotList"),
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
@@ -193,6 +194,14 @@ function formatDate(value) {
 
 function renderRecentUpdates() {
   const githubItems = state.items.filter((item) => item.id === "github-skill-rankings");
+  const dailyItems = [{
+    id: "ai-agent-daily-radar",
+    title: "AI Agent 每日熱門",
+    category: "Hacker News · Reddit",
+    updatedAt: new Date().toISOString(),
+    summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，先看中文簡介，再點進來源細讀。",
+    url: "./ai-agent-daily.html",
+  }];
   const recentItems = [...state.items]
     .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
@@ -227,6 +236,7 @@ function renderRecentUpdates() {
   };
 
   elements.githubHotList.replaceChildren(...githubItems.map(createRecentNode));
+  elements.dailyHotList.replaceChildren(...dailyItems.map(createRecentNode));
   elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 
