@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant" style="--resource-accent:#60a5fa;--resource-accent-soft:rgba(96,165,250,.13);--resource-accent-line:rgba(96,165,250,.34)">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hermes Agent 學習資料庫 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="公開 Hermes Agent 官方文件、GitHub、部署案例、影片教學與比較文章整理">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260711-resource-library">
+  <link rel="stylesheet" href="./resource-library.css?v=20260711-resource-library">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+</head>
+<body>
+  <main class="resource-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span><strong>AI Agent 教育訓練</strong><small>Hermes Agent 學習資料庫</small></span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden><span id="identityText"></span><button type="button" id="switchUserButton">切換</button></div>
+    </header>
+
+    <section class="resource-hero">
+      <article class="resource-panel">
+        <h1>Hermes Agent 學習資料庫</h1>
+        <p>整理公開 Hermes Agent 官方文件、GitHub、部署案例、影片教學與比較文章。先看中文簡介與重點，再回到來源深入研究。</p>
+        <div class="resource-stats">
+          <div><strong id="totalCount">—</strong><span>學習資源</span></div>
+          <div><strong id="categoryTotal">—</strong><span>分類</span></div>
+        </div>
+      </article>
+      <aside class="resource-note">
+        <h2>資料說明</h2>
+        <p id="updatedAt">載入中...</p>
+        <p id="methodText"></p>
+        <ul id="notesList"></ul>
+      </aside>
+    </section>
+
+    <section class="resource-controls" aria-label="Hermes Agent 資源搜尋與篩選">
+      <label class="resource-search"><span>搜尋資料</span><input id="searchInput" type="search" autocomplete="off" placeholder="輸入 memory、skills、provider、NVIDIA、YouTube..."></label>
+      <div><div class="resource-filter-label">分類</div><div class="resource-filter-row" id="categoryFilters"></div></div>
+      <div class="resource-sort-row" aria-label="排序方式">
+        <span class="resource-filter-label">排序</span>
+        <button class="resource-sort" type="button" data-sort="relevance" aria-pressed="true">精選排序</button>
+        <button class="resource-sort" type="button" data-sort="date" aria-pressed="false">最新</button>
+        <button class="resource-sort" type="button" data-sort="title" aria-pressed="false">標題 A-Z</button>
+      </div>
+    </section>
+
+    <div class="resource-meta"><span id="resultCount">載入中...</span><span id="sourceText"></span></div>
+    <section class="resource-grid" id="resourceGrid" aria-label="Hermes Agent 學習資料"></section>
+    <p class="resource-empty" id="emptyState" hidden>找不到符合的 Hermes Agent 資料。</p>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260711-resource-library"></script>
+  <script>window.RESOURCE_LIBRARY_CONFIG={title:"Hermes Agent 學習資料庫",dataUrl:"./hermes-agent-resources.json",detailUrl:"./hermes-agent-resource-detail.html",defaultSort:"relevance"};</script>
+  <script src="./resource-library.js?v=20260711-resource-library"></script>
+  <script src="./feedback-widget.js?v=20260711-resource-library"></script>
+</body>
+</html>

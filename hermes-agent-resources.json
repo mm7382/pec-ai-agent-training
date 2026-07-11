@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-07-11T00:00:00+08:00",
+  "title": "Hermes Agent 學習資料庫",
+  "description": "收集公開 Hermes Agent 官方文件、GitHub、部署案例、影片教學與比較文章，協助使用者理解與評估 Hermes。",
+  "selectionMethod": "只收公開網站與公開影片，不匯入 Michael 本機 Hermes agent 私人資料。優先官方、GitHub、NVIDIA 與高相關教學來源。",
+  "notes": [
+    "本頁只整理公開 Hermes Agent / Nous Research 相關資料。",
+    "不包含 Michael 本機 /Users/michaelchuang/agent 的私人 agent 設定、路徑、token、Telegram 或內部記憶。",
+    "每筆資料保留來源連結，詳細設定請以官方文件與 GitHub 為準。"
+  ],
+  "categories": [
+    "GitHub / 原始碼",
+    "Local LLM",
+    "安裝教學",
+    "官方入口",
+    "官方文件",
+    "工作流教學",
+    "影片教學",
+    "模型與 Provider",
+    "比較文章",
+    "部署案例"
+  ],
+  "items": [
+    {
+      "id": "hermes-official-site",
+      "title": "Hermes Agent 官方網站",
+      "sourceName": "Nous Research",
+      "sourceType": "Official",
+      "category": "官方入口",
+      "url": "https://hermes-agent.nousresearch.com/",
+      "publishedAt": "2026-07-11",
+      "summary": "Hermes Agent 的官方入口，介紹桌面安裝、Telegram / Discord / Slack / CLI 等多平台入口，以及 persistent memory、skills、自我學習等核心定位。",
+      "highlights": [
+        "適合作為第一站，先確認 Hermes Agent 的官方定位。",
+        "可下載桌面版或查看終端機安裝方式。",
+        "能快速理解 Hermes 和一般聊天工具的差異。"
+      ],
+      "audience": [
+        "第一次聽到 Hermes Agent 的使用者",
+        "想確認官方下載與產品定位的人"
+      ],
+      "detail": [
+        "官方網站把 Hermes 定位為會隨使用者成長的 open-source agent。它不是單純聊天介面，而是嘗試把記憶、技能、排程、多平台入口與工具執行整合在同一個 agent 系統。",
+        "學習時建議先看官方網站的功能區塊：Connect、Remember、Schedule、Build。這些區塊可以對應到 Agent 的四個核心能力：入口、記憶、時間、工具。"
+      ],
+      "tags": [
+        "Hermes Agent",
+        "Official",
+        "Desktop"
+      ]
+    },
+    {
+      "id": "hermes-docs",
+      "title": "Hermes Agent Docs",
+      "sourceName": "Nous Research Docs",
+      "sourceType": "Official Docs",
+      "category": "官方文件",
+      "url": "https://hermes-agent.nousresearch.com/docs/",
+      "publishedAt": "2026-07-11",
+      "summary": "官方文件入口，適合查安裝、providers、skills、integrations 與實際設定細節。",
+      "highlights": [
+        "適合當作實作時的查詢中心。",
+        "比二手文章更可靠。",
+        "可用來確認 providers、skills 與平台整合方式。"
+      ],
+      "audience": [
+        "要正式安裝 Hermes 的使用者",
+        "需要查設定細節的人"
+      ],
+      "detail": [
+        "Docs 是實作時最重要的來源。建議不要只看教學影片，因為 Hermes 這類 agent 工具更新快，安裝方式、provider 設定與權限細節應以官方文件為準。",
+        "如果要給團隊使用，可以把 Docs 拆成三條閱讀路線：安裝與 provider、skills 與 memory、部署與整合。"
+      ],
+      "tags": [
+        "Docs",
+        "Setup",
+        "Skills"
+      ]
+    },
+    {
+      "id": "hermes-quickstart",
+      "title": "Quickstart：從零到可用 Hermes",
+      "sourceName": "Nous Research Docs",
+      "sourceType": "Official Docs",
+      "category": "安裝教學",
+      "url": "https://hermes-agent.nousresearch.com/docs/getting-started/quickstart",
+      "publishedAt": "2026-07-11",
+      "summary": "官方快速開始文件，目標是從安裝、provider 設定到確認可聊天與排錯。",
+      "highlights": [
+        "適合第一次實作。",
+        "明確處理 provider 與基本驗證。",
+        "比散落影片更適合作為 SOP 來源。"
+      ],
+      "audience": [
+        "準備安裝 Hermes 的人",
+        "要寫內部安裝 SOP 的人"
+      ],
+      "detail": [
+        "Quickstart 的價值是建立一條最短可行路徑：安裝、設定模型供應商、驗證可用，再知道壞掉時怎麼查。",
+        "建議照文件做一次乾淨安裝，並記錄每一步出現的錯誤與解法。這些紀錄之後可以轉成自己的 troubleshooting 教材。"
+      ],
+      "tags": [
+        "Quickstart",
+        "Install",
+        "Provider"
+      ]
+    },
+    {
+      "id": "hermes-github",
+      "title": "NousResearch / hermes-agent GitHub Repo",
+      "sourceName": "GitHub",
+      "sourceType": "Source Code",
+      "category": "GitHub / 原始碼",
+      "url": "https://github.com/nousresearch/hermes-agent",
+      "publishedAt": "2026-07-11",
+      "summary": "Hermes Agent 原始碼與 README，適合查看專案活躍度、授權、安裝方式、issues 與 release。",
+      "highlights": [
+        "確認專案是否活躍與社群討論。",
+        "可查看 README、license、issues、pull requests。",
+        "適合工程師評估是否要深入研究。"
+      ],
+      "audience": [
+        "工程師",
+        "想評估 open-source 風險的人"
+      ],
+      "detail": [
+        "GitHub repo 是判斷工具是否值得導入的重要來源。除了看 stars，更應該看最近 commit、issues、PR、release、安裝文件與 license。",
+        "對公開網站來說，GitHub 連結也能讓使用者回到原始碼與官方說明，避免只依賴二手整理。"
+      ],
+      "tags": [
+        "GitHub",
+        "Open Source",
+        "MIT"
+      ]
+    },
+    {
+      "id": "hermes-ai-providers",
+      "title": "AI Providers：Hermes 的模型供應商設定",
+      "sourceName": "Nous Research Docs",
+      "sourceType": "Official Docs",
+      "category": "模型與 Provider",
+      "url": "https://hermes-agent.nousresearch.com/docs/integrations/providers",
+      "publishedAt": "2026-07-11",
+      "summary": "官方 provider 文件，說明如何設定 OpenRouter、Anthropic、OpenAI、Ollama、vLLM 等雲端或自架模型。",
+      "highlights": [
+        "Hermes 不綁單一模型。",
+        "適合比較雲端 API 與 local/self-host 模型。",
+        "是成本、速度與資料安全評估的關鍵文件。"
+      ],
+      "audience": [
+        "想接不同 LLM provider 的使用者",
+        "需要評估成本與資料安全的人"
+      ],
+      "detail": [
+        "Provider 設定決定 Hermes 實際使用哪個模型，也影響成本、速度、穩定性與資料邊界。導入前應先決定哪些任務可用雲端模型，哪些任務需要本機或自架模型。",
+        "建議把 provider 選型列成表格：模型能力、價格、延遲、資料政策、fallback 方式與可用工具。"
+      ],
+      "tags": [
+        "Provider",
+        "OpenAI",
+        "Anthropic",
+        "Ollama"
+      ]
+    },
+    {
+      "id": "nvidia-rtx-hermes",
+      "title": "NVIDIA：Hermes Unlocks Self-Improving AI Agents",
+      "sourceName": "NVIDIA Blog",
+      "sourceType": "Blog",
+      "category": "部署案例",
+      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/",
+      "publishedAt": "2026-05-13",
+      "summary": "NVIDIA 介紹 Hermes 在 RTX PCs 與 DGX Spark 上的 self-improving agent 使用場景。",
+      "highlights": [
+        "提供硬體與部署角度。",
+        "適合理解 Hermes 在本機 / 工作站的應用想像。",
+        "可和 Local Agent 主題連接。"
+      ],
+      "audience": [
+        "關心本機運算與 RTX 工作站的人",
+        "想理解 Hermes 部署情境的人"
+      ],
+      "detail": [
+        "這篇文章的重點在於把 Hermes 放到本機硬體與工作站場景中看待。對需要資料留在本地或希望利用 GPU 資源的人，它提供了另一種思考路線。",
+        "閱讀時建議注意：哪些任務適合 local workstation，哪些仍適合 cloud agent；不要把「可本機跑」直接等於「一定適合本機跑」。"
+      ],
+      "tags": [
+        "NVIDIA",
+        "RTX",
+        "Local Agent"
+      ]
+    },
+    {
+      "id": "nvidia-nemoclaw-hermes",
+      "title": "NVIDIA Developer：Hermes Agent + NemoClaw 研究流程",
+      "sourceName": "NVIDIA Developer",
+      "sourceType": "Technical Blog",
+      "category": "部署案例",
+      "url": "https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw/",
+      "publishedAt": "2026-06-01",
+      "summary": "技術文章展示 Hermes Agent 與 NVIDIA NemoClaw 如何用於產品研究、Outlook、Slack、GitHub 等工作流程。",
+      "highlights": [
+        "比一般介紹更偏實作架構。",
+        "涵蓋工作流、工具權限與安全 runtime。",
+        "適合進階使用者研究企業導入。"
+      ],
+      "audience": [
+        "進階工程師",
+        "想設計研究 agent 或企業 agent 的人"
+      ],
+      "detail": [
+        "這篇文章值得看的地方是，它不是只介紹 Hermes，而是把 Hermes 放進跨工具研究流程：信件、Slack、GitHub、研究資料與安全 runtime。這比較接近真實企業工作流。",
+        "閱讀時建議整理出架構圖：資料來源、agent 執行環境、工具權限、輸出成果、人工審查點。這會比只看文字更容易轉成自己的 SOP。"
+      ],
+      "tags": [
+        "NVIDIA",
+        "NemoClaw",
+        "Workflow",
+        "Security"
+      ]
+    },
+    {
+      "id": "hermes-youtube-nate",
+      "title": "Hermes Agent: Zero to Personal AI Assistant",
+      "sourceName": "Nate Herk | AI Automation",
+      "sourceType": "YouTube",
+      "category": "影片教學",
+      "url": "https://www.youtube.com/watch?v=gb5TlGw6Uks",
+      "publishedAt": "2026-05-10",
+      "summary": "一小時 Hermes Agent 教學，觀看數高，適合從個人 AI assistant 角度理解 Hermes。",
+      "highlights": [
+        "Hermes YouTube 教學中觀看數較高。",
+        "適合從個人助理情境入門。",
+        "可和官方 Quickstart 搭配。"
+      ],
+      "audience": [
+        "想用 Hermes 做個人助理的人",
+        "偏好影片學習的人"
+      ],
+      "detail": [
+        "這支影片適合作為官方文件之外的實作參考。建議先看官方 Quickstart，再看影片理解操作節奏與實際畫面。",
+        "影片內容應當作學習輔助，不應取代官方文件；若安裝步驟與官方文件不同，以官方文件為準。"
+      ],
+      "tags": [
+        "YouTube",
+        "Tutorial",
+        "Assistant"
+      ]
+    },
+    {
+      "id": "hermes-youtube-parker",
+      "title": "The Only Hermes Agent Tutorial You'll Need in 2026",
+      "sourceName": "Parker Prompts",
+      "sourceType": "YouTube",
+      "category": "影片教學",
+      "url": "https://www.youtube.com/watch?v=8bYMgvJt5Ws",
+      "publishedAt": "2026-05-27",
+      "summary": "短版 Hermes 教學，適合快速看懂 setup 與基本使用方式。",
+      "highlights": [
+        "影片較短，適合快速掃過。",
+        "可當作新手預習。",
+        "適合搭配官方文件驗證細節。"
+      ],
+      "audience": [
+        "想快速了解 Hermes 的人",
+        "沒時間看長課程的人"
+      ],
+      "detail": [
+        "短影片的優點是快速，但缺點是細節容易不足。建議把它當作入口，先理解 Hermes 的主要步驟，再回官方文件做正式安裝。",
+        "如果要分享給同事，這類影片適合先建立興趣；真正落地仍要有內部 SOP 與安全設定。"
+      ],
+      "tags": [
+        "YouTube",
+        "Quick Tutorial"
+      ]
+    },
+    {
+      "id": "hermes-youtube-local-lm",
+      "title": "How to Run Hermes Agent Natively on LM Studio",
+      "sourceName": "YouTube",
+      "sourceType": "YouTube",
+      "category": "Local LLM",
+      "url": "https://www.youtube.com/watch?v=6aRi8mhQTvU",
+      "publishedAt": "2026-05-01",
+      "summary": "示範 Hermes Agent 搭配 LM Studio 與本機模型的方向，適合想研究 local model 的使用者。",
+      "highlights": [
+        "連接 Hermes 與 Local LLM 主題。",
+        "適合關心資料安全與本機模型的人。",
+        "可作為 provider 設定的延伸學習。"
+      ],
+      "audience": [
+        "Local LLM 使用者",
+        "想降低雲端 API 依賴的人"
+      ],
+      "detail": [
+        "這類教學的重點不是所有任務都改成本機，而是理解如何讓 Hermes 連到本機模型供應環境。需要同時評估模型能力、速度、context、工具呼叫穩定性與硬體負載。",
+        "建議先用非敏感任務測試，確認品質與速度後，再評估是否要把特定工作搬到 local model。"
+      ],
+      "tags": [
+        "LM Studio",
+        "Local LLM",
+        "Provider"
+      ]
+    },
+    {
+      "id": "felo-hermes-workflow",
+      "title": "Felo：Hermes Agent Research Workflow 教學",
+      "sourceName": "Felo AI Blog",
+      "sourceType": "Tutorial",
+      "category": "工作流教學",
+      "url": "https://felo.ai/blog/hermes-agent-tutorial-research-workflow/",
+      "publishedAt": "2026-05-01",
+      "summary": "教學如何用 Hermes Agent 搭配 Felo Search、Web Fetch、X Search 與 LiveDoc 建立研究流程。",
+      "highlights": [
+        "提供具體 research workflow。",
+        "適合想把 Hermes 用在研究與資料整理的人。",
+        "可借鑑 skill chaining 的設計。"
+      ],
+      "audience": [
+        "研究工作者",
+        "需要整理網路資料的人"
+      ],
+      "detail": [
+        "這篇文章的價值在於把 Hermes 放到研究流程中：搜尋、擷取、追蹤社群訊號、整理成知識庫、再自動化。這比單純聊天更接近 agent 的真正用途。",
+        "閱讀時可以把流程拆成 skill chain，思考哪些步驟需要人工審查，哪些可以排程自動執行。"
+      ],
+      "tags": [
+        "Research",
+        "Workflow",
+        "Felo"
+      ]
+    },
+    {
+      "id": "mindstudio-hermes-openclaw",
+      "title": "MindStudio：What Is Hermes Agent?",
+      "sourceName": "MindStudio Blog",
+      "sourceType": "Blog",
+      "category": "比較文章",
+      "url": "https://www.mindstudio.ai/blog/what-is-hermes-agent-openclaw-alternative",
+      "publishedAt": "2026-03-27",
+      "summary": "從 OpenClaw alternative 的角度介紹 Hermes Agent 與 built-in learning loop。",
+      "highlights": [
+        "適合和 OpenClaw 分頁搭配閱讀。",
+        "用比較角度理解 Hermes 差異。",
+        "適合工具選型前建立背景知識。"
+      ],
+      "audience": [
+        "正在比較 OpenClaw / Hermes 的人",
+        "想理解 self-improving agent 的人"
+      ],
+      "detail": [
+        "這類比較文章適合用來建立問題意識：Hermes 到底解決 OpenClaw 或其他 agent 的哪類痛點？但具體安裝與功能仍應回官方文件確認。",
+        "閱讀時建議把比較拆成：記憶、skills、部署、平台整合、安全性、維護與社群活躍度。"
+      ],
+      "tags": [
+        "Comparison",
+        "OpenClaw",
+        "Learning Loop"
+      ]
+    }
+  ]
+}

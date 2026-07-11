@@ -1,0 +1,537 @@
+{
+  "generatedAt": "2026-07-11T00:00:00+08:00",
+  "title": "AI 影片精選",
+  "description": "精選國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化工作流影片，附中文整理與學習重點。",
+  "selectionMethod": "以 YouTube 搜尋候選結果為基礎，綜合觀看數、發布時間、主題關聯度、教學完整度與中英文覆蓋度手動精選。",
+  "notes": [
+    "只收 AI Agent / AI Coding / 自動化工作流相關影片，不收泛 ChatGPT 技巧或純生成式影音工具。",
+    "英文影片保留原標題，並提供中文整理與學習重點。",
+    "觀看數與日期來自 2026/07/11 以 yt-dlp 擷取的公開 YouTube metadata，可能會隨時間變動。"
+  ],
+  "categories": [
+    "AI Agent 入門",
+    "AI Agent 治理 / 記憶",
+    "AI Agent 趨勢 / 比較",
+    "Claude Code / Claude Cowork",
+    "Codex / OpenAI",
+    "Local / Agentic Coding",
+    "MCP / 工具串接",
+    "自動化工作流"
+  ],
+  "items": [
+    {
+      "id": "FwOTs4UxQS4",
+      "title": "AI Agents, Clearly Explained",
+      "channel": "Jeff Su",
+      "url": "https://www.youtube.com/watch?v=FwOTs4UxQS4",
+      "thumbnail": "https://i.ytimg.com/vi/FwOTs4UxQS4/hqdefault.jpg",
+      "publishedAt": "20250408",
+      "duration": "10:09",
+      "viewCount": 4593833,
+      "category": "AI Agent 入門",
+      "language": "英文",
+      "summary": "用白話方式解釋 AI Agent 和一般聊天機器人的差異，適合先建立共同語言。",
+      "highlights": [
+        "Agent 的核心不是回答，而是能規劃、使用工具與完成任務。",
+        "適合放在學習路線第一站，先看懂 agentic workflow。",
+        "觀看數高，適合作為非工程背景同事的入門影片。"
+      ],
+      "audience": [
+        "剛開始學 AI Agent 的同事",
+        "需要向團隊解釋 Agent 概念的人"
+      ],
+      "detail": [
+        "這支影片的價值在於把 AI Agent 拆成容易理解的行為：理解目標、拆解任務、呼叫工具、回報結果。看完後可以回到自己的工作，檢查哪些任務只是問答，哪些任務其實可以變成 Agent 流程。",
+        "建議觀看時不要急著記工具名稱，而是整理出「人給什麼任務、Agent 能拿到什麼工具、最後如何驗收」三個欄位。這會讓後續學 Claude Code、Codex、MCP 或 Hermes 時更容易接上。"
+      ],
+      "tags": [
+        "AI Agent",
+        "入門",
+        "Workflow"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "GuTcle5edjk",
+      "title": "you need to learn MCP RIGHT NOW!! (Model Context Protocol)",
+      "channel": "NetworkChuck",
+      "url": "https://www.youtube.com/watch?v=GuTcle5edjk",
+      "thumbnail": "https://i.ytimg.com/vi/GuTcle5edjk/hqdefault.jpg",
+      "publishedAt": "20250912",
+      "duration": "38:40",
+      "viewCount": 1585737,
+      "category": "MCP / 工具串接",
+      "language": "英文",
+      "summary": "高觀看數 MCP 教學，說明 Model Context Protocol 為什麼會成為 AI Agent 串接工具的重要概念。",
+      "highlights": [
+        "觀看數高，主題熱。",
+        "適合理解 MCP 為什麼重要。",
+        "對想做工具串接的人很有幫助。"
+      ],
+      "audience": [
+        "想理解 MCP 的使用者",
+        "要把 AI 接到工具或資料源的人"
+      ],
+      "detail": [
+        "MCP 的重點不是新名詞，而是讓 AI Agent 能用標準方式連到外部工具與資料。這支影片適合用來理解為什麼 agent 不能只靠聊天，還需要工具協定。",
+        "建議觀看時整理出三件事：MCP server 是什麼、client 如何使用工具、權限與安全邊界要如何處理。"
+      ],
+      "tags": [
+        "MCP",
+        "Tool Calling",
+        "Agent Integration"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "7j1t3UZA1TY",
+      "title": "MCP vs API: Simplifying AI Agent Integration with External Data",
+      "channel": "IBM Technology",
+      "url": "https://www.youtube.com/watch?v=7j1t3UZA1TY",
+      "thumbnail": "https://i.ytimg.com/vi/7j1t3UZA1TY/hqdefault.jpg",
+      "publishedAt": "20250505",
+      "duration": "13:10",
+      "viewCount": 1162684,
+      "category": "MCP / 工具串接",
+      "language": "英文",
+      "summary": "IBM 以 MCP vs API 的角度解釋 AI Agent 如何整合外部資料，適合想建立正確工程概念的人。",
+      "highlights": [
+        "IBM Technology 來源穩定。",
+        "用 API 對照 MCP，適合工程理解。",
+        "適合補足工具串接基本概念。"
+      ],
+      "audience": [
+        "工程師",
+        "需要向團隊解釋 MCP 的人"
+      ],
+      "detail": [
+        "這支影片適合已經知道 API 但不理解 MCP 的人。重點是看 MCP 如何把工具能力描述給模型，讓 Agent 在任務中更穩定地選用工具。",
+        "對企業導入來說，影片可引出安全問題：不是讓 AI 任意使用 API，而是透過明確協定、權限與審查來控制工具行為。"
+      ],
+      "tags": [
+        "MCP",
+        "API",
+        "IBM"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "UngVdAsQEiU",
+      "title": "The Best Local Agentic Coding Workflow (Complete Guide)",
+      "channel": "Web Dev Simplified",
+      "url": "https://www.youtube.com/watch?v=UngVdAsQEiU",
+      "thumbnail": "https://i.ytimg.com/vi/UngVdAsQEiU/hqdefault.jpg",
+      "publishedAt": "20260512",
+      "duration": "44:57",
+      "viewCount": 653535,
+      "category": "Local / Agentic Coding",
+      "language": "英文",
+      "summary": "Web Dev Simplified 的本機 agentic coding workflow 完整指南，適合想建置穩定 local coding 工作流的人。",
+      "highlights": [
+        "主題貼近 Local Agent。",
+        "觀看數高，內容偏實作。",
+        "適合想把工具串成工作流的人。"
+      ],
+      "audience": [
+        "工程師",
+        "想做本機 AI coding workflow 的人"
+      ],
+      "detail": [
+        "這支影片適合用來理解本機 coding agent workflow 的組成：編輯器、模型、終端機、版本控制、驗收流程。重點不是單一工具，而是整體工作流如何閉環。",
+        "看完後可以把自己的 coding 流程分成探索、修改、測試、review 四階段，再決定哪些步驟交給 agent，哪些步驟保留人工判斷。"
+      ],
+      "tags": [
+        "Local Agent",
+        "AI Coding",
+        "Workflow"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "xo7dE80ktu4",
+      "title": "Claude Code 零基礎入門（上）｜非工程師也能打造 AI 助理的詳細配置教學",
+      "channel": "柚智夫妻 X 雷蒙三十",
+      "url": "https://www.youtube.com/watch?v=xo7dE80ktu4",
+      "thumbnail": "https://i.ytimg.com/vi/xo7dE80ktu4/hqdefault.jpg",
+      "publishedAt": "20260408",
+      "duration": "35:08",
+      "viewCount": 601020,
+      "category": "Claude Code / Claude Cowork",
+      "language": "中文",
+      "summary": "中文圈高觀看數 Claude Code 入門，適合非工程背景理解如何用 AI 做出實際助理。",
+      "highlights": [
+        "中文講解降低入門門檻。",
+        "適合想把 AI 從聊天升級到交付成果的人。",
+        "可和本站 Claude / Codex 教材搭配。"
+      ],
+      "audience": [
+        "非工程背景使用者",
+        "想從 Claude Code 開始做 AI 助理的人"
+      ],
+      "detail": [
+        "這支影片適合用來理解「AI 幫我想答案」和「AI 幫我完成一段工作」之間的差別。對非工程背景的人來說，重點是看它如何設定環境、交辦任務、讓 AI 逐步產出成果。",
+        "建議看完後立刻挑一個自己的文件整理、資料分類或簡單網頁任務，照著影片思路做一次，才會真正理解 Claude Code 類工具的價值。"
+      ],
+      "tags": [
+        "Claude Code",
+        "中文",
+        "非工程師"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "EsTrWCV0Ph4",
+      "title": "AI Agents Full Course 2026: Master Agentic AI (2 Hours)",
+      "channel": "Nick Saraev",
+      "url": "https://www.youtube.com/watch?v=EsTrWCV0Ph4",
+      "thumbnail": "https://i.ytimg.com/vi/EsTrWCV0Ph4/hqdefault.jpg",
+      "publishedAt": "20260308",
+      "duration": "2:13:14",
+      "viewCount": 492968,
+      "category": "AI Agent 入門",
+      "language": "英文",
+      "summary": "兩小時完整課程，涵蓋 agentic AI 的基本概念、工具與實作方向。",
+      "highlights": [
+        "適合一次建立完整地圖，不只看單一工具。",
+        "內容長，適合作為週末深度學習材料。",
+        "可搭配網站上的學習路線分段消化。"
+      ],
+      "audience": [
+        "想系統學 AI Agent 的使用者",
+        "需要完整課程而不是短片的人"
+      ],
+      "detail": [
+        "這類長課程的用法不是一次看完，而是先用章節概念建立學習地圖。建議先看前段概念，再把工具實作、workflow、自動化部分拆成待練習清單。",
+        "如果使用者已經看過短入門影片，可以把這支當成補全用：確認自己是否理解 Agent、工具呼叫、記憶、任務分解、人工審查等基本模組。"
+      ],
+      "tags": [
+        "AI Agent",
+        "完整課程",
+        "Agentic AI"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "HFM3se4lNiw",
+      "title": "Introducing the Codex app",
+      "channel": "OpenAI",
+      "url": "https://www.youtube.com/watch?v=HFM3se4lNiw",
+      "thumbnail": "https://i.ytimg.com/vi/HFM3se4lNiw/hqdefault.jpg",
+      "publishedAt": "20260202",
+      "duration": "4:21",
+      "viewCount": 455674,
+      "category": "Codex / OpenAI",
+      "language": "英文",
+      "summary": "OpenAI 官方 Codex app 介紹，適合了解 Codex 在雲端代理、任務委派與開發流程中的定位。",
+      "highlights": [
+        "官方來源，可信度高。",
+        "適合快速理解 Codex app 的產品定位。",
+        "可和本站 Codex 教材互相補充。"
+      ],
+      "audience": [
+        "想了解 OpenAI Codex 的使用者",
+        "比較 Claude Code 與 Codex 的人"
+      ],
+      "detail": [
+        "這支影片不是完整教學，而是看產品定位最有效。重點是理解 Codex 不只是補程式碼，而是可以把任務交給 agent 處理，再由人審查結果。",
+        "建議搭配本站 Codex 相關教材，從「如何交辦」和「如何驗收」兩個角度看，而不是只看功能展示。"
+      ],
+      "tags": [
+        "Codex",
+        "OpenAI",
+        "官方"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "GuaKeDS6UKU",
+      "title": "n8n Quick Start Tutorial: Build Your First AI Agent [2026]",
+      "channel": "n8n",
+      "url": "https://www.youtube.com/watch?v=GuaKeDS6UKU",
+      "thumbnail": "https://i.ytimg.com/vi/GuaKeDS6UKU/hqdefault.jpg",
+      "publishedAt": "20260213",
+      "duration": "20:51",
+      "viewCount": 425284,
+      "category": "自動化工作流",
+      "language": "英文",
+      "summary": "n8n 官方快速教學，示範如何建立第一個 AI Agent 自動化流程。",
+      "highlights": [
+        "官方 n8n 教學。",
+        "適合低程式碼自動化入門。",
+        "和 AI workflow 主題高度相關。"
+      ],
+      "audience": [
+        "想用低程式碼做自動化的人",
+        "PM、營運、行銷或非工程背景使用者"
+      ],
+      "detail": [
+        "這支影片適合想把 AI Agent 接到業務流程的人。n8n 的價值是把觸發條件、資料處理、AI 判斷與後續動作串成流程。",
+        "看完後可以挑一個簡單流程練習，例如表單進來後分類、摘要、通知或建立任務。"
+      ],
+      "tags": [
+        "n8n",
+        "Automation",
+        "AI Workflow"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "M-NTwkM3VwM",
+      "title": "Local AI Agents In 26 Minutes",
+      "channel": "Tina Huang",
+      "url": "https://www.youtube.com/watch?v=M-NTwkM3VwM",
+      "thumbnail": "https://i.ytimg.com/vi/M-NTwkM3VwM/hqdefault.jpg",
+      "publishedAt": "20260415",
+      "duration": "26:00",
+      "viewCount": 360381,
+      "category": "Local / Agentic Coding",
+      "language": "英文",
+      "summary": "Tina Huang 的 Local AI Agents 短時間入門，適合想快速理解本機 Agent 能做什麼的人。",
+      "highlights": [
+        "短時間建立概念。",
+        "適合非重度工程使用者。",
+        "可和 Local Agent 熱門安裝分頁搭配。"
+      ],
+      "audience": [
+        "想快速理解 Local Agent 的人",
+        "擔心資料外流、想用本機模型的人"
+      ],
+      "detail": [
+        "本機 Agent 的價值在於控制資料、成本與環境。這支影片適合用來理解 local AI agent 的基本能力與限制。",
+        "觀看後建議回到自己的需求：是否真的需要本機？資料是否敏感？效能是否足夠？工具與模型如何維護？"
+      ],
+      "tags": [
+        "Local AI",
+        "Local Agent",
+        "入門"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "qYqIhX9hTQk",
+      "title": "FULL Claude Code Tutorial for Beginners in 2026! (Step-By-Step)",
+      "channel": "Tech With Tim",
+      "url": "https://www.youtube.com/watch?v=qYqIhX9hTQk",
+      "thumbnail": "https://i.ytimg.com/vi/qYqIhX9hTQk/hqdefault.jpg",
+      "publishedAt": "20260329",
+      "duration": "15:09",
+      "viewCount": 358049,
+      "category": "Claude Code / Claude Cowork",
+      "language": "英文",
+      "summary": "Tech With Tim 的 Claude Code 初學者教學，適合工程與半工程使用者快速熟悉基本流程。",
+      "highlights": [
+        "講解節奏清楚，適合第一次操作 Claude Code。",
+        "涵蓋從 setup 到實際任務的基本路徑。",
+        "可作為英文版 Claude Code 入門補充。"
+      ],
+      "audience": [
+        "工程師",
+        "想理解 Claude Code 基本操作的人"
+      ],
+      "detail": [
+        "這支影片可用來補足英文工具介面與實際開發流程的理解。觀看時建議注意：如何描述需求、如何讓 AI 讀專案、如何檢查修改、如何避免把不相關檔案改壞。",
+        "對團隊導入來說，影片中的流程可以轉成內部 SOP：先定義任務、再讓 agent 探索、最後用測試或人工 review 驗收。"
+      ],
+      "tags": [
+        "Claude Code",
+        "Coding Agent",
+        "Tutorial"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "tfeCwDT-5m0",
+      "title": "Codex保姆級完整教學：從入門到進階，自動生成內容、網頁、影片和App，快速學會指揮你的超級AI Agent #chatgpt #codex",
+      "channel": "學長Ethan",
+      "url": "https://www.youtube.com/watch?v=tfeCwDT-5m0",
+      "thumbnail": "https://i.ytimg.com/vi/tfeCwDT-5m0/hqdefault.jpg",
+      "publishedAt": "20260504",
+      "duration": "29:54",
+      "viewCount": 239285,
+      "category": "Codex / OpenAI",
+      "language": "中文",
+      "summary": "中文 Codex 保姆級教學，適合想快速理解 Codex 如何產出網頁、內容與 App 的使用者。",
+      "highlights": [
+        "中文解說，容易分享給同事。",
+        "強調從入門到進階的操作情境。",
+        "適合非工程背景評估 Codex 能做什麼。"
+      ],
+      "audience": [
+        "中文使用者",
+        "想用 Codex 做內容或 App 的初學者"
+      ],
+      "detail": [
+        "這支影片可用來建立「Codex 可以被指揮完成成果」的直覺。觀看時建議把展示拆成不同任務類型：內容生成、網頁建立、影片或 App 流程，再判斷哪些適合自己工作。",
+        "對初學者而言，重點是學會描述成果，不只是問問題。看完可以挑一個小網頁或資料整理任務做練習。"
+      ],
+      "tags": [
+        "Codex",
+        "中文",
+        "AI Agent"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "AYQtRqW1xX4",
+      "title": "How to Build & Sell AI Agents in 2026: Ultimate Beginner’s Guide",
+      "channel": "Liam Ottley",
+      "url": "https://www.youtube.com/watch?v=AYQtRqW1xX4",
+      "thumbnail": "https://i.ytimg.com/vi/AYQtRqW1xX4/hqdefault.jpg",
+      "publishedAt": "20260322",
+      "duration": "3:05:03",
+      "viewCount": 209950,
+      "category": "自動化工作流",
+      "language": "英文",
+      "summary": "從商業角度講如何建立與銷售 AI Agents，適合想理解實際應用場景與商業化的人。",
+      "highlights": [
+        "內容長，偏商業與實戰。",
+        "適合找 AI Agent 應用案例。",
+        "可協助使用者從工具轉向解決問題。"
+      ],
+      "audience": [
+        "想用 AI Agent 解決客戶問題的人",
+        "業務、PM、創業者"
+      ],
+      "detail": [
+        "這支影片的價值在於把 AI Agent 放回商業問題，而不是只看技術。觀看時可以注意它如何選 use case、如何估算價值、如何設計交付方式。",
+        "對內部學習來說，可以把影片當成案例思考：哪些流程有明確 ROI？哪些任務可以先做 MVP？"
+      ],
+      "tags": [
+        "AI Agent",
+        "Business",
+        "Automation"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "KXIdYEdOPys",
+      "title": "Codex Full Course 2026: The NEW Best AI Coding Tool",
+      "channel": "Riley Brown",
+      "url": "https://www.youtube.com/watch?v=KXIdYEdOPys",
+      "thumbnail": "https://i.ytimg.com/vi/KXIdYEdOPys/hqdefault.jpg",
+      "publishedAt": "20260420",
+      "duration": "1:43:13",
+      "viewCount": 181170,
+      "category": "Codex / OpenAI",
+      "language": "英文",
+      "summary": "Codex 長課程，適合想把 Codex 當作主要 AI coding agent 的使用者。",
+      "highlights": [
+        "觀看數高，內容完整。",
+        "適合從零到實作的學習節奏。",
+        "可作為 Codex 深度練習材料。"
+      ],
+      "audience": [
+        "想深入用 Codex 做專案的人",
+        "想比較 Claude Code / Codex 的工程使用者"
+      ],
+      "detail": [
+        "長課程適合分段看：先看 setup 和基本任務，再看如何處理真實專案、部署或 debug。看完後可把自己的任務分成小 tickets，練習交給 Codex 分批完成。",
+        "學習重點不在背指令，而是建立一套可重複的交辦方式：任務背景、限制、驗收標準、測試方式、回報格式。"
+      ],
+      "tags": [
+        "Codex",
+        "AI Coding",
+        "Full Course"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "xFPiU5sit7g",
+      "title": "Codex 新手教學，非技術人員也能上手的 AI Agent 新手指南",
+      "channel": "Gary Chen",
+      "url": "https://www.youtube.com/watch?v=xFPiU5sit7g",
+      "thumbnail": "https://i.ytimg.com/vi/xFPiU5sit7g/hqdefault.jpg",
+      "publishedAt": "20260614",
+      "duration": "17:56",
+      "viewCount": 161515,
+      "category": "Codex / OpenAI",
+      "language": "中文",
+      "summary": "針對非技術人員的 Codex 新手教學，適合想讓同事快速上手 AI Agent 工作方式。",
+      "highlights": [
+        "明確面向非技術人員。",
+        "適合做內部推廣入門材料。",
+        "發布時間近，貼近目前工具狀態。"
+      ],
+      "audience": [
+        "非技術同事",
+        "想第一次使用 Codex 的人"
+      ],
+      "detail": [
+        "這支影片適合放給沒有工程背景的人看，讓他們理解 Codex 類 agent 可以如何協助文件、資料、簡單程式或網頁工作。",
+        "看完後建議讓使用者用自己的工作任務寫一份 brief，再用 AI 產出初版成果，學習會比單純觀看有效。"
+      ],
+      "tags": [
+        "Codex",
+        "非技術",
+        "中文"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "ZEkNF43jHzo",
+      "title": "Openclaw快不行了？AI Agent大洗牌！矽谷工程師還用小龍蝦嗎？｜Kelly Tsai",
+      "channel": "Kelly Tsai",
+      "url": "https://www.youtube.com/watch?v=ZEkNF43jHzo",
+      "thumbnail": "https://i.ytimg.com/vi/ZEkNF43jHzo/hqdefault.jpg",
+      "publishedAt": "20260520",
+      "duration": "18:43",
+      "viewCount": 50182,
+      "category": "AI Agent 趨勢 / 比較",
+      "language": "中文",
+      "summary": "從 OpenClaw 與 AI Agent 生態變化切入，適合了解工具汰換與選型思路。",
+      "highlights": [
+        "中文趨勢討論。",
+        "適合和 OpenClaw / Hermes 分頁搭配。",
+        "幫助使用者理解工具會變，但選型邏輯要穩定。"
+      ],
+      "audience": [
+        "想了解 AI Agent 生態變化的人",
+        "正在比較工具的人"
+      ],
+      "detail": [
+        "這支影片適合作為趨勢觀察，不應只看結論說哪個工具好。更重要的是看工具為什麼會被替換：安全性、維護、工作流穩定性、使用門檻、社群活躍度。",
+        "看完後建議建立自己的選型表：安裝難度、資料安全、工具串接、社群、更新頻率、適用任務。"
+      ],
+      "tags": [
+        "OpenClaw",
+        "Hermes",
+        "趨勢",
+        "中文"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "GRhg_ZZswmQ",
+      "title": "AI Agent 怎麼訓練？Claude Code 與 Codex 雙棲記憶系統、對話管理、AI 分工誤區｜直播精華",
+      "channel": "柚智夫妻 X 雷蒙三十",
+      "url": "https://www.youtube.com/watch?v=GRhg_ZZswmQ",
+      "thumbnail": "https://i.ytimg.com/vi/GRhg_ZZswmQ/hqdefault.jpg",
+      "publishedAt": "20260710",
+      "duration": "14:40",
+      "viewCount": 6127,
+      "category": "AI Agent 治理 / 記憶",
+      "language": "中文",
+      "summary": "中文直播精華，討論 Claude Code、Codex、記憶系統、對話管理與 AI 分工誤區。",
+      "highlights": [
+        "非常貼近本站 AI Agent 治理主題。",
+        "發布新，內容聚焦記憶與分工。",
+        "適合已經開始用 agent 的進階使用者。"
+      ],
+      "audience": [
+        "已經使用 Claude Code / Codex 的人",
+        "想建立 Agent 工作系統的人"
+      ],
+      "detail": [
+        "這支影片適合進階使用者，因為它談的是工具之外的問題：記憶如何管理、對話如何切分、不同 agent 如何分工、什麼情況不該交給 AI。",
+        "建議看完後回到自己的工作流，檢查是否有重複交辦、上下文混亂、驗收不明確或 agent 分工過細的問題。"
+      ],
+      "tags": [
+        "Claude Code",
+        "Codex",
+        "記憶",
+        "中文"
+      ],
+      "sourceType": "YouTube"
+    }
+  ]
+}

@@ -534,6 +534,46 @@ h3 {
   color: #f9a8d4;
 }
 
+.hermes-subtitle {
+  color: #60a5fa;
+}
+
+.hermes-resource-list {
+  border: 1px solid rgba(96, 165, 250, 0.26);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(40, 198, 226, 0.04));
+  padding: 0 10px;
+}
+
+.hermes-resource-list .recent-update-item::before {
+  background: #60a5fa;
+  box-shadow: 0 0 16px rgba(96, 165, 250, 0.52);
+}
+
+.hermes-resource-list .recent-update-item span {
+  color: #93c5fd;
+}
+
+.ai-video-subtitle {
+  color: #fb923c;
+}
+
+.ai-video-list {
+  border: 1px solid rgba(251, 146, 60, 0.26);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.12), rgba(240, 180, 41, 0.04));
+  padding: 0 10px;
+}
+
+.ai-video-list .recent-update-item::before {
+  background: #fb923c;
+  box-shadow: 0 0 16px rgba(251, 146, 60, 0.52);
+}
+
+.ai-video-list .recent-update-item span {
+  color: #fdba74;
+}
+
 .lesson-subtitle {
   color: #9bd23c;
 }

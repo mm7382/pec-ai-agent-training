@@ -26,6 +26,8 @@ const elements = {
   dailyHotList: document.querySelector("#dailyHotList"),
   localAgentHotList: document.querySelector("#localAgentHotList"),
   openclawCaseList: document.querySelector("#openclawCaseList"),
+  hermesResourceList: document.querySelector("#hermesResourceList"),
+  aiVideoList: document.querySelector("#aiVideoList"),
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
@@ -220,6 +222,22 @@ function renderRecentUpdates() {
     summary: "整理 604 個 OpenClaw 教學與應用案例，可搜尋分類、看中文詳細整理，部分案例也能直接複製 Prompt。",
     url: "./openclaw-cases.html",
   }];
+  const hermesItems = [{
+    id: "hermes-agent-resources",
+    title: "Hermes Agent 學習資料庫",
+    category: "Official · GitHub · YouTube",
+    updatedAt: "2026-07-11T00:00:00+08:00",
+    summary: "收集 Hermes Agent 官方文件、GitHub、NVIDIA 部署案例、影片教學與比較文章，先看中文重點再深入來源。",
+    url: "./hermes-agent-resources.html",
+  }];
+  const aiVideoItems = [{
+    id: "ai-video-library",
+    title: "AI 影片精選",
+    category: "YouTube · Global / Chinese",
+    updatedAt: "2026-07-11T00:00:00+08:00",
+    summary: "精選國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化影片，附中文整理與學習重點。",
+    url: "./ai-video-library.html",
+  }];
   const recentItems = [...state.items]
     .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
@@ -257,6 +275,8 @@ function renderRecentUpdates() {
   elements.dailyHotList.replaceChildren(...dailyItems.map(createRecentNode));
   elements.localAgentHotList.replaceChildren(...localAgentItems.map(createRecentNode));
   elements.openclawCaseList.replaceChildren(...openclawItems.map(createRecentNode));
+  elements.hermesResourceList.replaceChildren(...hermesItems.map(createRecentNode));
+  elements.aiVideoList.replaceChildren(...aiVideoItems.map(createRecentNode));
   elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 

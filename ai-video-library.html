@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant" style="--resource-accent:#fb923c;--resource-accent-soft:rgba(251,146,60,.13);--resource-accent-line:rgba(251,146,60,.34)">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 影片精選 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化工作流影片整理">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260711-resource-library">
+  <link rel="stylesheet" href="./resource-library.css?v=20260711-resource-library">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+</head>
+<body>
+  <main class="resource-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span><strong>AI Agent 教育訓練</strong><small>AI 影片精選</small></span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden><span id="identityText"></span><button type="button" id="switchUserButton">切換</button></div>
+    </header>
+
+    <section class="resource-hero">
+      <article class="resource-panel">
+        <h1>AI 影片精選</h1>
+        <p>收集國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化工作流影片。保留原始 YouTube 連結，並整理中文重點與適合對象。</p>
+        <div class="resource-stats">
+          <div><strong id="totalCount">—</strong><span>精選影片</span></div>
+          <div><strong id="categoryTotal">—</strong><span>分類</span></div>
+        </div>
+      </article>
+      <aside class="resource-note">
+        <h2>資料說明</h2>
+        <p id="updatedAt">載入中...</p>
+        <p id="methodText"></p>
+        <ul id="notesList"></ul>
+      </aside>
+    </section>
+
+    <section class="resource-controls" aria-label="AI 影片搜尋與篩選">
+      <label class="resource-search"><span>搜尋影片</span><input id="searchInput" type="search" autocomplete="off" placeholder="輸入 Claude Code、Codex、MCP、Local LLM、n8n..."></label>
+      <div><div class="resource-filter-label">分類</div><div class="resource-filter-row" id="categoryFilters"></div></div>
+      <div class="resource-sort-row" aria-label="排序方式">
+        <span class="resource-filter-label">排序</span>
+        <button class="resource-sort" type="button" data-sort="views" aria-pressed="true">熱門觀看</button>
+        <button class="resource-sort" type="button" data-sort="date" aria-pressed="false">最新</button>
+        <button class="resource-sort" type="button" data-sort="title" aria-pressed="false">標題 A-Z</button>
+      </div>
+    </section>
+
+    <div class="resource-meta"><span id="resultCount">載入中...</span><span id="sourceText"></span></div>
+    <section class="resource-grid" id="resourceGrid" aria-label="AI 影片精選列表"></section>
+    <p class="resource-empty" id="emptyState" hidden>找不到符合的 AI 影片。</p>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260711-resource-library"></script>
+  <script>window.RESOURCE_LIBRARY_CONFIG={title:"AI 影片精選",dataUrl:"./ai-video-library.json",detailUrl:"./ai-video-detail.html",defaultSort:"views"};</script>
+  <script src="./resource-library.js?v=20260711-resource-library"></script>
+  <script src="./feedback-widget.js?v=20260711-resource-library"></script>
+</body>
+</html>
