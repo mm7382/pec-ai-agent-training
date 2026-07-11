@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenClaw 使用案例詳細內容 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="OpenClaw 使用案例詳細中文整理、prompt、YouTube 來源與學習重點">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260711-openclaw">
+  <script src="./site-config.js?v=20260711-openclaw"></script>
+  <style>
+    .case-shell{width:min(1180px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
+    .case-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;margin-top:22px;align-items:start}
+    .case-main,.case-side{min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+    .case-main{padding:30px}
+    .case-side{padding:18px;position:sticky;top:18px}
+    .case-kicker{color:#f9a8d4;font-size:12px;font-weight:950;text-transform:uppercase}
+    .case-title{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:10px 0 14px;overflow-wrap:anywhere}
+    .case-summary{color:var(--muted);font-size:18px;line-height:1.72}
+    .case-media{margin:22px 0 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface-3)}
+    .case-media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+    .case-section{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+    .case-section h2{font-size:23px;margin-bottom:10px}
+    .case-section p,.case-section li{color:var(--muted);line-height:1.78;overflow-wrap:anywhere}
+    .case-section ul{padding-left:22px}
+    .case-section li+li{margin-top:8px}
+    .case-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+    .case-tags span{border:1px solid rgba(244,114,182,.35);border-radius:999px;padding:5px 9px;color:#f9a8d4;font-size:12px;font-weight:850}
+    .case-prompt{border:1px solid rgba(40,198,226,.28);border-radius:8px;background:rgba(40,198,226,.06);padding:14px;white-space:pre-wrap;color:#dcebf2;line-height:1.7;overflow-wrap:anywhere}
+    .case-copy{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:rgba(220,235,242,.08);color:var(--ink);padding:8px 10px;font-weight:900}
+    .case-metrics{display:grid;gap:8px}
+    .case-metrics div{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(220,235,242,.06)}
+    .case-metrics span{color:var(--muted);font-weight:850}
+    .case-metrics strong{text-align:right;overflow-wrap:anywhere}
+    .case-actions{display:grid;gap:10px;margin-top:14px}
+    .case-actions a{display:flex;justify-content:center;align-items:center;min-height:42px;border-radius:8px;text-decoration:none;font-weight:950}
+    .case-primary{background:#f472b6;color:#071016}
+    .case-secondary{border:1px solid var(--line);color:var(--ink);background:rgba(220,235,242,.08)}
+    .back-link{display:inline-flex;margin-top:16px;color:#f9a8d4;font-weight:900;text-decoration:none}
+    @media(max-width:900px){.case-layout{grid-template-columns:1fr}.case-side{position:static}.case-main{padding:20px}.case-shell{width:min(100vw - 20px,1180px)}}
+  </style>
+</head>
+<body>
+  <main class="case-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>OpenClaw 使用案例詳細內容</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="case-layout">
+      <article class="case-main" id="caseMain">
+        <p class="case-kicker">Loading</p>
+        <h1 class="case-title">載入中...</h1>
+      </article>
+      <aside class="case-side" id="caseSide"></aside>
+    </section>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260711-openclaw"></script>
+  <script src="./openclaw-case-detail.js?v=20260711-openclaw"></script>
+  <script src="./feedback-widget.js?v=20260711-openclaw"></script>
+</body>
+</html>

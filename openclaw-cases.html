@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenClaw 使用案例 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="整理 OpenClaw YouTube 使用案例、中文簡介、詳細說明、prompt 與來源連結">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260711-openclaw">
+  <script src="./site-config.js?v=20260711-openclaw"></script>
+  <style>
+    .openclaw-shell{width:min(1360px,calc(100vw - 32px));margin:0 auto;padding:18px 0 46px}
+    .openclaw-hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:18px;margin-top:22px}
+    .openclaw-panel,.openclaw-note,.openclaw-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+    .openclaw-panel{min-height:280px;padding:30px;display:grid;align-content:end;background:linear-gradient(135deg,rgba(244,114,182,.16),rgba(40,198,226,.07)),var(--surface)}
+    .openclaw-panel h1{max-width:840px}
+    .openclaw-panel p{max-width:900px;color:var(--muted);line-height:1.75;font-size:17px}
+    .openclaw-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .openclaw-stat{border:1px solid rgba(244,114,182,.30);border-radius:8px;padding:10px 12px;background:rgba(244,114,182,.08)}
+    .openclaw-stat strong{display:block;font-size:24px}
+    .openclaw-stat span{display:block;color:#f9a8d4;font-size:12px;font-weight:850}
+    .openclaw-note{padding:20px}
+    .openclaw-note h2{font-size:20px}
+    .openclaw-note p,.openclaw-note li{color:var(--muted);line-height:1.65}
+    .openclaw-controls{display:grid;gap:12px;margin:20px 0 14px}
+    .openclaw-search{display:grid;gap:7px}
+    .openclaw-search span,.openclaw-filter-label{color:var(--ink);font-size:13px;font-weight:900}
+    .openclaw-search input{width:100%;min-height:46px;border:1px solid var(--line);border-radius:8px;background:rgba(220,235,242,.07);color:var(--ink);padding:0 14px;outline:none}
+    .openclaw-search input:focus{border-color:rgba(244,114,182,.58);box-shadow:0 0 0 3px rgba(244,114,182,.12)}
+    .openclaw-filter-row,.openclaw-sort-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .openclaw-pill,.openclaw-sort{border:1px solid var(--line);border-radius:8px;background:rgba(220,235,242,.08);color:var(--ink);padding:9px 11px;font-weight:900;font-size:13px}
+    .openclaw-pill[aria-pressed="true"],.openclaw-sort[aria-pressed="true"]{background:#f472b6;color:#071016;border-color:#f472b6}
+    .openclaw-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:13px}
+    .openclaw-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .openclaw-card{overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-height:430px;background:linear-gradient(180deg,rgba(244,114,182,.08),rgba(220,235,242,.035)),var(--surface)}
+    .openclaw-thumb{display:block;aspect-ratio:16/9;background:var(--surface-3);overflow:hidden}
+    .openclaw-thumb img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.96) contrast(1.04)}
+    .openclaw-card-body{display:grid;gap:10px;padding:16px}
+    .openclaw-card-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .openclaw-category{border:1px solid rgba(244,114,182,.36);border-radius:999px;padding:5px 8px;color:#f9a8d4;font-size:11px;font-weight:950}
+    .openclaw-date{color:var(--muted);font-size:11px;font-weight:850}
+    .openclaw-title{margin:0;font-size:18px;line-height:1.28;overflow-wrap:anywhere}
+    .openclaw-summary{margin:0;color:var(--muted);line-height:1.58;font-size:14px}
+    .openclaw-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .openclaw-tags span{border:1px solid rgba(40,198,226,.28);border-radius:999px;padding:4px 8px;color:var(--accent-strong);font-size:11px;font-weight:850}
+    .openclaw-card-meta{display:flex;gap:8px;flex-wrap:wrap;color:rgba(220,235,242,.76);font-size:12px;font-weight:850}
+    .openclaw-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}
+    .openclaw-actions a{display:flex;align-items:center;justify-content:center;min-height:40px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:950}
+    .openclaw-detail-link{background:#f472b6;color:#071016}
+    .openclaw-source-link{border:1px solid var(--line);color:var(--ink);background:rgba(220,235,242,.07)}
+    .openclaw-pagination{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-top:20px}
+    .openclaw-page{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:38px;border:1px solid var(--line);border-radius:8px;background:rgba(220,235,242,.07);color:var(--ink);font-weight:950}
+    .openclaw-page[aria-current="page"]{background:#f472b6;color:#071016;border-color:#f472b6}
+    .openclaw-page:disabled{opacity:.45;cursor:not-allowed}
+    .openclaw-empty{padding:18px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);background:rgba(220,235,242,.04)}
+    @media(max-width:1180px){.openclaw-hero{grid-template-columns:1fr}.openclaw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:680px){.openclaw-shell{width:min(100vw - 20px,1360px);padding-top:10px}.openclaw-panel{padding:20px;min-height:240px}.openclaw-meta{align-items:flex-start;flex-direction:column}.openclaw-grid{grid-template-columns:1fr}.openclaw-actions{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="openclaw-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>OpenClaw 使用案例</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="openclaw-hero">
+      <article class="openclaw-panel">
+        <h1>OpenClaw 使用案例</h1>
+        <p>把 OpenClaw 相關 YouTube 教學與應用案例整理成可搜尋資料庫。先看中文簡介、詳細整理、prompt 與來源連結，再決定要不要深入研究或直接套用到自己的 Agent 工作流程。</p>
+        <div class="openclaw-stats" aria-label="OpenClaw 資料統計">
+          <div class="openclaw-stat"><strong id="caseTotal">—</strong><span>使用案例</span></div>
+          <div class="openclaw-stat"><strong id="categoryTotal">—</strong><span>分類</span></div>
+          <div class="openclaw-stat"><strong id="promptTotal">—</strong><span>含 Prompt</span></div>
+        </div>
+      </article>
+      <aside class="openclaw-note">
+        <h2>資料說明</h2>
+        <p id="updatedAt">載入中...</p>
+        <ul id="notesList"></ul>
+      </aside>
+    </section>
+
+    <section class="openclaw-controls" aria-label="OpenClaw 使用案例搜尋與篩選">
+      <label class="openclaw-search">
+        <span>搜尋案例</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="輸入 OpenClaw、Telegram、API、Local LLM、Automation...">
+      </label>
+      <div>
+        <div class="openclaw-filter-label">分類</div>
+        <div class="openclaw-filter-row" id="categoryFilters"></div>
+      </div>
+      <div class="openclaw-sort-row" aria-label="排序方式">
+        <span class="openclaw-filter-label">排序</span>
+        <button class="openclaw-sort" type="button" data-sort="latest" aria-pressed="true">最新</button>
+        <button class="openclaw-sort" type="button" data-sort="views_desc" aria-pressed="false">觀看數高</button>
+        <button class="openclaw-sort" type="button" data-sort="views_asc" aria-pressed="false">觀看數低</button>
+      </div>
+    </section>
+
+    <div class="openclaw-meta">
+      <span id="resultCount">載入中...</span>
+      <span id="sourceText">資料來源：openclawcases.zeabur.app</span>
+    </div>
+    <section class="openclaw-grid" id="caseGrid" aria-label="OpenClaw 使用案例列表"></section>
+    <nav class="openclaw-pagination" id="pagination" aria-label="OpenClaw 使用案例分頁"></nav>
+    <p class="openclaw-empty" id="emptyState" hidden>找不到符合的案例。換個關鍵字或清除分類篩選。</p>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260711-openclaw"></script>
+  <script src="./openclaw-cases.js?v=20260711-openclaw"></script>
+  <script src="./feedback-widget.js?v=20260711-openclaw"></script>
+</body>
+</html>

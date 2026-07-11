@@ -25,6 +25,7 @@ const elements = {
   githubHotList: document.querySelector("#githubHotList"),
   dailyHotList: document.querySelector("#dailyHotList"),
   localAgentHotList: document.querySelector("#localAgentHotList"),
+  openclawCaseList: document.querySelector("#openclawCaseList"),
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
@@ -211,6 +212,14 @@ function renderRecentUpdates() {
     summary: "整理可本機執行、自架或下載研究的 Agent 專案，先看中文介紹與難度，再決定要不要試跑。",
     url: "./local-agent-radar.html",
   }];
+  const openclawItems = [{
+    id: "openclaw-cases",
+    title: "OpenClaw 使用案例",
+    category: "YouTube · Use Cases",
+    updatedAt: "2026-07-11T00:00:00+08:00",
+    summary: "整理 604 個 OpenClaw 教學與應用案例，可搜尋分類、看中文詳細整理，部分案例也能直接複製 Prompt。",
+    url: "./openclaw-cases.html",
+  }];
   const recentItems = [...state.items]
     .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
@@ -247,6 +256,7 @@ function renderRecentUpdates() {
   elements.githubHotList.replaceChildren(...githubItems.map(createRecentNode));
   elements.dailyHotList.replaceChildren(...dailyItems.map(createRecentNode));
   elements.localAgentHotList.replaceChildren(...localAgentItems.map(createRecentNode));
+  elements.openclawCaseList.replaceChildren(...openclawItems.map(createRecentNode));
   elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 
