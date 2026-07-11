@@ -232,7 +232,7 @@ function renderRecentUpdates() {
   }];
   const aiVideoItems = [{
     id: "ai-video-library",
-    title: "AI 影片精選",
+    title: "YouTube AI 影片精選",
     category: "YouTube · Global / Chinese",
     updatedAt: "2026-07-11T00:00:00+08:00",
     summary: "精選國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化影片，附中文整理與學習重點。",
@@ -275,8 +275,8 @@ function renderRecentUpdates() {
   elements.dailyHotList.replaceChildren(...dailyItems.map(createRecentNode));
   elements.localAgentHotList.replaceChildren(...localAgentItems.map(createRecentNode));
   elements.openclawCaseList.replaceChildren(...openclawItems.map(createRecentNode));
-  elements.hermesResourceList.replaceChildren(...hermesItems.map(createRecentNode));
   elements.aiVideoList.replaceChildren(...aiVideoItems.map(createRecentNode));
+  elements.hermesResourceList.replaceChildren(...hermesItems.map(createRecentNode));
   elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 
