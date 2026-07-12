@@ -889,6 +889,25 @@ h3 {
     flex-direction: column;
   }
 
+  .brand {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: min(220px, 44vw);
+    height: 56px;
+    object-fit: contain;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand small {
+    font-size: 12px;
+  }
+
   .identity-chip {
     justify-content: space-between;
   }
@@ -899,7 +918,7 @@ h3 {
   }
 
   .summary-visual {
-    order: -20;
+    display: none;
   }
 
   .recent-updates {
