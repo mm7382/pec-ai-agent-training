@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 免費 AI 創作工具：零成本內容製作入門 - ADLINK 教學</title>
+  <style>
+    :root{--ad-dark:#252c2e;--ad-gray:#6f7a80;--ad-light:#f4f6f7;--ad-line:#d9e0e4;--ad-red:#d0333a;--ad-cyan:#1cb9d8;--ad-green:#94c11f;--ad-purple:#7d3189;--ad-orange:#ec672c;--ad-yellow:#fab428;--white:#fff;--shadow:0 18px 44px rgba(37,44,46,.12);--r:12px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;background:linear-gradient(180deg,#fff 0%,#f4f6f7 54%,#fff 100%);color:var(--ad-dark);line-height:1.72}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(37,44,46,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(37,44,46,.025) 1px,transparent 1px);background-size:44px 44px;opacity:.42;z-index:-3}
+    a{color:#0d7f99}.ad-cover{min-height:660px;background:linear-gradient(90deg,rgba(37,44,46,.97),rgba(37,44,46,.9) 58%,rgba(37,44,46,.72)),radial-gradient(circle at 78% 30%,rgba(28,185,216,.25),transparent 24rem),radial-gradient(circle at 90% 78%,rgba(250,180,40,.18),transparent 22rem);color:#fff;position:relative;overflow:hidden;border-bottom:10px solid var(--ad-cyan)}
+    .ad-cover::after{content:"";position:absolute;right:0;top:0;bottom:0;width:34%;background:linear-gradient(135deg,transparent 0 44%,rgba(28,185,216,.9) 44% 57%,rgba(148,193,31,.82) 57% 66%,transparent 66%);opacity:.88}
+    .ad-cover-inner{max-width:1180px;margin:auto;padding:52px 24px 64px;position:relative;z-index:2;min-height:660px;display:flex;flex-direction:column}.ad-cover-top{display:flex;align-items:center;justify-content:space-between;gap:24px}.ad-logo-white{font-size:44px;font-weight:800;letter-spacing:.02em}.ad-logo-white::after{content:"";display:block;width:210px;height:5px;margin-top:10px;background:linear-gradient(90deg,var(--ad-red) 0 34%,var(--ad-cyan) 34% 58%,var(--ad-green) 58% 76%,var(--ad-yellow) 76%)}.ad-cover-kicker{color:rgba(255,255,255,.72);font-size:15px;text-align:right}.ad-cover-main{margin-top:auto;margin-bottom:48px;max-width:930px}.ad-cover-label{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;letter-spacing:.08em;font-size:13px;text-transform:uppercase}.ad-cover-label::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ad-cyan);box-shadow:18px 0 0 var(--ad-green),36px 0 0 var(--ad-yellow);margin-right:38px}.ad-cover h1{font-size:clamp(42px,6vw,72px);line-height:1.06;margin:26px 0 20px;font-weight:800}.ad-cover-subtitle{font-size:21px;line-height:1.65;color:rgba(255,255,255,.86);max-width:850px;border-left:6px solid var(--ad-cyan);padding-left:18px}.ad-cover-footer{margin-top:auto;display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.72);font-size:15px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+    .wrap{max-width:1180px;margin:0 auto;padding:38px 24px 72px}.section-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:900;color:var(--ad-gray);letter-spacing:.08em;text-transform:uppercase;margin:34px 0 14px}.section-label::before{content:"";width:26px;height:4px;background:var(--ad-cyan);display:inline-block}.section{margin-top:18px}.lead{font-size:19px;color:#3b4548;max-width:890px}.card,.source-card,.tool-card,.step,.check-card{position:relative;overflow:hidden;border:1px solid var(--ad-line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);color:var(--ad-dark)}.card{padding:24px}.card::before,.tool-card::before,.check-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--ad-cyan)}.card h2,.tool-card h3,.check-card h3{margin:0 0 12px;line-height:1.22}.card p,.tool-card p,.check-card p{margin:0 0 10px;color:#3b4548}.badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#eefdff;color:#087992;font-weight:900;font-size:13px;margin-bottom:14px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--ad-line);background:var(--ad-light);padding:6px 10px;color:var(--ad-dark);font-size:13px;font-weight:800}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.tool-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.tool-card{padding:20px;display:grid;gap:8px}.tool-card:nth-child(4n+2)::before{background:var(--ad-green)}.tool-card:nth-child(4n+3)::before{background:var(--ad-yellow)}.tool-card:nth-child(4n)::before{background:var(--ad-purple)}.tool-card small{color:var(--ad-gray);font-weight:800}.tool-card a{font-weight:900;text-decoration:none}.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}.step{padding:16px;min-height:140px}.step b{display:block;color:var(--ad-cyan);font-size:26px;line-height:1;margin-bottom:8px}.step span{display:block;font-weight:900}.step p{margin:6px 0 0;color:#4b5558;font-size:14px;line-height:1.55}.check-card{padding:22px}.check-card.warning{background:#fffaf0}.check-card.warning::before{background:var(--ad-yellow)}.check-card.danger{background:#fff6f7}.check-card.danger::before{background:var(--ad-red)}ul{margin:10px 0 0;padding-left:20px}li{margin:6px 0;color:#3b4548}.prompt-box{border-left:8px solid var(--ad-green);background:#fbfff5;padding:22px;border-radius:var(--r);box-shadow:var(--shadow);border-top:1px solid var(--ad-line);border-right:1px solid var(--ad-line);border-bottom:1px solid var(--ad-line)}.prompt-box pre{white-space:pre-wrap;margin:0;color:#2f3b3f;font:700 15px/1.7 Calibri,"Noto Sans TC",sans-serif}.source-card{padding:20px;border-left:6px solid var(--ad-cyan)}.source-row{display:grid;gap:10px;margin-top:12px}.source-row a{display:block;text-decoration:none;font-weight:900;overflow-wrap:anywhere}.source-row span{display:block;color:var(--ad-gray);font-size:13px;font-weight:800}.table-wrap{overflow:auto;border:1px solid var(--ad-line);border-radius:var(--r);box-shadow:var(--shadow);background:#fff}table{width:100%;border-collapse:collapse;min-width:760px}th,td{border-bottom:1px solid var(--ad-line);padding:12px;text-align:left;vertical-align:top}th{background:#eef8fb;color:#174b55;font-weight:900}td{color:#3b4548}.footer-note{margin-top:30px;color:var(--ad-gray);font-size:13px}
+    @media (max-width:980px){.grid,.grid2,.tool-grid,.flow{grid-template-columns:1fr 1fr}.ad-cover::after{display:none}}@media (max-width:680px){.ad-cover,.ad-cover-inner{min-height:auto}.ad-cover-inner{padding:34px 20px 44px}.ad-cover-top,.ad-cover-footer{flex-direction:column;align-items:flex-start;text-align:left}.wrap{padding:22px 14px 48px}.grid,.grid2,.tool-grid,.flow{grid-template-columns:1fr}.card{padding:20px}table{min-width:680px}}
+  </style>
+  <script src="../site-config.js?v=20260712-free-ai-tools"></script>
+  <script src="../tutorial-gate.js?v=20260712-free-ai-tools"></script>
+</head>
+<body>
+  <section class="ad-cover" aria-label="ADLINK training cover">
+    <div class="ad-cover-inner">
+      <div class="ad-cover-top">
+        <div class="ad-logo-white" aria-label="ADLINK logo">ADLINK</div>
+        <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br>July 2026</div>
+      </div>
+      <div class="ad-cover-main">
+        <div class="ad-cover-label">AI Creation Tool Training</div>
+        <h1>2026 免費 AI 創作工具：零成本內容製作入門</h1>
+        <p class="ad-cover-subtitle">把影片生成、圖片生成、文生影片、圖生影片、AI 配音與創作流程整理成可執行的工具選型筆記。</p>
+      </div>
+      <div class="ad-cover-footer">
+        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>HTML Training Material</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="section-label">Learning Goal</div>
+    <section class="section grid2">
+      <article class="card">
+        <span class="badge">這份教學要解決的問題</span>
+        <h2>不要只追 AI 會員，先建立免費工具選型能力</h2>
+        <p class="lead">免費 AI 工具很多，但真正重要的是知道每個工具適合哪一段創作流程、哪些輸出可以商用、哪些資料不該上傳，以及如何用 prompt 讓結果穩定。</p>
+        <div class="chips">
+          <span class="chip">AI 影片生成</span><span class="chip">AI 圖片生成</span><span class="chip">文生影片</span><span class="chip">圖生影片</span><span class="chip">AI 配音</span><span class="chip">零成本創作</span>
+        </div>
+      </article>
+      <article class="card">
+        <span class="badge">適合對象</span>
+        <h2>內容創作者、行銷、PM 與想低成本試作的人</h2>
+        <ul>
+          <li>想先用免費工具驗證 AI 影片、圖片或配音流程的人。</li>
+          <li>需要快速做產品概念影片、社群素材、教學短片或簡報素材的人。</li>
+          <li>還不確定要不要購買 AI 會員，想先用免費方案做 PoC 的人。</li>
+          <li>公司資料或客戶資料敏感時，應先避開公開工具，改用內部核准流程。</li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="section-label">Tool Map</div>
+    <section class="section tool-grid">
+      <article class="tool-card"><small>Image / Prompt</small><h3>Perchance</h3><p>免費圖像生成與角色生成工具，可用來快速測試創意方向。</p><a href="https://perchance.org/ai-character-generator" target="_blank" rel="noreferrer">打開 Perchance</a></article>
+      <article class="tool-card"><small>Workflow Prototype</small><h3>Google Opal</h3><p>用自然語言建立小型 AI app / workflow，適合把創意流程變成可重複操作。</p><a href="https://opal.google/" target="_blank" rel="noreferrer">打開 Google Opal</a></article>
+      <article class="tool-card"><small>Video Workspace</small><h3>Google Vids</h3><p>面向 Workspace 的影片製作工具，適合簡報、教學與團隊溝通素材。</p><a href="https://workspace.google.com/products/vids" target="_blank" rel="noreferrer">打開 Google Vids</a></article>
+      <article class="tool-card"><small>Text / Image to Video</small><h3>Google Flow</h3><p>Google Labs 的 AI 影片創作工具，可研究文生影片與圖生影片流程。</p><a href="https://labs.google/fx/tools/flow" target="_blank" rel="noreferrer">打開 Google Flow</a></article>
+      <article class="tool-card"><small>Video Model</small><h3>Seedance</h3><p>ByteDance 的文字與圖片到影片模型，適合了解高品質 AI video model 的能力邊界。</p><a href="https://seed.bytedance.com/en/seedance" target="_blank" rel="noreferrer">打開 Seedance</a></article>
+      <article class="tool-card"><small>AI Presenter</small><h3>DIGEN</h3><p>可用於 AI 角色、配音或呈現型素材，適合做快速影音試作。</p><a href="https://digen.ai" target="_blank" rel="noreferrer">打開 DIGEN</a></article>
+      <article class="tool-card"><small>Creative Suite</small><h3>Dreamina</h3><p>CapCut 生態的 AI 創作工具，可研究圖像、影片與社群內容工作流。</p><a href="https://dreamina.capcut.com/ai-tool/home" target="_blank" rel="noreferrer">打開 Dreamina</a></article>
+      <article class="tool-card"><small>Utility</small><h3>Temp Mail / Ezremove</h3><p>臨時信箱只適合測試；去浮水印只適合處理自己擁有權利或已授權素材。</p><a href="https://temp-mail.org" target="_blank" rel="noreferrer">Temp Mail</a> · <a href="https://ezremove.ai/video-watermark-remover/" target="_blank" rel="noreferrer">Ezremove</a></article>
+    </section>
+
+    <div class="section-label">Workflow</div>
+    <section class="section">
+      <div class="flow">
+        <div class="step"><b>01</b><span>定義任務</span><p>先決定要做社群短片、產品概念、教學素材、圖片角色或配音。</p></div>
+        <div class="step"><b>02</b><span>寫 prompt</span><p>描述主題、畫面、風格、比例、鏡頭、限制與不可出現的元素。</p></div>
+        <div class="step"><b>03</b><span>選工具</span><p>圖片先用 Perchance / Dreamina，影片可測 Google Flow、Seedance 或 Dreamina。</p></div>
+        <div class="step"><b>04</b><span>生成草稿</span><p>先產出低風險草稿，不要一開始就追求商用成品。</p></div>
+        <div class="step"><b>05</b><span>檢查授權</span><p>確認免費額度、浮水印、商用權、素材來源與平台條款。</p></div>
+        <div class="step"><b>06</b><span>整理成範本</span><p>把有效 prompt、工具設定與輸出規格沉澱成自己的創作 SOP。</p></div>
+      </div>
+    </section>
+
+    <div class="section-label">Prompt Template</div>
+    <section class="section prompt-box">
+      <pre>請幫我生成一段 [用途：社群短片 / 教學片 / 產品概念] 的 AI 創作 prompt。
+主題：[要傳達的核心訊息]
+畫面風格：[寫實 / 科技感 / 插畫 / 電影感 / 產品展示]
+輸出比例：[16:9 / 9:16 / 1:1]
+主要元素：[人物、產品、場景、動作]
+限制條件：[不要出現 logo、不要侵權角色、不要誇大效果]
+我需要你輸出：
+1. 英文 prompt
+2. 中文 prompt
+3. 負面 prompt
+4. 適合使用的工具建議
+5. 需要人工檢查的風險</pre>
+    </section>
+
+    <div class="section-label">Tool Reference</div>
+    <section class="section table-wrap">
+      <table>
+        <thead><tr><th>工具</th><th>適合任務</th><th>使用提醒</th><th>來源連結</th></tr></thead>
+        <tbody>
+          <tr><td>Perchance</td><td>免費圖像、角色、創意發想</td><td>輸出品質與可控性不一定穩定，適合初稿與靈感。</td><td><a href="https://perchance.org/ai-character-generator" target="_blank" rel="noreferrer">perchance.org</a></td></tr>
+          <tr><td>Google Opal</td><td>AI app / workflow 原型</td><td>適合把重複創作流程變成可操作流程。</td><td><a href="https://opal.google/" target="_blank" rel="noreferrer">opal.google</a></td></tr>
+          <tr><td>Google Vids</td><td>簡報影片、教學素材、團隊溝通</td><td>與 Workspace 整合度高，適合公司簡報型素材。</td><td><a href="https://workspace.google.com/products/vids" target="_blank" rel="noreferrer">workspace.google.com/products/vids</a></td></tr>
+          <tr><td>Google Flow</td><td>文生影片、圖生影片、鏡頭試作</td><td>適合研究 AI video workflow 與短片草稿。</td><td><a href="https://labs.google/fx/tools/flow" target="_blank" rel="noreferrer">labs.google/fx/tools/flow</a></td></tr>
+          <tr><td>Seedance</td><td>高品質 AI video model 觀摩與影片生成</td><td>注意模型來源、商用條款與可能的 IP / 肖像風險。</td><td><a href="https://seed.bytedance.com/en/seedance" target="_blank" rel="noreferrer">seed.bytedance.com/en/seedance</a></td></tr>
+          <tr><td>DIGEN</td><td>AI 角色、配音、呈現型內容</td><td>適合快速做展示型素材，商用前需確認授權。</td><td><a href="https://digen.ai" target="_blank" rel="noreferrer">digen.ai</a></td></tr>
+          <tr><td>Dreamina</td><td>圖片、影片、社群創意內容</td><td>和 CapCut 生態接近，適合短影音創作流程。</td><td><a href="https://dreamina.capcut.com/ai-tool/home" target="_blank" rel="noreferrer">dreamina.capcut.com</a></td></tr>
+          <tr><td>Temp Mail</td><td>測試註冊流程</td><td>只適合非正式測試，不要用於公司帳號、客戶資料或需要長期保留的服務。</td><td><a href="https://temp-mail.org" target="_blank" rel="noreferrer">temp-mail.org</a></td></tr>
+          <tr><td>Ezremove</td><td>授權素材的浮水印處理測試</td><td>只能用於自己擁有權利或已獲授權素材，不可用來移除他人作品、平台或付費內容浮水印。</td><td><a href="https://ezremove.ai/video-watermark-remover/" target="_blank" rel="noreferrer">ezremove.ai</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="section-label">Safety Checklist</div>
+    <section class="section grid2">
+      <article class="check-card warning">
+        <h3>免費不等於可商用</h3>
+        <ul>
+          <li>確認免費額度、輸出解析度、浮水印、商用授權與資料使用條款。</li>
+          <li>不要把公司機密、客戶資料、未公開產品規格上傳到公開工具。</li>
+          <li>如果要做對外素材，先確認品牌、肖像、音樂與素材授權。</li>
+        </ul>
+      </article>
+      <article class="check-card danger">
+        <h3>去浮水印工具的界線</h3>
+        <ul>
+          <li>只建議處理自己產生、自己拍攝、或已取得授權的素材。</li>
+          <li>不要用來移除他人作品、付費平台、授權素材或第三方商標浮水印。</li>
+          <li>如果不確定權利來源，保留原始來源並改用合法授權版本。</li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="section-label">Sources</div>
+    <section class="section source-card">
+      <h2>來源與原始連結</h2>
+      <p>本頁整理自公開影音說明、使用者提供的介紹文字，以及各工具官方網站。平台功能與免費方案可能隨時間變動，實作前請重新確認官方條款。</p>
+      <div class="source-row">
+        <a href="https://www.youtube.com/watch?v=O3XWVi12hZg" target="_blank" rel="noreferrer">原始影音：別再買 AI 會員了！這 6 個 AI 工具其實可以無限免費使用（2026）</a><span>AI零成本实验室 (AI For Free) · 2026/07/11 · YouTube</span>
+        <a href="https://perchance.org/ai-character-generator" target="_blank" rel="noreferrer">Perchance AI Character Generator</a>
+        <a href="https://opal.google/" target="_blank" rel="noreferrer">Google Opal</a>
+        <a href="https://workspace.google.com/products/vids" target="_blank" rel="noreferrer">Google Vids</a>
+        <a href="https://labs.google/fx/tools/flow" target="_blank" rel="noreferrer">Google Flow</a>
+        <a href="https://seed.bytedance.com/en/seedance" target="_blank" rel="noreferrer">ByteDance Seedance</a>
+        <a href="https://digen.ai" target="_blank" rel="noreferrer">DIGEN</a>
+        <a href="https://dreamina.capcut.com/ai-tool/home" target="_blank" rel="noreferrer">Dreamina</a>
+        <a href="https://temp-mail.org" target="_blank" rel="noreferrer">Temp Mail</a>
+        <a href="https://ezremove.ai/video-watermark-remover/" target="_blank" rel="noreferrer">Ezremove Video Watermark Remover</a>
+      </div>
+    </section>
+    <p class="footer-note">整理者：Michael Chuang。此教材供內部學習與工具選型參考；第三方平台名稱、商標與內容權利歸各自擁有者所有。</p>
+  </main>
+  <script src="../feedback-widget.js?v=20260712-free-ai-tools"></script>
+</body>
+</html>
