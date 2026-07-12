@@ -894,7 +894,36 @@ h3 {
   }
 
   .summary-panel {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recent-updates {
+    order: -10;
+    margin-top: 0;
+    padding: 16px 14px 18px;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(40, 198, 226, 0.06), transparent 260px),
+      rgba(7, 11, 14, 0.18);
+  }
+
+  .recent-updates-header h3 {
+    font-size: 18px;
+  }
+
+  .recent-subtitle {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+
+  .recent-update-item strong {
+    font-size: 14px;
+  }
+
+  .recent-update-item p {
+    font-size: 13px;
   }
 
   .card-grid {
