@@ -898,6 +898,10 @@ h3 {
     flex-direction: column;
   }
 
+  .summary-visual {
+    order: -20;
+  }
+
   .recent-updates {
     order: -10;
     margin-top: 0;
