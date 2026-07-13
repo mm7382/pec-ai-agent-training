@@ -169,7 +169,9 @@ button {
 }
 
 @media (min-width: 1041px) {
+  html,
   body {
+    height: 100%;
     overflow: hidden;
   }
 
@@ -178,11 +180,14 @@ button {
     flex-direction: column;
     height: 100dvh;
     padding-bottom: 18px;
+    overflow: hidden;
   }
 
   .workspace {
-    flex: 1;
+    height: calc(100dvh - 104px);
+    flex: 0 0 auto;
     min-height: 0;
+    align-items: stretch;
     overflow: hidden;
   }
 
@@ -191,9 +196,11 @@ button {
     height: 100%;
     min-height: 0;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     overscroll-behavior: contain;
     scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(105, 231, 247, 0.62) rgba(220, 235, 242, 0.08);
   }
 
   .left-rail {
