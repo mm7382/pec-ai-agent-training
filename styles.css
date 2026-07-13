@@ -168,6 +168,67 @@ button {
   overflow: hidden;
 }
 
+@media (min-width: 1041px) {
+  body {
+    overflow: hidden;
+  }
+
+  .app-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding-bottom: 18px;
+  }
+
+  .workspace {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .left-rail,
+  .focus-panel {
+    height: 100%;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+
+  .left-rail {
+    display: flex;
+    flex-direction: column;
+    padding-right: 6px;
+  }
+
+  .left-rail > * {
+    flex: 0 0 auto;
+  }
+
+  .focus-panel {
+    position: static;
+  }
+
+  .left-rail::-webkit-scrollbar,
+  .focus-panel::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .left-rail::-webkit-scrollbar-track,
+  .focus-panel::-webkit-scrollbar-track {
+    background: rgba(220, 235, 242, 0.06);
+    border-radius: 999px;
+  }
+
+  .left-rail::-webkit-scrollbar-thumb,
+  .focus-panel::-webkit-scrollbar-thumb {
+    background: rgba(105, 231, 247, 0.38);
+    border: 2px solid rgba(7, 11, 14, 0.72);
+    border-radius: 999px;
+  }
+}
+
 .summary-visual img {
   width: 100%;
   height: 100%;
