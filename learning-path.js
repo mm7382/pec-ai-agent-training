@@ -141,15 +141,11 @@
   function insertLessonCard(data) {
     const lesson = flattenLessons(data).find((item) => item.id === currentLessonId());
     if (!lesson || document.querySelector(".lesson-learning-card")) return;
+    if (currentLessonId() === "github-skill-rankings") return;
     ensureLearningCardStyles();
     const template = document.createElement("template");
     template.innerHTML = lessonCardMarkup(lesson).trim();
     const card = template.content.firstElementChild;
-    if (currentLessonId() === "github-skill-rankings") {
-      const hero = document.querySelector(".rank-hero");
-      if (hero) hero.insertAdjacentElement("afterend", card);
-      return;
-    }
     const h1 = document.querySelector("h1");
     const hero = h1?.closest(".hero, .cover, .rank-hero, header");
     if (hero && hero.parentElement) {
