@@ -22,12 +22,7 @@ const elements = {
   searchInput: document.querySelector("#searchInput"),
   categoryFilters: document.querySelector("#categoryFilters"),
   tutorialGrid: document.querySelector("#tutorialGrid"),
-  githubHotList: document.querySelector("#githubHotList"),
-  dailyHotList: document.querySelector("#dailyHotList"),
-  localAgentHotList: document.querySelector("#localAgentHotList"),
-  openclawCaseList: document.querySelector("#openclawCaseList"),
-  hermesResourceList: document.querySelector("#hermesResourceList"),
-  aiVideoList: document.querySelector("#aiVideoList"),
+  featureEntryGrid: document.querySelector("#featureEntryGrid"),
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
@@ -197,47 +192,62 @@ function formatDate(value) {
 }
 
 function renderRecentUpdates() {
-  const githubItems = state.items.filter((item) => item.id === "github-skill-rankings");
-  const dailyItems = [{
+  const githubItem = state.items.find((item) => item.id === "github-skill-rankings") || {
+    id: "github-skill-rankings",
+    title: "GitHub 熱門 Skill",
+    category: "Skill · AI Open Source",
+    updatedAt: "2026-07-09T00:00:00+08:00",
+    summary: "每週整理 GitHub 上值得學的 Skill、AI workflow 與 AI 開源工具，先看白話介紹，再決定要不要深入研究。",
+    url: "./github-skills.html",
+  };
+  const dailyItem = {
     id: "ai-agent-daily-radar",
     title: "AI Agent 熱門新聞",
     category: "Hacker News · Reddit",
     updatedAt: new Date().toISOString(),
     summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，先看中文簡介，再點進來源細讀。",
     url: "./ai-agent-daily.html",
-  }];
-  const localAgentItems = [{
+  };
+  const localAgentItem = {
     id: "local-agent-radar",
     title: "Local Agent 熱門",
     category: "Local-ready · Self-host",
     updatedAt: new Date().toISOString(),
     summary: "整理可本機執行、自架或下載研究的 Agent 專案，先看中文介紹與難度，再決定要不要試跑。",
     url: "./local-agent-radar.html",
-  }];
-  const openclawItems = [{
+  };
+  const openclawItem = {
     id: "openclaw-cases",
     title: "OpenClaw 使用案例",
     category: "YouTube · Use Cases",
     updatedAt: "2026-07-11T00:00:00+08:00",
     summary: "整理 604 個 OpenClaw 教學與應用案例，可搜尋分類、看中文詳細整理，部分案例也能直接複製 Prompt。",
     url: "./openclaw-cases.html",
-  }];
-  const hermesItems = [{
+  };
+  const hermesItem = {
     id: "hermes-agent-resources",
     title: "Hermes Agent 學習資料庫",
     category: "Official · GitHub · YouTube",
     updatedAt: "2026-07-11T00:00:00+08:00",
     summary: "收集 Hermes Agent 官方文件、GitHub、NVIDIA 部署案例、影片教學與比較文章，先看中文重點再深入來源。",
     url: "./hermes-agent-resources.html",
-  }];
-  const aiVideoItems = [{
+  };
+  const aiVideoItem = {
     id: "ai-video-library",
     title: "YouTube AI 影片精選",
     category: "YouTube · Global / Chinese",
     updatedAt: "2026-07-11T00:00:00+08:00",
     summary: "精選國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化影片，附中文整理與學習重點。",
     url: "./ai-video-library.html",
-  }];
+  };
+  const featureItems = [
+    { tone: "github", label: "Skill Radar", latestLabel: "最新 Skill", ...githubItem, title: "GitHub 熱門 Skill" },
+    { tone: "daily", label: "News Radar", latestLabel: "最新新聞", ...dailyItem },
+    { tone: "local", label: "Local Ready", latestLabel: "最新 Agent", ...localAgentItem },
+    { tone: "openclaw", label: "Use Cases", latestLabel: "最新案例", ...openclawItem },
+    { tone: "video", label: "Video Picks", latestLabel: "最新影片", ...aiVideoItem },
+    { tone: "hermes", label: "Agent Database", latestLabel: "最新資料", ...hermesItem },
+  ];
   const recentItems = [...state.items]
     .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")
     .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
@@ -271,12 +281,48 @@ function renderRecentUpdates() {
     return row;
   };
 
-  elements.githubHotList.replaceChildren(...githubItems.map(createRecentNode));
-  elements.dailyHotList.replaceChildren(...dailyItems.map(createRecentNode));
-  elements.localAgentHotList.replaceChildren(...localAgentItems.map(createRecentNode));
-  elements.openclawCaseList.replaceChildren(...openclawItems.map(createRecentNode));
-  elements.aiVideoList.replaceChildren(...aiVideoItems.map(createRecentNode));
-  elements.hermesResourceList.replaceChildren(...hermesItems.map(createRecentNode));
+  const createFeatureCard = (item) => {
+    const article = document.createElement("article");
+    article.className = `feature-entry-card feature-entry-card--${item.tone}`;
+
+    const label = document.createElement("span");
+    label.className = "feature-entry-label";
+    label.textContent = item.label;
+
+    const title = document.createElement("h3");
+    title.textContent = item.title;
+
+    const summary = document.createElement("p");
+    summary.textContent = item.summary;
+
+    const latest = document.createElement("div");
+    latest.className = "feature-entry-latest";
+
+    const latestLabel = document.createElement("span");
+    latestLabel.textContent = item.latestLabel;
+
+    const latestTitle = document.createElement("strong");
+    latestTitle.textContent = [formatDate(item.updatedAt), item.category].filter(Boolean).join(" · ");
+
+    latest.append(latestLabel, latestTitle);
+
+    const link = document.createElement("a");
+    link.href = item.url;
+    link.className = "feature-entry-action";
+    link.textContent = "進入分頁";
+    link.addEventListener("click", () => {
+      trackEvent("feature_entry_click", {
+        id: item.id,
+        title: item.title,
+        url: item.url,
+      });
+    });
+
+    article.append(label, title, summary, latest, link);
+    return article;
+  };
+
+  elements.featureEntryGrid.replaceChildren(...featureItems.map(createFeatureCard));
   elements.recentUpdateList.replaceChildren(...recentItems.map(createRecentNode));
 }
 
