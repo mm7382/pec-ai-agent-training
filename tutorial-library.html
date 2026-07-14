@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>所有分類教材 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="依分類瀏覽 PEC AI Agent 教育訓練所有教材">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260714-tutorial-library">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+</head>
+<body class="catalog-page">
+  <main class="catalog-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-leading-edge-ai-computing.jpeg" alt="ADLINK Leading Edge AI Computing">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>所有分類教材</small>
+        </span>
+      </a>
+    </header>
+
+    <section class="catalog-hero">
+      <div>
+        <p class="section-label">Training Catalog</p>
+        <h1>所有分類教材</h1>
+        <p>把目前上架的教材依任務分類展開。先看分類，再進入細節頁學習。</p>
+      </div>
+      <dl class="catalog-stats">
+        <div><dt id="catalogTotal">—</dt><dd>上架教材</dd></div>
+        <div><dt id="catalogCategoryTotal">—</dt><dd>分類</dd></div>
+      </dl>
+    </section>
+
+    <section class="catalog-controls" aria-label="教材搜尋與分類篩選">
+      <label class="catalog-search">
+        <span>搜尋教材</span>
+        <input id="catalogSearchInput" type="search" autocomplete="off" placeholder="輸入 Claude、Codex、Prompt、MCP、知識庫...">
+      </label>
+      <div class="catalog-filter-row" id="catalogFilters" aria-label="分類"></div>
+    </section>
+
+    <div class="catalog-meta" aria-live="polite">
+      <span id="catalogResultCount">載入中...</span>
+      <button type="button" id="catalogClearButton">清除搜尋與篩選</button>
+    </div>
+
+    <nav class="catalog-jump-nav" id="catalogJumpNav" aria-label="快速跳到分類"></nav>
+    <section class="catalog-groups" id="catalogGroups" aria-label="分類教材列表"></section>
+    <p class="empty-state" id="catalogEmptyState" hidden>找不到符合的教材。換個關鍵字，或清除篩選。</p>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260714-tutorial-library"></script>
+  <script src="./tutorial-library.js?v=20260714-tutorial-library"></script>
+  <script src="./feedback-widget.js?v=20260711-resource-library"></script>
+</body>
+</html>
