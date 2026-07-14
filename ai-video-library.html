@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YouTube AI 影片精選 - PEC AI Agent 教育訓練資料庫</title>
-  <meta name="description" content="國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化工作流影片整理">
+  <meta name="description" content="國內外近期 AI Agent、AI Coding、MCP、Local LLM、自動化與 Low-code / No-code 工具影片整理">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css?v=20260714-scroll-scope">
   <link rel="stylesheet" href="./resource-library.css?v=20260711-resource-library">
@@ -23,7 +23,7 @@
     <section class="resource-hero">
       <article class="resource-panel">
         <h1>YouTube AI 影片精選</h1>
-        <p>收集國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化工作流影片。保留原始 YouTube 連結，並整理中文重點與適合對象。</p>
+        <p>收集國內外近期 AI Agent、AI Coding、MCP、Local LLM、自動化工作流與 Low-code / No-code 工具影片。保留原始 YouTube 連結，並整理中文重點與適合對象。</p>
         <div class="resource-stats">
           <div><strong id="totalCount">—</strong><span>精選影片</span></div>
           <div><strong id="categoryTotal">—</strong><span>分類</span></div>
@@ -38,12 +38,12 @@
     </section>
 
     <section class="resource-controls" aria-label="AI 影片搜尋與篩選">
-      <label class="resource-search"><span>搜尋影片</span><input id="searchInput" type="search" autocomplete="off" placeholder="輸入 Claude Code、Codex、MCP、Local LLM、n8n..."></label>
+      <label class="resource-search"><span>搜尋影片</span><input id="searchInput" type="search" autocomplete="off" placeholder="輸入 Claude Code、Codex、MCP、n8n、No-code..."></label>
       <div><div class="resource-filter-label">分類</div><div class="resource-filter-row" id="categoryFilters"></div></div>
       <div class="resource-sort-row" aria-label="排序方式">
         <span class="resource-filter-label">排序</span>
-        <button class="resource-sort" type="button" data-sort="views" aria-pressed="true">熱門觀看</button>
-        <button class="resource-sort" type="button" data-sort="date" aria-pressed="false">最新</button>
+        <button class="resource-sort" type="button" data-sort="views" aria-pressed="false">熱門觀看</button>
+        <button class="resource-sort" type="button" data-sort="date" aria-pressed="true">最新</button>
         <button class="resource-sort" type="button" data-sort="title" aria-pressed="false">標題 A-Z</button>
       </div>
     </section>
@@ -54,7 +54,7 @@
   </main>
 
   <script src="./tutorial-gate.js?v=20260711-resource-library"></script>
-  <script>window.RESOURCE_LIBRARY_CONFIG={title:"YouTube AI 影片精選",dataUrl:"./ai-video-library.json",detailUrl:"./ai-video-detail.html",defaultSort:"views"};</script>
+  <script>window.RESOURCE_LIBRARY_CONFIG={title:"YouTube AI 影片精選",dataUrl:"./ai-video-library.json",detailUrl:"./ai-video-detail.html",defaultSort:"date"};</script>
   <script src="./resource-library.js?v=20260711-resource-library"></script>
   <script src="./feedback-widget.js?v=20260711-resource-library"></script>
 </body>

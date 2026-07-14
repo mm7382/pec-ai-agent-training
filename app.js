@@ -236,8 +236,8 @@ function renderRecentUpdates() {
     id: "ai-video-library",
     title: "YouTube AI 影片精選",
     category: "YouTube · Global / Chinese",
-    updatedAt: "2026-07-11T00:00:00+08:00",
-    summary: "精選國內外熱門 AI Agent、AI Coding、MCP、Local LLM 與自動化影片，附中文整理與學習重點。",
+    updatedAt: "2026-07-14T09:30:00+08:00",
+    summary: "精選國內外近期 AI Agent、AI Coding、MCP、Local LLM、自動化與 Low-code / No-code 工具影片，附中文整理與學習重點。",
     url: "./ai-video-library.html",
   };
   const featureItems = [
