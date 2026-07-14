@@ -169,13 +169,12 @@ button {
 }
 
 @media (min-width: 1041px) {
-  html,
-  body {
+  body.home-page {
     height: 100%;
     overflow: hidden;
   }
 
-  .app-shell {
+  body.home-page .app-shell {
     display: flex;
     flex-direction: column;
     height: 100dvh;
@@ -183,7 +182,7 @@ button {
     overflow: hidden;
   }
 
-  .workspace {
+  body.home-page .workspace {
     height: calc(100dvh - 104px);
     flex: 0 0 auto;
     min-height: 0;
@@ -191,8 +190,8 @@ button {
     overflow: hidden;
   }
 
-  .left-rail,
-  .focus-panel {
+  body.home-page .left-rail,
+  body.home-page .focus-panel {
     height: 100%;
     min-height: 0;
     overflow-x: hidden;
@@ -203,33 +202,33 @@ button {
     scrollbar-color: rgba(105, 231, 247, 0.62) rgba(220, 235, 242, 0.08);
   }
 
-  .left-rail {
+  body.home-page .left-rail {
     display: flex;
     flex-direction: column;
     padding-right: 6px;
   }
 
-  .left-rail > * {
+  body.home-page .left-rail > * {
     flex: 0 0 auto;
   }
 
-  .focus-panel {
+  body.home-page .focus-panel {
     position: static;
   }
 
-  .left-rail::-webkit-scrollbar,
-  .focus-panel::-webkit-scrollbar {
+  body.home-page .left-rail::-webkit-scrollbar,
+  body.home-page .focus-panel::-webkit-scrollbar {
     width: 10px;
   }
 
-  .left-rail::-webkit-scrollbar-track,
-  .focus-panel::-webkit-scrollbar-track {
+  body.home-page .left-rail::-webkit-scrollbar-track,
+  body.home-page .focus-panel::-webkit-scrollbar-track {
     background: rgba(220, 235, 242, 0.06);
     border-radius: 999px;
   }
 
-  .left-rail::-webkit-scrollbar-thumb,
-  .focus-panel::-webkit-scrollbar-thumb {
+  body.home-page .left-rail::-webkit-scrollbar-thumb,
+  body.home-page .focus-panel::-webkit-scrollbar-thumb {
     background: rgba(105, 231, 247, 0.38);
     border: 2px solid rgba(7, 11, 14, 0.72);
     border-radius: 999px;
