@@ -61,49 +61,131 @@ const categories = [
 ];
 
 const manualRepoOverrides = {
+  "wshobson/agents": {
+    oneLineZh: "整理 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 與 Gemini CLI 可用的多工具 agent skills 市場。",
+    introZh: "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
+    audience: [
+      "適合 Claude Code / Codex / Cursor 這類多工具 coding agent",
+      "用在 Skill Marketplace、子代理分工與專家角色 workflow",
+      "適合想替 agent 建立可重用技能庫的人",
+    ],
+  },
   "affaan-m/ecc": {
     oneLineZh: "把 Claude Code、Codex、Cursor 等 AI coding agent 的 skills、記憶、安全檢查與研究流程整理成一套工程化工作法。",
     introZh: "ECC 是給 AI coding agent 使用的工程工作流工具包。它不是單一聊天工具，而是把 skills、記憶、研究優先、安全掃描與多工具設定整理成可重複使用的 agent harness。",
+    audience: [
+      "適合 Claude Code / Codex / Cursor 這類 coding agent",
+      "用在技能庫、記憶、安全檢查與研究優先的工程 workflow",
+      "適合想把 AI coding 從聊天改成標準作業流程的團隊",
+    ],
   },
   "thedotmack/claude-mem": {
     oneLineZh: "替 Claude Code 類 agent 補上跨對話記憶，把重要上下文壓縮後帶到未來任務。",
     introZh: "claude-mem 聚焦在 agent 記憶管理。它會捕捉工作過程中的重要資訊，壓縮成可重用上下文，讓下一次任務不必從零開始。",
+    audience: [
+      "適合需要長期記憶的 Claude Code / coding agent",
+      "用在跨天任務、專案上下文延續與交接 workflow",
+      "適合常做長專案、反覆迭代同一批檔案的人",
+    ],
   },
   "ruvnet/ruflo": {
     oneLineZh: "面向多代理工作流的 agent harness，重點在記憶、協調、安全帶與自主流程管理。",
     introZh: "ruflo 把多代理協作、記憶、RAG、工具與 Claude Code / OpenAI 類工作流放在一起，適合用來研究 agent workflow 如何被工程化管理。",
+    audience: [
+      "適合多代理協作型 agent",
+      "用在任務拆分、記憶、協調與安全邊界 workflow",
+      "適合研究 agent harness 如何管理複雜任務的人",
+    ],
   },
   "zhayujie/cowagent": {
     oneLineZh: "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
     introZh: "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+    audience: [
+      "適合全功能助理型 / 多工具 agent",
+      "用在任務規劃、MCP、技能與知識庫整合 workflow",
+      "適合想看 agent harness 如何串工具與記憶的人",
+    ],
+  },
+  "alirezarezvani/claude-skills": {
+    oneLineZh: "收集大量 Claude Code 技能與外掛，並延伸到 Codex、Gemini CLI、Cursor 等 AI coding agent。",
+    introZh: "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
+    audience: [
+      "適合 Claude Code / Codex / Cursor 這類可掛 Skill 的 coding agent",
+      "用在技能包、插件、可重用指令與團隊 SOP workflow",
+      "適合想建立內部 agent skill library 的人",
+    ],
+  },
+  "othmanadi/planning-with-files": {
+    oneLineZh: "讓 coding agent 以檔案保存計畫、進度與決策，適合長任務與可回頭檢查的工作流。",
+    introZh: "planning-with-files 的重點是讓 agent 不只在對話裡規劃，而是把計畫、狀態與任務拆解寫進檔案，方便長時間任務追蹤、審查與恢復。",
+    audience: [
+      "適合長任務規劃型 coding agent",
+      "用在 plan-review-execute、文件驅動與進度保存 workflow",
+      "適合需要讓 agent 工作可追蹤、可恢復的人",
+    ],
   },
   "mksglu/context-mode": {
     oneLineZh: "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
     introZh: "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
+    audience: [
+      "適合容易爆 context 的 AI coding agent",
+      "用在工具輸出壓縮、session memory 與上下文整理 workflow",
+      "適合處理長 log、長檔案與多步驟任務的人",
+    ],
   },
   "activepieces/activepieces": {
     oneLineZh: "開源工作流程自動化平台，結合 AI agent、MCP server 與大量第三方工具整合。",
     introZh: "Activepieces 是開源 automation 平台。它的價值在於把 AI agent、MCP 與各種 SaaS/工具連接起來，適合觀察 AI 自動化如何落地到日常工作流程。",
+    audience: [
+      "適合低程式碼自動化 agent workflow",
+      "用在 SaaS 串接、排程、Webhook 與跨工具自動化",
+      "適合想把 AI 接進日常營運流程的人",
+    ],
   },
   "headroomlabs-ai/headroom": {
     oneLineZh: "在內容送進 LLM 前先壓縮工具輸出、log、檔案與 RAG 區塊，降低 token 消耗。",
     introZh: "Headroom 解決的是 LLM/agent 工作流常見的上下文爆量問題。它可用在工具輸出、log、檔案與 RAG 區塊進入模型前的壓縮與整理。",
+    audience: [
+      "適合需要壓縮大量上下文的 LLM / RAG agent",
+      "用在 log、工具輸出、文件片段進模型前的整理 workflow",
+      "適合常遇到 token 爆量與摘要失焦的人",
+    ],
   },
   "bytedance/deer-flow": {
     oneLineZh: "開源 long-running agent 工具，面向研究、coding 與內容生成等較長時間任務。",
     introZh: "deer-flow 是用來研究 long-running agent 的開源工具。它結合 sandbox、memory、tools、skills、sub-agents 與 message gateway，適合觀察複雜任務如何拆解與執行。",
+    audience: [
+      "適合長時間自主執行型 agent",
+      "用在研究、coding、內容生成與 sub-agent 分工 workflow",
+      "適合想研究任務拆解、sandbox 與持續執行的人",
+    ],
   },
   "n8n-io/n8n": {
     oneLineZh: "開源 workflow automation 平台，近年加入 AI 能力，適合把 AI 放進跨工具流程。",
     introZh: "n8n 是成熟的工作流程自動化平台。它不是單純 AI agent，但很適合學習如何把 AI 節點、API、資料來源和各種工作工具接成可執行流程。",
+    audience: [
+      "適合低程式碼 AI automation workflow",
+      "用在 API、資料來源、內部工具與 AI 節點串接",
+      "適合想把 AI 放進既有工作流程的人",
+    ],
   },
   "langchain-ai/langchain": {
     oneLineZh: "建立 LLM 應用與 agent workflow 的主流開源框架，適合研究 agent 工程基礎。",
     introZh: "LangChain 是 LLM application 與 agent engineering 的主流開源框架之一。它適合用來理解工具調用、chain、retrieval、agent orchestration 等基礎概念。",
+    audience: [
+      "適合要自己開發 LLM application / agent framework 的人",
+      "用在 tools、chain、retrieval 與 orchestration workflow",
+      "適合想理解 agent 工程基礎元件的人",
+    ],
   },
   "run-llama/llama_index": {
     oneLineZh: "主流 LLM 資料框架，常用來做 RAG、文件索引與 agent 可查詢的知識工具。",
     introZh: "LlamaIndex 是常見的 LLM data framework，重點在把文件、資料庫與外部知識整理成模型或 agent 可以查詢的結構。它適合用來理解 RAG、資料索引與知識工具如何支援 AI workflow。",
+    audience: [
+      "適合知識庫型 / RAG 型 agent",
+      "用在文件索引、資料查詢與 agent knowledge tool workflow",
+      "適合想讓 agent 查公司文件與資料庫的人",
+    ],
   },
 };
 
@@ -328,15 +410,65 @@ function buildOneLine(repo, descriptionZh, category) {
 
 function buildAudience(repo, category) {
   const haystack = [repo.full_name, repo.description, ...(repo.topics || [])].join(" ").toLowerCase();
+  const audience = [];
   if (category.key === "skill-workflow") {
-    const audience = ["想建立 AI Agent 工作流程的人", "需要整理 prompt / rules / knowledge 的人"];
-    if (haystack.includes("claude") || haystack.includes("codex")) audience.push("正在使用 Claude Code 或 Codex 的人");
-    return audience;
+    if (haystack.includes("memory") || haystack.includes("mem0") || haystack.includes("rag") || haystack.includes("context")) {
+      audience.push("適合需要記憶 / 上下文管理的 coding agent");
+      audience.push("用在長任務、跨對話延續與知識取回 workflow");
+    }
+    if (haystack.includes("multi-agent") || haystack.includes("orchestration") || haystack.includes("harness") || haystack.includes("autonomous")) {
+      audience.push("適合多代理協作或自主任務型 agent");
+      audience.push("用在任務拆解、工具調用、協調與安全邊界 workflow");
+    }
+    if (haystack.includes("planning") || haystack.includes("long-running") || haystack.includes("plan")) {
+      audience.push("適合長任務規劃型 coding agent");
+      audience.push("用在 plan-review-execute、文件驅動與進度保存 workflow");
+    }
+    if (haystack.includes("plugin") || haystack.includes("skills") || haystack.includes("skill.md") || haystack.includes("openclaw")) {
+      audience.push("適合 Claude Code / Codex / Cursor 這類可掛 Skill 的 agent");
+      audience.push("用在技能包、插件、可重用指令與團隊 SOP workflow");
+    }
+    if (haystack.includes("prompt") || haystack.includes("rules") || haystack.includes("agents.md") || haystack.includes("claude.md")) {
+      audience.push("適合需要標準化交辦規則的 AI coding agent");
+      audience.push("用在 prompt、rules、AGENTS.md / CLAUDE.md 管理 workflow");
+    }
+    if (!audience.length && (haystack.includes("claude") || haystack.includes("codex") || haystack.includes("cursor"))) {
+      audience.push("適合 Claude Code / Codex / Cursor 類 AI coding agent");
+      audience.push("用在開發任務拆解、工具使用與上下文整理 workflow");
+    }
+    return [...new Set(audience)].slice(0, 3);
   }
-  const audience = ["想追 GitHub AI 工具趨勢的人", "想評估開源工具是否值得研究的人"];
-  if (haystack.includes("mcp")) audience.push("正在研究 MCP / tool server 的人");
-  if (haystack.includes("sdk") || haystack.includes("framework")) audience.push("想做 AI 應用或 agent prototype 的人");
-  return audience;
+  if (haystack.includes("mcp")) {
+    audience.push("適合需要工具連接的 MCP / tool server agent");
+    audience.push("用在內部系統、API 與外部工具串接 workflow");
+  }
+  if (haystack.includes("rag") || haystack.includes("retrieval") || haystack.includes("index")) {
+    audience.push("適合知識庫型 / RAG 型 agent");
+    audience.push("用在文件索引、資料查詢與知識工具 workflow");
+  }
+  if (haystack.includes("coding") || haystack.includes("developer") || haystack.includes("code")) {
+    audience.push("適合 AI coding / developer assistant agent");
+    audience.push("用在程式碼理解、修改、測試與工具整合 workflow");
+  }
+  if (haystack.includes("automation") || haystack.includes("workflow")) {
+    audience.push("適合自動化流程型 agent");
+    audience.push("用在排程、Webhook、跨工具整合與營運流程 workflow");
+  }
+  if (haystack.includes("sdk") || haystack.includes("framework")) {
+    audience.push("適合要自建 agent framework 或 prototype 的工程師");
+    audience.push("用在 SDK、orchestration 與應用開發 workflow");
+  }
+  if (!audience.length) {
+    audience.push("適合做 AI 工具選型與趨勢觀察的人");
+    audience.push("用在第一輪技術評估與 prototype 研究 workflow");
+  }
+  return [...new Set(audience)].slice(0, 3);
+}
+
+function normalizeAudience(items = []) {
+  return [...new Set((items || [])
+    .map((item) => String(item || "").replace(/^適合\s*/, "").trim())
+    .filter(Boolean))].slice(0, 3);
 }
 
 function buildUseCases(repo, category) {
@@ -469,6 +601,7 @@ async function enrichRepo(repo, category, period, rank) {
   return {
     ...enriched,
     ...override,
+    audience: normalizeAudience(override.audience || enriched.audience),
     contentZh: override.contentZh || buildContentZh(repo, override.descriptionZh || enriched.descriptionZh, override.introZh || enriched.introZh, category),
   };
 }
