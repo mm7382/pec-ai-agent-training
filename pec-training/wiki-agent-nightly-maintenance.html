@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wiki Agent Nightly Maintenance：讓知識庫每天自動收錄、整理與封存 - ADLINK 教學檔</title>
+  <style>
+    :root {
+      --dark: #252c2e;
+      --ink: #243034;
+      --muted: #5c686c;
+      --line: #d8d8d8;
+      --light: #f4f5f6;
+      --white: #ffffff;
+      --red: #d0333a;
+      --cyan: #1cb9d8;
+      --green: #94c11f;
+      --purple: #7d3189;
+      --orange: #ec672c;
+      --yellow: #fab428;
+      --shadow: 0 18px 42px rgba(37, 44, 46, 0.11);
+      --logo-report: url("../assets/brand/adlink-report-logo-charcoal-bg.jpg");
+      --logo-full: url("../assets/brand/adlink-logo-full.png");
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #ffffff 0%, #f4f5f6 54%, #ffffff 100%);
+      font-family: Calibri, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(37,44,46,.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(37,44,46,.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity: .42;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100vw - 32px)); margin: 0 auto; }
+    .cover {
+      min-height: 650px;
+      color: #fff;
+      background:
+        linear-gradient(115deg, rgba(37,44,46,.99), rgba(37,44,46,.91)),
+        radial-gradient(circle at 84% 16%, rgba(28,185,216,.24), transparent 420px);
+      border-bottom: 10px solid var(--red);
+    }
+    .cover-inner { min-height: 650px; display: flex; flex-direction: column; padding: 48px 0 54px; }
+    .cover-top, .cover-footer { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    .report-logo { width: min(520px, 74vw); height: 114px; background: var(--logo-report) left center / contain no-repeat; flex: 0 0 auto; }
+    .cover-kicker, .cover-footer { color: rgba(255,255,255,.76); font-size: 15px; }
+    .cover-main { margin: auto 0 34px; max-width: 1020px; }
+    .label {
+      display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px; border: 1px solid rgba(255,255,255,.34);
+      border-radius: 999px; background: rgba(255,255,255,.08); font-size: 13px; font-weight: 800;
+    }
+    .label::before {
+      content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--red);
+      box-shadow: 18px 0 0 var(--cyan), 36px 0 0 var(--green); margin-right: 38px;
+    }
+    h1 { margin: 24px 0 18px; font-size: clamp(38px, 5vw, 60px); line-height: 1.08; letter-spacing: 0; overflow-wrap: anywhere; }
+    .subtitle {
+      max-width: 940px; margin: 0; padding-left: 18px; border-left: 6px solid var(--red);
+      color: rgba(255,255,255,.88); font-size: 21px; overflow-wrap: anywhere;
+    }
+    .cover-footer { margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.18); }
+    header { background: #fff; border-bottom: 8px solid var(--red); box-shadow: var(--shadow); padding: 40px 0 34px; }
+    .ad-logo-full { width: min(240px, 70vw); height: 46px; margin-bottom: 18px; background: var(--logo-full) left center / contain no-repeat; }
+    .eyebrow { display: inline-flex; margin-bottom: 18px; padding: 7px 13px; border-radius: 3px; background: var(--dark); color: #fff; font-size: 14px; font-weight: 800; }
+    header h2 { margin: 0 0 14px; color: var(--dark); font-size: clamp(28px, 4vw, 44px); line-height: 1.16; letter-spacing: 0; overflow-wrap: anywhere; }
+    .lead { max-width: 980px; margin: 0 0 20px; color: #4b5558; font-size: 20px; overflow-wrap: anywhere; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+    .metric { min-height: 118px; padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--light); }
+    .metric b { display: block; color: var(--red); font-size: 28px; line-height: 1; }
+    .metric small { display: block; margin-top: 8px; color: #596265; font-weight: 800; }
+    nav { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(244,245,246,.96); backdrop-filter: blur(10px); }
+    nav .wrap { display: flex; gap: 10px; flex-wrap: wrap; padding: 12px 0; }
+    nav a { border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--dark); font-size: 14px; font-weight: 800; padding: 8px 12px; text-decoration: none; }
+    main { padding: 34px 0 68px; }
+    section { margin: 28px 0; padding: 30px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.96); box-shadow: 0 10px 28px rgba(37,44,46,.06); }
+    section h2 { margin: 0 0 14px; color: var(--dark); font-size: clamp(26px, 3vw, 36px); line-height: 1.18; letter-spacing: 0; }
+    section h3 { margin: 0 0 8px; color: var(--dark); font-size: 21px; line-height: 1.32; }
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 10px 0 0; padding-left: 22px; }
+    li { margin: 7px 0; }
+    code, pre { font-family: "SFMono-Regular", Consolas, monospace; }
+    code { padding: 2px 6px; border-radius: 4px; background: #eef0f1; color: #1c2224; font-size: .94em; }
+    pre { margin: 0; padding: 16px; border-radius: 8px; background: #111; color: #f6f4f0; overflow: auto; line-height: 1.6; font-size: 14px; }
+    .grid-2, .grid-3, .grid-4 { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+    .card .bar { height: 7px; background: var(--red); }
+    .card.cyan .bar { background: var(--cyan); }
+    .card.green .bar { background: var(--green); }
+    .card.purple .bar { background: var(--purple); }
+    .card.orange .bar { background: var(--orange); }
+    .card.yellow .bar { background: var(--yellow); }
+    .card-body { padding: 18px; }
+    .tag {
+      display: inline-flex; align-items: center; margin: 4px 6px 4px 0; padding: 5px 9px; border-radius: 999px;
+      background: #fff0f1; color: var(--red); font-size: 13px; font-weight: 800;
+    }
+    .tag.cyan { background: #e9f8fb; color: #0b7184; }
+    .tag.green { background: #fbfff5; color: #5e7c11; }
+    .tag.purple { background: #f4e9f6; color: #6d2677; }
+    .tag.orange { background: #fff5ee; color: #9d3f18; }
+    .tag.yellow { background: #fffaf0; color: #8a6413; }
+    .soft { padding: 16px 18px; border-left: 5px solid var(--cyan); border-radius: 6px; background: #f7fcfd; }
+    .warn { padding: 16px 18px; border-left: 5px solid var(--orange); border-radius: 6px; background: #fff8f4; }
+    .callout { padding: 18px; border: 1px solid #f0c9cc; border-radius: 8px; background: #fff7f7; }
+    .callout strong { color: var(--red); }
+    .compare { width: 100%; border-collapse: collapse; margin-top: 14px; overflow: hidden; border-radius: 8px; font-size: 15px; }
+    .compare th, .compare td { border: 1px solid var(--line); padding: 12px; vertical-align: top; text-align: left; }
+    .compare th { background: var(--dark); color: #fff; }
+    .compare tr:nth-child(even) td { background: #fafafa; }
+    .diagram {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 16px;
+    }
+    .diagram svg { display: block; width: 100%; height: auto; }
+    .step-list { counter-reset: item; display: grid; gap: 12px; padding-left: 0; list-style: none; }
+    .step-list li { counter-increment: item; padding: 16px 16px 16px 58px; border: 1px solid var(--line); border-radius: 8px; background: #fff; position: relative; }
+    .step-list li::before {
+      content: counter(item); position: absolute; left: 16px; top: 16px; width: 28px; height: 28px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--red); color: #fff; font-weight: 900;
+    }
+    .source-list a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); color: #2b5c7e; overflow-wrap: anywhere; text-decoration: none; }
+    footer { padding: 26px 0 38px; color: #697174; font-size: 14px; text-align: center; }
+    @media (max-width: 920px) {
+      .cover-top, .cover-footer { flex-direction: column; align-items: flex-start; }
+      .metrics, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      section { padding: 24px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100vw - 24px, 1160px); }
+      .cover-inner { padding: 34px 0 42px; min-height: 620px; }
+      .report-logo { width: 100%; height: 78px; }
+      h1 { font-size: 34px; }
+      .subtitle, .lead { font-size: 18px; }
+      section { padding: 18px; }
+      nav { position: static; }
+    }
+  </style>
+  <script src="../site-config.js?v=20260715-wiki-agent-nightly-maintenance"></script>
+  <script src="../tutorial-gate.js?v=20260715-wiki-agent-nightly-maintenance"></script>
+</head>
+<body>
+  <div class="cover">
+    <div class="wrap cover-inner">
+      <div class="cover-top">
+        <div class="report-logo" aria-label="ADLINK logo"></div>
+        <div class="cover-kicker">Knowledge Operations / ADLINK Training</div>
+      </div>
+      <div class="cover-main">
+        <span class="label">ADLINK 教學檔</span>
+        <h1>Wiki Agent Nightly Maintenance：讓知識庫每天自動收錄、整理與封存</h1>
+        <p class="subtitle">這份教材把本地 Wiki Agent 的升級拆成可落地的知識營運流程：白天讓人和 agent 產生資料，晚上由 Wiki Agent 自動收錄、整理、封存、更新導覽頁，讓知識庫不再只是堆檔案。</p>
+      </div>
+      <div class="cover-footer">
+        <span>整理基礎：本地 Wiki Agent 實作 / OpenWiki 借鏡 / ADLINK 內訓整理</span>
+        <span>2026-07-15</span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <div class="ad-logo-full" aria-label="ADLINK full logo"></div>
+      <span class="eyebrow">Course Framing</span>
+      <h2>真正的問題不是「有沒有知識庫」，而是知識庫會不會自己持續變乾淨、變可用。</h2>
+      <p class="lead">很多團隊的 wiki 一開始都很漂亮，但過幾週就變成原始資料堆、待整理 inbox、重複頁面、過期 SOP 混在一起。這次做的不是多一篇筆記，而是把 Wiki Agent 變成一個每天會自動巡檢的知識管家。</p>
+      <div class="metrics">
+        <div class="metric"><b>22:40</b><small>每晚自動維護</small></div>
+        <div class="metric"><b>4 類</b><small>固定收錄來源</small></div>
+        <div class="metric"><b>3 頁</b><small>自動更新導覽頁</small></div>
+        <div class="metric"><b>archive/</b><small>舊資料不刪、改封存</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#problem">痛點</a>
+      <a href="#architecture">架構</a>
+      <a href="#before-after">前後差異</a>
+      <a href="#workflow">夜間流程</a>
+      <a href="#scripts">核心腳本</a>
+      <a href="#adlink">ADLINK 落地</a>
+      <a href="#checklist">導入檢查</a>
+      <a href="#sources">來源</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="problem">
+      <h2>這次升級在解決什麼痛點</h2>
+      <div class="grid-4">
+        <div class="card">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag">原始問題</span>
+            <h3>知識只進不出</h3>
+            <p>大家一直丟新資料，但沒有人固定整理、封存、補 metadata，最後 wiki 只會越來越亂。</p>
+          </div>
+        </div>
+        <div class="card cyan">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag cyan">流程問題</span>
+            <h3>聊天紀錄不會沉澱</h3>
+            <p>Codex、其他 agent、Telegram 對話裡其實有很多 know-how，但沒有固定回收機制，隔天就散掉。</p>
+          </div>
+        </div>
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag green">治理問題</span>
+            <h3>管理權和寫入權混在一起</h3>
+            <p>如果 orchestrator 既分派工作又直接亂改正式 wiki，系統很快就會失控。</p>
+          </div>
+        </div>
+        <div class="card orange">
+          <div class="bar"></div>
+          <div class="card-body">
+            <span class="tag orange">這次解法</span>
+            <h3>把知識營運變成夜間流程</h3>
+            <p>白天收資料，晚上由 Wiki Agent 自動 harvest、lint、archive、refresh，讓知識品質變成制度，不靠人記得。</p>
+          </div>
+        </div>
+      </div>
+      <div class="soft">一句話：這次不是做一個更大的 wiki，而是做一個會自己持續維護的 wiki 系統。</div>
+    </section>
+
+    <section id="architecture">
+      <h2>正確分權：小愛調度，Wiki Agent 管知識品質</h2>
+      <div class="grid-2">
+        <div>
+          <p>這次保留了你原本最重要的治理原則：</p>
+          <ul>
+            <li><strong>小愛</strong> 負責 agent orchestration、任務分派、讀取摘要後再決定要把 know-how 給誰。</li>
+            <li><strong>Wiki Agent</strong> 是唯一負責正式知識庫維護的 agent，管理 <code>raw/</code>、<code>inbox/</code>、<code>wiki/</code> 的品質。</li>
+            <li><strong>其他 agent</strong> 不直接改正式 wiki，只能送 proposal 或 memory 給 Wiki Agent。</li>
+            <li><strong>夜間排程</strong> 幫忙把白天產生的知識碎片重新整理成可持續使用的內容。</li>
+          </ul>
+        </div>
+        <div class="diagram">
+          <svg viewBox="0 0 860 360" role="img" aria-label="Wiki Agent knowledge operations diagram">
+            <rect x="30" y="40" width="180" height="80" rx="10" fill="#252c2e"></rect>
+            <text x="120" y="78" text-anchor="middle" font-size="28" fill="#fff" font-weight="700">Michael</text>
+            <text x="120" y="106" text-anchor="middle" font-size="16" fill="#dfe5e7">白天產生需求與素材</text>
+
+            <rect x="300" y="40" width="220" height="80" rx="10" fill="#d0333a"></rect>
+            <text x="410" y="78" text-anchor="middle" font-size="28" fill="#fff" font-weight="700">小愛</text>
+            <text x="410" y="106" text-anchor="middle" font-size="16" fill="#ffe4e6">分派任務、讀摘要、派給其他 agent</text>
+
+            <rect x="600" y="40" width="220" height="80" rx="10" fill="#1cb9d8"></rect>
+            <text x="710" y="78" text-anchor="middle" font-size="28" fill="#fff" font-weight="700">Wiki Agent</text>
+            <text x="710" y="106" text-anchor="middle" font-size="16" fill="#e9fbff">維護知識品質與正式 wiki</text>
+
+            <rect x="90" y="220" width="180" height="90" rx="10" fill="#ffffff" stroke="#d8d8d8" stroke-width="2"></rect>
+            <text x="180" y="252" text-anchor="middle" font-size="22" fill="#252c2e" font-weight="700">Codex / 其他 agent</text>
+            <text x="180" y="280" text-anchor="middle" font-size="16" fill="#5c686c">chat log</text>
+            <text x="180" y="301" text-anchor="middle" font-size="16" fill="#5c686c">learned_wiki / know-how-sops</text>
+
+            <rect x="350" y="220" width="180" height="90" rx="10" fill="#ffffff" stroke="#d8d8d8" stroke-width="2"></rect>
+            <text x="440" y="252" text-anchor="middle" font-size="22" fill="#252c2e" font-weight="700">raw / inbox</text>
+            <text x="440" y="280" text-anchor="middle" font-size="16" fill="#5c686c">白天進料</text>
+            <text x="440" y="301" text-anchor="middle" font-size="16" fill="#5c686c">晚上自動整理</text>
+
+            <rect x="610" y="220" width="180" height="90" rx="10" fill="#ffffff" stroke="#d8d8d8" stroke-width="2"></rect>
+            <text x="700" y="252" text-anchor="middle" font-size="22" fill="#252c2e" font-weight="700">wiki / archive</text>
+            <text x="700" y="280" text-anchor="middle" font-size="16" fill="#5c686c">正式知識</text>
+            <text x="700" y="301" text-anchor="middle" font-size="16" fill="#5c686c">封存舊資料</text>
+
+            <path d="M210 80 L300 80" stroke="#252c2e" stroke-width="4" fill="none"></path>
+            <path d="M520 80 L600 80" stroke="#252c2e" stroke-width="4" fill="none"></path>
+            <path d="M180 220 L180 170 L645 170 L645 120" stroke="#94c11f" stroke-width="4" fill="none"></path>
+            <path d="M440 220 L440 170 L690 170 L690 120" stroke="#7d3189" stroke-width="4" fill="none"></path>
+            <path d="M710 120 L710 220" stroke="#ec672c" stroke-width="4" fill="none"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="callout"><strong>治理重點</strong><br>讓 orchestrator 更強的方法，不是讓它自己背全部知識，而是讓它知道：什麼知識去哪裡查、什麼時候叫 Wiki Agent 更新、什麼東西值得進長期記憶。</div>
+    </section>
+
+    <section id="before-after">
+      <h2>這次升級前後差異</h2>
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>升級前</th>
+            <th>升級後</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>入口</td>
+            <td>多支 script 分散執行</td>
+            <td>用 <code>wiki-agent.mjs</code> 做統一入口</td>
+          </tr>
+          <tr>
+            <td>聊天紀錄回收</td>
+            <td>沒有固定收錄機制</td>
+            <td>每天固定掃 Codex archived sessions、agent chat logs、memory docs</td>
+          </tr>
+          <tr>
+            <td>清理方式</td>
+            <td>主要靠人工看 lint</td>
+            <td>自動 archive 舊的或明顯重複的 top-level raw / inbox</td>
+          </tr>
+          <tr>
+            <td>導覽頁</td>
+            <td>只有 index，狀態不夠即時</td>
+            <td>新增 quickstart / open-questions / maintenance 三頁每日更新</td>
+          </tr>
+          <tr>
+            <td>夜間排程</td>
+            <td>偏向 lint / index</td>
+            <td>變成完整 nightly maintenance：harvest、archive、graph、eval、refresh</td>
+          </tr>
+          <tr>
+            <td>知識可見度</td>
+            <td>白天有新東西，但晚上不一定被整理</td>
+            <td>每天固定巡檢，讓知識庫持續變乾淨、變可讀、變可用</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="workflow">
+      <h2>每天晚上的維運流程</h2>
+      <ol class="step-list">
+        <li><strong>Harvest</strong>：掃描最近的 Codex archived session、其他 agent 的 <code>chat_history.jsonl</code>、以及 <code>learned_wiki.md</code> / <code>know-how-sops.md</code>。</li>
+        <li><strong>Intake</strong>：把值得留下來的片段轉成新的 <code>raw/</code> 與 <code>inbox/</code> proposal，而不是直接改正式 wiki。</li>
+        <li><strong>Lint</strong>：檢查缺 metadata、重複來源、過期 inbox、矛盾標記與疑似 secret。</li>
+        <li><strong>Archive</strong>：把太舊或測試性質的 top-level <code>raw/</code> / <code>inbox/</code> 搬進 <code>archive/</code>，不直接刪除。</li>
+        <li><strong>Refresh</strong>：更新 <code>wiki/quickstart.md</code>、<code>wiki/open-questions.md</code>、<code>wiki/maintenance.md</code>。</li>
+        <li><strong>Graph + Eval</strong>：重建知識圖、跑 Golden QA 與日常 eval，確認知識搜尋還能用。</li>
+        <li><strong>小愛接手</strong>：如果新知識值得變成 capability action，再讓小愛決定要不要分派給其他 agent。</li>
+      </ol>
+      <div class="warn">這裡的關鍵不是「自動寫 wiki」，而是「先自動整理 proposal，正式 wiki 仍然由 Wiki Agent 維護」。這樣才不會讓知識庫被未驗證內容污染。</div>
+    </section>
+
+    <section id="scripts">
+      <h2>這次實際補上的核心腳本</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3><code>wiki-agent.mjs</code></h3>
+            <p>單一入口。之後用 <code>maintain</code>、<code>harvest</code>、<code>status</code> 等子命令呼叫整套流程，不用再記一堆分散腳本。</p>
+          </div>
+        </div>
+        <div class="card cyan">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3><code>wiki-agent-harvest.mjs</code></h3>
+            <p>回收聊天與 agent memory，把真正像 workflow、SOP、routing rule、know-how 的東西送進 Wiki Agent 的 intake 流程。</p>
+          </div>
+        </div>
+        <div class="card green">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3><code>wiki-agent-archive.mjs</code></h3>
+            <p>處理 top-level <code>raw/</code> 和 <code>inbox/</code> 的舊資料。原則不是刪除，而是可回溯地搬進 <code>archive/</code>。</p>
+          </div>
+        </div>
+        <div class="card purple">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3><code>wiki-agent-refresh.mjs</code></h3>
+            <p>生成 OpenWiki 味道更重的導覽頁，讓使用者一打開就看到現在狀態、待整理問題和最新維護結果。</p>
+          </div>
+        </div>
+        <div class="card orange">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3><code>wiki-agent-evolve.mjs</code></h3>
+            <p>原本比較偏 self-evolution audit，現在擴成 nightly maintenance 總控，串起 harvest、archive、lint、graph、eval。</p>
+          </div>
+        </div>
+        <div class="card yellow">
+          <div class="bar"></div>
+          <div class="card-body">
+            <h3>LaunchAgent</h3>
+            <p>把 22:40 的排程實際寫回 macOS <code>LaunchAgents</code>，讓這不是 repo 內的設定，而是每天真的會跑的服務。</p>
+          </div>
+        </div>
+      </div>
+      <pre><code>node scripts/wiki-agent.mjs maintain
+node scripts/wiki-agent.mjs harvest
+node scripts/wiki-agent.mjs status</code></pre>
+    </section>
+
+    <section id="adlink">
+      <h2>這件事對 ADLINK 團隊真正有什麼用</h2>
+      <div class="grid-2">
+        <div>
+          <h3>對工程團隊</h3>
+          <ul>
+            <li>會議中的 know-how、debug 過程、工具輸出不會只留在聊天視窗裡。</li>
+            <li>RAG / wiki / SOP / skill 的界線會更清楚，不會什麼都混在同一層。</li>
+            <li>你可以把知識治理變成夜間批次，而不是白天人工補洞。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>對內訓與知識傳承</h3>
+          <ul>
+            <li>教材產線、prompt 工作法、agent 維運規則可以持續沉澱，而不是每次重講。</li>
+            <li>新進同事看 <code>quickstart</code>、<code>open-questions</code>、<code>maintenance</code> 就知道知識庫現在狀態。</li>
+            <li>當 agent 數量增加時，知識品質不會完全靠小愛一個總管硬背。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="soft"><strong>最實用的導入方式</strong><br>先把這套做法用在教材產線、PM note、產品知識整理、Telegram / Codex 工作紀錄回收。等運作穩定，再往更多 agent 與部門擴。</div>
+    </section>
+
+    <section id="checklist">
+      <h2>如果你要複製這套做法，至少先做到這幾件事</h2>
+      <ul>
+        <li>先分權：orchestrator 不直接改正式 wiki，Wiki Agent 才是正式知識維護者。</li>
+        <li>所有新資料先進 <code>raw/</code> 或 <code>inbox/</code>，不要跳過 review 直接寫 wiki。</li>
+        <li>每天至少固定一次自動 maintenance，不然知識庫只會積灰。</li>
+        <li>保留 archive，不要因為想乾淨就直接刪資料。</li>
+        <li>把 status、open questions、maintenance 做成人人看得懂的頁面，避免系統變黑箱。</li>
+        <li>讓小愛只讀摘要與結果，不要把所有 raw memory 都塞給它。</li>
+      </ul>
+      <div class="callout"><strong>最值得記的一句話</strong><br>好的知識型 agent，不是知道很多，而是每天都能把新知識收進來、把舊知識整理好、把垃圾知識隔離出去。</div>
+    </section>
+
+    <section id="sources">
+      <h2>來源</h2>
+      <div class="source-list">
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/scripts/wiki-agent.mjs">Local source: wiki-agent.mjs</a>
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/scripts/wiki-agent-harvest.mjs">Local source: wiki-agent-harvest.mjs</a>
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/scripts/wiki-agent-archive.mjs">Local source: wiki-agent-archive.mjs</a>
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/scripts/wiki-agent-refresh.mjs">Local source: wiki-agent-refresh.mjs</a>
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/scripts/wiki-agent-evolve.mjs">Local source: wiki-agent-evolve.mjs</a>
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/wiki/quickstart.md">Local source: wiki/quickstart.md</a>
+        <a href="file:///Users/michaelchuang/agent/wiki%20agent/workspace/wiki/open-questions.md">Local source: wiki/open-questions.md</a>
+        <a href="https://github.com/langchain-ai/openwiki" target="_blank" rel="noopener">Reference: OpenWiki official repository</a>
+        <a href="https://github.com/langchain-ai/openwiki/blob/main/openwiki/architecture/overview.md" target="_blank" rel="noopener">Reference: OpenWiki architecture overview</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    ADLINK internal teaching draft. This page summarizes the July 15, 2026 Wiki Agent knowledge-operations upgrade into a repeatable internal workflow.
+  </footer>
+</body>
+</html>
