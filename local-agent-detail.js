@@ -129,6 +129,7 @@
       summary,
       tags,
       sectionWithParagraphs("詳細介紹", agent.contentZh || []),
+      sectionWithList("適合的 Agent / Workflow", agent.audience || []),
       sectionWithList("適合做什麼", agent.useCases || []),
       sectionWithParagraphs("如何開始試", [agent.installConcept || "請參考 GitHub README 安裝。"]),
       sectionWithList("優點", agent.strengths || []),

@@ -24,6 +24,7 @@
     const article = document.createElement("article");
     article.className = "local-card";
     const tags = [agent.difficulty, ...(agent.runType || []).slice(0, 3)].filter(Boolean);
+    const audience = (agent.audience || []).slice(0, 3);
     article.innerHTML = `
       <div class="local-card-top">
         <span class="local-rank">${agent.rank}</span>
@@ -39,7 +40,10 @@
         <span>Fork ${formatNumber(agent.forks)}</span>
         <span>${agent.language || "Unknown"}</span>
       </div>
-      <p class="local-summary">適合：${(agent.audience || []).slice(0, 3).join("、")}</p>
+      <div class="local-fit">
+        <strong>適合</strong>
+        <ul>${audience.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </div>
       <div class="local-actions">
         <a class="local-detail-link" href="./local-agent-detail.html?period=${encodeURIComponent(agent.period)}&id=${encodeURIComponent(agent.id)}">查看詳細內容</a>
         <a class="local-source-link" href="${agent.url}" target="_blank" rel="noreferrer">GitHub / 下載</a>

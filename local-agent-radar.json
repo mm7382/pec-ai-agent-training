@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T00:53:45.978Z",
+  "generatedAt": "2026-07-15T07:49:11.961Z",
   "title": "Local Agent 熱門",
   "source": "GitHub API + manual quality review",
   "notes": [
@@ -35,9 +35,9 @@
             "Local LLM 視設定而定"
           ],
           "audience": [
-            "Agent 開發者",
-            "工程師",
-            "想研究瀏覽器自動化的人"
+            "Agent 類型：瀏覽器操作型 / Web automation agent",
+            "核心功能：讀取頁面狀態、點擊、輸入、跳轉與等待",
+            "運用場景：把查詢、填表、比價、後台巡檢等重複網頁流程交給 agent 試跑"
           ],
           "notFor": [
             "只想看教學、不想安裝 Python 的人",
@@ -45,7 +45,8 @@
           ],
           "useCases": [
             "自動填表與瀏覽網站",
-            "把重複性網頁操作交給 Agent",
+            "整理搜尋結果與網頁資料",
+            "把重複性後台操作交給 Agent",
             "研究 browser agent loop",
             "搭配 local model 測試網頁任務"
           ],
@@ -79,10 +80,10 @@
             "playwright",
             "python"
           ],
-          "stars": 104755,
-          "forks": 11541,
-          "watchers": 104755,
-          "openIssues": 314,
+          "stars": 104808,
+          "forks": 11548,
+          "watchers": 104808,
+          "openIssues": 317,
           "likes": 57,
           "hearts": 0,
           "comments": 16,
@@ -109,7 +110,7 @@
               "comments": 12
             }
           ],
-          "updatedAt": "2026-07-15T00:30:40Z",
+          "updatedAt": "2026-07-15T07:31:48Z",
           "pushedAt": "2026-07-15T00:20:37Z",
           "createdAt": "2024-10-31T16:00:56Z",
           "homepage": "https://browser-use.com",
@@ -142,9 +143,9 @@
             "部分 local model 可透過相容 API 接入"
           ],
           "audience": [
-            "工程師",
-            "Agent 開發者",
-            "想研究 AI 軟體工程的人"
+            "Agent 類型：完整 AI coding / software engineering agent",
+            "核心功能：讀 repo、改檔、跑 shell、測試與修 bug",
+            "運用場景：把明確的工程任務放進 sandbox，讓 agent 迭代到可審查的 diff"
           ],
           "notFor": [
             "沒有 Docker / 開發環境經驗的人",
@@ -154,6 +155,7 @@
             "修 bug",
             "讀 repo 並修改程式",
             "跑測試與命令",
+            "重構小範圍模組",
             "研究 coding agent 的沙箱與任務流程"
           ],
           "installConcept": "通常以 Docker 或本機開發環境啟動，讓 Agent 在隔離環境中操作程式碼、shell 與工具。",
@@ -189,10 +191,10 @@
             "llm",
             "openai"
           ],
-          "stars": 80788,
-          "forks": 10310,
-          "watchers": 80788,
-          "openIssues": 365,
+          "stars": 80839,
+          "forks": 10317,
+          "watchers": 80839,
+          "openIssues": 364,
           "likes": 89,
           "hearts": 0,
           "comments": 46,
@@ -219,8 +221,8 @@
               "comments": 6
             }
           ],
-          "updatedAt": "2026-07-15T00:46:18Z",
-          "pushedAt": "2026-07-14T21:54:03Z",
+          "updatedAt": "2026-07-15T07:47:38Z",
+          "pushedAt": "2026-07-15T06:17:39Z",
           "createdAt": "2024-03-13T03:33:31Z",
           "homepage": "https://openhands.dev",
           "url": "https://github.com/OpenHands/OpenHands",
@@ -252,9 +254,9 @@
             "Local provider 視設定而定"
           ],
           "audience": [
-            "工程師",
-            "AI coding 使用者",
-            "想在 IDE 裡跑 Agent 的人"
+            "Agent 類型：IDE 內的 AI coding pair agent",
+            "核心功能：讀檔、改檔、產生測試、解釋錯誤與執行小任務",
+            "運用場景：日常開發中把單一 bug、單一功能或測試補齊交給 agent 協作"
           ],
           "notFor": [
             "不寫程式的人",
@@ -265,7 +267,8 @@
             "讀 repo",
             "產生測試",
             "解釋錯誤",
-            "把小型工程任務交給 Agent"
+            "把小型工程任務交給 Agent",
+            "用 local provider 測試 coding workflow"
           ],
           "installConcept": "可作為 IDE extension 或 CLI/SDK 使用；通常需要設定模型 provider 與專案權限。",
           "strengths": [
@@ -291,10 +294,10 @@
           ],
           "language": "TypeScript",
           "topics": [],
-          "stars": 64660,
-          "forks": 6914,
-          "watchers": 64660,
-          "openIssues": 1250,
+          "stars": 64675,
+          "forks": 6917,
+          "watchers": 64675,
+          "openIssues": 1245,
           "likes": 225,
           "hearts": 0,
           "comments": 134,
@@ -321,8 +324,8 @@
               "comments": 77
             }
           ],
-          "updatedAt": "2026-07-15T00:50:40Z",
-          "pushedAt": "2026-07-15T00:49:09Z",
+          "updatedAt": "2026-07-15T07:35:53Z",
+          "pushedAt": "2026-07-15T07:46:28Z",
           "createdAt": "2024-07-06T07:28:10Z",
           "homepage": "https://cline.bot",
           "url": "https://github.com/cline/cline",
@@ -352,9 +355,9 @@
             "Local/self-host model 視部署設定"
           ],
           "audience": [
-            "Agent 開發者",
-            "PM",
-            "想研究通用工作代理的人"
+            "Agent 類型：通用工作台 / AI command center agent",
+            "核心功能：研究、瀏覽器任務、工具操作與多步驟任務追蹤",
+            "運用場景：公司內部 AI 工作台原型，讓 agent 協助找資料、整理結論、操作工具"
           ],
           "notFor": [
             "只想要單一 CLI 工具的人",
@@ -364,7 +367,8 @@
             "研究與資料整理",
             "多步驟任務執行",
             "公司內部 AI 工作台原型",
-            "連接工具與瀏覽器任務"
+            "連接工具與瀏覽器任務",
+            "做跨系統資料查找與報告草稿"
           ],
           "installConcept": "通常需要 self-host web app 與後端服務，並設定模型、工具、資料庫或任務執行環境。",
           "strengths": [
@@ -393,9 +397,9 @@
             "ai-agents",
             "llm"
           ],
-          "stars": 19966,
-          "forks": 3422,
-          "watchers": 19966,
+          "stars": 19968,
+          "forks": 3421,
+          "watchers": 19968,
           "openIssues": 36,
           "likes": 29,
           "hearts": 11,
@@ -423,8 +427,8 @@
               "comments": 21
             }
           ],
-          "updatedAt": "2026-07-14T23:37:25Z",
-          "pushedAt": "2026-07-14T23:37:20Z",
+          "updatedAt": "2026-07-15T06:18:44Z",
+          "pushedAt": "2026-07-15T06:18:41Z",
           "createdAt": "2024-10-05T17:01:01Z",
           "homepage": "https://www.kortix.com",
           "url": "https://github.com/kortix-ai/suna",
@@ -456,9 +460,9 @@
             "OpenAI-compatible API"
           ],
           "audience": [
-            "Local LLM 玩家",
-            "工程師",
-            "想讓模型操作電腦的人"
+            "Agent 類型：本機命令列 / computer-use coding agent",
+            "核心功能：寫程式、執行程式、處理本機檔案與快速產生腳本",
+            "運用場景：在低風險資料夾中讓 agent 幫你整理檔案、分析資料、產生小工具"
           ],
           "notFor": [
             "不想讓 Agent 執行本機命令的人",
@@ -468,6 +472,7 @@
             "執行程式碼",
             "本機檔案處理",
             "快速腳本",
+            "資料整理與轉檔",
             "local model coding agent 實驗"
           ],
           "installConcept": "以 CLI/TUI 形式使用，設定模型後讓 Agent 在本機產生與執行程式碼；務必先用低風險目錄測試。",
@@ -501,10 +506,10 @@
             "qwen",
             "rust"
           ],
-          "stars": 65008,
-          "forks": 5631,
-          "watchers": 65008,
-          "openIssues": 276,
+          "stars": 65068,
+          "forks": 5636,
+          "watchers": 65068,
+          "openIssues": 274,
           "likes": 25,
           "hearts": 22,
           "comments": 20,
@@ -531,8 +536,8 @@
               "comments": 4
             }
           ],
-          "updatedAt": "2026-07-15T00:53:05Z",
-          "pushedAt": "2026-07-14T22:45:27Z",
+          "updatedAt": "2026-07-15T07:44:48Z",
+          "pushedAt": "2026-07-15T02:17:28Z",
           "createdAt": "2023-07-14T07:10:44Z",
           "homepage": "http://openinterpreter.com/",
           "url": "https://github.com/openinterpreter/openinterpreter",
@@ -570,8 +575,9 @@
             "OpenAI-compatible API"
           ],
           "audience": [
-            "Agent 開發者",
-            "想研究自主代理歷史與平台化的人"
+            "Agent 類型：自主任務規劃 / agent workflow 平台",
+            "核心功能：目標拆解、任務規劃、工具執行與長流程管理",
+            "運用場景：研究 autonomous agent 如何把大目標拆成可執行步驟與檢查點"
           ],
           "notFor": [
             "只想要簡單本機工具的人",
@@ -581,7 +587,8 @@
             "自主任務代理研究",
             "Agent workflow 實驗",
             "多步驟任務規劃",
-            "開源 Agent 平台研究"
+            "開源 Agent 平台研究",
+            "比較自主規劃和人工審核流程的差異"
           ],
           "installConcept": "通常需要 clone repo 並依官方文件啟動平台與後端服務；不同版本架構可能變動，需看最新 README。",
           "strengths": [
@@ -619,10 +626,10 @@
             "openai",
             "python"
           ],
-          "stars": 185539,
+          "stars": 185549,
           "forks": 46080,
-          "watchers": 185539,
-          "openIssues": 500,
+          "watchers": 185549,
+          "openIssues": 499,
           "likes": 173,
           "hearts": 32,
           "comments": 328,
@@ -649,8 +656,8 @@
               "comments": 25
             }
           ],
-          "updatedAt": "2026-07-15T00:46:26Z",
-          "pushedAt": "2026-07-14T20:35:33Z",
+          "updatedAt": "2026-07-15T07:40:42Z",
+          "pushedAt": "2026-07-15T03:32:07Z",
           "createdAt": "2023-03-16T09:21:07Z",
           "homepage": "https://agpt.co",
           "url": "https://github.com/Significant-Gravitas/AutoGPT",
@@ -681,9 +688,9 @@
             "Local LLM 視整合方式"
           ],
           "audience": [
-            "工程師",
-            "Agent 開發者",
-            "想設計多代理流程的人"
+            "Agent 類型：多代理協作 / agent team framework",
+            "核心功能：角色分工、task 串接、tool 設定與流程封裝",
+            "運用場景：把研究、寫作、審查、分析拆成多個 agent 角色協作"
           ],
           "notFor": [
             "只想要現成桌面 app 的人",
@@ -693,7 +700,8 @@
             "多角色任務分工",
             "研究 agent team",
             "自動化研究/寫作/分析流程",
-            "把流程封裝成 crew"
+            "把流程封裝成 crew",
+            "設計 reviewer / researcher / writer 協作流程"
           ],
           "installConcept": "以 Python framework 方式使用，需要寫 crew、agent、task 與 tool 設定；可接不同模型 provider。",
           "strengths": [
@@ -725,10 +733,10 @@
             "aiagentframework",
             "llms"
           ],
-          "stars": 55533,
-          "forks": 7831,
-          "watchers": 55533,
-          "openIssues": 650,
+          "stars": 55549,
+          "forks": 7834,
+          "watchers": 55549,
+          "openIssues": 651,
           "likes": 85,
           "hearts": 0,
           "comments": 71,
@@ -755,7 +763,7 @@
               "comments": 9
             }
           ],
-          "updatedAt": "2026-07-15T00:08:13Z",
+          "updatedAt": "2026-07-15T07:15:28Z",
           "pushedAt": "2026-07-14T21:16:39Z",
           "createdAt": "2023-10-27T03:26:59Z",
           "homepage": "https://crewai.com",
@@ -787,9 +795,9 @@
             "OpenAI-compatible API 視整合"
           ],
           "audience": [
-            "Agent 開發者",
-            "GUI automation 研究者",
-            "Local LLM 玩家"
+            "Agent 類型：桌面 GUI / multimodal computer-use agent",
+            "核心功能：看畫面、理解 UI、點擊、輸入與操作桌面或瀏覽器",
+            "運用場景：研究本機 Operator 類任務，例如操作軟體、瀏覽器與桌面流程"
           ],
           "notFor": [
             "只想要簡單文字 agent 的人",
@@ -799,7 +807,8 @@
             "桌面操作代理",
             "GUI automation",
             "browser/computer-use 研究",
-            "本機 Operator 類實驗"
+            "本機 Operator 類實驗",
+            "測試 multimodal agent 對真實 UI 的理解能力"
           ],
           "installConcept": "以桌面/前端與 agent infra stack 方式使用，需依 README 設定模型、執行環境與桌面控制權限。",
           "strengths": [
@@ -840,9 +849,9 @@
             "vision",
             "vlm"
           ],
-          "stars": 37980,
-          "forks": 3816,
-          "watchers": 37980,
+          "stars": 37985,
+          "forks": 3818,
+          "watchers": 37985,
           "openIssues": 409,
           "likes": 37,
           "hearts": 1,
@@ -870,7 +879,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-07-15T00:48:21Z",
+          "updatedAt": "2026-07-15T06:01:02Z",
           "pushedAt": "2026-07-01T03:03:19Z",
           "createdAt": "2025-01-19T09:04:43Z",
           "homepage": "https://agent-tars.com",
@@ -901,9 +910,9 @@
             "Local model 視模型能力"
           ],
           "audience": [
-            "Agent 研究者",
-            "GUI automation 研究者",
-            "工程師"
+            "Agent 類型：computer-use / GUI 操作研究型 agent",
+            "核心功能：畫面理解、動作決策、桌面任務執行與 benchmark",
+            "運用場景：研究 agent 如何像人一樣操作真實軟體介面"
           ],
           "notFor": [
             "只想快速下載 app 的人",
@@ -913,7 +922,8 @@
             "桌面任務代理",
             "GUI 操作研究",
             "computer-use benchmark",
-            "自動化真實軟體操作"
+            "自動化真實軟體操作",
+            "比較不同 multimodal model 的操作能力"
           ],
           "installConcept": "以 Python framework 使用，需要設定模型、環境與可操作的 GUI 任務；適合研究與實驗，不是零設定 app。",
           "strengths": [
@@ -952,9 +962,9 @@
             "planning",
             "retrieval-augmented-generation"
           ],
-          "stars": 12015,
+          "stars": 12018,
           "forks": 1410,
-          "watchers": 12015,
+          "watchers": 12018,
           "openIssues": 36,
           "likes": 1,
           "hearts": 7,
@@ -982,7 +992,7 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-07-15T00:13:50Z",
+          "updatedAt": "2026-07-15T05:29:18Z",
           "pushedAt": "2026-05-13T07:28:44Z",
           "createdAt": "2024-10-09T15:43:12Z",
           "homepage": "https://www.simular.ai",
@@ -1015,9 +1025,9 @@
             "Local model provider 視設定"
           ],
           "audience": [
-            "PM",
-            "工程師",
-            "內部 AI 平台建置者"
+            "Agent 類型：self-host AI app / agentic workflow 平台",
+            "核心功能：流程編排、知識庫、模型 provider、工具節點與應用部署",
+            "運用場景：建立內部知識助理、客服助手、文件問答或可管理的 AI workflow"
           ],
           "notFor": [
             "只想要單一 CLI agent 的人",
@@ -1027,7 +1037,8 @@
             "建立 AI app",
             "設計 agentic workflow",
             "內部知識助理",
-            "自架 AI 工作流平台"
+            "自架 AI 工作流平台",
+            "把 prompt、知識庫、工具與權限整合成團隊可用服務"
           ],
           "installConcept": "通常以 Docker/self-host 方式部署，透過 web UI 設計 workflow、agent、模型 provider 與資料來源。",
           "strengths": [
@@ -1074,10 +1085,10 @@
             "rag",
             "workflow"
           ],
-          "stars": 148843,
-          "forks": 23436,
-          "watchers": 148843,
-          "openIssues": 976,
+          "stars": 148882,
+          "forks": 23443,
+          "watchers": 148882,
+          "openIssues": 965,
           "likes": 207,
           "hearts": 0,
           "comments": 184,
@@ -1104,8 +1115,8 @@
               "comments": 31
             }
           ],
-          "updatedAt": "2026-07-15T00:52:25Z",
-          "pushedAt": "2026-07-14T23:18:37Z",
+          "updatedAt": "2026-07-15T07:45:42Z",
+          "pushedAt": "2026-07-15T07:46:29Z",
           "createdAt": "2023-04-12T07:40:24Z",
           "homepage": "https://dify.ai",
           "url": "https://github.com/langgenius/dify",
