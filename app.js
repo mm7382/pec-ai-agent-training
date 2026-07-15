@@ -6,6 +6,7 @@ const trackingEndpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
 const state = {
   items: [],
   categories: [],
+  resourceMeta: {},
   selectedCategory: localStorage.getItem(selectedCategoryKey) || "全部",
   query: "",
   visitor: null,
@@ -230,12 +231,45 @@ function formatDate(value) {
   }).format(date);
 }
 
+async function fetchResourceMeta(id, url) {
+  try {
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) return null;
+    const data = await response.json();
+    return {
+      id,
+      generatedAt: data.generatedAt || data.updatedAt || "",
+      itemCount: Array.isArray(data.items) ? data.items.length : 0,
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function loadResourceMeta() {
+  const entries = await Promise.all([
+    fetchResourceMeta("github-skill-rankings", "./github-skill-rankings.json"),
+    fetchResourceMeta("ai-agent-daily-radar", "./ai-agent-daily.json"),
+    fetchResourceMeta("local-agent-radar", "./local-agent-radar.json"),
+    fetchResourceMeta("ai-video-library", "./ai-video-library.json"),
+    fetchResourceMeta("openclaw-cases", "./openclaw-cases.json"),
+    fetchResourceMeta("hermes-agent-resources", "./hermes-agent-resources.json"),
+  ]);
+  state.resourceMeta = Object.fromEntries(entries.filter(Boolean).map((entry) => [entry.id, entry]));
+}
+
 function renderRecentUpdates() {
+  const githubMeta = state.resourceMeta["github-skill-rankings"];
+  const dailyMeta = state.resourceMeta["ai-agent-daily-radar"];
+  const localAgentMeta = state.resourceMeta["local-agent-radar"];
+  const aiVideoMeta = state.resourceMeta["ai-video-library"];
+  const openclawMeta = state.resourceMeta["openclaw-cases"];
+  const hermesMeta = state.resourceMeta["hermes-agent-resources"];
   const githubItem = state.items.find((item) => item.id === "github-skill-rankings") || {
     id: "github-skill-rankings",
     title: "GitHub 熱門 Skill",
     category: "Skill · AI Open Source",
-    updatedAt: "2026-07-09T00:00:00+08:00",
+    updatedAt: githubMeta?.generatedAt || "2026-07-09T00:00:00+08:00",
     summary: "每週整理 GitHub 上值得學的 Skill、AI workflow 與 AI 開源工具，先看白話介紹，再決定要不要深入研究。",
     url: "./github-skills.html",
   };
@@ -243,7 +277,7 @@ function renderRecentUpdates() {
     id: "ai-agent-daily-radar",
     title: "AI Agent 熱門新聞",
     category: "Hacker News · Reddit",
-    updatedAt: new Date().toISOString(),
+    updatedAt: dailyMeta?.generatedAt || "2026-07-10T03:59:32.766Z",
     summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，先看中文簡介，再點進來源細讀。",
     url: "./ai-agent-daily.html",
   };
@@ -251,7 +285,7 @@ function renderRecentUpdates() {
     id: "local-agent-radar",
     title: "Local Agent 熱門",
     category: "Local-ready · Self-host",
-    updatedAt: new Date().toISOString(),
+    updatedAt: localAgentMeta?.generatedAt || "2026-07-10T11:22:02.560Z",
     summary: "整理可本機執行、自架或下載研究的 Agent 專案，先看中文介紹與難度，再決定要不要試跑。",
     url: "./local-agent-radar.html",
   };
@@ -259,7 +293,7 @@ function renderRecentUpdates() {
     id: "openclaw-cases",
     title: "OpenClaw 使用案例",
     category: "YouTube · Use Cases",
-    updatedAt: "2026-07-11T00:00:00+08:00",
+    updatedAt: openclawMeta?.generatedAt || "2026-07-11T00:00:00+08:00",
     summary: "整理 604 個 OpenClaw 教學與應用案例，可搜尋分類、看中文詳細整理，部分案例也能直接複製 Prompt。",
     url: "./openclaw-cases.html",
   };
@@ -267,7 +301,7 @@ function renderRecentUpdates() {
     id: "hermes-agent-resources",
     title: "Hermes Agent 學習資料庫",
     category: "Official · GitHub · YouTube",
-    updatedAt: "2026-07-11T00:00:00+08:00",
+    updatedAt: hermesMeta?.generatedAt || "2026-07-11T00:00:00+08:00",
     summary: "收集 Hermes Agent 官方文件、GitHub、NVIDIA 部署案例、影片教學與比較文章，先看中文重點再深入來源。",
     url: "./hermes-agent-resources.html",
   };
@@ -275,7 +309,7 @@ function renderRecentUpdates() {
     id: "ai-video-library",
     title: "YouTube AI 影片精選",
     category: "YouTube · Global / Chinese",
-    updatedAt: "2026-07-14T09:30:00+08:00",
+    updatedAt: aiVideoMeta?.generatedAt || "2026-07-14T09:30:00+08:00",
     summary: "精選國內外近期 AI Agent、AI Coding、MCP、Local LLM、自動化與 Low-code / No-code 工具影片，附中文整理與學習重點。",
     url: "./ai-video-library.html",
   };
@@ -390,7 +424,10 @@ function renderItems() {
 }
 
 async function loadIndex() {
-  const response = await fetch("./tutorial-index.json", { cache: "no-store" });
+  const [response] = await Promise.all([
+    fetch("./tutorial-index.json", { cache: "no-store" }),
+    loadResourceMeta(),
+  ]);
   if (!response.ok) throw new Error("無法載入教材索引");
   const data = await response.json();
   state.items = data.items || [];

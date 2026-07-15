@@ -1,0 +1,55 @@
+name: Update AI Radar Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-radars:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install yt-dlp
+        run: |
+          python3 -m pip install --user --upgrade yt-dlp
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Update radar data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_SKILL_CANDIDATES_PER_QUERY: "40"
+          GITHUB_SKILL_RANK_LIMIT: "5"
+          YOUTUBE_RESULTS_PER_QUERY: "12"
+          YOUTUBE_ITEM_LIMIT: "60"
+          YOUTUBE_MIN_YEAR: "2026"
+        run: |
+          node scripts/local-agent-radar.mjs
+          node scripts/github-skill-rankings.mjs
+          node scripts/ai-agent-daily-radar.mjs
+          node scripts/ai-video-radar.mjs
+          node scripts/enrich-tutorial-index-search.mjs
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-skill-rankings.json ai-agent-daily.json ai-video-library.json local-agent-radar.json tutorial-index.json
+          if git diff --cached --quiet; then
+            echo "No radar data changes."
+          else
+            git commit -m "Update AI radar data"
+            git push
+          fi

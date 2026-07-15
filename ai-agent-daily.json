@@ -1,13 +1,18 @@
 {
-  "generatedAt": "2026-07-10T03:59:32.766Z",
-  "title": "AI Agent 熱門新聞",
+  "generatedAt": "2026-07-15T00:50:34.259Z",
+  "title": "AI Agent 每日熱門",
   "source": "Hacker News Algolia API + Reddit public RSS",
   "subreddits": [
-    "LocalLLaMA"
+    "LocalLLaMA",
+    "AI_Agents",
+    "ClaudeAI",
+    "CursorAI",
+    "OpenAI"
   ],
   "criteria": [
-    "只保留 AI Agent / LLM / AI coding / MCP / Local LLM / AI IDE / automation 相關內容。",
+    "只保留 AI Agent / LLM / AI coding / MCP / Local LLM / AI IDE / automation / agent skills 相關內容。",
     "排除股價、政治、純八卦與空泛未來論。",
+    "Reddit 來源涵蓋 LocalLLaMA、AI_Agents、ClaudeAI、CursorAI、OpenAI，避免只看單一社群。",
     "每筆都保留原文標題、中文標題、中文簡介、來源網址；分數與留言數會在來源可提供時顯示。"
   ],
   "periods": [
@@ -16,281 +21,221 @@
       "label": "每日前 5",
       "hn": [
         {
-          "id": "hn-48850563",
+          "id": "hn-48908950",
           "source": "Hacker News",
           "sourceKey": "hn",
           "period": "daily",
-          "originalTitle": "Agents' Last Exam: AI Agent Benchmark for Real-World Professional Workflows",
-          "url": "https://agents-last-exam.org",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48850563",
+          "originalTitle": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+          "url": "https://agnost.ai",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48908950",
+          "points": 45,
+          "comments": 26,
+          "createdAt": "2026-07-14T16:06:18Z",
+          "score": 140,
+          "titleZh": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "rank": 1
+        },
+        {
+          "id": "hn-48907409",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "daily",
+          "originalTitle": "Hookami Anywhere – A Read-Only YouTube Research MCP for ChatGPT and Claude",
+          "url": "https://hookami.ai/anywhere",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48907409",
+          "points": 1,
+          "comments": 0,
+          "createdAt": "2026-07-14T14:24:22Z",
+          "score": 101.4,
+          "titleZh": "Hookami Anywhere – A Read-Only YouTube Research MCP for ChatGPT and Claude",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 MCP / Claude / OpenAI 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "rank": 2
+        },
+        {
+          "id": "hn-48906299",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "daily",
+          "originalTitle": "Ask HN: Any objective research on which languages are best for AI agents?",
+          "url": "https://news.ycombinator.com/item?id=48906299",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48906299",
+          "points": 5,
+          "comments": 6,
+          "createdAt": "2026-07-14T13:10:05Z",
+          "score": 94,
+          "titleZh": "Ask HN: Any objective research on which languages are best for AI agents?",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "rank": 3
+        },
+        {
+          "id": "hn-48913612",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "daily",
+          "originalTitle": "Understanding the Cost of Coding Agents",
+          "url": "https://pub.towardsai.net/understanding-the-cost-of-coding-agents-9f4dc0f1e25e",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48913612",
+          "points": 4,
+          "comments": 0,
+          "createdAt": "2026-07-14T22:16:12Z",
+          "score": 80.6,
+          "titleZh": "Understanding the Cost of Coding Agents",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "rank": 4
+        },
+        {
+          "id": "hn-48912059",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "daily",
+          "originalTitle": "MenteDB, memory for AI agents (7x fewer tokens than mem0, reproducible)",
+          "url": "https://mentedb.com/compare/mem0",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48912059",
           "points": 2,
           "comments": 0,
-          "createdAt": "2026-07-09T18:42:08Z",
-          "score": 102.8,
-          "titleZh": "代理的最後考試：真實世界專業工作流程的人工智慧代理基準",
+          "createdAt": "2026-07-14T19:44:38Z",
+          "score": 77.8,
+          "titleZh": "MenteDB, memory for AI agents (7x fewer tokens than mem0, reproducible)",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "rank": 1,
-          "contentZh": [
-            "這篇介紹的是 Agents Last Exam，一個用來評估 AI Agent 是否能完成真實專業工作的 benchmark。它不是只測問答能力，而是把任務放在實際工作軟體與長流程裡，例如動畫製作、3D 建模、遊戲場景、模流分析、建築建模與腦影像分析等。",
-            "核心概念是：如果 Agent 未來要真的進入工作現場，就必須能處理長時間、多步驟、可驗證結果的任務。這類任務比單純回答問題困難，因為 Agent 需要規劃、操作工具、修正錯誤，最後交出能被檢查的成果。",
-            "對學 AI Agent 的人來說，這篇值得看的是評估方法。你可以用它反推自己的 Agent 教材：不要只教 prompt，而要設計可以驗收的任務、明確的成功標準、可重播的操作紀錄，以及跨工具的工作流程。",
-            "如果要放進內部訓練，可以把它當成「Agent 能力成熟度」案例：初階看 Agent 會不會回答，中階看 Agent 會不會用工具，高階看 Agent 能不能完成真實、長流程、可驗證的工作。"
-          ]
-        },
-        {
-          "id": "hn-48844345",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "daily",
-          "originalTitle": "Ask HN: I hate coding agents. Is this skill issue?",
-          "url": "https://news.ycombinator.com/item?id=48844345",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48844345",
-          "points": 8,
-          "comments": 7,
-          "createdAt": "2026-07-09T11:47:27Z",
-          "score": 100.2,
-          "titleZh": "問 HN：我討厭編碼代理。這是技能問題嗎？",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "rank": 2,
-          "contentZh": [
-            "這是一個 Hacker News 討論題：有人覺得 coding agents 很難用，想知道是不是自己使用方式有問題。這類討論的價值不在單一答案，而在於它集中呈現了很多工程師對 AI coding agent 的真實挫折。",
-            "常見痛點包括：Agent 會誤解專案脈絡、修改範圍過大、產生看似合理但不可靠的程式碼，或讓使用者花更多時間 review。這提醒我們，AI coding 不是把任務丟出去就結束，而是需要清楚的邊界、檢查點與測試流程。",
-            "比較實用的看法是：coding agent 適合明確、可驗證、可分段的工作，例如修小 bug、補測試、重構局部檔案、產生範例或整理文件。它不適合一開始就承擔模糊的大型架構決策。",
-            "這篇可以轉成教學重點：要學會把任務拆小、給出成功條件、要求 Agent 說明修改理由，並用測試或 review 去收斂結果。不是要相信 Agent，而是要建立讓 Agent 不容易失控的工作方式。"
-          ]
-        },
-        {
-          "id": "hn-48846407",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "daily",
-          "originalTitle": "Altman: GPT-5.6 is 54% more token efficient on agentic coding",
-          "url": "https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48846407",
-          "points": 13,
-          "comments": 3,
-          "createdAt": "2026-07-09T14:25:13Z",
-          "score": 99.2,
-          "titleZh": "Altman：GPT-5.6 的代理程式編碼令牌效率提高了 54%",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 OpenAI / Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "rank": 3,
-          "contentZh": [
-            "這篇新聞的重點是 OpenAI 新模型在 agentic coding 場景裡，被描述為 token 使用效率提升 54%。token efficiency 對 coding agent 很重要，因為代理式工作常常需要讀檔、規劃、修改、執行、再修正，整個流程會消耗大量上下文與輸出。",
-            "如果模型能用更少 token 完成同樣任務，實務上可能代表成本下降、回應變快、長任務更容易跑完，也可能讓 Agent 在多輪工具使用時保留更多有效上下文。這對公司內部導入 AI coding 工具會直接影響預算與使用體驗。",
-            "但這類數字需要謹慎解讀。效率提升不等於所有任務都更準，也不等於可以完全不 review。比較合理的讀法是：模型供應商正在把 agentic coding 當成核心競爭場景，而不是單純聊天或短問答。",
-            "對學習者來說，這篇可以幫你理解一件事：未來評估模型不能只看「聰不聰明」，還要看在長流程中是否省 token、少走彎路、工具調用穩定、錯誤修正成本低。"
-          ]
-        },
-        {
-          "id": "hn-48847526",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "daily",
-          "originalTitle": "Show HN: Policy enforcement for Claude Code, Cursor, and Codex",
-          "url": "https://kastra.ai/",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48847526",
-          "points": 12,
-          "comments": 1,
-          "createdAt": "2026-07-09T15:26:24Z",
-          "score": 93.8,
-          "titleZh": "顯示 HN：Claude Code、Cursor 和 Codex 的策略執行",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude / AI IDE 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "rank": 4,
-          "contentZh": [
-            "Kastra 的主張是替 AI 系統加上一層 runtime authorization。也就是在 Agent 執行 prompt、tool call、shell command 或 API request 之前，先檢查這個動作是否符合政策，允許才放行，不允許就阻擋並記錄。",
-            "這和一般監控工具不同。監控通常是在事情發生後記錄，Kastra 強調的是「動作發生前」就做 allow / deny。對會操作瀏覽器、資料庫、後端 API 或本機指令的 Agent 來說，這是很關鍵的安全控制。",
-            "它的概念可以拆成四個重點：身份、權限範圍、護欄與稽核。每次 AI 想做動作時，都要確認這個身份能不能做、能做到哪裡、需不需要人工批准，以及事後能不能重播與追蹤。",
-            "對內部教學來說，這篇很適合放在 Agent 安全章節：當 Agent 從「回答問題」走向「真的執行動作」，就不能只靠 prompt 約束，必須有外部政策、權限邊界和可稽核紀錄。"
-          ]
-        },
-        {
-          "id": "hn-48846739",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "daily",
-          "originalTitle": "How to feel safe delegating to AI agents?",
-          "url": "https://news.ycombinator.com/item?id=48846739",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48846739",
-          "points": 2,
-          "comments": 4,
-          "createdAt": "2026-07-09T14:43:34Z",
-          "score": 85.8,
-          "titleZh": "如何放心地將任務委託給人工智慧代理？",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "rank": 5,
-          "contentZh": [
-            "這是一個關於「如何放心把任務交給 AI Agent」的討論。核心問題不是 Agent 能不能做事，而是人在什麼條件下可以信任它做事，尤其是當任務涉及檔案修改、程式碼、資料、帳號或外部系統時。",
-            "比較穩健的做法是先限制任務範圍：讓 Agent 處理低風險、可回復、可驗證的工作，再逐步增加權限。每個階段都要有檢查點，例如先產生計畫、再修改、再跑測試、最後由人確認。",
-            "委派給 Agent 的關鍵不是「完全相信」，而是「設計可控流程」。包含明確的輸入資料、清楚的完成定義、變更記錄、測試結果、回滾方式，以及必要時的人類批准。",
-            "這篇適合轉成團隊規範：哪些任務可以自動化、哪些必須人工審查、哪些資料不能交給 Agent、什麼情況要停止執行。這些規則會比單純討論模型能力更實用。"
-          ]
+          "rank": 5
         }
       ],
       "reddit": [
         {
-          "id": "reddit-1us3li5",
+          "id": "reddit-1uwe542",
           "source": "Reddit / r/LocalLLaMA",
           "sourceKey": "reddit",
           "subreddit": "LocalLLaMA",
           "period": "daily",
-          "originalTitle": "If You Already Pay for an LLM Service, Running Local Embeddings and Rerankers Feels More Useful Than Running Local LLMs",
-          "originalExcerpt": "This post was originally written in Korean, then polished and translated into English using ChatGPT. I do run llama.cpp locally on a Tesla P40, but as someone who already pays for ChatGPT Pro, I was gradually losing the practical reason to keep running local LLMs like Qwen 3.6 27B or Gemma 4 31B. If I need access to OpenAI models through an API-like workflow, I can usually just use Codex OAuth instead. But then I realized that embedding models and reranker models are not something I can access ...",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1us3li5/if_you_already_pay_for_an_llm_service_running/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1us3li5/if_you_already_pay_for_an_llm_service_running/",
+          "originalTitle": "Kimi K3 in the next few hours. Deepseek V4 GA later in the week. New Liquid models. New Mistral models sometime this month. And some rumours suggest GLM 5.5 is coming in August. Openweight AI is eating good.",
+          "originalExcerpt": "dam bois we eating good this week ngl, The velocity of the open_weight ecosystem right now is hitting a point where proprietary, closed-source APIs are losing their leverage on compute intelligence. When you have DeepSeek V4 dropping native MXFP4 mixtures of experts with massive context capabilities alongside Liquid's non_transformer breakthroughs and impending heavyweights from Mistral and Moonshot, the raw computational cost of intelligence is plummeting to near zero, scary for sam altman, yi...",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uwe542/kimi_k3_in_the_next_few_hours_deepseek_v4_ga/",
+          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uwe542/kimi_k3_in_the_next_few_hours_deepseek_v4_ga/",
           "points": null,
           "comments": null,
-          "createdAt": "2026-07-09T21:26:10+00:00",
+          "createdAt": "2026-07-14T16:47:10+00:00",
           "rankSignal": "Reddit RSS top ranking",
-          "score": 412,
-          "titleZh": "如果您已經支付了 LLM 服務的費用，那麼執行本地嵌入和重新排序比執行本地 LLM 更有用",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 OpenAI / LLM 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "這篇文章最初是用韓語寫的，然後使用 ChatGPT 進行潤色並翻譯成英語。我確實在 Tesla P40 上本地運行 llama.cpp，但作為已經付費購買 ChatGPT Pro 的人，我逐漸失去了繼續運行 Qwen 3.6 27B 或 Gemma 4 31B 等本地 LLM 的實際理由。如果我需要透過類似 API 的工作流程存取 OpenAI 模型，通常可以使用 Codex OAuth。但後來我意識到嵌入模型和重新排序模型不是我可以訪問的...",
-          "rank": 1,
-          "contentZh": [
-            "這篇貼文的主軸是：如果你已經付費使用 ChatGPT、Codex 或 Claude 這類雲端 LLM 服務，本機硬體不一定最適合拿來跑大型聊天模型；反而可以拿來跑嵌入模型與 reranker，補足雲端服務不方便提供的能力。",
-            "作者的做法是用本機 embedding / reranking 建立記憶系統。資料先被保存成 Markdown，再透過向量檢索找出可能相關的記憶，接著用 reranker 篩出最相關的內容，最後才交給 LLM 使用。這比把整份文件直接塞進上下文更有效率。",
-            "這個想法對 Agent 很重要，因為 Agent 要長期工作時，記憶與檢索會比單次回答更重要。真正的問題不是模型會不會回答，而是它能不能在需要時找到正確背景、只讀必要內容，並避免把無關資訊帶進任務。",
-            "可以帶走的實作方向是：本機不一定要追求跑最大模型，可以先建立「本機記憶層」。用 pgvector、Markdown、embedding、reranker 和 MCP，把 Codex、ChatGPT Web 或其他工具的上下文串起來。"
-          ]
-        },
-        {
-          "id": "reddit-1uru9ja",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "daily",
-          "originalTitle": "NVIDIA Puzzle-75B-A9B NVFP4 at 132 t/s on 3×3090 — Why is this size category a desert otherwise?",
-          "originalExcerpt": "TLDR: 75B-total / 9B-active MoE is the perfect shape for multi-24GB rigs, and almost nobody ships it. Qwen 27B is a great model and punches way above its weight-class, it is a frequent fallback for me. Nemotron-3-Puzzle-75B-A9B, NVFP4, vLLM 0.22.1 (the new Marlin fallbacks run FP4 on Ampere), pipeline-parallel across 3×3090 capped at 200W each. The 4th card runs a speech sidecar untouched - 3 seats × 256K ctx, fp8 KV — hybrid Mamba keeps the cache tiny - 132 t/s decode across 3 streams (~65 sin...",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uru9ja/nvidia_puzzle75ba9b_nvfp4_at_132_ts_on_33090_why/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uru9ja/nvidia_puzzle75ba9b_nvfp4_at_132_ts_on_33090_why/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-09T15:53:09+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 236,
-          "titleZh": "NVIDIA Puzzle-75B-A9B NVFP4 在 3×3090 上速度為 132 t/s — 為什麼這個尺寸類別是沙漠？",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 LLM 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "TLDR：總共 75B / 9B 活動 MoE 是多 24GB 裝置的完美形狀，但幾乎沒有人運送它。 Qwen 27B 是一款很棒的型號，其重量遠遠超過其重量級別，對我來說，它是一個經常的備用型號。 Nemotron-3-Puzzle-75B-A9B、NVFP4、vLLM 0.22.1（新的 Marlin 後備在 Ampere 上運行 FP4），跨 3×3090 的管道並行，每個上限為 200W。第四張卡運行未受影響的語音邊車 - 3 個席位 × 256K ctx，fp8 KV - 混合 Mamba 保持緩存很小 - 跨 3 個流進行 132 t/s 解碼（~65 sin...",
-          "rank": 2,
-          "contentZh": [
-            "這篇討論 NVIDIA Puzzle-75B-A9B 這類 MoE 模型在多張 3090 上的推論表現。作者關心的是 70B 到 80B 總參數、約 10B active parameters 這個區間，因為它可能剛好適合多張 24GB GPU 的本機配置。",
-            "重點不是單純炫耀硬體，而是模型形狀會影響本機部署效率。Dense model、MoE、量化格式、KV cache、pipeline parallel 都會影響速度、記憶體佔用與可用上下文。",
-            "對想學 Local LLM 的人來說，這篇可以幫你理解：選模型不是只看參數大小。你要看 active parameters、量化方式、VRAM 分配、推論框架支援，以及實際工作負載需要的是單人互動速度還是多工吞吐。",
-            "如果要做成測試，建議記錄模型、量化格式、GPU 數量、功耗、tokens/sec、context size 和任務類型。這樣才知道一套配置是不是真的適合 Agent 工作，而不是只看一次 benchmark。"
-          ]
-        },
-        {
-          "id": "reddit-1us8x06",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "daily",
-          "originalTitle": "The untuned 27B beat the tuned 75B as an agent",
-          "originalExcerpt": "I have to admit, a lot of people we're 100% correct to make the suggestion to try this model. I am sorry I ever doubted. The 27B passed every agentic task on a neutral system prompt in 6-9 tool calls. The 75B needed a hand-tuned profile to pass at all and used 2x the turns. For agents, fewer turns beat faster tokens. The two contenders - Nemotron Puzzle-75B-A9B NVFP4, vLLM, PP=2000 across 3 cards, ~65 t/s decode. I made a post about this model. I still think its good for throughput on chatbots ...",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1us8x06/the_untuned_27b_beat_the_tuned_75b_as_an_agent/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1us8x06/the_untuned_27b_beat_the_tuned_75b_as_an_agent/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-10T01:00:31+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 224,
-          "titleZh": "未調音的 27B 作為代理擊敗了調音的 75B",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 LLM / Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "我必須承認，很多人提出嘗試這個模型的建議是100%正確的。很抱歉我曾經懷疑過。 27B 在 6-9 次工具呼叫中通過了中性系統提示的每項代理任務。 75B 需要手動調整輪廓才能通過，並且使用了 2 倍的轉彎。對於代理商來說，更少的回合勝過更快的代幣。兩個競爭者 - Nemotron Puzzle-75B-A9B NVFP4，vLLM，跨 3 張卡片的 PP=2000，約 65 t/s 解碼。我發了一篇關於這個模型的文章。我仍然認為這對聊天機器人的吞吐量有好處...",
-          "rank": 3,
-          "contentZh": [
-            "這篇的重點是：一個未特別調校的 27B 模型，在某些 agentic task 上反而勝過手工調過設定的 75B 模型。作者觀察到，較小模型雖然看起來規模較低，但在工具調用次數與完成任務效率上可能更好。",
-            "這提醒我們，Agent 場景不能只用模型大小判斷好壞。對 Agent 來說，少走錯路、少用工具回合、能穩定遵守任務流程，可能比單純 token 生成速度或參數量更重要。",
-            "如果一個大模型需要很多 prompt profile 才能通過任務，而小模型用中性系統提示就能完成，代表小模型在某些代理式流程裡可能更容易控制。這對部署成本和穩定性都有意義。",
-            "教學上可以把這篇變成一個觀念：選 Agent 模型要測「任務完成率、工具調用次數、錯誤恢復、總耗時」，不要只看排行榜或模型大小。"
-          ]
-        },
-        {
-          "id": "reddit-1us5m0g",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "daily",
-          "originalTitle": "GLM-5.2 (744B MoE) on a 25GB-RAM consumer machine",
-          "originalExcerpt": "submitted by /u/yogthos [link] [comments]",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1us5m0g/glm52_744b_moe_on_a_25gbram_consumer_machine/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1us5m0g/glm52_744b_moe_on_a_25gbram_consumer_machine/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-09T22:43:02+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 204,
-          "titleZh": "25GB RAM 消費機器上的 GLM-5.2 (744B MoE)",
+          "score": 252,
+          "titleZh": "Kimi K3 in the next few hours. Deepseek V4 GA later in the week. New Liquid models. New Mistral models sometime this month. And some rumours suggest GLM 5.5 is coming in August. Openweight AI is eating good.",
           "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "由 /u/yogthos 提交 [連結] [評論]",
-          "rank": 4,
-          "contentZh": [
-            "這篇討論的是在消費級 25GB RAM 機器上跑 GLM-5.2 這種大型 MoE 模型。它的價值在於展示社群如何嘗試把原本看似需要高階硬體的模型，用特殊方法壓進更有限的環境。",
-            "這類案例通常涉及模型切分、量化、記憶體交換、推論框架優化，或只啟用部分 active parameters。實際可用性要看速度、上下文長度、載入時間與互動延遲，不能只看能不能成功啟動。",
-            "對學 Local LLM 的人來說，這篇可以提醒你：本機部署有很多 trade-off。能跑起來不等於適合日常工作；如果速度太慢、上下文太小、設定太脆弱，就可能只適合實驗，不適合正式工作流。",
-            "可以用它當成硬體評估練習：列出最低可行配置、實際速度、適合任務、不適合任務，以及和雲端模型相比的成本與維護負擔。"
-          ]
+          "excerptZh": "dam bois we eating good this week ngl, The velocity of the open_weight ecosystem right now is hitting a point where proprietary, closed-source APIs are losing their leverage on compute intelligence. When you have DeepSeek V4 dropping native MXFP4 mixtures of experts with massive context capabilities alongside Liquid's non_transformer breakthroughs and impending heavyweights from Mistral and Moonshot, the raw computational cost of intelligence is plummeting to near zero, scary for sam altman, yi...",
+          "rank": 1
         },
         {
-          "id": "reddit-1urol1a",
+          "id": "reddit-1uwbpmw",
           "source": "Reddit / r/LocalLLaMA",
           "sourceKey": "reddit",
           "subreddit": "LocalLLaMA",
           "period": "daily",
-          "originalTitle": "GLM 5.2 generated most of this playable 3D game in the first iteration",
-          "originalExcerpt": "I made this simple 3D Geometry Wars-style game using my coding agent, Jarvis Code, with GLM 5.2. You can play it here: I was honestly surprised by the result. Most of the game came together in the first iteration, and I only needed about four small follow-up tweaks afterward. I'd be curious to hear what you think about the gameplay, the code quality, or GLM 5.2's coding ability. submitted by /u/ringtoyou [link] [comments]",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1urol1a/glm_52_generated_most_of_this_playable_3d_game_in/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1urol1a/glm_52_generated_most_of_this_playable_3d_game_in/",
+          "originalTitle": "👀A new GLM model incoming",
+          "originalExcerpt": "Spoiler from one of the founders of Z.ai who released GLM 5.2 a month ago. Get ready for something new 🥳 submitted by /u/serige [link] [comments]",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uwbpmw/a_new_glm_model_incoming/",
+          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uwbpmw/a_new_glm_model_incoming/",
           "points": null,
           "comments": null,
-          "createdAt": "2026-07-09T12:16:41+00:00",
+          "createdAt": "2026-07-14T15:20:38+00:00",
           "rankSignal": "Reddit RSS top ranking",
-          "score": 180,
-          "titleZh": "GLM 5.2 在第一次迭代中產生了這款可玩 3D 遊戲的大部分內容",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "我使用我的編碼代理 Jarvis Code 和 GLM 5.2 製作了這個簡單的 3D Geometry Wars 風格的遊戲。你可以在這裡玩：說實話，我對結果感到驚訝。遊戲的大部分內容在第一次迭代中就完成了，之後我只需要進行大約四次小的後續調整。我很想聽聽您對遊戲玩法、程式碼品質或 GLM 5.2 編碼能力的看法。由 /u/ringtoyou 提交 [連結] [評論]",
-          "rank": 5,
-          "contentZh": [
-            "這篇貼文展示 GLM 5.2 在第一次迭代中產生了一個可玩的 3D 小遊戲大部分內容。重點不是遊戲本身多完整，而是模型在 coding agent 場景裡能不能把需求轉成可執行作品。",
-            "這種案例適合看三件事：模型是否能理解產品目標、是否能產生可執行程式、以及第一次結果距離可用成品還差多少。真正重要的是後續修改能力，而不是第一次生成有多驚人。",
-            "對初學者來說，這篇可以拿來學「用可視化作品測 coding agent」。遊戲、互動頁面、儀表板都很適合作為測試，因為成功或失敗很容易看出來。",
-            "如果要複製這類流程，建議把需求寫成小規格：玩法、控制、畫面、失敗條件、重新開始、手機/桌面支援。然後看 Agent 能不能逐步修正，而不是只看一次生成。"
-          ]
+          "score": 220,
+          "titleZh": "👀A new GLM model incoming",
+          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "Spoiler from one of the founders of Z.ai who released GLM 5.2 a month ago. Get ready for something new 🥳 submitted by /u/serige [link] [comments]",
+          "rank": 2
+        },
+        {
+          "id": "reddit-1uwfva9",
+          "source": "Reddit / r/LocalLLaMA",
+          "sourceKey": "reddit",
+          "subreddit": "LocalLLaMA",
+          "period": "daily",
+          "originalTitle": "Bonsai 27B: 1-bit dense LLM running locally in your browser using custom WebGPU kernels",
+          "originalExcerpt": "Very impressive release by the PrismML team. 1-bit quantization shrinks it from 54GB to just 3.8GB (-93%), while retaining 90% of its intelligence. - Collection on Hugging Face: - Demo link: submitted by /u/xenovatech [link] [comments]",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uwfva9/bonsai_27b_1bit_dense_llm_running_locally_in_your/",
+          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uwfva9/bonsai_27b_1bit_dense_llm_running_locally_in_your/",
+          "points": null,
+          "comments": null,
+          "createdAt": "2026-07-14T17:48:27+00:00",
+          "rankSignal": "Reddit RSS top ranking",
+          "score": 192,
+          "titleZh": "Bonsai 27B: 1-bit dense LLM running locally in your browser using custom WebGPU kernels",
+          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 LLM 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "Very impressive release by the PrismML team. 1-bit quantization shrinks it from 54GB to just 3.8GB (-93%), while retaining 90% of its intelligence. - Collection on Hugging Face: - Demo link: submitted by /u/xenovatech [link] [comments]",
+          "rank": 3
+        },
+        {
+          "id": "reddit-1uwf1x4",
+          "source": "Reddit / r/LocalLLaMA",
+          "sourceKey": "reddit",
+          "subreddit": "LocalLLaMA",
+          "period": "daily",
+          "originalTitle": "Prism-ML Bonsai Qwen 3.6 27B",
+          "originalExcerpt": "submitted by /u/thoquz [link] [comments]",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uwf1x4/prismml_bonsai_qwen_36_27b/",
+          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uwf1x4/prismml_bonsai_qwen_36_27b/",
+          "points": null,
+          "comments": null,
+          "createdAt": "2026-07-14T17:19:44+00:00",
+          "rankSignal": "Reddit RSS top ranking",
+          "score": 188,
+          "titleZh": "Prism-ML Bonsai Qwen 3.6 27B",
+          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "submitted by /u/thoquz [link] [comments]",
+          "rank": 4
+        },
+        {
+          "id": "reddit-1uw5p73",
+          "source": "Reddit / r/LocalLLaMA",
+          "sourceKey": "reddit",
+          "subreddit": "LocalLLaMA",
+          "period": "daily",
+          "originalTitle": "llama.cpp milestone",
+          "originalExcerpt": "Thanks to all contributors for our local inference! submitted by /u/sergeysi [link] [comments]",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uw5p73/llamacpp_milestone/",
+          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uw5p73/llamacpp_milestone/",
+          "points": null,
+          "comments": null,
+          "createdAt": "2026-07-14T11:14:17+00:00",
+          "rankSignal": "Reddit RSS top ranking",
+          "score": 184,
+          "titleZh": "llama.cpp milestone",
+          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 LLM 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "Thanks to all contributors for our local inference! submitted by /u/sergeysi [link] [comments]",
+          "rank": 5
         }
       ],
       "qualityReview": {
         "hn": [
           {
-            "id": "hn-48850563",
+            "id": "hn-48908950",
+            "pass": true,
+            "relevance": 1,
+            "reason": "AI Agent / LLM / AI coding 相關"
+          },
+          {
+            "id": "hn-48907409",
             "pass": true,
             "relevance": 4,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "hn-48844345",
+            "id": "hn-48906299",
             "pass": true,
             "relevance": 3,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "hn-48846407",
-            "pass": true,
-            "relevance": 2,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "hn-48847526",
+            "id": "hn-48913612",
             "pass": true,
             "relevance": 3,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "hn-48846739",
+            "id": "hn-48912059",
             "pass": true,
             "relevance": 3,
             "reason": "AI Agent / LLM / AI coding 相關"
@@ -298,33 +243,33 @@
         ],
         "reddit": [
           {
-            "id": "reddit-1us3li5",
-            "pass": true,
-            "relevance": 13,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "reddit-1uru9ja",
+            "id": "reddit-1uwe542",
             "pass": true,
             "relevance": 3,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "reddit-1us8x06",
-            "pass": true,
-            "relevance": 4,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "reddit-1us5m0g",
+            "id": "reddit-1uwbpmw",
             "pass": true,
             "relevance": 1,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "reddit-1urol1a",
+            "id": "reddit-1uwfva9",
             "pass": true,
-            "relevance": 3,
+            "relevance": 2,
+            "reason": "AI Agent / LLM / AI coding 相關"
+          },
+          {
+            "id": "reddit-1uwf1x4",
+            "pass": true,
+            "relevance": 1,
+            "reason": "AI Agent / LLM / AI coding 相關"
+          },
+          {
+            "id": "reddit-1uw5p73",
+            "pass": true,
+            "relevance": 2,
             "reason": "AI Agent / LLM / AI coding 相關"
           }
         ]
@@ -335,27 +280,38 @@
       "label": "每週前 5",
       "hn": [
         {
-          "id": "hn-48850563",
+          "id": "hn-48847834",
           "source": "Hacker News",
           "sourceKey": "hn",
           "period": "weekly",
-          "originalTitle": "Agents' Last Exam: AI Agent Benchmark for Real-World Professional Workflows",
-          "url": "https://agents-last-exam.org",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48850563",
-          "points": 2,
-          "comments": 0,
-          "createdAt": "2026-07-09T18:42:08Z",
-          "score": 102.8,
-          "titleZh": "代理的最後考試：真實世界專業工作流程的人工智慧代理基準",
+          "originalTitle": "Show HN: Reverse-engineering web apps into agent tools",
+          "url": "https://news.ycombinator.com/item?id=48847834",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48847834",
+          "points": 96,
+          "comments": 40,
+          "createdAt": "2026-07-09T15:45:17Z",
+          "score": 239.39999999999998,
+          "titleZh": "Show HN: Reverse-engineering web apps into agent tools",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "rank": 1,
-          "contentZh": [
-            "這篇介紹的是 Agents Last Exam，一個用來評估 AI Agent 是否能完成真實專業工作的 benchmark。它不是只測問答能力，而是把任務放在實際工作軟體與長流程裡，例如動畫製作、3D 建模、遊戲場景、模流分析、建築建模與腦影像分析等。",
-            "核心概念是：如果 Agent 未來要真的進入工作現場，就必須能處理長時間、多步驟、可驗證結果的任務。這類任務比單純回答問題困難，因為 Agent 需要規劃、操作工具、修正錯誤，最後交出能被檢查的成果。",
-            "對學 AI Agent 的人來說，這篇值得看的是評估方法。你可以用它反推自己的 Agent 教材：不要只教 prompt，而要設計可以驗收的任務、明確的成功標準、可重播的操作紀錄，以及跨工具的工作流程。",
-            "如果要放進內部訓練，可以把它當成「Agent 能力成熟度」案例：初階看 Agent 會不會回答，中階看 Agent 會不會用工具，高階看 Agent 能不能完成真實、長流程、可驗證的工作。"
-          ]
+          "rank": 1
+        },
+        {
+          "id": "hn-48899321",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "weekly",
+          "originalTitle": "A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI",
+          "url": "https://arxiv.org/abs/2607.01418",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48899321",
+          "points": 68,
+          "comments": 41,
+          "createdAt": "2026-07-13T21:43:51Z",
+          "score": 202.2,
+          "titleZh": "A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "rank": 2
         },
         {
           "id": "hn-48844345",
@@ -365,229 +321,63 @@
           "originalTitle": "Ask HN: I hate coding agents. Is this skill issue?",
           "url": "https://news.ycombinator.com/item?id=48844345",
           "discussionUrl": "https://news.ycombinator.com/item?id=48844345",
-          "points": 8,
-          "comments": 7,
+          "points": 18,
+          "comments": 25,
           "createdAt": "2026-07-09T11:47:27Z",
-          "score": 100.2,
-          "titleZh": "問 HN：我討厭編碼代理。這是技能問題嗎？",
+          "score": 150.2,
+          "titleZh": "Ask HN: I hate coding agents. Is this skill issue?",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "rank": 2,
-          "contentZh": [
-            "這是一個 Hacker News 討論題：有人覺得 coding agents 很難用，想知道是不是自己使用方式有問題。這類討論的價值不在單一答案，而在於它集中呈現了很多工程師對 AI coding agent 的真實挫折。",
-            "常見痛點包括：Agent 會誤解專案脈絡、修改範圍過大、產生看似合理但不可靠的程式碼，或讓使用者花更多時間 review。這提醒我們，AI coding 不是把任務丟出去就結束，而是需要清楚的邊界、檢查點與測試流程。",
-            "比較實用的看法是：coding agent 適合明確、可驗證、可分段的工作，例如修小 bug、補測試、重構局部檔案、產生範例或整理文件。它不適合一開始就承擔模糊的大型架構決策。",
-            "這篇可以轉成教學重點：要學會把任務拆小、給出成功條件、要求 Agent 說明修改理由，並用測試或 review 去收斂結果。不是要相信 Agent，而是要建立讓 Agent 不容易失控的工作方式。"
-          ]
+          "rank": 3
         },
         {
-          "id": "hn-48846407",
+          "id": "hn-48908950",
           "source": "Hacker News",
           "sourceKey": "hn",
           "period": "weekly",
-          "originalTitle": "Altman: GPT-5.6 is 54% more token efficient on agentic coding",
-          "url": "https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48846407",
-          "points": 13,
-          "comments": 3,
-          "createdAt": "2026-07-09T14:25:13Z",
-          "score": 99.2,
-          "titleZh": "Altman：GPT-5.6 的代理程式編碼令牌效率提高了 54%",
+          "originalTitle": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+          "url": "https://agnost.ai",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48908950",
+          "points": 45,
+          "comments": 26,
+          "createdAt": "2026-07-14T16:06:18Z",
+          "score": 140,
+          "titleZh": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "rank": 4
+        },
+        {
+          "id": "hn-48881161",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "weekly",
+          "originalTitle": "Microsoft joins Google in backing Go for AI agents — OpenAI and Anthropic lag",
+          "url": "https://thenewstack.io/microsoft-agent-framework-go/",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48881161",
+          "points": 5,
+          "comments": 0,
+          "createdAt": "2026-07-12T13:39:33Z",
+          "score": 132,
+          "titleZh": "Microsoft joins Google in backing Go for AI agents — OpenAI and Anthropic lag",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 OpenAI / Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "rank": 3,
-          "contentZh": [
-            "這篇新聞的重點是 OpenAI 新模型在 agentic coding 場景裡，被描述為 token 使用效率提升 54%。token efficiency 對 coding agent 很重要，因為代理式工作常常需要讀檔、規劃、修改、執行、再修正，整個流程會消耗大量上下文與輸出。",
-            "如果模型能用更少 token 完成同樣任務，實務上可能代表成本下降、回應變快、長任務更容易跑完，也可能讓 Agent 在多輪工具使用時保留更多有效上下文。這對公司內部導入 AI coding 工具會直接影響預算與使用體驗。",
-            "但這類數字需要謹慎解讀。效率提升不等於所有任務都更準，也不等於可以完全不 review。比較合理的讀法是：模型供應商正在把 agentic coding 當成核心競爭場景，而不是單純聊天或短問答。",
-            "對學習者來說，這篇可以幫你理解一件事：未來評估模型不能只看「聰不聰明」，還要看在長流程中是否省 token、少走彎路、工具調用穩定、錯誤修正成本低。"
-          ]
-        },
-        {
-          "id": "hn-48847526",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "weekly",
-          "originalTitle": "Show HN: Policy enforcement for Claude Code, Cursor, and Codex",
-          "url": "https://kastra.ai/",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48847526",
-          "points": 12,
-          "comments": 1,
-          "createdAt": "2026-07-09T15:26:24Z",
-          "score": 93.8,
-          "titleZh": "顯示 HN：Claude Code、Cursor 和 Codex 的策略執行",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude / AI IDE 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "rank": 4,
-          "contentZh": [
-            "Kastra 的主張是替 AI 系統加上一層 runtime authorization。也就是在 Agent 執行 prompt、tool call、shell command 或 API request 之前，先檢查這個動作是否符合政策，允許才放行，不允許就阻擋並記錄。",
-            "這和一般監控工具不同。監控通常是在事情發生後記錄，Kastra 強調的是「動作發生前」就做 allow / deny。對會操作瀏覽器、資料庫、後端 API 或本機指令的 Agent 來說，這是很關鍵的安全控制。",
-            "它的概念可以拆成四個重點：身份、權限範圍、護欄與稽核。每次 AI 想做動作時，都要確認這個身份能不能做、能做到哪裡、需不需要人工批准，以及事後能不能重播與追蹤。",
-            "對內部教學來說，這篇很適合放在 Agent 安全章節：當 Agent 從「回答問題」走向「真的執行動作」，就不能只靠 prompt 約束，必須有外部政策、權限邊界和可稽核紀錄。"
-          ]
-        },
-        {
-          "id": "hn-48846739",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "weekly",
-          "originalTitle": "How to feel safe delegating to AI agents?",
-          "url": "https://news.ycombinator.com/item?id=48846739",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48846739",
-          "points": 2,
-          "comments": 4,
-          "createdAt": "2026-07-09T14:43:34Z",
-          "score": 85.8,
-          "titleZh": "如何放心地將任務委託給人工智慧代理？",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "rank": 5,
-          "contentZh": [
-            "這是一個關於「如何放心把任務交給 AI Agent」的討論。核心問題不是 Agent 能不能做事，而是人在什麼條件下可以信任它做事，尤其是當任務涉及檔案修改、程式碼、資料、帳號或外部系統時。",
-            "比較穩健的做法是先限制任務範圍：讓 Agent 處理低風險、可回復、可驗證的工作，再逐步增加權限。每個階段都要有檢查點，例如先產生計畫、再修改、再跑測試、最後由人確認。",
-            "委派給 Agent 的關鍵不是「完全相信」，而是「設計可控流程」。包含明確的輸入資料、清楚的完成定義、變更記錄、測試結果、回滾方式，以及必要時的人類批准。",
-            "這篇適合轉成團隊規範：哪些任務可以自動化、哪些必須人工審查、哪些資料不能交給 Agent、什麼情況要停止執行。這些規則會比單純討論模型能力更實用。"
-          ]
+          "rank": 5
         }
       ],
-      "reddit": [
-        {
-          "id": "reddit-1umcr5m",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "weekly",
-          "originalTitle": "GLM5.2 on 5x Pro 6000s and a 5090, an expensive journey",
-          "originalExcerpt": "This started as something I thought was reasonable. I already had a 5090 for my gaming machine, and I thought a second 5090 would make me happy. Instead, it sent me down a rabbit hole that got completely out of control. I wanted something that would have full PCIe 5.0 x16 speed across all slots, which started a chain of events that had me spending good money after bad. It was a bit of a nightmare, as every decision I made led to me needing to make even tougher decisions. Couple that with what w...",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1umcr5m/glm52_on_5x_pro_6000s_and_a_5090_an_expensive/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1umcr5m/glm52_on_5x_pro_6000s_and_a_5090_an_expensive/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-03T12:10:07+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 212,
-          "titleZh": "5x Pro 6000s 和 5090 上的 GLM5.2，一次昂貴的旅程",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "這開始是我認為合理的事。我的遊戲機已經有一台 5090，我認為第二台 5090 會讓我很高興。相反，它讓我陷入了完全失控的兔子洞。我想要的東西在所有插槽上都具有完整的 PCIe 5.0 x16 速度，這引發了一系列事件，讓我花了不少錢。這有點像是一場惡夢，因為我所做的每一個決定都導致我需要做出更艱難的決定。將其與...結合",
-          "rank": 1,
-          "contentZh": [
-            "這篇是 GLM5.2 在多張 Pro 6000 與 5090 上部署的經驗分享。它反映的是高階本機 LLM/Agent 硬體配置的真實成本與複雜度，不只是模型能不能跑。",
-            "這類多 GPU 配置會遇到 VRAM、散熱、供電、推論框架、模型切分與吞吐量問題。硬體越強，並不代表工作流越簡單；很多時間會花在調校、排錯和確認結果是否穩定。",
-            "對團隊導入來說，這篇值得看的地方是成本意識。若只是要完成一般 coding agent 或文件任務，雲端模型可能更划算；若需要資料不出本機或大量離線推論，本機硬體才更有理由。",
-            "可以把它當成採購前的提醒：先定義任務與使用頻率，再決定硬體。不要因為模型熱門就直接堆 GPU。"
-          ]
-        },
-        {
-          "id": "reddit-1um9j5q",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "weekly",
-          "originalTitle": "Deepseek drops another HUGE breakthrough - DSpark. Waaay faster than MTP [Video explaining it]",
-          "originalExcerpt": "Hi folks. I found this video explaining latest DSpark breakthrough from Deepseek. Seems like a huge change coming. submitted by /u/BringTea_666 [link] [comments]",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1um9j5q/deepseek_drops_another_huge_breakthrough_dspark/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1um9j5q/deepseek_drops_another_huge_breakthrough_dspark/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-03T09:19:45+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 188,
-          "titleZh": "Deepseek 放棄了另一個巨大的突破——DSpark。比 MTP 快得多 [影片解釋]",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "大家好。我發現這個影片解釋了 Deepseek 最新的 DSpark 突破。似乎即將發生巨大的變化。由 /u/BringTea_666 提交 [連結] [評論]",
-          "rank": 2,
-          "contentZh": [
-            "這篇討論 DeepSeek 的 DSpark，被描述為比 MTP 更快的推論或解碼突破。對 Agent 使用者來說，這類技術的意義在於降低長任務等待時間，尤其是多輪工具調用或長上下文任務。",
-            "速度提升如果能穩定成立，會影響實際使用體驗。Agent 每一步都要思考、產生工具呼叫、等待結果，再繼續下一步；單次生成快一點，整個任務鏈就可能明顯縮短。",
-            "但這種新技術需要看實測條件：模型版本、硬體、量化方式、context size、batch 設定、任務類型都會影響結果。不能只看影片標題或單一 benchmark。",
-            "學習上可以把它放在「推論效能」章節，讓大家知道 Agent 體驗不只取決於模型智商，也取決於推論框架和解碼策略。"
-          ]
-        },
-        {
-          "id": "reddit-1unrse9",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "weekly",
-          "originalTitle": "I benchmarked 13 models at 65K-128K context to find out what actually matters for agentic workloads",
-          "originalExcerpt": "I benchmarked 13 models at 65K-128K context to find out what actually matters for agentic workloads — prefill dominates everything, and KV head count beats parameter count I've been running local LLMs for agentic workflows (tool use, coding agents, RAG) and kept seeing people obsess over tg128 (token generation speed) as the headline performance metric. So I ran a structured long-context benchmark to figure out what actually matters when your context window is full. The answer surprised me. Set...",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1unrse9/i_benchmarked_13_models_at_65k128k_context_to/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1unrse9/i_benchmarked_13_models_at_65k128k_context_to/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-05T03:37:23+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 184,
-          "titleZh": "我在 65K-128K 環境下對 13 個模型進行了基準測試，以找出對代理工作負載真正重要的因素",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 LLM / Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "我在 65K-128K 環境下對 13 個模型進行了基準測試，以找出對代理工作負載真正重要的因素 — 預填充主導一切，KV 人數勝過參數計數 我一直在為代理工作流程（工具使用、編碼代理、RAG）運行本地 LLM，並不斷看到人們痴迷於 tg128（令牌生成速度）作為主要性能指標。因此，我運行了一個結構化的長上下文基準測試，以找出當上下文視窗已滿時真正重要的是什麼。答案讓我很驚訝。放...",
-          "rank": 3,
-          "contentZh": [
-            "這篇作者測了 13 個模型在 65K 到 128K context 下的表現，目的是找出 agentic workloads 真正重要的因素。長上下文對 Agent 很關鍵，因為它常常需要讀大量檔案、保留任務歷史、追蹤中間結果。",
-            "但長上下文不是越大越好。你還要看模型在長上下文中是否仍能抓到重點、是否會忽略前文、推論速度是否可接受、成本是否爆炸，以及工具使用是否穩定。",
-            "這篇適合拿來建立模型測試表：同一個任務在不同 context 長度下，記錄成功率、錯誤類型、工具回合數、總時間與輸出品質。這比只看模型官方宣稱的 context window 更有價值。",
-            "對內部教學來說，重點是讓學員理解：Agent 工作負載要測流程，不只測單題答案。長上下文、檢索、任務拆解和工具調用要一起評估。"
-          ]
-        },
-        {
-          "id": "reddit-1uoppuz",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "weekly",
-          "originalTitle": "Qwen & Gemma on deadlock situation (For Benchmarks Numbers)?",
-          "originalExcerpt": "I have this feeling for sometime. Also noticed few similar tweets online before. submitted by /u/pmttyji [link] [comments]",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uoppuz/qwen_gemma_on_deadlock_situation_for_benchmarks/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uoppuz/qwen_gemma_on_deadlock_situation_for_benchmarks/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-06T06:51:09+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 132,
-          "titleZh": "Qwen 和 Gemma 討論僵局情況（對於基準數字）？",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "我有一段時間有這種感覺。之前也注意到網路上很少有類似的推文。由 /u/pmttyji 提交 [連結] [評論]",
-          "rank": 4,
-          "contentZh": [
-            "這篇討論 Qwen 與 Gemma 在 benchmark 數字上的僵持或比較。這類貼文的價值在於提醒使用者：模型排行榜和 benchmark 數字很容易看起來接近，但實際任務表現可能差很多。",
-            "對 Agent 來說，模型差異可能出現在指令遵守、工具呼叫格式、長上下文穩定性、錯誤修正能力與中文/英文任務表現。單一分數無法代表所有使用場景。",
-            "如果你要選模型，不要只問哪個分數高，而要拿自己的工作流測。比如：讀文件後整理、修改程式碼、呼叫工具、生成報告、處理中文需求。",
-            "這篇可以變成選型教學：先定義任務，再設計小型 benchmark，最後比較模型在你真正工作中的成本、速度與可靠度。"
-          ]
-        },
-        {
-          "id": "reddit-1unif51",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "weekly",
-          "originalTitle": "possible evidence of literal prompt injection by anthropic",
-          "originalExcerpt": "submitted by /u/johnnyApplePRNG [link] [comments]",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1unif51/possible_evidence_of_literal_prompt_injection_by/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1unif51/possible_evidence_of_literal_prompt_injection_by/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-04T19:54:57+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 124,
-          "titleZh": "人為即時注入的可能證據",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "由 /u/johnnyApplePRNG 提交 [連結] [評論]",
-          "rank": 5,
-          "contentZh": [
-            "這篇討論可能的 prompt injection 證據，重點是大型模型或 Agent 在接觸外部內容時，可能被文字指令影響行為。這對會讀網頁、文件、email 或 issue 的 Agent 特別重要。",
-            "Prompt injection 的風險在於：惡意內容可能偽裝成普通資料，誘導 Agent 洩露資訊、忽略原本指令、執行不該做的工具呼叫，或把錯誤內容寫入工作結果。",
-            "實務防護不能只靠「告訴模型不要被騙」。比較可靠的做法是限制工具權限、區分指令與資料、對外部內容降權、敏感操作要人工確認，並記錄 Agent 為什麼做某個動作。",
-            "這篇很適合作為 Agent 安全案例：只要 Agent 能讀外部資料並採取行動，就必須假設輸入可能有敵意，並在系統層設計防護。"
-          ]
-        }
-      ],
+      "reddit": [],
       "qualityReview": {
         "hn": [
           {
-            "id": "hn-48850563",
+            "id": "hn-48847834",
             "pass": true,
-            "relevance": 4,
+            "relevance": 1,
+            "reason": "AI Agent / LLM / AI coding 相關"
+          },
+          {
+            "id": "hn-48899321",
+            "pass": true,
+            "relevance": 1,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
@@ -597,56 +387,19 @@
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "hn-48846407",
+            "id": "hn-48908950",
             "pass": true,
-            "relevance": 2,
+            "relevance": 1,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "hn-48847526",
+            "id": "hn-48881161",
             "pass": true,
-            "relevance": 3,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "hn-48846739",
-            "pass": true,
-            "relevance": 3,
+            "relevance": 5,
             "reason": "AI Agent / LLM / AI coding 相關"
           }
         ],
-        "reddit": [
-          {
-            "id": "reddit-1umcr5m",
-            "pass": true,
-            "relevance": 1,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "reddit-1um9j5q",
-            "pass": true,
-            "relevance": 1,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "reddit-1unrse9",
-            "pass": true,
-            "relevance": 8,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "reddit-1uoppuz",
-            "pass": true,
-            "relevance": 1,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "reddit-1unif51",
-            "pass": true,
-            "relevance": 1,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          }
-        ]
+        "reddit": []
       }
     }
   ]
