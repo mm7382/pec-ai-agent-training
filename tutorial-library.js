@@ -31,6 +31,28 @@
     return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
   }
 
+  const searchAliases = new Map(Object.entries({
+    default: ["default", "預設", "默認"],
+    defaults: ["defaults", "default", "預設", "默認"],
+    preset: ["preset", "預設"],
+    local: ["local", "本機", "本地"],
+    cloud: ["cloud", "雲端"],
+    memory: ["memory", "記憶"],
+    skill: ["skill", "skills", "技能"],
+    workflow: ["workflow", "工作流", "流程"],
+    prompt: ["prompt", "提示詞"],
+    context: ["context", "上下文"],
+    mcp: ["mcp", "model context protocol"],
+    agent: ["agent", "代理"],
+  }));
+
+  function queryGroups(query) {
+    return normalize(query)
+      .split(/[\s,，、]+/)
+      .filter(Boolean)
+      .map((term) => searchAliases.get(term) || [term]);
+  }
+
   function formatDate(value) {
     if (!value) return "";
     const date = new Date(value);
@@ -52,16 +74,41 @@
       item.category,
       item.level,
       item.summary,
+      item.searchText,
       ...(item.tags || []),
     ].join(" "));
   }
 
+  function fieldScore(value, groups, weight) {
+    const text = normalize(value);
+    if (!text) return 0;
+    return groups.reduce((score, aliases) => (
+      score + (aliases.some((alias) => text.includes(alias)) ? weight : 0)
+    ), 0);
+  }
+
+  function itemSearchScore(item, groups) {
+    return fieldScore(item.title, groups, 40)
+      + fieldScore((item.tags || []).join(" "), groups, 28)
+      + fieldScore(item.summary, groups, 18)
+      + fieldScore(`${item.category} ${item.level}`, groups, 10)
+      + fieldScore(item.searchText, groups, 4);
+  }
+
   function filteredItems() {
-    const query = normalize(state.query);
-    return state.items.filter((item) => {
+    const groups = queryGroups(state.query);
+    const hasQuery = groups.length > 0;
+    const items = state.items.filter((item) => {
       const categoryMatch = state.category === "全部" || item.category === state.category;
-      const queryMatch = !query || itemText(item).includes(query);
+      const text = itemText(item);
+      const queryMatch = !hasQuery || groups.every((aliases) => aliases.some((alias) => text.includes(alias)));
       return categoryMatch && queryMatch;
+    });
+    if (!hasQuery) return items;
+    return items.sort((a, b) => {
+      const scoreDiff = itemSearchScore(b, groups) - itemSearchScore(a, groups);
+      if (scoreDiff) return scoreDiff;
+      return new Date(b.updatedAt || 0).getTime() - new Date(a.updatedAt || 0).getTime();
     });
   }
 
