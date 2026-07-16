@@ -278,7 +278,7 @@ function renderRecentUpdates() {
     title: "AI Agent 熱門新聞",
     category: "Hacker News · Reddit",
     updatedAt: dailyMeta?.generatedAt || "2026-07-10T03:59:32.766Z",
-    summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，先看中文簡介，再點進來源細讀。",
+    summary: "每天整理非 GitHub 來源的 AI Agent、LLM、AI coding 熱門文章，點進去可看來源內容的繁中翻譯與原文網址。",
     url: "./ai-agent-daily.html",
   };
   const localAgentItem = {

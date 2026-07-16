@@ -8,7 +8,7 @@ const workspaceRoot = resolve(new URL("..", import.meta.url).pathname);
 const outputPath = join(workspaceRoot, "ai-agent-daily.json");
 const requestTimeoutMs = Number(process.env.RADAR_REQUEST_TIMEOUT_MS || 15000);
 const redditDelayMs = Number(process.env.REDDIT_RSS_DELAY_MS || 6000);
-const enableTranslation = process.env.ENABLE_RADAR_TRANSLATION === "1";
+const enableTranslation = process.env.ENABLE_RADAR_TRANSLATION !== "0";
 
 const redditSubreddits = [
   "LocalLLaMA",
@@ -99,6 +99,15 @@ function cleanText(value = "", max = 500) {
   return clean.length > max ? `${clean.slice(0, max - 1)}...` : clean;
 }
 
+function readableText(value = "", max = 5000) {
+  const text = cleanText(stripHtml(value), max);
+  return text
+    .replace(/Cookie Policy|Privacy Policy|Terms of Service/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, max);
+}
+
 function hasCjk(value = "") {
   return /[\u3400-\u9fff]/.test(value);
 }
@@ -166,6 +175,45 @@ function stripHtml(value = "") {
     .trim();
 }
 
+function extractPrimaryHtml(html = "") {
+  const source = String(html || "")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<svg[\s\S]*?<\/svg>/gi, " ")
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, " ")
+    .replace(/<header[\s\S]*?<\/header>/gi, " ")
+    .replace(/<footer[\s\S]*?<\/footer>/gi, " ")
+    .replace(/<aside[\s\S]*?<\/aside>/gi, " ");
+  const candidates = [
+    ...source.matchAll(/<article[\s\S]*?<\/article>/gi),
+    ...source.matchAll(/<main[\s\S]*?<\/main>/gi),
+    ...source.matchAll(/<[^>]+role=["']main["'][^>]*>[\s\S]*?<\/[^>]+>/gi),
+  ].map((match) => match[0]);
+  if (!candidates.length) return source;
+  return candidates
+    .map((candidate) => ({ html: candidate, length: stripHtml(candidate).length }))
+    .sort((a, b) => b.length - a.length)[0]?.html || source;
+}
+
+function blockTextFromHtml(html = "", max = 4500) {
+  const primary = extractPrimaryHtml(html);
+  const blocks = [...primary.matchAll(/<(h1|h2|h3|p|li|blockquote)[^>]*>([\s\S]*?)<\/\1>/gi)]
+    .map((match) => readableText(match[2], 700))
+    .filter((text) => text.length >= 18);
+  const seen = new Set();
+  const uniqueBlocks = blocks.filter((text) => {
+    const key = text.toLowerCase().replace(/[^a-z0-9\u3400-\u9fff]+/g, " ").trim();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  const text = uniqueBlocks.length >= 3
+    ? uniqueBlocks.join("\n\n")
+    : readableText(primary, max);
+  return text.slice(0, max);
+}
+
 function tagValue(entry, tag) {
   const match = entry.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
   return match ? decodeEntities(match[1]).trim() : "";
@@ -201,6 +249,34 @@ async function translateToTraditionalChinese(text, fallback = "") {
   }
 }
 
+function chunkText(text = "", max = 1400) {
+  const source = String(text || "").replace(/\s+/g, " ").trim();
+  if (!source) return [];
+  const chunks = [];
+  let rest = source;
+  while (rest.length > max) {
+    let cut = Math.max(rest.lastIndexOf(". ", max), rest.lastIndexOf("。", max), rest.lastIndexOf("；", max), rest.lastIndexOf("; ", max));
+    if (cut < max * 0.45) cut = max;
+    chunks.push(rest.slice(0, cut + 1).trim());
+    rest = rest.slice(cut + 1).trim();
+  }
+  if (rest) chunks.push(rest);
+  return chunks;
+}
+
+async function translateLongToTraditionalChinese(text, fallback = "") {
+  const source = cleanText(text, 5000);
+  if (!source) return fallback;
+  if (hasCjk(source)) return source;
+  if (!enableTranslation) return fallback || source;
+  const translated = [];
+  for (const chunk of chunkText(source)) {
+    translated.push(await translateToTraditionalChinese(chunk, chunk));
+    await sleep(250);
+  }
+  return translated.join("\n\n").trim();
+}
+
 function relevanceScore(text = "") {
   const normalized = text.toLowerCase();
   if (excludedTerms.some((term) => normalized.includes(term))) return -10;
@@ -210,6 +286,66 @@ function relevanceScore(text = "") {
 
 function hnUrlForObjectId(objectID) {
   return `https://news.ycombinator.com/item?id=${objectID}`;
+}
+
+function collectHnCommentText(node, output = []) {
+  for (const child of node?.children || []) {
+    const text = readableText(child.text || "", 900);
+    if (text) output.push(text);
+    collectHnCommentText(child, output);
+    if (output.length >= 5) break;
+  }
+  return output;
+}
+
+async function fetchHnDiscussionText(objectID) {
+  if (!objectID) return "";
+  try {
+    const data = await fetchJson(`https://hn.algolia.com/api/v1/items/${objectID}`);
+    const storyText = readableText(data.text || "", 1800);
+    const comments = collectHnCommentText(data).slice(0, 4);
+    return [storyText, ...comments.map((text, index) => `Comment ${index + 1}: ${text}`)]
+      .filter(Boolean)
+      .join("\n\n");
+  } catch {
+    return "";
+  }
+}
+
+async function fetchExternalPageText(url) {
+  if (!/^https?:\/\//i.test(url || "")) return "";
+  if (/news\.ycombinator\.com|reddit\.com|github\.com/i.test(url)) return "";
+  try {
+    const html = await fetchText(url, {
+      Accept: "text/html,application/xhtml+xml,text/plain,*/*",
+    });
+    const title = tagValue(html, "title");
+    const body = blockTextFromHtml(html, 4500);
+    return [title, body].filter(Boolean).join("\n\n");
+  } catch {
+    return "";
+  }
+}
+
+async function fetchSourceOriginal(item) {
+  if (item.sourceKey === "reddit") {
+    return {
+      sourceOriginalText: item.originalExcerpt || "",
+      sourceContentType: "reddit-post",
+    };
+  }
+  const externalText = await fetchExternalPageText(item.url);
+  if (externalText) {
+    return {
+      sourceOriginalText: externalText,
+      sourceContentType: "source-page",
+    };
+  }
+  const discussionText = await fetchHnDiscussionText(item.objectID || item.id?.replace(/^hn-/, ""));
+  return {
+    sourceOriginalText: discussionText,
+    sourceContentType: discussionText ? "hn-discussion" : "title-only",
+  };
 }
 
 async function fetchHn(period) {
@@ -255,6 +391,7 @@ async function fetchHn(period) {
           sourceKey: "hn",
           period,
           originalTitle: title,
+          objectID: item.objectID,
           url: targetUrl,
           discussionUrl: hnUrlForObjectId(item.objectID),
           points: Number(item.points || 0),
@@ -289,7 +426,7 @@ async function fetchReddit(period) {
       const entry = entries[index];
       const title = tagValue(entry, "title");
       const content = tagValue(entry, "content");
-      const excerpt = cleanText(stripHtml(content), 500);
+      const excerpt = cleanText(stripHtml(content), 4000);
       const discussionUrl = tagAttribute(entry, "link", "href");
       const id = tagValue(entry, "id").replace(/^t3_/, "") || `${subreddit}-${index}`;
       const relevance = relevanceScore(`${title} ${excerpt}`);
@@ -340,15 +477,21 @@ function summarizeZh(item) {
 async function enrichItems(items) {
   const enriched = [];
   for (const item of items) {
+    const sourceOriginal = await fetchSourceOriginal(item);
     const titleZh = await translateToTraditionalChinese(item.originalTitle, item.originalTitle);
     const excerptZh = item.originalExcerpt
       ? await translateToTraditionalChinese(item.originalExcerpt, item.originalExcerpt)
       : "";
+    const sourceTextZh = sourceOriginal.sourceOriginalText
+      ? await translateLongToTraditionalChinese(sourceOriginal.sourceOriginalText, sourceOriginal.sourceOriginalText)
+      : excerptZh;
     enriched.push({
       ...item,
+      ...sourceOriginal,
       titleZh,
       summaryZh: summarizeZh(item),
       excerptZh,
+      sourceTextZh,
     });
   }
   return enriched.map((item, index) => ({ ...item, rank: index + 1 }));
@@ -404,7 +547,7 @@ async function main() {
       "只保留 AI Agent / LLM / AI coding / MCP / Local LLM / AI IDE / automation / agent skills 相關內容。",
       "排除股價、政治、純八卦與空泛未來論。",
       "Reddit 來源涵蓋 LocalLLaMA、AI_Agents、ClaudeAI、CursorAI、OpenAI，避免只看單一社群。",
-      "每筆都保留原文標題、中文標題、中文簡介、來源網址；分數與留言數會在來源可提供時顯示。",
+      "每筆都保留原文標題、來源原文內容、繁體中文翻譯與來源網址；分數與留言數會在來源可提供時顯示。",
     ],
     periods,
   };

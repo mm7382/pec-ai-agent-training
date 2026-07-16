@@ -35,6 +35,16 @@
     return parts.filter(Boolean);
   }
 
+  function compactText(value = "", max = 280) {
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    if (!text) return "";
+    return text.length > max ? `${text.slice(0, max - 1)}...` : text;
+  }
+
+  function originalTranslatedSnippet(item) {
+    return compactText(item.sourceTextZh || item.excerptZh || item.originalExcerpt || item.summaryZh || "目前來源只提供標題與來源網址，請點進詳細內容查看可取得的原始資訊。");
+  }
+
   function createItem(item) {
     const row = document.createElement("li");
     const article = document.createElement("article");
@@ -63,7 +73,7 @@
 
     const summary = document.createElement("p");
     summary.className = "daily-summary";
-    summary.textContent = item.summaryZh || "這篇文章和 AI Agent / LLM 實作趨勢有關。";
+    summary.textContent = originalTranslatedSnippet(item);
 
     const meta = document.createElement("div");
     meta.className = "daily-card-meta";

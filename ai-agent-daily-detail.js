@@ -43,108 +43,42 @@
     parent.append(row);
   }
 
-  function compactText(value = "", max = 900) {
-    const text = String(value || "").replace(/\s+/g, " ").trim();
-    if (!text) return "";
-    return text.length > max ? `${text.slice(0, max - 1)}...` : text;
+  function splitParagraphs(value = "") {
+    return String(value || "")
+      .split(/\n{2,}|\r?\n/)
+      .map((text) => text.replace(/\s+/g, " ").trim())
+      .filter(Boolean);
   }
 
-  function topicSignals(item) {
-    const text = `${item.originalTitle} ${item.originalExcerpt || ""}`.toLowerCase();
-    const signals = [];
-    if (text.includes("agent")) signals.push("Agent 工作流程");
-    if (text.includes("coding") || text.includes("codex") || text.includes("cursor") || text.includes("claude code")) signals.push("AI coding");
-    if (text.includes("local") || text.includes("llm") || text.includes("glm") || text.includes("qwen") || text.includes("deepseek")) signals.push("LLM / Local LLM");
-    if (text.includes("mcp") || text.includes("tool")) signals.push("工具串接");
-    if (text.includes("embedding") || text.includes("reranker") || text.includes("rag")) signals.push("檢索與記憶");
-    if (text.includes("benchmark") || text.includes("benchmarked")) signals.push("效能評估");
-    if (text.includes("policy") || text.includes("safe") || text.includes("prompt injection")) signals.push("治理與安全");
-    return signals.length ? [...new Set(signals)] : ["AI Agent / LLM 趨勢"];
-  }
-
-  function detailBullets(item) {
-    const signals = topicSignals(item);
-    const sourceTone = item.sourceKey === "hn"
-      ? "Hacker News 的討論通常偏工程判斷，適合觀察開發者怎麼評估工具、風險與實作成本。"
-      : "Reddit 的討論通常偏第一線使用心得，適合看實際配置、踩坑經驗與社群反應。";
-    return [
-      `主題焦點：${signals.join("、")}。先用這些關鍵字判斷它和你目前想學的 AI Agent 能力是否相關。`,
-      sourceTone,
-      "閱讀時建議優先看：它解決什麼問題、需要哪些工具或模型、實作門檻高不高，以及是否能轉成自己的工作流程。",
-      "如果文章提到 benchmark、速度、成本或安全性，要把它當作參考訊號，不要直接當成最終結論；最好再看留言或原始來源交叉確認。",
-    ];
-  }
-
-  function readingTips(item) {
-    if (item.sourceKey === "hn") {
-      return [
-        "先看原文連結，再看 HN 討論頁的高分留言，通常能快速看到優點、疑慮與替代方案。",
-        "如果是工具或服務，注意它是否需要帳號、API key、雲端環境，或能否在本機/公司環境使用。",
-        "把有用的概念記成一句話：這個工具能讓哪一段 Agent 工作變得更可靠或更省時間。",
-      ];
-    }
-    return [
-      "先看貼文本文，再看前幾則留言，通常能看到真實使用者遇到的限制與設定細節。",
-      "如果內容和硬體、模型速度或本機部署有關，注意作者的設備條件，不要直接套用到自己的環境。",
-      "把可複製的部分拆出來：模型、工具、參數、流程、失敗原因，之後可以變成自己的測試清單。",
-    ];
-  }
-
-  function discussionQuestions(item) {
-    const signals = topicSignals(item);
-    return [
-      `這篇提到的 ${signals[0]}，能不能放進我們自己的 AI Agent 學習路線？`,
-      "如果要做成內部教學，初學者需要先補哪些前置知識？",
-      "它最值得實驗的是工具本身、工作流程，還是背後的判斷方法？",
-    ];
-  }
-
-  function createListSection(titleText, items) {
-    const section = document.createElement("section");
-    section.className = "article-section";
-    const title = document.createElement("h2");
-    title.textContent = titleText;
-    const list = document.createElement("ul");
-    for (const item of items) {
-      const li = document.createElement("li");
-      li.textContent = item;
-      list.append(li);
-    }
-    section.append(title, list);
-    return section;
-  }
-
-  function createExcerptSection(item) {
-    const excerpt = compactText(item.excerptZh || item.originalExcerpt || "", 900);
-    if (!excerpt) return null;
-    const section = document.createElement("section");
-    section.className = "article-section";
-    const title = document.createElement("h2");
-    title.textContent = item.sourceKey === "reddit" ? "社群討論摘錄" : "原文摘要摘錄";
-    const text = document.createElement("p");
-    text.className = "article-callout";
-    text.textContent = excerpt;
-    section.append(title, text);
-    return section;
-  }
-
-  function createContentSection(item) {
-    const fallback = [
-      item.excerptZh || item.originalExcerpt || "",
-      `這篇內容和 ${topicSignals(item).join("、")} 有關。閱讀時可以先掌握它討論的問題、使用到的模型或工具，以及它對 AI Agent 工作流程的實際影響。`,
-      "如果要把這篇變成學習材料，建議把可操作的部分拆成：背景問題、工具/模型、實作方法、限制風險、可以自己測試的任務。",
-    ].map((text) => compactText(text, 900)).filter(Boolean);
-    const paragraphs = Array.isArray(item.contentZh) && item.contentZh.length
-      ? item.contentZh.filter(Boolean)
-      : fallback;
+  function createTranslatedOriginalSection(item) {
+    const paragraphs = splitParagraphs(item.sourceTextZh || item.excerptZh || item.originalExcerpt || "");
     if (!paragraphs.length) return null;
     const section = document.createElement("section");
     section.className = "article-section";
     const title = document.createElement("h2");
-    title.textContent = "中文內容整理";
+    title.textContent = item.sourceKey === "hn" && item.sourceContentType === "hn-discussion"
+      ? "Hacker News 原始討論繁中翻譯"
+      : "原始內容繁中翻譯";
     section.append(title);
     for (const paragraph of paragraphs) {
       const text = document.createElement("p");
+      text.textContent = paragraph;
+      section.append(text);
+    }
+    return section;
+  }
+
+  function createOriginalTextSection(item) {
+    const paragraphs = splitParagraphs(item.sourceOriginalText || item.originalExcerpt || "");
+    if (!paragraphs.length) return null;
+    const section = document.createElement("section");
+    section.className = "article-section";
+    const title = document.createElement("h2");
+    title.textContent = "來源原文";
+    section.append(title);
+    for (const paragraph of paragraphs) {
+      const text = document.createElement("p");
+      text.className = "article-original-block";
       text.textContent = paragraph;
       section.append(text);
     }
@@ -168,23 +102,8 @@
     original.className = "article-original";
     original.textContent = item.originalTitle;
 
-    const summary = document.createElement("p");
-    summary.className = "article-summary";
-    summary.textContent = item.summaryZh || "這篇文章和 AI Agent / LLM 實作趨勢有關。";
-
-    const why = document.createElement("section");
-    why.className = "article-section";
-    const whyTitle = document.createElement("h2");
-    whyTitle.textContent = "為什麼值得看";
-    const whyText = document.createElement("p");
-    whyText.textContent = item.summaryZh || "可用來快速掌握社群正在討論的工具、模型或工作流程。";
-    why.append(whyTitle, whyText);
-
-    const breakdown = createListSection("重點拆解", detailBullets(item));
-    const translatedContent = createContentSection(item);
-    const excerpt = createExcerptSection(item);
-    const tips = createListSection("閱讀建議", readingTips(item));
-    const questions = createListSection("可以帶走的問題", discussionQuestions(item));
+    const translatedContent = createTranslatedOriginalSection(item);
+    const originalContent = createOriginalTextSection(item);
 
     const sourceSection = document.createElement("section");
     sourceSection.className = "article-section";
@@ -216,11 +135,10 @@
     back.href = `./ai-agent-daily.html`;
     back.textContent = "返回每日熱門";
 
-    const contentSections = [source, title, original, summary, why];
+    const contentSections = [source, title, original];
     if (translatedContent) contentSections.push(translatedContent);
-    contentSections.push(breakdown);
-    if (excerpt) contentSections.push(excerpt);
-    contentSections.push(tips, questions, sourceSection, back);
+    if (originalContent) contentSections.push(originalContent);
+    contentSections.push(sourceSection, back);
     main.append(...contentSections);
 
     const sideTitle = document.createElement("h2");
