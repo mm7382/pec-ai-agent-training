@@ -1,6 +1,6 @@
 {
   "siteTitle": "PEC AI Agent 教育訓練資料庫",
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-07-16",
   "duplicateHidden": [
     {
       "title": "Agent 自我蒸餾、Skill 化與定期自動化",
@@ -345,6 +345,26 @@
       "url": "./pec-training/loop-engineering-guide.html",
       "updatedAt": "2026-07-08T17:19:09+08:00",
       "searchText": "Loop Engineering 實作指南 - ADLINK 內訓教材 Internal Training · AI Engineering · 2026-06-12 ADLINK Teaching File Loop Engineering 實作指南 從「手動提示 agent」轉成「設計可驗證、可停止、可回滾的工作循環」，讓 AI coding agent 真正成為工程系統的一部分。 Audience: ADLINK Engineering / PM / Hermes Agent Ops Confidence: Medium · Whisper-assisted review Course Brief 這堂課不是教更漂亮的 Prompt，而是教你如何設計 agent 的閉環。 Loop Engineering 的核心是把需求拆成可觀察的狀態、可執行的動作、可判定的驗收條件與可控的停止點。對 ADLINK 來說，這直接影響 Codex、Hermes、Wiki Agent、art agent 與日常工程自動化的可靠度。 4 Loop 必備控制：目標、工具、驗證、停止 3 落地層級：測試自修、目標持續、動態編排 2 人類角色：邊界設定與關鍵審查 1 核心判斷：沒有驗證，就不是工程閉環 問題 框架 三層落地 術語 ADLINK 場景 控制表 導入 總結 為什麼手動提示正在變成瓶頸 當工程師反覆輸入修正、貼錯誤、等輸出、再修正，其實是在人工扮演 agent 的控制器。 01 Pain 人變成工具接口 AI coding assistant 會寫碼，但每一輪何時重試、何時讀 log、何時跑測試，仍由人手動驅動，效率卡在人身上。 Shift Prompt 不是最小單位 真正可複用的單位不是一句提示，而是「任務拆解、工具權限、驗證條件、失敗處理」組成的流程。 Value 工程師價值上移 低階程式碼轉譯會被自動化壓縮；會設計流程、驗收、回滾與 agent 協作的人，才是自動化流水線的架構師。 ADLINK 的重點不是讓 agent 更自由，而是讓 agent 在可觀察、可糾錯、可追責的邊界內持續工作。 Loop Engineering 的五段式框架 一個成熟閉環不是 while loop，而是具備目標、狀態、行動、驗證與停止條件的工程系統。 02 1 定義目標 寫出可判定的完成狀態，例如 build pass、測試通過、指定 API call site 全部遷移。 2 限制工具 明確允許讀檔、寫檔、測試、查文件；高風險指令需要人工或沙箱保護。 3 執行動作 agent 產生修改、跑命令、讀結果、更新計畫，而不是每一步等人下指令。 4 驗證回饋 用測試、lint、build、截圖、報告比對或 reviewer agent 產生 pass/fail 訊號。 5 停止或升級 達標就停；連續失敗、權限不足、風險升高或證據不足時交還給人。 三層落地：從單一任務到多 agent 編排 先從最容易驗證的 loop 開始，不要一開始就把模糊大任務丟進自動化。 03 Level 1 測試驅動與自我修正 適合函式、元件、API、小型重構。給 agent 明確測試或 build 指令，讓它讀失敗結果後修正，直到可執行檢查通過。 Level 2 目標導向與記憶持久化 適合跨檔案遷移與長任務。使用 `/goal` 類型的完成條件、專案規則、AGENTS.md、CLAUDE.md 或 skill，讓每輪都帶著同一套約束。 Level 3 動態工作流與對抗驗證 適合大規模 audit、競品研究、批次報告與多模組重構。將工作分派給多個 subagent，再由合併節點與 reviewer agent 收斂。 注意：任務越大，越需要拆小。沒有原子任務、檢查點與停止條件的自動化，只會把錯誤放大。 核心術語與正確用法 以下名詞用於 ADLINK agent 工作流討論，避免把不同層級的控制機制混在一起。 04 Verification Loop 驗證閉環 agent 不只「看起來完成」，而是能跑一個明確檢查。Claude Code 文件也強調，沒有可運行檢查時，人就會被迫成為驗證閉環。 Evaluator-Optimizer 評估器與修正器 一個 agent 產生或修改，另一個評估結果是否符合需求。適合報告品質、測試覆蓋、法規或安全規則檢查。 Orchestrator-Workers 編排器與工作者 編排器拆解任務並收斂成果，工作者各自處理子任務。適合多產品線資料整理、跨 repo 檢查或多來源研究。 Persistent Instructions 持久規則 AGENTS.md、CLAUDE.md、Codex Skill、Hermes memory 都是把「下次不要再重講」變成系統規則的方式。 ADLINK / Hermes 可以先 Loop 化的工作 先選重複、可驗證、風險可控的流程；正式知識與客戶內容仍保留人工審核點。 05 Codex 修 code 與驗收 把「改完跑測試、讀錯誤、修正、再測」變成預設迴圈。停止條件是測試、lint、build、截圖或明確使用者驗收。 Wiki Agent raw 到 evidence notes 長篇素材先壓成 Evidence Notes 與 Lesson Brief，再進入正式 wiki。原始資料保留在 raw，不直接當成正式知識。 art agent 教學 HTML 生產線 建立固定流程：素材理解、官方校正、ADLINK 版型、桌手機檢查、再問是否傳送。避免每次重做同一組判斷。 ADLink_PM issue / email / report 摘要 將長信件與報告拆成異常、風險、owner、deadline、下一步。確認欄位完整後再通知，不讓 agent 直接改正式紀錄。 工具控制表：自由度越高，驗證越要硬 Cursor 與 Claude Code 都能長時間工作，但權限模型與風險不同。正式流程要把安全邊界寫清楚。 06 模式 適合任務 必備控制 ADLINK 建議 Cursor Auto-review / Sandbox 中小型修改、重複測試、低風險命令 allowlist、sandbox、刪除保護、敏感檔案保護 日常可用，但不要在含敏感資料或大範圍檔案操作時放開權限。 Claude Code `/goal` 可描述成完成條件的長任務 完成條件必須可觀察，例如測試通過、建置成功、指定清單完成 適合重構、文件更新、批次修復；條件模糊時先要求 brief。 Claude Code `/loop` 定時輪詢、CI 狀態追蹤、週期性檢查 頻率、最大輪次、停止條件、通知規則 用於狀態監控，不用於無界線修改程式碼。 Dynamic Workflows 大規模 audit、跨來源研究、多 agent 交叉驗證 工作分片、合併規則、reviewer、成本上限 適合 Hermes 多 agent 報告與 Wiki 清理，但要保留人工 gate。 導入路線：先做小而硬的 loop 不要先追求全自動。先讓每個 loop 都有明確輸入、明確輸出、明確失敗訊號。 07 Phase 1 盤點重複動作 列出每天手動貼錯誤、手動整理報告、手動檢查格式的環節。 Phase 2 定義驗證訊號 每個任務都要有 pass/fail：測試、build、schema、截圖、欄位完整性。 Phase 3 寫入 skill / memory 把反覆更正的偏好與錯誤變成 Codex Skill、AGENTS.md 或 Hermes memory。 Phase 4 擴大到編排 確認單一 loop 穩定後，再做 fan-out、reviewer、合併與通知。 一頁總結：把 AI 當系統元件，不是聊天對象 Loop Engineering 的核心不是讓 agent 無限制工作，而是讓它在工程約束下持續改善。 08 任務是否已拆成 agent 能可靠完成的原子步驟？ 是否有可執行或可觀察的驗證條件？ 是否限制了高風險工具、刪除動作與敏感檔案？ 是否設定最大輪次、超時、失敗升級與人工審查點？ 是否把成功的流程沉澱成 skill、AGENTS.md、CLAUDE.md 或 memory？ 是否保留原始證據，並只把整理後的結果進正式知識庫？ ADLINK 的下一步：先把 Codex 修 code、Wiki raw 整理、art agent 教學頁、ADLink_PM issue 摘要做成小型驗證 loop，再逐步擴展到多 agent 編排。 ADLINK Internal Training · Loop Engineering · Prepared for Hermes Agent Workflows"
+    },
+    {
+      "id": "claude-code-loop-engineering",
+      "title": "Claude Code Loop 設計：觸發、驗證與停止條件",
+      "category": "Agent 系統架構與可靠性",
+      "level": "進階",
+      "summary": "用四種 Loop 模式理解 Claude Code 工作流設計，學會先定義觸發、驗證、停止條件與人工關卡，再讓 agent 進入可控循環。",
+      "tags": [
+        "Claude Code",
+        "Loop Engineering",
+        "Goal-based Loop",
+        "Time-based Loop",
+        "Proactive Loop",
+        "驗證機制",
+        "停止條件",
+        "Agent Workflow"
+      ],
+      "url": "./pec-training/claude-code-loop-engineering.html",
+      "updatedAt": "2026-07-16T08:05:00+08:00",
+      "searchText": "Claude Code Loop 設計 - PEC AI Agent 教育訓練 ADLINK AI Agent Training Claude Code Loop Design Training Library 回首頁 Loop Engineering Loop 不是讓 AI 自己跑 它是一個有邊界的系統：誰觸發、怎麼驗證、何時停止，都要先被設計清楚。 自動化之前，先系統化。 觸發 Prompt / 時間 / 事件 執行 讀上下文、改檔、調工具 驗證 測試、分數、審查、證據 停止 完成、到上限、需要人工 Trigger 流程什麼時候開始。 Verify 什麼證據算完成。 Stop 什麼條件必須停。 四種 Loop 模式 不要照順序解鎖。先看任務需要交給系統哪一件事，再選最小可行模式。 1 Turn-based 人給一輪任務，Claude 執行、檢查、回報，人再決定下一步。 觸發：使用者 prompt 驗證：技能、測試、人工 review 停止：完成或需要更多上下文 2 Goal-based 把「完成」寫成可驗證目標，系統沒達標就繼續嘗試。 觸發：/goal 或明確目標 驗證：測試通過、分數達標、指標證據 停止：達標或達到最大嘗試次數 3 Time-based 同一個檢查定期重跑，適合外部狀態會改變的任務。 觸發：時間間隔或排程 驗證：PR、CI、部署、資料更新狀態 停止：取消、完成、期限到期 4 Proactive 由事件或排程啟動，適合明確、重複、可審核的工作流。 觸發：issue、表單、排程、告警 驗證：workflow、skills、review agent 停止：每個任務完成，風險點交給人 該交給系統哪一段？ 交出檢查 探索型任務，仍由人決定下一輪。 交出停止條件 完成標準可量化，讓系統自己迭代。 交出觸發時機 需要定期或外部狀態變化後檢查。 交出整段流程 重複、明確、可審核，才適合主動化。 ADLINK 場景對照 教材頁面修版 先做一輪、截圖、人工確認。 Turn-based 測試或品質門檻 測試通過、搜尋命中、版面不重疊。 Goal-based 每日資料雷達 GitHub、新聞、YouTube 定期更新。 Time-based Bug 回報分流 自動分類與初查，合併或發送前人工審核。 Proactive 五個安全邊界 Loop 的價值不是跑更久，而是在明確規則內把人從重複調度中解放出來。 完成證據 測試結果、分數、截圖、log、審查清單。 停止規則 成功、失敗、上限、需要人工判斷。 成本上限 限制 turns、時間、模型等級與嘗試次數。 權限範圍 哪些工具可自動用，哪些一定要先問人。 人工關卡 發信、刪檔、部署、付款、客戶資料都保留人工確認。 開工前檢查 先回答三件事，再決定是否要讓 agent 進入 loop。 1. 觸發是否清楚？ 由人下 prompt？ 由時間排程？ 由 issue、CI、表單或告警觸發？ 2. 驗證是否可量化？ 測試是否通過？ 分數是否達標？ 輸出是否能被 reviewer 檢查？ 3. 停止是否明確？ 最多跑幾輪？ 失敗幾次要停？ 什麼情況必須交回人？ Sources / Review Notes Anthropic Claude Blog: Loop engineering: Getting started with loops , June 30, 2026. Learning reference video: Claude 官方把 Loop 講清了：4 種模式到底怎麼選 . Published in the PEC AI Agent training library for learning and internal workflow discussion."
     },
     {
       "id": "claude-codex-cross-review",
