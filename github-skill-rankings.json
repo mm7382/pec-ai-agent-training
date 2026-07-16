@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T00:59:31.554Z",
+  "generatedAt": "2026-07-16T03:52:24.433Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-07-08",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-07-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-07-09",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-07-09、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "wshobson-agents",
@@ -36,10 +36,10 @@
               "owner": "wshobson",
               "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
               "descriptionZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-              "oneLineZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-              "introZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+              "oneLineZh": "整理 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 與 Gemini CLI 可用的多工具 agent skills 市場。",
+              "introZh": "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
               "contentZh": [
-                "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+                "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
                 "從 topics 來看，它和 agent-skills、agentic-ai、agents、ai-agents、anthropic、automation、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -91,10 +91,10 @@
                 "prompt-engineering",
                 "workflows"
               ],
-              "stars": 37914,
-              "forks": 4074,
-              "watchers": 37914,
-              "openIssues": 6,
+              "stars": 37941,
+              "forks": 4079,
+              "watchers": 37941,
+              "openIssues": 7,
               "likes": 22,
               "hearts": 0,
               "reactionTotal": 23,
@@ -121,7 +121,7 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:26:49Z",
+              "updatedAt": "2026-07-16T01:59:30Z",
               "pushedAt": "2026-07-14T17:37:15Z",
               "createdAt": "2025-07-24T23:28:14Z",
               "homepage": "https://sethhobson.com",
@@ -199,10 +199,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 87262,
-              "forks": 7554,
-              "watchers": 87262,
-              "openIssues": 249,
+              "stars": 87414,
+              "forks": 7571,
+              "watchers": 87414,
+              "openIssues": 271,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -229,8 +229,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-07-15T00:52:34Z",
-              "pushedAt": "2026-07-15T00:51:56Z",
+              "updatedAt": "2026-07-16T03:40:55Z",
+              "pushedAt": "2026-07-15T22:16:21Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -303,10 +303,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 45981,
-              "forks": 10265,
-              "watchers": 45981,
-              "openIssues": 25,
+              "stars": 45995,
+              "forks": 10267,
+              "watchers": 45995,
+              "openIssues": 26,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -333,7 +333,7 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-07-15T00:49:33Z",
+              "updatedAt": "2026-07-16T03:44:20Z",
               "pushedAt": "2026-07-14T10:03:22Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
@@ -356,10 +356,10 @@
               "owner": "alirezarezvani",
               "description": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
               "descriptionZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢",
-              "oneLineZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編...",
-              "introZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 树，但您运行 python scripts/sync-hermes-skills.py 在本地安装到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 标准——无格式转换。 [^vibe]：Mistral Vibe 也是 BYO 同步层：存储库发货...",
+              "oneLineZh": "收集大量 Claude Code 技能與外掛，並延伸到 Codex、Gemini CLI、Cursor 等 AI coding agent。",
+              "introZh": "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
               "contentZh": [
-                "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 树，但您运行 python scripts/sync-hermes-skills.py 在本地安装到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 标准——无格式转换。 [^vibe]：Mistral Vibe 也是 BYO 同步层：存储库发货...",
+                "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
                 "從 topics 來看，它和 agent-plugins、agent-skills、agentic-ai、ai-coding-agent、anthropic-claude、claude-ai、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -411,10 +411,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 22577,
-              "forks": 3139,
-              "watchers": 22577,
-              "openIssues": 7,
+              "stars": 22670,
+              "forks": 3153,
+              "watchers": 22670,
+              "openIssues": 8,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -441,7 +441,7 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-07-15T00:53:31Z",
+              "updatedAt": "2026-07-16T03:20:57Z",
               "pushedAt": "2026-07-14T07:46:55Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
@@ -451,7 +451,7 @@
               "license": "MIT"
             },
             {
-              "id": "othmanadi-planning-with-files",
+              "id": "mxyhi-ok-skills",
               "rank": 5,
               "period": "weekly",
               "periodKey": "weekly",
@@ -459,28 +459,26 @@
               "categoryLabel": "GitHub 熱門 Skill / Workflow",
               "categoryShortLabel": "Skill / Workflow",
               "typeLabel": "Skill / Workflow",
-              "fullName": "OthmanAdi/planning-with-files",
-              "name": "planning-with-files",
-              "owner": "OthmanAdi",
-              "description": "Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministic completion gate and multi-agent shared state on disk. Manus-style. Works with Claude Code, Codex CLI, Cursor, Kiro, OpenCode and 60+ agents via the SKILL.md standard.",
-              "descriptionZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。",
-              "oneLineZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Co...",
-              "introZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
+              "fullName": "mxyhi/ok-skills",
+              "name": "ok-skills",
+              "owner": "mxyhi",
+              "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
+              "descriptionZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
+              "oneLineZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
+              "introZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 32 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其克隆到 /.agents/skills/ok-skills 中；裡面的目錄已經與 AGENTS.md 驅動的工作流程預期的佈局相匹配，並且 CLAUDEAGENTS.md 提供了一個面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植說明。您需要久經考驗的文件查找、瀏覽器自動化技能…",
               "contentZh": [
-                "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
-                "從 topics 來看，它和 agent-skills、agentic-ai、ai-agents、autonomous-agents、claude、claude-code、claude-skills、codex 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 32 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其克隆到 /.agents/skills/ok-skills 中；裡面的目錄已經與 AGENTS.md 驅動的工作流程預期的佈局相匹配，並且 CLAUDEAGENTS.md 提供了一個面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植說明。您需要久經考驗的文件查找、瀏覽器自動化技能…",
+                "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
               ],
               "discussionZh": [
-                "「When cloning this skill, the parent directory is cloned into the skills directory」是目前較多人互動的討論之一（👍 15、❤️ 1、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「For multi-step / complex tasks, how should this skill be used properly?」是目前較多人互動的討論之一（👍 8、❤️ 6、留言 24）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Consolidate language variants into a single skill with locale parameter」是目前較多人互動的討論之一（👍 11、❤️ 2、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
               ],
               "audience": [
-                "長任務規劃型 coding agent",
-                "用在 plan-review-execute、文件驅動與進度保存 workflow",
-                "需要讓 agent 工作可追蹤、可恢復的人"
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
+                "用在技能包、插件、可重用指令與團隊 SOP workflow",
+                "需要標準化交辦規則的 AI coding agent"
               ],
               "useCases": [
                 "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
@@ -496,67 +494,41 @@
                 "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
                 "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
               ],
-              "language": "Python",
+              "language": "HTML",
               "topics": [
                 "agent-skills",
-                "agentic-ai",
+                "agents-md",
+                "ai",
                 "ai-agents",
-                "autonomous-agents",
-                "claude",
                 "claude-code",
-                "claude-skills",
+                "claude-code-skills",
                 "codex",
-                "coding-agent",
-                "context-engineering",
-                "copilot",
+                "codex-skills",
+                "coding-agents",
                 "cursor",
-                "developer-tools",
-                "github-copilot",
-                "llm-agents",
-                "long-running-agents",
-                "manus",
-                "multi-agent-systems",
-                "pi",
-                "planning"
+                "cursor-skills",
+                "openclaw-skills",
+                "openfang",
+                "pi-mono",
+                "prompt-engineering",
+                "skills"
               ],
-              "stars": 25356,
-              "forks": 2142,
-              "watchers": 25356,
-              "openIssues": 5,
-              "likes": 57,
-              "hearts": 24,
-              "reactionTotal": 101,
-              "reactionSamples": [
-                {
-                  "title": "When cloning this skill, the parent directory is cloned into the skills directory",
-                  "url": "https://github.com/OthmanAdi/planning-with-files/issues/1",
-                  "likes": 15,
-                  "hearts": 1,
-                  "comments": 5
-                },
-                {
-                  "title": "For multi-step / complex tasks, how should this skill be used properly?",
-                  "url": "https://github.com/OthmanAdi/planning-with-files/issues/19",
-                  "likes": 8,
-                  "hearts": 6,
-                  "comments": 24
-                },
-                {
-                  "title": "Consolidate language variants into a single skill with locale parameter",
-                  "url": "https://github.com/OthmanAdi/planning-with-files/issues/130",
-                  "likes": 11,
-                  "hearts": 2,
-                  "comments": 1
-                }
-              ],
-              "updatedAt": "2026-07-15T00:44:29Z",
-              "pushedAt": "2026-07-14T14:32:40Z",
-              "createdAt": "2026-01-03T07:37:28Z",
+              "stars": 453,
+              "forks": 40,
+              "watchers": 453,
+              "openIssues": 1,
+              "likes": 0,
+              "hearts": 0,
+              "reactionTotal": 0,
+              "reactionSamples": [],
+              "updatedAt": "2026-07-15T13:31:29Z",
+              "pushedAt": "2026-07-15T13:30:45Z",
+              "createdAt": "2026-02-02T07:02:25Z",
               "homepage": "",
-              "url": "https://github.com/OthmanAdi/planning-with-files",
-              "downloadUrl": "https://github.com/OthmanAdi/planning-with-files/archive/refs/heads/master.zip",
-              "cloneUrl": "https://github.com/OthmanAdi/planning-with-files.git",
-              "license": "MIT"
+              "url": "https://github.com/mxyhi/ok-skills",
+              "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
+              "license": "Apache-2.0"
             }
           ]
         },
@@ -564,8 +536,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-06-15",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-06-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-06-16",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-06-16、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "wshobson-agents",
@@ -581,10 +553,10 @@
               "owner": "wshobson",
               "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
               "descriptionZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-              "oneLineZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-              "introZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+              "oneLineZh": "整理 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 與 Gemini CLI 可用的多工具 agent skills 市場。",
+              "introZh": "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
               "contentZh": [
-                "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+                "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
                 "從 topics 來看，它和 agent-skills、agentic-ai、agents、ai-agents、anthropic、automation、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -636,10 +608,10 @@
                 "prompt-engineering",
                 "workflows"
               ],
-              "stars": 37914,
-              "forks": 4074,
-              "watchers": 37914,
-              "openIssues": 6,
+              "stars": 37941,
+              "forks": 4079,
+              "watchers": 37941,
+              "openIssues": 7,
               "likes": 22,
               "hearts": 0,
               "reactionTotal": 23,
@@ -666,7 +638,7 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:26:49Z",
+              "updatedAt": "2026-07-16T01:59:30Z",
               "pushedAt": "2026-07-14T17:37:15Z",
               "createdAt": "2025-07-24T23:28:14Z",
               "homepage": "https://sethhobson.com",
@@ -744,10 +716,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 87263,
-              "forks": 7554,
-              "watchers": 87263,
-              "openIssues": 249,
+              "stars": 87414,
+              "forks": 7571,
+              "watchers": 87414,
+              "openIssues": 271,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -774,8 +746,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-07-15T00:55:49Z",
-              "pushedAt": "2026-07-15T00:51:56Z",
+              "updatedAt": "2026-07-16T03:40:55Z",
+              "pushedAt": "2026-07-15T22:16:21Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -848,10 +820,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 45981,
-              "forks": 10265,
-              "watchers": 45981,
-              "openIssues": 25,
+              "stars": 45995,
+              "forks": 10267,
+              "watchers": 45995,
+              "openIssues": 26,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -878,7 +850,7 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-07-15T00:49:33Z",
+              "updatedAt": "2026-07-16T03:44:20Z",
               "pushedAt": "2026-07-14T10:03:22Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
@@ -901,10 +873,10 @@
               "owner": "alirezarezvani",
               "description": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
               "descriptionZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢",
-              "oneLineZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編...",
-              "introZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 樹，但您執行 python scripts/sync-hermes-skills.py 在本機安裝到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 標準－無格式轉換。 [^vibe]：Mistral Vibe 也是 BYO 同步層：儲存庫出貨...",
+              "oneLineZh": "收集大量 Claude Code 技能與外掛，並延伸到 Codex、Gemini CLI、Cursor 等 AI coding agent。",
+              "introZh": "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
               "contentZh": [
-                "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 樹，但您執行 python scripts/sync-hermes-skills.py 在本機安裝到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 標準－無格式轉換。 [^vibe]：Mistral Vibe 也是 BYO 同步層：儲存庫出貨...",
+                "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
                 "從 topics 來看，它和 agent-plugins、agent-skills、agentic-ai、ai-coding-agent、anthropic-claude、claude-ai、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -956,10 +928,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 22577,
-              "forks": 3139,
-              "watchers": 22577,
-              "openIssues": 7,
+              "stars": 22670,
+              "forks": 3153,
+              "watchers": 22670,
+              "openIssues": 8,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -986,7 +958,7 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-07-15T00:53:31Z",
+              "updatedAt": "2026-07-16T03:20:57Z",
               "pushedAt": "2026-07-14T07:46:55Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
@@ -1009,10 +981,10 @@
               "owner": "OthmanAdi",
               "description": "Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministic completion gate and multi-agent shared state on disk. Manus-style. Works with Claude Code, Codex CLI, Cursor, Kiro, OpenCode and 60+ agents via the SKILL.md standard.",
               "descriptionZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。",
-              "oneLineZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Co...",
-              "introZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
+              "oneLineZh": "讓 coding agent 以檔案保存計畫、進度與決策，適合長任務與可回頭檢查的工作流。",
+              "introZh": "planning-with-files 的重點是讓 agent 不只在對話裡規劃，而是把計畫、狀態與任務拆解寫進檔案，方便長時間任務追蹤、審查與恢復。",
               "contentZh": [
-                "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
+                "planning-with-files 的重點是讓 agent 不只在對話裡規劃，而是把計畫、狀態與任務拆解寫進檔案，方便長時間任務追蹤、審查與恢復。",
                 "從 topics 來看，它和 agent-skills、agentic-ai、ai-agents、autonomous-agents、claude、claude-code、claude-skills、codex 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -1064,9 +1036,9 @@
                 "pi",
                 "planning"
               ],
-              "stars": 25356,
-              "forks": 2142,
-              "watchers": 25356,
+              "stars": 25395,
+              "forks": 2145,
+              "watchers": 25395,
               "openIssues": 5,
               "likes": 57,
               "hearts": 24,
@@ -1094,7 +1066,7 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:44:29Z",
+              "updatedAt": "2026-07-16T03:32:21Z",
               "pushedAt": "2026-07-14T14:32:40Z",
               "createdAt": "2026-01-03T07:37:28Z",
               "homepage": "",
@@ -1117,8 +1089,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-07-08",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-07-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-07-09",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-07-09、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1189,10 +1161,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 64436,
-              "forks": 7654,
-              "watchers": 64436,
-              "openIssues": 783,
+              "stars": 64558,
+              "forks": 7671,
+              "watchers": 64558,
+              "openIssues": 793,
               "likes": 94,
               "hearts": 19,
               "reactionTotal": 132,
@@ -1219,8 +1191,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-07-15T00:57:14Z",
-              "pushedAt": "2026-07-14T20:53:27Z",
+              "updatedAt": "2026-07-16T03:28:40Z",
+              "pushedAt": "2026-07-15T22:06:32Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1252,7 +1224,7 @@
               ],
               "discussionZh": [
                 "「[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode」是目前較多人互動的討論之一（👍 107、❤️ 14、留言 46）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[FEATURE] OpenCode plugin — headroom-opencode npm package」是目前較多人互動的討論之一（👍 66、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] OpenCode plugin — headroom-opencode npm package」是目前較多人互動的討論之一（👍 66、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
                 "「Homebrew support for easier install」是目前較多人互動的討論之一（👍 52、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
@@ -1297,10 +1269,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 59171,
-              "forks": 4387,
-              "watchers": 59171,
-              "openIssues": 444,
+              "stars": 59378,
+              "forks": 4409,
+              "watchers": 59378,
+              "openIssues": 414,
               "likes": 362,
               "hearts": 23,
               "reactionTotal": 416,
@@ -1317,7 +1289,7 @@
                   "url": "https://github.com/headroomlabs-ai/headroom/issues/76",
                   "likes": 66,
                   "hearts": 0,
-                  "comments": 9
+                  "comments": 10
                 },
                 {
                   "title": "Homebrew support for easier install",
@@ -1327,8 +1299,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:57:33Z",
-              "pushedAt": "2026-07-14T20:20:52Z",
+              "updatedAt": "2026-07-16T03:15:22Z",
+              "pushedAt": "2026-07-15T22:28:46Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://headroom-docs.vercel.app/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1337,8 +1309,116 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "bytedance-deer-flow",
+              "id": "open-multi-agent-open-multi-agent",
               "rank": 3,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "ai-open-source",
+              "categoryLabel": "GitHub 熱門 AI 開源工具",
+              "categoryShortLabel": "AI 開源工具",
+              "typeLabel": "AI 開源工具",
+              "fullName": "open-multi-agent/open-multi-agent",
+              "name": "open-multi-agent",
+              "owner": "open-multi-agent",
+              "description": "TypeScript AI agent orchestration framework with dynamic workflows. Describe the goal, not the graph: a coordinator plans the task DAG at runtime and runs it on any LLM (Claude, ChatGPT, Gemini, DeepSeek, or local models).",
+              "descriptionZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。",
+              "oneLineZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。",
+              "introZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令來建立生產啟動器或教學 DAG 演示：建立專案時，選擇 PR 審查代理、安全分析代理或多代理 DAG 啟動器演示，然後選擇雲端/OpenAI 相容提供者或完全本地的 Ollama。生產啟動者會發出 Markdown、JSON 和可檢查的 DAG 儀表板，同時保持代理只讀。要將庫添加到您自己的項目中：完整的快速...",
+              "contentZh": [
+                "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令來建立生產啟動器或教學 DAG 演示：建立專案時，選擇 PR 審查代理、安全分析代理或多代理 DAG 啟動器演示，然後選擇雲端/OpenAI 相容提供者或完全本地的 Ollama。生產啟動者會發出 Markdown、JSON 和可檢查的 DAG 儀表板，同時保持代理只讀。要將庫添加到您自己的項目中：完整的快速...",
+                "從 topics 來看，它和 agent-framework、agent-orchestration、agentic-ai、ai-agents、anthropic、claude、claude-code、crewai-alternative 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
+                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
+                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
+              ],
+              "discussionZh": [
+                "「Proposal: Per-call risk gating for built-in shell/filesystem tools」是目前較多人互動的討論之一（留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Claude Code」是目前較多人互動的討論之一（留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「docs: restructure Ecosystem section, add Engram integration」是目前較多人互動的討論之一（👍 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要工具連接的 MCP / tool server agent",
+                "用在內部系統、API 與外部工具串接 workflow",
+                "AI coding / developer assistant agent"
+              ],
+              "useCases": [
+                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
+                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
+                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
+              ],
+              "notFor": [
+                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
+                "完全不想看 README、授權、issues 或基本安裝條件的人。"
+              ],
+              "attentionNotes": [
+                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
+                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
+                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
+              ],
+              "language": "TypeScript",
+              "topics": [
+                "agent-framework",
+                "agent-orchestration",
+                "agentic-ai",
+                "ai-agents",
+                "anthropic",
+                "claude",
+                "claude-code",
+                "crewai-alternative",
+                "deepseek",
+                "dynamic-workflows",
+                "gemini",
+                "langgraph-alternative",
+                "llm",
+                "local-llm",
+                "mcp",
+                "multi-agent",
+                "nodejs",
+                "ollama",
+                "openai",
+                "typescript"
+              ],
+              "stars": 6597,
+              "forks": 2409,
+              "watchers": 6597,
+              "openIssues": 12,
+              "likes": 4,
+              "hearts": 2,
+              "reactionTotal": 12,
+              "reactionSamples": [
+                {
+                  "title": "Proposal: Per-call risk gating for built-in shell/filesystem tools",
+                  "url": "https://github.com/open-multi-agent/open-multi-agent/issues/96",
+                  "likes": 0,
+                  "hearts": 0,
+                  "comments": 4
+                },
+                {
+                  "title": "Claude Code",
+                  "url": "https://github.com/open-multi-agent/open-multi-agent/issues/11",
+                  "likes": 0,
+                  "hearts": 0,
+                  "comments": 2
+                },
+                {
+                  "title": "docs: restructure Ecosystem section, add Engram integration",
+                  "url": "https://github.com/open-multi-agent/open-multi-agent/pull/151",
+                  "likes": 2,
+                  "hearts": 0,
+                  "comments": 0
+                }
+              ],
+              "updatedAt": "2026-07-16T03:46:06Z",
+              "pushedAt": "2026-07-16T03:45:47Z",
+              "createdAt": "2026-03-31T19:07:34Z",
+              "homepage": "https://open-multi-agent.com",
+              "url": "https://github.com/open-multi-agent/open-multi-agent",
+              "downloadUrl": "https://github.com/open-multi-agent/open-multi-agent/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/open-multi-agent/open-multi-agent.git",
+              "license": "MIT"
+            },
+            {
+              "id": "bytedance-deer-flow",
+              "rank": 4,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "ai-open-source",
@@ -1403,10 +1483,10 @@
                 "superagent",
                 "typescript"
               ],
-              "stars": 77045,
-              "forks": 10468,
-              "watchers": 77045,
-              "openIssues": 966,
+              "stars": 77142,
+              "forks": 10486,
+              "watchers": 77142,
+              "openIssues": 975,
               "likes": 78,
               "hearts": 0,
               "reactionTotal": 78,
@@ -1433,121 +1513,13 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:55:31Z",
-              "pushedAt": "2026-07-15T00:54:37Z",
+              "updatedAt": "2026-07-16T03:41:06Z",
+              "pushedAt": "2026-07-16T03:38:56Z",
               "createdAt": "2025-05-07T02:50:19Z",
               "homepage": "https://deerflow.tech",
               "url": "https://github.com/bytedance/deer-flow",
               "downloadUrl": "https://github.com/bytedance/deer-flow/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/bytedance/deer-flow.git",
-              "license": "MIT"
-            },
-            {
-              "id": "open-multi-agent-open-multi-agent",
-              "rank": 4,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "ai-open-source",
-              "categoryLabel": "GitHub 熱門 AI 開源工具",
-              "categoryShortLabel": "AI 開源工具",
-              "typeLabel": "AI 開源工具",
-              "fullName": "open-multi-agent/open-multi-agent",
-              "name": "open-multi-agent",
-              "owner": "open-multi-agent",
-              "description": "TypeScript AI agent orchestration framework with dynamic workflows. Describe the goal, not the graph: a coordinator plans the task DAG at runtime and runs it on any LLM (Claude, ChatGPT, Gemini, DeepSeek, or local models).",
-              "descriptionZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。",
-              "oneLineZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。",
-              "introZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令建立專案並啟動多代理 DAG：回答一個提示；第一次運行顯示協調器將一個目標轉變為多代理 DAG，並打開運行的儀表板（OpenAI 或任何與 OpenAI 相容的提供者）。要將庫新增至您自己的專案：完整的快速入門、三種運行方式、提供程式設定、生產清單以及套件上的完整 API 參考...",
-              "contentZh": [
-                "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令建立專案並啟動多代理 DAG：回答一個提示；第一次運行顯示協調器將一個目標轉變為多代理 DAG，並打開運行的儀表板（OpenAI 或任何與 OpenAI 相容的提供者）。要將庫新增至您自己的專案：完整的快速入門、三種運行方式、提供程式設定、生產清單以及套件上的完整 API 參考...",
-                "從 topics 來看，它和 agent-framework、agent-orchestration、agentic-ai、ai-agents、anthropic、claude、claude-code、crewai-alternative 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
-                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
-                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
-              ],
-              "discussionZh": [
-                "「Proposal: Per-call risk gating for built-in shell/filesystem tools」是目前較多人互動的討論之一（留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Claude Code」是目前較多人互動的討論之一（留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「docs: restructure Ecosystem section, add Engram integration」是目前較多人互動的討論之一（👍 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要工具連接的 MCP / tool server agent",
-                "用在內部系統、API 與外部工具串接 workflow",
-                "AI coding / developer assistant agent"
-              ],
-              "useCases": [
-                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
-                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
-                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
-              ],
-              "notFor": [
-                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
-                "完全不想看 README、授權、issues 或基本安裝條件的人。"
-              ],
-              "attentionNotes": [
-                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
-                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
-                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
-              ],
-              "language": "TypeScript",
-              "topics": [
-                "agent-framework",
-                "agent-orchestration",
-                "agentic-ai",
-                "ai-agents",
-                "anthropic",
-                "claude",
-                "claude-code",
-                "crewai-alternative",
-                "deepseek",
-                "dynamic-workflows",
-                "gemini",
-                "langgraph-alternative",
-                "llm",
-                "local-llm",
-                "mcp",
-                "multi-agent",
-                "nodejs",
-                "ollama",
-                "openai",
-                "typescript"
-              ],
-              "stars": 6580,
-              "forks": 2406,
-              "watchers": 6580,
-              "openIssues": 10,
-              "likes": 4,
-              "hearts": 2,
-              "reactionTotal": 12,
-              "reactionSamples": [
-                {
-                  "title": "Proposal: Per-call risk gating for built-in shell/filesystem tools",
-                  "url": "https://github.com/open-multi-agent/open-multi-agent/issues/96",
-                  "likes": 0,
-                  "hearts": 0,
-                  "comments": 4
-                },
-                {
-                  "title": "Claude Code",
-                  "url": "https://github.com/open-multi-agent/open-multi-agent/issues/11",
-                  "likes": 0,
-                  "hearts": 0,
-                  "comments": 2
-                },
-                {
-                  "title": "docs: restructure Ecosystem section, add Engram integration",
-                  "url": "https://github.com/open-multi-agent/open-multi-agent/pull/151",
-                  "likes": 2,
-                  "hearts": 0,
-                  "comments": 0
-                }
-              ],
-              "updatedAt": "2026-07-14T17:42:56Z",
-              "pushedAt": "2026-07-12T11:53:43Z",
-              "createdAt": "2026-03-31T19:07:34Z",
-              "homepage": "https://open-multi-agent.com/?utm_source=github",
-              "url": "https://github.com/open-multi-agent/open-multi-agent",
-              "downloadUrl": "https://github.com/open-multi-agent/open-multi-agent/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/open-multi-agent/open-multi-agent.git",
               "license": "MIT"
             },
             {
@@ -1607,10 +1579,10 @@
                 "mcp",
                 "productivity"
               ],
-              "stars": 229730,
-              "forks": 35164,
-              "watchers": 229730,
-              "openIssues": 108,
+              "stars": 230174,
+              "forks": 35220,
+              "watchers": 230174,
+              "openIssues": 109,
               "likes": 52,
               "hearts": 0,
               "reactionTotal": 53,
@@ -1637,7 +1609,7 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-07-15T00:57:32Z",
+              "updatedAt": "2026-07-16T03:50:20Z",
               "pushedAt": "2026-07-14T01:31:12Z",
               "createdAt": "2026-01-18T00:51:51Z",
               "homepage": "https://ecc.tools",
@@ -1652,8 +1624,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-06-15",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-06-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-06-16",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-06-16、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1724,10 +1696,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 64436,
-              "forks": 7654,
-              "watchers": 64436,
-              "openIssues": 783,
+              "stars": 64558,
+              "forks": 7671,
+              "watchers": 64558,
+              "openIssues": 793,
               "likes": 94,
               "hearts": 19,
               "reactionTotal": 132,
@@ -1754,8 +1726,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-07-15T00:57:14Z",
-              "pushedAt": "2026-07-14T20:53:27Z",
+              "updatedAt": "2026-07-16T03:28:40Z",
+              "pushedAt": "2026-07-15T22:06:32Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1787,7 +1759,7 @@
               ],
               "discussionZh": [
                 "「[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode」是目前較多人互動的討論之一（👍 107、❤️ 14、留言 46）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[FEATURE] OpenCode plugin — headroom-opencode npm package」是目前較多人互動的討論之一（👍 66、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] OpenCode plugin — headroom-opencode npm package」是目前較多人互動的討論之一（👍 66、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
                 "「Homebrew support for easier install」是目前較多人互動的討論之一（👍 52、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
@@ -1832,10 +1804,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 59171,
-              "forks": 4387,
-              "watchers": 59171,
-              "openIssues": 444,
+              "stars": 59379,
+              "forks": 4409,
+              "watchers": 59379,
+              "openIssues": 414,
               "likes": 362,
               "hearts": 23,
               "reactionTotal": 416,
@@ -1852,7 +1824,7 @@
                   "url": "https://github.com/headroomlabs-ai/headroom/issues/76",
                   "likes": 66,
                   "hearts": 0,
-                  "comments": 9
+                  "comments": 10
                 },
                 {
                   "title": "Homebrew support for easier install",
@@ -1862,8 +1834,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:57:33Z",
-              "pushedAt": "2026-07-14T20:20:52Z",
+              "updatedAt": "2026-07-16T03:51:22Z",
+              "pushedAt": "2026-07-15T22:28:46Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://headroom-docs.vercel.app/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1886,9 +1858,9 @@
               "description": "TypeScript AI agent orchestration framework with dynamic workflows. Describe the goal, not the graph: a coordinator plans the task DAG at runtime and runs it on any LLM (Claude, ChatGPT, Gemini, DeepSeek, or local models).",
               "descriptionZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。",
               "oneLineZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。",
-              "introZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令建立專案並啟動多代理 DAG：回答一個提示；第一次運行顯示協調器將一個目標轉變為多代理 DAG，並打開運行的儀表板（OpenAI 或任何與 OpenAI 相容的提供者）。要將庫新增至您自己的專案：完整的快速入門、三種運行方式、提供程式設定、生產清單以及套件上的完整 API 參考...",
+              "introZh": "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令來建立生產啟動器或教學 DAG 演示：建立專案時，選擇 PR 審查代理、安全分析代理或多代理 DAG 啟動器演示，然後選擇雲端/OpenAI 相容提供者或完全本地的 Ollama。生產啟動者會發出 Markdown、JSON 和可檢查的 DAG 儀表板，同時保持代理只讀。要將庫添加到您自己的項目中：完整的快速...",
               "contentZh": [
-                "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令建立專案並啟動多代理 DAG：回答一個提示；第一次運行顯示協調器將一個目標轉變為多代理 DAG，並打開運行的儀表板（OpenAI 或任何與 OpenAI 相容的提供者）。要將庫新增至您自己的專案：完整的快速入門、三種運行方式、提供程式設定、生產清單以及套件上的完整 API 參考...",
+                "具有動態工作流程的 TypeScript AI agent編排框架。描述目標，而不是圖表：協調員在運行時規劃任務 DAG，並在任何 LLM（Claude、ChatGPT、Gemini、DeepSeek 或本地模型）上運行它。 開啟多代理從目標到任務 DAG，自動進行。 TypeScript 原生多agent編排。網站 · 文件 · npm · 討論 英文 · 中文 open-multi-agent 是一個適用於 TypeScript 後端的 AI agent編排框架，可放入任何 Node.js 應用程式中。您的工程師描述的是目標，而不是圖表。圖優先框架使您可以預先連接每個節點和邊緣。 OMA運作動態工作流程：協調器在運作時將目標轉變為任務DAG，並行化獨立任務，並綜合結果。該計劃作為確定性調度程序運行的數據發出，因此它保持可檢查和可重播。這與 Anthropic 對 Claude Code 動態工作流程的押注相同； OMA 將其作為開放庫提供，可以在您自己的後端的任何提供者上運行。輕量級核心：引擎加上 Anthropic、OpenAI 以及任何與 OpenAI 相容的端點，開箱即用； Gemini、Bedrock、MCP 和 Vercel AI SDK 橋接器是選擇加入的對等依賴項。開始使用一個命令來建立生產啟動器或教學 DAG 演示：建立專案時，選擇 PR 審查代理、安全分析代理或多代理 DAG 啟動器演示，然後選擇雲端/OpenAI 相容提供者或完全本地的 Ollama。生產啟動者會發出 Markdown、JSON 和可檢查的 DAG 儀表板，同時保持代理只讀。要將庫添加到您自己的項目中：完整的快速...",
                 "從 topics 來看，它和 agent-framework、agent-orchestration、agentic-ai、ai-agents、anthropic、claude、claude-code、crewai-alternative 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1940,10 +1912,10 @@
                 "openai",
                 "typescript"
               ],
-              "stars": 6580,
-              "forks": 2406,
-              "watchers": 6580,
-              "openIssues": 10,
+              "stars": 6597,
+              "forks": 2409,
+              "watchers": 6597,
+              "openIssues": 12,
               "likes": 4,
               "hearts": 2,
               "reactionTotal": 12,
@@ -1970,10 +1942,10 @@
                   "comments": 0
                 }
               ],
-              "updatedAt": "2026-07-14T17:42:56Z",
-              "pushedAt": "2026-07-12T11:53:43Z",
+              "updatedAt": "2026-07-16T03:46:06Z",
+              "pushedAt": "2026-07-16T03:45:47Z",
               "createdAt": "2026-03-31T19:07:34Z",
-              "homepage": "https://open-multi-agent.com/?utm_source=github",
+              "homepage": "https://open-multi-agent.com",
               "url": "https://github.com/open-multi-agent/open-multi-agent",
               "downloadUrl": "https://github.com/open-multi-agent/open-multi-agent/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/open-multi-agent/open-multi-agent.git",
@@ -2046,10 +2018,10 @@
                 "superagent",
                 "typescript"
               ],
-              "stars": 77045,
-              "forks": 10468,
-              "watchers": 77045,
-              "openIssues": 966,
+              "stars": 77143,
+              "forks": 10486,
+              "watchers": 77143,
+              "openIssues": 975,
               "likes": 78,
               "hearts": 0,
               "reactionTotal": 78,
@@ -2076,8 +2048,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-07-15T00:55:31Z",
-              "pushedAt": "2026-07-15T00:54:37Z",
+              "updatedAt": "2026-07-16T03:50:51Z",
+              "pushedAt": "2026-07-16T03:38:56Z",
               "createdAt": "2025-05-07T02:50:19Z",
               "homepage": "https://deerflow.tech",
               "url": "https://github.com/bytedance/deer-flow",
@@ -2142,10 +2114,10 @@
                 "mcp",
                 "productivity"
               ],
-              "stars": 229730,
-              "forks": 35164,
-              "watchers": 229730,
-              "openIssues": 108,
+              "stars": 230175,
+              "forks": 35220,
+              "watchers": 230175,
+              "openIssues": 109,
               "likes": 52,
               "hearts": 0,
               "reactionTotal": 53,
@@ -2172,7 +2144,7 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-07-15T00:57:32Z",
+              "updatedAt": "2026-07-16T03:51:38Z",
               "pushedAt": "2026-07-14T01:31:12Z",
               "createdAt": "2026-01-18T00:51:51Z",
               "homepage": "https://ecc.tools",
@@ -2191,8 +2163,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-07-08",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-07-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-07-09",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-07-09、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "wshobson-agents",
@@ -2208,10 +2180,10 @@
           "owner": "wshobson",
           "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
           "descriptionZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-          "oneLineZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-          "introZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+          "oneLineZh": "整理 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 與 Gemini CLI 可用的多工具 agent skills 市場。",
+          "introZh": "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
           "contentZh": [
-            "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+            "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
             "從 topics 來看，它和 agent-skills、agentic-ai、agents、ai-agents、anthropic、automation、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -2263,10 +2235,10 @@
             "prompt-engineering",
             "workflows"
           ],
-          "stars": 37914,
-          "forks": 4074,
-          "watchers": 37914,
-          "openIssues": 6,
+          "stars": 37941,
+          "forks": 4079,
+          "watchers": 37941,
+          "openIssues": 7,
           "likes": 22,
           "hearts": 0,
           "reactionTotal": 23,
@@ -2293,7 +2265,7 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-07-15T00:26:49Z",
+          "updatedAt": "2026-07-16T01:59:30Z",
           "pushedAt": "2026-07-14T17:37:15Z",
           "createdAt": "2025-07-24T23:28:14Z",
           "homepage": "https://sethhobson.com",
@@ -2371,10 +2343,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 87262,
-          "forks": 7554,
-          "watchers": 87262,
-          "openIssues": 249,
+          "stars": 87414,
+          "forks": 7571,
+          "watchers": 87414,
+          "openIssues": 271,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2401,8 +2373,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-07-15T00:52:34Z",
-          "pushedAt": "2026-07-15T00:51:56Z",
+          "updatedAt": "2026-07-16T03:40:55Z",
+          "pushedAt": "2026-07-15T22:16:21Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2475,10 +2447,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 45981,
-          "forks": 10265,
-          "watchers": 45981,
-          "openIssues": 25,
+          "stars": 45995,
+          "forks": 10267,
+          "watchers": 45995,
+          "openIssues": 26,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2505,7 +2477,7 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-07-15T00:49:33Z",
+          "updatedAt": "2026-07-16T03:44:20Z",
           "pushedAt": "2026-07-14T10:03:22Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
@@ -2528,10 +2500,10 @@
           "owner": "alirezarezvani",
           "description": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
           "descriptionZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢",
-          "oneLineZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編...",
-          "introZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 树，但您运行 python scripts/sync-hermes-skills.py 在本地安装到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 标准——无格式转换。 [^vibe]：Mistral Vibe 也是 BYO 同步层：存储库发货...",
+          "oneLineZh": "收集大量 Claude Code 技能與外掛，並延伸到 Codex、Gemini CLI、Cursor 等 AI coding agent。",
+          "introZh": "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
           "contentZh": [
-            "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 树，但您运行 python scripts/sync-hermes-skills.py 在本地安装到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 标准——无格式转换。 [^vibe]：Mistral Vibe 也是 BYO 同步层：存储库发货...",
+            "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
             "從 topics 來看，它和 agent-plugins、agent-skills、agentic-ai、ai-coding-agent、anthropic-claude、claude-ai、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -2583,10 +2555,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 22577,
-          "forks": 3139,
-          "watchers": 22577,
-          "openIssues": 7,
+          "stars": 22670,
+          "forks": 3153,
+          "watchers": 22670,
+          "openIssues": 8,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -2613,7 +2585,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-07-15T00:53:31Z",
+          "updatedAt": "2026-07-16T03:20:57Z",
           "pushedAt": "2026-07-14T07:46:55Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
@@ -2623,7 +2595,7 @@
           "license": "MIT"
         },
         {
-          "id": "othmanadi-planning-with-files",
+          "id": "mxyhi-ok-skills",
           "rank": 5,
           "period": "weekly",
           "periodKey": "weekly",
@@ -2631,28 +2603,26 @@
           "categoryLabel": "GitHub 熱門 Skill / Workflow",
           "categoryShortLabel": "Skill / Workflow",
           "typeLabel": "Skill / Workflow",
-          "fullName": "OthmanAdi/planning-with-files",
-          "name": "planning-with-files",
-          "owner": "OthmanAdi",
-          "description": "Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministic completion gate and multi-agent shared state on disk. Manus-style. Works with Claude Code, Codex CLI, Cursor, Kiro, OpenCode and 60+ agents via the SKILL.md standard.",
-          "descriptionZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。",
-          "oneLineZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Co...",
-          "introZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
+          "fullName": "mxyhi/ok-skills",
+          "name": "ok-skills",
+          "owner": "mxyhi",
+          "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
+          "descriptionZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
+          "oneLineZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
+          "introZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 32 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其克隆到 /.agents/skills/ok-skills 中；裡面的目錄已經與 AGENTS.md 驅動的工作流程預期的佈局相匹配，並且 CLAUDEAGENTS.md 提供了一個面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植說明。您需要久經考驗的文件查找、瀏覽器自動化技能…",
           "contentZh": [
-            "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
-            "從 topics 來看，它和 agent-skills、agentic-ai、ai-agents、autonomous-agents、claude、claude-code、claude-skills、codex 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 32 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其克隆到 /.agents/skills/ok-skills 中；裡面的目錄已經與 AGENTS.md 驅動的工作流程預期的佈局相匹配，並且 CLAUDEAGENTS.md 提供了一個面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植說明。您需要久經考驗的文件查找、瀏覽器自動化技能…",
+            "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
           ],
           "discussionZh": [
-            "「When cloning this skill, the parent directory is cloned into the skills directory」是目前較多人互動的討論之一（👍 15、❤️ 1、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「For multi-step / complex tasks, how should this skill be used properly?」是目前較多人互動的討論之一（👍 8、❤️ 6、留言 24）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Consolidate language variants into a single skill with locale parameter」是目前較多人互動的討論之一（👍 11、❤️ 2、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+            "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
           ],
           "audience": [
-            "長任務規劃型 coding agent",
-            "用在 plan-review-execute、文件驅動與進度保存 workflow",
-            "需要讓 agent 工作可追蹤、可恢復的人"
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
+            "用在技能包、插件、可重用指令與團隊 SOP workflow",
+            "需要標準化交辦規則的 AI coding agent"
           ],
           "useCases": [
             "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
@@ -2668,67 +2638,41 @@
             "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
             "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
           ],
-          "language": "Python",
+          "language": "HTML",
           "topics": [
             "agent-skills",
-            "agentic-ai",
+            "agents-md",
+            "ai",
             "ai-agents",
-            "autonomous-agents",
-            "claude",
             "claude-code",
-            "claude-skills",
+            "claude-code-skills",
             "codex",
-            "coding-agent",
-            "context-engineering",
-            "copilot",
+            "codex-skills",
+            "coding-agents",
             "cursor",
-            "developer-tools",
-            "github-copilot",
-            "llm-agents",
-            "long-running-agents",
-            "manus",
-            "multi-agent-systems",
-            "pi",
-            "planning"
+            "cursor-skills",
+            "openclaw-skills",
+            "openfang",
+            "pi-mono",
+            "prompt-engineering",
+            "skills"
           ],
-          "stars": 25356,
-          "forks": 2142,
-          "watchers": 25356,
-          "openIssues": 5,
-          "likes": 57,
-          "hearts": 24,
-          "reactionTotal": 101,
-          "reactionSamples": [
-            {
-              "title": "When cloning this skill, the parent directory is cloned into the skills directory",
-              "url": "https://github.com/OthmanAdi/planning-with-files/issues/1",
-              "likes": 15,
-              "hearts": 1,
-              "comments": 5
-            },
-            {
-              "title": "For multi-step / complex tasks, how should this skill be used properly?",
-              "url": "https://github.com/OthmanAdi/planning-with-files/issues/19",
-              "likes": 8,
-              "hearts": 6,
-              "comments": 24
-            },
-            {
-              "title": "Consolidate language variants into a single skill with locale parameter",
-              "url": "https://github.com/OthmanAdi/planning-with-files/issues/130",
-              "likes": 11,
-              "hearts": 2,
-              "comments": 1
-            }
-          ],
-          "updatedAt": "2026-07-15T00:44:29Z",
-          "pushedAt": "2026-07-14T14:32:40Z",
-          "createdAt": "2026-01-03T07:37:28Z",
+          "stars": 453,
+          "forks": 40,
+          "watchers": 453,
+          "openIssues": 1,
+          "likes": 0,
+          "hearts": 0,
+          "reactionTotal": 0,
+          "reactionSamples": [],
+          "updatedAt": "2026-07-15T13:31:29Z",
+          "pushedAt": "2026-07-15T13:30:45Z",
+          "createdAt": "2026-02-02T07:02:25Z",
           "homepage": "",
-          "url": "https://github.com/OthmanAdi/planning-with-files",
-          "downloadUrl": "https://github.com/OthmanAdi/planning-with-files/archive/refs/heads/master.zip",
-          "cloneUrl": "https://github.com/OthmanAdi/planning-with-files.git",
-          "license": "MIT"
+          "url": "https://github.com/mxyhi/ok-skills",
+          "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
+          "license": "Apache-2.0"
         }
       ]
     },
@@ -2736,8 +2680,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-06-15",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-06-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-06-16",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-06-16、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "wshobson-agents",
@@ -2753,10 +2697,10 @@
           "owner": "wshobson",
           "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
           "descriptionZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-          "oneLineZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場",
-          "introZh": "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+          "oneLineZh": "整理 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 與 Gemini CLI 可用的多工具 agent skills 市場。",
+          "introZh": "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
           "contentZh": [
-            "適用於 Claude Code、Codex CLI、Cursor、OpenCode、GitHub Copilot 和 Gemini CLI 的多工具代理插件市場 Agentic 插件市場 生產就緒的代理工作流程構建塊：94 個插件、203 個代理、175 個技能、109 個命令 - 為 Claude Code 構建，並由 OpenAI Codex CLI、Cursor、OpenCode、Gemini CLI 和 GitHub Copilot 從單個 Markdown 來源本地使用。 [!NOTE] 一個真實來源（插件/），五個工具。每個線束都有慣用的、線束原生的工件──而不是最低公分母的翻譯。有關功能矩陣，請參閱 docs/harnesses.md。快速入門 選擇您的工具：Claude Code → 完整的 Claude Code 設定、故障排除和插件目錄 Codex CLI · Cursor · OpenCode · Gemini CLI · Copilot Codex 和 Cursor 從提交的註冊表（指向源插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後通過克隆的樹插件/）本地安裝：Gemini 和 OpenCode 通過克隆 + 生成（安裝後的樹被轉換和 OpenCode 複製樹） gitignored）：設定詳細資訊和每個工具的陷阱：docs/harnesses.md。 Gemini 特定設定：GEMINI.md（也由 Gemini CLI 自動載入）。里面有什么 | |计数|它是什么 | |---|---:|---| |插件 | 94 | 94细粒度、单一用途的可安装单元（90 个本地 + 4 个通过 git-subdir 的外部）| |代理| 203 | 203领域专家（架构、语言、基础设施、安全、数据、ML、文档、业务、SEO）| |技能 | 175 | 175漸進式公開的模組化知識包（啟動時載入）| |指令 | 109 | 109斜線指令：鷹架、安全掃描、測試產生、基礎設施...",
+            "這個 repo 像是一個跨工具的 agent skill marketplace，把不同 AI coding agent 可用的專家角色、工作流與指令整理成可參考的技能庫。",
             "從 topics 來看，它和 agent-skills、agentic-ai、agents、ai-agents、anthropic、automation、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -2808,10 +2752,10 @@
             "prompt-engineering",
             "workflows"
           ],
-          "stars": 37914,
-          "forks": 4074,
-          "watchers": 37914,
-          "openIssues": 6,
+          "stars": 37941,
+          "forks": 4079,
+          "watchers": 37941,
+          "openIssues": 7,
           "likes": 22,
           "hearts": 0,
           "reactionTotal": 23,
@@ -2838,7 +2782,7 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-07-15T00:26:49Z",
+          "updatedAt": "2026-07-16T01:59:30Z",
           "pushedAt": "2026-07-14T17:37:15Z",
           "createdAt": "2025-07-24T23:28:14Z",
           "homepage": "https://sethhobson.com",
@@ -2916,10 +2860,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 87263,
-          "forks": 7554,
-          "watchers": 87263,
-          "openIssues": 249,
+          "stars": 87414,
+          "forks": 7571,
+          "watchers": 87414,
+          "openIssues": 271,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2946,8 +2890,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-07-15T00:55:49Z",
-          "pushedAt": "2026-07-15T00:51:56Z",
+          "updatedAt": "2026-07-16T03:40:55Z",
+          "pushedAt": "2026-07-15T22:16:21Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -3020,10 +2964,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 45981,
-          "forks": 10265,
-          "watchers": 45981,
-          "openIssues": 25,
+          "stars": 45995,
+          "forks": 10267,
+          "watchers": 45995,
+          "openIssues": 26,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -3050,7 +2994,7 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-07-15T00:49:33Z",
+          "updatedAt": "2026-07-16T03:44:20Z",
           "pushedAt": "2026-07-14T10:03:22Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
@@ -3073,10 +3017,10 @@
           "owner": "alirezarezvani",
           "description": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
           "descriptionZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢",
-          "oneLineZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編...",
-          "introZh": "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 樹，但您執行 python scripts/sync-hermes-skills.py 在本機安裝到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 標準－無格式轉換。 [^vibe]：Mistral Vibe 也是 BYO 同步層：儲存庫出貨...",
+          "oneLineZh": "收集大量 Claude Code 技能與外掛，並延伸到 Codex、Gemini CLI、Cursor 等 AI coding agent。",
+          "introZh": "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
           "contentZh": [
-            "345 個 Claude Code 技能和代理技能和外掛程式（30 多個agent、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 Claude 程式碼技能和外掛程式 — 適用於每種編碼工具的代理技能 355 種可用於生產的 Claude 程式碼技能、外掛程式和適用於 13 種 AI 編碼工具的代理技能。最全面的 Claude Code 技能和代理插件開源庫 - 還可以與 OpenAI Codex、Gemini CLI、Cursor 和另外 9 個編碼代理配合使用。可重複使用的專業知識包，涵蓋工程、DevOps、行銷（包括 AEO — LLM 引用的答案引擎優化）、安全性（PreToolUse 掛鉤）、合規性、C 級諮詢（包括創始人模式 CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO/CCO/VPE /cs：斜線指令）、生產力（擷取/電子郵件/反映）、學術研究堆疊（litreview/grants/dossier/patent/syllabus/pulse/notebooklm/deep-research + 混合路由器）和企業研究營運（臨床研究/研究財務/市場研究/產品研究，v2.9.0）。適用於：Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent[^hermes] · Mistral Vibe[^vibe] · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity [^mess]：Hermes .hermes/skills/claude-skills/ 樹，但您執行 python scripts/sync-hermes-skills.py 在本機安裝到 /.hermes/skills/ 中。使用相同的agentskills.io SKILL.md 標準－無格式轉換。 [^vibe]：Mistral Vibe 也是 BYO 同步層：儲存庫出貨...",
+            "claude-skills 是偏技能包與插件庫的 repo，重點不是單一工具，而是整理可被 Claude Code、Codex、Cursor 類 agent 重複使用的技能與指令模板。",
             "從 topics 來看，它和 agent-plugins、agent-skills、agentic-ai、ai-coding-agent、anthropic-claude、claude-ai、claude-code、claude-code-plugins 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -3128,10 +3072,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 22577,
-          "forks": 3139,
-          "watchers": 22577,
-          "openIssues": 7,
+          "stars": 22670,
+          "forks": 3153,
+          "watchers": 22670,
+          "openIssues": 8,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -3158,7 +3102,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-07-15T00:53:31Z",
+          "updatedAt": "2026-07-16T03:20:57Z",
           "pushedAt": "2026-07-14T07:46:55Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
@@ -3181,10 +3125,10 @@
           "owner": "OthmanAdi",
           "description": "Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministic completion gate and multi-agent shared state on disk. Manus-style. Works with Claude Code, Codex CLI, Cursor, Kiro, OpenCode and 60+ agents via the SKILL.md standard.",
           "descriptionZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。",
-          "oneLineZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Co...",
-          "introZh": "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
+          "oneLineZh": "讓 coding agent 以檔案保存計畫、進度與決策，適合長任務與可回頭檢查的工作流。",
+          "introZh": "planning-with-files 的重點是讓 agent 不只在對話裡規劃，而是把計畫、狀態與任務拆解寫進檔案，方便長時間任務追蹤、審查與恢復。",
           "contentZh": [
-            "針對 AI 編碼代理和長期運行的代理任務進行基於文件的持久規劃。防崩潰的降價計劃可以在上下文丟失和/清除的情況下倖存下來，加上確定性的完成門和磁碟上的多代理共享狀態。馬努斯風格。透過 SKILL.md 標準與 Claude Code、Codex CLI、Cursor、Kiro、OpenCode 和 60 多個agent配合使用。 使用檔案進行規劃 📣 v3.0.0 中的新增功能：為長時間運行的代理運行選擇自主和門控模式，並有一個完成門來保留代理，直到計劃實際完成。現有的設定沒有任何改變。像 Manus 一樣工作——Meta 斥資 20 億美元收購的人工智慧代理公司。 Planning-with-files 是一種針對 AI 編碼代理的基於文件的持久規劃技能。它將taskplan.md、findings.md 和progress.md 保存在磁碟上，以便agent能夠在上下文遺失、/clear 和崩潰的情況下倖存下來，並有一個選擇加入的完成門來保留agent直到計劃實際完成。它透過 SKILL.md 標準安裝超過 60 個agent。 -brightgreen）💬 作者的一封信致所有加註星標、分叉和分享此技能的人 — 謝謝。這個計畫在不到 24 小時內就爆了，社區的支持令人難以置信。如果這項技能可以幫助你更聰明地工作，那就是我想要的。 🌍 社區發布了什麼 Forks & Extensions |叉|作者 |他們建造了什麼 | |------|--------|-----------------| |設計| @st01cs | |代理基金技能 | @RioTheGreat-ai |具有基於里程碑的託管服務的人工智慧代理眾籌...",
+            "planning-with-files 的重點是讓 agent 不只在對話裡規劃，而是把計畫、狀態與任務拆解寫進檔案，方便長時間任務追蹤、審查與恢復。",
             "從 topics 來看，它和 agent-skills、agentic-ai、ai-agents、autonomous-agents、claude、claude-code、claude-skills、codex 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -3236,9 +3180,9 @@
             "pi",
             "planning"
           ],
-          "stars": 25356,
-          "forks": 2142,
-          "watchers": 25356,
+          "stars": 25395,
+          "forks": 2145,
+          "watchers": 25395,
           "openIssues": 5,
           "likes": 57,
           "hearts": 24,
@@ -3266,7 +3210,7 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-07-15T00:44:29Z",
+          "updatedAt": "2026-07-16T03:32:21Z",
           "pushedAt": "2026-07-14T14:32:40Z",
           "createdAt": "2026-01-03T07:37:28Z",
           "homepage": "",

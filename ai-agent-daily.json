@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T03:04:50.897Z",
+  "generatedAt": "2026-07-16T03:53:46.841Z",
   "title": "AI Agent 每日熱門",
   "source": "Hacker News Algolia API + Reddit public RSS",
   "subreddits": [
@@ -29,16 +29,16 @@
           "objectID": "48926085",
           "url": "https://brainless.swerdlow.dev",
           "discussionUrl": "https://news.ycombinator.com/item?id=48926085",
-          "points": 102,
-          "comments": 20,
+          "points": 109,
+          "comments": 22,
           "createdAt": "2026-07-15T19:42:53Z",
-          "score": 232.79999999999998,
+          "score": 246.6,
           "sourceOriginalText": "brainless\n\nClaude Code, Codex, and Grok interfaces as shadcn components.\n\n◆ @benswerd · freestyle\n\n41 42 + added: 43 · Thinking … ( 0 s · ↑ 0 tokens · esc to interrupt) ◉ xhigh · /effort ❯ ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents >_ OpenAI Codex ( v0.132.0 ) model: gpt-6.9 low /model to change directory: ~/acme-site › add the brainless pricing section to the docs site • Read app/(marketing)/page.tsx • Edited components/pricing.tsx (+22 −0) • Running pnpm build ( 0 s • esc to interrupt) › gpt-6.9 low · ~/acme-site  main ~/acme-site 16K / 500K │ 2 / 3 ✓ steps complete Grok Build Beta 0.2.93 Grok 4.21 is here! Grok 4.21 is now available. Try it out in the /model picker. New worktree ctrl+w Resume session ctrl+s Changelog Quit ctrl+q Tip: Use Shift+Tab to cycle between modes, lik.",
           "sourceContentType": "source-page",
           "titleZh": "Brainless：Shadcn 組件看起來像 Claude Code、Codex 和 Grok",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "sourceTextZh": "無腦的 Claude Code、Codex 和 Grok 介面作為 shadcn 組件。 ◆ @benswerd (型號：gpt-6.9 low /model 更改目錄： ~/acme-site › 將無腦定價部分添加到文件站點 • 閱讀 app/(marketing)/page.tsx • 編輯 Components/pricing.tsx (+22 −0) • 運行 ›s build ( 0 s  main ~/acme-site 16K / 500K │ 2 / 3 ✓ 步驟完成 Grok Build Beta 0.2.93 Grok 4.21 來了！ Grok 4.21 現已推出。在 /model 選擇器中嘗試。新工作樹 ctrl+w 復原工作階段 ctrl+s 變更日誌 退出 ctrl+q 提示：使用 Shift+Tab 在模式之間循環，例如。",
+          "sourceTextZh": "無腦的 Claude Code、Codex 和 Grok 介面作為 shadcn 組件。 ◆ @benswerd (型號：gpt-6.9 low /model 更改目錄： ~/acme-site › 將無腦定價部分添加到文件站點 • 閱讀 app/(marketing)/page.tsx • 編輯組件/pricing.tsx (+22 −0) • 運行 pnpm build ( 0 s • / pt. ~/acme-site 16K / 500K │ 2 / 3 ✓ 步驟完成 Grok Build Beta 0.2.93 Grok 4.21 來了！ Grok 4.21 現已推出。在 /model 選擇器中嘗試。新工作樹 ctrl+w 復原工作階段 ctrl+s 變更日誌 退出 ctrl+q 提示：使用 Shift+Tab 在模式之間循環，例如。",
           "rank": 1
         },
         {
@@ -59,7 +59,7 @@
           "titleZh": "社會影響：克勞德跨模型與語言的價值觀",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "sourceTextZh": "克勞德的價值觀如何因模型和語言的不同而不同 \\ 人類克勞德在不同模型和語言中的價值觀 當有人問克勞德一個沒有普遍正確答案的問題時（例如，是否接受新工作或如何處理與朋友的衝突），克勞德的反應不可避免地反映了某些價值觀。 1 我們希望 Claude 體現的價值觀在 Claude 憲法中得到了高度概括，但沒有任何文件能夠預測 Claude.ai 每天發生的數百萬次對話中可能出現的每一個價值觀。相反，我們尋求在克勞德的回答中培養「良好的判斷力和可以根據具體情況應用的合理價值觀」。確切地說，我們如何研究克勞德所表達的價值觀以及它們在不同背景下如何變化？在先前的工作中，我們分析了 70 萬個匿名 Claude.ai 對話，識別了 Claude 回覆中的 3,000 多個不同的價值觀以及 Claude 表達這些價值觀的頻率。但如此大的值列表很難推理。在這項工作中，我們透過將這數千個值壓縮成少量的軸來捕捉克勞德響應中的關鍵模式，從而使研究變得容易處理。每個軸都是兩組價值觀之間的一條數軸（例如，一端與情感溫暖相關的價值觀，另一端與嚴謹相關的價值觀），克勞德落在該線上的位置說明了這一點。\n\n我們應用這種方法來衡量克勞德所表達的價值觀在兩個因素中的變化。首先，我們比較了 Claude 表現的值在不同模型中的差異。每個克勞德模型都反映了略有不同的角色訓練方法以及許多其他微調決策。因為我們的價值軸方法量化了模型之間的關鍵差異，所以它最終可能允許我們將克勞德表達的價值觀的變化與不同的訓練決策聯繫起來。其次，我們想要了解使用者與 Claude 交談時所使用的多種語言的體驗如何。我們先前的研究表明，克勞德在不同語言中的行為有所不同。 2 我們應用價值軸方法來了解 Claude 所表達的價值在 Claude.ai 上排名前 20 的語言中有何變化。四個關鍵軸反映了克勞德價值觀中 15% 的變化： 3 尊重與謹慎：克勞德是否傾向於滿足某人的需求或防範可能的風險和傷害。熱情與嚴謹：克勞德是否傾向於表達積極性和對人的關心，還是強調準確性和精確性。深度與簡潔：克勞德是否傾向於深入解釋或只做所要求的事情。坦率與執行力：克勞德是否傾向於強調自己的不確定性，或給出更優雅、更自信的答案。\n\n這些軸上的價值概況與模型性格的看法相符。 Sonnet 4.6被認為特別溫暖，而Opus 4.7則以嚴謹著稱。我們發現每個模型的價值概況都反映了這些主觀評估：Sonnet 4.6 傾向於表達對使用者的更多尊重和情感溫暖，而 Opus 4.7 傾向於表達對準確性和精確性以及防止誤用的關注。克勞德表達的價值觀因語言而異。當克勞德用英語說話時，它強調的價值觀與用葡萄牙語、印尼語或中文說話時不同。 4 最大的差異在於溫暖與嚴謹軸，克勞德傾向於用阿拉伯語和印地語表達與溫暖相關的價值觀，而最傾向於用英語和俄語表達與嚴謹相關的價值觀。透過這種方法，我們可以開始詢問為什麼價值觀會在模型和語言之間發生變化，並更好地測試行為訓練或文化背景等因素如何影響克勞德表達的價值觀。我們如何解讀巨大的價值空間？最終，我們的目標是找到一種方法來經驗理解克勞德所表達的價值觀以及這些價值觀在不同背景下的差異。在這項工作中，我們特別關注模型和語言之間的值如何變化。但我們先前的作品《野外價值》辨識了克勞德表達的 3,000 多個價值觀。\n\n對這數千個值進行一一比較是很麻煩的，而且會掩蓋更廣泛的趨勢。為了使比較值變得更容易，我們建立了值軸，將這數千個值減少到幾個基本維度，基於這些值往往會在現實世界的對話中一起出現。例如，克勞德的反應被描述為“熱情”，通常也被描述為“鼓勵”和“積極”。那些同樣的“溫暖”",
+          "sourceTextZh": "克勞德的價值觀如何因模型和語言的不同而不同 \\ 人類克勞德在不同模型和語言中的價值觀 當有人問克勞德一個沒有普遍正確答案的問題時（例如，是否接受新工作或如何處理與朋友的衝突），克勞德的反應不可避免地反映了某些價值觀。 1 我們希望 Claude 體現的價值觀在 Claude 憲法中得到了高度概括，但沒有任何文件能夠預測 Claude.ai 每天發生的數百萬次對話中可能出現的每一個價值觀。相反，我們尋求在克勞德的回答中培養「良好的判斷力和可以根據具體情況應用的合理價值觀」。確切地說，我們如何研究克勞德所表達的價值觀以及它們在不同背景下如何變化？在先前的工作中，我們分析了 70 萬個匿名 Claude.ai 對話，識別了 Claude 回覆中的 3,000 多個不同的價值觀以及 Claude 表達這些價值觀的頻率。但如此大的值列表很難推理。在這項工作中，我們透過將這數千個值壓縮成少量的軸來捕捉克勞德響應中的關鍵模式，從而使研究變得容易處理。每個軸都是兩組價值觀之間的一條數軸（例如，一端與情感溫暖相關的價值觀，另一端與嚴謹相關的價值觀），克勞德落在該線上的位置說明了這一點。\n\n我們應用這種方法來衡量克勞德所表達的價值觀在兩個因素中的變化。首先，我們比較了 Claude 表現的值在不同模型中的差異。每個克勞德模型都反映了略有不同的角色訓練方法以及許多其他微調決策。因為我們的價值軸方法量化了模型之間的關鍵差異，所以它最終可能允許我們將克勞德表達的價值觀的變化與不同的訓練決策聯繫起來。其次，我們想要了解使用者與 Claude 交談時所使用的多種語言的體驗如何。我們先前的研究表明，克勞德在不同語言中的行為有所不同。 2 我們應用價值軸方法來了解 Claude 所表達的價值在 Claude.ai 上排名前 20 的語言中有何變化。四個關鍵軸反映了克勞德價值觀中 15% 的變化： 3 尊重與謹慎：克勞德是否傾向於滿足某人的需求或防範可能的風險和傷害。熱情與嚴謹：克勞德是否傾向於表達積極性和對人的關心，還是強調準確性和精確性。深度與簡潔：克勞德是否傾向於深入解釋或只做所要求的事情。坦率與執行力：克勞德是否傾向於強調自己的不確定性，或給出更優雅、更自信的答案。\n\n這些軸上的價值概況與模型性格的看法相符。 Sonnet 4.6被認為特別溫暖，而Opus 4.7則以嚴謹著稱。我們發現每個模型的價值概況都反映了這些主觀評估：Sonnet 4.6 傾向於表達對使用者的更多尊重和情感溫暖，而 Opus 4.7 傾向於表達對準確性和精確性以及防止誤用的關注。克勞德表達的價值觀因語言而異。當克勞德說英語時，它強調的價值觀與說葡萄牙語、印尼語或漢語時不同。 4 最大的差異在於溫暖與嚴謹軸，克勞德傾向於用阿拉伯語和印地語表達與溫暖相關的價值觀，而最傾向於用英語和俄語表達與嚴謹相關的價值觀。透過這種方法，我們可以開始詢問為什麼價值觀會在模型和語言之間發生變化，並更好地測試行為訓練或文化背景等因素如何影響克勞德表達的價值觀。我們如何解讀巨大的價值空間？最終，我們的目標是找到一種方法來經驗理解克勞德所表達的價值觀以及這些價值觀在不同背景下的差異。在這項工作中，我們特別關注模型和語言之間的值如何變化。但我們先前的作品《野外價值》辨識了克勞德表達的 3,000 多個價值觀。\n\n對這數千個值進行一一比較是很麻煩的，而且會掩蓋更廣泛的趨勢。為了使比較值變得更容易，我們建立了值軸，將這數千個值減少到幾個基本維度，基於這些值往往會在現實世界的對話中一起出現。例如，克勞德的反應被描述為“熱情”，通常也被描述為“鼓勵”和“積極”。那些同樣的“溫暖”",
           "rank": 2
         },
         {
@@ -75,12 +75,12 @@
           "comments": 0,
           "createdAt": "2026-07-15T15:38:45Z",
           "score": 127.8,
-          "sourceOriginalText": "I think we need to have something like npm, but for AI skills - with trackers & such; with proof and validation before installing &#x2F; using a skill. Generalized's idea is this. :) I'd love for you to publish your skills.",
-          "sourceContentType": "hn-discussion",
+          "sourceOriginalText": "Generalized — AI agent skills directory\n\n“Are my skills generalized..? ”\n\n“Software is solved. Skills are generalized. Everything I can do, an agent can do.” — is what we collectively fail to draw a consensus on. Generalized’s mission is to prove whether these vague conclusions are true or not.\n\nSkills store: With proof.\n\nWire the backend (stage 3) of a web app: auth, data + quota, storage, AI metering, Stripe payments. Server-authoritative, money-safe.\n\nSet project structure\n\nScaffold a Next.js web app foundation with Neon services, Drizzle schema, and design tokens—stops before building UI.\n\nBuild the marketing page for a web app with an existing foundation, using the brief's voice and design language to defeat generic AI output.\n\nSet Dashboard (Gated App U…\n\nBuild the interactive dashboard UI (calendar, modals, chat, settings) on top of a working backend, consuming its contracts without re-implementing logic.\n\nKits: Whole builds, boxed.\n\nComplete Web Application\n\nSet project structure → Set Landing Page → Set Dashboard (Gated App UI) → Set app backend\n\n“For a century, your skill was your moat. Now any agent can run it. You can watch that happen — or you can put your name on it.”",
+          "sourceContentType": "source-page",
           "titleZh": "顯示 HN：廣義 – 具有社區證明的 AI 代理技能",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "sourceTextZh": "我認為我們需要像 npm 這樣的東西，但是對於人工智慧技能 - 帶有追蹤器等；在安裝/使用技能之前進行證明和驗證。 Generalized的想法是這樣的。 :) 我希望你能發表你的技能。",
+          "sourceTextZh": "通用化 — AI 代理技能目錄「我的技能通用嗎？」「軟體已解決。技能通用化。我能做的一切，智能體都能做。」— 這是我們集體未能達成共識的問題。 Generalized 的使命是證明這些模糊的結論是否正確。技能商店：有證明。連接 Web 應用程式的後端（第 3 階段）：身份驗證、資料 + 配額、儲存、AI 計量、Stripe 支付。伺服器權威，資金安全。設定專案結構 使用 Neon 服務、Drizzle 架構和設計令牌來建立 Next.js Web 應用程式基礎—在建立 UI 之前停止。在現有基礎上建立網路應用程式的行銷頁面，使用簡報的語音和設計語言來擊敗通用人工智慧輸出。設定儀表板（門控應用程式 U…在工作後端之上構建互動式儀表板 UI（日曆、模式、聊天、設定），無需重新實現邏輯即可使用其合約。套件：整個構建，盒裝。完整的 Web 應用程式設定項目結構→設定登陸頁面→設定儀表板（門控應用程式 UI）→設定應用程式後端它。」",
           "rank": 3
         },
         {
@@ -197,6 +197,29 @@
           "rank": 3
         },
         {
+          "id": "reddit-1uxkl8u",
+          "source": "Reddit / r/LocalLLaMA",
+          "sourceKey": "reddit",
+          "subreddit": "LocalLLaMA",
+          "period": "daily",
+          "originalTitle": "New wave of miniboss models you can run on dual DGX Spark",
+          "originalExcerpt": "Two DGX Spark and a Connect-X7 cable give you about 250GB of usable memory for $7000 8000 USD. This allows using some interesting models at 4-bit. For what seemed like an eternity, the only serious models in that size were GLM 4.5/4.6/4.7 (194GB), Qwen 3.5 397B (210GB), and older MiniMax. Then 3 months ago we got MiniMax M2.7 (131GB), Deepseek V4 Flash (160GB) and Xiaomi MiMo 2.5 (181GB). Shortly later we got StepFun 3.7 Flash (129GB), and now we just got Tencent's Hy3 (182GB). I know this size is inaccessible to a lot of people on here, but 7k 8k seems reasonable acceptable to me to be able to run models of this power level. Have you been using them? Which is your favorite? [P.S. please don't read this post and run off to spend 7k without first spending $7 trying these models on OpenRouter first.] submitted by /u/dtdisapointingresult [link] [comments]",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxkl8u/new_wave_of_miniboss_models_you_can_run_on_dual/",
+          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uxkl8u/new_wave_of_miniboss_models_you_can_run_on_dual/",
+          "points": null,
+          "comments": null,
+          "createdAt": "2026-07-15T22:29:08+00:00",
+          "rankSignal": "Reddit RSS top ranking",
+          "score": 108,
+          "sourceOriginalText": "Two DGX Spark and a Connect-X7 cable give you about 250GB of usable memory for $7000 8000 USD. This allows using some interesting models at 4-bit. For what seemed like an eternity, the only serious models in that size were GLM 4.5/4.6/4.7 (194GB), Qwen 3.5 397B (210GB), and older MiniMax. Then 3 months ago we got MiniMax M2.7 (131GB), Deepseek V4 Flash (160GB) and Xiaomi MiMo 2.5 (181GB). Shortly later we got StepFun 3.7 Flash (129GB), and now we just got Tencent's Hy3 (182GB). I know this size is inaccessible to a lot of people on here, but 7k 8k seems reasonable acceptable to me to be able to run models of this power level. Have you been using them? Which is your favorite? [P.S. please don't read this post and run off to spend 7k without first spending $7 trying these models on OpenRouter first.] submitted by /u/dtdisapointingresult [link] [comments]",
+          "sourceContentType": "reddit-post",
+          "titleZh": "您可以在雙 DGX Spark 上運行的新一波 miniboss 模型",
+          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "兩根 DGX Spark 和一條 Connect-X7 電纜可為您提供約 250GB 的可用內存，售價為 7000-8000 美元。這允許在 4 位上使用一些有趣的模型。在似乎永恆的時間裡，該尺寸唯一的嚴肅型號是 GLM 4.5/4.6/4.7 (194GB)、Qwen 3.5 397B (210GB) 和較舊的 MiniMax。然後三個月前，我們得到了 MiniMax M2.7 (131GB)、Deepseek V4 Flash (160GB) 和小米 MiMo 2.5 (181GB)。不久之後我們得到了StepFun 3.7 Flash（129GB），現在我們剛剛得到了騰訊的Hy3（182GB）。我知道這裡的很多人都無法接受這個尺寸，但 7k 8k 對我來說似乎是合理可以接受的，能夠運行這種功率等級的模型。你一直在使用它們嗎？你最喜歡哪一個？ [附註：請不要閱讀這篇文章，然後在沒有先花 7 美元在 OpenRouter 上嘗試這些模型的情況下就跑去花 7k。 ] 由 /u/dtdisapointingresult 提交 [連結] [評論]",
+          "sourceTextZh": "兩根 DGX Spark 和一條 Connect-X7 電纜可為您提供約 250GB 的可用內存，售價為 7000-8000 美元。這允許在 4 位上使用一些有趣的模型。在似乎永恆的時間裡，該尺寸唯一的嚴肅型號是 GLM 4.5/4.6/4.7 (194GB)、Qwen 3.5 397B (210GB) 和較舊的 MiniMax。然後三個月前，我們得到了 MiniMax M2.7 (131GB)、Deepseek V4 Flash (160GB) 和小米 MiMo 2.5 (181GB)。不久之後我們得到了StepFun 3.7 Flash（129GB），現在我們剛剛得到了騰訊的Hy3（182GB）。我知道這裡的很多人都無法接受這個尺寸，但 7k 8k 對我來說似乎是合理可以接受的，能夠運行這種功率等級的模型。你一直在使用它們嗎？你最喜歡哪一個？ [附註：請不要閱讀這篇文章，然後在沒有先花 7 美元在 OpenRouter 上嘗試這些模型的情況下就跑去花 7k。 ] 由 /u/dtdisapointingresult 提交 [連結] [評論]",
+          "rank": 4
+        },
+        {
           "id": "reddit-1ux08xo",
           "source": "Reddit / r/LocalLLaMA",
           "sourceKey": "reddit",
@@ -210,36 +233,13 @@
           "comments": null,
           "createdAt": "2026-07-15T08:52:17+00:00",
           "rankSignal": "Reddit RSS top ranking",
-          "score": 112,
+          "score": 104,
           "sourceOriginalText": "Some fixes & boost(pp) for SYCL/Intel. Merged PRs: [SYCL] Flash Attention with XMX engine via oneDNN graph API (SDPA) on KV f16 for Xe2 ; Qwen3.6-27b-Q8_0 prefill speed up x1.21 at p=512 and x4.26 at p=80k #25222 sycl: Increase minimum buffer size for USM system allocations #25525 [SYCL] Support OP XIELU #25550 [SYCL] support conv2d_dw kernel type is fp16 #25653 [SYCL] fix UT big error of get_rows Q2_K, Q4_K, Q5_K #25656 submitted by /u/pmttyji [link] [comments]",
           "sourceContentType": "reddit-post",
           "titleZh": "SYCL/Intel 最近的 llama.cpp 更新",
           "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 AI Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "針對 SYCL/Intel 的一些修復和增強（pp）。合併的 PR：[SYCL] 透過 KV f16 for Xe2 上的 oneDNN graph API (SDPA) 使用 XMX 引擎進行 Flash Attention； Qwen3.6-27b-Q8_0 預填充速度在 p=512 時提高 x1.21，在 p=80k 時提高 x4.26 #252 分配的最小大小#25525 [SYCL] 支援 OP XIELU #25550 [SYCL] 支援 conv2d_dw 核心類型為 fp16 #25653 [SYCL] 修正 UT 大錯誤/u/pmttyji 提交的 get_rows Q2_K、Q4_K、Q5_K #25656 [評論]",
           "sourceTextZh": "針對 SYCL/Intel 的一些修復和增強（pp）。合併的 PR：[SYCL] 透過 KV f16 for Xe2 上的 oneDNN graph API (SDPA) 使用 XMX 引擎進行 Flash Attention； Qwen3.6-27b-Q8_0 預填充速度在 p=512 時提高 x1.21，在 p=80k 時提高 x4.26 #252 分配的最小大小#25525 [SYCL] 支援 OP XIELU #25550 [SYCL] 支援 conv2d_dw 核心類型為 fp16 #25653 [SYCL] 修正 UT 大錯誤/u/pmttyji 提交的 get_rows Q2_K、Q4_K、Q5_K #25656 [評論]",
-          "rank": 4
-        },
-        {
-          "id": "reddit-1uxb9zv",
-          "source": "Reddit / r/LocalLLaMA",
-          "sourceKey": "reddit",
-          "subreddit": "LocalLLaMA",
-          "period": "daily",
-          "originalTitle": "Agents-A1-4B (Qwen3.7-4B ???) : Scaling the Horizon, Not the Parameters",
-          "originalExcerpt": "MODEL + GGUF : Technical Report Benchmark Qwen3.5-4B Agents-A1-4B Qwen3.5 Qwen3.6 Nex-N2-mini Agents-A1 🧠 Dense Models (~4B) 🔀 MoE Models (35B-A3B) 🔍 Long-horizon Search BrowseComp 47.2 66.8 61.0 67.9 74.1 🥇 75.5 XBench-DS-2510 73.0 🥇 90.0 77.0 71.0 82.0 86.0 Seal0 31.5 45.8 41.4 38.7 49.6 🥇 56.4 GAIA 58.3 95.1 59.8 78.6 82.5 🥇 96.0 ⚙️ Engineering & Research Tasks SciCode 16.1 29.6 37.7 35.8 29.9 🥇 44.3 MLE-Lite 7.6 22.7 24.2 34.9 34.9 🥇 43.9 LiveCodeBench-V6 55.8 59.6 76.2 🥇 78.1 59.1 76.2 FrontierScience-Research 1.7 33.3 2.5 2.9 5.0 🥇 40.0 📋 Instruction Following IFBench 59.2 69.1 70.2 64.4 54.1 🥇 80.6 LongBench-v2 50.0 52.1 59.0 57.7 59.6 🥇 60.2 IFEval 89.8 🥇 94.8 91.9 91.3 88.4 🥇 94.8 🤖 General & Scientific Agentic Tasks τ²-Bench 79.9 78.2 🥇 81.2 79.0 74.5 79.8 VitaBench 22.0 🥇 40.3 31.9 35.6 23.0 38.8 MatTools 10.9 🥇 49.3 21.0 15.9 34.1 47.1 submitted by /u/KokaOP [link] [comments]",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxb9zv/agentsa14b_qwen374b_scaling_the_horizon_not_the/",
-          "discussionUrl": "https://www.reddit.com/r/LocalLLaMA/comments/1uxb9zv/agentsa14b_qwen374b_scaling_the_horizon_not_the/",
-          "points": null,
-          "comments": null,
-          "createdAt": "2026-07-15T16:42:32+00:00",
-          "rankSignal": "Reddit RSS top ranking",
-          "score": 108,
-          "sourceOriginalText": "MODEL + GGUF : Technical Report Benchmark Qwen3.5-4B Agents-A1-4B Qwen3.5 Qwen3.6 Nex-N2-mini Agents-A1 🧠 Dense Models (~4B) 🔀 MoE Models (35B-A3B) 🔍 Long-horizon Search BrowseComp 47.2 66.8 61.0 67.9 74.1 🥇 75.5 XBench-DS-2510 73.0 🥇 90.0 77.0 71.0 82.0 86.0 Seal0 31.5 45.8 41.4 38.7 49.6 🥇 56.4 GAIA 58.3 95.1 59.8 78.6 82.5 🥇 96.0 ⚙️ Engineering & Research Tasks SciCode 16.1 29.6 37.7 35.8 29.9 🥇 44.3 MLE-Lite 7.6 22.7 24.2 34.9 34.9 🥇 43.9 LiveCodeBench-V6 55.8 59.6 76.2 🥇 78.1 59.1 76.2 FrontierScience-Research 1.7 33.3 2.5 2.9 5.0 🥇 40.0 📋 Instruction Following IFBench 59.2 69.1 70.2 64.4 54.1 🥇 80.6 LongBench-v2 50.0 52.1 59.0 57.7 59.6 🥇 60.2 IFEval 89.8 🥇 94.8 91.9 91.3 88.4 🥇 94.8 🤖 General & Scientific Agentic Tasks τ²-Bench 79.9 78.2 🥇 81.2 79.0 74.5 79.8 VitaBench 22.0 🥇 40.3 31.9 35.6 23.0 38.8 MatTools 10.9 🥇 49.3 21.0 15.9 34.1 47.1 submitted by /u/KokaOP [link] [comments]",
-          "sourceContentType": "reddit-post",
-          "titleZh": "Agents-A1-4B (Qwen3.7-4B ???)：擴展視野，而非參數",
-          "summaryZh": "這篇來自 Reddit / r/LocalLLaMA 使用者討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "模型 + GGUF ：技術報告基準 Qwen3.5-4B Agents-A1-4B Qwen3.5 Qwen3.6 Nex-N2-mini Agents-A1 🧠 密集模型 (~4B) 🔀 MoE 模型 (35B-A3B) 🔍 長視野搜尋 Brow. 74.1 🥇 75.5 XBench-DS-2510 73.0 🥇 90.0 77.0 71.0 82.0 86.0 Seal0 31.5 45.8 41.4 38.7 49.6 31.5 45.8 41.4 38.7 49.6 7 . 78.6 82.5 🥇 96.0 ⚙️ 工程與研究任務 SciCode 16.1 29.6 37.7 35.8 29.9 🥇 44.3 MLE-Lite 7.6 22.7 24.2 3.44.3 MLE-Lite 7.6 22.7 24.2 3.496963996 月。 80.6 LongBench-v2 50.0 52.1 59.0 57.7 59.6 🥇 60.2 IFEval 89.8 🥇 94.8 91.9 91.3 88.4 🥇 94.8 3 898 代理任務🥇 81.2 79.0 74.5 79.8 達文",
-          "sourceTextZh": "模型 + GGUF ：技術報告基準 Qwen3.5-4B Agents-A1-4B Qwen3.5 Qwen3.6 Nex-N2-mini Agents-A1 🧠 密集模型 (~4B) 🔀 MoE 模型 (35B-A3B) 🔍 長視野搜尋 Brow. 74.1 🥇 75.5 XBench-DS-2510 73.0 🥇 90.0 77.0 71.0 82.0 86.0 Seal0 31.5 45.8 41.4 38.7 49.6 31.5 45.8 41.4 38.7 49.6 7 . 78.6 82.5 🥇 96.0 ⚙️ 工程與研究任務 SciCode 16.1 29.6 37.7 35.8 29.9 🥇 44.3 MLE-Lite 7.6 22.7 24.2 3.44.3 MLE-Lite 7.6 22.7 24.2 3.496963996 月。 80.6 LongBench-v2 50.0 52.1 59.0 57.7 59.6 🥇 60.2 IFEval 89.8 🥇 94.8 91.9 91.3 88.4 🥇 94.8 3 898 代理任務🥇 81.2 79.0 74.5 79.8 達文",
           "rank": 5
         }
       ],
@@ -296,15 +296,15 @@
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "reddit-1ux08xo",
+            "id": "reddit-1uxkl8u",
             "pass": true,
-            "relevance": 2,
+            "relevance": 3,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
-            "id": "reddit-1uxb9zv",
+            "id": "reddit-1ux08xo",
             "pass": true,
-            "relevance": 3,
+            "relevance": 2,
             "reason": "AI Agent / LLM / AI coding 相關"
           }
         ]
@@ -314,6 +314,27 @@
       "key": "weekly",
       "label": "每週前 5",
       "hn": [
+        {
+          "id": "hn-48926085",
+          "source": "Hacker News",
+          "sourceKey": "hn",
+          "period": "weekly",
+          "originalTitle": "Brainless: Shadcn components that look like Claude Code, Codex and Grok",
+          "objectID": "48926085",
+          "url": "https://brainless.swerdlow.dev",
+          "discussionUrl": "https://news.ycombinator.com/item?id=48926085",
+          "points": 109,
+          "comments": 22,
+          "createdAt": "2026-07-15T19:42:53Z",
+          "score": 246.6,
+          "sourceOriginalText": "brainless\n\nClaude Code, Codex, and Grok interfaces as shadcn components.\n\n◆ @benswerd · freestyle\n\n41 42 + added: 43 · Thinking … ( 0 s · ↑ 0 tokens · esc to interrupt) ◉ xhigh · /effort ❯ ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents >_ OpenAI Codex ( v0.132.0 ) model: gpt-6.9 low /model to change directory: ~/acme-site › add the brainless pricing section to the docs site • Read app/(marketing)/page.tsx • Edited components/pricing.tsx (+22 −0) • Running pnpm build ( 0 s • esc to interrupt) › gpt-6.9 low · ~/acme-site  main ~/acme-site 16K / 500K │ 2 / 3 ✓ steps complete Grok Build Beta 0.2.93 Grok 4.21 is here! Grok 4.21 is now available. Try it out in the /model picker. New worktree ctrl+w Resume session ctrl+s Changelog Quit ctrl+q Tip: Use Shift+Tab to cycle between modes, lik.",
+          "sourceContentType": "source-page",
+          "titleZh": "Brainless：Shadcn 組件看起來像 Claude Code、Codex 和 Grok",
+          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
+          "excerptZh": "",
+          "sourceTextZh": "無腦的 Claude Code、Codex 和 Grok 介面作為 shadcn 組件。 ◆ @benswerd (型號：gpt-6.9 low /model 更改目錄： ~/acme-site › 將無腦定價部分添加到文件站點 • 閱讀 app/(marketing)/page.tsx • 編輯組件/pricing.tsx (+22 −0) • 運行 pnpm build ( 0 s • / pt. ~/acme-site 16K / 500K │ 2 / 3 ✓ 步驟完成 Grok Build Beta 0.2.93 Grok 4.21 來了！ Grok 4.21 現已推出。在 /model 選擇器中嘗試。新工作樹 ctrl+w 復原工作階段 ctrl+s 變更日誌 退出 ctrl+q 提示：使用 Shift+Tab 在模式之間循環，例如。",
+          "rank": 1
+        },
         {
           "id": "hn-48847834",
           "source": "Hacker News",
@@ -332,8 +353,8 @@
           "titleZh": "Show HN：將 Web 應用程式逆向工程為代理工具",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "sourceTextZh": "嘿，HN！我們建立了一個基於瀏覽器的代理，該代理在經過身份驗證的 Web 應用程式內運行，監視應用程式如何呼叫自己的 API，並自動將它們轉換為代理工具。您可以將其視為自動產生的 MCP 伺服器，它會隨著主機應用程式的變更而自我更新。結果是一個熟練的人工智慧助手，實際上可以輕鬆地與任何產品（不僅僅是聊天和 RAG）深度整合。請參閱下面這些簡短的演示，其中展示了您可能熟悉的軟體中的代理： - Jira：https://demo.frigade.com/hn?skill=jira - Spotify：https://demo.frigade.com/hn?skill=spotify - 黑客新聞（笑）：https://demo.frigade.com/hn?skill=spotify - 黑客新聞（笑）：https://demo.frigade.com/hn?skill=spotify - 黑客新聞（笑）：https://demo.frigade.com/hn?skill=hackerhn​​mok -full -demot.com正如您在範例中所看到的，您可以比通常透過點擊進行的操作更多（更快）。我們甚至從未接觸過這些產品的源碼！為什麼要這樣做？在理想的世界中，每個應用程式都有一個 MCP 伺服器或一個易於理解的 API，可供 AI 代理程式從中取得資料。在實踐中，我們發現即使是非常現代的軟體也往往會出現一個由令人困惑的 API 和服務組成的蜘蛛網，而人工智慧代理根本無法開箱即用。\n\n安全性也成為一個大問題，因為應用程式對於如何保護端點（JWT/cookie/兩者的混合）有不同的（通常是自製的）標準。最後，讓一個實際的瀏覽器代理代表使用者進入並使用應用程式（即電腦使用），太脆弱、緩慢，並且會消耗大量令牌。我們採用了已經接受過使用和學習經過身份驗證的應用程式培訓的現有瀏覽器代理，並添加了一個額外的步驟，自動將應用程式的經過身份驗證的 API 轉換為「食譜」。食譜是a.評論1：太酷了！評論2：謝謝！評論3：真的很酷。看到一個顯然更加客製化的應用程式演示會很有趣，例如您的 Tesla 帳戶、網路銀行、電影院票務等。評論 4：謝謝！沿著這些思路，我們也做了 Airbnb：https://demo.frigade.com/",
-          "rank": 1
+          "sourceTextZh": "嘿，HN！我們建立了一個基於瀏覽器的代理，該代理在經過身份驗證的 Web 應用程式內運行，監視應用程式如何呼叫自己的 API，並自動將它們轉換為代理工具。您可以將其視為自動產生的 MCP 伺服器，它會隨著主機應用程式的變更而自我更新。結果是一個熟練的人工智慧助手，實際上可以輕鬆地與任何產品（不僅僅是聊天和 RAG）深度整合。請參閱下面這些簡短的演示，其中展示了您可能熟悉的軟體中的代理： - Jira：https://demo.frigade.com/hn?skill=jira - Spotify：https://demo.frigade.com/hn?skill=spotify - 黑客新聞（笑）：https://demo.frigade.com/hn?skill=spotify - 黑客新聞（笑）：https://demo.frigade.com/hn?skill=spotify - 黑客新聞（笑）：https://demo.frigade.com/hn?skill=hackerhn​​mok -full -demot.com正如您在範例中所看到的，您可以比通常透過點擊進行的操作更多（更快）。我們甚至從未接觸過這些產品的源碼！為什麼要這樣做？在理想的世界中，每個應用程式都有一個 MCP 伺服器或一個易於理解的 API，可供 AI 代理程式從中取得資料。在實踐中，我們發現，即使是非常現代的軟體也往往會出現一個由令人困惑的 API 和服務組成的蜘蛛網，而人工智慧代理根本無法開箱即用。\n\n安全性也成為一個大問題，因為應用程式對於如何保護端點（JWT/cookie/兩者的混合）有不同的（通常是自製的）標準。最後，讓一個實際的瀏覽器代理代表使用者進入並使用應用程式（即電腦使用），太脆弱、緩慢，並且會消耗大量令牌。我們採用了已經接受過使用和學習經過身份驗證的應用程式培訓的現有瀏覽器代理，並添加了一個額外的步驟，自動將應用程式的經過身份驗證的 API 轉換為「食譜」。食譜是a.評論1：太酷了！評論2：謝謝！評論3：真的很酷。看到一个显然更加定制的应用程序演示会很有趣，例如您的 Tesla 帐户、网上银行、电影院票务等。評論 4：謝謝！沿着这些思路，我们也做了 Airbnb：https://demo.frigade.com/",
+          "rank": 2
         },
         {
           "id": "hn-48908950",
@@ -353,28 +374,7 @@
           "titleZh": "啟動 HN：Agnost AI (YC S26) – 從代理對話中提取使用者回饋",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Agent 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "sourceTextZh": "Agnost AI：捕獲您的評估錯過的代理故障 由 Y Combinator 支援 捕獲您的評估錯過的代理故障。 Agnost AI 不斷分析生產對話，找出用戶陷入困境、沮喪或無法轉換的地方，並將影響最大的模式轉化為您的代理商經過審核的修復方案。生產訊號·查看您的評估是否通過。生產仍然失敗。 Agnost 在實際對話中發現遺漏的故障，並將其轉化為您的團隊可以審查的修復方案。 「 透過與 Agnost AI 合作，我們將全面的可觀察性功能整合到 MCP Toolbox for Databases 中。」 「Agnost AI 在追蹤分析和錯誤率方面非常有用。」 「一旦 Agnost AI 揭示了實際轉換的對話背後的模式，我們的語音 BDR 就在預訂會議方面取得了顯著的進步。」 「 Agnost AI。」 「 Agnost AI。向我展示了用戶正在要求我們甚至沒有的功能。適用於任何法學碩士、任何框架。 2 分鐘設定。本機 OpenTelemetry。查看您的評估錯過的失敗。\n\n當您連線時，Agnost AI 會讀取真實的生產對話並產生對您的產品重要的故障類別：工作流程中斷、重複重試、設定摩擦、流失風險等等。開始免費。準備好後進行擴展。您越早開始提取對話，您的客服人員就會越聰明，所以立即聯絡。意圖和情緒訊號提取 自動代理改進 故障檢測和解決 自然語言資料查詢 最多 1,000 個訊息/月 7 天資料保留 最適合需要快速改進的運輸代理團隊。 Starter 中的所有內容 最多 100,000 條訊息/月 90 天資料保留 創始人 Slack 通道 最適合成長型團隊在無需銷售電話的情況下擴展代理數量。自訂資料保留 自訂 SLA 和 SLO 自訂改進工作流程 優先功能請求 與創辦人的無限時間 最適合大規模運行代理程式的組織。常見問題 Agnost AI 可以捕捉您的評估錯過的代理故障。它讀取真實的生產聊天和語音對話，顯示用戶遇到困難或沮喪的地方，並打開經過審查的 PR 來修復您的代理。您審查並合併。\n\n什麼是 Agnost 人工智慧？ Agnost AI 與代理可觀測性工具有何不同？ Agnost AI 適用於哪些法學碩士和框架？設定需要多長時間？ Agnost AI 實際上改進了什麼？我的對話資料安全嗎？ Agnost AI 的價格是多少？",
-          "rank": 2
-        },
-        {
-          "id": "hn-48926085",
-          "source": "Hacker News",
-          "sourceKey": "hn",
-          "period": "weekly",
-          "originalTitle": "Brainless: Shadcn components that look like Claude Code, Codex and Grok",
-          "objectID": "48926085",
-          "url": "https://brainless.swerdlow.dev",
-          "discussionUrl": "https://news.ycombinator.com/item?id=48926085",
-          "points": 102,
-          "comments": 20,
-          "createdAt": "2026-07-15T19:42:53Z",
-          "score": 232.79999999999998,
-          "sourceOriginalText": "brainless\n\nClaude Code, Codex, and Grok interfaces as shadcn components.\n\n◆ @benswerd · freestyle\n\n41 42 + added: 43 · Thinking … ( 0 s · ↑ 0 tokens · esc to interrupt) ◉ xhigh · /effort ❯ ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents >_ OpenAI Codex ( v0.132.0 ) model: gpt-6.9 low /model to change directory: ~/acme-site › add the brainless pricing section to the docs site • Read app/(marketing)/page.tsx • Edited components/pricing.tsx (+22 −0) • Running pnpm build ( 0 s • esc to interrupt) › gpt-6.9 low · ~/acme-site  main ~/acme-site 16K / 500K │ 2 / 3 ✓ steps complete Grok Build Beta 0.2.93 Grok 4.21 is here! Grok 4.21 is now available. Try it out in the /model picker. New worktree ctrl+w Resume session ctrl+s Changelog Quit ctrl+q Tip: Use Shift+Tab to cycle between modes, lik.",
-          "sourceContentType": "source-page",
-          "titleZh": "Brainless：Shadcn 組件看起來像 Claude Code、Codex 和 Grok",
-          "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
-          "excerptZh": "",
-          "sourceTextZh": "無腦的 Claude Code、Codex 和 Grok 介面作為 shadcn 組件。 ◆ @benswerd (型號：gpt-6.9 low /model 更改目錄： ~/acme-site › 將無腦定價部分添加到文件站點 • 閱讀 app/(marketing)/page.tsx • 編輯 Components/pricing.tsx (+22 −0) • 運行 ›s build ( 0 s  main ~/acme-site 16K / 500K │ 2 / 3 ✓ 步驟完成 Grok Build Beta 0.2.93 Grok 4.21 來了！ Grok 4.21 現已推出。在 /model 選擇器中嘗試。新工作樹 ctrl+w 復原工作階段 ctrl+s 變更日誌 退出 ctrl+q 提示：使用 Shift+Tab 在模式之間循環，例如。",
+          "sourceTextZh": "Agnost AI：捕獲您的評估錯過的代理故障 由 Y Combinator 支援 捕獲您的評估錯過的代理故障。 Agnost AI 不斷分析生產對話，找出用戶陷入困境、沮喪或無法轉換的地方，並將影響最大的模式轉化為您的代理商經過審核的修復方案。生產訊號·查看您的評估是否通過。生產仍然失敗。 Agnost 在實際對話中發現遺漏的故障，並將其轉化為您的團隊可以審查的修復方案。 「 透過與 Agnost AI 合作，我們將全面的可觀察性功能整合到了 MCP Toolbox for Databases 中。」 「Agnost AI 在追蹤分析和錯誤率方面非常有用。」 「一旦 Agnost AI 揭示了實際轉換的對話背後的模式，我們的語音 BDR 就在預訂會議方面取得了顯著的進步。」 “ Agnost AI。” “ Agnost AI。” “ Agnost AI。” “ Agnost AI。” “ Agnost AI。” “ Agnost AI。” “ Agnost AI。” “ Agnost AI。” “ Agnost AI。”“ Agnost AI。”“向我展示了用戶正在要求我們甚至沒有的功能。適用於任何法學碩士、任何框架。 2 分鐘設定。本機 OpenTelemetry。查看您的評估錯過的失敗。\n\n當您連線時，Agnost AI 會讀取真實的生產對話並產生對您的產品重要的故障類別：工作流程中斷、重複重試、設定摩擦、流失風險等等。開始免費。準備好後進行擴展。您越早開始提取對話，您的客服人員就會越聰明，所以立即聯絡。意圖和情緒訊號提取 自動代理改進 故障檢測和解決 自然語言資料查詢 最多 1,000 個訊息/月 7 天資料保留 最適合需要快速改進的運輸代理團隊。 Starter 中的所有內容 最多 100,000 條訊息/月 90 天資料保留 創始人 Slack 通道 最適合成長型團隊在無需銷售電話的情況下擴展代理數量。自訂資料保留 自訂 SLA 和 SLO 自訂改進工作流程 優先功能請求 與創辦人的無限時間 最適合大規模運行代理程式的組織。常見問題 Agnost AI 可以捕捉您的評估錯過的代理故障。它讀取真實的生產聊天和語音對話，顯示用戶遇到困難或沮喪的地方，並打開經過審查的 PR 來修復您的代理。您審查並合併。\n\n什麼是 Agnost 人工智慧？ Agnost AI 與代理可觀測性工具有何不同？ Agnost AI 適用於哪些法學碩士和框架？設定需要多長時間？ Agnost AI 實際上改進了什麼？我的對話資料安全嗎？ Agnost AI 的價格是多少？",
           "rank": 3
         },
         {
@@ -395,7 +395,7 @@
           "titleZh": "社會影響：克勞德跨模型與語言的價值觀",
           "summaryZh": "這篇來自 Hacker News 工程師討論，重點和 Claude 有關。適合用來快速了解社群正在討論的實作方向、工具變化或使用心得。",
           "excerptZh": "",
-          "sourceTextZh": "克勞德的價值觀如何因模型和語言的不同而不同 \\ 人類克勞德在不同模型和語言中的價值觀 當有人問克勞德一個沒有普遍正確答案的問題時（例如，是否接受新工作或如何處理與朋友的衝突），克勞德的反應不可避免地反映了某些價值觀。 1 我們希望 Claude 體現的價值觀在 Claude 憲法中得到了高度概括，但沒有任何文件能夠預測 Claude.ai 每天發生的數百萬次對話中可能出現的每一個價值觀。相反，我們尋求在克勞德的回答中培養「良好的判斷力和可以根據具體情況應用的合理價值觀」。確切地說，我們如何研究克勞德所表達的價值觀以及它們在不同背景下如何變化？在先前的工作中，我們分析了 70 萬個匿名 Claude.ai 對話，識別了 Claude 回覆中的 3,000 多個不同的價值觀以及 Claude 表達這些價值觀的頻率。但如此大的值列表很難推理。在這項工作中，我們透過將這數千個值壓縮成少量的軸來捕捉克勞德響應中的關鍵模式，從而使研究變得容易處理。每個軸都是兩組價值觀之間的一條數軸（例如，一端與情感溫暖相關的價值觀，另一端與嚴謹相關的價值觀），克勞德落在該線上的位置說明了這一點。\n\n我們應用這種方法來衡量克勞德所表達的價值觀在兩個因素中的變化。首先，我們比較了 Claude 表現的值在不同模型中的差異。每個克勞德模型都反映了略有不同的角色訓練方法以及許多其他微調決策。因為我們的價值軸方法量化了模型之間的關鍵差異，所以它最終可能允許我們將克勞德表達的價值觀的變化與不同的訓練決策聯繫起來。其次，我們想要了解使用者與 Claude 交談時所使用的多種語言的體驗如何。我們先前的研究表明，克勞德在不同語言中的行為有所不同。 2 我們應用價值軸方法來了解 Claude 所表達的價值在 Claude.ai 上排名前 20 的語言中有何變化。四個關鍵軸反映了克勞德價值觀中 15% 的變化： 3 尊重與謹慎：克勞德是否傾向於滿足某人的需求或防範可能的風險和傷害。熱情與嚴謹：克勞德是否傾向於表達積極性和對人的關心，還是強調準確性和精確性。深度與簡潔：克勞德是否傾向於深入解釋或只做所要求的事情。坦率與執行力：克勞德是否傾向於強調自己的不確定性，或給出更優雅、更自信的答案。\n\n這些軸上的價值概況與模型性格的看法相符。 Sonnet 4.6被認為特別溫暖，而Opus 4.7則以嚴謹著稱。我們發現每個模型的價值概況都反映了這些主觀評估：Sonnet 4.6 傾向於表達對使用者的更多尊重和情感溫暖，而 Opus 4.7 傾向於表達對準確性和精確性以及防止誤用的關注。克勞德表達的價值觀因語言而異。當克勞德用英語說話時，它強調的價值觀與用葡萄牙語、印尼語或中文說話時不同。 4 最大的差異在於溫暖與嚴謹軸，克勞德傾向於用阿拉伯語和印地語表達與溫暖相關的價值觀，而最傾向於用英語和俄語表達與嚴謹相關的價值觀。透過這種方法，我們可以開始詢問為什麼價值觀會在模型和語言之間發生變化，並更好地測試行為訓練或文化背景等因素如何影響克勞德表達的價值觀。我們如何解讀巨大的價值空間？最終，我們的目標是找到一種方法來經驗理解克勞德所表達的價值觀以及這些價值觀在不同背景下的差異。在這項工作中，我們特別關注模型和語言之間的值如何變化。但我們先前的作品《野外價值》辨識了克勞德表達的 3,000 多個價值觀。\n\n對這數千個值進行一一比較是很麻煩的，而且會掩蓋更廣泛的趨勢。為了使比較值變得更容易，我們建立了值軸，將這數千個值減少到幾個基本維度，基於這些值往往會在現實世界的對話中一起出現。例如，克勞德的反應被描述為“熱情”，通常也被描述為“鼓勵”和“積極”。那些同樣的“溫暖”",
+          "sourceTextZh": "克勞德的價值觀如何因模型和語言的不同而不同 \\ 人類克勞德在不同模型和語言中的價值觀 當有人問克勞德一個沒有普遍正確答案的問題時（例如，是否接受新工作或如何處理與朋友的衝突），克勞德的反應不可避免地反映了某些價值觀。 1 我們希望 Claude 體現的價值觀在 Claude 憲法中得到了高度概括，但沒有任何文件能夠預測 Claude.ai 每天發生的數百萬次對話中可能出現的每一個價值觀。相反，我們尋求在克勞德的回答中培養「良好的判斷力和可以根據具體情況應用的合理價值觀」。確切地說，我們如何研究克勞德所表達的價值觀以及它們在不同背景下如何變化？在先前的工作中，我們分析了 70 萬個匿名 Claude.ai 對話，識別了 Claude 回覆中的 3,000 多個不同的價值觀以及 Claude 表達這些價值觀的頻率。但如此大的值列表很難推理。在這項工作中，我們透過將這數千個值壓縮成少量的軸來捕捉克勞德響應中的關鍵模式，從而使研究變得容易處理。每個軸都是兩組價值觀之間的一條數軸（例如，一端與情感溫暖相關的價值觀，另一端與嚴謹相關的價值觀），克勞德落在該線上的位置說明了這一點。\n\n我們應用這種方法來衡量克勞德所表達的價值觀在兩個因素中的變化。首先，我們比較了 Claude 表現的值在不同模型中的差異。每個克勞德模型都反映了略有不同的角色訓練方法以及許多其他微調決策。因為我們的價值軸方法量化了模型之間的關鍵差異，所以它最終可能允許我們將克勞德表達的價值觀的變化與不同的訓練決策聯繫起來。其次，我們想要了解使用者與 Claude 交談時所使用的多種語言的體驗如何。我們先前的研究表明，克勞德在不同語言中的行為有所不同。 2 我們應用價值軸方法來了解 Claude 所表達的價值在 Claude.ai 上排名前 20 的語言中有何變化。四個關鍵軸反映了克勞德價值觀中 15% 的變化： 3 尊重與謹慎：克勞德是否傾向於滿足某人的需求或防範可能的風險和傷害。熱情與嚴謹：克勞德是否傾向於表達積極性和對人的關心，還是強調準確性和精確性。深度與簡潔：克勞德是否傾向於深入解釋或只做所要求的事情。坦率與執行力：克勞德是否傾向於強調自己的不確定性，或給出更優雅、更自信的答案。\n\n這些軸上的價值概況與模型性格的看法相符。 Sonnet 4.6被認為特別溫暖，而Opus 4.7則以嚴謹著稱。我們發現每個模型的價值概況都反映了這些主觀評估：Sonnet 4.6 傾向於表達對使用者的更多尊重和情感溫暖，而 Opus 4.7 傾向於表達對準確性和精確性以及防止誤用的關注。克勞德表達的價值觀因語言而異。當克勞德說英語時，它強調的價值觀與說葡萄牙語、印尼語或漢語時不同。 4 最大的差異在於溫暖與嚴謹軸，克勞德傾向於用阿拉伯語和印地語表達與溫暖相關的價值觀，而最傾向於用英語和俄語表達與嚴謹相關的價值觀。透過這種方法，我們可以開始詢問為什麼價值觀會在模型和語言之間發生變化，並更好地測試行為訓練或文化背景等因素如何影響克勞德表達的價值觀。我們如何解讀巨大的價值空間？最終，我們的目標是找到一種方法來經驗理解克勞德所表達的價值觀以及這些價值觀在不同背景下的差異。在這項工作中，我們特別關注模型和語言之間的值如何變化。但我們先前的作品《野外價值》辨識了克勞德表達的 3,000 多個價值觀。\n\n對這數千個值進行一一比較是很麻煩的，而且會掩蓋更廣泛的趨勢。為了使比較值變得更容易，我們建立了值軸，將這數千個值減少到幾個基本維度，基於這些值往往會在現實世界的對話中一起出現。例如，克勞德的反應被描述為“熱情”，通常也被描述為“鼓勵”和“積極”。那些同樣的“溫暖”",
           "rank": 4
         },
         {
@@ -540,6 +540,12 @@
       "qualityReview": {
         "hn": [
           {
+            "id": "hn-48926085",
+            "pass": true,
+            "relevance": 2,
+            "reason": "AI Agent / LLM / AI coding 相關"
+          },
+          {
             "id": "hn-48847834",
             "pass": true,
             "relevance": 1,
@@ -549,12 +555,6 @@
             "id": "hn-48908950",
             "pass": true,
             "relevance": 1,
-            "reason": "AI Agent / LLM / AI coding 相關"
-          },
-          {
-            "id": "hn-48926085",
-            "pass": true,
-            "relevance": 2,
             "reason": "AI Agent / LLM / AI coding 相關"
           },
           {
