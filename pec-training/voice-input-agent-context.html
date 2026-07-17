@@ -58,6 +58,8 @@
     .model-step{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:14px;min-height:142px}
     .model-step:after{content:">";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--red);font-weight:900}
     .model-step:last-child:after{content:""}
+    .typeless-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+    .typeless-step{border:1px solid var(--line);border-radius:var(--radius);background:#f8fafb;padding:14px;min-height:160px}
     .step-no{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-weight:800;font-size:13px;margin-bottom:8px}
     .diagram{width:100%;min-height:250px;border-radius:var(--radius);border:1px solid var(--line);background:#fff;display:block}
     .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
@@ -68,11 +70,11 @@
     .prompt{background:#202629;color:#f6f8f8;border-radius:var(--radius);padding:14px 16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:14px;line-height:1.65;white-space:pre-wrap;word-break:break-word;margin:0}
     .source-list{margin:0;padding-left:18px}.source-list li{margin:8px 0}
     .footer{margin-top:30px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
-    @media(max-width:900px){.hero-grid,.grid{grid-template-columns:1fr}.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:1/-1}.model{grid-template-columns:1fr}.model-step:after{content:"v";right:16px;top:auto;bottom:-18px;transform:none}.model-step:last-child:after{content:""}}
+    @media(max-width:900px){.hero-grid,.grid{grid-template-columns:1fr}.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:1/-1}.model,.typeless-grid{grid-template-columns:1fr}.model-step:after{content:"v";right:16px;top:auto;bottom:-18px;transform:none}.model-step:last-child:after{content:""}}
     @media(max-width:520px){.wrap{width:min(100% - 24px,1120px)}.hero{padding-top:20px}.brand{align-items:flex-start;flex-direction:column;padding-bottom:22px}.doc-meta{text-align:left;white-space:normal}h1{font-size:31px;line-height:1.12}.decision{grid-template-columns:1fr}.card{padding:16px}table{min-width:700px}}
   </style>
   <script src="../site-config.js?v=20260710-top5"></script>
-  <script src="../tutorial-gate.js?v=20260710-top5"></script>
+  <script src="../tutorial-gate.js?v=20260717-site-nav"></script>
 </head>
 <body>
   <header class="hero">
@@ -103,6 +105,7 @@
   <nav class="nav" aria-label="章節導覽">
     <div class="wrap">
       <a href="#model">心智模型</a>
+      <a href="#typeless">Typeless 使用方法</a>
       <a href="#workflow">四種工作流</a>
       <a href="#adlink">ADLINK 場景</a>
       <a href="#security">安全紅線</a>
@@ -122,7 +125,7 @@
             <div class="model-step"><div class="step-no">1</div><h3>Capture</h3><p>用語音先把想法、會議、review 全部收下來，不急著修文字。</p></div>
             <div class="model-step"><div class="step-no">2</div><h3>Clarify</h3><p>請 AI 標出缺少的資訊、矛盾、範圍與成功標準。</p></div>
             <div class="model-step"><div class="step-no">3</div><h3>Convert</h3><p>把自然語言轉成 email、SOP、issue、prompt 或 agent 任務。</p></div>
-            <div class="model-step"><div class="step-no">4</div><h3>Execute</h3><p>交給 Codex、Wiki Agent、ADLink_PM 或 art agent 產出成果。</p></div>
+            <div class="model-step"><div class="step-no">4</div><h3>Execute</h3><p>交給合適的 AI 工具、專案管理或教材產出流程完成成果。</p></div>
           </div>
         </div>
         <div class="card span-5">
@@ -142,11 +145,49 @@
             <text x="452" y="91" fill="#e8fbfd" font-size="12" text-anchor="middle">Prompt</text>
             <rect x="74" y="168" width="372" height="82" rx="8" fill="#f2f5f5" stroke="#dfe4e5"/>
             <text x="260" y="200" fill="#202629" font-size="18" font-weight="800" text-anchor="middle">AI Agent 執行</text>
-            <text x="260" y="226" fill="#667174" font-size="13" text-anchor="middle">Codex / Wiki Agent / ADLink_PM / art agent</text>
+            <text x="260" y="226" fill="#667174" font-size="13" text-anchor="middle">寫作整理 / 知識庫 / 專案任務 / 教材產出</text>
             <path d="M452 112 V168 H260" stroke="#667174" stroke-width="3" fill="none"/>
             <rect x="148" y="274" width="224" height="30" rx="15" fill="#243033"/>
             <text x="260" y="294" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">人負責意義，AI 負責轉換與執行</text>
           </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="typeless">
+      <div class="section-title"><span class="bar"></span><h2>Typeless 怎麼放進這套流程</h2></div>
+      <div class="grid">
+        <div class="card span-7">
+          <div class="mini-label">Tool Setup</div>
+          <p>Typeless 的定位不是「錄音轉逐字稿」，而是把你自然講出的內容即時整理成可讀文字。它會處理贅詞、重複、改口、段落格式與語氣，適合拿來做 AI Agent 任務前的 context 捕捉。</p>
+          <div class="typeless-grid">
+            <div class="typeless-step"><div class="step-no">1</div><h3>安裝與權限</h3><p>桌機可用 macOS / Windows，手機可用 iOS / Android。第一次使用要開麥克風權限；桌機版也需要輔助使用權限，才能把文字輸入到目前游標位置。</p></div>
+            <div class="typeless-step"><div class="step-no">2</div><h3>游標放到目標欄位</h3><p>先打開 Notion、Google Docs、Gmail、Slack、Chrome 或任何文字輸入框，再用快捷鍵開始講話。</p></div>
+            <div class="typeless-step"><div class="step-no">3</div><h3>自然講，不要逐字雕</h3><p>先把背景、限制、想法與例外講完整。Typeless 會移除常見贅詞、重複句，並在你中途改口時保留最後意圖。</p></div>
+            <div class="typeless-step"><div class="step-no">4</div><h3>轉成任務前再整理</h3><p>把 Typeless 輸出的文字交給 AI 做二次整理：補缺口、轉成任務、列出驗收標準，再決定要不要進正式流程。</p></div>
+          </div>
+        </div>
+        <div class="card span-5">
+          <div class="mini-label">Best Use</div>
+          <h3>最適合用 Typeless 的三種情境</h3>
+          <ul>
+            <li><strong>快速 brain dump：</strong>把腦中還沒成形的想法先講出來，再請 AI 幫你整理成大綱。</li>
+            <li><strong>口頭 review：</strong>看著畫面講「哪裡怪、為什麼怪、想改成什麼」，再轉成修改清單。</li>
+            <li><strong>跨 App 輸入：</strong>在 email、文件、聊天、瀏覽器欄位都用同一套語音輸入習慣，不必切換工具。</li>
+          </ul>
+          <div class="tag-row"><span class="tag">去贅詞</span><span class="tag">自動格式</span><span class="tag">100+ 語言</span><span class="tag">個人字典</span><span class="tag">跨 App</span></div>
+        </div>
+        <div class="card span-6">
+          <div class="mini-label">Personal Dictionary</div>
+          <h3>先把專有名詞放進字典</h3>
+          <p>如果常講 ADLINK、產品名、客戶縮寫、工具名稱或內部慣用詞，先到 Typeless 的 Dictionary 新增字詞。官方 Quickstart 建議：打開 Typeless app，進入 Dictionary，點選 Add new，把容易辨識錯的詞加進去。</p>
+          <p class="muted">這一步會直接影響後面 AI 整理品質。語音輸入錯一個產品名，後面產出的任務、摘要、email 都可能跟著歪掉。</p>
+        </div>
+        <div class="card span-6">
+          <div class="mini-label">Privacy Check</div>
+          <h3>使用前先分級資料</h3>
+          <p>Typeless 官方說明包含 zero cloud data retention、dictation data 不用於模型訓練，以及歷史紀錄保留在裝置上。但在公司環境仍要用資料分級來管控：公開資料與個人學習可以先試，客戶機密、合約、報價、token、帳密與未公開產品資訊不要直接口述進任何外部工具。</p>
+          <p class="muted">實務上先用 dummy data 測流程，確認輸出品質與權限設定，再決定是否能放進工作流程。</p>
         </div>
       </div>
     </section>
@@ -160,7 +201,7 @@
           <div class="tag-row"><span class="tag">低摩擦</span><span class="tag">保留品味</span><span class="tag">避免過度壓縮</span></div>
         </article>
         <article class="card span-6">
-          <div class="head"><div class="icon cyan">2</div><div><h3>Prompt 補完：讓 AI 先反問</h3><p class="muted">適合把自然想法變成 coding agent 或 PM 任務。</p></div></div>
+          <div class="head"><div class="icon cyan">2</div><div><h3>Prompt 補完：讓 AI 先反問</h3><p class="muted">適合把自然想法變成 AI coding 工具或專案管理任務。</p></div></div>
           <p>口述後不要立刻送給 agent。先請 AI 檢查這段話缺什麼資訊，並用括號標出需要補充的地方，例如資料來源、成功標準、使用者、版型、限制條件。</p>
           <div class="tag-row"><span class="tag">補缺口</span><span class="tag">反問</span><span class="tag">降低返工</span></div>
         </article>
@@ -171,23 +212,23 @@
         </article>
         <article class="card span-6">
           <div class="head"><div class="icon green">4</div><div><h3>Mobile Capture：走路也能派任務</h3><p class="muted">適合通勤、散步、臨時靈感、會後補充。</p></div></div>
-          <p>靈感保鮮期很短。手機語音搭配遠端 agent，可以把零散念頭先抓下來，整理成待辦、issue、報告補充或下一次 Codex 任務。</p>
+          <p>靈感保鮮期很短。手機語音可以把零散念頭先抓下來，整理成待辦、issue、報告補充或下一次 AI 任務。</p>
           <div class="tag-row"><span class="tag">手機</span><span class="tag">遠端任務</span><span class="tag">靈感捕捉</span></div>
         </article>
       </div>
     </section>
 
     <section id="adlink">
-      <div class="section-title"><span class="bar"></span><h2>套到 ADLINK / Hermes：哪些地方最有用</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>套到 ADLINK 工作情境：哪些地方最有用</h2></div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>場景</th><th>語音輸入做什麼</th><th>交給哪個 agent</th><th>驗收重點</th></tr></thead>
+          <thead><tr><th>場景</th><th>語音輸入做什麼</th><th>後續整理方式</th><th>驗收重點</th></tr></thead>
           <tbody>
-            <tr><td>客戶會議後</td><td>把會議重點、疑問、承諾事項口述成 raw notes。</td><td>ADLink_PM</td><td>輸出 issue、owner、deadline、risk、next action。</td></tr>
-            <tr><td>教學 HTML 發想</td><td>先講主題、章節、讀者、希望看完能做什麼。</td><td>art agent</td><td>手機可讀、ADLINK 風格、圖解清楚，不像原始紀錄。</td></tr>
-            <tr><td>技術研究</td><td>把問題背景、已知資料、要比較的方向說清楚。</td><td>Wiki Agent</td><td>產生 evidence notes，保留來源與不確定性。</td></tr>
-            <tr><td>Codex 修改需求</td><td>看著畫面把不滿意的地方講出來。</td><td>Codex / coding agent</td><td>轉成明確 diff 目標、檔案範圍、測試方式。</td></tr>
-            <tr><td>每日維護報告</td><td>口述今天看到的異常、疑問、想追的東西。</td><td>小愛 / ops</td><td>整理成異常、原因、下一步，不塞滿 log。</td></tr>
+            <tr><td>客戶會議後</td><td>把會議重點、疑問、承諾事項口述成 raw notes。</td><td>轉成專案追蹤欄位</td><td>輸出 issue、owner、deadline、risk、next action。</td></tr>
+            <tr><td>教學 HTML 發想</td><td>先講主題、章節、讀者、希望看完能做什麼。</td><td>轉成教材大綱與版面需求</td><td>手機可讀、ADLINK 風格、圖解清楚，不像原始紀錄。</td></tr>
+            <tr><td>技術研究</td><td>把問題背景、已知資料、要比較的方向說清楚。</td><td>轉成研究筆記與來源清單</td><td>保留來源、不確定性、比較條件與下一步。</td></tr>
+            <tr><td>程式或畫面修改需求</td><td>看著畫面把不滿意的地方講出來。</td><td>轉成修改清單</td><td>整理成明確目標、影響範圍、檔案範圍、測試方式。</td></tr>
+            <tr><td>每日維護報告</td><td>口述今天看到的異常、疑問、想追的東西。</td><td>轉成狀態更新</td><td>整理成異常、原因、下一步，不塞滿 log。</td></tr>
           </tbody>
         </table>
       </div>
@@ -206,7 +247,7 @@
             <li>個人學習筆記、公開資料整理、非機密教學大綱。</li>
             <li>用 dummy data 測試「語音 -> prompt -> agent 任務」流程。</li>
             <li>把個人口述轉成 todo、草稿、公開技術研究問題。</li>
-            <li>在本機 agent 端做二次清理，再決定是否進 wiki raw/inbox。</li>
+            <li>先由人工或內部核准流程做二次清理，再決定是否進正式知識庫。</li>
           </ul>
         </div>
         <div class="card span-6">
@@ -246,7 +287,7 @@
         </div>
         <div class="card span-6">
           <h3>會議轉 action</h3>
-          <pre class="prompt">請把這段會議口述整理成 ADLink_PM 格式：
+          <pre class="prompt">請把這段會議口述整理成專案追蹤格式：
 - 結論
 - 待確認問題
 - 風險
@@ -263,7 +304,7 @@
 - 背景
 - 可做的第一步
 - 需要的資料
-- 適合交給哪個 agent
+- 適合的下一步工具或流程
 - 今天可以完成的最小版本</pre>
         </div>
       </div>
@@ -275,6 +316,9 @@
         <p class="muted">以下來源用來核對語音輸入、Typeless 功能與資安資訊，以及語音速度與工作中斷研究。工具導入前仍需依 ADLINK 內部資安規範審查。</p>
         <ul class="source-list">
           <li><a href="https://www.typeless.com/">Typeless 官方網站</a></li>
+          <li><a href="https://www.typeless.com/help/quickstart/key-features">Typeless Quickstart：Key Features</a></li>
+          <li><a href="https://www.typeless.com/help/faqs">Typeless FAQ</a></li>
+          <li><a href="https://www.typeless.com/downloads">Typeless Downloads</a></li>
           <li><a href="https://trust.typeless.com/">Typeless Trust Center</a></li>
           <li><a href="https://apps.apple.com/us/app/typeless-ai-voice-keyboard/id6749257650">Typeless App Store 頁面</a></li>
           <li><a href="https://hci.stanford.edu/research/speech/">Stanford HCI：Speech input study</a></li>
