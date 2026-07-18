@@ -1,6 +1,6 @@
 {
   "siteTitle": "PEC AI Agent 教育訓練資料庫",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-19",
   "duplicateHidden": [
     {
       "title": "Agent 自我蒸餾、Skill 化與定期自動化",
@@ -389,6 +389,24 @@
       "url": "./pec-training/claude-code-loop-engineering.html",
       "updatedAt": "2026-07-16T08:05:00+08:00",
       "searchText": "Claude Code Loop 設計 - PEC AI Agent 教育訓練 ADLINK AI Agent Training Claude Code Loop Design Training Library 回首頁 Loop Engineering Loop 不是讓 AI 自己跑 它是一個有邊界的系統：誰觸發、怎麼驗證、何時停止，都要先被設計清楚。 自動化之前，先系統化。 觸發 Prompt / 時間 / 事件 執行 讀上下文、改檔、調工具 驗證 測試、分數、審查、證據 停止 完成、到上限、需要人工 Trigger 流程什麼時候開始。 Verify 什麼證據算完成。 Stop 什麼條件必須停。 四種 Loop 模式 不要照順序解鎖。先看任務需要交給系統哪一件事，再選最小可行模式。 1 Turn-based 人給一輪任務，Claude 執行、檢查、回報，人再決定下一步。 觸發：使用者 prompt 驗證：技能、測試、人工 review 停止：完成或需要更多上下文 2 Goal-based 把「完成」寫成可驗證目標，系統沒達標就繼續嘗試。 觸發：/goal 或明確目標 驗證：測試通過、分數達標、指標證據 停止：達標或達到最大嘗試次數 3 Time-based 同一個檢查定期重跑，適合外部狀態會改變的任務。 觸發：時間間隔或排程 驗證：PR、CI、部署、資料更新狀態 停止：取消、完成、期限到期 4 Proactive 由事件或排程啟動，適合明確、重複、可審核的工作流。 觸發：issue、表單、排程、告警 驗證：workflow、skills、review agent 停止：每個任務完成，風險點交給人 該交給系統哪一段？ 交出檢查 探索型任務，仍由人決定下一輪。 交出停止條件 完成標準可量化，讓系統自己迭代。 交出觸發時機 需要定期或外部狀態變化後檢查。 交出整段流程 重複、明確、可審核，才適合主動化。 ADLINK 場景對照 教材頁面修版 先做一輪、截圖、人工確認。 Turn-based 測試或品質門檻 測試通過、搜尋命中、版面不重疊。 Goal-based 每日資料雷達 GitHub、新聞、YouTube 定期更新。 Time-based Bug 回報分流 自動分類與初查，合併或發送前人工審核。 Proactive 五個安全邊界 Loop 的價值不是跑更久，而是在明確規則內把人從重複調度中解放出來。 完成證據 測試結果、分數、截圖、log、審查清單。 停止規則 成功、失敗、上限、需要人工判斷。 成本上限 限制 turns、時間、模型等級與嘗試次數。 權限範圍 哪些工具可自動用，哪些一定要先問人。 人工關卡 發信、刪檔、部署、付款、客戶資料都保留人工確認。 開工前檢查 先回答三件事，再決定是否要讓 agent 進入 loop。 1. 觸發是否清楚？ 由人下 prompt？ 由時間排程？ 由 issue、CI、表單或告警觸發？ 2. 驗證是否可量化？ 測試是否通過？ 分數是否達標？ 輸出是否能被 reviewer 檢查？ 3. 停止是否明確？ 最多跑幾輪？ 失敗幾次要停？ 什麼情況必須交回人？ Sources / Review Notes Anthropic Claude Blog: Loop engineering: Getting started with loops , June 30, 2026. Learning reference video: Claude 官方把 Loop 講清了：4 種模式到底怎麼選 . Published in the PEC AI Agent training library for learning and internal workflow discussion."
+    },
+    {
+      "id": "brownfield-ai-code-sop",
+      "title": "先看懂，再動手：舊專案 AI 改 Code 安全流程",
+      "category": "Agent 系統架構與可靠性",
+      "level": "實作",
+      "summary": "把 AI 導入既有 codebase 前，先定位畫面、追 data flow、寫 guardrails，再用小步 review 與回歸驗證避免改 A 壞 B。",
+      "tags": [
+        "Brownfield",
+        "AI Coding",
+        "Guardrails",
+        "Code Review",
+        "Regression Test",
+        "Data Flow"
+      ],
+      "url": "./pec-training/brownfield-ai-code-sop.html",
+      "updatedAt": "2026-07-19T01:05:00+08:00",
+      "searchText": "先看懂，再動手 - PEC AI Agent 教育訓練 ADLINK AI Agent Training Brownfield AI 改 Code 安全流程 Training Library Engineering Workflow 先看懂， 再動手。 舊專案不是空地。讓 AI 進來改 code 前，先定位畫面、追清楚資料流、寫出不能踩的邊界，再用小步 review 與回歸驗證把風險壓住。 Brownfield 專案 AI Coding Guardrails Regression Check 五步驟安全改動 先探索，再施工 1 定位畫面 找出 UI 區塊對應的檔案、子元件與共用元件，不先改 code。 2 追資料流 確認 API、hook、store、mutate、logger 與其他使用者。 3 寫邊界 把既有規則、禁動區、元件復用與 coding style 寫進需求。 4 小步 review 先設計，再局部改動，每一步都檢查是否偏離原本架構。 5 回歸驗證 跑測試、看 log、檢查共用 hook 的其他頁面是否仍正常。 先判斷場地 AI 很擅長從零開始，但公司常見的是已經有人使用、已經有規則、已經有共用邏輯的系統。兩種場景不能用同一種交辦方式。 Greenfield：從零開始 適合快速建立雛形。規則少、相依少，AI 可以主導架構和檔案安排。風險在於初期太快，後面若沒有治理，很快就會變成難維護的 Brownfield。 Brownfield：接手既有系統 適合用探索式流程處理。重點不是讓 AI 立刻寫，而是先讓它看懂既有元件、資料來源、共用 hook、錯誤處理與測試方式。 兩種操作模式 依照你對 codebase、工具和 AI 的熟悉度選路徑。兩條路的共同規則是：探索階段只分析，不修改。 AI 輔助開發 你手動找檔案，AI 幫你讀得更快。 適合網頁版 AI、初次接觸 codebase、或還不放心讓 agent 自己改檔案的情境。你負責打開 DevTools、全域搜尋、貼相關檔案，AI 負責整理結構與風險。 指揮式 Agent Agent 讀整個專案，先回報地圖。 適合 Claude Code、Cursor、Codex 這類可讀 repo 的工具。先要求它定位、追 data flow、列共用相依，再把探勘結果輸出成架構導覽圖。 ADLINK 操作 SOP 這份流程可以直接套到既有內部工具、教材網站、dashboard、或任何已經有人使用的系統維護任務。 01 定位畫面：找出要改的那一塊在哪裡 先用畫面文字、class、測試標籤或 DOM 線索回到原始檔。要求 AI 列出父元件、子元件、共用元件、頁面專屬元件。這一步的輸出應該是一張「畫面到檔案」的地圖。 02 追資料流：知道資料從哪裡來、往哪裡去 檢查 package.json 、hooks、store、API client、mutate/dispatch/setState、logger。特別要求 AI 標出被共用的 hook 或型別，因為這些通常是改 A 壞 B 的來源。 03 寫 Guardrails：需求不是一句話，而是一組施工規則 需求要寫清楚既有 pattern、可重用元件、禁動檔案、權限/routing/共用 hook 的邊界、測試要求。Brownfield 裡的 clean code 不是炫技，而是跟既有專案一致。 04 小步 Review：先規劃，再一塊一塊改 先看元件結構和資料流規劃，再改 hook，再改 UI，再補互動。每一步 review 的重點是：有沒有偏離原本寫法、有沒有偷偷動共用檔、有沒有重做既有元件、有沒有漏 loading/error。 05 回歸驗證：證明沒有弄壞別人的功能 改前跑一次既有測試，改後每完成一小塊再跑一次。沒有測試時，先補最關鍵的路徑。對被共用的 hook 或資料型別，要列出所有使用處並逐一確認輸入、輸出、預設值沒有被破壞。 決策檢查表 每次把既有專案交給 AI 前，先用這四個問題決定能不能進入實作。 它知道在哪裡改嗎？ 沒有畫面到檔案地圖，就只能猜。 它知道誰共用嗎？ 共用 hook、元件、型別要先列出。 它知道不能動哪裡嗎？ 禁動區要寫進 prompt，不要靠默契。 它有辦法驗證嗎？ 測試、build、截圖、log 都是可讀證據。 可複製 Prompt 把下面幾段當成 Brownfield 任務的起手式。重點是先限制 AI 的動作，再要求它產出可檢查的證據。 1. 探索畫面，不改 code 請先找出「[畫面區塊/功能名稱]」是由哪些檔案渲染的。 請列出父元件、子元件、共用元件，以及可能影響其他頁面的元件。 這個階段只做分析，不要修改任何 code。 2. 梳理 data flow 請梳理這個功能的 data flow： 1. 資料從哪個 API 或資料源進來 2. 使用哪套狀態管理或 fetching pattern 3. 使用者操作後資料如何回到 server 4. 哪些 hook / 型別 / 元件被其他頁面共用 請用白話文加上 function 順序說明。 3. 帶規則的需求 請在既有功能上新增 [需求]。 動手前先讀相關 hook、共用元件、型別定義與測試。 要求： - 沿用專案既有 pattern - 重用現有元件，不要重做 - 不要改 routing、權限、全域設定 - 不要改動被其他頁面共用的 hook 行為 - 每一步完成後回報 diff 與驗證結果 4. Review 與回歸檢查 請用資深工程師角度 review 這次改動： 1. 有沒有偏離專案既有命名、資料夾結構或 fetching pattern 2. 有沒有偷偷改到共用檔案 3. 有沒有漏 loading / error / empty 狀態 4. 哪些既有測試應該重跑 5. 哪些使用同一個 hook 的頁面需要回歸檢查 風險控制 這些是舊專案最常出事的位置。教材、內部 dashboard、工具網站都適用。 共用 Hook 改資料格式、預設值或參數名稱前，必須列出所有使用者。若不能保證相容，就新增 adapter 或局部 wrapper。 重複造輪子 新增 UI 前先搜尋 Table、Modal、Select、Toast、Form pattern。舊專案的乾淨寫法通常是「跟大家一樣」。 錯誤紀錄 不要隨手寫 console。先查專案 logger 的格式、error code、metadata 欄位與送出位置，讓新功能說同一套語言。 來源與審稿依據 Gary Chen： AI 改 code 一直改 A 壞 B？你缺的是這五個步驟 ，2026/07/18。 Anthropic Claude Code Docs： Best practices for Claude Code ，用於探索、計畫、驗證與 context 管理概念。 Visual Studio Code Docs： AI agents best practices ，用於 agent 工作流、context 與測試參考。 OpenAI Docs： AGENTS.md ，用於專案規則與 agent instruction 概念。 Martin Fowler / Thoughtworks： Context Engineering for Coding Agents ，用於 context、rules、guardrails 的整理。 GitHub Docs： Using GitHub Copilot code review ，用於 AI 初審與人類終審的界線。"
     },
     {
       "id": "claude-codex-cross-review",
