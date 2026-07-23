@@ -15,6 +15,12 @@
     }).format(date);
   }
 
+  function formatWeight(value) {
+    const number = Number(value || 0);
+    const percent = number <= 1 ? number * 100 : number;
+    return `${Math.round(percent)}%`;
+  }
+
   function section(titleText, className = "") {
     const node = document.createElement("section");
     node.className = ["god-section", className].filter(Boolean).join(" ");
@@ -96,7 +102,7 @@
       const strong = document.createElement("strong");
       strong.textContent = `${value || 0} / 5`;
       const span = document.createElement("span");
-      span.textContent = `${label}${weight ? ` · 權重 ${weight}%` : ""}`;
+      span.textContent = `${label}${weight ? ` · 權重 ${formatWeight(weight)}` : ""}`;
       card.append(strong, span);
       grid.append(card);
     }

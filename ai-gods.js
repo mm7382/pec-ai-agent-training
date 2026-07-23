@@ -33,6 +33,12 @@
     }).format(date);
   }
 
+  function formatWeight(value) {
+    const number = Number(value || 0);
+    const percent = number <= 1 ? number * 100 : number;
+    return `${Math.round(percent)}%`;
+  }
+
   function renderStats() {
     const passed = state.items.filter((item) => item.score?.passed).length;
     const domains = new Set(state.items.map((item) => item.primaryDomain).filter(Boolean)).size;
@@ -57,10 +63,10 @@
     const weights = method.weights || {};
     elements.methodSummary.textContent = method.summary || "以技術專精、作品影響力、實戰可學性與社群聲量加權評估。";
     const rows = [
-      `技術專精 ${weights.technicalDepth ?? 35}%`,
-      `作品影響力 ${weights.workImpact ?? 35}%`,
-      `實戰可學性 ${weights.learnability ?? 25}%`,
-      `社群聲量 ${weights.communitySignal ?? 5}%`,
+      `技術專精 ${formatWeight(weights.technicalDepth ?? 35)}`,
+      `作品影響力 ${formatWeight(weights.workImpact ?? 35)}`,
+      `實戰可學性 ${formatWeight(weights.learnability ?? 25)}`,
+      `社群聲量 ${formatWeight(weights.communitySignal ?? 5)}`,
       ...(method.notes || []),
     ];
     elements.methodNotes.replaceChildren(...rows.map((text) => {

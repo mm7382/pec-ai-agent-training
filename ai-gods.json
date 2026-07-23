@@ -1,7 +1,7 @@
 {
   "title": "AI 大神",
   "description": "整理業界值得長期追蹤的工程師、教育者與開源作者。入選不是只看流量，而是看技術專精、作品影響力、實戰可學性與社群聲量。",
-  "generatedAt": "2026-07-23T09:10:00+08:00",
+  "generatedAt": "2026-07-23T10:45:00+08:00",
   "updatedAt": "2026-07-23",
   "method": {
     "title": "雙門檻混合評分制",
@@ -264,6 +264,862 @@
         {
           "label": "使用者提供截圖",
           "url": "local-attachment://FCA40BCD-8D55-4289-BF95-41F1158DC92D/1-照片-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "handle": "@simonw",
+      "role": "開源工程師 / LLM 工具作者 / 技術作家",
+      "headline": "把 LLM、資料工具、CLI workflow 與 AI coding 實戰經驗寫成可驗證、可重複的工程方法。",
+      "summary": "Simon Willison 是 Datasette 與 LLM CLI / Python library 的作者，也是長期追蹤 LLM、AI coding agent、工具使用與安全風險的技術作家。他的價值在於把每天實測的新 AI 工具轉成工程師能理解的筆記、範例與開源工具。",
+      "avatarText": "SW",
+      "primaryDomain": "LLM Tools / AI Coding",
+      "regions": [
+        "Global",
+        "English"
+      ],
+      "tags": [
+        "LLM CLI",
+        "AI Coding",
+        "Datasette",
+        "Tool Use",
+        "Prompt Engineering",
+        "Security",
+        "Open Source"
+      ],
+      "score": {
+        "technicalDepth": 5,
+        "workImpact": 5,
+        "learnability": 5,
+        "communitySignal": 4,
+        "weightedScore": 4.95,
+        "passed": true,
+        "reason": "LLM CLI、Datasette、長期技術寫作與大量可重現的 AI coding / tool use 筆記，符合技術、作品與可學性門檻。"
+      },
+      "profile": {
+        "intro": [
+          "Simon Willison 很適合放進 AI 大神，因為他的內容不是只有觀點，而是大量實測、工具、release notes、範例與風險分析。",
+          "他特別適合想學 AI 工具落地的人：如何用 CLI 操作多家模型、如何把 prompt 變成腳本、如何保留可追蹤紀錄，以及如何評估 coding agent 的安全邊界。"
+        ],
+        "background": [
+          "他是 Datasette 與 LLM CLI / Python library 的作者，長期經營 Simon Willison's Weblog。",
+          "GitHub `simonw/LLM` 專案說明為可從 command line 與 Python library 操作 OpenAI、Claude、Gemini、Llama 以及可本機執行模型。",
+          "他的網站持續整理 LLM、coding agents、模型發布、工具安全與實作心得，適合作為每日 AI 工程情報來源。"
+        ],
+        "whyFollow": [
+          "如果想知道 AI 工具到底能不能放進日常工程流程，Simon 的文章通常會給出實測與限制。",
+          "如果想學 LLM CLI、資料抽取、工具呼叫、schema、embedding、long context 等做法，他的 LLM 文件與文章很直接。",
+          "如果擔心 coding agent 安全、資料外洩或工具權限，他的風險分析很有參考價值。"
+        ]
+      },
+      "platforms": [
+        {
+          "name": "Simon Willison's Weblog",
+          "type": "Personal blog",
+          "url": "https://simonwillison.net/",
+          "description": "長期整理 LLM、AI coding、資料工具、安全風險與開源專案的技術部落格。"
+        },
+        {
+          "name": "LLM Documentation",
+          "type": "Docs",
+          "url": "https://llm.datasette.io/",
+          "description": "LLM CLI / Python library 的官方文件，包含模型、plugin、schema、embedding、tools 等功能。"
+        },
+        {
+          "name": "GitHub",
+          "type": "Open source",
+          "url": "https://github.com/simonw",
+          "description": "Datasette、LLM 與相關資料工具的公開專案入口。"
+        }
+      ],
+      "skillMap": [
+        {
+          "name": "LLM CLI 與工具鏈設計",
+          "level": "Expert",
+          "description": "把多家模型、plugins、schema、embedding、tools 整合成工程師可在終端機使用的工作流。"
+        },
+        {
+          "name": "AI Coding 實戰分析",
+          "level": "Expert",
+          "description": "長期實測 coding agents、模型與 CLI 工具，並記錄有效用法、限制與安全風險。"
+        },
+        {
+          "name": "資料工具與開源產品設計",
+          "level": "Expert",
+          "description": "Datasette 與相關工具展現他對資料發布、查詢、外掛生態與文件化產品的深度經驗。"
+        },
+        {
+          "name": "工程寫作與可重現筆記",
+          "level": "Expert",
+          "description": "文章通常保留命令、連結、版本與操作線索，方便工程師重做一次。"
+        }
+      ],
+      "works": [
+        {
+          "name": "LLM",
+          "type": "Open-source repo",
+          "url": "https://github.com/simonw/llm",
+          "description": "Command-line tool 與 Python library，可操作 OpenAI、Claude、Gemini、Llama 與本機模型；GitHub API 查詢時約 12K stars。"
+        },
+        {
+          "name": "Datasette",
+          "type": "Open-source product",
+          "url": "https://datasette.io/",
+          "description": "用於探索與發布資料的開源工具，代表 Simon 長期在資料工具與可用產品上的實作能力。"
+        },
+        {
+          "name": "LLM tools / schemas / plugins articles",
+          "type": "Article series",
+          "url": "https://simonwillison.net/tags/llm/",
+          "description": "整理 LLM CLI、tool use、schema、embedding、long context、local models 等主題。"
+        }
+      ],
+      "workflowAnalysis": [
+        {
+          "title": "先做小工具，再沉澱成 workflow",
+          "body": "Simon 的做法常是先實測一個新工具或模型，再把能重複使用的部分寫成 CLI、plugin、schema 或文章。這很適合工程師學習如何把 AI 實驗變成可維護工具。"
+        },
+        {
+          "title": "用紀錄降低 AI 工具的不確定性",
+          "body": "他的文章會保留版本、命令、限制與踩坑，這讓讀者可以追溯結果，而不是只看到一個模糊結論。"
+        },
+        {
+          "title": "安全與權限是 AI coding 的核心題目",
+          "body": "Simon 經常提醒 coding agent、CLI tool 與資料上傳的風險，適合建立『先確認邊界，再給工具權限』的習慣。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "LLM GitHub Repository",
+          "url": "https://github.com/simonw/llm",
+          "type": "Repo",
+          "topic": "LLM CLI / Python library",
+          "summary": "學習如何把多模型操作、plugins、schema 與本機模型整合進終端機。"
+        },
+        {
+          "title": "LLM Documentation",
+          "url": "https://llm.datasette.io/",
+          "type": "Docs",
+          "topic": "LLM workflow",
+          "summary": "適合從安裝、模型設定、embedding、tools 與 schema 開始學。"
+        },
+        {
+          "title": "Simon Willison's Weblog",
+          "url": "https://simonwillison.net/",
+          "type": "Blog",
+          "topic": "LLM / AI coding notes",
+          "summary": "可當作每日追 AI coding、LLM 工具、安全事件與開源專案的來源。"
+        }
+      ],
+      "learningPath": [
+        "先看 `simonw/llm` README，理解 LLM CLI 解決什麼問題。",
+        "接著照 LLM docs 安裝並跑一次基本 prompt、plugin、schema 或 embedding 範例。",
+        "再讀 Simon blog 中 coding agents 與 tool use 文章，整理哪些流程能放進自己的日常工作。",
+        "最後挑一個常用任務，例如資料摘要、文件抽取或 CLI automation，寫成可重複執行的命令。"
+      ],
+      "sources": [
+        {
+          "label": "Simon Willison's Weblog",
+          "url": "https://simonwillison.net/"
+        },
+        {
+          "label": "LLM GitHub",
+          "url": "https://github.com/simonw/llm"
+        },
+        {
+          "label": "LLM Documentation",
+          "url": "https://llm.datasette.io/"
+        }
+      ]
+    },
+    {
+      "id": "chip-huyen",
+      "name": "Chip Huyen",
+      "handle": "@chipro",
+      "role": "AI Engineering 作者 / ML Systems 教育者",
+      "headline": "把 AI 從 demo 帶到 production，專注系統設計、agent 架構、評估、安全與產品落地。",
+      "summary": "Chip Huyen 是《AI Engineering》與《Designing Machine Learning Systems》的作者。她的官方網站說明她致力於把 AI 帶到 production，曾在 NVIDIA、Snorkel AI、Netflix 做 ML tooling，也曾在 Stanford 教 ML Systems。",
+      "avatarText": "CH",
+      "primaryDomain": "AI Engineering / Production AI",
+      "regions": [
+        "Global",
+        "English"
+      ],
+      "tags": [
+        "AI Engineering",
+        "ML Systems",
+        "Production AI",
+        "Agents",
+        "Evaluation",
+        "System Design",
+        "Books"
+      ],
+      "score": {
+        "technicalDepth": 5,
+        "workImpact": 5,
+        "learnability": 5,
+        "communitySignal": 4,
+        "weightedScore": 4.95,
+        "passed": true,
+        "reason": "《AI Engineering》、ML Systems 教學、production AI 經驗與 agents 文章，使她非常適合成為 AI 工程學習主軸人物。"
+      },
+      "profile": {
+        "intro": [
+          "Chip Huyen 適合放進 AI 大神，因為她不是只講模型能力，而是講 AI 系統怎麼真的上線、維護、評估與避免失控。",
+          "她的內容很適合想從傳統軟體工程或 ML 工程轉進 AI engineering 的人。"
+        ],
+        "background": [
+          "官方網站自述她致力於把 AI 帶到 production，曾在 NVIDIA 擔任 NeMo core dev，並曾在 Snorkel AI、Netflix 工作。",
+          "她畢業於 Stanford，曾教授 ML Systems，相關課程後來成為《Designing Machine Learning Systems》的基礎。",
+          "她的《AI Engineering》聚焦用 foundation models 建置實際應用，並包含 agents、tool use、planning、failure modes 與 evaluation。"
+        ],
+        "whyFollow": [
+          "想理解 AI app 不是只有 prompt，還需要資料、評估、系統架構、可靠性與產品判斷。",
+          "想學 agent 的工具、planning、failure modes、security 與 eval，不只看框架範例。",
+          "想把 AI 學習整理成完整工程路線，她的文章和書很適合當骨架。"
+        ]
+      },
+      "platforms": [
+        {
+          "name": "Chip Huyen 官方網站",
+          "type": "Personal site",
+          "url": "https://huyenchip.com/",
+          "description": "個人介紹、書籍、文章與 AI system design 內容。"
+        },
+        {
+          "name": "Agents",
+          "type": "Article",
+          "url": "https://huyenchip.com/2025/01/07/agents.html",
+          "description": "從 AI Engineering 書中整理出的 agent overview、tools、planning、failure modes 與 evaluation。"
+        },
+        {
+          "name": "Books",
+          "type": "Books",
+          "url": "https://huyenchip.com/books/",
+          "description": "包含 AI Engineering 與 Designing Machine Learning Systems。"
+        }
+      ],
+      "skillMap": [
+        {
+          "name": "AI Engineering 系統設計",
+          "level": "Expert",
+          "description": "從 foundation models 建立 production applications，重點包含資料、工具、評估、可靠性與產品化。"
+        },
+        {
+          "name": "ML Systems",
+          "level": "Expert",
+          "description": "能把模型、資料、部署、監控與組織流程放在同一個系統框架討論。"
+        },
+        {
+          "name": "Agent 架構與風險",
+          "level": "Expert",
+          "description": "討論 tools、planning、failure modes、security 與 evaluation，而不是只停在 framework。"
+        },
+        {
+          "name": "技術教育與寫作",
+          "level": "Expert",
+          "description": "把複雜 AI 系統議題整理成書、課程與長文，適合做學習路線。"
+        }
+      ],
+      "works": [
+        {
+          "name": "AI Engineering",
+          "type": "Book",
+          "url": "https://huyenchip.com/books/",
+          "description": "聚焦使用 foundation models 建置 AI applications，適合把 AI app 從 demo 帶到 production。"
+        },
+        {
+          "name": "Designing Machine Learning Systems",
+          "type": "Book",
+          "url": "https://huyenchip.com/books/",
+          "description": "ML systems 經典工程書，建立資料、模型、部署、監控與系統思維。"
+        },
+        {
+          "name": "Agents",
+          "type": "Article",
+          "url": "https://huyenchip.com/2025/01/07/agents.html",
+          "description": "整理 agent overview、tools、planning、failure modes 與 evaluation。"
+        }
+      ],
+      "workflowAnalysis": [
+        {
+          "title": "把 AI app 當成工程系統，不是模型 demo",
+          "body": "Chip 的核心觀點是 production AI 需要完整系統：資料、模型、工具、評估、監控、安全與產品 feedback 都要一起設計。"
+        },
+        {
+          "title": "Agent 能力來自工具與 planning，也帶來新失敗模式",
+          "body": "她的 agents 文章把工具、planning、failure modes 與 evaluation 放在同一個框架，適合建立 agent 系統設計的基本盤。"
+        },
+        {
+          "title": "先理解風險，再談自動化",
+          "body": "她提醒不可靠 AI 不應被賦予高風險操作權限，這對企業內部導入 agent 很重要。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Agents",
+          "url": "https://huyenchip.com/2025/01/07/agents.html",
+          "type": "Article",
+          "topic": "Agent architecture",
+          "summary": "從 AI Engineering 書中整理 agents、tools、planning、failure modes 與 evaluation。"
+        },
+        {
+          "title": "Chip Huyen 官方網站",
+          "url": "https://huyenchip.com/",
+          "type": "Personal site",
+          "topic": "AI system design",
+          "summary": "理解她的 production AI、ML Systems 與書籍主軸。"
+        },
+        {
+          "title": "Books",
+          "url": "https://huyenchip.com/books/",
+          "type": "Books",
+          "topic": "AI Engineering / ML Systems",
+          "summary": "適合建立長期學習路線。"
+        }
+      ],
+      "learningPath": [
+        "先看 Chip 官方網站首頁，理解她的主軸是把 AI 帶到 production。",
+        "再讀 Agents 文章，整理 agent 的工具、planning、failure modes 與 evaluation。",
+        "接著讀 AI Engineering 或相關摘要，建立 AI app 系統設計地圖。",
+        "最後拿自己的 AI Agent 專案檢查：資料來源、工具權限、評估方法、失敗模式是否都有設計。"
+      ],
+      "sources": [
+        {
+          "label": "Chip Huyen 官方網站",
+          "url": "https://huyenchip.com/"
+        },
+        {
+          "label": "Agents",
+          "url": "https://huyenchip.com/2025/01/07/agents.html"
+        },
+        {
+          "label": "Books",
+          "url": "https://huyenchip.com/books/"
+        }
+      ]
+    },
+    {
+      "id": "hamel-husain",
+      "name": "Hamel Husain",
+      "handle": "@HamelHusain",
+      "role": "AI Evals 專家 / ML Engineer / Applied AI 顧問",
+      "headline": "把 AI 產品品質拉回資料、錯誤分析、evals 與實際使用者行為。",
+      "summary": "Hamel Husain 是專注 applied AI engineering、machine learning 與 data science 的工程師與作者。他的網站自述有 20+ 年 ML 經驗，曾在 Airbnb、GitHub 工作，現在聚焦幫團隊 debug、analyze、measure AI systems，也共同教授 AI Evals for Engineers and PMs。",
+      "avatarText": "HH",
+      "primaryDomain": "AI Evals / AI Product Quality",
+      "regions": [
+        "Global",
+        "English"
+      ],
+      "tags": [
+        "AI Evals",
+        "LLM-as-Judge",
+        "Error Analysis",
+        "AI Product",
+        "Applied ML",
+        "Debugging",
+        "Data Science"
+      ],
+      "score": {
+        "technicalDepth": 5,
+        "workImpact": 4,
+        "learnability": 5,
+        "communitySignal": 4,
+        "weightedScore": 4.6,
+        "passed": true,
+        "reason": "AI evals、error analysis、LLM-as-judge 與 AI product improvement 的公開內容很完整，適合網站補足品質與評估主題。"
+      },
+      "profile": {
+        "intro": [
+          "Hamel Husain 適合收錄，因為很多 AI Agent 失敗不是模型不夠強，而是沒有 eval、沒有錯誤分析、沒有產品 feedback loop。",
+          "他的內容能補上『怎麼知道 AI 系統真的變好』這一塊，是網站從工具介紹走向專業 AI 工程的重要拼圖。"
+        ],
+        "background": [
+          "他的網站自述有 20+ 年 ML 經驗，曾在 Airbnb 與 GitHub 工作，也參與過 OpenAI 用於 code understanding 的早期 LLM research。",
+          "目前主軸是把 data science 帶回 AI，幫團隊 debug、analyze、measure AI systems，並稱這件事為 evals。",
+          "他共同教授 AI Evals for Engineers and PMs，網站列出超過 4,500 students、500+ companies 的規模。"
+        ],
+        "whyFollow": [
+          "想把 AI Agent 做穩，必須學會 evals、error analysis 與 failure mode taxonomy。",
+          "想知道 LLM-as-judge 何時能用、何時不能用，可以從他的 FAQ 和 guide 開始。",
+          "想改善 AI 產品品質，他的文章比單純工具清單更有方法論。"
+        ]
+      },
+      "platforms": [
+        {
+          "name": "Hamel's Blog",
+          "type": "Personal blog",
+          "url": "https://hamel.dev/",
+          "description": "Applied AI engineering、machine learning、data science 與 AI evals 長文。"
+        },
+        {
+          "name": "LLM Evals FAQ",
+          "type": "Guide",
+          "url": "https://hamel.dev/blog/posts/evals-faq/",
+          "description": "整理 LLM evals 基礎、方法、error analysis、LLM-as-judge 與 production evals 問題。"
+        },
+        {
+          "name": "AI Evals for Engineers and PMs",
+          "type": "Course",
+          "url": "https://maven.com/parlance-labs/evals",
+          "description": "與 Shreya Shankar 共同教授的 AI evals 課程。"
+        }
+      ],
+      "skillMap": [
+        {
+          "name": "AI Evals 設計",
+          "level": "Expert",
+          "description": "建立 task-specific evals、binary grading、human review、LLM-as-judge 與 production feedback loop。"
+        },
+        {
+          "name": "Error Analysis",
+          "level": "Expert",
+          "description": "用資料分析找出 AI 系統失敗模式，而不是只靠主觀感覺調 prompt。"
+        },
+        {
+          "name": "AI Product Debugging",
+          "level": "Expert",
+          "description": "把產品問題拆成資料、模型、prompt、retrieval、UX 與評估流程問題。"
+        },
+        {
+          "name": "Applied ML / Data Science",
+          "level": "Expert",
+          "description": "長期 ML 與 data science 經驗，能把 AI 系統品質問題落到可測量方法。"
+        }
+      ],
+      "works": [
+        {
+          "name": "LLM Evals: Everything You Need to Know",
+          "type": "Guide",
+          "url": "https://hamel.dev/blog/posts/evals-faq/",
+          "description": "AI evals FAQ，涵蓋從 minimum viable evaluation 到 error analysis、LLM-as-judge、production sampling 等問題。"
+        },
+        {
+          "name": "A Field Guide to Rapidly Improving AI Products",
+          "type": "Article",
+          "url": "https://hamel.dev/blog/posts/field-guide/",
+          "description": "以產品改善角度談 AI systems 的 debug、分析與迭代。"
+        },
+        {
+          "name": "AI Evals for Engineers and PMs",
+          "type": "Course",
+          "url": "https://maven.com/parlance-labs/evals",
+          "description": "針對工程師與 PM 的 evals 課程，適合團隊建立共同語言。"
+        }
+      ],
+      "workflowAnalysis": [
+        {
+          "title": "先看失敗樣本，再設計 eval",
+          "body": "Hamel 的做法強調 error analysis：先理解 AI 系統在哪裡錯、為什麼錯，再決定要不要自動化評估。"
+        },
+        {
+          "title": "不要把通用分數當產品品質",
+          "body": "他的 evals 觀點會提醒團隊：真正重要的是你產品任務的成功標準，而不是通用 benchmark 或漂亮 demo。"
+        },
+        {
+          "title": "AI 產品改善需要資料科學回到流程中",
+          "body": "他主張把 debug、analyze、measure 放回 AI 工作流程，這能幫 Agent 專案從『能跑』進步到『可靠』。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "LLM Evals: Everything You Need to Know",
+          "url": "https://hamel.dev/blog/posts/evals-faq/",
+          "type": "Guide",
+          "topic": "AI evals",
+          "summary": "適合建立 AI Agent 品質評估的完整 FAQ。"
+        },
+        {
+          "title": "Your AI Product Needs Evals",
+          "url": "https://hamel.dev/blog/posts/evals/",
+          "type": "Article",
+          "topic": "AI product quality",
+          "summary": "理解為什麼 AI 產品不能只靠 demo 與主觀感覺。"
+        },
+        {
+          "title": "Using LLM-as-a-Judge For Evaluation",
+          "url": "https://hamel.dev/blog/posts/llm-judge/",
+          "type": "Article",
+          "topic": "LLM-as-judge",
+          "summary": "學習 LLM 評審的適用場景、限制與設計方式。"
+        }
+      ],
+      "learningPath": [
+        "先讀 Hamel 首頁，理解他把 evals 定義為 debug、analyze、measure AI systems。",
+        "再讀 LLM Evals FAQ，抓住 minimum viable eval、error analysis、human review 與 LLM-as-judge。",
+        "接著挑自己的 Agent 任務，列出 10 個成功案例與 10 個失敗案例。",
+        "最後把失敗模式整理成可測的 eval checklist，再決定哪些項目值得自動化。"
+      ],
+      "sources": [
+        {
+          "label": "Hamel's Blog",
+          "url": "https://hamel.dev/"
+        },
+        {
+          "label": "LLM Evals FAQ",
+          "url": "https://hamel.dev/blog/posts/evals-faq/"
+        },
+        {
+          "label": "AI Evals for Engineers and PMs",
+          "url": "https://maven.com/parlance-labs/evals"
+        }
+      ]
+    },
+    {
+      "id": "andrej-karpathy",
+      "name": "Andrej Karpathy",
+      "handle": "@karpathy",
+      "role": "AI Researcher / LLM 教育者 / 開源作者",
+      "headline": "用最小、清楚、可讀的程式碼，帶工程師從底層理解 neural nets、GPT 與 LLM 訓練。",
+      "summary": "Andrej Karpathy 是深度學習與 LLM 教育領域最具影響力的人物之一。他的 GitHub 包含 nanoGPT、nanochat、llm.c、llama2.c 等高影響力專案，適合想從程式碼理解模型訓練、推論與完整 ChatGPT-like pipeline 的學習者。",
+      "avatarText": "AK",
+      "primaryDomain": "LLM Fundamentals / Model Training",
+      "regions": [
+        "Global",
+        "English"
+      ],
+      "tags": [
+        "LLM",
+        "Deep Learning",
+        "nanoGPT",
+        "llm.c",
+        "nanochat",
+        "Model Training",
+        "Education"
+      ],
+      "score": {
+        "technicalDepth": 5,
+        "workImpact": 5,
+        "learnability": 5,
+        "communitySignal": 5,
+        "weightedScore": 5,
+        "passed": true,
+        "reason": "nanoGPT、llm.c、nanochat 與教學內容對 LLM 學習影響極大，技術、作品、可學性與社群聲量都達最高門檻。"
+      },
+      "profile": {
+        "intro": [
+          "Andrej Karpathy 適合收錄，因為他的作品把 LLM 的底層原理變得可讀、可跑、可改。",
+          "他不是只提供框架，而是用簡潔程式碼讓工程師理解 tokenizer、pretraining、finetuning、evaluation、inference 等完整路徑。"
+        ],
+        "background": [
+          "GitHub profile 代表專案包含 nanoGPT、nanochat、llm.c、llama2.c。",
+          "nanoGPT 被描述為最簡單、最快速的 medium-sized GPT training / finetuning repo；llm.c 則是用 C/CUDA 訓練 LLM。",
+          "GitHub API 查詢時 nanoGPT 約 61K stars、nanochat 約 56K stars、llm.c 約 30K stars。"
+        ],
+        "whyFollow": [
+          "如果只會用 AI 工具，但不理解模型怎麼來，Karpathy 的內容能補上底層直覺。",
+          "如果想教同事 LLM 原理，用 nanoGPT / nanochat 當教材非常直觀。",
+          "如果想知道一個 ChatGPT-like system 從資料到 inference 的骨架，nanochat 是很好的入口。"
+        ]
+      },
+      "platforms": [
+        {
+          "name": "GitHub",
+          "type": "Open source",
+          "url": "https://github.com/karpathy",
+          "description": "nanoGPT、nanochat、llm.c、llama2.c 等代表專案。"
+        },
+        {
+          "name": "YouTube",
+          "type": "Video",
+          "url": "https://www.youtube.com/@AndrejKarpathy",
+          "description": "深度學習、neural networks、GPT 與 LLM 相關教學。"
+        },
+        {
+          "name": "X / Twitter",
+          "type": "Social",
+          "url": "https://x.com/karpathy",
+          "description": "AI、LLM、研究與開源專案更新。"
+        }
+      ],
+      "skillMap": [
+        {
+          "name": "LLM 訓練與架構",
+          "level": "Expert",
+          "description": "從 GPT-style architecture、tokenization、pretraining、finetuning 到 evaluation 的底層理解。"
+        },
+        {
+          "name": "教學型開源程式碼",
+          "level": "Expert",
+          "description": "用小而清楚的 repo 讓複雜模型訓練流程變成可閱讀教材。"
+        },
+        {
+          "name": "C/CUDA LLM 實作",
+          "level": "Expert",
+          "description": "llm.c 展現以 C/CUDA 實作 LLM training 的能力，幫助理解 performance 與底層計算。"
+        },
+        {
+          "name": "AI 教育與直覺建立",
+          "level": "Expert",
+          "description": "能把 neural networks 與 LLM 核心概念講成工程師能實作的模型。"
+        }
+      ],
+      "works": [
+        {
+          "name": "nanoGPT",
+          "type": "Open-source repo",
+          "url": "https://github.com/karpathy/nanoGPT",
+          "description": "最簡潔的 GPT training / finetuning repo 之一；GitHub API 查詢時約 61K stars。"
+        },
+        {
+          "name": "nanochat",
+          "type": "Open-source repo",
+          "url": "https://github.com/karpathy/nanochat",
+          "description": "最小可 hack 的 ChatGPT-like training harness；GitHub API 查詢時約 56K stars。"
+        },
+        {
+          "name": "llm.c",
+          "type": "Open-source repo",
+          "url": "https://github.com/karpathy/llm.c",
+          "description": "用 C/CUDA 實作 LLM training；GitHub API 查詢時約 30K stars。"
+        },
+        {
+          "name": "llama2.c",
+          "type": "Open-source repo",
+          "url": "https://github.com/karpathy/llama2.c",
+          "description": "用一個 C 檔案做 Llama 2 inference，適合理解最小推論流程。"
+        }
+      ],
+      "workflowAnalysis": [
+        {
+          "title": "把大系統拆成小而可讀的核心",
+          "body": "Karpathy 的 repo 通常不是最完整產品，而是把核心機制留下來，讓學習者看懂 GPT / LLM 的必要結構。"
+        },
+        {
+          "title": "先理解原理，再使用框架",
+          "body": "他的內容適合補足使用 LangChain、LlamaIndex 或各種 agent framework 之前的底層知識。"
+        },
+        {
+          "title": "用可跑程式建立 intuition",
+          "body": "nanoGPT、nanochat、llm.c 的共同特點是可以跑、可以改、可以讀，學習效果比只看文字強。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "nanoGPT",
+          "url": "https://github.com/karpathy/nanoGPT",
+          "type": "Repo",
+          "topic": "GPT training",
+          "summary": "從簡潔程式碼理解 GPT training / finetuning。"
+        },
+        {
+          "title": "nanochat",
+          "url": "https://github.com/karpathy/nanochat",
+          "type": "Repo",
+          "topic": "ChatGPT-like harness",
+          "summary": "理解從 tokenization 到 inference 的完整小型 LLM pipeline。"
+        },
+        {
+          "title": "llm.c",
+          "url": "https://github.com/karpathy/llm.c",
+          "type": "Repo",
+          "topic": "C/CUDA LLM training",
+          "summary": "從底層 performance 與實作角度理解 LLM training。"
+        },
+        {
+          "title": "Andrej Karpathy YouTube",
+          "url": "https://www.youtube.com/@AndrejKarpathy",
+          "type": "Video",
+          "topic": "AI education",
+          "summary": "適合搭配 repo 學習 neural networks 與 LLM。"
+        }
+      ],
+      "learningPath": [
+        "先看 Karpathy GitHub profile，理解 nanoGPT、nanochat、llm.c、llama2.c 各自解決什麼問題。",
+        "從 nanoGPT 開始，先讀 README 與 train.py，理解 GPT training 的核心流程。",
+        "接著看 nanochat，理解一個 ChatGPT-like system 需要哪些階段。",
+        "最後看 llm.c 或 llama2.c，補底層 C/CUDA 與 inference 直覺。"
+      ],
+      "sources": [
+        {
+          "label": "Andrej Karpathy GitHub",
+          "url": "https://github.com/karpathy"
+        },
+        {
+          "label": "nanoGPT",
+          "url": "https://github.com/karpathy/nanoGPT"
+        },
+        {
+          "label": "nanochat",
+          "url": "https://github.com/karpathy/nanochat"
+        },
+        {
+          "label": "llm.c",
+          "url": "https://github.com/karpathy/llm.c"
+        }
+      ]
+    },
+    {
+      "id": "georgi-gerganov",
+      "name": "Georgi Gerganov",
+      "handle": "@ggerganov",
+      "role": "Local LLM / C++ 推論工具作者",
+      "headline": "用 llama.cpp、whisper.cpp、ggml 把本機與邊緣端 AI 推論變成全球工程師可使用的開源基礎設施。",
+      "summary": "Georgi Gerganov 是 llama.cpp、whisper.cpp 與 ggml 生態的重要作者。對 Michael 的教學網站來說，他非常適合放在 Local LLM / Local Agent 主題，因為很多本地端 AI 工具都直接或間接受到 llama.cpp、GGUF、量化與跨硬體推論生態影響。",
+      "avatarText": "GG",
+      "primaryDomain": "Local LLM / Inference",
+      "regions": [
+        "Global",
+        "English"
+      ],
+      "tags": [
+        "llama.cpp",
+        "Local LLM",
+        "C++",
+        "GGML",
+        "Whisper",
+        "Inference",
+        "Edge AI"
+      ],
+      "score": {
+        "technicalDepth": 5,
+        "workImpact": 5,
+        "learnability": 4,
+        "communitySignal": 4,
+        "weightedScore": 4.7,
+        "passed": true,
+        "reason": "llama.cpp、whisper.cpp 與 ggml 對 Local LLM 生態影響極高，技術與作品門檻非常強；學習門檻偏高但值得收錄。"
+      },
+      "profile": {
+        "intro": [
+          "Georgi Gerganov 適合收錄，因為他代表 Local LLM 生態的核心基礎設施。",
+          "如果你的網站要教本地端 Agent、Local LLM、離線推論、邊緣 AI，llama.cpp 幾乎是一定會遇到的名字。"
+        ],
+        "background": [
+          "GitHub profile 顯示代表專案包含 ggml-org/llama.cpp、whisper.cpp、ggml。",
+          "llama.cpp 的主要目標是用最少設定，在本機與雲端、跨不同硬體做高效 LLM inference。",
+          "GitHub API 查詢時 llama.cpp 約 121K stars、whisper.cpp 約 52K stars、ggml 約 15K stars。"
+        ],
+        "whyFollow": [
+          "想做 Local Agent，必須理解本機模型怎麼跑、怎麼量化、怎麼服務化。",
+          "想理解 Ollama、LM Studio、local inference backend 背後常見基礎，llama.cpp 是很好的源頭。",
+          "想做 edge AI 或內部離線環境，Georgi 的作品提供非常重要的工程參考。"
+        ]
+      },
+      "platforms": [
+        {
+          "name": "GitHub",
+          "type": "Open source",
+          "url": "https://github.com/ggerganov",
+          "description": "llama.cpp、whisper.cpp、ggml 等代表專案入口。"
+        },
+        {
+          "name": "llama.cpp",
+          "type": "Open-source repo",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "description": "Local / cloud LLM inference in C/C++，支援多硬體 backend。"
+        },
+        {
+          "name": "ggml organization",
+          "type": "Open-source org",
+          "url": "https://github.com/ggml-org",
+          "description": "ggml machine learning library 與相關專案組織。"
+        }
+      ],
+      "skillMap": [
+        {
+          "name": "Local LLM Inference",
+          "level": "Expert",
+          "description": "跨 CPU、GPU、Metal、CUDA 等 backend 執行 LLM inference。"
+        },
+        {
+          "name": "C/C++ AI Runtime",
+          "level": "Expert",
+          "description": "以 C/C++ 建構高效、可攜、低依賴的模型推論 runtime。"
+        },
+        {
+          "name": "Quantization / GGUF / GGML 生態",
+          "level": "Expert",
+          "description": "支撐本機模型格式、量化、載入與跨硬體加速。"
+        },
+        {
+          "name": "Edge / Offline AI",
+          "level": "Expert",
+          "description": "讓模型在個人電腦、邊緣設備或不依賴雲端的環境中運作。"
+        }
+      ],
+      "works": [
+        {
+          "name": "llama.cpp",
+          "type": "Open-source repo",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "description": "LLM inference in C/C++；GitHub API 查詢時約 121K stars、20K forks。"
+        },
+        {
+          "name": "whisper.cpp",
+          "type": "Open-source repo",
+          "url": "https://github.com/ggml-org/whisper.cpp",
+          "description": "OpenAI Whisper model 的 C/C++ port；GitHub API 查詢時約 52K stars。"
+        },
+        {
+          "name": "ggml",
+          "type": "Open-source repo",
+          "url": "https://github.com/ggml-org/ggml",
+          "description": "Machine learning tensor library，是 llama.cpp 與相關生態的重要底層。"
+        }
+      ],
+      "workflowAnalysis": [
+        {
+          "title": "把 AI 推論帶回本機",
+          "body": "llama.cpp 的價值是降低本機跑 LLM 的門檻，讓工程師不一定只能依賴雲端 API。"
+        },
+        {
+          "title": "Local Agent 需要理解 runtime，不只理解 prompt",
+          "body": "做本地端 Agent 時，模型載入、量化、記憶體、速度、硬體 backend 都會影響可用性。Georgi 的作品是理解這些問題的入口。"
+        },
+        {
+          "title": "高影響力開源基礎設施",
+          "body": "llama.cpp 影響大量 Local LLM 工具與服務，學它不是為了成為 C++ 專家，而是理解本地推論的限制與可能性。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "llama.cpp",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "type": "Repo",
+          "topic": "Local LLM inference",
+          "summary": "學習本機 LLM 推論、量化、server 與多硬體 backend 的核心專案。"
+        },
+        {
+          "title": "whisper.cpp",
+          "url": "https://github.com/ggml-org/whisper.cpp",
+          "type": "Repo",
+          "topic": "Speech-to-text local inference",
+          "summary": "學習語音模型本機推論與 C/C++ runtime 設計。"
+        },
+        {
+          "title": "ggml",
+          "url": "https://github.com/ggml-org/ggml",
+          "type": "Repo",
+          "topic": "Tensor library",
+          "summary": "理解 llama.cpp 生態底層張量與 runtime。"
+        }
+      ],
+      "learningPath": [
+        "先看 Georgi GitHub profile，理解 llama.cpp、whisper.cpp、ggml 的關係。",
+        "再看 llama.cpp README，抓住本機推論、server、模型格式與硬體 backend。",
+        "接著理解 GGUF、quantization 與 memory 使用，知道為什麼同一個模型有不同大小。",
+        "最後在自己的電腦上用小模型跑一次 local inference，再連到 Local Agent 工具。"
+      ],
+      "sources": [
+        {
+          "label": "Georgi Gerganov GitHub",
+          "url": "https://github.com/ggerganov"
+        },
+        {
+          "label": "llama.cpp",
+          "url": "https://github.com/ggml-org/llama.cpp"
+        },
+        {
+          "label": "whisper.cpp",
+          "url": "https://github.com/ggml-org/whisper.cpp"
+        },
+        {
+          "label": "ggml",
+          "url": "https://github.com/ggml-org/ggml"
         }
       ]
     }
