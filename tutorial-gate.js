@@ -75,7 +75,7 @@
     const style = document.createElement("style");
     style.textContent = `
       .training-site-nav {
-        position: fixed;
+        position: absolute;
         top: 14px;
         right: 14px;
         z-index: 1000;
