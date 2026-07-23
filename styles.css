@@ -875,6 +875,11 @@ h3 {
   --entry-soft: rgba(96, 165, 250, 0.14);
 }
 
+.feature-entry-card--gods {
+  --entry-color: #2dd4bf;
+  --entry-soft: rgba(45, 212, 191, 0.13);
+}
+
 .feature-entry-label {
   color: var(--entry-color);
   font-size: 12px;

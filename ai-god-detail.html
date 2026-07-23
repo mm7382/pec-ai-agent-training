@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 大神人物資料 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="AI 大神人物詳細資料，包含背景、平台、技能、作品、workflow、文章與學習順序">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260714-scroll-scope">
+  <link rel="stylesheet" href="./ai-gods.css?v=20260723-ai-gods">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+</head>
+<body>
+  <main class="god-detail-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>AI 大神人物資料</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="god-detail-layout">
+      <article class="god-detail-main" id="godMain">
+        <h1 class="god-detail-title">載入中...</h1>
+      </article>
+      <aside class="god-detail-side" id="godSide"></aside>
+    </section>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260723-ai-gods"></script>
+  <script src="./ai-god-detail.js?v=20260723-ai-gods"></script>
+  <script src="./feedback-widget.js?v=20260711-resource-library"></script>
+</body>
+</html>

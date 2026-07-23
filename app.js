@@ -254,6 +254,7 @@ async function loadResourceMeta() {
     fetchResourceMeta("ai-video-library", "./ai-video-library.json"),
     fetchResourceMeta("openclaw-cases", "./openclaw-cases.json"),
     fetchResourceMeta("hermes-agent-resources", "./hermes-agent-resources.json"),
+    fetchResourceMeta("ai-gods", "./ai-gods.json"),
   ]);
   state.resourceMeta = Object.fromEntries(entries.filter(Boolean).map((entry) => [entry.id, entry]));
 }
@@ -265,6 +266,7 @@ function renderRecentUpdates() {
   const aiVideoMeta = state.resourceMeta["ai-video-library"];
   const openclawMeta = state.resourceMeta["openclaw-cases"];
   const hermesMeta = state.resourceMeta["hermes-agent-resources"];
+  const aiGodsMeta = state.resourceMeta["ai-gods"];
   const githubItem = state.items.find((item) => item.id === "github-skill-rankings") || {
     id: "github-skill-rankings",
     title: "GitHub 熱門 Skill",
@@ -313,6 +315,14 @@ function renderRecentUpdates() {
     summary: "精選國內外近期 AI Agent、AI Coding、MCP、Local LLM、自動化與 Low-code / No-code 工具影片，附中文整理與學習重點。",
     url: "./ai-video-library.html",
   };
+  const aiGodsItem = {
+    id: "ai-gods",
+    title: "AI 大神",
+    category: "People · Skill · Open Source",
+    updatedAt: aiGodsMeta?.generatedAt || aiGodsMeta?.updatedAt || "2026-07-23T09:10:00+08:00",
+    summary: "整理值得追蹤的 AI 工程師、開源作者與教學者，看背景、作品、技能地圖與學習順序，再決定要追誰、學什麼。",
+    url: "./ai-gods.html",
+  };
   const featureItems = [
     { tone: "github", label: "Skill Radar", latestLabel: "最新 Skill", ...githubItem, title: "GitHub 熱門 Skill" },
     { tone: "daily", label: "News Radar", latestLabel: "最新新聞", ...dailyItem },
@@ -320,6 +330,7 @@ function renderRecentUpdates() {
     { tone: "openclaw", label: "Use Cases", latestLabel: "最新案例", ...openclawItem },
     { tone: "video", label: "Video Picks", latestLabel: "最新影片", ...aiVideoItem },
     { tone: "hermes", label: "Agent Database", latestLabel: "最新資料", ...hermesItem },
+    { tone: "gods", label: "People Radar", latestLabel: "收錄人物", ...aiGodsItem },
   ];
   const recentItems = [...state.items]
     .filter((item) => item.updatedAt && item.id !== "github-skill-rankings")

@@ -1,0 +1,271 @@
+{
+  "title": "AI 大神",
+  "description": "整理業界值得長期追蹤的工程師、教育者與開源作者。入選不是只看流量，而是看技術專精、作品影響力、實戰可學性與社群聲量。",
+  "generatedAt": "2026-07-23T09:10:00+08:00",
+  "updatedAt": "2026-07-23",
+  "method": {
+    "title": "雙門檻混合評分制",
+    "weights": {
+      "technicalDepth": 0.35,
+      "workImpact": 0.35,
+      "learnability": 0.25,
+      "communitySignal": 0.05
+    },
+    "threshold": {
+      "technicalDepth": 4,
+      "workImpact": 3,
+      "learnability": 4,
+      "weightedScore": 3.8
+    },
+    "notes": [
+      "技術專精、作品影響力、實戰可學性是硬門檻；社群聲量只作輔助，避免把流量等同於能力。",
+      "每位人物都要附公開來源，並標示可學習的技能與代表作品。",
+      "評分是整理者依公開資料做的學習篩選，不代表官方排名。"
+    ]
+  },
+  "items": [
+    {
+      "id": "matt-pocock",
+      "name": "Matt Pocock",
+      "handle": "@mattpocockuk",
+      "role": "TypeScript 教育者 / AI Engineering 教學者",
+      "headline": "把 TypeScript、工程教學與 AI skills 工作流整理成可學、可安裝、可複製的方法。",
+      "summary": "Matt Pocock 是 Total TypeScript 的作者與教育者，公開資料顯示他曾任 Vercel developer advocate、Stately / XState 核心團隊相關角色，現在專注 AI engineering 教學。他的代表價值在於把高難度 TypeScript 知識、工程師學習路線與 AI agent skills 做成系統化教材與開源資源。",
+      "avatarText": "MP",
+      "primaryDomain": "TypeScript / AI Engineering",
+      "regions": [
+        "Global",
+        "English"
+      ],
+      "tags": [
+        "TypeScript",
+        "AI Engineering",
+        "AI Skills",
+        "Claude Code",
+        "Developer Education",
+        "Open Source",
+        "Workflow"
+      ],
+      "score": {
+        "technicalDepth": 5,
+        "workImpact": 5,
+        "learnability": 5,
+        "communitySignal": 4,
+        "weightedScore": 4.95,
+        "passed": true,
+        "reason": "TypeScript 深度教學、Total TypeScript 課程體系、ts-reset、AI Hero skills catalog 與公開 AI workflow 內容都符合技術、作品與可學性門檻。"
+      },
+      "profile": {
+        "intro": [
+          "Matt Pocock 是 TypeScript 與 AI engineering 教學領域的高辨識度人物。他的內容不是只講工具，而是把工程師會遇到的型別、架構、AI workflow、agent skills 變成可練習的教材。",
+          "他的強項是把複雜概念拆成 exercise-driven 的學習路線，讓工程師透過實作理解型別系統、generic、type transformation 與 AI coding workflow。"
+        ],
+        "background": [
+          "個人網站自述為 educator、content creator、engineer，曾是 voice coach，後來在 Vercel 工作，現在全職教授 AI engineering。",
+          "Total TypeScript 官方頁面提到，他在建立 Total TypeScript 前曾是 XState core team 成員，也曾任 Vercel developer advocate。",
+          "GitHub profile 顯示他是 Total TypeScript 建立者，並標示 Ex-Vercel、Stately。"
+        ],
+        "whyFollow": [
+          "如果想把 TypeScript 從會用提升到能設計大型型別系統，Total TypeScript 是很完整的學習入口。",
+          "如果想看工程師如何把 AI coding 變成可重複流程，AI Hero skills catalog 是值得研究的公開案例。",
+          "他的內容通常有 repo、skill、課程或文章作為支撐，適合拿來整理成可執行的學習任務。"
+        ]
+      },
+      "platforms": [
+        {
+          "name": "Matt Pocock 官方網站",
+          "type": "Personal site",
+          "url": "https://www.mattpocock.com/",
+          "description": "個人入口，連到 AI Hero、社群與公開內容。"
+        },
+        {
+          "name": "Total TypeScript",
+          "type": "Course / articles",
+          "url": "https://www.totaltypescript.com/",
+          "description": "專業 TypeScript 訓練平台，包含 workshops、articles、tutorials 與 ts-reset 文件。"
+        },
+        {
+          "name": "AI Hero",
+          "type": "AI engineering platform",
+          "url": "https://www.aihero.dev/",
+          "description": "面向 web developers 的 AI engineering 教學平台，包含 AI SDK、MCP、AI coding、skills catalog 等內容。"
+        },
+        {
+          "name": "GitHub",
+          "type": "Open source",
+          "url": "https://github.com/mattpocock",
+          "description": "公開 repositories、TypeScript 與 AI skills 相關專案。"
+        },
+        {
+          "name": "X / Twitter",
+          "type": "Social",
+          "url": "https://x.com/mattpocockuk",
+          "description": "公開動態、教學文章與技術觀點入口。"
+        },
+        {
+          "name": "YouTube",
+          "type": "Video",
+          "url": "https://www.youtube.com/@mattpocockuk",
+          "description": "TypeScript、AI engineering、AI coding workflow 影片。"
+        }
+      ],
+      "skillMap": [
+        {
+          "name": "TypeScript 型別系統",
+          "level": "Expert",
+          "description": "Generics、conditional types、mapped types、template literal types、type transformations、React + TypeScript patterns。"
+        },
+        {
+          "name": "工程師教學設計",
+          "level": "Expert",
+          "description": "以 exercise-driven 方式設計課程，將抽象概念拆成可練習、可驗證的任務。"
+        },
+        {
+          "name": "AI Engineering / AI Coding",
+          "level": "Advanced",
+          "description": "AI SDK、LLM fundamentals、MCP、Claude Code workflow、agent skills 與 AI coding for real engineers。"
+        },
+        {
+          "name": "開源工具設計",
+          "level": "Advanced",
+          "description": "ts-reset、skills catalog 等專案把個人工作方法產品化、文件化、可安裝化。"
+        },
+        {
+          "name": "Workflow / Skill 化",
+          "level": "Advanced",
+          "description": "把工程師工作流程寫成 agent 可重複執行的 skills，重點在標準、輸入、輸出與可 review。"
+        }
+      ],
+      "works": [
+        {
+          "name": "Total TypeScript",
+          "type": "Course platform",
+          "url": "https://www.totaltypescript.com/",
+          "description": "以 exercise-driven workshops 教授 TypeScript 深層能力，包含 TypeScript Pro Essentials、Type Transformations、Generics、Advanced Patterns、Advanced React with TypeScript。"
+        },
+        {
+          "name": "AI Hero",
+          "type": "AI engineering platform",
+          "url": "https://www.aihero.dev/",
+          "description": "協助 web developers 轉向 AI engineering，內容包含 AI SDK、LLM fundamentals、MCP tutorial、AI coding dictionary 與 skills。"
+        },
+        {
+          "name": "AI Skills for Real Engineers",
+          "type": "Skill catalog",
+          "url": "https://www.aihero.dev/skills-catalog",
+          "description": "Matt 日常使用的 agent skills catalog，公開 repo 讓工程師安裝、fork 或提交 PR。"
+        },
+        {
+          "name": "mattpocock/skills",
+          "type": "Open-source repo",
+          "url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers，GitHub API 查詢時約 182K stars、15K forks；用於研究 skill 化工作流。"
+        },
+        {
+          "name": "ts-reset",
+          "type": "Open-source repo",
+          "url": "https://github.com/mattpocock/ts-reset",
+          "description": "TypeScript 的 CSS reset，改善常見 JavaScript API 的型別體驗；GitHub API 查詢時約 8.5K stars。"
+        }
+      ],
+      "workflowAnalysis": [
+        {
+          "title": "把隱性工程直覺寫成可重複流程",
+          "body": "AI Hero skills catalog 的核心不是『更多 prompt』，而是把工程師做判斷、釐清需求、拆任務、review、handoff 的步驟寫成 skill。這種做法適合學習如何把個人經驗轉成 agent 可執行工作流。"
+        },
+        {
+          "title": "用 exercise 取代單向講解",
+          "body": "Total TypeScript 的課程主軸是讓學習者先面對問題，再看解法。這對工程師學習特別有效，因為它訓練的是判斷與 mental model，不只是記語法。"
+        },
+        {
+          "title": "先保留工程標準，再使用 AI",
+          "body": "AI Hero 的定位明確寫出 real engineers 與 standards，代表他強調 AI workflow 不應降低工程品質，而是把標準轉成可檢查的流程。"
+        }
+      ],
+      "articles": [
+        {
+          "title": "5 Ways to Use 'Satisfies' in TypeScript",
+          "url": "https://www.totaltypescript.com/5-ways-to-use-satisfies",
+          "type": "Article",
+          "topic": "TypeScript satisfies operator"
+        },
+        {
+          "title": "6 Ways to Use Extract in TypeScript",
+          "url": "https://www.totaltypescript.com/uses-for-extract-type-helper",
+          "type": "Article",
+          "topic": "TypeScript utility types"
+        },
+        {
+          "title": "NoInfer: TypeScript 5.4's New Utility Type",
+          "url": "https://www.totaltypescript.com/noinfer",
+          "type": "Article",
+          "topic": "Type inference"
+        },
+        {
+          "title": "TS Reset Improves TypeScript's Built-In Typings",
+          "url": "https://www.totaltypescript.com/ts-reset-article",
+          "type": "Article",
+          "topic": "TypeScript built-in typings"
+        },
+        {
+          "title": "Cursor Rules for Better AI Development",
+          "url": "https://www.totaltypescript.com/cursor-rules-for-better-ai-development",
+          "type": "Article",
+          "topic": "AI development workflow"
+        },
+        {
+          "title": "AI Skills for Real Engineers",
+          "url": "https://www.aihero.dev/skills-catalog",
+          "type": "Skill catalog",
+          "topic": "Agent skills workflow"
+        },
+        {
+          "title": "Real-world feature build with Claude Code: every step explained",
+          "url": "https://www.aihero.dev/real-world-feature-build-with-claude-code",
+          "type": "Tutorial",
+          "topic": "Claude Code workflow"
+        }
+      ],
+      "learningPath": [
+        "先看官方網站與 Total TypeScript 首頁，理解他的主軸是 TypeScript 深度教學與 AI engineering。",
+        "再看 Total TypeScript articles，挑 satisfies、Extract、NoInfer、ts-reset 這類文章建立 TypeScript mental model。",
+        "接著看 AI Hero skills catalog，研究他如何把工程師 workflow 寫成 agent skills。",
+        "最後挑一個 skill 或 ts-reset repo，實際閱讀 README 與安裝方式，整理成自己的工作流程範本。"
+      ],
+      "sources": [
+        {
+          "label": "Matt Pocock 官方網站",
+          "url": "https://www.mattpocock.com/"
+        },
+        {
+          "label": "Total TypeScript",
+          "url": "https://www.totaltypescript.com/"
+        },
+        {
+          "label": "Total TypeScript Articles",
+          "url": "https://www.totaltypescript.com/articles"
+        },
+        {
+          "label": "AI Hero",
+          "url": "https://www.aihero.dev/"
+        },
+        {
+          "label": "AI Hero Skills Catalog",
+          "url": "https://www.aihero.dev/skills-catalog"
+        },
+        {
+          "label": "Matt Pocock GitHub",
+          "url": "https://github.com/mattpocock"
+        },
+        {
+          "label": "ts-reset GitHub",
+          "url": "https://github.com/mattpocock/ts-reset"
+        },
+        {
+          "label": "使用者提供截圖",
+          "url": "local-attachment://FCA40BCD-8D55-4289-BF95-41F1158DC92D/1-照片-1.jpg"
+        }
+      ]
+    }
+  ]
+}

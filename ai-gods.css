@@ -1,0 +1,532 @@
+.gods-shell {
+  width: min(1360px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 18px 0 48px;
+}
+
+.gods-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.gods-panel,
+.gods-method,
+.gods-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.gods-panel {
+  min-height: 300px;
+  display: grid;
+  align-content: end;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(34, 211, 238, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(245, 158, 11, 0.10), rgba(96, 165, 250, 0.09)),
+    var(--surface);
+}
+
+.gods-panel h1 {
+  max-width: 850px;
+}
+
+.gods-panel p {
+  max-width: 880px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.gods-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.gods-stats div {
+  min-width: 116px;
+  padding: 10px 12px;
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  border-radius: 8px;
+  background: rgba(34, 211, 238, 0.08);
+}
+
+.gods-stats strong {
+  display: block;
+  color: var(--ink);
+  font-size: 24px;
+}
+
+.gods-stats span {
+  color: #67e8f9;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.gods-method {
+  padding: 20px;
+}
+
+.gods-method h2 {
+  font-size: 20px;
+}
+
+.gods-method p,
+.gods-method li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.gods-controls {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 14px;
+}
+
+.gods-search {
+  display: grid;
+  gap: 7px;
+}
+
+.gods-search span,
+.gods-filter-label {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.gods-search input {
+  min-height: 46px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(220, 235, 242, 0.07);
+  color: var(--ink);
+  padding: 0 14px;
+  outline: none;
+}
+
+.gods-search input:focus {
+  border-color: rgba(34, 211, 238, 0.48);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+
+.gods-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.gods-pill {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(220, 235, 242, 0.08);
+  color: var(--ink);
+  padding: 9px 11px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.gods-pill[aria-pressed="true"] {
+  border-color: #22d3ee;
+  background: #22d3ee;
+  color: #061115;
+}
+
+.gods-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.gods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gods-card {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  min-height: 430px;
+  padding: 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(34, 211, 238, 0.08), rgba(220, 235, 242, 0.035)),
+    var(--surface);
+}
+
+.gods-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-left: 5px solid #22d3ee;
+  pointer-events: none;
+}
+
+.gods-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.gods-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  background: linear-gradient(135deg, #f59e0b, #22d3ee);
+  color: #061115;
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.gods-score {
+  border: 1px solid rgba(245, 158, 11, 0.34);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.09);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.gods-card h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.18;
+}
+
+.gods-handle {
+  margin: 4px 0 0;
+  color: #67e8f9;
+  font-weight: 900;
+}
+
+.gods-role,
+.gods-summary,
+.gods-why {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.gods-summary {
+  font-size: 15px;
+}
+
+.gods-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gods-tag-row span {
+  border: 1px solid rgba(34, 211, 238, 0.32);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: #67e8f9;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.gods-skill-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gods-skill-list li {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.gods-skill-list li::before {
+  content: "•";
+  margin-right: 7px;
+  color: #fbbf24;
+}
+
+.gods-card-action {
+  display: inline-flex;
+  min-height: 42px;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  border-radius: 8px;
+  background: #22d3ee;
+  color: #061115;
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.gods-empty {
+  padding: 24px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+@media (max-width: 1180px) {
+  .gods-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .gods-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .gods-shell {
+    width: min(100vw - 20px, 1360px);
+  }
+
+  .gods-panel {
+    min-height: 260px;
+    padding: 20px;
+  }
+
+  .gods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gods-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.god-detail-shell {
+  width: min(1280px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 18px 0 48px;
+}
+
+.god-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 18px;
+  margin-top: 22px;
+  align-items: start;
+}
+
+.god-detail-main,
+.god-detail-side {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.god-detail-main {
+  padding: 26px;
+}
+
+.god-detail-side {
+  position: sticky;
+  top: 76px;
+  padding: 20px;
+}
+
+.god-detail-hero {
+  display: grid;
+  gap: 10px;
+  min-height: 280px;
+  align-content: end;
+  margin: -26px -26px 22px;
+  padding: 30px;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 20% 18%, rgba(34, 211, 238, 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(96, 165, 250, 0.10)),
+    rgba(12, 17, 22, 0.72);
+}
+
+.god-detail-avatar {
+  width: 68px;
+  height: 68px;
+  font-size: 22px;
+}
+
+.god-detail-title {
+  max-width: 860px;
+  margin: 0;
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1.02;
+}
+
+.god-detail-summary {
+  max-width: 860px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.god-detail-tags {
+  max-width: 860px;
+}
+
+.god-section {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.god-section:first-of-type {
+  border-top: 0;
+}
+
+.god-section h2 {
+  margin-bottom: 12px;
+  font-size: 26px;
+}
+
+.god-section p,
+.god-section li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.god-section a {
+  color: #67e8f9;
+  font-weight: 850;
+}
+
+.god-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.god-info-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(220, 235, 242, 0.055);
+}
+
+.god-info-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.god-info-card p {
+  margin: 0;
+}
+
+.god-info-meta {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.god-score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.god-score-grid div,
+.god-side-metrics div {
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 8px;
+  padding: 11px;
+  background: rgba(34, 211, 238, 0.07);
+}
+
+.god-score-grid strong,
+.god-side-metrics strong {
+  display: block;
+  color: var(--ink);
+  font-size: 21px;
+}
+
+.god-score-grid span,
+.god-side-metrics span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.god-side-metrics {
+  display: grid;
+  gap: 9px;
+}
+
+.god-side-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.god-side-actions a,
+.god-detail-back {
+  display: inline-flex;
+  min-height: 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #22d3ee;
+  color: #061115;
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.god-side-actions a:last-child {
+  border: 1px solid var(--line);
+  background: rgba(220, 235, 242, 0.08);
+  color: var(--ink);
+}
+
+@media (max-width: 980px) {
+  .god-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .god-detail-side {
+    position: static;
+  }
+
+  .god-score-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .god-detail-shell {
+    width: min(100vw - 20px, 1280px);
+  }
+
+  .god-detail-main {
+    padding: 18px;
+  }
+
+  .god-detail-hero {
+    margin: -18px -18px 18px;
+    padding: 22px;
+  }
+
+  .god-info-grid,
+  .god-score-grid {
+    grid-template-columns: 1fr;
+  }
+}

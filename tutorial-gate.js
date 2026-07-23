@@ -165,6 +165,7 @@
       ["OpenCloud 使用案例", `${prefix}openclaw-cases.html`],
       ["YouTube AI 影片精選", `${prefix}ai-video-library.html`],
       ["Hermes Agent 學習資料庫", `${prefix}hermes-agent-resources.html`],
+      ["AI 大神", `${prefix}ai-gods.html`],
     ];
 
     const nav = document.createElement("nav");

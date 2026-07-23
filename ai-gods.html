@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 大神 - PEC AI Agent 教育訓練資料庫</title>
+  <meta name="description" content="整理值得追蹤的 AI 工程師、教育者與開源實作者，包含背景、作品、技能與學習路線">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260714-scroll-scope">
+  <link rel="stylesheet" href="./ai-gods.css?v=20260723-ai-gods">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+</head>
+<body>
+  <main class="gods-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
+        <img class="brand-logo" src="./assets/brand/adlink-mark-red.png" alt="ADLINK">
+        <span>
+          <strong>AI Agent 教育訓練</strong>
+          <small>AI 大神</small>
+        </span>
+      </a>
+      <div class="identity-chip" id="identityChip" hidden>
+        <span id="identityText"></span>
+        <button type="button" id="switchUserButton">切換</button>
+      </div>
+    </header>
+
+    <section class="gods-hero">
+      <article class="gods-panel">
+        <p class="section-label">People Radar</p>
+        <h1>AI 大神</h1>
+        <p>整理真正值得追蹤的工程師、開源作者與教學者。先看他做過什麼、擅長什麼、有哪些作品可以學，再決定要不要深入追蹤。</p>
+        <div class="gods-stats" id="godsStats" aria-label="AI 大神資料統計"></div>
+      </article>
+      <aside class="gods-method">
+        <h2>入選規則</h2>
+        <p id="methodSummary">載入中...</p>
+        <ul id="methodNotes"></ul>
+      </aside>
+    </section>
+
+    <section class="gods-controls" aria-label="AI 大神搜尋與篩選">
+      <label class="gods-search">
+        <span>搜尋人物 / Skill</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="輸入 TypeScript、AI coding、開源、workflow...">
+      </label>
+      <div>
+        <div class="gods-filter-label">分類</div>
+        <div class="gods-filter-row" id="domainFilters"></div>
+      </div>
+    </section>
+
+    <div class="gods-meta">
+      <span id="resultCount">載入中...</span>
+      <span id="updatedAt"></span>
+    </div>
+    <section class="gods-grid" id="godsGrid" aria-label="AI 大神人物卡片牆"></section>
+    <p class="gods-empty" id="emptyState" hidden>找不到符合的人物資料。</p>
+  </main>
+
+  <script src="./tutorial-gate.js?v=20260723-ai-gods"></script>
+  <script src="./ai-gods.js?v=20260723-ai-gods"></script>
+  <script src="./feedback-widget.js?v=20260711-resource-library"></script>
+</body>
+</html>
