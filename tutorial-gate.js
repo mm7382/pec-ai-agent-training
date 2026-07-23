@@ -80,15 +80,19 @@
         right: 14px;
         z-index: 1000;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 8px;
+        max-width: calc(100vw - 28px);
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
       }
-      .training-site-nav a,
-      .training-site-nav button {
+      .training-site-nav a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex: 0 0 auto;
         min-height: 38px;
         padding: 0 14px;
         border: 1px solid rgba(220, 235, 242, 0.22);
@@ -101,70 +105,35 @@
         text-decoration: none;
       }
       .training-site-nav a:hover,
-      .training-site-nav button:hover,
-      .training-site-nav button[aria-expanded="true"] {
+      .training-site-nav a[aria-current="page"] {
         border-color: rgba(40, 198, 226, 0.52);
         color: #28c6e2;
       }
-      .training-site-nav button {
-        cursor: pointer;
-      }
-      .training-site-menu-wrap {
-        position: relative;
-      }
-      .training-site-menu {
-        position: absolute;
-        right: 0;
-        top: 46px;
-        display: grid;
-        gap: 6px;
-        width: min(320px, calc(100vw - 28px));
-        max-height: min(70vh, 520px);
-        overflow: auto;
-        padding: 10px;
-        border: 1px solid rgba(220, 235, 242, 0.18);
-        border-radius: 10px;
-        background: rgba(7, 11, 14, 0.94);
-        box-shadow: 0 22px 58px rgba(0, 0, 0, 0.34);
-        backdrop-filter: blur(16px);
-      }
-      .training-site-menu[hidden] {
-        display: none;
-      }
-      .training-site-menu a {
-        justify-content: flex-start;
-        min-height: 36px;
-        padding: 0 11px;
-        box-shadow: none;
-        background: rgba(220, 235, 242, 0.06);
+      .training-home-button {
+        border-color: rgba(40, 198, 226, 0.42);
       }
       @media (max-width: 640px) {
         .training-site-nav {
           top: 10px;
           right: 10px;
         }
-        .training-site-nav a,
-        .training-site-nav button {
+        .training-site-nav a {
           min-height: 34px;
           padding: 0 11px;
           font-size: 12px;
-        }
-        .training-site-menu {
-          top: 42px;
         }
       }
     `;
 
     const prefix = rootPrefix();
     const links = [
-      ["教材入口", `${prefix}tutorial-library.html`],
+      ["教材", `${prefix}tutorial-library.html`],
       ["GitHub", `${prefix}github-skills.html`],
-      ["Hermes Agent 熱門 Skill", `${prefix}github-skills.html`],
-      ["Hermes Agent 熱門新聞", `${prefix}ai-agent-daily.html`],
-      ["Hermes Agent 熱門 Logo", `${prefix}local-agent-radar.html`],
-      ["OpenCloud 使用案例", `${prefix}openclaw-cases.html`],
-      ["YouTube AI 影片精選", `${prefix}ai-video-library.html`],
-      ["Hermes Agent 學習資料庫", `${prefix}hermes-agent-resources.html`],
+      ["AI Agent", `${prefix}ai-agent-daily.html`],
+      ["Local Agent", `${prefix}local-agent-radar.html`],
+      ["LLM", `${prefix}hermes-agent-resources.html`],
+      ["OpenCloud", `${prefix}openclaw-cases.html`],
+      ["YouTube", `${prefix}ai-video-library.html`],
       ["AI 大神", `${prefix}ai-gods.html`],
     ];
 
@@ -177,41 +146,17 @@
     link.href = homePath();
     link.textContent = "回首頁";
 
-    const menuWrap = document.createElement("div");
-    menuWrap.className = "training-site-menu-wrap";
-    const button = document.createElement("button");
-    button.className = "training-site-menu-button";
-    button.type = "button";
-    button.setAttribute("aria-expanded", "false");
-    button.textContent = "分頁入口";
-
-    const menu = document.createElement("div");
-    menu.className = "training-site-menu";
-    menu.hidden = true;
     for (const [label, href] of links) {
       const item = document.createElement("a");
       item.href = href;
       item.textContent = label;
-      menu.append(item);
+      if (new URL(item.href, window.location.href).pathname === window.location.pathname) {
+        item.setAttribute("aria-current", "page");
+      }
+      nav.append(item);
     }
 
-    button.addEventListener("click", () => {
-      menu.hidden = !menu.hidden;
-      button.setAttribute("aria-expanded", String(!menu.hidden));
-    });
-    document.addEventListener("click", (event) => {
-      if (menu.hidden || menuWrap.contains(event.target)) return;
-      menu.hidden = true;
-      button.setAttribute("aria-expanded", "false");
-    });
-    document.addEventListener("keydown", (event) => {
-      if (event.key !== "Escape") return;
-      menu.hidden = true;
-      button.setAttribute("aria-expanded", "false");
-    });
-
-    menuWrap.append(button, menu);
-    nav.append(link, menuWrap);
+    nav.prepend(link);
 
     document.head.append(style);
     if (document.body) {
