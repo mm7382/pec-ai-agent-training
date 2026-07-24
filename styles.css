@@ -41,12 +41,16 @@ body {
 }
 
 body.personal-home-page {
-  --home-paper: #f7f2e9;
-  --home-ink: #181512;
-  --home-muted: #5e5750;
-  --home-line: rgba(24, 21, 18, 0.16);
-  --home-accent: #7a6a5c;
-  background: var(--home-paper);
+  --home-paper: #050708;
+  --home-ink: #f7f4ec;
+  --home-muted: #aaa39a;
+  --home-soft: #151b1d;
+  --home-line: rgba(247, 244, 236, 0.16);
+  --home-accent: #35d6c8;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(53, 214, 200, 0.16), transparent 25rem),
+    radial-gradient(circle at 78% 6%, rgba(53, 214, 200, 0.08), transparent 30rem),
+    linear-gradient(180deg, #081011 0, var(--home-paper) 44rem);
   color: var(--home-ink);
 }
 
@@ -99,7 +103,7 @@ button {
 
 .personal-home-page .brand-mark {
   border-color: var(--home-line);
-  background: #fffaf0;
+  background: rgba(247, 244, 236, 0.06);
   color: var(--home-ink);
 }
 
@@ -206,7 +210,9 @@ button {
   min-height: 320px;
   border: 1px solid var(--home-line);
   border-radius: 14px;
-  background: #fffaf0;
+  background:
+    linear-gradient(180deg, rgba(247, 244, 236, 0.06), rgba(247, 244, 236, 0.025));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   padding: 28px;
   text-align: center;
 }
@@ -217,9 +223,9 @@ button {
   width: 136px;
   height: 136px;
   margin-bottom: 22px;
-  border: 2px solid var(--home-ink);
+  border: 2px solid var(--home-accent);
   border-radius: 999px;
-  background: var(--home-paper);
+  background: rgba(53, 214, 200, 0.08);
   color: var(--home-ink);
   font-size: 58px;
   font-weight: 950;
@@ -266,7 +272,7 @@ button {
   margin: 0;
   color: var(--home-ink);
   font-size: clamp(38px, 5.2vw, 62px);
-  font-weight: 950;
+  font-weight: 900;
   line-height: 1.02;
 }
 
@@ -301,7 +307,8 @@ button {
   font-size: 15px;
   font-weight: 900;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-color: var(--home-accent);
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 5px;
 }
 
@@ -345,7 +352,7 @@ button {
   margin-top: clamp(72px, 12vw, 128px);
   border-top: 1px solid var(--home-line);
   border-bottom: 1px solid var(--home-line);
-  background: transparent;
+  background: linear-gradient(90deg, rgba(53, 214, 200, 0.07), transparent 58%);
   box-shadow: none;
   padding: clamp(22px, 3.2vw, 30px) 0;
 }
@@ -373,7 +380,7 @@ button {
   min-height: 38px;
   border: 1.5px solid var(--home-accent);
   border-radius: 999px;
-  background: transparent;
+  background: rgba(53, 214, 200, 0.08);
   color: var(--home-accent);
   padding: 0 18px;
   font-size: 14px;
