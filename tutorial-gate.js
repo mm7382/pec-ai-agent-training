@@ -62,7 +62,7 @@
     const style = document.createElement("style");
     style.textContent = `
       .training-site-nav {
-        position: absolute;
+        position: fixed;
         top: 14px;
         right: 14px;
         z-index: 1000;
@@ -80,15 +80,15 @@
         align-items: center;
         justify-content: center;
         flex: 0 0 auto;
-        min-height: 38px;
-        padding: 0 14px;
+        min-height: 46px;
+        padding: 0 18px;
         border: 1px solid rgba(220, 235, 242, 0.22);
         border-radius: 8px;
         background: rgba(7, 11, 14, 0.84);
         color: #f4f7f8;
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.26);
         backdrop-filter: blur(14px);
-        font: 900 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+        font: 950 16px/1 system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
         text-decoration: none;
       }
       .training-site-nav a:hover,
@@ -105,9 +105,9 @@
           right: 10px;
         }
         .training-site-nav a {
-          min-height: 34px;
-          padding: 0 11px;
-          font-size: 12px;
+          min-height: 40px;
+          padding: 0 14px;
+          font-size: 14px;
         }
       }
     `;
@@ -122,6 +122,7 @@
       ["OpenCloud", `${prefix}openclaw-cases.html`],
       ["YouTube", `${prefix}ai-video-library.html`],
       ["AI 大神", `${prefix}ai-gods.html`],
+      ["About", `${prefix}about.html`],
     ];
 
     const nav = document.createElement("nav");

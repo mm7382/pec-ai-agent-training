@@ -17,6 +17,7 @@ const elements = {
   recentUpdateList: document.querySelector("#recentUpdateList"),
   resultCount: document.querySelector("#resultCount"),
   totalCount: document.querySelector("#totalCount"),
+  landingTotalCount: document.querySelector("#landingTotalCount"),
   emptyState: document.querySelector("#emptyState"),
   clearFiltersButton: document.querySelector("#clearFiltersButton"),
 };
@@ -405,12 +406,23 @@ async function loadIndex() {
   state.items = data.items || [];
   state.categories = data.categories || [];
   elements.totalCount.textContent = String(state.items.length);
+  if (elements.landingTotalCount) elements.landingTotalCount.textContent = String(state.items.length);
   renderRecentUpdates();
   renderCategoryFilters();
   renderItems();
 }
 
 function setupEvents() {
+  document.querySelectorAll("[data-scroll-target]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const target = document.getElementById(link.dataset.scrollTarget || "");
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", `#${target.id}`);
+    });
+  });
+
   elements.searchInput.addEventListener("input", () => {
     state.query = elements.searchInput.value;
     renderItems();

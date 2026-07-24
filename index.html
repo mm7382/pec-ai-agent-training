@@ -6,7 +6,7 @@
   <title>Michael AI Agent Lab</title>
   <meta name="description" content="Michael 整理的 AI Agent 學習入口、熱門工具、教學教材與實作資源">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=20260724-signin-motto">
+  <link rel="stylesheet" href="./styles.css?v=20260724-home-about">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 </head>
 <body class="home-page">
@@ -21,7 +21,37 @@
       </a>
     </header>
 
-    <section class="workspace">
+    <section class="home-landing" aria-labelledby="homeLandingTitle">
+      <div class="home-landing-copy">
+        <p class="section-label">Michael AI Agent Lab</p>
+        <h1 id="homeLandingTitle">把 AI 學習，變成每天看得見的進步。</h1>
+        <p>
+          這裡整理 AI Agent、GitHub Skill、熱門新聞、本地 Agent、YouTube 教學與實作教材。
+          先看趨勢，再進入教材；先知道方向，再動手做出自己的 AI 工作流。
+        </p>
+        <div class="home-landing-actions" aria-label="首頁主要入口">
+          <a class="home-primary-action" href="#learningRadar" data-scroll-target="learningRadar">開始探索</a>
+          <a class="home-secondary-action" href="./tutorial-library.html" target="_blank" rel="noopener">看教材入口</a>
+          <a class="home-secondary-action" href="./about.html">About Michael</a>
+        </div>
+      </div>
+      <div class="home-landing-board" aria-label="網站內容摘要">
+        <div>
+          <strong id="landingTotalCount">31</strong>
+          <span>上架教材</span>
+        </div>
+        <div>
+          <strong>每日</strong>
+          <span>熱門新聞與影片</span>
+        </div>
+        <div>
+          <strong>Skill</strong>
+          <span>GitHub / Agent / LLM</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="learningRadar">
       <div class="left-rail">
         <aside class="summary-panel" aria-label="資料庫摘要">
           <div class="summary-visual" aria-hidden="true">
@@ -56,11 +86,6 @@
             <a class="library-open-link" href="./tutorial-library.html" target="_blank" rel="noopener">完整分類目錄</a>
           </div>
 
-          <section class="lesson-update-section" aria-labelledby="lessonUpdateTitle">
-            <h3 id="lessonUpdateTitle">最新更新教材</h3>
-            <ul class="recent-update-list lesson-update-list" id="recentUpdateList"></ul>
-          </section>
-
           <label class="search-box">
             <span>搜尋教材</span>
             <input id="searchInput" type="search" autocomplete="off" placeholder="輸入 Claude、Prompt、Skill、MarkItDown...">
@@ -75,6 +100,11 @@
 
           <section class="card-grid" id="tutorialGrid" aria-label="教材卡片"></section>
           <p class="empty-state" id="emptyState" hidden>找不到符合的教材。換個關鍵字，或先清除分類篩選。</p>
+
+          <section class="lesson-update-section" aria-labelledby="lessonUpdateTitle">
+            <h3 id="lessonUpdateTitle">最新更新教材</h3>
+            <ul class="recent-update-list lesson-update-list" id="recentUpdateList"></ul>
+          </section>
         </section>
 
         <div class="side-notices" aria-label="使用與著作權說明">
@@ -101,7 +131,7 @@
   </main>
 
   <script src="./learning-path.js?v=20260711-resource-library"></script>
-  <script src="./app.js?v=20260715-radar-update"></script>
+  <script src="./app.js?v=20260724-home-analytics"></script>
   <script src="./feedback-widget.js?v=20260711-resource-library"></script>
 </body>
 </html>

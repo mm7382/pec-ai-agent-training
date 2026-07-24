@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>網站流量分析 - Michael AI Agent Lab</title>
+  <meta name="description" content="Michael AI Agent Lab 匿名流量分析後台">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260724-analytics">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+  <style>
+    body.analytics-page {
+      overflow-y: auto;
+    }
+
+    .analytics-shell {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+
+    .analytics-hero {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(40, 198, 226, 0.2), transparent 24rem),
+        linear-gradient(135deg, rgba(16, 23, 29, 0.98), rgba(7, 11, 14, 0.92));
+      padding: clamp(24px, 5vw, 48px);
+    }
+
+    .analytics-hero h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1;
+    }
+
+    .analytics-hero p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .analytics-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .analytics-controls button,
+    .analytics-refresh {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(220, 235, 242, 0.08);
+      color: var(--ink);
+      padding: 0 16px;
+      font-weight: 950;
+    }
+
+    .analytics-controls button[aria-pressed="true"],
+    .analytics-refresh {
+      border-color: rgba(40, 198, 226, 0.56);
+      background: var(--accent);
+      color: #041216;
+    }
+
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .analytics-card,
+    .analytics-table {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(16, 23, 29, 0.82);
+      padding: 18px;
+    }
+
+    .analytics-card strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .analytics-card span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    .analytics-layout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .analytics-table h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    .analytics-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 12px 0;
+      border-top: 1px solid rgba(220, 235, 242, 0.1);
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .analytics-row:first-of-type {
+      border-top: 0;
+    }
+
+    .analytics-row span:first-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .analytics-bar {
+      display: block;
+      height: 7px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: rgba(40, 198, 226, 0.16);
+      overflow: hidden;
+    }
+
+    .analytics-bar i {
+      display: block;
+      height: 100%;
+      width: var(--bar-width, 0%);
+      border-radius: inherit;
+      background: var(--accent);
+    }
+
+    .analytics-status {
+      margin-top: 14px;
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    @media (max-width: 820px) {
+      .analytics-grid,
+      .analytics-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="analytics-page">
+  <main class="analytics-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="Michael AI Agent Lab 首頁">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>
+          <strong>Michael AI Agent Lab</strong>
+          <small>Analytics dashboard</small>
+        </span>
+      </a>
+    </header>
+
+    <section class="analytics-hero" aria-labelledby="analyticsTitle">
+      <p class="section-label">Private View</p>
+      <h1 id="analyticsTitle">網站流量分析</h1>
+      <p>這裡只看匿名彙總資料：總瀏覽互動、熱門頁面、事件類型、來源網站與地區。留言內容不會在這裡顯示，會照原本方式送到 Telegram。</p>
+      <div class="analytics-controls" aria-label="分析時間範圍">
+        <button type="button" data-days="7">7 天</button>
+        <button type="button" data-days="30" aria-pressed="true">30 天</button>
+        <button type="button" data-days="90">90 天</button>
+        <button class="analytics-refresh" type="button">重新整理</button>
+      </div>
+      <p class="analytics-status" id="analyticsStatus">載入中...</p>
+    </section>
+
+    <section class="analytics-grid" aria-label="流量摘要">
+      <div class="analytics-card">
+        <strong id="analyticsTotal">0</strong>
+        <span>總事件</span>
+      </div>
+      <div class="analytics-card">
+        <strong id="analyticsTopPage">-</strong>
+        <span>最常看的頁面</span>
+      </div>
+      <div class="analytics-card">
+        <strong id="analyticsUpdated">-</strong>
+        <span>資料更新時間</span>
+      </div>
+    </section>
+
+    <section class="analytics-layout">
+      <div class="analytics-table">
+        <h2>熱門頁面</h2>
+        <div id="topPages"></div>
+      </div>
+      <div class="analytics-table">
+        <h2>事件類型</h2>
+        <div id="eventTypes"></div>
+      </div>
+      <div class="analytics-table">
+        <h2>來源網站</h2>
+        <div id="referrers"></div>
+      </div>
+      <div class="analytics-table">
+        <h2>地區</h2>
+        <div id="countries"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const endpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
+    const statusEl = document.querySelector("#analyticsStatus");
+    const totalEl = document.querySelector("#analyticsTotal");
+    const topPageEl = document.querySelector("#analyticsTopPage");
+    const updatedEl = document.querySelector("#analyticsUpdated");
+    const controls = [...document.querySelectorAll("[data-days]")];
+    let activeDays = 30;
+
+    function formatTime(value) {
+      if (!value) return "-";
+      return new Intl.DateTimeFormat("zh-Hant-TW", {
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      }).format(new Date(value));
+    }
+
+    function renderRows(target, rows, emptyText = "目前沒有資料") {
+      const node = document.querySelector(target);
+      if (!rows || rows.length === 0) {
+        node.innerHTML = `<p class="analytics-status">${emptyText}</p>`;
+        return;
+      }
+      const max = Math.max(...rows.map((row) => row.count), 1);
+      node.innerHTML = rows.map((row) => {
+        const width = Math.max(5, Math.round((row.count / max) * 100));
+        return `
+          <div class="analytics-row">
+            <span>${row.label}<span class="analytics-bar"><i style="--bar-width:${width}%"></i></span></span>
+            <strong>${row.count}</strong>
+          </div>
+        `;
+      }).join("");
+    }
+
+    async function loadAnalytics() {
+      if (!endpoint) {
+        statusEl.textContent = "尚未設定分析端點。";
+        return;
+      }
+      statusEl.textContent = `載入最近 ${activeDays} 天資料...`;
+      try {
+        const response = await fetch(`${endpoint}?days=${activeDays}`, { cache: "no-store" });
+        const data = await response.json();
+        if (!response.ok || data.ok === false) throw new Error(data.error || "無法讀取分析資料。");
+
+        totalEl.textContent = String(data.total || 0);
+        topPageEl.textContent = data.topPages?.[0]?.label || "-";
+        updatedEl.textContent = formatTime(data.generatedAt);
+        renderRows("#topPages", data.topPages);
+        renderRows("#eventTypes", data.eventTypes);
+        renderRows("#referrers", data.referrers, "目前沒有來源網站資料");
+        renderRows("#countries", data.countries);
+        statusEl.textContent = `已載入最近 ${data.rangeDays} 天匿名彙總資料。`;
+      } catch (error) {
+        statusEl.textContent = error.message;
+      }
+    }
+
+    controls.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeDays = Number(button.dataset.days);
+        controls.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        loadAnalytics();
+      });
+    });
+    document.querySelector(".analytics-refresh").addEventListener("click", loadAnalytics);
+    loadAnalytics();
+  </script>
+</body>
+</html>
