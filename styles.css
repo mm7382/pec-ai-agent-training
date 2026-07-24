@@ -45,7 +45,7 @@ body.personal-home-page {
   --home-ink: #181512;
   --home-muted: #5e5750;
   --home-line: rgba(24, 21, 18, 0.16);
-  --home-accent: #7e7061;
+  --home-accent: #7a6a5c;
   background: var(--home-paper);
   color: var(--home-ink);
 }
@@ -342,7 +342,7 @@ button {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
   align-items: center;
-  margin-top: clamp(44px, 8vw, 82px);
+  margin-top: clamp(72px, 12vw, 128px);
   border-top: 1px solid var(--home-line);
   border-bottom: 1px solid var(--home-line);
   background: transparent;
@@ -371,10 +371,10 @@ button {
   align-items: center;
   justify-content: center;
   min-height: 38px;
-  border: 1.5px solid var(--home-ink);
+  border: 1.5px solid var(--home-accent);
   border-radius: 999px;
   background: transparent;
-  color: var(--home-ink);
+  color: var(--home-accent);
   padding: 0 18px;
   font-size: 14px;
   font-weight: 950;
