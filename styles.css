@@ -45,7 +45,7 @@ body.personal-home-page {
   --home-ink: #181512;
   --home-muted: #5e5750;
   --home-line: rgba(24, 21, 18, 0.16);
-  --home-accent: #d97706;
+  --home-accent: #7e7061;
   background: var(--home-paper);
   color: var(--home-ink);
 }
@@ -250,7 +250,7 @@ button {
   max-width: 700px;
   margin: 18px 0 16px;
   color: var(--home-ink);
-  font-size: clamp(28px, 3.2vw, 43px);
+  font-size: clamp(25px, 2.75vw, 36px);
   line-height: 1.18;
   letter-spacing: 0;
 }
@@ -265,7 +265,7 @@ button {
 .home-landing .home-intro {
   margin: 0;
   color: var(--home-ink);
-  font-size: clamp(48px, 6.4vw, 76px);
+  font-size: clamp(38px, 5.2vw, 62px);
   font-weight: 950;
   line-height: 1.02;
 }
@@ -274,7 +274,7 @@ button {
   max-width: 680px;
   margin: 0 0 18px;
   color: var(--home-accent);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 950;
   letter-spacing: 0;
   line-height: 1.45;
@@ -283,7 +283,7 @@ button {
 .home-landing p.home-explainer {
   max-width: 700px;
   color: var(--home-muted);
-  font-size: clamp(18px, 1.8vw, 22px);
+  font-size: clamp(16px, 1.5vw, 19px);
   font-weight: 650;
   line-height: 1.75;
 }
@@ -298,7 +298,7 @@ button {
 
 .home-text-links a {
   color: var(--home-ink);
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 900;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -347,36 +347,36 @@ button {
   border-bottom: 1px solid var(--home-line);
   background: transparent;
   box-shadow: none;
-  padding: clamp(26px, 4vw, 38px) 0;
+  padding: clamp(22px, 3.2vw, 30px) 0;
 }
 
 .home-project-strip h2 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: var(--home-ink);
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.05;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.08;
 }
 
 .home-project-strip p:not(.section-label) {
   max-width: 800px;
   margin: 0;
   color: var(--home-muted);
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 650;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .home-project-strip a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  border: 2px solid var(--home-ink);
+  min-height: 38px;
+  border: 1.5px solid var(--home-ink);
   border-radius: 999px;
   background: transparent;
   color: var(--home-ink);
-  padding: 0 20px;
-  font-size: 16px;
+  padding: 0 18px;
+  font-size: 14px;
   font-weight: 950;
   text-decoration: none;
 }
@@ -524,6 +524,7 @@ button {
 
 .personal-home-page .section-label {
   color: var(--home-accent);
+  font-size: 11px;
 }
 
 .personal-home-page .home-landing p:not(.section-label) {
@@ -1781,16 +1782,16 @@ h3 {
     font-size: 25px;
   }
 
-  .home-intro {
-    font-size: 48px;
-  }
-
-  .home-landing h1 {
+  .home-landing .home-intro {
     font-size: 34px;
   }
 
+  .home-landing h1 {
+    font-size: 28px;
+  }
+
   .home-landing p:not(.section-label) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .home-landing-actions {
