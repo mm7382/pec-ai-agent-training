@@ -1,6 +1,4 @@
-const identityKey = "pecTrainingVisitor";
 const selectedCategoryKey = "pecTrainingSelectedCategory";
-const returnToKey = "pecTrainingReturnTo";
 const trackingEndpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
 
 const state = {
@@ -9,17 +7,9 @@ const state = {
   resourceMeta: {},
   selectedCategory: localStorage.getItem(selectedCategoryKey) || "全部",
   query: "",
-  visitor: null,
 };
 
 const elements = {
-  identityChip: document.querySelector("#identityChip"),
-  identityText: document.querySelector("#identityText"),
-  switchUserButton: document.querySelector("#switchUserButton"),
-  signinDialog: document.querySelector("#signinDialog"),
-  signinForm: document.querySelector("#signinForm"),
-  visitorName: document.querySelector("#visitorName"),
-  visitorDepartment: document.querySelector("#visitorDepartment"),
   searchInput: document.querySelector("#searchInput"),
   categoryFilters: document.querySelector("#categoryFilters"),
   tutorialGrid: document.querySelector("#tutorialGrid"),
@@ -30,20 +20,6 @@ const elements = {
   emptyState: document.querySelector("#emptyState"),
   clearFiltersButton: document.querySelector("#clearFiltersButton"),
 };
-
-function loadVisitor() {
-  try {
-    const value = JSON.parse(localStorage.getItem(identityKey) || "null");
-    if (!value?.name || !value?.department) return null;
-    return value;
-  } catch {
-    return null;
-  }
-}
-
-function saveVisitor(visitor) {
-  localStorage.setItem(identityKey, JSON.stringify(visitor));
-}
 
 function formatLocalTime(date = new Date()) {
   return new Intl.DateTimeFormat("zh-Hant-TW", {
@@ -58,14 +34,13 @@ function formatLocalTime(date = new Date()) {
 }
 
 async function trackEvent(type, detail = {}) {
-  if (!trackingEndpoint || !state.visitor) return;
+  if (!trackingEndpoint) return;
   if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
 
   const payload = {
     type,
     occurredAt: new Date().toISOString(),
     occurredAtLocal: formatLocalTime(),
-    visitor: state.visitor,
     page: {
       title: document.title,
       url: window.location.href,
@@ -139,20 +114,6 @@ function itemSearchScore(item, groups) {
     + fieldScore(item.summary, groups, 18)
     + fieldScore(`${item.category} ${item.level}`, groups, 10)
     + fieldScore(item.searchText, groups, 4);
-}
-
-function updateIdentityUi() {
-  if (!state.visitor) {
-    elements.identityChip.hidden = true;
-    return;
-  }
-  elements.identityText.textContent = `${state.visitor.name} · ${state.visitor.department}`;
-  elements.identityChip.hidden = false;
-}
-
-function showSignin() {
-  elements.signinDialog.showModal();
-  window.setTimeout(() => elements.visitorName.focus(), 50);
 }
 
 function renderCategoryFilters() {
@@ -469,49 +430,12 @@ function setupEvents() {
     trackEvent("clear_filters");
   });
 
-  elements.switchUserButton.addEventListener("click", () => {
-    localStorage.removeItem(identityKey);
-    state.visitor = null;
-    updateIdentityUi();
-    showSignin();
-  });
-
-  elements.signinForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const name = elements.visitorName.value.trim();
-    const department = elements.visitorDepartment.value;
-    if (!name || !department) return;
-
-    state.visitor = {
-      name,
-      department,
-      signedInAt: new Date().toISOString(),
-      signedInAtLocal: formatLocalTime(),
-    };
-    saveVisitor(state.visitor);
-    updateIdentityUi();
-    elements.signinDialog.close();
-    await trackEvent("signin", { source: "portal" });
-
-    const returnTo = sessionStorage.getItem(returnToKey);
-    if (returnTo) {
-      sessionStorage.removeItem(returnToKey);
-      window.location.href = returnTo;
-    }
-  });
 }
 
 async function init() {
-  state.visitor = loadVisitor();
-  updateIdentityUi();
   setupEvents();
   await loadIndex();
-
-  if (!state.visitor) {
-    showSignin();
-  } else {
-    trackEvent("portal_view", { source: "returning_visitor" });
-  }
+  trackEvent("portal_view", { source: "public_home" });
 }
 
 init().catch((error) => {

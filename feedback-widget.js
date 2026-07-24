@@ -1,16 +1,5 @@
 (function () {
-  const identityKey = "pecTrainingVisitor";
   const trackingEndpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
-
-  function readVisitor() {
-    try {
-      const visitor = JSON.parse(localStorage.getItem(identityKey) || "null");
-      if (!visitor?.name || !visitor?.department) return null;
-      return visitor;
-    } catch {
-      return null;
-    }
-  }
 
   function formatLocalTime(date = new Date()) {
     return new Intl.DateTimeFormat("zh-Hant-TW", {
@@ -33,8 +22,6 @@
   }
 
   async function sendFeedback({ category, message }) {
-    const visitor = readVisitor();
-    if (!visitor) throw new Error("請先登入教材資料庫，再送出留言。");
     if (!trackingEndpoint) throw new Error("目前沒有設定回饋接收端。");
     const trimmed = message.trim();
     if (trimmed.length < 4) throw new Error("請輸入至少 4 個字的回饋內容。");
@@ -43,7 +30,6 @@
       type: "feedback",
       occurredAt: new Date().toISOString(),
       occurredAtLocal: formatLocalTime(),
-      visitor,
       page: pageContext(),
       detail: {
         category,
@@ -101,7 +87,7 @@
     panel.hidden = true;
     panel.innerHTML = `
       <h2>留言 / 討論</h2>
-      <p>回饋會送到 Michael 的 Telegram art agent，包含你的姓名、部門與目前頁面。</p>
+      <p>回饋會送到 Michael，包含你主動填寫的內容與目前頁面。</p>
       <label>
         類型
         <select id="feedbackCategory">

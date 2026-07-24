@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Claude Design + Claude Code：從想法到介面、再到開發交接的閉環流程 - ADLINK 教學檔</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Claude Design + Claude Code：從想法到介面、再到開發交接的閉環流程 - Michael 教學筆記</title>
   <style>
     :root {
       --dark: #252c2e;
@@ -251,12 +252,12 @@
   <div class="cover">
     <div class="wrap cover-inner">
       <div class="cover-top">
-        <div class="report-logo" aria-label="ADLINK logo"></div>
-        <div class="cover-kicker">Design Workflow / ADLINK Training</div>
+        <div class="report-logo" aria-label="個人品牌標記"></div>
+        <div class="cover-kicker">Design Workflow / Michael Teaching Notes</div>
       </div>
       <div class="cover-main">
         <div class="cover-copy">
-          <span class="label">ADLINK 教學檔</span>
+          <span class="label">Michael 教學筆記</span>
           <h1>Claude Design + Claude Code：從想法到介面、再到開發交接的閉環流程</h1>
           <p class="subtitle">這份教材不是在教你「怎麼畫一張漂亮圖」，而是在教你怎麼把需求、原型、視覺規格與後續開發接成同一條流程。重點是閉環，不是單次生成。</p>
         </div>
@@ -273,7 +274,7 @@
 
   <header>
     <div class="wrap">
-      <div class="ad-logo-full" aria-label="ADLINK full logo"></div>
+      <div class="ad-logo-full" aria-label="Michael AI Agent Lab full logo"></div>
       <span class="eyebrow">Course Framing</span>
       <h2>這套東西真正有價值的地方，是讓不會畫設計稿的人，也能做出可討論、可修改、可交接給工程的介面結果。</h2>
       <p class="lead">這份內容最重要的三條主線是：第一，用 <code>/design</code> 從 Claude Code 直接做出第一版原型；第二，用 <code>/design-sync</code> 把既有專案整理成可重用的 design system；第三，把設計變更再帶回程式工作流。這比單純生成一張畫面實際得多。</p>
@@ -293,7 +294,7 @@
       <a href="#official">官方補充</a>
       <a href="#workflow">流程圖</a>
       <a href="#nontech">不懂程式怎麼用</a>
-      <a href="#adlink">ADLINK 場景</a>
+      <a href="#practice">實務場景</a>
       <a href="#limits">限制</a>
       <a href="#checklist">檢查清單</a>
       <a href="#sources">來源</a>
@@ -405,7 +406,7 @@
           <tr>
             <td>Claude Design 可做 designs、interactive prototypes、presentations 等</td>
             <td>它不是只拿來畫單頁 UI，也能做簡報、內部頁面和互動展示</td>
-            <td>ADLINK 教學頁、提案頁、簡報頁都能納入</td>
+            <td>Michael 教學筆記頁、提案頁、簡報頁都能納入</td>
           </tr>
           <tr>
             <td><code>/design</code> 可從 Claude Code 發起建立、編輯與同步</td>
@@ -415,12 +416,12 @@
           <tr>
             <td><code>/design-sync</code> 可把 codebase、設計檔或既有資產變成 design system</td>
             <td>風格不是每次重猜，而是能被抽成可重複使用的規則</td>
-            <td>內部工具、產品線與教學頁更容易維持一致</td>
+            <td>團隊工具、產品線與教學頁更容易維持一致</td>
           </tr>
           <tr>
             <td>官方建議先完成 design system 再大規模推廣</td>
             <td>如果沒有先定好品牌和元件規則，輸出會功能正常但風格 generic</td>
-            <td>非常適合你現在的 ADLINK 教學風格需求</td>
+            <td>非常適合你現在的 Michael 教學筆記風格需求</td>
           </tr>
           <tr>
             <td>可 export 為 HTML、PPTX、PDF，或 handoff 到 Claude Code</td>
@@ -513,7 +514,7 @@
           <h3>先把想法變成畫面</h3>
           <p>你不用先會畫設計稿，只要把目標、畫面區塊、使用者和要顯示的資訊講清楚，就能先產出一版可討論的介面。</p>
           <ul>
-            <li>適合：內部工具、儀表板、設定頁、流程頁</li>
+            <li>適合：團隊工具、儀表板、設定頁、流程頁</li>
             <li>好處：少掉大量抽象溝通</li>
           </ul>
         </div>
@@ -542,20 +543,20 @@
       <h2>官方現在最推薦的操作順序，其實很務實</h2>
       <ol class="step-list">
         <li><strong>先準備 design system。</strong> 官方很明確：如果沒有先建好 design system，輸出雖然能用，但會比較 generic，不像你自己的品牌。</li>
-        <li><strong>再開始做專案。</strong> 包含原型、dashboard、landing page、內部工具畫面等。</li>
+        <li><strong>再開始做專案。</strong> 包含原型、dashboard、landing page、團隊工具畫面等。</li>
         <li><strong>補上下文。</strong> 可以給 screenshot、既有設計、codebase 或文件，讓結果更像你真的要的東西。</li>
         <li><strong>先看第一版，不要急著求完美。</strong> 官方也把第一版定位成 starting point，真正的價值在後面的反覆修正。</li>
         <li><strong>需要時 handoff 給 Claude Code。</strong> 這一步才是把設計和開發接起來的關鍵。</li>
       </ol>
     </section>
 
-    <section id="adlink">
-      <h2>放到 ADLINK 情境裡，最有價值的是這四種用法</h2>
+    <section id="practice">
+      <h2>放到實務情境裡，最有價值的是這四種用法</h2>
       <div class="grid-2">
         <div class="card">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag">內部工具改版</span>
+            <span class="tag">團隊工具改版</span>
             <h3>先做畫面提案，再決定要不要改程式</h3>
             <p>像設備監控頁、權限頁、資料維護頁，先做出 2 到 3 個方向再開發，會比直接改畫面安全很多。</p>
           </div>
@@ -563,9 +564,9 @@
         <div class="card cyan">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag cyan">ADLINK 教學頁</span>
+            <span class="tag cyan">Michael 教學筆記頁</span>
             <h3>先探索版型，再落成 HTML</h3>
-            <p>可以先試標題節奏、圖表配置、色塊區分，等方向穩了再用 art agent 或 Codex 做正式 HTML。</p>
+            <p>可以先試標題節奏、圖表配置、色塊區分，等方向穩了再用內容輸出 agent 或 Codex 做正式 HTML。</p>
           </div>
         </div>
         <div class="card green">
@@ -606,7 +607,7 @@
           <tr>
             <td>沒有 design system 時，輸出容易 generic</td>
             <td>功能可用，但不像你的品牌與產品</td>
-            <td>先把 ADLINK 風格資產收斂起來</td>
+            <td>先把 個人教學網站風格資產收斂起來</td>
           </tr>
           <tr>
             <td>很大的 codebase 可能影響流暢度</td>
@@ -639,7 +640,7 @@
         <li>第一版只求方向，不要求完美，先把抽象需求變成可看畫面。</li>
         <li>用對話做大改，用元件註解做局部改，用直接編修做細節微調。</li>
         <li>確認最後成果能回到 Claude Code 或開發流程，否則它只是停在展示原型。</li>
-        <li>正式導入前，先找一個 ADLINK 內部頁面做小型試點，最容易看出價值。</li>
+        <li>正式導入前，先找一個 個人教學網站頁面做小型試點，最容易看出價值。</li>
       </ol>
     </section>
 
@@ -657,7 +658,7 @@
   </main>
 
   <footer>
-    ADLINK internal teaching style preview. 目前為預覽版本，確認內容後再進行寄送。
+    Michael AI Agent Lab teaching preview. 目前為預覽版本，確認內容後再進行寄送。
   </footer>
 </body>
 </html>

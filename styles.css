@@ -76,6 +76,21 @@ button {
   object-position: left center;
 }
 
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(105, 231, 247, 0.34);
+  border-radius: 9px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(105, 231, 247, 0.24), transparent 58%),
+    rgba(40, 198, 226, 0.08);
+  color: #69e7f7;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
 .brand strong,
 .brand small {
   display: block;
@@ -235,12 +250,26 @@ button {
   }
 }
 
-.summary-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  filter: saturate(0.98) contrast(1.04);
+.summary-visual {
+  display: grid;
+  place-items: end start;
+  padding: 22px;
+}
+
+.summary-visual span {
+  max-width: 8ch;
+  color: rgba(244, 247, 248, 0.92);
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 950;
+  line-height: 0.96;
+}
+
+.hero-motto {
+  color: #69e7f7;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .summary-copy {

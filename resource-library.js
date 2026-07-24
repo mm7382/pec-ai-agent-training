@@ -186,7 +186,7 @@
     const response = await fetch(config.dataUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`無法載入 ${config.title || "資料庫"}`);
     state.data = await response.json();
-    document.title = `${state.data.title || config.title} - PEC AI Agent 教育訓練資料庫`;
+    document.title = `${state.data.title || config.title} - Michael AI Agent Lab`;
     renderMeta();
     renderFilters();
     renderCards();

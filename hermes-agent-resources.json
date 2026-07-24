@@ -5,7 +5,7 @@
   "selectionMethod": "只收公開網站與公開影片，不匯入 Michael 本機 Hermes agent 私人資料。優先官方、GitHub、NVIDIA 與高相關教學來源。",
   "notes": [
     "本頁只整理公開 Hermes Agent / Nous Research 相關資料。",
-    "不包含 Michael 本機 /Users/michaelchuang/agent 的私人 agent 設定、路徑、token、Telegram 或內部記憶。",
+    "不包含私人本機 agent 設定、路徑、token 或內部記憶。",
     "每筆資料保留來源連結，詳細設定請以官方文件與 GitHub 為準。"
   ],
   "categories": [
@@ -93,7 +93,7 @@
       ],
       "audience": [
         "準備安裝 Hermes 的人",
-        "要寫內部安裝 SOP 的人"
+        "要寫團隊安裝 SOP 的人"
       ],
       "detail": [
         "Quickstart 的價值是建立一條最短可行路徑：安裝、設定模型供應商、驗證可用，再知道壞掉時怎麼查。",
@@ -267,7 +267,7 @@
       ],
       "detail": [
         "短影片的優點是快速，但缺點是細節容易不足。建議把它當作入口，先理解 Hermes 的主要步驟，再回官方文件做正式安裝。",
-        "如果要分享給同事，這類影片適合先建立興趣；真正落地仍要有內部 SOP 與安全設定。"
+        "如果要分享給同事，這類影片適合先建立興趣；真正落地仍要有團隊 SOP 與安全設定。"
       ],
       "tags": [
         "YouTube",

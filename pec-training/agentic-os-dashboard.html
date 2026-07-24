@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>告別 AI 孤島！手把手教你建立 Claude Agentic OS，睡覺時還能自動進化！ - ADLINK 教學</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>告別 AI 孤島！手把手教你建立 Claude Agentic OS，睡覺時還能自動進化！ - Michael 教學筆記</title>
   <style>
     :root {
       --ad-dark:#252C2E;
@@ -149,19 +150,19 @@
   <script src="../tutorial-gate.js?v=20260723-direct-nav-v3"></script>
 </head>
 <body>
-  <section class="ad-cover" aria-label="ADLINK PPT style cover">
+  <section class="ad-cover" aria-label="Michael teaching cover">
     <div class="ad-cover-inner">
       <div class="ad-cover-top">
-        <div class="ad-logo-white" aria-label="ADLINK logo">ADLINK</div>
-        <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br/>June 2026</div>
+        <div class="ad-logo-white" aria-label="個人品牌標記">Michael AI Agent Lab</div>
+        <div class="ad-cover-kicker">Michael Chuang<br/>June 2026</div>
       </div>
       <div class="ad-cover-main">
         <div class="ad-cover-label">Engineering AI Training</div>
         <h1>告別 AI 孤島！手把手教你建立 Claude Agentic OS，睡覺時還能自動進化！</h1>
-        <p class="ad-cover-subtitle">工程師內訓報告｜AI 工作流導入教材</p>
+        <p class="ad-cover-subtitle">工程師教學筆記｜AI 工作流導入教材</p>
       </div>
       <div class="ad-cover-footer">
-        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Michael AI Agent Lab</span>
         <span>HTML Training Material</span>
       </div>
     </div>
@@ -173,12 +174,12 @@
       
         <article class="card ">
           <h2>這堂課要解決的問題</h2>
-          <ul><li>多數團隊已經同時使用 Claude、ChatGPT、Gemini、Codex、本地模型與 Telegram agent，但工具之間缺少統一狀態、任務紀錄、成本視圖與改善回饋。</li><li>真正的瓶頸不是單一 prompt 品質，而是 AI 工作流沒有像系統一樣被觀測、管理與持續改進：誰在使用、花多少 token、產生什麼價值、哪些知識已過期、哪些 skills 已失效。</li><li>本課的核心是建立 Claude Agentic OS：把模型訂閱、知識庫、skills、agent 活動與自動化改善流程集中到一個可視化控制台，讓 AI 從單點工具升級為可營運的平台。</li><li>課後輸出不應是逐字稿，而是一份能對內報告的系統設計教材：包含架構、導入步驟、資料模型、KPI、治理風險與落地情境。</li></ul>
+          <ul><li>多數團隊已經同時使用 Claude、ChatGPT、Gemini、Codex、本地模型與通知型 agent，但工具之間缺少統一狀態、任務紀錄、成本視圖與改善回饋。</li><li>真正的瓶頸不是單一 prompt 品質，而是 AI 工作流沒有像系統一樣被觀測、管理與持續改進：誰在使用、花多少 token、產生什麼價值、哪些知識已過期、哪些 skills 已失效。</li><li>本課的核心是建立 Claude Agentic OS：把模型訂閱、知識庫、skills、agent 活動與自動化改善流程集中到一個可視化控制台，讓 AI 從單點工具升級為可營運的平台。</li><li>課後輸出不應是逐字稿，而是一份能對團隊說明的系統設計教材：包含架構、導入步驟、資料模型、KPI、治理風險與落地情境。</li></ul>
         </article>
       
         <article class="card okbox">
           <h2>教學對象</h2>
-          <ul><li>AI Agent / Hermes / Codex / Claude Code 使用者：已經有多個 agent、skills 或工作流，需要集中管理與量化成效的人。</li><li>系統工程師與平台負責人：需要把 AI 工具納入可觀測性、權限、資料來源、排程、成本與風險控制的人。</li><li>PM / 技術主管：需要知道 AI 投資是否有產出、哪些專案使用頻率最高、哪些知識庫需要維護、哪些自動化值得擴大導入的人。</li><li>內部工具開發者：想把 agent 能力包成可交付 dashboard，讓非工程角色也能看懂 AI 工作流狀態的人。</li><li>不適合對象：只想看單一聊天工具示範、尚未累積任何 agent / skills / 知識庫，也不需要管理成本與流程的人。</li></ul>
+          <ul><li>AI Agent / Hermes / Codex / Claude Code 使用者：已經有多個 agent、skills 或工作流，需要集中管理與量化成效的人。</li><li>系統工程師與平台負責人：需要把 AI 工具納入可觀測性、權限、資料來源、排程、成本與風險控制的人。</li><li>PM / 技術主管：需要知道 AI 投資是否有產出、哪些專案使用頻率最高、哪些知識庫需要維護、哪些自動化值得擴大導入的人。</li><li>團隊工具開發者：想把 agent 能力包成可交付 dashboard，讓非工程角色也能看懂 AI 工作流狀態的人。</li><li>不適合對象：只想看單一聊天工具示範、尚未累積任何 agent / skills / 知識庫，也不需要管理成本與流程的人。</li></ul>
         </article>
     </section>
 
@@ -186,7 +187,7 @@
     <section class="section visual-panel">
       <h2>Claude Agentic OS 架構</h2>
       <div class="route">
-        <div class="route-step"><b>01</b><span>Layer 1</span><p>AI Usage Dashboard - 目的為建立成本與額度觀測；資料來源包含訂閱方案、token usage、模型類型與任務類型；輸出為月成本、額度壓力、模型選型建議。</p></div><div class="route-step"><b>02</b><span>Layer 2</span><p>Knowledge Hub - 目的為統一知識來源與新鮮度；資料來源包含 Obsidian、Pinecone、Notion、HTML 教材、本地記憶與專案文件；輸出為關聯圖、過期文件、缺少索引的資料。</p></div><div class="route-step"><b>03</b><span>Layer 3</span><p>Skills Registry - 目的為管理可重複能力；資料來源包含 Codex skills、Hermes tools、agent prompt、風格規範與腳本；輸出為使用頻率、成功率、冷門技能、可封存清單。</p></div><div class="route-step"><b>04</b><span>Layer 4</span><p>Agent Activity Map - 目的為追蹤 agent 實際產出；資料來源包含 Hermes Agent、Claude Code、Codex、Telegram bot、local LLM 任務紀錄；輸出為專案活動、任務類型、產物連結與 owner。</p></div><div class="route-step"><b>05</b><span>Layer 5</span><p>Dreaming Engine - 目的為自動產生改善提案；資料來源為前四層觀測資料；輸出為成本優化、知識補強、skills 重訓、專案規則修正與人工審核清單。</p></div>
+        <div class="route-step"><b>01</b><span>Layer 1</span><p>AI Usage Dashboard - 目的為建立成本與額度觀測；資料來源包含訂閱方案、token usage、模型類型與任務類型；輸出為月成本、額度壓力、模型選型建議。</p></div><div class="route-step"><b>02</b><span>Layer 2</span><p>Knowledge Hub - 目的為統一知識來源與新鮮度；資料來源包含 Obsidian、Pinecone、Notion、HTML 教材、本地記憶與專案文件；輸出為關聯圖、過期文件、缺少索引的資料。</p></div><div class="route-step"><b>03</b><span>Layer 3</span><p>Skills Registry - 目的為管理可重複能力；資料來源包含 Codex skills、Hermes tools、agent prompt、風格規範與腳本；輸出為使用頻率、成功率、冷門技能、可封存清單。</p></div><div class="route-step"><b>04</b><span>Layer 4</span><p>Agent Activity Map - 目的為追蹤 agent 實際產出；資料來源包含自動化 agent、Claude Code、Codex、通知服務與 local LLM 任務紀錄；輸出為專案活動、任務類型、產物連結與 owner。</p></div><div class="route-step"><b>05</b><span>Layer 5</span><p>Dreaming Engine - 目的為自動產生改善提案；資料來源為前四層觀測資料；輸出為成本優化、知識補強、skills 重訓、專案規則修正與人工審核清單。</p></div>
       </div>
     </section>
 
@@ -194,7 +195,7 @@
     <section class="section visual-panel">
       <h2>工程師操作模型</h2>
       <div class="system-loop">
-        <div class="loop-node"><b>STEP 1</b><span>Step 1</span><p>定義導入範圍 - 先決定要管理個人工作站、單一專案，或整個 agent 團隊；同步定義 KPI，例如月成本、節省工時、知識過期率與建議採納率。</p></div><div class="loop-node"><b>STEP 2</b><span>Step 2</span><p>安裝 OS template - 放到 VS Code、Cursor 或既有專案資料夾，讓 Claude 依 `CLAUDE.md` 或專案指令建立 dashboard、本機服務與資料目錄。</p></div><div class="loop-node"><b>STEP 3</b><span>Step 3</span><p>建立工具清冊 - 掃描 Claude App、Claude Code、Codex、Gemini CLI、Telegram bot、本地 LLM、VS Code extension 與自動化腳本，標記 owner 與用途。</p></div><div class="loop-node"><b>STEP 4</b><span>Step 4</span><p>連接知識來源 - 串接 Obsidian、Pinecone、Notion、HTML 教材、會議紀錄與本機文件，並記錄更新時間、來源可信度與可檢索狀態。</p></div><div class="loop-node"><b>STEP 5</b><span>Step 5</span><p>建立價值模型 - 設定人員角色、時薪或每小時價值、任務類型與節省時間估算方式，讓每個 AI artifact 都能回推成本效益。</p></div><div class="loop-node"><b>STEP 6</b><span>Step 6</span><p>設定 Dreaming 排程 - 每日或每週掃描前四層資料，輸出改善建議；所有建議都必須包含原因、影響範圍、預期收益與 owner review 狀態。</p></div>
+        <div class="loop-node"><b>STEP 1</b><span>Step 1</span><p>定義導入範圍 - 先決定要管理個人工作站、單一專案，或整個 agent 團隊；同步定義 KPI，例如月成本、節省工時、知識過期率與建議採納率。</p></div><div class="loop-node"><b>STEP 2</b><span>Step 2</span><p>安裝 OS template - 放到 VS Code、Cursor 或既有專案資料夾，讓 Claude 依 `CLAUDE.md` 或專案指令建立 dashboard、本機服務與資料目錄。</p></div><div class="loop-node"><b>STEP 3</b><span>Step 3</span><p>建立工具清冊 - 掃描 Claude App、Claude Code、Codex、Gemini CLI、通知服務、本地 LLM、VS Code extension 與自動化腳本，標記 owner 與用途。</p></div><div class="loop-node"><b>STEP 4</b><span>Step 4</span><p>連接知識來源 - 串接 Obsidian、Pinecone、Notion、HTML 教材、會議紀錄與本機文件，並記錄更新時間、來源可信度與可檢索狀態。</p></div><div class="loop-node"><b>STEP 5</b><span>Step 5</span><p>建立價值模型 - 設定人員角色、時薪或每小時價值、任務類型與節省時間估算方式，讓每個 AI artifact 都能回推成本效益。</p></div><div class="loop-node"><b>STEP 6</b><span>Step 6</span><p>設定 Dreaming 排程 - 每日或每週掃描前四層資料，輸出改善建議；所有建議都必須包含原因、影響範圍、預期收益與 owner review 狀態。</p></div>
       </div>
     </section>
 
@@ -219,13 +220,13 @@
         </article>
       
         <article class="card okbox">
-          <h2>ADLINK 可落地場景</h2>
-          <ul><li>Agent 管理中心：集中查看小愛、art_bot、PM bot、Telegram bot、Codex 任務與本地 LLM 工作流，讓每個 agent 都有定位、owner、產物與使用狀態。</li><li>教學教材產線：art_bot 接收影片或文件後，自動取得內容來源、轉成 ADLINK 內訓 HTML、提供預覽、等待檔名與儲存位置確認，再存到 Mac mini 本機。</li><li>PM / 工程協作看板：把需求整理、會議紀錄、規格摘要、客戶問題與測試紀錄連到同一個任務流，降低資訊散落在聊天與本機檔案中的風險。</li><li>成本與效益看板：追蹤不同模型、agent、任務類型的 token 成本與節省工時，找出高成本低價值任務，並提出模型切換建議。</li><li>知識庫治理：檢查內訓 HTML、產品資料、會議紀錄、PM 文件是否過期、重複、缺少索引或沒有來源，避免 agent 用舊資料回答。</li><li>技能維護：找出長期不用的 skills、重複功能、失效依賴與需要重訓的 ADLINK 風格規範，讓 agent 能力庫保持乾淨。</li><li>夜間自動改善：每天或每週產出改善建議，包含重構腳本、封存技能、補文件、更新知識庫、降低成本與補驗收流程。</li></ul>
+          <h2>實務上可落地場景</h2>
+          <ul><li>Agent 管理中心：集中查看協調 agent、內容輸出 agent、PM workflow agent、通知型 agent、Codex 任務與本地 LLM 工作流，讓每個 agent 都有定位、owner、產物與使用狀態。</li><li>教學教材產線：內容輸出 agent 接收影片或文件後，自動取得內容來源、轉成 個人教學 HTML、提供預覽、等待檔名與儲存位置確認，再存到本機工作站或版本化資料夾。</li><li>PM / 工程協作看板：把需求整理、會議紀錄、規格摘要、客戶問題與測試紀錄連到同一個任務流，降低資訊散落在聊天與本機檔案中的風險。</li><li>成本與效益看板：追蹤不同模型、agent、任務類型的 token 成本與節省工時，找出高成本低價值任務，並提出模型切換建議。</li><li>知識庫治理：檢查教學 HTML、產品資料、會議紀錄、PM 文件是否過期、重複、缺少索引或沒有來源，避免 agent 用舊資料回答。</li><li>技能維護：找出長期不用的 skills、重複功能、失效依賴與需要重訓的 個人教學風格規範，讓 agent 能力庫保持乾淨。</li><li>夜間自動改善：每天或每週產出改善建議，包含重構腳本、封存技能、補文件、更新知識庫、降低成本與補驗收流程。</li></ul>
         </article>
       
         <article class="card warning">
           <h2>導入風險與控制</h2>
-          <ul><li>權限風險：API key、Telegram token、Notion token 與本地檔案權限必須分層保存；dashboard 只能顯示狀態，不應直接暴露 token 原文。</li><li>資料風險：知識庫來源要有更新時間、來源路徑與可信度；沒有來源或無法追溯的內容只能標成 draft，不能進入正式教材。</li><li>自動化風險：Dreaming 建議不得直接修改正式資料；要先進入 review queue，由 owner 確認後才可套用、封存或刪除。</li><li>成本風險：模型切換不能只看便宜；需要依任務風險分級，將高推理、客戶輸出與工程判斷保留在高可靠模型。</li><li>品質風險：每個 HTML 教材至少要檢查繁體中文、來源一致性、內容是否具體、是否出現空洞章節、是否誤把逐字稿當教案。</li><li>營運風險：agent 數量增加後必須有 owner、版本、用途、停用條件與 rollback 設計，否則控制台會變成另一個資訊孤島。</li></ul>
+          <ul><li>權限風險：API key、通知服務 token、Notion token 與本地檔案權限必須分層保存；dashboard 只能顯示狀態，不應直接暴露 token 原文。</li><li>資料風險：知識庫來源要有更新時間、來源路徑與可信度；沒有來源或無法追溯的內容只能標成 draft，不能進入正式教材。</li><li>自動化風險：Dreaming 建議不得直接修改正式資料；要先進入 review queue，由 owner 確認後才可套用、封存或刪除。</li><li>成本風險：模型切換不能只看便宜；需要依任務風險分級，將高推理、客戶輸出與工程判斷保留在高可靠模型。</li><li>品質風險：每個 HTML 教材至少要檢查繁體中文、來源一致性、內容是否具體、是否出現空洞章節、是否誤把逐字稿當教案。</li><li>營運風險：agent 數量增加後必須有 owner、版本、用途、停用條件與 rollback 設計，否則控制台會變成另一個資訊孤島。</li></ul>
         </article>
       
         <article class="card warning">
@@ -240,7 +241,7 @@
       
         <article class="card okbox">
           <h2>驗收清單</h2>
-          <ul><li>能說明 AI 工具孤島會造成的管理問題：成本不可見、知識不可追溯、skills 失效、agent 產物散落與改善建議無法閉環。</li><li>能畫出 Agentic OS 的五層架構：Usage、Knowledge、Skills、Agents、Dreaming，並說明每層的資料來源、輸出與 owner。</li><li>能列出 dashboard 必須追蹤的指標：token、成本、訂閱利用率、agent 活動、skill 成功率、知識庫新鮮度、節省工時、建議採納率。</li><li>能設計一個 ADLINK 內部 agent 管理中心的最小可行版本，至少包含 art_bot、小愛、PM bot、Codex 任務與本地 LLM 工作流。</li><li>能為 HTML 教材產線定義端到端流程：來源取得、內容理解、ADLINK 風格生成、預覽確認、檔名確認、儲存位置確認與本機歸檔。</li><li>能判斷哪些改善建議可自動採納，哪些必須由 owner review，並保留 audit log 與 rollback 路徑。</li><li>能辨識不合格輸出：內容空洞、與來源不相關、出現簡體字、只貼逐字稿、缺少工程應用、沒有來源或沒有驗收標準。</li></ul>
+          <ul><li>能說明 AI 工具孤島會造成的管理問題：成本不可見、知識不可追溯、skills 失效、agent 產物散落與改善建議無法閉環。</li><li>能畫出 Agentic OS 的五層架構：Usage、Knowledge、Skills、Agents、Dreaming，並說明每層的資料來源、輸出與 owner。</li><li>能列出 dashboard 必須追蹤的指標：token、成本、訂閱利用率、agent 活動、skill 成功率、知識庫新鮮度、節省工時、建議採納率。</li><li>能設計一個 個人 agent 管理中心的最小可行版本，至少包含內容輸出 agent、協調 agent、PM workflow agent、Codex 任務與本地 LLM 工作流。</li><li>能為 HTML 教材產線定義端到端流程：來源取得、內容理解、個人教學風格生成、預覽確認、檔名確認、儲存位置確認與本機歸檔。</li><li>能判斷哪些改善建議可自動採納，哪些必須由 owner review，並保留 audit log 與 rollback 路徑。</li><li>能辨識不合格輸出：內容空洞、與來源不相關、出現簡體字、只貼逐字稿、缺少工程應用、沒有來源或沒有驗收標準。</li></ul>
         </article>
     </section>
 

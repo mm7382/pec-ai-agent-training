@@ -1,17 +1,5 @@
 (function () {
-  const identityKey = "pecTrainingVisitor";
-  const returnToKey = "pecTrainingReturnTo";
   const trackingEndpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
-
-  function readVisitor() {
-    try {
-      const visitor = JSON.parse(localStorage.getItem(identityKey) || "null");
-      if (!visitor?.name || !visitor?.department) return null;
-      return visitor;
-    } catch {
-      return null;
-    }
-  }
 
   function formatLocalTime(date = new Date()) {
     return new Intl.DateTimeFormat("zh-Hant-TW", {
@@ -25,14 +13,13 @@
     }).format(date);
   }
 
-  function trackTutorialView(visitor) {
+  function trackTutorialView() {
     if (!trackingEndpoint) return;
     if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
     const payload = {
       type: "tutorial_view",
       occurredAt: new Date().toISOString(),
       occurredAtLocal: formatLocalTime(),
-      visitor,
       page: {
         title: document.title,
         url: window.location.href,
@@ -167,13 +154,5 @@
   }
 
   addSiteNav();
-
-  const visitor = readVisitor();
-  if (!visitor) {
-    sessionStorage.setItem(returnToKey, window.location.href);
-    window.location.replace(homePath());
-    return;
-  }
-
-  trackTutorialView(visitor);
+  trackTutorialView();
 }());

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Codex 與 Gemini CLI 工程師內訓簡介</title>
+  <title>Codex 與 Gemini CLI 工程師教學簡介</title>
   
   <style>
     :root {
@@ -622,7 +622,7 @@
       border-top:1px solid var(--ad-line);
     }
     footer::after,.footer::after{
-      content:"ADLINK | Leading Edge AI Computing";
+      content:"Michael AI Agent Lab";
       display:block;
       margin-top:18px;
       padding-top:12px;
@@ -660,11 +660,11 @@
 </head>
 <body>
 
-<section class="ad-cover" aria-label="ADLINK PPT style cover">
+<section class="ad-cover" aria-label="Michael teaching cover">
   <div class="ad-cover-inner">
     <div class="ad-cover-top">
-      <div class="ad-logo-white" aria-label="ADLINK logo"></div>
-      <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br/>April 2026</div>
+      <div class="ad-logo-white" aria-label="個人品牌標記"></div>
+      <div class="ad-cover-kicker">Michael Chuang<br/>April 2026</div>
     </div>
     <div class="ad-cover-main">
       <div class="ad-cover-label">Engineering AI Training</div>
@@ -672,7 +672,7 @@
       <p class="ad-cover-subtitle">讓工程師把 AI Agent 用在日常開發與文件自動化</p>
     </div>
     <div class="ad-cover-footer">
-      <span>ADLINK | Leading Edge AI Computing</span>
+      <span>Michael AI Agent Lab</span>
       <span>HTML Training Material</span>
     </div>
   </div>
@@ -681,13 +681,13 @@
 <button class="print-btn" onclick="window.print()">列印 / 轉 PDF</button>
   <header>
     <div class="wrap">
-      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div class="eyebrow">Engineering AI Tool Training</div>
       <h1>Codex & Gemini CLI 簡介：讓工程師把 AI Agent 用在日常開發與文件自動化</h1>
       <p class="subtitle">對象：RF / SIE / EMC / Thermal / ME 工程師。目標不是把每個人變成軟體工程師，而是讓大家知道：什麼工作適合交給 AI CLI、怎麼下指令、怎麼驗證、怎麼避免資安風險。</p>
       <div class="meta">
         <span class="pill">版本：2026-05-21</span>
-        <span class="pill">形式：30–45 分鐘內訓</span>
+        <span class="pill">形式：30–45 分鐘教學</span>
         <span class="pill">適用：Mac / Windows / VS Code / Terminal</span>
         <span class="pill">重點：功能、實例、比較、工程應用</span>
       </div>
@@ -734,12 +734,12 @@
       <div class="card col-5"><h3>Codex 常見入口</h3><ul><li><strong>Codex CLI：</strong>在 terminal 裡使用。</li><li><strong>Codex IDE：</strong>在 VS Code / Cursor / Windsurf 類 IDE 中使用。</li><li><strong>Codex Web / Cloud：</strong>把工作委派到雲端環境處理。</li><li><strong>Codex Skills：</strong>把常用流程封裝成可重複使用的技能。</li></ul></div>
     </div>
     <h3>簡單實例：幫 SIE 修 Excel 掃描工具</h3>
-    <pre><code>cd /Users/michaelchuang/AD/ADLink_PM_bot
+    <pre><code>cd ~/agent-demo/pm-workflow-bot
 codex
 
 請閱讀這個專案，修正 tools/excelScanner.js 的語法錯誤。
 限制：
-1. 不要改動 Telegram bot 的主要流程。
+1. 不要改動通知機器人的主要流程。
 2. 修正後請執行 node -c tools/excelScanner.js。
 3. 請列出你修改了哪些地方，以及為什麼。</code></pre>
   </div></section>
@@ -779,7 +779,7 @@ gemini
   <section id="cases"><div class="wrap">
     <h2>6. 五個部門可直接套用的簡單實例</h2>
     <div class="grid">
-      <div class="card col-6 role sie"><span class="tag blue">SIE 實例</span><h3>Excel Open Issue Scanner</h3><p>把多個 project weekly Excel 掃描出 Critical Open Issues，依 BIOS / ME / SIE / RF / Thermal / EMC / Safety 分類，產生 Telegram 摘要與 HTML 報表。</p><pre><code>請掃描 ./weekly_status 下所有 xlsx，找出包含 Critical 與 open 的欄位，輸出 critical_issues_report.html。</code></pre></div>
+      <div class="card col-6 role sie"><span class="tag blue">SIE 實例</span><h3>Excel Open Issue Scanner</h3><p>把多個 project weekly Excel 掃描出 Critical Open Issues，依 BIOS / ME / SIE / RF / Thermal / EMC / Safety 分類，產生通知摘要與 HTML 報表。</p><pre><code>請掃描 ./weekly_status 下所有 xlsx，找出包含 Critical 與 open 的欄位，輸出 critical_issues_report.html。</code></pre></div>
       <div class="card col-6 role rf"><span class="tag purple">RF 實例</span><h3>RF Test Plan Reviewer</h3><p>檢查測試計畫是否缺少頻段、天線配置、功率條件、測試距離、pass/fail criteria。</p><pre><code>請讀取 RF_test_plan.docx，列出缺漏項目，並產生一版 reviewer comment。</code></pre></div>
       <div class="card col-6 role emc"><span class="tag orange">EMC 實例</span><h3>EMC Fail Log Summary</h3><p>把實驗室記錄整理成頻率、方向、整改措施、下一步 owner 的表格。</p><pre><code>請把 ./emc_fail_logs 內的紀錄整理成表格：frequency、mode、fail level、action、owner。</code></pre></div>
       <div class="card col-6 role thermal"><span class="tag red">Thermal 實例</span><h3>Thermal Chamber Report</h3><p>讀取 chamber log 與 recorder log，產生 max temp、穩態時間、pass/fail 與異常點摘要。</p><pre><code>請比較 chamber_log.csv 與 recorder_log.csv，產生 thermal_summary.html。</code></pre></div>
@@ -863,7 +863,7 @@ gemini
   </div></section>
 
   <section id="workshop"><div class="wrap">
-    <h2>10. 30–45 分鐘內訓安排</h2>
+    <h2>10. 30–45 分鐘教學安排</h2>
     <table>
       <tr><th>時間</th><th>內容</th><th>講師重點</th></tr>
       <tr><td>0–5 min</td><td>為什麼工程師需要 AI CLI</td><td>從重複整理、報表、log、Excel issue 開始，不要先談取代人。</td></tr>
@@ -891,6 +891,6 @@ gemini
     <p class="mini">備註：本教材依公開資料與工程應用情境整理，未使用公司機密資料。若要完全貼齊影片逐字稿，可再補上字幕檔，我可以把章節改成逐段對照版。</p>
   </div></section>
 
-  <footer><div class="wrap">Codex & Gemini CLI 工程師內訓教材｜建議搭配實際專案資料夾與 sample files 現場 demo。</div></footer>
+  <footer><div class="wrap">Codex & Gemini CLI 工程師教學筆記｜建議搭配實際專案資料夾與 sample files 現場 demo。</div></footer>
 </body>
 </html>

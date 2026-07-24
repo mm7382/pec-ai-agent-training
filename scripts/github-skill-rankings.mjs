@@ -192,7 +192,7 @@ const manualRepoOverrides = {
 function githubHeaders() {
   const headers = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "adlink-github-skill-rankings",
+    "User-Agent": "michael-ai-agent-lab-github-skill-rankings",
     "X-GitHub-Api-Version": "2022-11-28",
   };
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -212,7 +212,7 @@ async function fetchPublicJson(url) {
   const response = await fetch(url, {
     headers: {
       Accept: "application/json,text/plain,*/*",
-      "User-Agent": "adlink-github-skill-rankings",
+      "User-Agent": "michael-ai-agent-lab-github-skill-rankings",
     },
   });
   const body = await response.text();

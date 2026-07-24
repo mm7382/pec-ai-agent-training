@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Loop Engineering 實作指南 - ADLINK 內訓教材</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Loop Engineering 實作指南 - Michael AI Agent Lab 教學筆記</title>
   <style>
     :root {
       --dark: #252C2E;
@@ -18,8 +19,8 @@
       --light: #F4F5F6;
       --white: #FFFFFF;
       --shadow: 0 18px 44px rgba(37, 44, 46, .13);
-      --logo-report: url("../assets/brand/adlink-report-logo-charcoal-bg.jpg");
-      --logo-full: url("../assets/brand/adlink-logo-full.png");
+      --logo-report: none;
+      --logo-full: none;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -513,16 +514,16 @@
   <div class="cover">
     <div class="cover-inner">
       <div class="cover-top">
-        <div class="report-logo" aria-label="ADLINK"></div>
-        <div class="cover-kicker">Internal Training · AI Engineering · 2026-06-12</div>
+        <div class="report-logo" aria-label="Michael AI Agent Lab"></div>
+        <div class="cover-kicker">Public Learning Note · AI Engineering · 2026-06-12</div>
       </div>
       <div class="cover-main">
-        <div class="label">ADLINK Teaching File</div>
+        <div class="label">Michael Teaching File</div>
         <h1>Loop Engineering<br>實作指南</h1>
         <p class="subtitle">從「手動提示 agent」轉成「設計可驗證、可停止、可回滾的工作循環」，讓 AI coding agent 真正成為工程系統的一部分。</p>
       </div>
       <div class="cover-footer">
-        <span>Audience: ADLINK Engineering / PM / Hermes Agent Ops</span>
+        <span>Audience: Engineering / PM / AI Agent Ops</span>
         <span>Confidence: Medium · Whisper-assisted review</span>
       </div>
     </div>
@@ -530,10 +531,10 @@
 
   <header>
     <div class="wrap">
-      <div class="ad-logo-full" aria-label="ADLINK"></div>
+      <div class="ad-logo-full" aria-label="Michael AI Agent Lab"></div>
       <span class="eyebrow">Course Brief</span>
       <h2>這堂課不是教更漂亮的 Prompt，而是教你如何設計 agent 的閉環。</h2>
-      <p class="lead">Loop Engineering 的核心是把需求拆成可觀察的狀態、可執行的動作、可判定的驗收條件與可控的停止點。對 ADLINK 來說，這直接影響 Codex、Hermes、Wiki Agent、art agent 與日常工程自動化的可靠度。</p>
+      <p class="lead">Loop Engineering 的核心是把需求拆成可觀察的狀態、可執行的動作、可判定的驗收條件與可控的停止點。對實務團隊 來說，這直接影響 Codex、Wiki Agent、內容輸出 agent 與日常工程自動化的可靠度。</p>
       <div class="metrics">
         <div class="metric"><b>4</b><small>Loop 必備控制：目標、工具、驗證、停止</small></div>
         <div class="metric"><b>3</b><small>落地層級：測試自修、目標持續、動態編排</small></div>
@@ -549,7 +550,7 @@
       <a href="#framework">框架</a>
       <a href="#levels">三層落地</a>
       <a href="#terms">術語</a>
-      <a href="#adlink">ADLINK 場景</a>
+      <a href="#practice">實務場景</a>
       <a href="#comparison">控制表</a>
       <a href="#rollout">導入</a>
       <a href="#summary">總結</a>
@@ -583,7 +584,7 @@
             <p>低階程式碼轉譯會被自動化壓縮；會設計流程、驗收、回滾與 agent 協作的人，才是自動化流水線的架構師。</p>
           </div>
         </div>
-        <div class="callout">ADLINK 的重點不是讓 agent 更自由，而是讓 agent 在可觀察、可糾錯、可追責的邊界內持續工作。</div>
+        <div class="callout">這類工作流的重點不是讓 agent 更自由，而是讓 agent 在可觀察、可糾錯、可追責的邊界內持續工作。</div>
       </div>
     </section>
 
@@ -660,7 +661,7 @@
       <div class="section-head">
         <div>
           <h2>核心術語與正確用法</h2>
-          <p>以下名詞用於 ADLINK agent 工作流討論，避免把不同層級的控制機制混在一起。</p>
+          <p>以下名詞用於 AI Agent 工作流討論，避免把不同層級的控制機制混在一起。</p>
         </div>
         <div class="section-index">04</div>
       </div>
@@ -690,10 +691,10 @@
       </div>
     </section>
 
-    <section id="adlink">
+    <section id="practice">
       <div class="section-head">
         <div>
-          <h2>ADLINK / Hermes 可以先 Loop 化的工作</h2>
+          <h2>AI Agent 工作流可以先 Loop 化的工作</h2>
           <p>先選重複、可驗證、風險可控的流程；正式知識與客戶內容仍保留人工審核點。</p>
         </div>
         <div class="section-index">05</div>
@@ -711,12 +712,12 @@
             <p>長篇素材先壓成 Evidence Notes 與 Lesson Brief，再進入正式 wiki。原始資料保留在 raw，不直接當成正式知識。</p>
           </div>
           <div class="card">
-            <span class="tag purple">art agent</span>
+            <span class="tag purple">內容輸出 agent</span>
             <h3>教學 HTML 生產線</h3>
-            <p>建立固定流程：素材理解、官方校正、ADLINK 版型、桌手機檢查、再問是否傳送。避免每次重做同一組判斷。</p>
+            <p>建立固定流程：素材理解、官方校正、個人教學版型、桌手機檢查、再問是否傳送。避免每次重做同一組判斷。</p>
           </div>
           <div class="card">
-            <span class="tag orange">ADLink_PM</span>
+            <span class="tag orange">PM workflow</span>
             <h3>issue / email / report 摘要</h3>
             <p>將長信件與報告拆成異常、風險、owner、deadline、下一步。確認欄位完整後再通知，不讓 agent 直接改正式紀錄。</p>
           </div>
@@ -739,7 +740,7 @@
               <th>模式</th>
               <th>適合任務</th>
               <th>必備控制</th>
-              <th>ADLINK 建議</th>
+              <th>建議</th>
             </tr>
           </thead>
           <tbody>
@@ -823,13 +824,13 @@
           <li>是否把成功的流程沉澱成 skill、AGENTS.md、CLAUDE.md 或 memory？</li>
           <li>是否保留原始證據，並只把整理後的結果進正式知識庫？</li>
         </ul>
-        <div class="callout">ADLINK 的下一步：先把 Codex 修 code、Wiki raw 整理、art agent 教學頁、ADLink_PM issue 摘要做成小型驗證 loop，再逐步擴展到多 agent 編排。</div>
+        <div class="callout">下一步可以先把 Codex 修 code、Wiki raw 整理、教學頁產製、PM issue 摘要做成小型驗證 loop，再逐步擴展到多 agent 編排。</div>
       </div>
     </section>
   </main>
 
   <footer>
-    ADLINK Internal Training · Loop Engineering · Prepared for Hermes Agent Workflows
+    Michael AI Agent Lab · Loop Engineering · Prepared for AI Agent workflow learning
   </footer>
 </body>
 </html>

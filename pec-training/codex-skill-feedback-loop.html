@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Codex Skill：把常用工作變成 AI SOP - ADLINK 內容分析教材</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Codex Skill：把常用工作變成 AI SOP - Michael AI Agent 教學筆記</title>
   <style>
-    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:url("../assets/brand/adlink-logo-white.png");--logo-full:url("../assets/brand/adlink-logo-full.png")}
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:none;--logo-full:none}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75;overflow-x:hidden}
@@ -73,10 +74,10 @@
   <script src="../tutorial-gate.js?v=20260723-direct-nav-v3"></script>
 </head>
 <body>
-  <section class="cover" aria-label="ADLINK cover">
+  <section class="cover" aria-label="Michael cover">
     <div class="cover-inner">
       <div class="cover-top">
-        <div class="ad-logo-white" aria-label="ADLINK logo"></div>
+        <div class="ad-logo-white" aria-label="個人品牌標記"></div>
         <div class="cover-kicker">Course Material<br/>HTML Training</div>
       </div>
       <div class="cover-main">
@@ -85,7 +86,7 @@
         <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
       </div>
       <div class="cover-footer">
-        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Michael AI Agent Lab</span>
         <span>Research-backed Course Material</span>
       </div>
     </div>
@@ -93,7 +94,7 @@
 
   <header>
     <div class="wrap">
-      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
       <h1>Codex Skill：把常用工作變成 AI SOP</h1>
       <p class="lead">本教材聚焦本地 agent 如何把修正紀錄、偏好與工作 know-how 回寫成 Codex Skill，讓 Codex 更懂使用者與團隊 SOP。</p>
@@ -112,7 +113,7 @@
       <a href="#map">整體關係圖</a>
       <a href="#terms">核心概念</a>
       <a href="#extra">優化閉環</a>
-      <a href="#examples">ADLINK 落地</a>
+      <a href="#examples">實務落地</a>
       
       <a href="#summary">一頁式重點</a>
     </div>
@@ -122,7 +123,7 @@
     <section id="outline">
       <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
       <div class="grid">
-          <article class="card span-6"><h3>核心問題：本地 agent 學到的東西會流失</h3><p>本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</p><div><span class="tag blue">Local Agent</span><span class="tag blue">Know-how</span><span class="tag blue">Feedback</span></div></article><article class="card span-6"><h3>為什麼回寫到 Codex Skill</h3><p>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</p><div><span class="tag blue">Codex Skill</span><span class="tag blue">OpenAI Skills</span><span class="tag blue">Reusable Workflow</span></div></article><article class="card span-6"><h3>回寫流程：從修正紀錄變成 Skill</h3><p>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</p><div><span class="tag blue">Distillation</span><span class="tag blue">Trigger</span><span class="tag blue">Quality Gate</span></div></article><article class="card span-6"><h3>好處一：Codex 更懂使用者</h3><p>當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</p><div><span class="tag blue">Personalization</span><span class="tag blue">Context</span><span class="tag blue">Consistency</span></div></article><article class="card span-6"><h3>好處二：Skill 會越用越準</h3><p>每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</p><div><span class="tag blue">Evaluation</span><span class="tag blue">Anti-pattern</span><span class="tag blue">Iteration</span></div></article><article class="card span-6"><h3>好處三：團隊 know-how 可以共用</h3><p>Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</p><div><span class="tag blue">Workspace</span><span class="tag blue">Open Standard</span><span class="tag blue">Governance</span></div></article><article class="card span-6"><h3>ADLINK 落地做法</h3><p>先從 art agent 教材產線開始，把你已確認的偏好回寫成 Codex Skill；穩定後再擴到 PR review、問題分類與客戶摘要。</p><div><span class="tag blue">ADLINK</span><span class="tag blue">Internal Workflow</span><span class="tag blue">Pilot</span></div></article>
+          <article class="card span-6"><h3>核心問題：Agent 學到的東西會流失</h3><p>AI agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</p><div><span class="tag blue">Local Agent</span><span class="tag blue">Know-how</span><span class="tag blue">Feedback</span></div></article><article class="card span-6"><h3>為什麼回寫到 Codex Skill</h3><p>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</p><div><span class="tag blue">Codex Skill</span><span class="tag blue">OpenAI Skills</span><span class="tag blue">Reusable Workflow</span></div></article><article class="card span-6"><h3>回寫流程：從修正紀錄變成 Skill</h3><p>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</p><div><span class="tag blue">Distillation</span><span class="tag blue">Trigger</span><span class="tag blue">Quality Gate</span></div></article><article class="card span-6"><h3>好處一：Codex 更懂使用者</h3><p>當 Codex Skill 裡有使用者偏好、團隊格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</p><div><span class="tag blue">Personalization</span><span class="tag blue">Context</span><span class="tag blue">Consistency</span></div></article><article class="card span-6"><h3>好處二：Skill 會越用越準</h3><p>每次 AI agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</p><div><span class="tag blue">Evaluation</span><span class="tag blue">Anti-pattern</span><span class="tag blue">Iteration</span></div></article><article class="card span-6"><h3>好處三：團隊 know-how 可以共用</h3><p>Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</p><div><span class="tag blue">Workspace</span><span class="tag blue">Open Standard</span><span class="tag blue">Governance</span></div></article><article class="card span-6"><h3>實務落地做法</h3><p>先從教材產製流程開始，把已確認的偏好回寫成 Codex Skill；穩定後再擴到 PR review、問題分類與摘要整理。</p><div><span class="tag blue">Learning Workflow</span><span class="tag blue">Internal Workflow</span><span class="tag blue">Prototype</span></div></article>
       </div>
     </section>
 
@@ -131,7 +132,7 @@
       <div class="grid">
         <div class="card span-12">
           <div class="flow">
-            <div class="flow-step"><b>核心問題：本地 agent 學到的東西會流失</b>本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</div><div class="flow-step"><b>為什麼回寫到 Codex Skill</b>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</div><div class="flow-step"><b>回寫流程：從修正紀錄變成 Skill</b>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</div><div class="flow-step"><b>好處一：Codex 更懂使用者</b>當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</div><div class="flow-step"><b>好處二：Skill 會越用越準</b>每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</div>
+            <div class="flow-step"><b>核心問題：Agent 學到的東西會流失</b>AI agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</div><div class="flow-step"><b>為什麼回寫到 Codex Skill</b>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</div><div class="flow-step"><b>回寫流程：從修正紀錄變成 Skill</b>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</div><div class="flow-step"><b>好處一：Codex 更懂使用者</b>當 Codex Skill 裡有使用者偏好、團隊格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</div><div class="flow-step"><b>好處二：Skill 會越用越準</b>每次 AI agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</div>
           </div>
           <div class="example"><strong>閱讀方式：</strong>先看回寫閉環，再看每一步如何把 agent 修正紀錄變成 Codex Skill 的 trigger、steps、checks 與 examples。</div>
         </div>
@@ -142,33 +143,33 @@
       <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
       <div class="grid">
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">核心問題：本地 agent 學到的東西會流失</div><div class="term-sub">本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</div></div><span class="pill">核心概念</span></div>
+          <div class="term-head"><div><div class="term-title">核心問題：Agent 學到的東西會流失</div><div class="term-sub">AI agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</div></div><span class="pill">核心概念</span></div>
           <ul><li>要收集的不是聊天內容本身，而是可重複的方法：觸發條件、操作順序、禁用事項、輸出格式與品質檢查。</li><li>每次人工修正都應被視為訓練資料：哪裡重複、哪裡誤判、哪個偏好要永久保留。</li><li>目標是把一次性的使用經驗，整理成 Codex 下次能自動使用的工作規則。</li></ul>
-          <div class="example"><strong>教學提示：</strong>art agent 被你修正過 ADLINK logo、禁用字、手機版面與寄信流程後，這些規則不能只留在對話裡，要進 Codex Skill。</div>
+          <div class="example"><strong>教學提示：</strong>教材產製 agent 被修正過品牌標記、禁用字、手機版面與交付流程後，這些規則不能只留在對話裡，要進 Codex Skill。</div>
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">為什麼回寫到 Codex Skill</div><div class="term-sub">OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</div></div><span class="pill">核心概念</span></div>
           <ul><li>Skills 支援 Codex 與 API，代表這些 workflow 不只存在 ChatGPT 介面，也可以進入工程 agent 工作流。</li><li>Skills 遵循 Agent Skills open standard，可從一個產品下載後安裝到另一個產品。</li><li>Codex 是寫 code、review code、ship code 的 agent；把 SOP 寫成 skill，等於讓 Codex 先讀懂你的工作方式再動手。</li></ul>
-          <div class="example"><strong>教學提示：</strong>把「產 ADLINK HTML 前先查官方資料、禁止顯示來源時間戳、手機版不能水平溢出」寫成 skill，比每次口頭提醒穩定。</div>
+          <div class="example"><strong>教學提示：</strong>把「產 個人教學 HTML 前先查官方資料、禁止顯示來源時間戳、手機版不能水平溢出」寫成 skill，比每次口頭提醒穩定。</div>
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">回寫流程：從修正紀錄變成 Skill</div><div class="term-sub">不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>Trigger：什麼任務要使用這個 skill，例如來源連結轉 ADLINK 教材、PR review、客戶問題摘要。</li><li>Steps：固定流程，例如先取得來源、再做 evidence notes、再上網查官方資料、最後渲染 HTML。</li><li>Checks：品質閘門，例如繁體中文、ADLINK logo、手機版無溢出、不得套錯模板。</li></ul>
+          <ul><li>Trigger：什麼任務要使用這個 skill，例如來源連結轉 Michael AI Agent Lab 教材、PR review、客戶問題摘要。</li><li>Steps：固定流程，例如先取得來源、再做 evidence notes、再上網查官方資料、最後渲染 HTML。</li><li>Checks：品質閘門，例如繁體中文、個人品牌標記、手機版無溢出、不得套錯模板。</li></ul>
           <div class="example"><strong>教學提示：</strong>每次你說「這頁不用出現」、「不要用來源流程字眼」、「要上網找資料」，都應被歸納成 renderer rule，而不是只改單一檔案。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">好處一：Codex 更懂使用者</div><div class="term-sub">當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>使用者不用重複解釋「我要 ADLINK 格式、繁體中文、手機可讀、不要來源時間戳」。</li><li>Codex 可以更快判斷哪些內容該放進教材，哪些只是內部處理流程不能顯示。</li><li>這比單純依賴一次 prompt 更穩，因為 skill 會在相同任務反覆被套用。</li></ul>
+          <div class="term-head"><div><div class="term-title">好處一：Codex 更懂使用者</div><div class="term-sub">當 Codex Skill 裡有使用者偏好、團隊格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>使用者不用重複解釋「我要 個人教學格式、繁體中文、手機可讀、不要來源時間戳」。</li><li>Codex 可以更快判斷哪些內容該放進教材，哪些只是後台處理流程不能顯示。</li><li>這比單純依賴一次 prompt 更穩，因為 skill 會在相同任務反覆被套用。</li></ul>
           <div class="example"><strong>教學提示：</strong>未來你丟新連結時，Codex 應自動知道：來源連結只是框架，實際教材要查官方資料後重寫成可教內容。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">好處二：Skill 會越用越準</div><div class="term-sub">每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</div></div><span class="pill">核心概念</span></div>
+          <div class="term-head"><div><div class="term-title">好處二：Skill 會越用越準</div><div class="term-sub">每次 AI agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</div></div><span class="pill">核心概念</span></div>
           <ul><li>成功案例變成 examples，讓 Codex 知道什麼叫合格輸出。</li><li>失敗案例變成 anti-patterns，讓 Codex 避免舊模板、簡體字、長條式手機版與重複段落。</li><li>品質檢查可以變成固定 checklist，讓每次產出都先自查再交給使用者。</li></ul>
           <div class="example"><strong>教學提示：</strong>這次你指出內容重複，下一版 skill 就要加入規則：同一個觀念只能在大綱、細節或總結中各出現一次，不要整頁反覆貼。</div>
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">好處三：團隊 know-how 可以共用</div><div class="term-sub">Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>一個人修正過的流程，不必只存在自己的聊天紀錄或本機 agent。</li><li>團隊可以共用教材產出、PR review、issue triage、客戶摘要等高頻 skill。</li><li>共享前要保留權限與資料邊界：不要把客戶機密、token、內部未公開資訊直接放進 skill。</li></ul>
-          <div class="example"><strong>教學提示：</strong>ADLINK 可以把 PM、FAE、SIE、教材產線各自的最佳做法收斂成不同 skill，讓新人與 agent 都照同一套標準做事。</div>
+          <ul><li>一個人修正過的流程，不必只存在自己的聊天紀錄或單一 agent。</li><li>團隊可以共用教材產出、PR review、issue triage、客戶摘要等高頻 skill。</li><li>共享前要保留權限與資料邊界：不要把客戶機密、token、未公開資訊直接放進 skill。</li></ul>
+          <div class="example"><strong>教學提示：</strong>實務上可以把 PM、FAE、SIE、教材產線各自的最佳做法收斂成不同 skill，讓新人與 agent 都照同一套標準做事。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">ADLINK 落地做法</div><div class="term-sub">先從 art agent 教材產線開始，把你已確認的偏好回寫成 Codex Skill；穩定後再擴到 PR review、問題分類與客戶摘要。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>第一版：ADLINK 教材 skill，固定處理來源理解、官方資料補充、手機版 HTML、Telegram 預覽與寄信確認。</li><li>第二版：Codex review skill，固定讀 AGENTS.md、檢查風險、跑測試、輸出問題清單。</li><li>第三版：Agent skill registry，追蹤每個本地 agent 哪些 know-how 已回寫、哪些還只是臨時 prompt。</li></ul>
-          <div class="example"><strong>教學提示：</strong>衡量方式不要只看產出速度，也要看重工次數、人工修正次數、禁用字違規、手機版可讀性與寄信成功率。</div>
+          <div class="term-head"><div><div class="term-title">實務落地做法</div><div class="term-sub">先從教材產製流程開始，把已確認的偏好回寫成 Codex Skill；穩定後再擴到 PR review、問題分類與摘要整理。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>第一版：教材產製 skill，固定處理來源理解、官方資料補充、手機版 HTML、預覽確認與發布檢查。</li><li>第二版：Codex review skill，固定讀 AGENTS.md、檢查風險、跑測試、輸出問題清單。</li><li>第三版：Agent skill registry，追蹤每個 AI agent 哪些 know-how 已回寫、哪些還只是臨時 prompt。</li></ul>
+          <div class="example"><strong>教學提示：</strong>衡量方式不要只看產出速度，也要看重工次數、人工修正次數、禁用字違規、手機版可讀性與交付成功率。</div>
         </article>
       </div>
     </section>
@@ -178,7 +179,7 @@
       <div class="grid">
         <div class="card span-4">
           <h3>不用每次重講規則</h3>
-          <p>使用者偏好、公司格式、禁用字與完成標準進入 skill 後，Codex 每次啟動任務就先讀到同一套規則。</p>
+          <p>使用者偏好、團隊格式、禁用字與完成標準進入 skill 後，Codex 每次啟動任務就先讀到同一套規則。</p>
           <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
         </div><div class="card span-4">
           <h3>把失敗變成 anti-pattern</h3>
@@ -186,23 +187,23 @@
           <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
         </div><div class="card span-4">
           <h3>把成功變成 examples</h3>
-          <p>被使用者確認可以的 HTML、寄信流程、ADLINK logo 規則與口語化寫法，整理成範例讓 Codex 重複使用。</p>
+          <p>被使用者確認可以的 HTML、寄信流程、品牌標記規則與口語化寫法，整理成範例讓 Codex 重複使用。</p>
           <span class="tag ">內容重點</span><span class="tag">研究依據</span>
         </div>
       </div>
     </section>
 
     <section id="examples">
-      <div class="section-title"><span>5</span><h2>ADLINK 導入方式</h2></div>
+      <div class="section-title"><span>5</span><h2>實務導入方式</h2></div>
       <div class="grid">
         <div class="card span-6">
           <h3>第一階段：教材產線</h3>
-          <p><strong>落地：</strong>先把 art agent 的教材偏好回寫成 Codex Skill：官方資料補充、繁體中文、手機版、Telegram 預覽與寄信確認。</p>
+          <p><strong>落地：</strong>先把教材產製偏好回寫成 Codex Skill：官方資料補充、繁體中文、手機版、預覽確認與發布檢查。</p>
           
           
         </div><div class="card span-6">
           <h3>第二階段：工程工作</h3>
-          <p><strong>落地：</strong>再擴到 PR review、問題分類與客戶摘要，讓 Codex 依 ADLINK 的檢查方式、輸出格式與風險語言執行。</p>
+          <p><strong>落地：</strong>再擴到 PR review、問題分類與客戶摘要，讓 Codex 依一致的檢查方式、輸出格式與風險語言執行。</p>
           
           
         </div>
@@ -216,7 +217,7 @@
       <div class="card span-12">
         <h3>本課重點整理</h3>
         <ul>
-          <li><strong>核心問題：本地 agent 學到的東西會流失：</strong>本地 agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</li><li><strong>為什麼回寫到 Codex Skill：</strong>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</li><li><strong>回寫流程：從修正紀錄變成 Skill：</strong>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</li><li><strong>好處一：Codex 更懂使用者：</strong>當 Codex Skill 裡有使用者偏好、公司格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</li><li><strong>好處二：Skill 會越用越準：</strong>每次本地 agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</li><li><strong>好處三：團隊 know-how 可以共用：</strong>Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</li>
+          <li><strong>核心問題：Agent 學到的東西會流失：</strong>AI agent 每次被使用者修正後，其實都得到一段 know-how；如果沒有回寫成 Codex Skill，下一次 Codex 還是要重新被教一次。</li><li><strong>為什麼回寫到 Codex Skill：</strong>OpenAI 官方資料把 Skills 定義成可重複、可分享的 workflow，且可包含 instructions、examples 與 code；這正適合承接 agent 累積的 SOP。</li><li><strong>回寫流程：從修正紀錄變成 Skill：</strong>不要直接把對話貼進 skill；要先萃取成可執行規則，再放進 Codex Skill 的 trigger、steps、checks 與 examples。</li><li><strong>好處一：Codex 更懂使用者：</strong>當 Codex Skill 裡有使用者偏好、團隊格式、禁用字與完成標準，Codex 每次開始任務時就有更準確的上下文。</li><li><strong>好處二：Skill 會越用越準：</strong>每次 AI agent 成功或失敗，都可以回寫成 skill 測試案例；Codex Skill 不只是保存規則，也能持續優化。</li><li><strong>好處三：團隊 know-how 可以共用：</strong>Skills 可以分享給 workspace，也可依 open standard 在產品間移動；這讓個人 agent 經驗有機會變成團隊標準流程。</li>
         </ul>
         <div class="warning"><strong>注意：</strong>專有名詞、數字與版本資訊應以官方文件或使用者補充資料為準。</div>
       </div>
@@ -224,7 +225,7 @@
   </main>
 
   <footer>
-    <div class="wrap">ADLINK 主題研究教材｜Research-backed HTML Material</div>
+    <div class="wrap">Michael 主題研究筆記｜Research-backed HTML Material</div>
   </footer>
   <script src="../learning-path.js?v=20260710-learning-path"></script>
 </body>

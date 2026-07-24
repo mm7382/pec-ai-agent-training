@@ -261,7 +261,7 @@ const details = {
 function githubHeaders() {
   const headers = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "pec-local-agent-radar",
+    "User-Agent": "michael-ai-agent-lab-local-agent-radar",
     "X-GitHub-Api-Version": "2022-11-28",
   };
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;

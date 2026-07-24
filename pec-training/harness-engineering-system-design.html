@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Harness Engineering：讓 Agent 穩定工作的系統設計 - ADLINK 內容分析教材</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Harness Engineering：讓 Agent 穩定工作的系統設計 - Michael AI Agent 教學筆記</title>
   <style>
-    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:url("../assets/brand/adlink-logo-white.png");--logo-full:url("../assets/brand/adlink-logo-full.png")}
+    :root{--dark:#252C2E;--gray:#697174;--line:#D8D8D8;--red:#D0333A;--cyan:#1CB9D8;--green:#94C11F;--purple:#7D3189;--orange:#EC672C;--yellow:#FAB428;--light:#F4F5F6;--shadow:0 18px 44px rgba(37,44,46,.13);--logo-white:none;--logo-full:none}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f4f5f6 54%,#ffffff 100%);color:var(--dark);font-family:Calibri,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75;overflow-x:hidden}
@@ -73,10 +74,10 @@
   <script src="../tutorial-gate.js?v=20260723-direct-nav-v3"></script>
 </head>
 <body>
-  <section class="cover" aria-label="ADLINK cover">
+  <section class="cover" aria-label="Michael cover">
     <div class="cover-inner">
       <div class="cover-top">
-        <div class="ad-logo-white" aria-label="ADLINK logo"></div>
+        <div class="ad-logo-white" aria-label="個人品牌標記"></div>
         <div class="cover-kicker">Course Material<br/>HTML Training</div>
       </div>
       <div class="cover-main">
@@ -85,7 +86,7 @@
         <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
       </div>
       <div class="cover-footer">
-        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Michael AI Agent Lab</span>
         <span>Research-backed Course Material</span>
       </div>
     </div>
@@ -93,7 +94,7 @@
 
   <header>
     <div class="wrap">
-      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
       <h1>Harness Engineering：讓 Agent 穩定工作的系統設計</h1>
       <p class="lead">本教材聚焦 Harness Engineering：如何把工具、文件、評分、回饋與品質閘門包成一套讓 agent 穩定工作的系統。</p>
@@ -112,7 +113,7 @@
       <a href="#map">整體關係圖</a>
       <a href="#terms">核心概念</a>
       <a href="#extra">系統閉環</a>
-      <a href="#examples">ADLINK 落地</a>
+      <a href="#examples">實務落地</a>
       
       <a href="#summary">一頁式重點</a>
     </div>
@@ -122,7 +123,7 @@
     <section id="outline">
       <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
       <div class="grid">
-          <article class="card span-6"><h3>Harness 是什麼</h3><p>Harness 不是更長的 prompt，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 agent 能穩定完成任務。</p><div><span class="tag blue">Harness</span><span class="tag blue">Agent System</span><span class="tag blue">Workflow</span></div></article><article class="card span-6"><h3>為什麼不是只做 Prompt Engineering</h3><p>Prompt 只能告訴模型要做什麼；Harness 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</p><div><span class="tag blue">Prompt</span><span class="tag blue">Context</span><span class="tag blue">Feedback Loop</span></div></article><article class="card span-6"><h3>Harness 的核心組件</h3><p>一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</p><div><span class="tag blue">Planner</span><span class="tag blue">Tools</span><span class="tag blue">Evaluator</span></div></article><article class="card span-6"><h3>OpenAI 的重點：讓 Codex 看得懂系統</h3><p>OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</p><div><span class="tag blue">Codex</span><span class="tag blue">Agent Legibility</span><span class="tag blue">System of Record</span></div></article><article class="card span-6"><h3>Anthropic 的重點：Generator 與 Evaluator 分工</h3><p>Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</p><div><span class="tag blue">Generator</span><span class="tag blue">Evaluator</span><span class="tag blue">Quality</span></div></article><article class="card span-6"><h3>AutoHarness 的啟發：小模型也能靠系統變強</h3><p>AutoHarness 論文指出，小模型可透過迭代回饋自動合成 code harness，避免非法動作，甚至在某些任務超過更大的模型。</p><div><span class="tag blue">AutoHarness</span><span class="tag blue">Code Harness</span><span class="tag blue">Policy</span></div></article><article class="card span-6"><h3>ADLINK 可以怎麼導入</h3><p>先從高頻流程做 Harness，不要一開始做大平台；教材產線、PR review、issue triage 都適合先做。</p><div><span class="tag blue">ADLINK</span><span class="tag blue">Internal Agent</span><span class="tag blue">Pilot</span></div></article>
+          <article class="card span-6"><h3>Harness 是什麼</h3><p>Harness 不是更長的 prompt，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 agent 能穩定完成任務。</p><div><span class="tag blue">Harness</span><span class="tag blue">Agent System</span><span class="tag blue">Workflow</span></div></article><article class="card span-6"><h3>為什麼不是只做 Prompt Engineering</h3><p>Prompt 只能告訴模型要做什麼；Harness 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</p><div><span class="tag blue">Prompt</span><span class="tag blue">Context</span><span class="tag blue">Feedback Loop</span></div></article><article class="card span-6"><h3>Harness 的核心組件</h3><p>一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</p><div><span class="tag blue">Planner</span><span class="tag blue">Tools</span><span class="tag blue">Evaluator</span></div></article><article class="card span-6"><h3>OpenAI 的重點：讓 Codex 看得懂系統</h3><p>OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</p><div><span class="tag blue">Codex</span><span class="tag blue">Agent Legibility</span><span class="tag blue">System of Record</span></div></article><article class="card span-6"><h3>Anthropic 的重點：Generator 與 Evaluator 分工</h3><p>Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</p><div><span class="tag blue">Generator</span><span class="tag blue">Evaluator</span><span class="tag blue">Quality</span></div></article><article class="card span-6"><h3>AutoHarness 的啟發：小模型也能靠系統變強</h3><p>AutoHarness 論文指出，小模型可透過迭代回饋自動合成 code harness，避免非法動作，甚至在某些任務超過更大的模型。</p><div><span class="tag blue">AutoHarness</span><span class="tag blue">Code Harness</span><span class="tag blue">Policy</span></div></article><article class="card span-6"><h3>實務上可以怎麼導入</h3><p>先從高頻流程做 Harness，不要一開始做大平台；教材產線、PR review、issue triage 都適合先做。</p><div><span class="tag blue">Learning Workflow</span><span class="tag blue">Agent Workflow</span><span class="tag blue">Prototype</span></div></article>
       </div>
     </section>
 
@@ -152,23 +153,23 @@
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">Harness 的核心組件</div><div class="term-sub">一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</div></div><span class="pill">核心概念</span></div>
           <ul><li>Planner：先拆任務與定義完成條件，避免 agent 一開始就亂做。</li><li>Tools：讓 agent 能讀檔、跑測試、查 log、操作瀏覽器或呼叫 API。</li><li>Evaluator：用標準檢查結果，並把具體問題回饋給 generator。</li></ul>
-          <div class="example"><strong>教學提示：</strong>做 ADLINK 教材時，Planner 定義章節，Tools 抓來源與官方資料，Evaluator 檢查繁體、手機版、ADLINK logo 與內容是否重複。</div>
+          <div class="example"><strong>教學提示：</strong>做 Michael AI Agent Lab 教材時，Planner 定義章節，Tools 抓來源與官方資料，Evaluator 檢查繁體、手機版、個人品牌標記 與內容是否重複。</div>
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">OpenAI 的重點：讓 Codex 看得懂系統</div><div class="term-sub">OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</div></div><span class="pill">核心概念</span></div>
           <ul><li>OpenAI 提到 repository knowledge 要成為 system of record，AGENTS.md 更像目錄，不是一本塞滿規則的大百科。</li><li>把 log、metrics、browser state、測試結果暴露給 Codex，能讓 Codex 自己觀察、修正、再驗證。</li><li>人類的 taste、review comment 與 bug feedback 應持續回寫成文件、工具或檢查規則。</li></ul>
-          <div class="example"><strong>教學提示：</strong>對 ADLINK 來說，不是每次口頭提醒 agent，而是把教材規則、產品資料、版型要求與檢查腳本放在 Codex 找得到的位置。</div>
+          <div class="example"><strong>教學提示：</strong>對實務團隊 來說，不是每次口頭提醒 agent，而是把教材規則、產品資料、版型要求與檢查腳本放在 Codex 找得到的位置。</div>
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">Anthropic 的重點：Generator 與 Evaluator 分工</div><div class="term-sub">Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</div></div><span class="pill">核心概念</span></div>
           <ul><li>Evaluator 要有明確評分標準，例如設計品質、功能、可用性、code quality。</li><li>Evaluator 可以實際操作頁面、看結果、寫出具體 critique，再讓 generator 迭代。</li><li>這個模式適合用在 HTML 教材、前端 UI、測試修正、客戶文件等需要品質判斷的任務。</li></ul>
-          <div class="example"><strong>教學提示：</strong>art agent 產 HTML 後，不應只看是否有檔案；還要有 evaluator 檢查手機可讀、內容不重複、沒有禁用字。</div>
+          <div class="example"><strong>教學提示：</strong>內容輸出 agent 產 HTML 後，不應只看是否有檔案；還要有 evaluator 檢查手機可讀、內容不重複、沒有禁用字。</div>
         </article><article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">AutoHarness 的啟發：小模型也能靠系統變強</div><div class="term-sub">AutoHarness 論文指出，小模型可透過迭代回饋自動合成 code harness，避免非法動作，甚至在某些任務超過更大的模型。</div></div><span class="pill">核心概念</span></div>
           <ul><li>論文摘要提到，Gemini-2.5-Flash 的許多失敗來自非法動作；harness 能把外部規則變成可執行防護。</li><li>重點不是模型本身最大，而是能否把環境規則、限制與修正流程寫成 code 或 policy。</li><li>這對本地 agent 很重要：本地模型不一定最強，但如果 Harness 設計好，仍可在特定任務上穩定輸出。</li></ul>
-          <div class="example"><strong>教學提示：</strong>本地 art agent 不必靠最強模型硬猜，只要有來源取得、官方資料查詢、ADLINK renderer、品質閘門與 Telegram 回饋，就能穩定產教材。</div>
+          <div class="example"><strong>教學提示：</strong>內容輸出 agent 不必靠最強模型硬猜，只要有來源取得、官方資料查詢、個人教學頁 renderer、品質閘門與回饋機制，就能穩定產教材。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">ADLINK 可以怎麼導入</div><div class="term-sub">先從高頻流程做 Harness，不要一開始做大平台；教材產線、PR review、issue triage 都適合先做。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>教材 Harness：來源理解、官方資料補充、ADLINK HTML、手機預覽、寄信確認。</li><li>工程 Harness：讀 AGENTS.md、跑測試、查 log、輸出風險與修正建議。</li><li>客戶問題 Harness：分類 issue、補上下文、比對既有案例、產出可追蹤 action items。</li></ul>
-          <div class="example"><strong>教學提示：</strong>第一版先把 art agent 做成完整 Harness：產出後由你確認，確認過的修正再回寫成下一版規則。</div>
+          <div class="term-head"><div><div class="term-title">實務上可以怎麼導入</div><div class="term-sub">先從高頻流程做 Harness，不要一開始做大平台；教材產線、PR review、issue triage 都適合先做。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>教材 Harness：來源理解、官方資料補充、個人教學 HTML、手機預覽、寄信確認。</li><li>工程 Harness：讀 AGENTS.md、跑測試、查 log、輸出風險與修正建議。</li><li>客戶問題 Harness：分類 issue、補上下文、比對既有案例、產出可追蹤 action items。</li></ul>
+          <div class="example"><strong>教學提示：</strong>第一版先把內容輸出 agent 做成完整 Harness：產出後由你確認，確認過的修正再回寫成下一版規則。</div>
         </article>
       </div>
     </section>
@@ -193,11 +194,11 @@
     </section>
 
     <section id="examples">
-      <div class="section-title"><span>5</span><h2>ADLINK 導入方式</h2></div>
+      <div class="section-title"><span>5</span><h2>實務導入方式</h2></div>
       <div class="grid">
         <div class="card span-6">
           <h3>教材 Harness</h3>
-          <p><strong>落地：</strong>來源理解、官方資料補充、ADLINK HTML、手機預覽、禁用字檢查、Telegram 確認與寄信流程形成閉環。</p>
+          <p><strong>落地：</strong>來源理解、官方資料補充、個人教學 HTML、手機預覽、禁用字檢查、確認與寄信流程形成閉環。</p>
           
           
         </div><div class="card span-6">
@@ -229,7 +230,7 @@
   </main>
 
   <footer>
-    <div class="wrap">ADLINK 主題研究教材｜Research-backed HTML Material</div>
+    <div class="wrap">Michael 主題研究筆記｜Research-backed HTML Material</div>
   </footer>
 </body>
 </html>

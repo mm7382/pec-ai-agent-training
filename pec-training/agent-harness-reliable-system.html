@@ -622,7 +622,7 @@
       border-top:1px solid var(--ad-line);
     }
     footer::after,.footer::after{
-      content:"ADLINK | Leading Edge AI Computing";
+      content:"Michael AI Agent Lab";
       display:block;
       margin-top:18px;
       padding-top:12px;
@@ -660,11 +660,11 @@
 </head>
 <body>
 
-<section class="ad-cover" aria-label="ADLINK PPT style cover">
+<section class="ad-cover" aria-label="Michael teaching cover">
   <div class="ad-cover-inner">
     <div class="ad-cover-top">
-      <div class="ad-logo-white" aria-label="ADLINK logo"></div>
-      <div class="ad-cover-kicker">PEC-SED | Michael Chuang<br/>April 2026</div>
+      <div class="ad-logo-white" aria-label="個人品牌標記"></div>
+      <div class="ad-cover-kicker">Michael Chuang<br/>April 2026</div>
     </div>
     <div class="ad-cover-main">
       <div class="ad-cover-label">Engineering AI Training</div>
@@ -672,7 +672,7 @@
       <p class="ad-cover-subtitle">AI Agent 架構入門｜把聰明模型包成可靠系統</p>
     </div>
     <div class="ad-cover-footer">
-      <span>ADLINK | Leading Edge AI Computing</span>
+      <span>Michael AI Agent Lab</span>
       <span>HTML Training Material</span>
     </div>
   </div>
@@ -693,9 +693,9 @@
 
   <main>
     <section class="hero">
-      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div>
-        <div class="eyebrow">工程師內訓版｜AI Agent 架構入門</div>
+        <div class="eyebrow">工程師教學版｜AI Agent 架構入門</div>
         <h1>Agent Harness：把聰明模型包成可靠系統</h1>
         <p class="lead">
           這份教學把影片「Agent Harness 十二大模組完全解析」整理成可教、可討論、可落地的 HTML 課程。
@@ -806,7 +806,7 @@
           <span class="pill">03｜十二大模組</span>
           <h2>把 Agent 拆成工程可控的零件</h2>
         </div>
-        <p class="section-note">以下整理成工程師內訓版本：每個模組都對應一個真實問題，不只是名詞。</p>
+        <p class="section-note">以下整理成工程師教學版本：每個模組都對應一個真實問題，不只是名詞。</p>
       </div>
       <div class="grid-4">
         <article class="card module-card"><div class="module-no">1</div><h3>初始化 Initialization</h3><p>載入設定、模型、工具、權限、專案規則，避免每次啟動狀態不一致。</p></article>
@@ -848,9 +848,9 @@
       <div class="section-head">
         <div>
           <span class="pill">05｜實際案例</span>
-          <h2>把概念放到你的 ADLINK PM Excel Agent</h2>
+          <h2>把概念放到你的 PM Excel Agent</h2>
         </div>
-        <p class="section-note">以下用「Excel 掃描 Critical Issues → Telegram/HTML/Mail 報告」當例子，讓工程師更容易連到實務。</p>
+        <p class="section-note">以下用「Excel 掃描 Critical Issues → 通知 / HTML / Mail 報告」當例子，讓工程師更容易連到實務。</p>
       </div>
       <div class="card">
         <table>
@@ -858,9 +858,9 @@
             <tr><th>Harness 模組</th><th>在 PM Agent 中的落地方式</th><th>沒有做會發生什麼事</th></tr>
           </thead>
           <tbody>
-            <tr><td>初始化</td><td>啟動時檢查 .env、Telegram Token、SMTP、AD 資料夾路徑、output 目錄。</td><td>機器人看起來有執行，但按鈕沒有反應或寄信失敗。</td></tr>
-            <tr><td>工具註冊</td><td>把 Excel Scanner、HTML Report、Mail Sender、Telegram Reply 分成清楚函式。</td><td>程式碼混在一起，修一個功能壞三個功能。</td></tr>
-            <tr><td>上下文管理</td><td>只抽取 Critical xxx open、紅藍字、分類關鍵字與 Project Name，不把整份 Excel 全塞進報告。</td><td>輸出過長、Telegram 爆字數、分類不準。</td></tr>
+            <tr><td>初始化</td><td>啟動時檢查 .env、通知服務 token、SMTP、資料夾路徑、output 目錄。</td><td>機器人看起來有執行，但按鈕沒有反應或寄信失敗。</td></tr>
+            <tr><td>工具註冊</td><td>把 Excel Scanner、HTML Report、Mail Sender、Notification Reply 分成清楚函式。</td><td>程式碼混在一起，修一個功能壞三個功能。</td></tr>
+            <tr><td>上下文管理</td><td>只抽取 Critical xxx open、紅藍字、分類關鍵字與 Project Name，不把整份 Excel 全塞進報告。</td><td>輸出過長、通知訊息爆字數、分類不準。</td></tr>
             <tr><td>驗證</td><td>確認搜尋欄位、字色、分類、Project Name 對應正確，再產生 HTML。</td><td>Agent 說成功，但結果其實漏掉或重複。</td></tr>
             <tr><td>錯誤恢復</td><td>檔案讀不到、Excel 格式異常、SMTP 失敗時，回傳清楚錯誤與 fallback HTML。</td><td>只看到 SyntaxError 或卡住，不知道問題在哪。</td></tr>
             <tr><td>可觀測性</td><td>記錄掃描了幾個檔案、幾張 sheet、命中幾筆、寄信 messageId。</td><td>無法判斷 Agent 到底有沒有真的工作。</td></tr>
@@ -978,7 +978,7 @@
       <li>LangChain：Improving Deep Agents with harness engineering</li>
       <li>Hu Wei：Architectural Design Decisions in AI Agent Harnesses</li>
     </ul>
-    <p>本 HTML 為教學整理版，已轉為繁體中文與工程師內訓語境。</p>
+    <p>本 HTML 為教學整理版，已轉為繁體中文與工程師教學語境。</p>
   </footer>
 
   <script>

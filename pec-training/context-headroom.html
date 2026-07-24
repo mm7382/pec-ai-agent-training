@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Headroom：本地 Agent 的 Context Headroom 導入策略 - ADLINK 內容分析教材</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Headroom：本地 Agent 的 Context Headroom 導入策略 - Michael AI Agent 教學筆記</title>
   <style>
     :root {
       --dark: #252C2E;
@@ -18,8 +19,8 @@
       --light: #F4F5F6;
       --white: #FFFFFF;
       --shadow: 0 18px 44px rgba(37, 44, 46, .13);
-      --logo-white: url("../assets/brand/adlink-logo-white.png");
-      --logo-full: url("../assets/brand/adlink-logo-full.png");
+      --logo-white: none;
+      --logo-full: none;
     }
 
     * { box-sizing: border-box; }
@@ -565,19 +566,19 @@
   <script src="../tutorial-gate.js?v=20260723-direct-nav-v3"></script>
 </head>
 <body>
-  <section class="cover" aria-label="ADLINK cover">
+  <section class="cover" aria-label="Michael cover">
     <div class="cover-inner">
       <div class="cover-top">
-        <div class="ad-logo-white" aria-label="ADLINK logo"></div>
+        <div class="ad-logo-white" aria-label="個人品牌標記"></div>
         <div class="cover-kicker">Course Material<br>HTML Training</div>
       </div>
       <div class="cover-main">
         <div class="label">Context Engineering</div>
         <h1>Headroom：本地 Agent 的 Context Headroom 導入策略</h1>
-        <p class="subtitle">把 Headroom 相關研究整理成 ADLINK 內訓教材：它可以清理工具輸出、log、RAG 與逐字稿，但不應取代 Wiki、Obsidian 或 Summary Agent。</p>
+        <p class="subtitle">把 Headroom 相關研究整理成 Michael AI Agent Lab 教學筆記：它可以清理工具輸出、log、RAG 與逐字稿，但不應取代 Wiki、Obsidian 或 Summary Agent。</p>
       </div>
       <div class="cover-footer">
-        <span>ADLINK | Leading Edge AI Computing</span>
+        <span>Michael AI Agent Lab</span>
         <span>Research-backed Course Material | 2026-06-06</span>
       </div>
     </div>
@@ -585,10 +586,10 @@
 
   <header>
     <div class="wrap">
-      <div class="ad-logo-full" aria-label="ADLINK logo"></div>
+      <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
       <h1>Context Headroom 不是記憶庫，是上下文清理器</h1>
-      <p class="lead">Headroom 官方把自己定位為 LLM 應用的 context optimization layer。對 Michael 的本地 Hermes agent 系統來說，價值不在省 token 費用，而是降低長任務爆 context、工具輸出塞滿視窗、交接摘要失焦的機率。</p>
+      <p class="lead">Headroom 官方把自己定位為 LLM 應用的 context optimization layer。對本地 AI Agent 系統來說，價值不在省 token 費用，而是降低長任務爆 context、工具輸出塞滿視窗、交接摘要失焦的機率。</p>
       <div class="metrics">
         <div class="metric"><b>5</b><small>建議導入階段</small></div>
         <div class="metric"><b>4</b><small>優先試用場景</small></div>
@@ -637,7 +638,7 @@
         <article class="card span-6">
           <h3>最適合試用的地方：Wiki、Codex、art transcript</h3>
           <p>YouTube transcript、NotebookLM 輸出、build/test logs、RAG chunks 與重複工具輸出最適合先被壓成 Lesson Brief、Evidence Notes 或 Handoff Summary，再交給 agent 做下一步。</p>
-          <div><span class="tag blue">Wiki Agent</span><span class="tag blue">Codex</span><span class="tag blue">art agent</span></div>
+          <div><span class="tag blue">Wiki Agent</span><span class="tag blue">Codex</span><span class="tag blue">內容輸出 agent</span></div>
         </article>
         <article class="card span-6">
           <h3>安全邊界：原始資料不可消失</h3>
@@ -663,7 +664,7 @@
           <div class="arrow" aria-hidden="true"></div>
           <div class="map-node">
             <b>Agent Decision</b>
-            <small>Codex、Wiki Agent、art agent 或 ADLink_PM 依任務輸出教材、報告或交接。</small>
+            <small>Codex、Wiki Agent、內容輸出 agent 或 PM workflow agent 依任務輸出教材、報告或交接。</small>
           </div>
         </div>
         <div class="example"><strong>閱讀方式：</strong>Headroom 類工具應放在「Raw Sources」與「Agent Decision」之間。它不取代 raw archive，也不直接改 Wiki 正式知識。</div>
@@ -680,7 +681,7 @@
             <li>適合處理工具輸出、log、DB rows、RAG chunks、API response 與長 transcript。</li>
             <li>對本地 LLM 的價值是穩定長任務，而不是單純省 token 成本。</li>
           </ul>
-          <div class="example"><strong>ADLINK 說法：</strong>把它當成進會議前的助理摘要，不是公司的正式文件庫。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>把它當成進會議前的助理摘要，不是公司的正式文件庫。</div>
         </article>
 
         <article class="card term-card span-6">
@@ -690,7 +691,7 @@
             <li>JSON array、structured logs、API rows 通常比短對話更值得壓縮。</li>
             <li>壓縮時應保留 errors、anomalies、boundary 與代表性樣本。</li>
           </ul>
-          <div class="example"><strong>ADLINK 說法：</strong>Excel issue list 應保留異常、風險與 owner，不需要把每列重複欄位塞給 agent。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>Excel issue list 應保留異常、風險與 owner，不需要把每列重複欄位塞給 agent。</div>
         </article>
 
         <article class="card term-card span-6">
@@ -710,7 +711,7 @@
             <li>SDK 適合特定 pipeline，例如 Wiki raw 轉 Evidence Notes。</li>
             <li>MCP tools 適合讓 agent 按需壓縮與回取，較符合 sandbox 測試。</li>
           </ul>
-          <div class="example"><strong>ADLINK 說法：</strong>先用 MCP 或離線 script 做試驗，不要一開始改全部 provider base URL。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>先用 MCP 或離線 script 做試驗，不要一開始改全部 provider base URL。</div>
         </article>
 
         <article class="card term-card span-6">
@@ -718,9 +719,9 @@
           <ul>
             <li>官方架構描述會把動態日期、UUID、session token 等移到後段，保留穩定 prefix。</li>
             <li>對雲端 API 有成本與延遲價值，對本地 LLM 則不是首要收益。</li>
-            <li>對 Hermes，穩定系統提示與乾淨交接比 cache 折扣更重要。</li>
+            <li>對本地 agent 系統，穩定系統提示與乾淨交接比 cache 折扣更重要。</li>
           </ul>
-          <div class="example"><strong>ADLINK 說法：</strong>本地 LLM 不需要為了 cache 折扣犧牲 prompt 可讀性。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>本地 LLM 不需要為了 cache 折扣犧牲 prompt 可讀性。</div>
         </article>
 
         <article class="card term-card span-6">
@@ -739,7 +740,7 @@
       <div class="section-title"><span>4</span><h2>適用與不適用：先分清楚，不要迷信工具</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <h3>最適合 Michael 系統的場景</h3>
+          <h3>最適合本地 AI Agent 系統的場景</h3>
           <table>
             <thead>
               <tr><th>Agent 場景</th><th>適合壓縮的資料</th><th>輸出成什麼</th></tr>
@@ -747,8 +748,8 @@
             <tbody>
               <tr><td>Codex / coding agent</td><td>terminal output、build log、test log、長 shell output</td><td>錯誤摘要、失敗原因、下一步、保留關鍵 stack trace</td></tr>
               <tr><td>Wiki Agent</td><td>YouTube transcript、NotebookLM raw notes、長文章與重複整理稿</td><td>Evidence Notes、Lesson Brief、缺資料清單</td></tr>
-              <tr><td>art agent</td><td>教學影片逐字稿、來源研究、HTML 修改紀錄</td><td>主題、章節、術語、可引用證據、審稿 checklist</td></tr>
-              <tr><td>ADLink_PM</td><td>Excel、email、critical issue report、客訴記錄</td><td>異常、風險、owner、deadline、下一步</td></tr>
+              <tr><td>內容輸出 agent</td><td>教學影片逐字稿、來源研究、HTML 修改紀錄</td><td>主題、章節、術語、可引用證據、審稿 checklist</td></tr>
+              <tr><td>PM workflow agent</td><td>Excel、email、critical issue report、客訴記錄</td><td>異常、風險、owner、deadline、下一步</td></tr>
               <tr><td>每日維護報告</td><td>agent status、log、容量、模型、重複檔案清單</td><td>乾淨結論、紅黃綠狀態、需人工確認事項</td></tr>
             </tbody>
           </table>
@@ -773,7 +774,7 @@
         <div class="flow-step">
           <b>階段 1</b>
           <h3>自建壓縮規則</h3>
-          <p>先定義 Hermes Context Headroom 規則：哪些可摘要、哪些必須保留原文、哪些要進 Evidence Notes。</p>
+          <p>先定義 Context Headroom 規則：哪些可摘要、哪些必須保留原文、哪些要進 Evidence Notes。</p>
         </div>
         <div class="flow-step">
           <b>階段 2</b>
@@ -799,7 +800,7 @@
       <div class="decision" style="margin-top:18px">
         <article class="card decision-main">
           <h3>本教材結論</h3>
-          <p>Headroom 值得吸收，但不要直接裝進核心。它是上下文清理器，不是大腦。Hermes 的核心仍是 Obsidian/Wiki Agent、Codex skill sync、Summary Agent 與 raw archive。</p>
+          <p>Headroom 值得吸收，但不要直接裝進核心。它是上下文清理器，不是大腦。本地 AI Agent 系統的核心仍是 Wiki、skill sync、Summary Agent 與 raw archive。</p>
         </article>
         <article class="card">
           <h3>先做的實作規則</h3>
@@ -828,7 +829,7 @@
         </article>
         <article class="card span-6">
           <h3>官方文件：MCP Tools</h3>
-          <p>說明 MCP server 暴露 headroom_compress、headroom_retrieve、headroom_stats，可供 Claude Code、Cursor、Codex 與 MCP-compatible host 使用。這是比較適合 Hermes sandbox 的方向。</p>
+          <p>說明 MCP server 暴露 headroom_compress、headroom_retrieve、headroom_stats，可供 Claude Code、Cursor、Codex 與 MCP-compatible host 使用。這是比較適合 sandbox 驗證的方向。</p>
           <p><a href="https://headroom-docs.vercel.app/docs/mcp">https://headroom-docs.vercel.app/docs/mcp</a></p>
         </article>
         <article class="card span-6">
@@ -838,7 +839,7 @@
         </article>
         <article class="card span-6">
           <h3>官方文件：Benchmarks</h3>
-          <p>列出官方測試與 telemetry。這些數字可作為觀察指標，但導入 Hermes 前仍需用自己的 transcript、log、Excel 與 coding output 做 sandbox 驗證。</p>
+          <p>列出官方測試與 telemetry。這些數字可作為觀察指標，但導入前仍需用自己的 transcript、log、Excel 與 coding output 做 sandbox 驗證。</p>
           <p><a href="https://headroom-docs.vercel.app/docs/benchmarks">https://headroom-docs.vercel.app/docs/benchmarks</a></p>
         </article>
         <article class="card span-6">
@@ -847,7 +848,7 @@
           <p><a href="https://github.com/chopratejas/headroom">https://github.com/chopratejas/headroom</a></p>
         </article>
       </div>
-      <div class="warning"><strong>可信度提醒：</strong>壓縮率、準確率、延遲與成本數字多為官方文件或專案頁提供。ADLINK 導入時要用自己的資料集驗證，不應只靠官方 benchmark。</div>
+      <div class="warning"><strong>可信度提醒：</strong>壓縮率、準確率、延遲與成本數字多為官方文件或專案頁提供。實務導入時要用自己的資料集驗證，不應只靠官方 benchmark。</div>
     </section>
 
     <section id="summary">
@@ -856,7 +857,7 @@
         <h3>本課重點整理</h3>
         <ul>
           <li><strong>Headroom 有用：</strong>它能幫長任務降低上下文雜訊，特別是 tool output、log、RAG、file reads、API responses 與 transcript。</li>
-          <li><strong>對本地 LLM 的價值不是省錢：</strong>Michael 的系統更需要穩定長任務、乾淨交接、避免 context 爆掉。</li>
+          <li><strong>對本地 LLM 的價值不是省錢：</strong>本地系統更需要穩定長任務、乾淨交接、避免 context 爆掉。</li>
           <li><strong>不要取代記憶庫：</strong>它不是 Obsidian、Wiki Agent、Codex skill sync 或 Summary Agent 的替代品。</li>
           <li><strong>先自建規則：</strong>先定義壓縮邊界、raw 保留、Evidence Notes、回查流程，再測 Headroom sandbox。</li>
           <li><strong>先試三個管線：</strong>Wiki raw 轉 Evidence Notes、Codex build/log 摘要、art transcript 轉教學 brief。</li>
@@ -868,7 +869,7 @@
   </main>
 
   <footer>
-    <div class="wrap">ADLINK internal training draft | Prepared for review before Telegram delivery | Source checked on 2026-06-06</div>
+    <div class="wrap">Michael AI Agent Lab teaching draft | Prepared for review before publishing | Source checked on 2026-06-06</div>
   </footer>
 </body>
 </html>

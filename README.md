@@ -1,4 +1,4 @@
-# PEC AI Agent Training Library
+# Michael AI Agent Lab
 
 Public training-material portal maintained by Michael Chuang.
 

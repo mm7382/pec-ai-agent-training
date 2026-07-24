@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PEC AI Agent 教育訓練資料庫</title>
-  <meta name="description" content="PEC AI Agent 教育訓練教材搜尋入口">
+  <title>Michael AI Agent Lab</title>
+  <meta name="description" content="Michael 整理的 AI Agent 學習入口、熱門工具、教學教材與實作資源">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css?v=20260724-signin-motto">
   <script src="./site-config.js?v=20260711-resource-library"></script>
@@ -12,30 +12,27 @@
 <body class="home-page">
   <main class="app-shell">
     <header class="topbar" aria-label="網站導覽">
-      <a class="brand" href="./index.html" aria-label="PEC AI Agent 教育訓練首頁">
-        <img class="brand-logo" src="./assets/brand/adlink-leading-edge-ai-computing.jpeg" alt="ADLINK Leading Edge AI Computing">
+      <a class="brand" href="./index.html" aria-label="Michael AI Agent Lab 首頁">
+        <span class="brand-mark" aria-hidden="true">M</span>
         <span>
-          <strong>AI Agent 教育訓練</strong>
-          <small>可搜尋教材資料庫</small>
+          <strong>Michael AI Agent Lab</strong>
+          <small>AI Agent learning notes</small>
         </span>
       </a>
-      <div class="identity-chip" id="identityChip" hidden>
-        <span id="identityText"></span>
-        <button type="button" id="switchUserButton">切換</button>
-      </div>
     </header>
 
     <section class="workspace">
       <div class="left-rail">
         <aside class="summary-panel" aria-label="資料庫摘要">
           <div class="summary-visual" aria-hidden="true">
-            <img src="./assets/brand/adlink-leading-edge-ai-computing.jpeg" alt="">
+            <span>Michael AI Agent Lab</span>
           </div>
           <div class="summary-copy">
-            <p class="section-label">Training Library</p>
-            <h1>動手做，才真的能學會。</h1>
+            <p class="section-label">Hi, I'm Michael.</p>
+            <h1>博學之，審問之，慎思之，明辨之，篤行之。</h1>
+            <p class="hero-motto">Learn widely. Question deeply. Think clearly. Act deliberately.</p>
             <p>
-              AI Agent 不是拿來旁觀的，而是要動手做進工作裡。這裡整理工具、交辦方法、Skill 技巧與知識庫治理，讓你一步一步做出自己的 AI 工作流程。
+              博學，是建立視野；審問，是問對問題；慎思與明辨，是找到方法；篤行，才是把 AI Agent 變成真正的工作能力。
             </p>
           </div>
           <dl class="metric-grid">
@@ -82,7 +79,7 @@
 
         <div class="side-notices" aria-label="使用與著作權說明">
           <p><strong>著作權：</strong>教材內容、分類整理與教學編排由 Michael Chuang 製作與維護。除原始品牌與第三方資料來源外，未經同意請勿轉載、改作或商用。</p>
-          <p><strong>使用紀錄：</strong>網站會記錄姓名、部門、瀏覽頁面與時間，僅供 Michael 了解教材使用情況。</p>
+          <p><strong>隱私：</strong>網站僅用匿名流量分析了解熱門頁面、來源與互動趨勢；留言 / 討論只處理你主動送出的內容。</p>
         </div>
       </div>
 
@@ -102,52 +99,6 @@
       </section>
     </section>
   </main>
-
-  <dialog class="signin-dialog" id="signinDialog" aria-labelledby="signinTitle">
-    <form class="signin-card" id="signinForm" method="dialog">
-      <section class="signin-intro" aria-label="網站簡介">
-        <img class="signin-logo" src="./assets/brand/adlink-leading-edge-ai-computing.jpeg" alt="ADLINK Leading Edge AI Computing">
-        <p class="section-label">AI Agent Training Library</p>
-        <h2 id="signinTitle">嗨，我是 Michael。</h2>
-        <p class="signin-maxim">博學之，審問之，慎思之，明辨之，篤行之。</p>
-        <p class="signin-motto">Learn widely. Question deeply. Think clearly. Act deliberately.</p>
-        <p class="signin-lead">博學，是建立視野；審問，是問對問題；慎思與明辨，是找到方法；篤行，才是把 AI Agent 變成真正的工作能力。</p>
-      </section>
-
-      <section class="signin-form-panel" aria-label="訪客簽到">
-        <div>
-          <p class="section-label">Visitor Check-in</p>
-          <h3>進入前，先留個名字。</h3>
-          <p class="signin-note">只需要填一次。同一台電腦之後會記住你，也可以隨時切換。</p>
-        </div>
-
-        <label>
-          <span>姓名</span>
-          <input id="visitorName" name="visitorName" required autocomplete="name" placeholder="例如：王小明">
-        </label>
-
-        <label>
-          <span>部門</span>
-          <select id="visitorDepartment" name="visitorDepartment" required>
-            <option value="">請選擇部門</option>
-            <option>R&D</option>
-            <option>PM</option>
-            <option>Sales</option>
-            <option>FAE</option>
-            <option>Marketing</option>
-            <option>QA</option>
-            <option>Operations</option>
-          </select>
-        </label>
-
-        <div class="consent-copy">
-          <p>網站會記錄姓名、部門、瀏覽頁面與時間，僅供 Michael 了解教材使用情況；教材整理與編排請勿未經同意轉載或商用。</p>
-        </div>
-
-        <button class="primary-button" type="submit">進入教材資料庫</button>
-      </section>
-    </form>
-  </dialog>
 
   <script src="./learning-path.js?v=20260711-resource-library"></script>
   <script src="./app.js?v=20260715-radar-update"></script>

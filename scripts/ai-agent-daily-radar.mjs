@@ -116,7 +116,7 @@ async function fetchJson(url, headers = {}) {
   const response = await fetch(url, {
     headers: {
       Accept: "application/json,text/plain,*/*",
-      "User-Agent": "pec-ai-agent-daily-radar",
+      "User-Agent": "michael-ai-agent-lab-daily-radar",
       ...headers,
     },
     signal: AbortSignal.timeout(requestTimeoutMs),
