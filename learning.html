@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 學習入口 - Michael AI Agent Lab</title>
+  <meta name="description" content="Michael 整理的 AI Agent 學習入口、熱門工具、教學教材與實作資源">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20260724-home-about">
+  <script src="./site-config.js?v=20260711-resource-library"></script>
+</head>
+<body class="home-page">
+  <main class="app-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="Michael AI Agent Lab 首頁">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>
+          <strong>Michael AI Agent Lab</strong>
+          <small>AI learning entrance</small>
+        </span>
+      </a>
+    </header>
+
+    <section class="workspace" id="learningRadar">
+      <div class="left-rail">
+        <aside class="summary-panel" aria-label="資料庫摘要">
+          <div class="summary-visual" aria-hidden="true">
+            <span>Michael AI Agent Lab</span>
+          </div>
+          <div class="summary-copy">
+            <p class="section-label">Hi, I'm Michael.</p>
+            <h1>博學之，審問之，慎思之，明辨之，篤行之。</h1>
+            <p class="hero-motto">Learn widely. Question deeply. Think clearly. Act deliberately.</p>
+            <p>
+              博學，是建立視野；審問，是問對問題；慎思與明辨，是找到方法；篤行，才是把 AI Agent 變成真正的工作能力。
+            </p>
+          </div>
+          <dl class="metric-grid">
+            <div>
+              <dt id="totalCount">31</dt>
+              <dd>上架教材</dd>
+            </div>
+            <div>
+              <dt>8</dt>
+              <dd>任務分類</dd>
+            </div>
+          </dl>
+        </aside>
+
+        <section class="library-panel" aria-label="教材列表">
+          <div class="library-toolbar">
+            <div>
+              <h2><a class="library-title-link" href="./tutorial-library.html" target="_blank" rel="noopener">教材入口</a></h2>
+              <p>依分類或關鍵字找教學檔，最新教材也會放在這裡。</p>
+            </div>
+            <a class="library-open-link" href="./tutorial-library.html" target="_blank" rel="noopener">完整分類目錄</a>
+          </div>
+
+          <label class="search-box">
+            <span>搜尋教材</span>
+            <input id="searchInput" type="search" autocomplete="off" placeholder="輸入 Claude、Prompt、Skill、MarkItDown...">
+          </label>
+
+          <div class="filter-row" id="categoryFilters" aria-label="分類篩選"></div>
+
+          <div class="result-meta" aria-live="polite">
+            <span id="resultCount">載入中...</span>
+            <button type="button" id="clearFiltersButton">清除篩選</button>
+          </div>
+
+          <section class="card-grid" id="tutorialGrid" aria-label="教材卡片"></section>
+          <p class="empty-state" id="emptyState" hidden>找不到符合的教材。換個關鍵字，或先清除分類篩選。</p>
+
+          <section class="lesson-update-section" aria-labelledby="lessonUpdateTitle">
+            <h3 id="lessonUpdateTitle">最新更新教材</h3>
+            <ul class="recent-update-list lesson-update-list" id="recentUpdateList"></ul>
+          </section>
+        </section>
+
+        <div class="side-notices" aria-label="使用與著作權說明">
+          <p><strong>著作權：</strong>教材內容、分類整理與教學編排由 Michael Chuang 製作與維護。除原始品牌與第三方資料來源外，未經同意請勿轉載、改作或商用。</p>
+          <p><strong>隱私：</strong>網站僅用匿名流量分析了解熱門頁面、來源與互動趨勢；留言 / 討論只處理你主動送出的內容。</p>
+        </div>
+      </div>
+
+      <section class="focus-panel" aria-label="AI 學習雷達">
+        <div class="focus-copy">
+          <p class="section-label">AI Learning Radar</p>
+          <h2>每天先看這裡。</h2>
+          <p>把 GitHub Skill、AI Agent 新聞、本地 Agent、OpenClaw 案例、YouTube 教學與 Hermes 資料庫放在同一個入口。先看最新重點，再決定今天要深入哪一塊。</p>
+        </div>
+        <section class="recent-updates" aria-labelledby="homepageUpdatesTitle">
+          <div class="recent-updates-header">
+            <h3 id="homepageUpdatesTitle">重點入口</h3>
+            <span>每張卡片都會顯示最新一筆</span>
+          </div>
+          <div class="feature-entry-grid" id="featureEntryGrid"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="./learning-path.js?v=20260711-resource-library"></script>
+  <script src="./app.js?v=20260724-home-analytics"></script>
+  <script src="./feedback-widget.js?v=20260711-resource-library"></script>
+</body>
+</html>

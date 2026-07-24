@@ -114,6 +114,7 @@
 
     const prefix = rootPrefix();
     const links = [
+      ["入口", `${prefix}learning.html`],
       ["教材", `${prefix}tutorial-library.html`],
       ["GitHub", `${prefix}github-skills.html`],
       ["AI Agent", `${prefix}ai-agent-daily.html`],
