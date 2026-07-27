@@ -59,82 +59,51 @@
   function addSiteNav() {
     if (document.querySelector(".training-site-nav")) return;
 
-    const style = document.createElement("style");
-    style.textContent = `
-      .training-site-nav {
-        position: fixed;
-        top: 14px;
-        right: 14px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        max-width: calc(100vw - 28px);
-        overflow-x: auto;
-        padding-bottom: 4px;
-        scrollbar-width: thin;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
-      }
-      .training-site-nav a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 auto;
-        min-height: 46px;
-        padding: 0 18px;
-        border: 1px solid rgba(220, 235, 242, 0.22);
-        border-radius: 8px;
-        background: rgba(7, 11, 14, 0.84);
-        color: #f4f7f8;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.26);
-        backdrop-filter: blur(14px);
-        font: 950 16px/1 system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
-        text-decoration: none;
-      }
-      .training-site-nav a:hover,
-      .training-site-nav a[aria-current="page"] {
-        border-color: rgba(40, 198, 226, 0.52);
-        color: #28c6e2;
-      }
-      .training-home-button {
-        border-color: rgba(40, 198, 226, 0.42);
-      }
-      @media (max-width: 640px) {
-        .training-site-nav {
-          top: 10px;
-          right: 10px;
-        }
-        .training-site-nav a {
-          min-height: 40px;
-          padding: 0 14px;
-          font-size: 14px;
-        }
-      }
-    `;
-
     const prefix = rootPrefix();
+    const stylesheet = document.createElement("link");
+    stylesheet.rel = "stylesheet";
+    stylesheet.href = `${prefix}editorial-system.css?v=20260727-all-pages`;
+    document.head.append(stylesheet);
+
     const links = [
-      ["入口", `${prefix}learning.html`],
-      ["教材", `${prefix}tutorial-library.html`],
-      ["GitHub", `${prefix}github-skills.html`],
-      ["AI Agent", `${prefix}ai-agent-daily.html`],
-      ["Local Agent", `${prefix}local-agent-radar.html`],
-      ["LLM", `${prefix}hermes-agent-resources.html`],
-      ["OpenCloud", `${prefix}openclaw-cases.html`],
-      ["YouTube", `${prefix}ai-video-library.html`],
+      ["GitHub 熱門 Skill", `${prefix}github-skills.html`],
+      ["AI Agent 熱門新聞", `${prefix}ai-agent-daily.html`],
+      ["Local Agent 熱門", `${prefix}local-agent-radar.html`],
+      ["OpenClaw 使用案例", `${prefix}openclaw-cases.html`],
+      ["YouTube AI 影片精選", `${prefix}ai-video-library.html`],
+      ["Hermes Agent 資料庫", `${prefix}hermes-agent-resources.html`],
       ["AI 大神", `${prefix}ai-gods.html`],
-      ["About", `${prefix}about.html`],
+      ["所有教材", `${prefix}tutorial-library.html`],
     ];
 
-    const nav = document.createElement("nav");
+    const nav = document.createElement("header");
     nav.className = "training-site-nav";
-    nav.setAttribute("aria-label", "網站分頁入口");
+    nav.setAttribute("aria-label", "網站導覽");
 
-    const link = document.createElement("a");
-    link.className = "training-home-button";
-    link.href = homePath();
-    link.textContent = "回首頁";
+    const brand = document.createElement("a");
+    brand.className = "training-site-brand";
+    brand.href = homePath();
+    brand.textContent = "Michael Agent Lab";
 
+    const primary = document.createElement("nav");
+    primary.className = "training-primary-links";
+    primary.setAttribute("aria-label", "主要分頁");
+
+    const home = document.createElement("a");
+    home.href = homePath();
+    home.textContent = "Home";
+
+    const learning = document.createElement("a");
+    learning.href = `${prefix}learning.html`;
+    learning.textContent = "Learning";
+
+    const explore = document.createElement("details");
+    explore.className = "training-explore-menu";
+    const summary = document.createElement("summary");
+    summary.textContent = "Explore";
+    summary.setAttribute("aria-label", "開啟分頁選單");
+    const panel = document.createElement("div");
+    panel.className = "training-explore-panel";
     for (const [label, href] of links) {
       const item = document.createElement("a");
       item.href = href;
@@ -142,16 +111,36 @@
       if (new URL(item.href, window.location.href).pathname === window.location.pathname) {
         item.setAttribute("aria-current", "page");
       }
-      nav.append(item);
+      panel.append(item);
     }
+    explore.append(summary, panel);
 
-    nav.prepend(link);
+    const about = document.createElement("a");
+    about.href = `${prefix}about.html`;
+    about.textContent = "About";
+    primary.append(home, learning, explore, about);
 
-    document.head.append(style);
+    const linkedin = document.createElement("a");
+    linkedin.className = "training-linkedin";
+    linkedin.href = "https://www.linkedin.com/in/michael-c-976876264/recent-activity/all/";
+    linkedin.target = "_blank";
+    linkedin.rel = "noopener";
+    linkedin.textContent = "LinkedIn";
+    nav.append(brand, primary, linkedin);
+
+    const mountNav = () => {
+      if (document.querySelector(".training-site-nav")) return;
+      document.body.classList.add("site-editorial-system");
+      if (prefix === "../") {
+        document.body.classList.add("lesson-editorial-page");
+      }
+      document.body.prepend(nav);
+    };
+
     if (document.body) {
-      document.body.append(nav);
+      mountNav();
     } else {
-      document.addEventListener("DOMContentLoaded", () => document.body.append(nav), { once: true });
+      document.addEventListener("DOMContentLoaded", mountNav, { once: true });
     }
   }
 

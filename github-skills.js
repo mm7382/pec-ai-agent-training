@@ -68,27 +68,53 @@
     return button;
   }
 
-  function createCard(repo) {
+  function adoptionDifficulty(repo) {
+    const topics = (repo.topics || []).map((topic) => String(topic).toLowerCase());
+    const advancedTerms = ["mcp", "multi-agent", "orchestration", "rag", "memory", "sdk", "framework"];
+    const matches = advancedTerms.filter((term) => topics.some((topic) => topic.includes(term))).length;
+    if (matches >= 2) return "進階整合";
+    if (matches === 1) return "需要調整";
+    return "容易開始";
+  }
+
+  function createCard(repo, index) {
     const article = document.createElement("article");
-    article.className = "rank-card";
+    const featured = index === 0;
+    article.className = `rank-card${featured ? " featured" : ""}`;
     const topics = (repo.topics || []).slice(0, 4).map((topic) => `<span>${escapeHtml(topic)}</span>`).join("");
-    const audience = (repo.audience || []).slice(0, 2).join("、") || "想學 AI Agent 的人";
+    const audience = repo.audience?.[0] || "需要建立 AI 工作流程的 Agent";
+    const workflow = repo.audience?.[1] || repo.useCases?.[0] || "評估後整合到自己的工作流程";
+    const difficulty = adoptionDifficulty(repo);
+    const media = featured ? `
+      <figure class="repo-media">
+        <img src="./assets/github-skill-workspace.jpg" alt="自然光下開啟程式碼與版本分支畫面的筆電和研究筆記">
+      </figure>
+    ` : "";
     article.innerHTML = `
-      <div class="rank-card-top">
-        <span class="rank-number">${repo.rank}</span>
-        <span class="repo-type">${escapeHtml(repo.typeLabel || repo.categoryShortLabel || "GitHub")}</span>
+      ${media}
+      <div class="repo-card-main">
+        <div class="rank-card-top">
+          <span class="rank-number">${String(repo.rank).padStart(2, "0")}</span>
+          <span class="repo-type">${escapeHtml(repo.typeLabel || repo.categoryShortLabel || "GitHub")}</span>
+        </div>
+        <div>
+          <h2 class="repo-name">${escapeHtml(repo.fullName)}</h2>
+          <p class="repo-desc">${escapeHtml(repo.oneLineZh || repo.descriptionZh || repo.description || "暫無簡介。")}</p>
+        </div>
+        <div class="repo-judgement" aria-label="實用判斷">
+          <div><strong>適合 Agent</strong><span>${escapeHtml(audience)}</span></div>
+          <div><strong>運用方式</strong><span>${escapeHtml(workflow)}</span></div>
+          <div><strong>導入難度</strong><span>${escapeHtml(difficulty)}</span></div>
+        </div>
+        <div class="repo-tags">${topics}</div>
+        <div class="repo-footer">
+          <div class="repo-metrics">
+            <div><strong>★ ${formatNumber(repo.stars)}</strong><span>Stars</span></div>
+            <div><strong>${formatDate(repo.pushedAt || repo.updatedAt)}</strong><span>最近更新</span></div>
+          </div>
+          <a class="repo-link" href="./github-skill-detail.html?category=${encodeURIComponent(repo.categoryKey || state.category)}&period=${encodeURIComponent(repo.periodKey || repo.period)}&repo=${encodeURIComponent(repo.fullName)}">查看詳細內容 →</a>
+        </div>
       </div>
-      <div>
-        <h2 class="repo-name">${escapeHtml(repo.fullName)}</h2>
-        <p class="repo-desc">${escapeHtml(repo.oneLineZh || repo.descriptionZh || repo.description || "暫無簡介。")}</p>
-      </div>
-      <div class="repo-tags">${topics}</div>
-      <p class="repo-audience">適合：${escapeHtml(audience)}</p>
-      <div class="repo-metrics">
-        <div><strong>⭐ ${formatNumber(repo.stars)}</strong><span>Stars</span></div>
-        <div><strong>${formatDate(repo.pushedAt || repo.updatedAt)}</strong><span>最近更新</span></div>
-      </div>
-      <a class="repo-link" href="./github-skill-detail.html?category=${encodeURIComponent(repo.categoryKey || state.category)}&period=${encodeURIComponent(repo.periodKey || repo.period)}&repo=${encodeURIComponent(repo.fullName)}">查看詳細內容</a>
     `;
     return article;
   }

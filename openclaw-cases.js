@@ -104,7 +104,8 @@
     const summary = item.summary || "這是一個 OpenClaw 相關使用案例，可作為 AI Agent 工作流程參考。";
     article.innerHTML = `
       <a class="openclaw-thumb" href="./openclaw-case-detail.html?id=${encodeURIComponent(item.id)}" aria-label="查看 ${escapeHtml(item.title)}">
-        <img src="${escapeHtml(item.thumbnail)}" alt="" loading="lazy">
+        <span class="openclaw-thumb-fallback">OpenClaw case</span>
+        <img src="${escapeHtml(item.thumbnail)}" alt="" loading="lazy" onerror="this.hidden=true">
       </a>
       <div class="openclaw-card-body">
         <div class="openclaw-card-top">

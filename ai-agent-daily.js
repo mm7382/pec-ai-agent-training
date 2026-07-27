@@ -41,22 +41,40 @@
     return text.length > max ? `${text.slice(0, max - 1)}...` : text;
   }
 
-  function originalTranslatedSnippet(item) {
-    return compactText(item.sourceTextZh || item.excerptZh || item.originalExcerpt || item.summaryZh || "目前來源只提供標題與來源網址，請點進詳細內容查看可取得的原始資訊。");
+  function originalTranslatedSnippet(item, featured = false) {
+    return compactText(
+      item.sourceTextZh || item.excerptZh || item.originalExcerpt || item.summaryZh || "目前來源只提供標題與來源網址，請點進詳細內容查看可取得的原始資訊。",
+      featured ? 260 : 150,
+    );
   }
 
-  function createItem(item) {
+  function createItem(item, index) {
     const row = document.createElement("li");
     const article = document.createElement("article");
-    article.className = "daily-card";
+    const featured = index === 0;
+    const withMedia = featured && item.sourceKey === "hn";
+    article.className = `daily-card${featured ? " featured" : ""}${withMedia ? " featured-with-media" : ""}`;
     article.dataset.source = item.sourceKey;
+
+    if (withMedia) {
+      const media = document.createElement("figure");
+      media.className = "news-media";
+      const image = document.createElement("img");
+      image.src = "./assets/ai-agent-news-workspace.jpg";
+      image.alt = "自然光下顯示新聞資料與研究圖表的平板電腦和閱讀筆記";
+      media.append(image);
+      article.append(media);
+    }
+
+    const content = document.createElement("div");
+    content.className = "daily-card-content";
 
     const top = document.createElement("div");
     top.className = "daily-card-top";
 
     const rank = document.createElement("span");
     rank.className = "daily-rank";
-    rank.textContent = String(item.rank);
+    rank.textContent = String(item.rank).padStart(2, "0");
 
     const source = document.createElement("span");
     source.className = "daily-source";
@@ -73,7 +91,7 @@
 
     const summary = document.createElement("p");
     summary.className = "daily-summary";
-    summary.textContent = originalTranslatedSnippet(item);
+    summary.textContent = originalTranslatedSnippet(item, featured);
 
     const meta = document.createElement("div");
     meta.className = "daily-card-meta";
@@ -89,17 +107,18 @@
     const detail = document.createElement("a");
     detail.className = "daily-detail-link";
     detail.href = `./ai-agent-daily-detail.html?period=${encodeURIComponent(item.period)}&id=${encodeURIComponent(item.id)}`;
-    detail.textContent = "查看細節";
+    detail.textContent = "閱讀繁中內容 →";
 
     const sourceLink = document.createElement("a");
     sourceLink.className = "daily-source-link";
     sourceLink.href = item.url;
     sourceLink.target = "_blank";
     sourceLink.rel = "noreferrer";
-    sourceLink.textContent = "來源網址";
+    sourceLink.textContent = "前往原始來源 ↗";
 
     actions.append(detail, sourceLink);
-    article.append(top, title, original, summary, meta, actions);
+    content.append(top, title, original, summary, meta, actions);
+    article.append(content);
     row.append(article);
     return row;
   }
