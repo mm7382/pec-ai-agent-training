@@ -120,10 +120,25 @@ body.about-page {
 }
 
 .about-card {
+  display: block;
   border: 1px solid var(--about-line);
   border-radius: 8px;
   background: rgba(7, 11, 14, 0.46);
+  color: inherit;
   padding: 22px;
+  text-decoration: none;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.about-card:hover,
+.about-card:focus-visible {
+  border-color: var(--about-accent);
+  transform: translateY(-2px);
+}
+
+.about-card:focus-visible {
+  outline: 2px solid var(--about-accent);
+  outline-offset: 4px;
 }
 
 .about-card strong,
