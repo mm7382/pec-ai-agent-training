@@ -1,0 +1,1804 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111315">
+  <title>從連接工具到 Production Skill：MCP、A2A、AP2 與上線防線 | Michael AI Agent Lab</title>
+  <style>
+    :root {
+      --bg: #111315;
+      --band: #15181a;
+      --surface: #1a1e21;
+      --surface-2: #20252a;
+      --surface-3: #282e33;
+      --line: #3a4248;
+      --line-soft: #2a3035;
+      --text: #f4f6f7;
+      --muted: #b7c0c6;
+      --dim: #879198;
+      --red: #d9343b;
+      --red-dark: #4a2024;
+      --cyan: #4ac7d8;
+      --cyan-dark: #163b41;
+      --amber: #f2b84f;
+      --amber-dark: #47371d;
+      --green: #66cc8f;
+      --green-dark: #173c28;
+      --violet: #aa9af5;
+      --violet-dark: #302b52;
+      --orange: #ef8b52;
+      --orange-dark: #44281b;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 17px;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: var(--cyan); }
+    a:hover { color: #9deaf2; }
+    button, code, pre { font: inherit; }
+    button { letter-spacing: 0; }
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line-soft);
+      background: rgba(17, 19, 21, 0.96);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      width: min(var(--max), calc(100% - 32px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--red);
+      background: var(--red);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .topbar-copy {
+      min-width: 0;
+      line-height: 1.3;
+    }
+
+    .topbar-title {
+      display: block;
+      overflow: hidden;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .topbar-subtitle {
+      display: block;
+      margin-top: 2px;
+      color: var(--dim);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .draft-badge {
+      flex: 0 0 auto;
+      margin-left: auto;
+      border: 1px solid #745026;
+      border-radius: 4px;
+      padding: 5px 9px;
+      background: #322616;
+      color: #ffd38f;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line-soft);
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        var(--bg);
+      background-size: 48px 48px;
+    }
+
+    .hero-watermark {
+      position: absolute;
+      right: -22px;
+      bottom: -24px;
+      color: var(--text);
+      font-size: 112px;
+      font-weight: 900;
+      line-height: 0.88;
+      opacity: 0.035;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .hero-inner {
+      position: relative;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 76px 0 62px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 34px;
+      height: 3px;
+      background: var(--red);
+      content: "";
+    }
+
+    h1 {
+      max-width: 940px;
+      margin-bottom: 24px;
+      font-size: 54px;
+      line-height: 1.12;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      max-width: 850px;
+      margin-bottom: 34px;
+      color: var(--muted);
+      font-size: 21px;
+    }
+
+    .hero-map {
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(21, 24, 26, 0.92);
+    }
+
+    .hero-step {
+      position: relative;
+      min-height: 126px;
+      padding: 19px 17px;
+      border-right: 1px solid var(--line);
+    }
+
+    .hero-step:last-child { border-right: 0; }
+
+    .hero-step::after {
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      z-index: 2;
+      width: 18px;
+      height: 18px;
+      border-top: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      background: var(--band);
+      transform: translateY(-50%) rotate(45deg);
+      content: "";
+    }
+
+    .hero-step:last-child::after { display: none; }
+
+    .step-no {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--dim);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .hero-step strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 19px;
+    }
+
+    .hero-step span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .hero-step:nth-child(1) strong { color: var(--cyan); }
+    .hero-step:nth-child(2) strong { color: var(--violet); }
+    .hero-step:nth-child(3) strong { color: var(--amber); }
+    .hero-step:nth-child(4) strong { color: var(--green); }
+    .hero-step:nth-child(5) strong { color: #ff979c; }
+
+    .section-nav {
+      border-bottom: 1px solid var(--line-soft);
+      background: var(--band);
+    }
+
+    .section-nav-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0;
+      scrollbar-width: none;
+    }
+
+    .section-nav-inner::-webkit-scrollbar { display: none; }
+
+    .section-nav a {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 7px 11px;
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .section-nav a:hover {
+      border-color: var(--cyan);
+      color: var(--text);
+    }
+
+    main { width: 100%; }
+
+    .band {
+      border-bottom: 1px solid var(--line-soft);
+      scroll-margin-top: 90px;
+    }
+
+    .band:nth-child(even) { background: var(--band); }
+
+    .section-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 78px 0;
+    }
+
+    .section-kicker {
+      margin-bottom: 8px;
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 930px;
+      margin-bottom: 16px;
+      font-size: 38px;
+      line-height: 1.22;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .section-lead {
+      max-width: 850px;
+      margin-bottom: 34px;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    h4 {
+      margin-bottom: 6px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .icon {
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .protocol-card {
+      min-height: 294px;
+      border: 1px solid var(--line);
+      border-top-width: 4px;
+      border-radius: 6px;
+      padding: 21px;
+      background: var(--surface);
+    }
+
+    .protocol-card.mcp { border-top-color: var(--cyan); }
+    .protocol-card.a2a { border-top-color: var(--violet); }
+    .protocol-card.ap2 { border-top-color: var(--amber); }
+    .protocol-card.skill { border-top-color: var(--green); }
+
+    .protocol-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 13px;
+    }
+
+    .protocol-head .icon-wrap {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+    }
+
+    .mcp .icon-wrap { background: var(--cyan-dark); color: var(--cyan); }
+    .a2a .icon-wrap { background: var(--violet-dark); color: var(--violet); }
+    .ap2 .icon-wrap { background: var(--amber-dark); color: var(--amber); }
+    .skill .icon-wrap { background: var(--green-dark); color: var(--green); }
+
+    .protocol-label {
+      display: block;
+      color: var(--dim);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .protocol-card p {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .decision {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 13px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .decision strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--dim);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .correction {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 8px 1fr;
+      overflow: hidden;
+      border: 1px solid #554326;
+      border-radius: 6px;
+      background: #251f15;
+    }
+
+    .correction::before {
+      background: var(--amber);
+      content: "";
+    }
+
+    .correction-copy { padding: 18px 20px; }
+
+    .correction strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ffd893;
+    }
+
+    .correction span { color: var(--muted); }
+
+    .matrix-wrap {
+      margin-top: 28px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      background: var(--surface);
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-right: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+
+    th {
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    td {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    td:first-child {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .safety-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .safety-step {
+      position: relative;
+      min-height: 180px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 18px;
+      background: var(--surface);
+    }
+
+    .safety-step .number {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 15px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--red-dark);
+      color: #ffb0b4;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .safety-step p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .rule-strip {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1px solid #55262a;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #231719;
+    }
+
+    .rule {
+      min-height: 104px;
+      padding: 17px 19px;
+      border-right: 1px solid #55262a;
+    }
+
+    .rule:last-child { border-right: 0; }
+
+    .rule strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ff9da2;
+    }
+
+    .rule span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .layers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 980px;
+    }
+
+    .layer {
+      display: grid;
+      grid-template-columns: 150px 1fr 180px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .layer-id {
+      height: 100%;
+      min-height: 106px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    .layer:nth-child(1) .layer-id { background: var(--cyan-dark); color: var(--cyan); }
+    .layer:nth-child(2) .layer-id { background: var(--violet-dark); color: var(--violet); }
+    .layer:nth-child(3) .layer-id { background: var(--green-dark); color: var(--green); }
+
+    .layer-copy { padding: 18px 22px; }
+
+    .layer-copy strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .layer-copy span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .layer-load {
+      padding: 18px;
+      border-left: 1px solid var(--line-soft);
+      color: var(--dim);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .layer-load b {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .failure-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .failure-card {
+      position: relative;
+      min-height: 260px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 22px;
+      background: var(--surface);
+    }
+
+    .failure-index {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      color: #4e565c;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .failure-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 16px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .failure-card h3 { padding-right: 52px; }
+
+    .failure-card p {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .test-line {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 12px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .test-line strong { color: var(--green); }
+
+    .gate-line {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .gate {
+      min-height: 284px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .gate-top {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 17px 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .gate-no {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 34px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .gate-top strong {
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .gate-copy { padding: 18px; }
+
+    .gate-copy p {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .gate-check {
+      display: block;
+      border-top: 1px solid var(--line-soft);
+      padding-top: 11px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .release-ladder {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .release-step {
+      position: relative;
+      min-height: 112px;
+      padding: 17px;
+      border-right: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .release-step:last-child { border-right: 0; }
+
+    .release-step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .release-step span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .release-step:nth-child(1) { border-top: 3px solid var(--cyan); }
+    .release-step:nth-child(2) { border-top: 3px solid var(--violet); }
+    .release-step:nth-child(3) { border-top: 3px solid var(--amber); }
+    .release-step:nth-child(4) { border-top: 3px solid var(--green); }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .meta-card {
+      min-height: 216px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 20px;
+      background: var(--surface);
+    }
+
+    .meta-card .icon-wrap {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 15px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      background: var(--violet-dark);
+      color: var(--violet);
+    }
+
+    .meta-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .lifecycle {
+      margin-top: 22px;
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface-2);
+    }
+
+    .life-step {
+      position: relative;
+      min-width: 165px;
+      flex: 1 0 165px;
+      padding: 17px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .life-step:last-child { border-right: 0; }
+
+    .life-step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .life-step span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .life-step.human {
+      background: var(--amber-dark);
+    }
+
+    .life-step.human strong { color: #ffd990; }
+
+    .scenario {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .scenario-brief {
+      border-left: 5px solid var(--red);
+      padding: 20px;
+      background: var(--surface);
+    }
+
+    .scenario-brief strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .scenario-brief p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .scenario-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .scenario-node {
+      min-height: 164px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 17px;
+      background: var(--surface);
+    }
+
+    .scenario-node .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      padding: 3px 7px;
+      background: var(--cyan-dark);
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .scenario-node:nth-child(2) .tag { background: var(--green-dark); color: var(--green); }
+    .scenario-node:nth-child(3) .tag { background: var(--violet-dark); color: var(--violet); }
+    .scenario-node:nth-child(4) .tag { background: var(--amber-dark); color: var(--amber); }
+
+    .scenario-node p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .prompt-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .prompt-card {
+      display: flex;
+      min-height: 372px;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+    }
+
+    .prompt-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 17px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .prompt-head strong {
+      min-width: 0;
+      flex: 1;
+      font-size: 15px;
+    }
+
+    .copy-btn {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 34px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--surface-3);
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--cyan);
+      color: var(--text);
+    }
+
+    .copy-btn .icon {
+      width: 17px;
+      height: 17px;
+    }
+
+    pre {
+      min-width: 0;
+      flex: 1;
+      margin: 0;
+      overflow: auto;
+      padding: 18px;
+      color: #dce5e9;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.65;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list li {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 15px 17px;
+      background: var(--surface);
+    }
+
+    .source-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .source-list a {
+      display: block;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .review-note {
+      margin-top: 20px;
+      border-left: 4px solid var(--cyan);
+      padding: 15px 17px;
+      background: var(--cyan-dark);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line-soft);
+      padding: 28px 16px calc(28px + env(safe-area-inset-bottom));
+      background: #0d0f10;
+      color: var(--dim);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      h1 { font-size: 46px; }
+      .hero-map { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hero-step:nth-child(3) { border-right: 0; }
+      .hero-step:nth-child(3)::after { display: none; }
+      .hero-step:nth-child(n+4) { border-top: 1px solid var(--line); }
+      .protocol-grid, .meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .safety-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .gate-line { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .scenario { grid-template-columns: 1fr; }
+      .prompt-grid { grid-template-columns: 1fr; }
+      .prompt-card { min-height: auto; }
+    }
+
+    @media (max-width: 700px) {
+      body { font-size: 16px; }
+      .topbar-inner { width: min(var(--max), calc(100% - 24px)); }
+      .topbar-subtitle { display: none; }
+      .hero { min-height: 0; }
+      .hero-inner {
+        width: min(var(--max), calc(100% - 24px));
+        padding: 54px 0 44px;
+      }
+      .hero-watermark {
+        right: -110px;
+        bottom: 4px;
+        font-size: 68px;
+      }
+      h1 {
+        font-size: 38px;
+        line-height: 1.15;
+      }
+      .hero-copy {
+        margin-bottom: 26px;
+        font-size: 18px;
+      }
+      .hero-map { grid-template-columns: 1fr; }
+      .hero-step {
+        min-height: 0;
+        border-top: 1px solid var(--line);
+        border-right: 0;
+        padding: 16px;
+      }
+      .hero-step:first-child { border-top: 0; }
+      .hero-step::after { display: none; }
+      .section-nav-inner { width: min(var(--max), calc(100% - 24px)); }
+      .section-inner {
+        width: min(var(--max), calc(100% - 24px));
+        padding: 56px 0;
+      }
+      h2 { font-size: 30px; }
+      .section-lead { font-size: 17px; }
+      .protocol-grid,
+      .failure-grid,
+      .gate-line,
+      .meta-grid,
+      .source-list,
+      .scenario-flow,
+      .safety-flow,
+      .rule-strip,
+      .release-ladder {
+        grid-template-columns: 1fr;
+      }
+      .protocol-card,
+      .failure-card,
+      .gate,
+      .meta-card,
+      .safety-step {
+        min-height: 0;
+      }
+      .rule { border-right: 0; border-bottom: 1px solid #55262a; }
+      .rule:last-child { border-bottom: 0; }
+      .layer {
+        grid-template-columns: 76px 1fr;
+      }
+      .layer-id {
+        min-height: 138px;
+        padding: 12px;
+        font-size: 21px;
+      }
+      .layer-copy { padding: 16px; }
+      .layer-load {
+        grid-column: 1 / -1;
+        border-top: 1px solid var(--line-soft);
+        border-left: 0;
+        padding: 10px 14px;
+        text-align: left;
+      }
+      .release-step {
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .release-step:last-child { border-bottom: 0; }
+      .matrix-wrap {
+        margin-right: -12px;
+        margin-left: -12px;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+      }
+      .scenario-brief { padding: 17px; }
+      .draft-badge { padding: 4px 7px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <div class="topbar-copy">
+        <span class="topbar-title">MCP、A2A、AP2 與 Production Skill</span>
+        <span class="topbar-subtitle">Michael AI Agent Lab</span>
+      </div>
+      <span class="draft-badge">草稿待審</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-watermark" aria-hidden="true">AI AGENT LAB</div>
+    <div class="hero-inner">
+      <div class="eyebrow">Michael AI Agent Lab · Engineering Notes</div>
+      <h1>從連接工具到能安全上線的 Agent Skill</h1>
+      <p class="hero-copy">
+        模型只是大腦。真正能工作的 Agent，還需要工具介面、協作協定、程序記憶與上線驗證。這份教學把每一層的責任、風險和使用時機拆清楚。
+      </p>
+      <div class="hero-map" aria-label="Agent production stack">
+        <div class="hero-step">
+          <span class="step-no">01 · CONNECT</span>
+          <strong>MCP</strong>
+          <span>讓 Agent 使用工具、資料與外部服務。</span>
+        </div>
+        <div class="hero-step">
+          <span class="step-no">02 · COLLABORATE</span>
+          <strong>A2A</strong>
+          <span>把任務交給另一個具自治能力的 Agent。</span>
+        </div>
+        <div class="hero-step">
+          <span class="step-no">03 · AUTHORIZE</span>
+          <strong>AP2</strong>
+          <span>保留付款意圖、授權與交易證據。</span>
+        </div>
+        <div class="hero-step">
+          <span class="step-no">04 · REMEMBER</span>
+          <strong>Skill</strong>
+          <span>按需載入 SOP、腳本和參考資料。</span>
+        </div>
+        <div class="hero-step">
+          <span class="step-no">05 · VERIFY</span>
+          <strong>Evals</strong>
+          <span>驗證觸發、輸出、工具軌跡與迴歸。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="section-nav" aria-label="頁面章節">
+    <div class="section-nav-inner">
+      <a href="#protocols">協定分工</a>
+      <a href="#mcp-safety">MCP 安全</a>
+      <a href="#skill-layers">Skill 三層</a>
+      <a href="#failures">四種失敗</a>
+      <a href="#gates">四道防線</a>
+      <a href="#meta">Meta-Skill</a>
+      <a href="#scenario">實務情境</a>
+      <a href="#prompts">提示詞</a>
+      <a href="#sources">來源</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="band" id="protocols">
+      <div class="section-inner">
+        <div class="section-kicker">01 · Core Distinction</div>
+        <h2>先判斷你缺的是「工具、同事、授權」還是「做事方法」</h2>
+        <p class="section-lead">
+          四個名詞不是互相取代，而是處理不同邊界。選錯層次，會把簡單工具呼叫做成複雜多 Agent 系統，或把高風險付款誤當一般 API 操作。
+        </p>
+
+        <div class="protocol-grid">
+          <article class="protocol-card mcp">
+            <div class="protocol-head">
+              <span class="icon-wrap">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a6 6 0 0 1-12 0V8z"/></svg>
+              </span>
+              <div>
+                <span class="protocol-label">MODEL ↔ TOOL</span>
+                <h3>MCP</h3>
+              </div>
+            </div>
+            <p>標準化 Agent 如何發現並使用 tools、resources 與 prompts。底層 API 仍負責真正的查詢、寫入或寄送。</p>
+            <div class="decision">
+              <strong>使用時機</strong>
+              查信件、讀資料庫、搜尋文件、操作核准過的 App。
+            </div>
+          </article>
+
+          <article class="protocol-card a2a">
+            <div class="protocol-head">
+              <span class="icon-wrap">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="m21 3-7 7"/><path d="M8 21H3v-5"/><path d="m3 21 7-7"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+              </span>
+              <div>
+                <span class="protocol-label">AGENT ↔ AGENT</span>
+                <h3>A2A</h3>
+              </div>
+            </div>
+            <p>標準化具自治能力的 Agent 如何公開能力、接收任務、交換訊息與產出 artifacts，適合長時間或多回合協作。</p>
+            <div class="decision">
+              <strong>使用時機</strong>
+              主 Agent 把專業分析交給法務、財務或設計 Agent。
+            </div>
+          </article>
+
+          <article class="protocol-card ap2">
+            <div class="protocol-head">
+              <span class="icon-wrap">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h2"/></svg>
+              </span>
+              <div>
+                <span class="protocol-label">AGENT ↔ PAYMENT</span>
+                <h3>AP2</h3>
+              </div>
+            </div>
+            <p>透過 typed mandates 與 receipts 記錄使用者意圖、付款授權及交易結果，讓 Agent 付款可限制、可驗證、可追溯。</p>
+            <div class="decision">
+              <strong>使用時機</strong>
+              採購、訂閱、差旅或任何會產生金流的 Agent 工作。
+            </div>
+          </article>
+
+          <article class="protocol-card skill">
+            <div class="protocol-head">
+              <span class="icon-wrap">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>
+              </span>
+              <div>
+                <span class="protocol-label">AGENT ↔ PROCEDURE</span>
+                <h3>Skill</h3>
+              </div>
+            </div>
+            <p>把 SOP、判斷規則、腳本、參考資料與資產包裝成按需載入的程序記憶，避免每次重新說明。</p>
+            <div class="decision">
+              <strong>使用時機</strong>
+              重複報告、文件檢查、教學檔製作、固定審核流程。
+            </div>
+          </article>
+        </div>
+
+        <div class="correction">
+          <div class="correction-copy">
+            <strong>不要把 MCP 簡化成「單向、無記憶」</strong>
+            <span>MCP 的核心是工具與 context 介面；A2A 的核心是 peer agent 的任務協作。MCP server 可以有狀態，工具也可能執行長任務，真正差異在抽象層級與責任邊界。</span>
+          </div>
+        </div>
+
+        <div class="matrix-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>元件</th>
+                <th>主要對象</th>
+                <th>負責什麼</th>
+                <th>不負責什麼</th>
+                <th>最大風險</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MCP</td>
+                <td>Agent 與工具／資料</td>
+                <td>能力發現、輸入 schema、呼叫介面</td>
+                <td>不取代 Gmail、ERP 或資料庫原本的 API</td>
+                <td>過度權限、惡意 server、secret 外洩</td>
+              </tr>
+              <tr>
+                <td>A2A</td>
+                <td>Agent 與 Agent</td>
+                <td>能力卡、任務、訊息、artifacts、長任務協作</td>
+                <td>不保證對方 Agent 的答案正確或可信</td>
+                <td>信任邊界、資料外送、責任不清</td>
+              </tr>
+              <tr>
+                <td>AP2</td>
+                <td>Agent 與付款體系</td>
+                <td>授權意圖、mandate、receipt、爭議證據</td>
+                <td>不取代商務協定、商品目錄或支付網路</td>
+                <td>誤購、超額、授權被冒用</td>
+              </tr>
+              <tr>
+                <td>Skill</td>
+                <td>Agent 與工作程序</td>
+                <td>保存可重複步驟、規則、腳本與參考資料</td>
+                <td>不自動保證 trigger、結果與工具軌跡正確</td>
+                <td>錯誤觸發、context 污染、迴歸</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="mcp-safety">
+      <div class="section-inner">
+        <div class="section-kicker">02 · Least Privilege</div>
+        <h2>MCP 不是裝完就能用：先做五道安全檢查</h2>
+        <p class="section-lead">
+          MCP server 可能以你的電腦權限執行，也可能連到公司系統。連接成功只是技術檢查；真正的上線條件是來源可信、權限最小、secret 隔離、寫入可控、活動可稽核。
+        </p>
+
+        <div class="safety-flow">
+          <article class="safety-step">
+            <span class="number">1</span>
+            <h3>查來源</h3>
+            <p>優先官方版本；確認 repository、維護者、最近更新、release、已知問題與安裝內容。</p>
+          </article>
+          <article class="safety-step">
+            <span class="number">2</span>
+            <h3>縮權限</h3>
+            <p>從 read-only、限定資料夾、限定帳號與限定 API scope 開始，不給整台電腦或整個信箱。</p>
+          </article>
+          <article class="safety-step">
+            <span class="number">3</span>
+            <h3>隔離 Secret</h3>
+            <p>API key、token 與密碼放在本機安全儲存或環境設定，不貼進聊天、Skill 或 Git。</p>
+          </article>
+          <article class="safety-step">
+            <span class="number">4</span>
+            <h3>擋副作用</h3>
+            <p>寄信、刪除、付款、部署與公開發布都需要明確確認；可先提供 draft 或 dry-run。</p>
+          </article>
+          <article class="safety-step">
+            <span class="number">5</span>
+            <h3>留軌跡</h3>
+            <p>保存使用者要求、選用工具、參數、執行順序、結果與人工批准，才能追查問題。</p>
+          </article>
+        </div>
+
+        <div class="rule-strip">
+          <div class="rule">
+            <strong>先看，後改</strong>
+            <span>新的連接器先以唯讀方式觀察，再逐項開放必要寫入。</span>
+          </div>
+          <div class="rule">
+            <strong>一次只開一個能力</strong>
+            <span>先驗證單一工具與單一資料範圍，不要一次接整套公司系統。</span>
+          </div>
+          <div class="rule">
+            <strong>高風險動作必須有人點頭</strong>
+            <span>付款、外寄、公開、刪除和正式環境變更不得靜默執行。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="skill-layers">
+      <div class="section-inner">
+        <div class="section-kicker">03 · Progressive Disclosure</div>
+        <h2>Skill 的價值不是「存 Prompt」，而是只在需要時載入正確資訊</h2>
+        <p class="section-lead">
+          把所有 SOP 塞進 system prompt 會持續消耗 context，也讓模型更難辨識當下真正重要的規則。Skill 以三層載入，把選擇、程序與詳細資料分開。
+        </p>
+
+        <div class="layers">
+          <article class="layer">
+            <div class="layer-id">L1</div>
+            <div class="layer-copy">
+              <strong>Metadata：name + description</strong>
+              <span>所有 Skill 的簡短目錄。Agent 用它判斷「這次任務應不應該載入」。Description 就是 routing contract。</span>
+            </div>
+            <div class="layer-load">
+              <b>啟動時載入</b>
+              約百 token／Skill 的設計目標
+            </div>
+          </article>
+          <article class="layer">
+            <div class="layer-id">L2</div>
+            <div class="layer-copy">
+              <strong>Instructions：SKILL.md 核心程序</strong>
+              <span>只保留必要步驟、決策、工具邊界、驗收條件和應讀取的資源。選中該 Skill 才載入。</span>
+            </div>
+            <div class="layer-load">
+              <b>觸發後載入</b>
+              Google ADK 範例建議低於約 5,000 tokens
+            </div>
+          </article>
+          <article class="layer">
+            <div class="layer-id">L3</div>
+            <div class="layer-copy">
+              <strong>Resources：references / scripts / assets</strong>
+              <span>詳細規格、案例、模板、可執行腳本和品牌資產。只在程序明確需要時才讀取或執行。</span>
+            </div>
+            <div class="layer-load">
+              <b>按步驟載入</b>
+              不需要就不進 context
+            </div>
+          </article>
+        </div>
+
+        <div class="correction">
+          <div class="correction-copy">
+            <strong>5,000 不是跨平台硬限制</strong>
+            <span>官方範例使用 token，不是固定中文字數。Skill 大小仍要依模型、Agent harness、同時載入的工具與實際 eval 判斷；看到長檔案時，先分離參考資料，不要機械式切字數。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="failures">
+      <div class="section-inner">
+        <div class="section-kicker">04 · Failure Model</div>
+        <h2>Skill 能被讀取，不代表它能安全工作</h2>
+        <p class="section-lead">
+          Production Skill 至少要分別檢查四種失敗。只看最後答案，會漏掉錯誤工具、錯誤順序、額外副作用，以及新 Skill 對舊流程造成的干擾。
+        </p>
+
+        <div class="failure-grid">
+          <article class="failure-card">
+            <span class="failure-index">01</span>
+            <span class="failure-type">Trigger Failure</span>
+            <h3>該出現時沒出現，不該出現時卻搶工作</h3>
+            <p>Description 太模糊、和其他 Skill 邊界重疊，或只靠特定關鍵字，會造成 routing 錯誤。</p>
+            <div class="test-line"><strong>怎麼測：</strong>正例、反例、近鄰 Skill、同義改寫與模糊輸入。</div>
+          </article>
+
+          <article class="failure-card">
+            <span class="failure-index">02</span>
+            <span class="failure-type">Token Budget Failure</span>
+            <h3>載入後 context 變吵，反而讓其他任務退化</h3>
+            <p>過長的指令、重複規則或不必要參考資料會增加成本，並降低模型抓住重點的能力。</p>
+            <div class="test-line"><strong>怎麼測：</strong>量測載入 token、延遲、成本及不相關任務的品質變化。</div>
+          </article>
+
+          <article class="failure-card">
+            <span class="failure-index">03</span>
+            <span class="failure-type">Execution Failure</span>
+            <h3>Skill 觸發正確，但結果或執行軌跡錯誤</h3>
+            <p>最後文件可能看起來正常，過程卻先公開、先寄出、查錯資料，或用錯工具參數。</p>
+            <div class="test-line"><strong>怎麼測：</strong>同時驗證 output、選用工具、參數、順序、重試與 side effects。</div>
+          </article>
+
+          <article class="failure-card">
+            <span class="failure-index">04</span>
+            <span class="failure-type">Regression</span>
+            <h3>新 Skill 自己通過，卻讓既有 Skill 選錯或變差</h3>
+            <p>新增 description、共享工具或全域規則後，原本穩定的 routing 與輸出可能被改變。</p>
+            <div class="test-line"><strong>怎麼測：</strong>把整個 Skill library、共用工具及固定回歸案例一起執行。</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="gates">
+      <div class="section-inner">
+        <div class="section-kicker">05 · Release Gates</div>
+        <h2>四道防線把「看起來能用」變成「有證據可以上線」</h2>
+        <p class="section-lead">
+          每一道防線處理不同風險：先定義正確、再擴大案例、主動攻擊、最後限制真實影響。缺任何一層，都不應直接開放高權限操作。
+        </p>
+
+        <div class="gate-line">
+          <article class="gate">
+            <div class="gate-top">
+              <span class="gate-no">1</span>
+              <strong>Evals as Unit Tests</strong>
+            </div>
+            <div class="gate-copy">
+              <p>寫 Skill 前先定義 input、預期工具／軌跡、expected output 與不能發生的副作用。</p>
+              <span class="gate-check">攔截：方向錯、基本執行錯</span>
+            </div>
+          </article>
+
+          <article class="gate">
+            <div class="gate-top">
+              <span class="gate-no">2</span>
+              <strong>Golden Dataset</strong>
+            </div>
+            <div class="gate-copy">
+              <p>收集去識別化的真實案例、長尾情境、標準處理方式與人類修正，持續擴充回歸資料集。</p>
+              <span class="gate-check">攔截：只會做漂亮範例</span>
+            </div>
+          </article>
+
+          <article class="gate">
+            <div class="gate-top">
+              <span class="gate-no">3</span>
+              <strong>Red Team</strong>
+            </div>
+            <div class="gate-copy">
+              <p>刻意測 prompt injection、越權、資料外洩、假連結、錯誤參數及要求跳過規定的輸入。</p>
+              <span class="gate-check">攔截：惡意與極端輸入</span>
+            </div>
+          </article>
+
+          <article class="gate">
+            <div class="gate-top">
+              <span class="gate-no">4</span>
+              <strong>Shadow + Canary</strong>
+            </div>
+            <div class="gate-copy">
+              <p>先在後台產生草稿，不觸發真實副作用；通過後只開放少量任務，監測再逐步提高。</p>
+              <span class="gate-check">攔截：測試環境看不到的問題</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="release-ladder" aria-label="Skill release ladder">
+          <div class="release-step">
+            <strong>Read-only</strong>
+            <span>只查詢資料，不改動來源。</span>
+          </div>
+          <div class="release-step">
+            <strong>Draft-only</strong>
+            <span>可以產生建議、文件或信件草稿。</span>
+          </div>
+          <div class="release-step">
+            <strong>Canary</strong>
+            <span>少量真實任務，完整監控與可回滾。</span>
+          </div>
+          <div class="release-step">
+            <strong>Action-allowed</strong>
+            <span>通過政策、評估、審批與稽核才開放。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="meta">
+      <div class="section-inner">
+        <div class="section-kicker">06 · Meta-Skill</div>
+        <h2>能產生 Skill 的 Skill，只能先當草稿工廠</h2>
+        <p class="section-lead">
+          Meta-Skill 可以加速整理經驗，但也可能放大錯誤、學到偶然步驟或迎合不完整評分。沒有穩定 eval、版本控制和人工 gate，就不要讓它直接改正式 library。
+        </p>
+
+        <div class="meta-grid">
+          <article class="meta-card">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+            </span>
+            <h3>Authoring</h3>
+            <p>從需求、SOP 或訪談內容建立第一版 SKILL.md、references 與 eval 草稿。</p>
+          </article>
+
+          <article class="meta-card">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/></svg>
+            </span>
+            <h3>Trace-assisted</h3>
+            <p>從已成功完成的任務軌跡辨識可重複程序，再轉成待審 Skill。</p>
+          </article>
+
+          <article class="meta-card">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M12 4h9"/><path d="M4 9h16"/><path d="M4 15h16"/><circle cx="7" cy="4" r="2"/><circle cx="7" cy="20" r="2"/></svg>
+            </span>
+            <h3>Improvement</h3>
+            <p>根據失敗案例、routing 錯誤與 regression 結果，提出最小修改並重新評估。</p>
+          </article>
+
+          <article class="meta-card">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v6"/><path d="m9 5 3 3 3-3"/><rect x="4" y="12" width="6" height="6" rx="1"/><rect x="14" y="12" width="6" height="6" rx="1"/><path d="M7 12V9h10v3"/></svg>
+            </span>
+            <h3>Library Evolution</h3>
+            <p>從重複出現且已驗證的工作，提議新增、合併、淘汰或拆分 Skill。</p>
+          </article>
+        </div>
+
+        <div class="lifecycle" aria-label="Meta-Skill lifecycle">
+          <div class="life-step">
+            <strong>Observe</strong>
+            <span>取得需求或去識別化成功軌跡</span>
+          </div>
+          <div class="life-step">
+            <strong>Draft</strong>
+            <span>產生候選 Skill 與最小變更</span>
+          </div>
+          <div class="life-step">
+            <strong>Eval</strong>
+            <span>跑 trigger、output、trajectory、regression</span>
+          </div>
+          <div class="life-step human">
+            <strong>Human Review</strong>
+            <span>確認邊界、資料、權限與商業規則</span>
+          </div>
+          <div class="life-step">
+            <strong>Canary</strong>
+            <span>小範圍觀察並準備 rollback</span>
+          </div>
+          <div class="life-step">
+            <strong>Promote</strong>
+            <span>證據通過後才進正式 library</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="scenario">
+      <div class="section-inner">
+        <div class="section-kicker">07 · Practical Scenario</div>
+        <h2>範例：每週 Critical Issue 報告要怎麼拆</h2>
+        <p class="section-lead">
+          不要一看到複雜流程就堆滿所有協定。先用最少元件完成可控版本，再讓 eval 決定是否需要更多 Agent 或寫入權限。
+        </p>
+
+        <div class="scenario">
+          <div class="scenario-brief">
+            <strong>任務目標</strong>
+            <p>每週整理核准來源中的異常、風險、owner、deadline 與下一步，先產生內部草稿供 PM 審核。</p>
+          </div>
+          <div class="scenario-flow">
+            <article class="scenario-node">
+              <span class="tag">MCP / CONNECTOR</span>
+              <h3>讀取來源</h3>
+              <p>只讀取核准的 Excel、郵件與 issue 資料夾；不自動修改原始資料。</p>
+            </article>
+            <article class="scenario-node">
+              <span class="tag">SKILL</span>
+              <h3>套用 SOP</h3>
+              <p>定義欄位、風險分級、證據要求、缺資料標記和固定報告格式。</p>
+            </article>
+            <article class="scenario-node">
+              <span class="tag">A2A · OPTIONAL</span>
+              <h3>專家覆核</h3>
+              <p>只有需要電性、韌體或法規專業時，才把特定項目交給對應 Agent。</p>
+            </article>
+            <article class="scenario-node">
+              <span class="tag">EVAL + HUMAN</span>
+              <h3>草稿閘門</h3>
+              <p>檢查遺漏、錯誤 owner、無來源結論與敏感資料；PM 點頭後才能發送。</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="correction">
+          <div class="correction-copy">
+            <strong>這個流程不需要 AP2</strong>
+            <span>因為沒有金流。協定不是成熟度徽章；只有真正發生對外付款與授權證據需求時，才導入 AP2。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="prompts">
+      <div class="section-inner">
+        <div class="section-kicker">08 · Ready-to-Use Prompts</div>
+        <h2>可以直接交給 Codex 或 Claude 的三個任務</h2>
+        <p class="section-lead">
+          這些提示詞把「先檢查、再變更」寫進流程。模型先交付報告或草稿，不會因為看見安裝說明就直接修改系統。
+        </p>
+
+        <div class="prompt-grid">
+          <article class="prompt-card">
+            <div class="prompt-head">
+              <strong>安裝 MCP 前先做風險審查</strong>
+              <button class="copy-btn" type="button" aria-label="複製提示詞" data-copy="prompt-1">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <pre id="prompt-1">請先審查這個 MCP，不要安裝。
+
+檢查：
+1. 是否為官方或可信維護者
+2. 安裝時會執行哪些程式
+3. 需要哪些檔案、網路與帳號權限
+4. secret 如何保存，是否會進聊天紀錄
+5. 能否先用 read-only 與最小 scope
+6. 寄送、刪除、付款等副作用如何確認
+7. 最近維護、已知漏洞與 rollback 方法
+
+先給我風險等級、證據連結和建議設定。
+我確認後才能安裝。</pre>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-head">
+              <strong>把 SOP 設計成 Production Skill</strong>
+              <button class="copy-btn" type="button" aria-label="複製提示詞" data-copy="prompt-2">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <pre id="prompt-2">把以下 SOP 設計成一個 Skill 草稿。
+
+先交付：
+1. 三個應觸發案例
+2. 三個不應觸發案例
+3. 最容易混淆的相鄰 Skill 與分界
+4. 精簡的 name 與 description
+5. SKILL.md 核心程序
+6. 應拆到 references / scripts / assets 的內容
+7. trigger、output、trajectory、regression evals
+8. 權限、資料與人工確認點
+
+不要直接加入正式 Skill library。
+先讓我審查草稿與測試案例。</pre>
+          </article>
+
+          <article class="prompt-card">
+            <div class="prompt-head">
+              <strong>Skill 上線前 Release Review</strong>
+              <button class="copy-btn" type="button" aria-label="複製提示詞" data-copy="prompt-3">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <pre id="prompt-3">對這個 Skill 做上線前檢查，不要部署。
+
+依序驗證：
+- Trigger：正例、反例、同義改寫、近鄰 Skill
+- Token：載入大小、延遲、成本、不相關任務退化
+- Execution：結果、工具、參數、順序、副作用
+- Regression：完整 Skill library 與共用工具
+- Security：prompt injection、越權、secret、資料外送
+- Rollout：read-only、draft-only、shadow、canary、rollback
+
+輸出 PASS / FAIL 表格、失敗證據與最小修正。
+沒有證據通過的項目一律標示為 FAIL。</pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="sources">
+      <div class="section-inner">
+        <div class="section-kicker">09 · Sources & Review Notes</div>
+        <h2>資料來源與核對範圍</h2>
+        <p class="section-lead">
+          技術定義優先採官方規格與官方工程文章；數字門檻視為起始設計目標，仍需以自己的模型、Agent harness、資料與 eval 結果決定。
+        </p>
+
+        <ul class="source-list">
+          <li>
+            <strong>原始整理來源</strong>
+            <a href="https://www.youtube.com/watch?v=XTCP1qoa3cc" target="_blank" rel="noreferrer">20 分鐘看完 Google AI 課程 Day 2+3 精華</a>
+          </li>
+          <li>
+            <strong>Google 五日課程</strong>
+            <a href="https://developers.google.com/profile/badges/events/cloud/five-day-ai-agents" target="_blank" rel="noreferrer">5-Day AI Agents: Intensive Vibe Coding Course With Google</a>
+          </li>
+          <li>
+            <strong>Google MCP + A2A</strong>
+            <a href="https://cloud.google.com/blog/topics/developers-practitioners/building-connected-agents-with-mcp-and-a2a" target="_blank" rel="noreferrer">Building Connected Agents with MCP and A2A</a>
+          </li>
+          <li>
+            <strong>Google A2A</strong>
+            <a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noreferrer">How A2A is Building a World of Collaborative Agents</a>
+          </li>
+          <li>
+            <strong>Google ADK Skills</strong>
+            <a href="https://developers.googleblog.com/en/developers-guide-to-building-adk-agents-with-skills/" target="_blank" rel="noreferrer">Developer’s Guide to Building ADK Agents with Skills</a>
+          </li>
+          <li>
+            <strong>Agent Skills Open Specification</strong>
+            <a href="https://github.com/agentskills/agentskills" target="_blank" rel="noreferrer">agentskills/agentskills</a>
+          </li>
+          <li>
+            <strong>MCP Security</strong>
+            <a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" target="_blank" rel="noreferrer">MCP Security Best Practices</a>
+          </li>
+          <li>
+            <strong>AP2 Specification</strong>
+            <a href="https://ap2-protocol.org/ap2/specification/" target="_blank" rel="noreferrer">Agentic Payment Protocol v0.2</a>
+          </li>
+        </ul>
+
+        <div class="review-note">
+          草稿日期：2026-07-27。MCP、A2A、AP2 與 Agent Skills 都仍在快速演進；正式採用前，應重新確認當日規格版本、官方 SDK、授權方式、安全公告與組織政策。
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Michael AI Agent Lab · 教學草稿 · 本頁僅供審閱，尚未發佈至正式教學網站
+  </footer>
+
+  <script>
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const target = document.getElementById(button.dataset.copy);
+        if (!target) return;
+        try {
+          await navigator.clipboard.writeText(target.textContent.trim());
+          const original = button.getAttribute("aria-label");
+          button.setAttribute("aria-label", "已複製");
+          button.style.color = "var(--green)";
+          setTimeout(() => {
+            button.setAttribute("aria-label", original);
+            button.style.color = "";
+          }, 1400);
+        } catch {
+          target.focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

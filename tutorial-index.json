@@ -1,6 +1,6 @@
 {
   "siteTitle": "Michael AI Agent Lab",
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-27",
   "duplicateHidden": [
     {
       "title": "Agent 自我蒸餾、Skill 化與定期自動化",
@@ -423,6 +423,24 @@
       "url": "./pec-training/claude-codex-cross-review.html",
       "updatedAt": "2026-07-08T17:19:09+08:00",
       "searchText": "Claude + Codex 交叉審核：把 AI 寫碼變成可管控流程 - Michael 教學筆記 Engineering Workflow / Michael Teaching Notes Michael 教學筆記 Claude + Codex 交叉審核：把 AI 寫碼變成可管控流程 這份教材把重點放在 workflow 設計：不是迷信某個模型永遠不出錯，而是把實作、審核、攔截與放行條件拆成一條會自動執行的流程，讓 bug 比較不容易悄悄混進結果。 整理基礎：Anthropic Claude Code Docs / OpenAI Codex Docs / 實務交叉審核案例 2026-06-30 Course Framing 當 AI 寫碼品質不穩時，真正該修的通常不是 prompt 一句話，而是整個審核機制。 最值得吸收的觀念有三個：第一，作者與 reviewer 要拆開；第二，審核不能只靠紀律，最好有 gate 強制執行；第三，是否通過不看次數，而看是否真的收斂到共識。這套想法對 Hermes agent、內部腳本與高風險自動化都很有幫助。 2 角色模型分工 1 Stop gate 守門 5 核心流程步驟 Consensus 最後通過條件 定位 角色分工 流程 收斂 Harness 實務場景 常見誤區 檢查清單 來源 先把問題定義對：這不是模型戰，而是流程設計題 很多人看到 AI 產生 bug，第一反應是換更強的模型。但如果流程仍然是「同一個模型自己寫、自己說完成、自己收工」，那麼同一批盲點仍然可能原封不動通過。真正穩定的做法，是把實作者與審核者拆開，再加上一層不容跳過的 gate。 一句話結論 比起期待模型零失誤，更務實的是建立一條「就算出錯，也比較難直接過關」的工作流。 這個思路很像 code review 制度本身：重點不是評論誰寫得差，而是讓系統更不依賴個人當下的專注力。 這個主題最有價值的地方，不是多加一個 reviewer 而已，而是把 reviewer 放進會自動觸發的流程裡。 這套做法在解決什麼痛點 原始問題 自寫自查容易漏 同一個模型寫完再自己檢查，常會連同相同假設一起帶進結果，尤其在邊界條件與錯誤處理上最明顯。 流程問題 審核靠人記得做 如果 review 只是建議步驟，忙的時候就會被跳過，最後又回到人工補救。 解法 把 review 系統化 讓 Claude 負責交付、Codex 負責挑錯，並用 hook 攔住未完成審核的結果。 工程價值 讓流程比紀律可靠 不是靠每次都提醒自己，而是靠系統讓關鍵步驟自動發生。 四個角色拆開後，整件事就清楚了 Claude 的角色 主力負責產出與修正。它不是不能 review，而是這條流程刻意讓它不要獨自決定自己是否過關。 Codex 的角色 用第二視角看 correctness、風險、遺漏測試與邊界條件，讓錯誤不要只靠作者自己想起來。 標準工作流程：不是寫完就算完成 Claude 先寫計畫與實作。 它可以先修改檔案、補測試、整理方案，但這還不代表可以直接結束。 嘗試收工時，由 Stop hook 攔截。 只要檢查條件不滿足，就不允許直接通過。 觸發 reviewer 流程。 Claude 依既定 skill 或 review 指令，把變更交給 Codex 看。 雙方反覆修正直到收斂。 Reviewer 提問題，Claude 修，接著再 review，不是一輪定生死。 確認 reviewer 同意後，才寫入 marker 放行。 marker 只是信號，不是目的；真正代表的是「審核完成且已收斂」。 最容易做錯的地方 很多人會把 marker 當成一個可手動補上的字串。這樣流程就破功了。正確做法是 marker 只能出現在 reviewer 真正通過之後。 收斂關鍵：同一個 reviewer session 要持續沿用 建議做法 固定同一條 reviewer 對話 這樣 reviewer 會記得前面已經討論過什麼、哪些問題已經修過，整體比較容易走向共識。 常見錯法 每一輪都重開新 reviewer 每次都像冷啟動，容易一直冒出新的小挑剔，流程會越審越散，卻不一定更安全。 做法 優點 風險 同一 reviewer session 持續沿用 保留上下文、收斂快、重複問題少 需要有清楚的 review scope，避免 session 漫無邊際擴張 每輪開新 reviewer 表面上像是重新獨立檢查 容易一直發現不同角度的小問題，難以形成「已足夠通過」的共識 Harness 的真正意思：替 AI 準備一個不會漏步驟的辦公室 這裡最值得帶回 Hermes 的觀念，是把問題回推到系統層。當你發現 agent 常常漏做同一件事，重點不該只是再提醒一次，而是問：「為什麼這種結果還能直接過關？」一旦找到那個流程漏洞，就用 hook、skill、檢查條件、狀態標記把它封起來。 Hook 強制約束 確保關鍵步驟一定被執行，而不是寄望模型自己記得。 Skill 工作方法 規定 reviewer 要怎麼檢查，包含正確性、風險、缺失、測試與例外情況。 Marker 狀態握手 讓流程知道「這一步真的做完了」，而不是只靠一段自然語言承諾。 對 solo developer 特別重要 沒有同事幫你把關時，這種 harness 就是在替你補上一個不會累、也不會嫌麻煩的第二道審核。 放進 AI Agent 工作流後，最值得先試的四種場景 Codex / coding agent 高風險腳本與自動修改 像本機批次腳本、報表轉檔、知識庫同步、檔案搬移這些動到真實資料的流程，最適合加 reviewer gate。 先讓作者模型修改 再讓 reviewer 模型專看邊界條件與副作用 沒通過就不能直接結束任務 Wiki / report agent 正式輸出前的事實檢查 例如台股報告、教學筆記、客戶說明文件，作者模型先整理，reviewer 模型再檢查證據是否不足、推論是否過頭。 Content agent 教學 HTML 發送前自動複核 在寄信或通知發送前，先做一輪 layout / wording / source-risk review，避免錯檔或不該公開的內容外流。 PM / ops agent 例行流程不漏步 像 critical issue、每日維護摘要、異常整理，可把「是否補齊 owner / deadline / 風險」做成 gate，而不是靠最後人工檢查。 常見誤區：看起來像做了 review，實際上沒有真正變安全 誤區 為什麼不夠 比較好的替代做法 只在 prompt 裡說「請自我檢查」 是否檢查仍由同一模型自行決定，容易略過 加 hook 或固定 review step，讓流程必定執行 reviewer 只是過場看一下 沒有通關影響力，問題被指出也可能沒修就結束 把 reviewer 結果接回放行條件 每次都重開 reviewer session 審核脈絡斷裂，容易越審越散 同一條 reviewer session 持續沿用到收斂 固定兩輪就算過 流程完成不代表問題已真正解決 以 consensus 作為結束條件 讓 marker 可手動補上 任何人都能繞過 gate，整個保護層失效 限定 marker 只能在審核通過後自動寫入 一頁檢查清單：要把這套搬進自己的 agent，至少先做到這些 先定義作者模型與 reviewer 模型的分工，避免兩邊都做一樣的事。 決定 hook 要攔截哪個時機，通常是在任務準備結束前最有價值。 把 reviewer 規則寫成 skill 或固定工作方法，不要每次臨時講。 設定清楚的通關訊號，例如 marker、structured output 或 status flag。 不要用固定輪數作為成功標準，改用 reviewer 與作者是否已達成共識。 同一個 reviewer session 盡量持續沿用，直到整件事真正收斂。 只在高風險或高成本輸出上先試行，觀察是否真的降低返工與漏錯。 參考資料 這份教學頁的可公開依據以官方文件為主，實務案例則用來幫助拆解 workflow 思路。 Anthropic Claude Code Docs: Hooks Guide Anthropic Claude Code Docs: Hooks Reference OpenAI Codex Docs: Workflows OpenAI Codex Docs: Best Practices OpenAI Codex Docs: CLI Features / Review Michael AI Agent Lab teaching preview. 這份檔案目前先保留為預覽版本，待確認後再進行寄送。"
+    },
+    {
+      "id": "mcp-a2a-production-agent-skills",
+      "title": "從連接工具到 Production Skill：MCP、A2A、AP2 與上線防線",
+      "category": "Agent 系統架構與可靠性",
+      "level": "進階",
+      "summary": "分清 MCP、A2A、AP2 與 Agent Skill 的責任，並用觸發、資料集、紅隊與 canary 建立可驗證的上線流程。",
+      "tags": [
+        "MCP",
+        "A2A",
+        "AP2",
+        "Agent Skills",
+        "Evals",
+        "Meta-Skill"
+      ],
+      "url": "./pec-training/mcp-a2a-production-agent-skills.html",
+      "updatedAt": "2026-07-27T09:03:42+08:00",
+      "searchText": "從連接工具到 Production Skill MCP A2A AP2 與上線防線 Michael AI Agent Lab Agent 系統架構與可靠性 MCP 讓 Agent 使用工具資料與外部服務 A2A 讓 Agent 委派任務給其他 Agent AP2 保留付款意圖授權與交易證據 Skill 保存可重複執行的程序知識 Progressive Disclosure SKILL.md resources scripts evals trigger token budget execution regression golden dataset red team shadow canary meta-skill authoring trace-assisted authoring improvement library evolution Critical Issue 報告 上線驗證 人工審核 安全防線"
     },
     {
       "id": "github-skill-rankings",
