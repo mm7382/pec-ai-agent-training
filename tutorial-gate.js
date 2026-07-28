@@ -62,7 +62,7 @@
     const prefix = rootPrefix();
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = `${prefix}editorial-system.css?v=20260727-all-pages`;
+    stylesheet.href = `${prefix}editorial-system.css?v=20260728-catalog-contrast`;
     document.head.append(stylesheet);
 
     const links = [
