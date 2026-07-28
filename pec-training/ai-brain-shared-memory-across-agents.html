@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用一份可攜、可審核、可搜尋的外部知識庫，讓 Claude Code、Codex、Gemini 與其他 AI Agent 共用你的長期記憶。">
+  <title>一顆大腦，讓每個 AI 都記得你 - Michael 教學筆記</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #061015;
+      --bg2: #09161d;
+      --panel: #0e1a21;
+      --panel2: #14232b;
+      --ink: #f5f8f9;
+      --muted: #a8bac2;
+      --line: rgba(225, 244, 249, .15);
+      --cyan: #2ad8f0;
+      --green: #60d891;
+      --yellow: #f4c84a;
+      --orange: #ff8b3d;
+      --red: #d9343f;
+      --violet: #a982ff;
+      --radius: 18px;
+      --shadow: 0 24px 58px rgba(0, 0, 0, .32);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(42, 216, 240, .16), transparent 30%),
+        radial-gradient(circle at 90% 12%, rgba(169, 130, 255, .10), transparent 28%),
+        linear-gradient(180deg, #051015 0%, #071018 58%, #040608 100%);
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, input { font: inherit; }
+    svg { display: block; }
+    code, pre {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    .page {
+      width: min(1180px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 22px 0 64px;
+    }
+    .topbar {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 0 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #061015;
+      background: var(--cyan);
+      border-radius: 17px;
+      box-shadow: 0 0 34px rgba(42, 216, 240, .24);
+    }
+    .brand-mark svg {
+      width: 30px;
+      height: 30px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .brand strong { display: block; font-size: 17px; line-height: 1.2; }
+    .brand small { color: var(--muted); font-size: 13px; }
+    .review-badge {
+      border: 1px solid rgba(244, 200, 74, .48);
+      color: var(--yellow);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+      background: rgba(244, 200, 74, .08);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 18px;
+      padding: 24px 0 18px;
+    }
+    .hero-main,
+    .hero-side,
+    .section-card,
+    .flow,
+    .compare-card,
+    .folder-card,
+    .ability,
+    .source-card,
+    .prompt-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02)), var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero-main {
+      min-height: 500px;
+      border-radius: var(--radius);
+      padding: 32px;
+      display: grid;
+      align-content: end;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -100px;
+      top: -110px;
+      border: 1px solid rgba(42, 216, 240, .18);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 48px rgba(42, 216, 240, .025),
+        0 0 0 96px rgba(169, 130, 255, .025);
+    }
+    .hero-main::after {
+      content: "ONE BRAIN";
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      color: rgba(255,255,255,.04);
+      font-size: clamp(42px, 8vw, 104px);
+      font-weight: 950;
+      letter-spacing: -.06em;
+      pointer-events: none;
+    }
+    .kicker {
+      color: var(--cyan);
+      margin: 0 0 12px;
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .98;
+      max-width: 790px;
+      letter-spacing: -.045em;
+    }
+    .lead {
+      max-width: 780px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.72;
+    }
+    .promise {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      margin-top: 24px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #071015;
+      background: var(--cyan);
+      font-weight: 950;
+    }
+    .hero-side {
+      border-radius: var(--radius);
+      padding: 22px;
+      display: grid;
+      align-content: center;
+      gap: 14px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,.045);
+    }
+    .metric b { display: block; font-size: 28px; line-height: 1.1; }
+    .metric span { color: var(--muted); font-size: 13px; }
+
+    .quick-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: 0 0 24px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(6, 16, 21, .90);
+      backdrop-filter: blur(18px);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .quick-nav::-webkit-scrollbar { display: none; }
+    .quick-nav-inner {
+      display: flex;
+      gap: 7px;
+      min-width: max-content;
+      padding: 8px;
+    }
+    .quick-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.035);
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 750;
+    }
+    .quick-nav a:hover {
+      color: var(--ink);
+      border-color: var(--line);
+      text-decoration: none;
+    }
+
+    section { scroll-margin-top: 76px; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin: 34px 0 12px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+    }
+    .section-head p {
+      margin: 0;
+      max-width: 560px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .core-map {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .section-card {
+      border-radius: var(--radius);
+      padding: 20px;
+      min-width: 0;
+    }
+    .section-card h3,
+    .compare-card h3,
+    .folder-card h3,
+    .ability h3,
+    .prompt-card h3 {
+      margin: 12px 0 8px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+    .section-card p,
+    .compare-card p,
+    .folder-card p,
+    .ability p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .concept-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      color: #061015;
+    }
+    .concept-icon svg {
+      width: 31px;
+      height: 31px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .c-cyan { background: var(--cyan); }
+    .c-green { background: var(--green); }
+    .c-yellow { background: var(--yellow); }
+    .c-violet { background: var(--violet); }
+    .c-orange { background: var(--orange); }
+    .c-red { background: var(--red); color: #fff; }
+
+    .callout {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border: 1px solid rgba(42,216,240,.28);
+      border-left: 5px solid var(--cyan);
+      border-radius: 14px;
+      background: rgba(42,216,240,.07);
+      color: var(--muted);
+    }
+    .callout strong { color: var(--ink); }
+
+    .flow {
+      border-radius: var(--radius);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      background: rgba(255,255,255,.035);
+    }
+    .flow-step {
+      min-height: 212px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.055);
+      padding: 16px;
+      display: grid;
+      gap: 11px;
+      align-content: start;
+      position: relative;
+    }
+    .flow-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -13px;
+      top: 92px;
+      width: 13px;
+      height: 2px;
+      background: var(--cyan);
+      opacity: .8;
+    }
+    .flow-step b { font-size: 18px; }
+    .flow-step p { margin: 0; color: var(--muted); font-size: 14px; }
+    .step-no {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: #061015;
+      font-weight: 950;
+      background: var(--cyan);
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .compare-card {
+      border-radius: var(--radius);
+      padding: 20px;
+      min-width: 0;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .tag.cyan { color: var(--cyan); background: rgba(42,216,240,.07); }
+    .tag.green { color: var(--green); background: rgba(96,216,145,.07); }
+    .tag.yellow { color: var(--yellow); background: rgba(244,200,74,.07); }
+    .tag.violet { color: var(--violet); background: rgba(169,130,255,.07); }
+    .tag.orange { color: var(--orange); background: rgba(255,139,61,.07); }
+    .tag.red { color: #ff7d86; background: rgba(217,52,63,.08); }
+
+    .folder-layout {
+      display: grid;
+      grid-template-columns: minmax(310px, .9fr) minmax(0, 1.1fr);
+      gap: 14px;
+    }
+    .folder-tree {
+      margin: 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: #d8f8fd;
+      background: #040b0f;
+      box-shadow: var(--shadow);
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .folder-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .folder-card {
+      border-radius: 16px;
+      padding: 17px;
+    }
+    .folder-card h3 { color: var(--cyan); margin-top: 0; }
+    .folder-card code {
+      color: var(--yellow);
+      font-size: .92em;
+    }
+
+    .connector-map {
+      display: grid;
+      grid-template-columns: 1fr minmax(210px, .72fr) 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .device-stack {
+      display: grid;
+      gap: 10px;
+    }
+    .device {
+      min-height: 84px;
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,255,255,.04);
+    }
+    .device svg {
+      width: 34px;
+      height: 34px;
+      fill: none;
+      stroke: var(--cyan);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .device b { display: block; }
+    .device span { color: var(--muted); font-size: 13px; }
+    .brain-hub {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      border: 1px solid rgba(42,216,240,.34);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle, rgba(42,216,240,.20), transparent 64%),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .brain-hub svg {
+      width: 88px;
+      height: 88px;
+      fill: none;
+      stroke: var(--cyan);
+      stroke-width: 1.55;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .brain-hub b { margin-top: 12px; font-size: 22px; }
+    .brain-hub span { color: var(--muted); font-size: 13px; }
+    .connector-note {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .connector-note .section-card { box-shadow: none; }
+
+    .abilities {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .ability {
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .ability-no {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      color: #061015;
+      background: var(--cyan);
+      font-weight: 950;
+    }
+
+    .safety {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .checklist {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    .checklist li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+    }
+    .checklist li::before {
+      content: "✓";
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: #061015;
+      background: var(--green);
+      font-weight: 950;
+    }
+    .checklist.warn li::before {
+      content: "!";
+      color: #fff;
+      background: var(--red);
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .roadmap .section-card {
+      position: relative;
+      padding-top: 58px;
+    }
+    .roadmap-no {
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .06em;
+    }
+
+    .prompt-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .prompt-card {
+      border-radius: var(--radius);
+      padding: 18px;
+      min-width: 0;
+    }
+    .prompt-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .prompt-card h3 { margin: 0; }
+    .copy-button {
+      flex: 0 0 auto;
+      cursor: pointer;
+      border: 1px solid rgba(42,216,240,.36);
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: var(--cyan);
+      background: rgba(42,216,240,.07);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .copy-button:hover { background: rgba(42,216,240,.14); }
+    .prompt-code {
+      min-height: 146px;
+      margin: 14px 0 0;
+      padding: 15px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: #d8f8fd;
+      background: #040b0f;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .sources {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .source-card {
+      border-radius: 16px;
+      padding: 17px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .source-card b { display: block; margin-bottom: 8px; }
+    .source-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .footer-note {
+      margin: 22px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-side { grid-template-columns: repeat(3, 1fr); }
+      .core-map { grid-template-columns: repeat(2, 1fr); }
+      .flow { grid-template-columns: repeat(2, 1fr); }
+      .flow-step:last-child { grid-column: 1 / -1; }
+      .flow-step::after { display: none; }
+      .compare, .abilities, .sources { grid-template-columns: repeat(2, 1fr); }
+      .folder-layout { grid-template-columns: 1fr; }
+      .connector-map { grid-template-columns: 1fr; }
+      .brain-hub { min-height: 260px; }
+      .connector-note, .roadmap { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .page { width: min(100% - 20px, 1180px); padding-top: 10px; }
+      .topbar { align-items: flex-start; }
+      .brand-mark { width: 44px; height: 44px; border-radius: 14px; }
+      .brand-mark svg { width: 25px; height: 25px; }
+      .brand strong { font-size: 14px; }
+      .brand small { font-size: 11px; }
+      .review-badge { font-size: 10px; padding: 6px 8px; }
+      .hero { padding-top: 14px; }
+      .hero-main { min-height: 430px; padding: 23px; }
+      h1 { font-size: clamp(41px, 14vw, 58px); }
+      .lead { font-size: 16px; }
+      .hero-side { grid-template-columns: 1fr; }
+      .quick-nav { border-radius: 14px; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 10px; }
+      .core-map,
+      .flow,
+      .compare,
+      .folder-grid,
+      .abilities,
+      .safety,
+      .prompt-grid,
+      .sources { grid-template-columns: 1fr; }
+      .flow-step:last-child { grid-column: auto; }
+      .folder-tree { font-size: 12px; padding: 16px; }
+      .device { grid-template-columns: 40px 1fr; }
+      .prompt-head { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 3v1a3 3 0 0 0 3 3h1v2a3 3 0 0 0 3 3"/>
+            <path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 3v1a3 3 0 0 1-3 3h-1v2a3 3 0 0 1-3 3"/>
+            <path d="M12 4v16M8 9h4M12 14h4"/>
+          </svg>
+        </div>
+        <div>
+          <strong>Michael AI Agent Lab</strong>
+          <small>AI Agent Training · Shared Memory</small>
+        </div>
+      </div>
+      <div class="review-badge">Michael 教學筆記</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-main">
+        <p class="kicker">One Brain · Many Agents</p>
+        <h1>一顆大腦，讓每個 AI 都記得你</h1>
+        <p class="lead">把知識、決策、專案脈絡與 Skill 放進一份自己擁有的外部知識庫。切換專案、AI 工具或裝置時，不必再從零開始自我介紹。</p>
+        <div class="promise">記憶跟著你走，不跟著聊天視窗消失</div>
+      </div>
+      <aside class="hero-side" aria-label="教學重點">
+        <div class="metric">
+          <b>1 份</b>
+          <span>真正的長期知識來源</span>
+        </div>
+        <div class="metric">
+          <b>4 個</b>
+          <span>儲存、管理、連接、查看組件</span>
+        </div>
+        <div class="metric">
+          <b>6 項</b>
+          <span>好用 AI 大腦的驗收能力</span>
+        </div>
+      </aside>
+    </section>
+
+    <nav class="quick-nav" aria-label="頁面目錄">
+      <div class="quick-nav-inner">
+        <a href="#problem">問題</a>
+        <a href="#model">四個組件</a>
+        <a href="#flow">知識流程</a>
+        <a href="#folders">資料夾</a>
+        <a href="#connect">連接方式</a>
+        <a href="#abilities">六個能力</a>
+        <a href="#safety">安全邊界</a>
+        <a href="#roadmap">實作順序</a>
+        <a href="#prompts">操作句</a>
+        <a href="#sources">來源</a>
+      </div>
+    </nav>
+
+    <section id="problem">
+      <div class="section-head">
+        <h2>真正遺失的，不只是聊天紀錄</h2>
+        <p>換專案後最痛的不是 AI 忘了你的名字，而是它忘了你怎麼做判斷、為什麼這樣決定，以及哪些方法已經被驗證過。</p>
+      </div>
+      <div class="compare">
+        <article class="compare-card">
+          <span class="tag red">Session Memory</span>
+          <h3>聊天視窗記得</h3>
+          <p>同一段對話裡很方便，但視窗結束、內容過長或換專案後，重要脈絡可能不再出現。</p>
+        </article>
+        <article class="compare-card">
+          <span class="tag yellow">Project Memory</span>
+          <h3>單一專案記得</h3>
+          <p>AGENTS.md、CLAUDE.md 或專案設定能保存局部規則，但另一個專案不一定會讀到。</p>
+        </article>
+        <article class="compare-card">
+          <span class="tag cyan">External Brain</span>
+          <h3>你自己的大腦記得</h3>
+          <p>知識放在獨立資料夾，由你管理。不同 AI 只要取得授權，就能查詢同一份長期記憶。</p>
+        </article>
+      </div>
+      <div class="callout"><strong>一句話理解：</strong>AI 工具像不同的工作夥伴；外部大腦則是大家共同查閱、而且由你擁有的工作手冊。</div>
+    </section>
+
+    <section id="model">
+      <div class="section-head">
+        <h2>Second Brain 不是一個神奇 App</h2>
+        <p>它其實是四個簡單組件。先分清楚各自職責，就不會把資料夾、Wiki、MCP 和網頁混成同一件事。</p>
+      </div>
+      <div class="core-map">
+        <article class="section-card">
+          <div class="concept-icon c-cyan">
+            <svg viewBox="0 0 24 24"><path d="M4 6h6l2 2h8v10H4z"/><path d="M7 12h10M7 15h7"/></svg>
+          </div>
+          <h3>1. 儲存庫</h3>
+          <p>真正保存 Markdown、附件、決策與 Skill 的地方。可以是一個本機資料夾或私人同步空間。</p>
+        </article>
+        <article class="section-card">
+          <div class="concept-icon c-green">
+            <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/><path d="m15 16 2 2 3-4"/></svg>
+          </div>
+          <h3>2. 管理者</h3>
+          <p>Wiki Agent 或指定的 AI 負責整理、去重、補來源、標狀態，不讓正式知識被隨意改壞。</p>
+        </article>
+        <article class="section-card">
+          <div class="concept-icon c-yellow">
+            <svg viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 13h4v4h-4z"/><path d="M11 9h4a2 2 0 0 1 2 2v2M13 15H9a2 2 0 0 1-2-2v-2"/></svg>
+          </div>
+          <h3>3. 連接器</h3>
+          <p>Skill、CLI 或 MCP 告訴不同 AI 怎麼查、怎麼送出待保存內容。MCP 像接頭，不是硬碟。</p>
+        </article>
+        <article class="section-card">
+          <div class="concept-icon c-violet">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="15" r="2"/></svg>
+          </div>
+          <h3>4. 可視化介面</h3>
+          <p>HTML 或 Dashboard 讓人看得到收件匣、正式知識、關聯與搜尋結果，但它不是唯一的資料來源。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="section-head">
+        <h2>知識從進來到被找回的五步驟</h2>
+        <p>不要讓 AI 看到一句話就直接改正式 Wiki。保留來源、經過審核、建立索引，才有可長期信任的記憶。</p>
+      </div>
+      <div class="flow">
+        <article class="flow-step">
+          <div class="step-no">1</div>
+          <b>Capture</b>
+          <p>收進筆記、對話摘要、專案結論、網址、文件與可重複工作方法。</p>
+        </article>
+        <article class="flow-step">
+          <div class="step-no c-green">2</div>
+          <b>Review</b>
+          <p>先放 raw / inbox，檢查來源、敏感資訊、重複內容與是否真的值得長期保存。</p>
+        </article>
+        <article class="flow-step">
+          <div class="step-no c-yellow">3</div>
+          <b>Organize</b>
+          <p>整理成個人偏好、專案、知識、決策、Skill、人物或來源等清楚分類。</p>
+        </article>
+        <article class="flow-step">
+          <div class="step-no c-orange">4</div>
+          <b>Index</b>
+          <p>建立關鍵詞、標籤與關聯索引，讓搜尋不用把全部檔案一次塞給模型。</p>
+        </article>
+        <article class="flow-step">
+          <div class="step-no c-violet">5</div>
+          <b>Recall</b>
+          <p>AI 先查大腦、引用少量相關來源，再回答問題或協助執行下一步。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="folders">
+      <div class="section-head">
+        <h2>建議的資料夾分法</h2>
+        <p>第一版不需要複雜資料庫。Markdown 加上清楚狀態就能開始；未整理與正式知識要分開。</p>
+      </div>
+      <div class="folder-layout">
+        <pre class="folder-tree" aria-label="AI 大腦資料夾範例"><code>ai-brain/
+├─ raw/                 # 原始來源，不改寫
+│  └─ sessions/         # 值得保存的對話摘要
+├─ inbox/               # 等待審核的候選知識
+├─ wiki/                # 已審核、可查詢的正式知識
+│  ├─ profile/          # 個人背景與偏好
+│  ├─ projects/         # 專案目標與狀態
+│  ├─ knowledge/        # 主題知識與方法
+│  ├─ decisions/        # 決策、理由與結果
+│  ├─ skills/           # 可重複使用的流程
+│  ├─ people/           # 人物與協作脈絡
+│  ├─ sources/          # 來源與引用
+│  └─ archive/          # 過期但保留的內容
+└─ index/               # 搜尋與關聯索引</code></pre>
+        <div class="folder-grid">
+          <article class="folder-card">
+            <h3><code>raw/</code></h3>
+            <p>保存原始證據。即使整理錯了，仍能回頭核對真正來源。</p>
+          </article>
+          <article class="folder-card">
+            <h3><code>inbox/</code></h3>
+            <p>AI 可以送提案進來，但還不能當成正式真相。</p>
+          </article>
+          <article class="folder-card">
+            <h3><code>wiki/</code></h3>
+            <p>經過整理與審核後，才成為其他 AI 可以優先引用的長期知識。</p>
+          </article>
+          <article class="folder-card">
+            <h3><code>index/</code></h3>
+            <p>保存搜尋索引與關聯。它可以重建，不應取代原始 Markdown。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect">
+      <div class="section-head">
+        <h2>不同 AI、不同裝置怎麼共用</h2>
+        <p>核心原則不是複製很多份大腦，而是讓每個入口都連回同一個受控來源。</p>
+      </div>
+      <div class="connector-map">
+        <div class="device-stack">
+          <div class="device">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg>
+            <div><b>主要電腦</b><span>直接讀本機資料夾，速度最快。</span></div>
+          </div>
+          <div class="device">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg>
+            <div><b>其他電腦</b><span>使用私人同步、副本或受保護的遠端連線。</span></div>
+          </div>
+          <div class="device">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></svg>
+            <div><b>手機</b><span>透過受控 Bot 或網頁提交問題與待保存內容。</span></div>
+          </div>
+        </div>
+
+        <div class="brain-hub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 3v1a3 3 0 0 0 3 3h1v2a3 3 0 0 0 3 3"/>
+            <path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 3v1a3 3 0 0 1-3 3h-1v2a3 3 0 0 1-3 3"/>
+            <path d="M12 4v16M8 9h4M12 14h4"/>
+          </svg>
+          <b>唯一的大腦</b>
+          <span>Markdown + Wiki + Index</span>
+        </div>
+
+        <div class="device-stack">
+          <div class="device">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16v10H4zM7 10l2 2-2 2M12 14h5"/></svg>
+            <div><b>Codex</b><span>透過 Skill、CLI 或 MCP 查詢與送出提案。</span></div>
+          </div>
+          <div class="device">
+            <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg>
+            <div><b>Claude Code</b><span>讀共同 Skill，連到同一份知識來源。</span></div>
+          </div>
+          <div class="device">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8 12h8M12 8v8"/></svg>
+            <div><b>其他 Agent</b><span>只要支援檔案、指令或 MCP，就能接入。</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="connector-note">
+        <article class="section-card">
+          <span class="tag green">同一臺電腦</span>
+          <h3>本機 MCP / CLI</h3>
+          <p>適合直接查詢。資料不必經過公開網路，權限範圍也比較容易控制。</p>
+        </article>
+        <article class="section-card">
+          <span class="tag yellow">其他電腦</span>
+          <h3>私人同步或遠端 MCP</h3>
+          <p>私人同步較簡單；遠端 MCP 較即時，但必須加入身分驗證、加密與存取紀錄。</p>
+        </article>
+        <article class="section-card">
+          <span class="tag violet">看得見</span>
+          <h3>HTML Dashboard</h3>
+          <p>用來搜尋、檢查狀態與查看關聯。即使介面壞了，底層知識檔仍然存在。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="abilities">
+      <div class="section-head">
+        <h2>好用 AI 大腦的六個驗收能力</h2>
+        <p>不是檔案很多就叫大腦。真正好用的標準，是能準確找回、誠實面對未知、受控保存，並跨入口使用。</p>
+      </div>
+      <div class="abilities">
+        <article class="ability">
+          <span class="ability-no">1</span>
+          <h3>精準查到</h3>
+          <p>找到少量真正相關內容，並標出來源，而不是把整個資料夾全部塞進上下文。</p>
+        </article>
+        <article class="ability">
+          <span class="ability-no c-green">2</span>
+          <h3>找不到就說沒有</h3>
+          <p>沒有證據時不補故事。未知要明確標示，讓使用者決定是否新增資料。</p>
+        </article>
+        <article class="ability">
+          <span class="ability-no c-yellow">3</span>
+          <h3>可以要求保存</h3>
+          <p>使用者能用自然語言說「記到大腦」，內容先成為待審核提案。</p>
+        </article>
+        <article class="ability">
+          <span class="ability-no c-orange">4</span>
+          <h3>自動找出關聯</h3>
+          <p>新知識能連到既有專案、決策、人物或 Skill，慢慢形成可探索的知識網。</p>
+        </article>
+        <article class="ability">
+          <span class="ability-no c-violet">5</span>
+          <h3>主動提醒重點</h3>
+          <p>討論出穩定決策或新方法時，AI 可以建議保存，但要等使用者同意。</p>
+        </article>
+        <article class="ability">
+          <span class="ability-no c-red">6</span>
+          <h3>跨工具與裝置</h3>
+          <p>記憶不綁定單一聊天視窗、單一 AI 或單一專案，授權後可從不同入口取用。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="safety">
+      <div class="section-head">
+        <h2>先把邊界做好，才值得長期信任</h2>
+        <p>大腦會累積非常多個人脈絡；權限、審核、備份與刪除能力，跟搜尋速度同樣重要。</p>
+      </div>
+      <div class="safety">
+        <article class="section-card">
+          <span class="tag green">應該做</span>
+          <h3>建立可回復、可審核的流程</h3>
+          <ul class="checklist">
+            <li>原始來源先保留，正式 Wiki 與待審核內容分開。</li>
+            <li>每筆內容記錄來源、日期、狀態與最後更新時間。</li>
+            <li>備份加密，其他裝置只取得完成任務所需的最低權限。</li>
+            <li>定期測試搜尋結果，移除重複或過期內容。</li>
+          </ul>
+        </article>
+        <article class="section-card">
+          <span class="tag red">不要做</span>
+          <h3>避免把大腦變成新的風險中心</h3>
+          <ul class="checklist warn">
+            <li>不要保存密碼、Token、Cookie、私密金鑰或環境變數。</li>
+            <li>不要讓每個 Agent 都能直接改寫正式知識。</li>
+            <li>不要把整個資料夾公開到沒有驗證的網路端點。</li>
+            <li>不要因為圖形介面看起來很完整，就忽略來源與錯誤。</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout"><strong>兩個現實限制：</strong>第一，只有關鍵詞搜尋時，同義詞可能漏找，之後可再加入本機語義搜尋；第二，系統不會憑空長大，重要討論仍要養成主動保存與定期整理的習慣。</div>
+    </section>
+
+    <section id="roadmap">
+      <div class="section-head">
+        <h2>從簡單版本開始的三階段</h2>
+        <p>先讓一臺電腦上的一個 Agent 能安全查詢，再擴到其他 Agent 和其他裝置。每一階段都要能獨立驗證。</p>
+      </div>
+      <div class="roadmap">
+        <article class="section-card">
+          <span class="roadmap-no">PHASE 01</span>
+          <h3>一個資料夾</h3>
+          <p>建立 raw、inbox、wiki、index。先收個人偏好、專案決策與三個最常用 Skill。</p>
+        </article>
+        <article class="section-card">
+          <span class="roadmap-no">PHASE 02</span>
+          <h3>多個 AI 共用</h3>
+          <p>為 Codex、Claude Code 與其他 Agent 安裝相同的「大腦」Skill，統一查詢與保存語句。</p>
+        </article>
+        <article class="section-card">
+          <span class="roadmap-no">PHASE 03</span>
+          <h3>其他裝置安全接入</h3>
+          <p>選擇私人同步或受保護的遠端 MCP，再加入加密、驗證、最低權限與稽核紀錄。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="prompts">
+      <div class="section-head">
+        <h2>不必背指令，直接這樣說</h2>
+        <p>同一套操作語言可以放進每個 Agent 的 Skill，讓使用者不需要記得底層工具差異。</p>
+      </div>
+      <div class="prompt-grid">
+        <article class="prompt-card">
+          <div class="prompt-head">
+            <h3>先查再回答</h3>
+            <button class="copy-button" type="button">複製</button>
+          </div>
+          <pre class="prompt-code"><code>先查大腦，再回答這個問題。請只引用最相關的來源；如果大腦裡沒有資料，請直接說沒有找到，不要自行補充。</code></pre>
+        </article>
+        <article class="prompt-card">
+          <div class="prompt-head">
+            <h3>保存新決策</h3>
+            <button class="copy-button" type="button">複製</button>
+          </div>
+          <pre class="prompt-code"><code>記到大腦：把剛才確認的決策、理由、適用範圍與待辦事項整理成候選知識。先放入待審核區，不要直接改正式 Wiki。</code></pre>
+        </article>
+        <article class="prompt-card">
+          <div class="prompt-head">
+            <h3>找出可重複方法</h3>
+            <button class="copy-button" type="button">複製</button>
+          </div>
+          <pre class="prompt-code"><code>整理大腦：檢查最近的專案紀錄，找出可以重複使用的 know-how。請區分一般知識、決策與可做成 Skill 的流程。</code></pre>
+        </article>
+        <article class="prompt-card">
+          <div class="prompt-head">
+            <h3>檢查大腦品質</h3>
+            <button class="copy-button" type="button">複製</button>
+          </div>
+          <pre class="prompt-code"><code>大腦狀態：列出待審核數量、正式知識數量、重複或矛盾內容，以及最需要補來源的三個項目。</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head">
+        <h2>來源與審核備註</h2>
+        <p>本頁以「使用者擁有一份外部知識來源，讓多個 AI 受控取用」為主軸，並加入知識審核、權限與可回復性設計。</p>
+      </div>
+      <div class="sources">
+        <article class="source-card">
+          <b>核心概念參考</b>
+          <p><a href="https://youtu.be/bJtkJOXlv5M?si=-UTlwH-xq2rFbyqj">換個專案，AI 又不認識你了？一顆大腦讓多個 AI 全都記得</a></p>
+        </article>
+        <article class="source-card">
+          <b>MCP 官方介紹</b>
+          <p><a href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol?</a></p>
+        </article>
+        <article class="source-card">
+          <b>MCP 架構</b>
+          <p><a href="https://modelcontextprotocol.io/docs/learn/architecture">Architecture overview</a></p>
+        </article>
+        <article class="source-card">
+          <b>方法定位</b>
+          <p>儲存庫保存知識；Wiki Agent 管理知識；Skill／CLI／MCP 負責連接；HTML 負責讓人查看。</p>
+        </article>
+        <article class="source-card">
+          <b>內容邊界</b>
+          <p>再次確認所有範例均為一般個人情境，沒有真實帳號、路徑、Token 或未公開資料。</p>
+        </article>
+        <article class="source-card">
+          <b>教材定位</b>
+          <p>本頁為公開學習筆記，使用一般個人情境說明跨 AI、跨專案與跨裝置的共用記憶方法。</p>
+        </article>
+      </div>
+      <p class="footer-note">Michael public teaching note. A practical guide to shared memory across AI agents.</p>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll(".copy-button").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const code = button.closest(".prompt-card")?.querySelector("code")?.textContent?.trim() || "";
+        try {
+          await navigator.clipboard.writeText(code);
+          const original = button.textContent;
+          button.textContent = "已複製";
+          setTimeout(() => { button.textContent = original; }, 1400);
+        } catch {
+          button.textContent = "請手動複製";
+        }
+      });
+    });
+  </script>
+  <script src="../tutorial-gate.js?v=20260727-editorial-system"></script>
+</body>
+</html>
