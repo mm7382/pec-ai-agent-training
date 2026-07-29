@@ -122,7 +122,7 @@
 
     const linkedin = document.createElement("a");
     linkedin.className = "training-linkedin";
-    linkedin.href = "https://www.linkedin.com/in/michael-c-976876264/recent-activity/all/";
+    linkedin.href = "https://www.linkedin.com/in/michael-c-976876264/";
     linkedin.target = "_blank";
     linkedin.rel = "noopener";
     linkedin.textContent = "LinkedIn";
