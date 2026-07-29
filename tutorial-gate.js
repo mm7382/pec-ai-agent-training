@@ -120,13 +120,7 @@
     about.textContent = "About";
     primary.append(home, learning, explore, about);
 
-    const linkedin = document.createElement("a");
-    linkedin.className = "training-linkedin";
-    linkedin.href = "https://www.linkedin.com/in/michael-c-976876264/";
-    linkedin.target = "_blank";
-    linkedin.rel = "noopener";
-    linkedin.textContent = "LinkedIn";
-    nav.append(brand, primary, linkedin);
+    nav.append(brand, primary);
 
     const mountNav = () => {
       if (document.querySelector(".training-site-nav")) return;
