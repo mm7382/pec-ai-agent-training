@@ -62,7 +62,7 @@
     const prefix = rootPrefix();
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = `${prefix}editorial-system.css?v=20260728-catalog-contrast`;
+    stylesheet.href = `${prefix}editorial-system.css?v=20260729-learning-lab-nowrap`;
     document.head.append(stylesheet);
 
     const links = [
