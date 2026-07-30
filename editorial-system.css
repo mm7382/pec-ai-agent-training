@@ -738,6 +738,33 @@
   background: var(--editorial-surface);
 }
 
+.site-editorial-system :is(.gods-shell, .god-detail-shell) {
+  --ink: var(--editorial-ink);
+  --muted: var(--editorial-muted);
+  --line: var(--editorial-line);
+  --surface: var(--editorial-surface);
+  color-scheme: light;
+}
+
+.site-editorial-system .gods-stats div {
+  border-color: var(--editorial-line);
+  background: #edf0eb;
+}
+
+.site-editorial-system .gods-stats strong,
+.site-editorial-system :is(.gods-search > span, .gods-filter-label, .gods-skill-list li) {
+  color: var(--editorial-ink);
+}
+
+.site-editorial-system .gods-stats span {
+  color: var(--editorial-olive);
+}
+
+.site-editorial-system .gods-search input::placeholder {
+  color: var(--editorial-muted);
+  opacity: 1;
+}
+
 .site-editorial-system .gods-card::before {
   border-left: 2px solid var(--editorial-olive);
 }
