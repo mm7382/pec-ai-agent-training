@@ -62,7 +62,7 @@
     const prefix = rootPrefix();
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = `${prefix}editorial-system.css?v=20260729-learning-lab-nowrap`;
+    stylesheet.href = `${prefix}editorial-system.css?v=20260730-ai-gods-contrast`;
     document.head.append(stylesheet);
 
     const links = [
