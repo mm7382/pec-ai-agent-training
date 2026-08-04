@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CLAUDE.md 與 AGENTS.md 實作教學：把長期規則、工作流程與安全檢查放在正確的位置。">
+  <title>CLAUDE.md 與 AGENTS.md：把 AI 協作規則寫在對的位置</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f5ef;
+      --surface: #fffefa;
+      --ink: #17272a;
+      --muted: #5f6c6d;
+      --line: #cfd5cf;
+      --teal: #176f73;
+      --teal-soft: #e2f0ed;
+      --gold: #a9782c;
+      --gold-soft: #f4ead7;
+      --coral: #b94c3f;
+      --coral-soft: #f8e8e3;
+      --blue: #315e86;
+      --blue-soft: #e5edf5;
+      --shadow: 0 22px 52px rgba(23, 39, 42, 0.10);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.75;
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    img { display: block; max-width: 100%; }
+    figure { margin: 0; }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: 0;
+    }
+
+    .wrap { width: min(calc(100% - 48px), var(--max)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 245, 239, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .topbar-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 800; font-size: 17px; }
+    .draft {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .chapter-nav {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .chapter-nav::-webkit-scrollbar { display: none; }
+    .chapter-nav a { font-size: 14px; text-decoration: none; }
+    .chapter-nav a:hover { color: var(--teal); }
+
+    .hero { padding: 72px 0 42px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 56px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", Georgia, serif;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin-bottom: 24px;
+      font-size: 62px;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+    .hero-lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.75;
+    }
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 2px solid var(--gold);
+      color: var(--gold);
+      font-weight: 800;
+    }
+    .hero-visual {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .instruction-map {
+      min-height: 310px;
+      padding: 26px;
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      background:
+        linear-gradient(var(--line), var(--line)) 50% 50% / 1px calc(100% - 52px) no-repeat,
+        var(--surface);
+    }
+    .instruction-file {
+      width: calc(50% - 22px);
+      min-height: 102px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      position: relative;
+    }
+    .instruction-file:nth-child(2) { margin-left: auto; }
+    .instruction-file::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .instruction-file:first-child::after { right: -23px; }
+    .instruction-file:nth-child(2)::after { left: -23px; }
+    .file-label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--teal);
+      font: 800 15px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .file-purpose { color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .rule-core {
+      width: min(220px, 80%);
+      margin: 0 auto;
+      padding: 12px 14px;
+      border: 1px solid var(--gold);
+      background: var(--gold-soft);
+      color: #77531e;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .hero-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .hero-caption strong { color: var(--ink); }
+
+    .lesson-summary {
+      margin: 28px 0 72px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .summary-item { padding: 24px 26px; }
+    .summary-item + .summary-item { border-left: 1px solid var(--line); }
+    .summary-item b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--teal);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    .summary-item span { color: var(--muted); font-size: 15px; }
+
+    main { padding-bottom: 80px; }
+    section { margin: 0 0 84px; scroll-margin-top: 92px; }
+    .section-head {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 28px;
+      margin-bottom: 34px;
+      align-items: start;
+    }
+    .section-no {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    h2 {
+      margin-bottom: 12px;
+      font-size: 42px;
+      line-height: 1.2;
+    }
+    .section-intro { max-width: 800px; margin: 0; color: var(--muted); font-size: 17px; }
+
+    .scope-map {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .scope {
+      min-height: 260px;
+      padding: 28px;
+      position: relative;
+    }
+    .scope + .scope { border-left: 1px solid var(--line); }
+    .scope-code {
+      display: inline-block;
+      margin-bottom: 44px;
+      color: var(--teal);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .scope h3 { margin-bottom: 10px; font-size: 27px; }
+    .scope p { margin: 0; color: var(--muted); }
+    .scope-mark {
+      position: absolute;
+      right: 24px;
+      top: 22px;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid var(--line);
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+    .fine-print {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+    .editorial-panel {
+      border-top: 5px solid var(--teal);
+      background: var(--surface);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+    .editorial-panel.add { border-top-color: var(--gold); }
+    .editorial-panel h3 { font-size: 28px; margin-bottom: 18px; }
+    .question-list { margin: 0; padding: 0; list-style: none; counter-reset: question; }
+    .question-list li {
+      counter-increment: question;
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .question-list li::before {
+      content: counter(question, decimal-leading-zero);
+      color: var(--teal);
+      font-family: Georgia, serif;
+      font-weight: 700;
+    }
+    .add .question-list li::before { color: var(--gold); }
+
+    .route-board {
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .route {
+      display: grid;
+      grid-template-columns: 160px 38px minmax(220px, 1fr) 1.2fr;
+      align-items: center;
+      min-height: 118px;
+      padding: 22px 28px;
+      gap: 18px;
+    }
+    .route + .route { border-top: 1px solid var(--line); }
+    .route-label { color: var(--muted); font-size: 14px; font-weight: 700; }
+    .route-arrow { color: var(--gold); font-size: 24px; text-align: center; }
+    .route-target { font-family: Georgia, "Songti TC", serif; font-size: 24px; font-weight: 700; }
+    .route-reason { color: var(--muted); font-size: 15px; }
+    .route:nth-child(1) .route-target { color: var(--blue); }
+    .route:nth-child(2) .route-target { color: var(--teal); }
+    .route:nth-child(3) .route-target { color: var(--gold); }
+    .route:nth-child(4) .route-target { color: var(--coral); }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .step {
+      position: relative;
+      min-height: 230px;
+      padding: 28px 22px;
+    }
+    .step + .step { border-left: 1px solid var(--line); }
+    .step-no {
+      display: block;
+      margin-bottom: 48px;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .step h3 { font-size: 23px; margin-bottom: 10px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .example-layout {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 34px;
+      align-items: start;
+    }
+    .example-note {
+      border-left: 4px solid var(--gold);
+      padding: 4px 0 4px 24px;
+    }
+    .example-note h3 { font-size: 30px; }
+    .example-note p { color: var(--muted); }
+    .code-block {
+      margin: 0;
+      overflow-x: auto;
+      border: 1px solid #2e4549;
+      background: #17272a;
+      color: #eff8f5;
+      padding: 26px;
+      font-size: 14px;
+      line-height: 1.8;
+      white-space: pre;
+    }
+    .code-block .comment { color: #90b7b0; }
+
+    .maintenance {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .cycle {
+      min-height: 370px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .cycle-item { padding: 26px; }
+    .cycle-item:nth-child(2), .cycle-item:nth-child(4) { border-left: 1px solid var(--line); }
+    .cycle-item:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .cycle-item b { color: var(--teal); font-family: Georgia, serif; font-size: 28px; }
+    .cycle-item h3 { margin: 10px 0 6px; font-size: 21px; }
+    .cycle-item p { margin: 0; color: var(--muted); font-size: 14px; }
+    .prompt-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--gold-soft);
+      border: 1px solid #d8c29a;
+      padding: 28px;
+    }
+    .prompt-box h3 { font-size: 28px; }
+    .prompt-box pre {
+      margin: 0;
+      white-space: pre-wrap;
+      color: #554321;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .correction-list { border-top: 1px solid var(--line); }
+    .correction {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 28px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .correction b { color: var(--coral); }
+    .correction p { margin: 0; color: var(--muted); }
+
+    .sources {
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+    .sources h2 { font-size: 34px; }
+    .source-list { margin: 24px 0 0; padding: 0; list-style: none; }
+    .source-list li {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 20px;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+    .source-type { color: var(--teal); font-size: 13px; font-weight: 800; text-transform: uppercase; }
+    .source-list a { font-weight: 700; }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 46px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .chapter-nav { display: none; }
+      .hero { padding-top: 48px; }
+      .hero-grid, .example-layout, .maintenance { grid-template-columns: 1fr; }
+      .hero-grid { gap: 34px; }
+      h1 { font-size: 52px; }
+      .scope-map { grid-template-columns: 1fr; }
+      .scope + .scope { border-left: 0; border-top: 1px solid var(--line); }
+      .split { grid-template-columns: 1fr; }
+      .route { grid-template-columns: 120px 30px minmax(180px, 0.8fr) 1fr; }
+      .workflow { grid-template-columns: 1fr 1fr; }
+      .step + .step { border-left: 0; }
+      .step:nth-child(even) { border-left: 1px solid var(--line); }
+      .step:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .step:last-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .topbar-inner { min-height: 60px; }
+      .brand { font-size: 15px; }
+      .draft { font-size: 12px; }
+      .hero { padding: 36px 0 24px; }
+      h1 { font-size: 38px; line-height: 1.16; }
+      .hero-lead { font-size: 17px; }
+      .instruction-map {
+        min-height: 0;
+        padding: 20px;
+        background: var(--surface);
+      }
+      .instruction-file { width: 100%; min-height: 0; }
+      .instruction-file:nth-child(2) { margin-left: 0; }
+      .instruction-file::after { display: none; }
+      .rule-core { width: 100%; }
+      .hero-caption { display: block; }
+      .hero-caption span { display: block; margin-top: 4px; }
+      .lesson-summary { margin-bottom: 56px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .summary-item + .summary-item { border-left: 0; border-top: 1px solid var(--line); }
+      section { margin-bottom: 62px; }
+      .section-head { grid-template-columns: 1fr; gap: 8px; }
+      h2 { font-size: 32px; }
+      .scope { min-height: 230px; padding: 24px; }
+      .editorial-panel { padding: 24px; }
+      .route {
+        grid-template-columns: 1fr 26px;
+        gap: 8px 10px;
+        padding: 22px;
+      }
+      .route-label { grid-column: 1; }
+      .route-arrow { grid-column: 2; grid-row: 1 / 3; }
+      .route-target { grid-column: 1; font-size: 22px; }
+      .route-reason { grid-column: 1 / -1; margin-top: 8px; }
+      .workflow { grid-template-columns: 1fr; }
+      .step { min-height: 0; }
+      .step:nth-child(even), .step + .step { border-left: 0; }
+      .step:nth-child(n+2) { border-top: 1px solid var(--line); }
+      .step-no { margin-bottom: 20px; }
+      .code-block { padding: 20px; font-size: 12px; }
+      .cycle { grid-template-columns: 1fr; }
+      .cycle-item:nth-child(2), .cycle-item:nth-child(4) { border-left: 0; }
+      .cycle-item:nth-child(n+2) { border-top: 1px solid var(--line); }
+      .correction { grid-template-columns: 1fr; gap: 6px; }
+      .source-list li { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">Michael Agent Lab</div>
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a href="#scope">規則層級</a>
+        <a href="#edit">先刪再加</a>
+        <a href="#route">內容分流</a>
+        <a href="#build">建立第一版</a>
+        <a href="#maintain">定期健檢</a>
+        <a href="#sources">來源</a>
+      </nav>
+      <div class="draft">Teaching note</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">AI Coding Agent / Instruction Design</p>
+          <h1 id="page-title">把 AI 協作規則，寫在對的位置。</h1>
+          <p class="hero-lead"><code>CLAUDE.md</code> 與 <code>AGENTS.md</code> 不是專案百科。真正值得留下的，是 AI 無法自行推得、每次工作都必須知道的規則。</p>
+          <div class="hero-note">規則越短，重要訊號越清楚。</div>
+        </div>
+        <figure class="hero-visual">
+          <div class="instruction-map" role="img" aria-label="CLAUDE.md 與 AGENTS.md 都把必要規則交給 AI 協作工具">
+            <div class="instruction-file">
+              <span class="file-label">CLAUDE.md</span>
+              <span class="file-purpose">Claude Code 的專案指令與工作邊界</span>
+            </div>
+            <div class="rule-core">只保留每次工作都必須知道的規則</div>
+            <div class="instruction-file">
+              <span class="file-label">AGENTS.md</span>
+              <span class="file-purpose">Codex 等代理工具的協作規則與目錄範圍</span>
+            </div>
+          </div>
+          <figcaption class="hero-caption">
+            <strong>規則文件不是專案百科</strong>
+            <span>範圍清楚，訊號才不會被淹沒</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <aside class="lesson-summary" aria-label="本篇重點">
+      <div class="summary-grid">
+        <div class="summary-item"><b>Scope</b><span>個人、專案與子資料夾規則各有適用範圍。</span></div>
+        <div class="summary-item"><b>Signal</b><span>移除 AI 自己找得到的資訊，保留隱性知識。</span></div>
+        <div class="summary-item"><b>Enforcement</b><span>長流程交給 Skill，硬性安全交給 Hook 或 CI。</span></div>
+      </div>
+    </aside>
+
+    <main>
+      <section id="scope">
+        <div class="section-head">
+          <div class="section-no">01 / Scope</div>
+          <div>
+            <h2>同一條規則，不一定要讓所有任務都看到</h2>
+            <p class="section-intro"><code>CLAUDE.md</code> 與 <code>AGENTS.md</code> 目的相近，但載入與優先順序依工具而異。共通原則是：規則越接近實際工作的目錄，作用範圍越精準。</p>
+          </div>
+        </div>
+
+        <div class="scope-map">
+          <article class="scope">
+            <span class="scope-mark">U</span>
+            <span class="scope-code">USER</span>
+            <h3>個人長期偏好</h3>
+            <p>語言、回覆格式、個人工作習慣。只放你跨專案都會使用的規則。</p>
+          </article>
+          <article class="scope">
+            <span class="scope-mark">P</span>
+            <span class="scope-code">PROJECT</span>
+            <h3>專案共同規則</h3>
+            <p>測試指令、商業邏輯、完成標準，以及整個團隊都必須知道的連動關係。</p>
+          </article>
+          <article class="scope">
+            <span class="scope-mark">N</span>
+            <span class="scope-code">NESTED</span>
+            <h3>資料夾專屬規則</h3>
+            <p>例如前端視覺驗收或資料層 migration 規則，只在相關目錄工作時加入。</p>
+          </article>
+        </div>
+        <p class="fine-print">提醒：Claude Code 與 Codex 的檔名、搜尋路徑與優先順序不同，導入前應以各自官方文件為準。</p>
+      </section>
+
+      <section id="edit">
+        <div class="section-head">
+          <div class="section-no">02 / Edit</div>
+          <div>
+            <h2>先做減法，再做加法</h2>
+            <p class="section-intro"><code>/init</code> 可以產生起始版本，但它不是完成品。自動生成後，應逐條判斷是否真的值得每次都送進 agent 的工作脈絡。</p>
+          </div>
+        </div>
+
+        <div class="split">
+          <article class="editorial-panel">
+            <h3>刪除前，問三題</h3>
+            <ol class="question-list">
+              <li>Agent 能從程式碼、README 或既有文件自行找到嗎？</li>
+              <li>這條規則和多數工作都有關，還是只屬於一個資料夾或單次任務？</li>
+              <li>三個月後它仍然會是正確的嗎？</li>
+            </ol>
+          </article>
+          <article class="editorial-panel add">
+            <h3>新增前，問五題</h3>
+            <ol class="question-list">
+              <li>這是 AI 無法推得的非協商規則嗎？</li>
+              <li>是否有固定流程或唯一可信來源？</li>
+              <li>是否存在容易漏掉、必須一起修改的檔案？</li>
+              <li>完成工作前，必須跑哪些檢查？</li>
+              <li>遇到問題時，應該去哪一份文件找答案？</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section id="route">
+        <div class="section-head">
+          <div class="section-no">03 / Route</div>
+          <div>
+            <h2>別把所有知識都塞進同一份檔案</h2>
+            <p class="section-intro">判斷資訊放哪裡，比文字寫得多漂亮更重要。以下四條路徑，可以避免指令檔變成又長、又難維護的規則倉庫。</p>
+          </div>
+        </div>
+
+        <div class="route-board" role="list" aria-label="資訊分流判斷">
+          <div class="route" role="listitem">
+            <div class="route-label">AI 自己找得到</div><div class="route-arrow">→</div>
+            <div class="route-target">Code / Docs</div>
+            <div class="route-reason">讓 agent 需要時再讀，不必每次載入。</div>
+          </div>
+          <div class="route" role="listitem">
+            <div class="route-label">短、長期、不可推得</div><div class="route-arrow">→</div>
+            <div class="route-target">CLAUDE.md / AGENTS.md</div>
+            <div class="route-reason">專案不成文規則、連動關係、測試與完成標準。</div>
+          </div>
+          <div class="route" role="listitem">
+            <div class="route-label">長而有條件的流程</div><div class="route-arrow">→</div>
+            <div class="route-target">Skill / Runbook</div>
+            <div class="route-reason">只有任務符合時才載入完整步驟。</div>
+          </div>
+          <div class="route" role="listitem">
+            <div class="route-label">絕對不能違反</div><div class="route-arrow">→</div>
+            <div class="route-target">Hook / Pre-commit / CI</div>
+            <div class="route-reason">用程式化檢查阻擋錯誤，不只依賴文字提醒。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="build">
+        <div class="section-head">
+          <div class="section-no">04 / Build</div>
+          <div>
+            <h2>建立第一版：五步就夠</h2>
+            <p class="section-intro">第一版的目標不是完整，而是建立一個短、可信、能被驗證的起點。</p>
+          </div>
+        </div>
+
+        <div class="workflow">
+          <article class="step"><span class="step-no">01</span><h3>產生起點</h3><p>Claude Code 可用 <code>/init</code> 掃描專案並產生起始內容。</p></article>
+          <article class="step"><span class="step-no">02</span><h3>移除常識</h3><p>刪掉檔案樹、套件列表與其他 agent 能自行發現的資訊。</p></article>
+          <article class="step"><span class="step-no">03</span><h3>縮小範圍</h3><p>資料夾專屬規則移到更靠近實際工作的 nested file。</p></article>
+          <article class="step"><span class="step-no">04</span><h3>分流流程</h3><p>長流程移至 Skill；安全底線移至 Hook、pre-commit 或 CI。</p></article>
+          <article class="step"><span class="step-no">05</span><h3>跑一次驗證</h3><p>交給 agent 做真實小任務，檢查規則是否有幫助或衝突。</p></article>
+        </div>
+      </section>
+
+      <section id="example">
+        <div class="section-head">
+          <div class="section-no">05 / Example</div>
+          <div>
+            <h2>好的指令檔，看起來通常很短</h2>
+            <p class="section-intro">以下範例刻意只保留 agent 不容易從程式碼自行理解的規則與驗收條件。</p>
+          </div>
+        </div>
+
+        <div class="example-layout">
+          <div class="example-note">
+            <h3>五行規則，勝過五頁背景</h3>
+            <p>每一行都應回答一個實務問題：什麼不能錯、哪些地方會連動、完成前要做什麼，以及長流程去哪裡找。</p>
+            <p>若同時使用 Claude Code 與 Codex，可選一份共同規則作為 single source of truth，再依工具支援的方式匯入或引用，避免兩份檔案逐漸分歧。</p>
+          </div>
+          <pre class="code-block"><span class="comment"># Project instructions</span>
+- Run `npm test` before reporting completion.
+- Prices shown to users include tax.
+- Update checkout copy and receipt templates together.
+- For releases, follow `skills/release/SKILL.md`.
+- Never commit secrets; pre-commit scanning is mandatory.</pre>
+        </div>
+      </section>
+
+      <section id="maintain">
+        <div class="section-head">
+          <div class="section-no">06 / Maintain</div>
+          <div>
+            <h2>把規則當成會變動的產品</h2>
+            <p class="section-intro">新增規則只是維護的一半；另一半是刪除已經被工具、程式碼或流程取代的舊規則。</p>
+          </div>
+        </div>
+
+        <div class="maintenance">
+          <div class="cycle" aria-label="指令檔維護循環">
+            <article class="cycle-item"><b>01</b><h3>觀察重複失誤</h3><p>只記錄反覆出現、真正造成成本的問題。</p></article>
+            <article class="cycle-item"><b>02</b><h3>判斷正確層級</h3><p>Project、nested、Skill 還是程式化檢查？</p></article>
+            <article class="cycle-item"><b>03</b><h3>用任務驗證</h3><p>確認新規則真的改變行為，且沒有製造衝突。</p></article>
+            <article class="cycle-item"><b>04</b><h3>定期修剪</h3><p>模型、架構或流程改變時，移除過時內容。</p></article>
+          </div>
+          <aside class="prompt-box">
+            <div>
+              <h3>可直接使用的健檢提示詞</h3>
+              <pre>請檢查目前的 CLAUDE.md / AGENTS.md，
+並逐條分類為：
+
+1. 保留：AI 無法自行推得，且長期有效
+2. 移動：應放到 nested file、Skill 或文件
+3. 刪除：可自行發現、過時或重複
+4. 衝突：與程式碼、文件或其他規則矛盾
+
+請為每一條提供證據與建議位置，
+不要直接修改檔案。</pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="corrections">
+        <div class="section-head">
+          <div class="section-no">07 / Verify</div>
+          <div>
+            <h2>三個容易被舊資訊誤導的地方</h2>
+            <p class="section-intro">AI coding 工具更新很快。教材保留影片的核心方法，但版本相關細節以官方文件為準。</p>
+          </div>
+        </div>
+
+        <div class="correction-list">
+          <div class="correction">
+            <b>不是完全同一套規則</b>
+            <p><code>CLAUDE.md</code> 與 <code>AGENTS.md</code> 用途相近，但搜尋路徑、載入順序與覆寫方式不同。不能只改檔名就假設行為完全一致。</p>
+          </div>
+          <div class="correction">
+            <b>私人偏好改用 imports</b>
+            <p>Anthropic 官方文件已將 <code>CLAUDE.local.md</code> 標示為 deprecated；目前建議使用 <code>@path/to/file</code> 匯入不提交到版本控制的個人檔案。</p>
+          </div>
+          <div class="correction">
+            <b>功能指令先查現行文件</b>
+            <p>Slash commands、模型名稱與內建分析功能會隨版本變動。採用前先查官方文件，不把影片中的版本名稱寫成長期規則。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources" class="sources">
+        <h2>來源與延伸閱讀</h2>
+        <ul class="source-list">
+          <li>
+            <span class="source-type">Video</span>
+            <a href="https://www.youtube.com/watch?v=wj7mHCviMvs" target="_blank" rel="noreferrer">Gary Chen：15 分鐘學完 CLAUDE.md，從入門到精通</a>
+          </li>
+          <li>
+            <span class="source-type">Anthropic</span>
+            <a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noreferrer">How Claude remembers your project</a>
+          </li>
+          <li>
+            <span class="source-type">OpenAI</span>
+            <a href="https://openai.com/index/introducing-codex/" target="_blank" rel="noreferrer">Introducing Codex：AGENTS.md guidance</a>
+          </li>
+          <li>
+            <span class="source-type">OpenAI</span>
+            <a href="https://openai.com/index/unrolling-the-codex-agent-loop/" target="_blank" rel="noreferrer">Unrolling the Codex agent loop：instruction aggregation and scope</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">Michael Agent Lab · Public teaching note · 2026-08-04</div>
+  </footer>
+</body>
+</html>
