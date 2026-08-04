@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>隱私說明 - Michael Agent Lab</title>
+  <meta name="description" content="Michael Agent Lab 匿名流量與回饋資料說明">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./editorial-system.css?v=20260804-privacy">
+  <script src="./site-config.js?v=20260804-d1"></script>
+  <style>
+    body{margin:0;background:#f5f2eb;color:#20231f;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:0}
+    .privacy-nav{display:flex;align-items:center;justify-content:space-between;min-height:68px;padding:0 max(22px,calc((100vw - 980px)/2));border-bottom:1px solid #d8d2c6;background:#faf8f3}
+    .privacy-nav a{color:inherit;text-decoration:none;font-weight:800}
+    .privacy-shell{width:min(900px,calc(100vw - 36px));margin:0 auto;padding:72px 0 80px}
+    .privacy-shell header{padding-bottom:32px;border-bottom:1px solid #d8d2c6}
+    .privacy-shell header p:first-child{margin:0 0 10px;color:#7b6846;font-size:12px;font-weight:900;letter-spacing:.12em}
+    .privacy-shell h1{margin:0;font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(40px,7vw,66px);font-weight:500;line-height:1.1}
+    .privacy-shell header p:last-child{max-width:680px;margin:18px 0 0;color:#625f58;font-size:17px;line-height:1.8}
+    .privacy-sections{display:grid;grid-template-columns:220px minmax(0,1fr);gap:54px;padding-top:40px}
+    .privacy-sections nav{position:sticky;top:30px;align-self:start;display:grid;gap:12px}
+    .privacy-sections nav a{color:#777269;font-size:13px;text-decoration:none}
+    .privacy-content section{padding:0 0 34px;margin-bottom:34px;border-bottom:1px solid #d8d2c6}
+    .privacy-content h2{margin:0 0 13px;font-family:Georgia,"Noto Serif TC",serif;font-size:28px;font-weight:500}
+    .privacy-content p,.privacy-content li{color:#5f5c55;line-height:1.85}
+    .privacy-content ul{padding-left:21px}
+    .privacy-content strong{color:#20231f}
+    @media(max-width:700px){.privacy-shell{padding-top:42px}.privacy-sections{grid-template-columns:1fr;gap:28px}.privacy-sections nav{position:static;grid-template-columns:1fr 1fr;padding-bottom:24px;border-bottom:1px solid #d8d2c6}.privacy-nav{padding:0 16px}}
+  </style>
+</head>
+<body>
+  <nav class="privacy-nav" aria-label="網站導覽"><a href="./index.html">Michael Agent Lab</a><a href="./index.html">回首頁</a></nav>
+  <main class="privacy-shell">
+    <header>
+      <p>PRIVACY</p>
+      <h1>隱私說明</h1>
+      <p>這個網站使用少量匿名資料了解哪些內容真正有幫助，目的在改善教材與公開分享，不建立訪客姓名名單。</p>
+    </header>
+    <div class="privacy-sections">
+      <nav aria-label="本頁目錄">
+        <a href="#collect">蒐集內容</a><a href="#purpose">使用目的</a><a href="#retention">保留期間</a><a href="#feedback">主動留言</a><a href="#control">你的選擇</a>
+      </nav>
+      <div class="privacy-content">
+        <section id="collect"><h2>蒐集哪些資料</h2><p>網站記錄匿名代號、瀏覽頁面、閱讀時間、最大捲動深度、裝置類型、概略國家、來源網站與 UTM 活動標記。搜尋資料只保留彙整後的關鍵字與結果數。</p><p><strong>不會蒐集一般訪客的姓名、電子郵件、電話或精確位置。</strong>已知搜尋引擎與自動程式會被排除。</p></section>
+        <section id="purpose"><h2>資料用來做什麼</h2><ul><li>判斷哪些教材、新聞、GitHub Skill 或影片最值得持續整理。</li><li>了解 LinkedIn 貼文是否帶來真正的閱讀，而不只看點擊。</li><li>找出大家搜尋卻沒有結果的主題，作為補充教材的依據。</li></ul></section>
+        <section id="retention"><h2>保留多久</h2><p>瀏覽事件與分析趨勢只保留最近 <strong>15 天</strong>。瀏覽器中的隨機匿名代號最多保留 90 天，用來辨認短期回訪；它不包含姓名，也不會顯示在公開頁面。</p></section>
+        <section id="feedback"><h2>主動留言時</h2><p>只有在你按下「留言／討論」並主動送出內容時，網站才會處理你填寫的稱呼與留言。這些內容會傳送給 Michael 的 Telegram，不會出現在流量後臺。</p></section>
+        <section id="control"><h2>你可以怎麼控制</h2><p>你可以清除瀏覽器的網站資料來重設匿名代號。Michael 自己的測試裝置則可從分析後臺設定為排除，不計入網站流量。</p></section>
+      </div>
+    </div>
+  </main>
+  <script src="./analytics-tracker.js?v=20260804-d1"></script>
+</body>
+</html>

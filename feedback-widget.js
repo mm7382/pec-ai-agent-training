@@ -21,7 +21,7 @@
     };
   }
 
-  async function sendFeedback({ category, message }) {
+  async function sendFeedback({ name, category, message }) {
     if (!trackingEndpoint) throw new Error("目前沒有設定回饋接收端。");
     const trimmed = message.trim();
     if (trimmed.length < 4) throw new Error("請輸入至少 4 個字的回饋內容。");
@@ -30,6 +30,9 @@
       type: "feedback",
       occurredAt: new Date().toISOString(),
       occurredAtLocal: formatLocalTime(),
+      visitor: {
+        name: name.trim().slice(0, 80),
+      },
       page: pageContext(),
       detail: {
         category,
@@ -62,7 +65,7 @@
       .feedback-panel h2{margin:0 0 8px;font-size:20px}
       .feedback-panel p{margin:0 0 12px;color:#9ba8af;line-height:1.5}
       .feedback-panel label{display:grid;gap:7px;margin-top:10px;color:#f4f7f8;font-size:13px;font-weight:850}
-      .feedback-panel select,.feedback-panel textarea{width:100%;border:1px solid rgba(220,235,242,.22);border-radius:8px;background:#070b0e;color:#f4f7f8;padding:10px;font:inherit}
+      .feedback-panel input,.feedback-panel select,.feedback-panel textarea{width:100%;border:1px solid rgba(220,235,242,.22);border-radius:8px;background:#070b0e;color:#f4f7f8;padding:10px;font:inherit}
       .feedback-panel textarea{min-height:116px;resize:vertical;line-height:1.5}
       .feedback-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
       .feedback-actions button{border:1px solid rgba(220,235,242,.22);border-radius:8px;padding:9px 12px;font-weight:900}
@@ -89,6 +92,10 @@
       <h2>留言 / 討論</h2>
       <p>回饋會送到 Michael，包含你主動填寫的內容與目前頁面。</p>
       <label>
+        怎麼稱呼你（選填）
+        <input id="feedbackName" maxlength="80" autocomplete="name" placeholder="姓名或暱稱">
+      </label>
+      <label>
         類型
         <select id="feedbackCategory">
           <option value="內容建議">內容建議</option>
@@ -110,6 +117,7 @@
     `;
     document.body.append(panel, launcher);
 
+    const name = panel.querySelector("#feedbackName");
     const category = panel.querySelector("#feedbackCategory");
     const message = panel.querySelector("#feedbackMessage");
     const submit = panel.querySelector(".feedback-submit");
@@ -128,7 +136,7 @@
       status.dataset.error = "false";
       status.textContent = "送出中...";
       try {
-        await sendFeedback({ category: category.value, message: message.value });
+        await sendFeedback({ name: name.value, category: category.value, message: message.value });
         message.value = "";
         status.textContent = "已送出，謝謝你的回饋。";
       } catch (error) {

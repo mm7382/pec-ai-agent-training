@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>網站觀察後臺 - Michael Agent Lab</title>
+  <meta name="description" content="Michael Agent Lab 匿名流量觀察後臺">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./analytics-dashboard.css?v=20260804-d1">
+  <script src="./site-config.js?v=20260804-d1"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <a class="dashboard-brand" href="./index.html">
+      <span aria-hidden="true">M</span>
+      <strong>Michael Agent Lab</strong>
+    </a>
+    <nav aria-label="後臺導覽">
+      <a href="./index.html">回首頁</a>
+      <a href="./privacy.html">隱私說明</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-shell">
+    <section class="dashboard-intro" aria-labelledby="dashboardTitle">
+      <div>
+        <p class="dashboard-kicker">PRIVATE ANALYTICS</p>
+        <h1 id="dashboardTitle">網站觀察後臺</h1>
+        <p>快速看懂最近哪些內容真正有人讀、哪些 LinkedIn 貼文帶來有效閱讀，以及大家搜尋卻找不到什麼。</p>
+      </div>
+      <div class="dashboard-actions">
+        <div class="range-control" role="group" aria-label="分析時間範圍">
+          <button type="button" data-days="1">今天</button>
+          <button type="button" data-days="7" aria-pressed="true">7 天</button>
+          <button type="button" data-days="15">15 天</button>
+        </div>
+        <button class="refresh-button" id="refreshButton" type="button">重新整理</button>
+      </div>
+      <p class="dashboard-status" id="dashboardStatus" aria-live="polite">載入中...</p>
+    </section>
+
+    <section class="metric-strip" aria-label="流量摘要">
+      <article><span>匿名訪客</span><strong id="metricVisitors">0</strong><small>不記錄姓名</small></article>
+      <article><span>頁面瀏覽</span><strong id="metricViews">0</strong><small>每頁只記一筆</small></article>
+      <article><span>平均閱讀</span><strong id="metricDuration">0 秒</strong><small>只計可見時間</small></article>
+      <article><span>完成率</span><strong id="metricCompletion">0%</strong><small>閱讀至 80%</small></article>
+    </section>
+
+    <section class="dashboard-panel trend-panel" aria-labelledby="trendTitle">
+      <div class="panel-heading">
+        <div><p>趨勢</p><h2 id="trendTitle">每日瀏覽與訪客</h2></div>
+        <span id="updatedAt">尚未更新</span>
+      </div>
+      <div id="trendChart" class="trend-chart" role="img" aria-label="每日瀏覽趨勢"></div>
+    </section>
+
+    <div class="primary-layout">
+      <section class="dashboard-panel" aria-labelledby="popularTitle">
+        <div class="panel-heading">
+          <div><p>CONTENT SIGNAL</p><h2 id="popularTitle">熱門內容排行</h2></div>
+          <span>依內容類型調整分數</span>
+        </div>
+        <div id="popularPages" class="rank-list"></div>
+      </section>
+
+      <section class="dashboard-panel" aria-labelledby="linkedinTitle">
+        <div class="panel-heading">
+          <div><p>LINKEDIN</p><h2 id="linkedinTitle">貼文導流成效</h2></div>
+          <span>需使用 UTM 連結</span>
+        </div>
+        <div id="linkedinCampaigns" class="campaign-list"></div>
+      </section>
+    </div>
+
+    <div class="secondary-layout">
+      <section class="dashboard-panel" aria-labelledby="searchTitle">
+        <div class="panel-heading">
+          <div><p>SEARCH</p><h2 id="searchTitle">搜尋需求</h2></div>
+          <span>僅顯示彙整字詞</span>
+        </div>
+        <div class="search-columns">
+          <div><h3>熱門搜尋</h3><div id="searchTerms" class="simple-list"></div></div>
+          <div><h3>沒有結果</h3><div id="zeroResultSearches" class="simple-list"></div></div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" aria-labelledby="recentTitle">
+        <div class="panel-heading">
+          <div><p>RECENT</p><h2 id="recentTitle">最近匿名瀏覽</h2></div>
+          <span>最近 20 筆</span>
+        </div>
+        <div id="recentVisits" class="visit-list"></div>
+      </section>
+    </div>
+
+    <section class="dashboard-panel settings-panel" aria-labelledby="settingsTitle">
+      <div>
+        <p>THIS DEVICE</p>
+        <h2 id="settingsTitle">排除自己的測試流量</h2>
+        <p>在 Michael 自己的手機與電腦各設定一次，這台裝置之後就不會送出瀏覽資料。</p>
+      </div>
+      <label class="device-toggle">
+        <input id="excludeDevice" type="checkbox">
+        <span aria-hidden="true"></span>
+        排除這台裝置
+      </label>
+    </section>
+
+    <footer class="dashboard-footer">
+      <p>分析資料僅保留最近 15 天。這個網址沒有密碼保護，請勿轉傳。</p>
+      <a href="./privacy.html">查看完整隱私說明</a>
+    </footer>
+  </main>
+  <script src="./analytics-dashboard.js?v=20260804-d1"></script>
+</body>
+</html>

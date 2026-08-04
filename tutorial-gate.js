@@ -1,55 +1,18 @@
 (function () {
-  const trackingEndpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
-
-  function formatLocalTime(date = new Date()) {
-    return new Intl.DateTimeFormat("zh-Hant-TW", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-    }).format(date);
-  }
-
-  function trackTutorialView() {
-    if (!trackingEndpoint) return;
-    if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
-    const payload = {
-      type: "tutorial_view",
-      occurredAt: new Date().toISOString(),
-      occurredAtLocal: formatLocalTime(),
-      page: {
-        title: document.title,
-        url: window.location.href,
-        path: window.location.pathname,
-      },
-      detail: {
-        referrer: document.referrer || "",
-      },
-      userAgent: navigator.userAgent,
-      language: navigator.language,
-    };
-
-    try {
-      fetch(trackingEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        keepalive: true,
-      }).catch(() => {});
-    } catch {
-      // Tracking must never block the lesson page.
-    }
-  }
-
   function rootPrefix() {
     return window.location.pathname.includes("/pec-training/")
       || window.location.pathname.includes("/tutorials/")
       || window.location.pathname.includes("/previews/")
       ? "../"
       : "./";
+  }
+
+  function loadAnalyticsTracker() {
+    if (window.MALAnalytics || document.querySelector("script[data-mal-analytics]")) return;
+    const script = document.createElement("script");
+    script.src = `${rootPrefix()}analytics-tracker.js?v=20260804-d1`;
+    script.dataset.malAnalytics = "true";
+    document.head.append(script);
   }
 
   function homePath() {
@@ -139,5 +102,5 @@
   }
 
   addSiteNav();
-  trackTutorialView();
+  loadAnalyticsTracker();
 }());

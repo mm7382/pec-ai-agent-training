@@ -1,0 +1,11 @@
+{
+  "name": "michael-agent-lab-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:analytics": "playwright test tests/analytics-dashboard.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

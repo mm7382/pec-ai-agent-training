@@ -1,5 +1,4 @@
 const selectedCategoryKey = "pecTrainingSelectedCategory";
-const trackingEndpoint = window.TUTORIAL_CONFIG?.trackingEndpoint || "";
 
 const state = {
   items: [],
@@ -22,46 +21,8 @@ const elements = {
   clearFiltersButton: document.querySelector("#clearFiltersButton"),
 };
 
-function formatLocalTime(date = new Date()) {
-  return new Intl.DateTimeFormat("zh-Hant-TW", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-  }).format(date);
-}
-
-async function trackEvent(type, detail = {}) {
-  if (!trackingEndpoint) return;
-  if (["localhost", "127.0.0.1"].includes(window.location.hostname)) return;
-
-  const payload = {
-    type,
-    occurredAt: new Date().toISOString(),
-    occurredAtLocal: formatLocalTime(),
-    page: {
-      title: document.title,
-      url: window.location.href,
-      path: window.location.pathname,
-    },
-    detail,
-    userAgent: navigator.userAgent,
-    language: navigator.language,
-  };
-
-  try {
-    await fetch(trackingEndpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-      keepalive: true,
-    });
-  } catch {
-    // Tracking must never block the learning page.
-  }
+function trackEvent(type) {
+  window.MALAnalytics?.recordAction(type);
 }
 
 function normalizeText(value) {
@@ -429,7 +390,9 @@ function setupEvents() {
   });
 
   elements.searchInput.addEventListener("change", () => {
-    if (state.query.trim()) trackEvent("search", { query: state.query.trim() });
+    if (state.query.trim()) {
+      window.MALAnalytics?.recordSearch(state.query.trim(), filteredItems().length);
+    }
   });
 
   elements.clearFiltersButton.addEventListener("click", () => {
@@ -447,7 +410,7 @@ function setupEvents() {
 async function init() {
   setupEvents();
   await loadIndex();
-  trackEvent("portal_view", { source: "public_home" });
+  trackEvent("portal_view");
 }
 
 init().catch((error) => {
