@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="把 Human SOP 轉成可執行、可檢查、可迭代的 Agentic Workflow。">
+  <title>把 SOP 拆成 Agent 真能執行的 Workflow</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f1e9;
+      --surface: #fcfbf7;
+      --surface-2: #ece8de;
+      --ink: #1f2927;
+      --muted: #64706c;
+      --line: #cfcbbf;
+      --forest: #264d43;
+      --forest-soft: #dfe9e4;
+      --ochre: #9b6f2d;
+      --ochre-soft: #eee2cb;
+      --clay: #a65142;
+      --clay-soft: #f0dfda;
+      --blue: #355d73;
+      --blue-soft: #dce7ec;
+      --shadow: 0 24px 60px rgba(35, 45, 41, 0.10);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.75;
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid var(--ochre); outline-offset: 3px; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    .wrap { width: min(calc(100% - 48px), var(--max)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(207, 203, 191, 0.9);
+      background: rgba(244, 241, 233, 0.94);
+      backdrop-filter: blur(15px);
+    }
+    .topbar-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid var(--ink);
+      font-family: Georgia, serif;
+      font-size: 14px;
+    }
+    .draft { color: var(--clay); font-size: 12px; font-weight: 800; text-transform: uppercase; white-space: nowrap; }
+    .nav { display: flex; gap: 22px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a { font-size: 14px; text-decoration: none; }
+    .nav a:hover { color: var(--forest); }
+
+    .hero { padding: 74px 0 54px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(390px, 0.88fr);
+      gap: 60px;
+      align-items: center;
+    }
+    .eyebrow { margin: 0 0 18px; color: var(--forest); font-size: 13px; font-weight: 800; text-transform: uppercase; }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: "Songti TC", "Noto Serif TC", "PMingLiU", Georgia, serif;
+      letter-spacing: 0;
+    }
+    h1 { max-width: 720px; margin-bottom: 24px; font-size: 64px; line-height: 1.08; text-wrap: balance; }
+    .hero-lead { max-width: 720px; margin: 0; color: var(--muted); font-size: 20px; }
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 2px solid var(--clay);
+      color: var(--clay);
+      font-weight: 800;
+    }
+    .hero-note svg { width: 20px; height: 20px; }
+
+    .workflow-board {
+      min-height: 440px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      display: grid;
+      align-content: center;
+      gap: 14px;
+    }
+    .board-head { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .board-head b { color: var(--forest); font-size: 13px; text-transform: uppercase; }
+    .board-head span { color: var(--muted); font-size: 12px; }
+    .flow-node {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      min-height: 68px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .flow-icon {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      color: var(--forest);
+      background: var(--forest-soft);
+    }
+    .flow-icon svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.9; }
+    .flow-node b, .flow-node small { display: block; }
+    .flow-node b { font-size: 15px; }
+    .flow-node small { color: var(--muted); }
+    .artifact { color: var(--ochre); font-family: Georgia, serif; font-size: 12px; font-weight: 700; }
+    .flow-arrow { height: 16px; margin-left: 32px; border-left: 1px solid var(--line); }
+    .approval-node { border-color: var(--clay); background: var(--clay-soft); }
+    .approval-node .flow-icon { color: var(--clay); background: #fff; }
+    .approval-node .artifact { color: var(--clay); }
+
+    .thesis {
+      margin: 28px 0 82px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .thesis-side { padding: 24px 30px; }
+    .thesis-side b { display: block; color: var(--forest); font-size: 13px; text-transform: uppercase; }
+    .thesis-side span { color: var(--muted); }
+    .thesis-arrow { color: var(--clay); font-family: Georgia, serif; font-size: 28px; }
+
+    main { padding-bottom: 80px; }
+    section { margin-bottom: 92px; scroll-margin-top: 92px; }
+    .section-head { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 28px; margin-bottom: 34px; }
+    .section-no { color: var(--ochre); font-family: Georgia, serif; font-size: 18px; font-weight: 700; }
+    h2 { margin-bottom: 12px; font-size: 42px; line-height: 1.2; }
+    .section-intro { max-width: 850px; margin: 0; color: var(--muted); font-size: 17px; }
+
+    .layer-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); background: var(--surface); }
+    .layer { min-height: 335px; padding: 30px; }
+    .layer + .layer { border-left: 1px solid var(--line); }
+    .layer-icon {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 24px;
+      place-items: center;
+      border: 1px solid currentColor;
+    }
+    .layer-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; }
+    .layer:nth-child(1) { color: var(--ochre); }
+    .layer:nth-child(2) { color: var(--blue); }
+    .layer:nth-child(3) { color: var(--forest); }
+    .layer h3 { margin-bottom: 12px; color: var(--ink); font-size: 28px; }
+    .layer p { color: var(--muted); }
+    .layer dl { margin: 22px 0 0; }
+    .layer dt { color: var(--ink); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .layer dd { margin: 2px 0 14px; color: var(--muted); }
+
+    .contrast { display: grid; grid-template-columns: 1fr 80px 1fr; align-items: stretch; }
+    .contrast-card { padding: 30px; border: 1px solid var(--line); background: var(--surface); }
+    .contrast-card.bad { border-top: 5px solid var(--clay); }
+    .contrast-card.good { border-top: 5px solid var(--forest); }
+    .contrast-card h3 { margin-bottom: 10px; font-size: 30px; }
+    .contrast-card p { color: var(--muted); }
+    .contrast-card ul { margin: 22px 0 0; padding-left: 20px; }
+    .contrast-vs { display: grid; place-items: center; color: var(--ochre); font-family: Georgia, serif; font-size: 18px; }
+    .signal { display: grid; grid-template-columns: 112px 1fr; gap: 18px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+    .signal b { color: var(--ink); }
+    .signal span { color: var(--muted); }
+
+    .method { display: grid; gap: 24px; }
+    .method-card {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .method-index { padding: 28px; border-right: 1px solid var(--line); }
+    .method-index strong { display: block; color: var(--forest); font-family: Georgia, serif; font-size: 44px; line-height: 1; }
+    .method-index span { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    .method-body { padding: 30px; }
+    .method-body h3 { margin-bottom: 8px; font-size: 31px; }
+    .method-body > p { margin-top: 0; color: var(--muted); }
+    .io-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 24px; border: 1px solid var(--line); }
+    .io-cell { min-height: 126px; padding: 18px; }
+    .io-cell + .io-cell { border-left: 1px solid var(--line); }
+    .io-cell b { display: block; margin-bottom: 6px; color: var(--ochre); font-size: 12px; text-transform: uppercase; }
+    .io-cell span { color: var(--muted); }
+    .rule-row { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 18px; align-items: start; padding: 14px 0; border-top: 1px solid var(--line); }
+    .rule-row:first-child { margin-top: 20px; }
+    .rule-word { color: var(--clay); font-family: ui-monospace, monospace; font-weight: 900; }
+    .rule-copy b, .rule-copy span { display: block; }
+    .rule-copy span { color: var(--muted); }
+
+    .iteration-loop {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 24px;
+      border: 1px solid var(--line);
+    }
+    .loop-step { position: relative; min-height: 132px; padding: 18px; }
+    .loop-step + .loop-step { border-left: 1px solid var(--line); }
+    .loop-step b { display: block; color: var(--forest); font-size: 13px; }
+    .loop-step span { color: var(--muted); font-size: 14px; }
+    .loop-step:not(:last-child)::after { content: "→"; position: absolute; top: 48px; right: -10px; z-index: 2; color: var(--clay); background: var(--surface); }
+
+    .case-shell { border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+    .case-head { display: flex; justify-content: space-between; gap: 24px; padding: 26px 30px; border-bottom: 1px solid var(--line); }
+    .case-head h3 { margin: 0; font-size: 30px; }
+    .case-head span { color: var(--muted); }
+    .case-flow { display: grid; grid-template-columns: repeat(5, 1fr); }
+    .case-step { position: relative; min-height: 210px; padding: 24px 20px; }
+    .case-step + .case-step { border-left: 1px solid var(--line); }
+    .case-step-no { display: grid; width: 36px; height: 36px; margin-bottom: 18px; place-items: center; background: var(--forest-soft); color: var(--forest); font-family: Georgia, serif; font-weight: 700; }
+    .case-step h4 { margin: 0 0 8px; font-size: 16px; }
+    .case-step p { margin: 0; color: var(--muted); font-size: 14px; }
+    .case-step.approval { background: var(--clay-soft); }
+    .case-step.approval .case-step-no { color: var(--clay); background: #fff; }
+    .artifact-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid var(--line); }
+    .artifact-item { padding: 20px 24px; }
+    .artifact-item + .artifact-item { border-left: 1px solid var(--line); }
+    .artifact-item b { display: block; color: var(--ochre); font-size: 12px; text-transform: uppercase; }
+    .artifact-item code { color: var(--muted); font-size: 13px; }
+
+    .worksheet { display: grid; grid-template-columns: 0.88fr 1.12fr; border: 1px solid var(--line); background: var(--surface); }
+    .worksheet-copy { padding: 32px; background: var(--forest); color: #fff; }
+    .worksheet-copy h3 { margin-bottom: 12px; font-size: 32px; }
+    .worksheet-copy p { color: #dce7e2; }
+    .worksheet-copy ol { padding-left: 20px; }
+    .worksheet-form { padding: 30px; }
+    .field { padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .field:first-child { padding-top: 0; }
+    .field b { display: block; margin-bottom: 4px; color: var(--ochre); font-size: 12px; text-transform: uppercase; }
+    .field span { color: var(--muted); }
+
+    .check-grid { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--line); background: var(--surface); }
+    .check-item { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 14px; min-height: 112px; padding: 22px; }
+    .check-item:nth-child(odd) { border-right: 1px solid var(--line); }
+    .check-item:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .check-mark { display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid var(--forest); color: var(--forest); }
+    .check-copy b, .check-copy span { display: block; }
+    .check-copy span { color: var(--muted); }
+
+    .source-list { border-top: 1px solid var(--line); }
+    .source-item { display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; gap: 22px; align-items: center; min-height: 82px; border-bottom: 1px solid var(--line); }
+    .source-type { color: var(--ochre); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .source-item b, .source-item span { display: block; }
+    .source-item span { color: var(--muted); font-size: 14px; }
+    .source-item a { color: var(--forest); font-weight: 800; white-space: nowrap; }
+    .scope-note { margin-top: 24px; padding: 22px 24px; border-left: 4px solid var(--clay); background: var(--clay-soft); color: var(--muted); }
+
+    footer { padding: 30px 0 42px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .worksheet { grid-template-columns: 1fr; }
+      .hero-grid { gap: 38px; }
+      h1 { font-size: 52px; }
+      .layer-grid { grid-template-columns: 1fr; }
+      .layer { min-height: auto; }
+      .layer + .layer { border-left: 0; border-top: 1px solid var(--line); }
+      .contrast { grid-template-columns: 1fr; gap: 18px; }
+      .contrast-vs { min-height: 24px; }
+      .method-card { grid-template-columns: 110px minmax(0, 1fr); }
+      .iteration-loop, .case-flow { grid-template-columns: 1fr; }
+      .loop-step, .case-step { min-height: auto; }
+      .loop-step + .loop-step, .case-step + .case-step { border-left: 0; border-top: 1px solid var(--line); }
+      .loop-step:not(:last-child)::after { content: "↓"; top: auto; right: 50%; bottom: -14px; padding: 0 8px; }
+      .artifact-strip { grid-template-columns: 1fr; }
+      .artifact-item + .artifact-item { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .topbar-inner { min-height: 62px; }
+      .brand-mark { width: 30px; height: 30px; }
+      .brand { width: 100%; justify-content: flex-start; }
+      .brand-label { font-size: 14px; white-space: nowrap; }
+      .draft { margin-left: auto; font-size: 10px; }
+      .nav { display: none; }
+      .hero { padding: 48px 0 34px; }
+      h1 { font-size: 42px; }
+      .hero-lead { font-size: 17px; }
+      .workflow-board { min-height: auto; padding: 18px; }
+      .flow-node { grid-template-columns: 38px minmax(0, 1fr); }
+      .artifact { grid-column: 2; }
+      .thesis { grid-template-columns: 1fr; margin-bottom: 66px; }
+      .thesis-side { padding: 18px 6px; }
+      .thesis-arrow { transform: rotate(90deg); text-align: center; }
+      section { margin-bottom: 68px; }
+      .section-head { grid-template-columns: 1fr; gap: 6px; }
+      h2 { font-size: 34px; }
+      .section-intro { font-size: 16px; }
+      .layer { padding: 24px; }
+      .method-card { grid-template-columns: 1fr; }
+      .method-index { display: flex; align-items: center; gap: 12px; padding: 18px 22px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .method-index strong { font-size: 30px; }
+      .method-index span { margin-top: 0; }
+      .method-body { padding: 22px; }
+      .io-grid { grid-template-columns: 1fr; }
+      .io-cell { min-height: auto; }
+      .io-cell + .io-cell { border-left: 0; border-top: 1px solid var(--line); }
+      .case-head { display: block; padding: 22px; }
+      .case-head span { display: block; margin-top: 6px; }
+      .worksheet-copy, .worksheet-form { padding: 24px; }
+      .check-grid { grid-template-columns: 1fr; }
+      .check-item:nth-child(odd) { border-right: 0; }
+      .check-item + .check-item { border-top: 1px solid var(--line); }
+      .source-item { grid-template-columns: 1fr; gap: 3px; padding: 18px 0; }
+      .source-item a { margin-top: 8px; }
+      .footer-inner { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span class="brand-label">Michael Agent Lab</span>
+        <span class="draft">Teaching note</span>
+      </div>
+      <nav class="nav" aria-label="頁面章節">
+        <a href="#method">四步方法</a>
+        <a href="#case">實作案例</a>
+        <a href="#worksheet">工作表</a>
+        <a href="#sources">來源</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Agentic Workflow Design</p>
+        <h1>把 SOP 拆成 Agent 真能執行的 Workflow</h1>
+        <p class="hero-lead">Agent 不缺能力，常缺的是明確邊界。把大任務拆成小節點，定義每一步的輸入、輸出與驗收條件，才有機會穩定運作。</p>
+        <div class="hero-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          先做出可觀察的小流程，再逐步增加自動化。
+        </div>
+      </div>
+
+      <div class="workflow-board" aria-label="Agent 工作流程示意">
+        <div class="board-head"><b>Workflow map</b><span>Artifact by artifact</span></div>
+        <div class="flow-node">
+          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6"/></svg></span>
+          <div><b>接收請求</b><small>讀取原始內容與必要背景</small></div>
+          <span class="artifact">RAW</span>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node">
+          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M7 10h10M10 15h4M12 15v5"/></svg></span>
+          <div><b>分類與結構化</b><small>輸出固定欄位，不靠下一步猜</small></div>
+          <span class="artifact">JSON</span>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node">
+          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h4l10-10-4-4L4 14zM13 5l4 4"/></svg></span>
+          <div><b>產生處理草稿</b><small>依分類、規則與資料撰寫</small></div>
+          <span class="artifact">DRAFT</span>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node approval-node">
+          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7zM9 12l2 2 4-4"/></svg></span>
+          <div><b>高風險人工確認</b><small>通過後才寫回系統或執行動作</small></div>
+          <span class="artifact">APPROVE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap thesis" aria-label="核心轉換">
+    <div class="thesis-side"><b>Before</b><span>一份靠人腦補判斷的 Human SOP</span></div>
+    <div class="thesis-arrow" aria-hidden="true">→</div>
+    <div class="thesis-side"><b>After</b><span>可執行、可檢查、可修正的 Agentic Workflow</span></div>
+  </div>
+
+  <main class="wrap">
+    <section id="layers">
+      <div class="section-head">
+        <div class="section-no">01 / LAYERS</div>
+        <div><h2>先分清楚三個層級</h2><p class="section-intro">Human SOP、Skill 與 Agentic Workflow 不是三種名稱，而是從「人怎麼做」一路走到「系統如何完成整件事」的三個層級。</p></div>
+      </div>
+      <div class="layer-grid">
+        <article class="layer">
+          <div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h5"/></svg></div>
+          <h3>Human SOP</h3>
+          <p>寫給人看的流程文件。人會用經驗補上例外、優先順序與「大家都知道」的默會知識。</p>
+          <dl><dt>主要讀者</dt><dd>人</dd><dt>常見問題</dt><dd>規則藏在腦中，文件更新慢</dd></dl>
+        </article>
+        <article class="layer">
+          <div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v4h4v6h-4v4H9v-4H5V7h4zM9 9h6v6H9z"/></svg></div>
+          <h3>Skill</h3>
+          <p>一個界線清楚的能力單元，包含何時使用、判斷規則、參考資料，以及必要時可執行的腳本。</p>
+          <dl><dt>主要讀者</dt><dd>Agent</dd><dt>合理範圍</dt><dd>一次負責一類明確任務</dd></dl>
+        </article>
+        <article class="layer">
+          <div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h5v5H5zM14 14h5v5h-5zM14 5h5M7.5 10v4h6.5M16.5 10v4"/></svg></div>
+          <h3>Agentic Workflow</h3>
+          <p>把多個步驟、Skill、工具、資料與人工決策點串成一條完成任務的流程。</p>
+          <dl><dt>主要目標</dt><dd>從輸入一路產出可驗收結果</dd><dt>核心設計</dt><dd>節點、Artifact、規則與控制點</dd></dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="mega-agent">
+      <div class="section-head">
+        <div class="section-no">02 / BOUNDARY</div>
+        <div><h2>問題往往不在模型，而在任務太大</h2><p class="section-intro">一句「幫我優化整個流程」把判斷、搜尋、操作與驗收全塞在一起。即使結果看起來完整，也難以知道哪一段可靠。</p></div>
+      </div>
+      <div class="contrast">
+        <article class="contrast-card bad">
+          <h3>Mega Agent</h3>
+          <p>一個 Agent 從頭做到尾，中間決策缺少明確介面。</p>
+          <div class="signal"><b>出錯時</b><span>難以定位是哪一段推理或工具呼叫出了問題。</span></div>
+          <div class="signal"><b>修改時</b><span>常得重寫整段 Prompt，容易影響原本正確的部分。</span></div>
+          <div class="signal"><b>驗收時</b><span>只能看最後結果，很難逐步檢查。</span></div>
+        </article>
+        <div class="contrast-vs">VS</div>
+        <article class="contrast-card good">
+          <h3>可組合 Workflow</h3>
+          <p>每個節點只處理一個明確問題，靠結構化 Artifact 串接。</p>
+          <div class="signal"><b>出錯時</b><span>可以從 Log 與中間產物找到問題節點。</span></div>
+          <div class="signal"><b>修改時</b><span>只調整失準的規則、Skill 或工具。</span></div>
+          <div class="signal"><b>驗收時</b><span>每一步都有成功條件與人工檢查點。</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="section-head">
+        <div class="section-no">03 / METHOD</div>
+        <div><h2>四步把 Human SOP 轉成 Workflow</h2><p class="section-intro">每一步都應留下看得見的產物。沒有產物，就很難驗證流程是否真的變得更清楚。</p></div>
+      </div>
+      <div class="method">
+        <article class="method-card">
+          <div class="method-index"><strong>01</strong><span>Standardize</span></div>
+          <div class="method-body">
+            <h3>格式標準化</h3>
+            <p>把散文式 SOP 改成 Agent 可判讀的規格：抽出參數、標示規則強度，並把步驟、錯誤處理與輸出格式分區。</p>
+            <div class="rule-row"><div class="rule-word">MUST</div><div class="rule-copy"><b>不能省略的硬規則</b><span>例如：執行前必須驗證申請人身分。</span></div></div>
+            <div class="rule-row"><div class="rule-word">SHOULD</div><div class="rule-copy"><b>原則上要做</b><span>若有充分理由可例外，但要留下原因。</span></div></div>
+            <div class="rule-row"><div class="rule-word">MAY</div><div class="rule-copy"><b>視情況採用</b><span>不影響核心正確性的選配行為。</span></div></div>
+            <div class="io-grid"><div class="io-cell"><b>Input</b><span>現有 SOP、使用情境與例外經驗</span></div><div class="io-cell"><b>Action</b><span>參數化、規則分級、區塊化</span></div><div class="io-cell"><b>Deliverable</b><span>結構化 Agent SOP v1</span></div></div>
+          </div>
+        </article>
+
+        <article class="method-card">
+          <div class="method-index"><strong>02</strong><span>Decompose</span></div>
+          <div class="method-body">
+            <h3>拆成節點，用 Artifact 串起來</h3>
+            <p>每個節點都要能獨立執行、獨立驗收、獨立替換。上一個節點的輸出，必須成為下一個節點不用猜的輸入。</p>
+            <div class="io-grid"><div class="io-cell"><b>Input</b><span>結構化 SOP 與完整任務目標</span></div><div class="io-cell"><b>Action</b><span>定義節點邊界、輸入輸出、成功標準</span></div><div class="io-cell"><b>Deliverable</b><span>流程圖與 Artifact Schema</span></div></div>
+          </div>
+        </article>
+
+        <article class="method-card">
+          <div class="method-index"><strong>03</strong><span>Iterate</span></div>
+          <div class="method-body">
+            <h3>用真實執行找出默會知識</h3>
+            <p>第一版不會完整。讓流程在低風險資料上跑，觀察 Agent 哪裡誤判，再把原本只存在人腦裡的條件補回規格。</p>
+            <div class="iteration-loop" aria-label="迭代循環">
+              <div class="loop-step"><b>寫 v1</b><span>先求能跑，不假裝一次完美。</span></div>
+              <div class="loop-step"><b>小量執行</b><span>用真實但低風險案例測試。</span></div>
+              <div class="loop-step"><b>看 Artifact</b><span>找出誤判發生在哪個節點。</span></div>
+              <div class="loop-step"><b>補規則</b><span>把隱藏的判斷寫進 SOP。</span></div>
+              <div class="loop-step"><b>再測一次</b><span>確認問題修好且沒有新回歸。</span></div>
+            </div>
+            <div class="io-grid"><div class="io-cell"><b>Input</b><span>第一版流程與代表性案例</span></div><div class="io-cell"><b>Action</b><span>執行、觀察、修規則、回歸測試</span></div><div class="io-cell"><b>Deliverable</b><span>錯誤紀錄、測試集與 SOP v2+</span></div></div>
+          </div>
+        </article>
+
+        <article class="method-card">
+          <div class="method-index"><strong>04</strong><span>Integrate</span></div>
+          <div class="method-body">
+            <h3>接上工具，也接上控制點</h3>
+            <p>工具讓 Agent 能讀取資料或執行動作；人工確認、權限、記錄與停止條件，則讓流程保持可控。MCP 是連接外部能力的協定，不會替你設計整條工作流。</p>
+            <div class="io-grid"><div class="io-cell"><b>Input</b><span>已驗證的節點、權限需求與風險分級</span></div><div class="io-cell"><b>Action</b><span>接工具、限制權限、加 Log 與人工閘門</span></div><div class="io-cell"><b>Deliverable</b><span>可觀測、可停止、可回復的流程</span></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-head">
+        <div class="section-no">04 / CASE</div>
+        <div><h2>案例：公司內部請求分類</h2><p class="section-intro">表單、Email 或通訊軟體送來的請求，常需要分類、判斷優先級、找負責人與草擬回覆。這類重複工作適合先做成窄而清楚的流程。</p></div>
+      </div>
+      <div class="case-shell">
+        <div class="case-head"><h3>Internal Request Triage</h3><span>示意資料，不含真實公司資訊</span></div>
+        <div class="case-flow">
+          <div class="case-step"><span class="case-step-no">1</span><h4>讀取請求</h4><p>保留原文、來源、時間與必要識別欄位。</p></div>
+          <div class="case-step"><span class="case-step-no">2</span><h4>分類</h4><p>輸出 IT、HR、Finance 或 Other，並附信心程度。</p></div>
+          <div class="case-step"><span class="case-step-no">3</span><h4>補充資訊</h4><p>若內容不足，產生兩至三個具體釐清問題。</p></div>
+          <div class="case-step"><span class="case-step-no">4</span><h4>回覆草稿</h4><p>根據分類與 SLA 產生回覆，不直接送出。</p></div>
+          <div class="case-step approval"><span class="case-step-no">5</span><h4>確認與寫回</h4><p>高權限、財務或低信心案件先由人確認。</p></div>
+        </div>
+        <div class="artifact-strip">
+          <div class="artifact-item"><b>Artifact A</b><code>request.normalized.json</code></div>
+          <div class="artifact-item"><b>Artifact B</b><code>triage.result.json</code></div>
+          <div class="artifact-item"><b>Artifact C</b><code>reply.draft.md</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="worksheet">
+      <div class="section-head">
+        <div class="section-no">05 / PRACTICE</div>
+        <div><h2>從一件最無聊的重複工作開始</h2><p class="section-intro">先挑每週都在做、規則大致穩定、失敗風險可控制的工作。第一版只要能省下一部分時間，不必一次追求全自動。</p></div>
+      </div>
+      <div class="worksheet">
+        <div class="worksheet-copy">
+          <h3>一頁工作表</h3>
+          <p>把答案寫清楚，再決定要用哪個 Agent、模型或工具。</p>
+          <ol><li>先縮小任務邊界。</li><li>先定義輸出，再寫步驟。</li><li>先保留人工確認，再逐步放寬。</li></ol>
+        </div>
+        <div class="worksheet-form">
+          <div class="field"><b>Task</b><span>哪一件重複工作最耗時間？開始與結束在哪裡？</span></div>
+          <div class="field"><b>Inputs</b><span>流程一定需要哪些資料？哪些資料可能缺漏？</span></div>
+          <div class="field"><b>Artifacts</b><span>每一步要留下什麼結構化輸出，下一步才不用猜？</span></div>
+          <div class="field"><b>Rules</b><span>哪些是 MUST、SHOULD、MAY？例外怎麼處理？</span></div>
+          <div class="field"><b>Acceptance</b><span>什麼情況算成功？要用哪些案例驗證？</span></div>
+          <div class="field"><b>Human Gate</b><span>哪些動作涉及權限、金錢、外部溝通或不可逆變更？</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <div class="section-head">
+        <div class="section-no">06 / REVIEW</div>
+        <div><h2>上線前的六項檢查</h2><p class="section-intro">流程不是能跑就算完成；還要能理解、能追蹤、能停止，也要知道失敗後怎麼恢復。</p></div>
+      </div>
+      <div class="check-grid">
+        <div class="check-item"><span class="check-mark">1</span><div class="check-copy"><b>邊界明確</b><span>每個節點只處理一類任務，沒有偷偷接管整條流程。</span></div></div>
+        <div class="check-item"><span class="check-mark">2</span><div class="check-copy"><b>輸入輸出固定</b><span>Artifact 有 Schema、必要欄位與錯誤格式。</span></div></div>
+        <div class="check-item"><span class="check-mark">3</span><div class="check-copy"><b>成功可以驗證</b><span>每一步都有可測量的接受條件與代表性案例。</span></div></div>
+        <div class="check-item"><span class="check-mark">4</span><div class="check-copy"><b>過程可以觀察</b><span>保留執行紀錄、中間產物、錯誤原因與版本。</span></div></div>
+        <div class="check-item"><span class="check-mark">5</span><div class="check-copy"><b>權限最小化</b><span>讀取與寫入權限分開，只開放任務真正需要的能力。</span></div></div>
+        <div class="check-item"><span class="check-mark">6</span><div class="check-copy"><b>人仍能接手</b><span>高風險、低信心與例外情況會停下來等待確認。</span></div></div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head">
+        <div class="section-no">07 / SOURCES</div>
+        <div><h2>來源與延伸閱讀</h2><p class="section-intro">本頁以原始內容為主軸，再用官方資料核對技術名詞與設計邊界；不是逐字轉錄。</p></div>
+      </div>
+      <div class="source-list">
+        <div class="source-item"><div class="source-type">Original</div><div><b>AI 時代非技術人最該學的設計能力</b><span>Gary Chen，Human SOP 到 Agentic Workflow</span></div><a href="https://www.youtube.com/watch?v=Yzpx4Xaigms" target="_blank" rel="noreferrer">觀看原始內容 →</a></div>
+        <div class="source-item"><div class="source-type">Architecture</div><div><b>Building Effective AI Agents</b><span>Anthropic：可組合 Workflow、Routing、Evaluator 與人工檢查點</span></div><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noreferrer">官方文章 →</a></div>
+        <div class="source-item"><div class="source-type">Specification</div><div><b>Agent Skills Specification</b><span>Skill 目錄、SKILL.md、scripts 與 references 的正式結構</span></div><a href="https://agentskills.io/specification" target="_blank" rel="noreferrer">查看規格 →</a></div>
+        <div class="source-item"><div class="source-type">Protocol</div><div><b>Model Context Protocol Architecture</b><span>MCP 的 Host、Client、Server，以及 Tools、Resources、Prompts</span></div><a href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noreferrer">官方文件 →</a></div>
+        <div class="source-item"><div class="source-type">Language</div><div><b>RFC 2119</b><span>MUST、SHOULD、MAY 的要求強度定義</span></div><a href="https://datatracker.ietf.org/doc/rfc2119/" target="_blank" rel="noreferrer">查看 RFC →</a></div>
+      </div>
+      <div class="scope-note"><b>範圍說明：</b>本教材整理的是工作流設計方法。實際導入時仍需依資料敏感度、權限、法規、錯誤成本與使用平台調整；MCP 解決的是標準化連接，不等於自動提供安全、驗收或流程治理。</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>Michael Agent Lab · Public teaching note</span><span>更新日期：2026-08-07</span></div>
+  </footer>
+</body>
+</html>
