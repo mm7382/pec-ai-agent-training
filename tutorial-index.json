@@ -1,6 +1,6 @@
 {
   "siteTitle": "Michael AI Agent Lab",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-12",
   "duplicateHidden": [
     {
       "title": "Agent 自我蒸餾、Skill 化與定期自動化",
@@ -19,6 +19,23 @@
     "設計與輸出工作流"
   ],
   "items": [
+    {
+      "id": "claude-code-output-style",
+      "title": "Claude Code Output Style：讓 AI 用你讀得懂的方式回報",
+      "category": "任務交辦、Prompt 與需求釐清",
+      "level": "實作",
+      "summary": "分清楚模型能力、長期輸出風格與按需 Skill，透過五方案比較建立讀得快、看得懂、能採取行動的 AI 回報格式。",
+      "tags": [
+        "Claude Code",
+        "Output Style",
+        "Communication Design",
+        "Prompt",
+        "Technical Writing"
+      ],
+      "url": "./pec-training/claude-code-output-style.html",
+      "updatedAt": "2026-08-12T15:00:00+08:00",
+      "searchText": "Claude Code Output Style：讓 AI 用你讀得懂的方式回報 M Michael Agent Lab 首頁 教材 GitHub AI Agent 精選內容 About Claude Code / Communication Design 讓 AI 用你讀得懂的方式回報 模型能力沒有變，閱讀成本可以差很多。Output Style 用來固定語氣、結構與資訊密度，讓每次回覆都更接近你真正需要的工作格式。 先設計怎麼說，再判斷說得對不對。 Output Style Router Same capability · Different delivery 同一個 Claude Code 推理、工具與專案脈絡不因語氣改變 1 白話導覽 術語即時解釋，短句分步說明 Beginner 2 決策摘要 先結論，再列選項與取捨 Decision 3 工程短報 先說改了什麼、能否運作、剩餘風險 Engineer 4 學習解說 補上原因、模式與程式脈絡 Learning 5 風險優先 先揭露假設、不可逆動作與待確認事項 Review Capability AI 做得到什麼 Output Style AI 平常怎麼回報 Skill 特定任務需要時怎麼做 01 / LAYERS 先分清楚三件事 輸出看不懂，不代表模型能力不足。先判斷問題是在能力、長期表達方式，還是某一次任務需要額外說明。 模型與工具能力 決定 AI 能不能讀檔、改程式、呼叫工具與完成任務。換 Output Style 不會讓模型突然更聰明，也不會增加權限。 回答：做不做得到 Output Style 修改系統提示詞，固定角色、語氣、資訊密度與輸出格式。適合處理每一輪都會重複出現的表達偏好。 回答：平常怎麼說 Skill 在特定任務被觸發時，載入一套可重複的操作方法。它適合教 AI 怎麼執行流程，不適合承擔每一輪都要遵守的基本表達風格。 回答：這一次怎麼做 02 / BUILT-IN 先試內建四種，不一定要自己寫 目前 Claude Code 提供四種內建 Output Style。先用真實任務試過，再決定是否需要自訂，通常比一開始就寫長規則更省力。 Style 主要行為 比較適合 Default 以完成軟體工程任務為主，保持原本高效率工作方式。 已經熟悉 Claude Code、希望回覆精簡的人。 Proactive 對例行決定採合理假設並直接行動，但不會改變原本的權限與核准要求。 任務邊界清楚、不想頻繁停下確認的人。 Explanatory 在實作過程加入 Insight，說明選擇、模式與程式脈絡。 想了解「為什麼這樣改」的人。 Learning 以共同實作為主，除了解說，也會留下小段工作讓使用者親自完成。 希望邊做邊學、建立實作能力的人。 03 / SETUP 四步啟用自訂 Output Style 自訂樣式是一個 Markdown 檔。檔名前的 metadata 決定名稱與是否保留軟體工程指令，正文則描述每次回覆都要遵守的方式。 1 決定範圍 個人共用放在使用者目錄；專案共用放在專案內的 output-styles 目錄。 ~/.claude/output-styles 2 建立 Markdown 加入名稱、簡介與清楚的輸出規則。檔名會成為預設樣式名稱。 decision-brief.md 3 從設定選擇 執行設定選單，進入 Output style，選擇內建或自訂樣式。 /config 4 重新載入 Output Style 在工作階段開始時讀取。切換後用新對話或清除目前對話讓設定生效。 /clear 最重要的設定：keep-coding-instructions 自訂 Output Style 預設不保留 Claude Code 的軟體工程指令。若目的只是改變說話與回報方式，但仍要讓它照原本方式寫程式、控制範圍並驗證成果，請設定 keep-coding-instructions: true 。 04 / COMPARE 不要憑想像選風格，用同一題比較五種版本 最可靠的方法不是問「我喜歡哪種語氣」，而是拿一個真的難讀回答，保留相同事實與結論，只改表達方式，再看哪一種最能幫你做決定。 白話導覽 保留必要術語，但第一次出現就用一句白話解釋。短句、一步一動作。 適合：剛接觸主題 決策摘要 先給建議，再列兩到三個選項、取捨與下一步，不展開不影響決策的細節。 適合：PM 與決策者 工程短報 先說改了什麼、測了什麼、是否完成；爭議決策與殘留風險優先浮出。 適合：熟悉技術脈絡 學習解說 除了結果，也解釋模式、替代方案與程式脈絡，讓每次實作累積成能力。 適合：邊做邊學 風險優先 先列假設、不可逆動作、資料風險與需要人工確認的地方，再進入執行內容。 適合：高風險任務 A/B/C/D/E 挑一個真實、曾經讓你看不懂或花很多時間消化的回答。 要求五個版本保留相同事實、限制與結論，只改結構、語氣和解釋深度。 先不看名稱，依「最快看懂、最容易決定、最少追問」排序。 用第二個不同類型任務再測一次，避免只對單一案例有效。 選定後才整理成 Output Style；需要時再保留一個按需 Skill 補充深度解釋。 05 / WRITING 技術表達清楚，靠的是可執行規則 「請簡單一點」太模糊。更有效的作法，是定義句子、術語、順序與風險如何呈現，讓 AI 可以逐條遵守。 01 一句只做一件事 避免在同一句混入背景、動作、例外與結論。需要多個動作就拆成步驟。 02 同一個詞只代表一件事 專案名詞固定，不在「任務、工作、流程」之間任意切換，降低誤讀。 03 術語不刪掉，第一次先解釋 白話不等於犧牲精確度。保留專業詞，第一次出現時補一行可理解的定義。 04 先說讀者要採取的行動 把結論、影響與下一步放前面；細節、證據和替代方案放後面。 方法來源： 這些寫法與 Simplified Technical English 的精神一致：控制詞彙、降低歧義、簡化句型。但一般 AI 回報不必宣稱完全符合 ASD-STE100；正式技術文件仍應依官方標準與組織規範驗證。 06 / TEMPLATE 一份可以開始修改的樣式骨架 這份骨架刻意只規定回報方式，不替代專案規則、測試要求或特定任務 Skill。先短，再用真實使用經驗逐步修正。 Design brief 好的 Output Style 至少回答六件事： 讀者是誰 第一段先看什麼 術語怎麼處理 細節何時展開 風險怎麼浮出 完成後怎麼回報 --- name: Decision brief description: 先給結論，再交代影響、證據與下一步 keep-coding-instructions: true --- 使用繁體中文回覆。 每次完成工作後，依序說明： 1. 結果：一句話說明是否完成。 2. 影響：使用者或系統會看到什麼改變。 3. 驗證：列出真正執行過的檢查。 4. 風險：只列仍存在、需要注意的事項。 5. 下一步：僅在確實需要時提出。 保留必要技術詞。第一次出現時，用一句白話解釋。 一個句子只表達一個主要動作。 若做了未經要求、可能有爭議的決定，先說明再展開細節。 07 / BOUNDARY 哪些放進 Style，哪些留在別處 Output Style 越長，維護成本與輸入 token 越高。只保留每次回覆都需要的表達規則，其他內容放到正確的位置。 適合放進 Output Style 角色、語氣、固定結構與資訊密度，通常每一輪都會使用。 先結論或先背景 決定讀者第一眼看到什麼。 術語與解釋深度 決定新手與熟手的閱讀負擔。 完成回報格式 結果、驗證、風險與下一步。 不適合塞進 Output Style 專案知識、特定工作法與安全機制應各自管理。 專案慣例 → CLAUDE.md 程式架構、測試指令與目錄規則。 特定流程 → Skill 只有某類任務才需要載入的完整步驟。 硬性限制 → 權限、Hook 或 CI 不能只靠文字提醒的安全底線。 08 / SOURCES 來源與延伸閱讀 本頁以原始示範建立學習主線，再以官方文件核對目前功能、設定方式與技術寫作原則。 Original 看不懂 Claude 的輸出？其實只要改一個內建設定 Gary Chen，Output Style 與讀者導向的表達設計 查看原始內容 → Official Claude Code Output Styles 內建樣式、自訂檔案、keep-coding-instructions 與套用方式 官方文件 → Settings Claude Code Settings outputStyle 設定欄位與設定層級 官方設定 → Language ASD-STE100 Simplified Technical English 受控自然語言、寫作規則與控制詞彙的正式說明 官方標準 → 版本提醒： Claude Code 功能與指令會持續更新。實際設定前請再查看官方文件；本教材把 Output Style 當作溝通層設計，不把它誤當成模型升級、權限控制或安全機制。 Michael Agent Lab · Public teaching note 更新日期：2026-08-12"
+    },
     {
       "id": "ai-agent-engineering-overview",
       "title": "AI Agent 工程應用學習筆記",

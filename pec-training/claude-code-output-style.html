@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="學會使用 Claude Code Output Style，分清楚能力、長期表達方式與按需 Skill，建立讀得快、看得懂、能採取行動的 AI 回報格式。">
+  <title>Claude Code Output Style：讓 AI 用你讀得懂的方式回報</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper:#f2f0e9;--surface:#fbfaf6;--surface-2:#e8e5dc;--ink:#202826;--muted:#66716d;--line:#cbc8bd;
+      --green:#28564a;--green-soft:#dce8e2;--gold:#9a7133;--gold-soft:#eee3cc;--blue:#315f78;
+      --clay:#a25243;--clay-soft:#efddd7;--violet:#61517f;--shadow:0 24px 64px rgba(31,41,38,.1);--max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;letter-spacing:0}
+    a{color:inherit;text-underline-offset:4px} a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.wrap{width:min(calc(100% - 48px),var(--max));margin:0 auto}
+    .topbar{position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(203,200,189,.92);background:rgba(242,240,233,.94);backdrop-filter:blur(16px)}
+    .topbar-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800}.brand-mark{display:grid;width:34px;height:34px;place-items:center;border:1px solid var(--ink);font-family:Georgia,serif;font-size:14px}
+    .nav{display:flex;gap:22px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{font-size:14px;text-decoration:none}.nav a:hover{color:var(--green)}
+    .hero{padding:72px 0 50px}.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.92fr);gap:64px;align-items:center}
+    .eyebrow{margin:0 0 18px;color:var(--green);font-size:13px;font-weight:800;text-transform:uppercase}
+    h1,h2,h3{margin-top:0;font-family:"Songti TC","Noto Serif TC","PMingLiU",Georgia,serif;letter-spacing:0}
+    h1{max-width:720px;margin-bottom:24px;font-size:62px;line-height:1.08;text-wrap:balance}.hero-lead{max-width:720px;margin:0;color:var(--muted);font-size:20px}
+    .hero-note{margin-top:28px;padding-top:14px;border-top:2px solid var(--clay);color:var(--clay);font-weight:800}
+    .style-console{border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+    .console-head{display:flex;justify-content:space-between;gap:18px;padding:18px 22px;border-bottom:1px solid var(--line)}.console-head b{color:var(--green);font-size:13px;text-transform:uppercase}.console-head span{color:var(--muted);font-size:12px}
+    .core{display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;align-items:center;padding:24px 22px;border-bottom:1px solid var(--line)}
+    .core-icon{display:grid;width:76px;height:76px;place-items:center;border:1px solid var(--green);background:var(--green-soft);color:var(--green)}.core-icon svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:1.7}
+    .core b,.core span{display:block}.core b{font-family:Georgia,serif;font-size:21px}.core span{color:var(--muted)}
+    .style-line{display:grid;grid-template-columns:38px 1fr auto;gap:12px;align-items:center;min-height:58px;padding:9px 22px}.style-line+.style-line{border-top:1px solid var(--line)}
+    .style-no{display:grid;width:28px;height:28px;place-items:center;border-radius:50%;color:#fff;background:var(--green);font-family:Georgia,serif;font-size:12px}
+    .style-line:nth-child(2) .style-no{background:var(--gold)}.style-line:nth-child(3) .style-no{background:var(--blue)}.style-line:nth-child(4) .style-no{background:var(--clay)}.style-line:nth-child(5) .style-no{background:var(--violet)}
+    .style-copy b,.style-copy span{display:block}.style-copy b{font-size:14px}.style-copy span{color:var(--muted);font-size:12px}.style-use{color:var(--muted);font-size:11px;text-transform:uppercase}
+    .thesis{margin:26px auto 84px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .thesis-item{padding:22px 28px}.thesis-item+.thesis-item{border-left:1px solid var(--line)}.thesis-item b{display:block;color:var(--green);font-size:12px;text-transform:uppercase}.thesis-item span{color:var(--muted)}
+    main{padding-bottom:80px}section{margin-bottom:92px;scroll-margin-top:90px}.section-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;margin-bottom:34px}
+    .section-no{color:var(--gold);font-family:Georgia,serif;font-size:18px;font-weight:700}h2{margin-bottom:12px;font-size:42px;line-height:1.2}.section-intro{max-width:850px;margin:0;color:var(--muted);font-size:17px}
+    .layer-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--surface)}.layer{min-height:320px;padding:30px}.layer+.layer{border-left:1px solid var(--line)}
+    .layer-icon{display:grid;width:50px;height:50px;margin-bottom:24px;place-items:center;border:1px solid currentColor}.layer-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7}
+    .layer:nth-child(1){color:var(--green)}.layer:nth-child(2){color:var(--blue)}.layer:nth-child(3){color:var(--clay)}.layer h3{margin-bottom:12px;color:var(--ink);font-size:28px}.layer p{color:var(--muted)}.layer strong{display:block;margin-top:24px;color:var(--ink);font-size:12px;text-transform:uppercase}
+    .builtin-table{width:100%;border-collapse:collapse;border:1px solid var(--line);background:var(--surface)}.builtin-table th,.builtin-table td{padding:20px 22px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    .builtin-table th{color:var(--green);font-size:12px;text-transform:uppercase}.builtin-table td:first-child{width:150px;font-family:Georgia,serif;font-size:19px;font-weight:700}.builtin-table td:nth-child(2){color:var(--muted)}.builtin-table tr:last-child td{border-bottom:0}
+    .setup-flow{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--surface)}.setup-step{position:relative;min-height:220px;padding:26px 22px}.setup-step+.setup-step{border-left:1px solid var(--line)}
+    .setup-step:not(:last-child)::after{content:"→";position:absolute;top:34px;right:-10px;z-index:2;color:var(--clay);background:var(--surface)}.step-no{display:grid;width:38px;height:38px;margin-bottom:18px;place-items:center;background:var(--green-soft);color:var(--green);font-family:Georgia,serif;font-weight:700}
+    .setup-step h3{margin-bottom:8px;font-size:22px}.setup-step p{margin:0;color:var(--muted);font-size:14px}.setup-step code{display:inline-block;margin-top:12px;padding:2px 7px;background:var(--surface-2);font-size:12px}
+    .warning{margin-top:24px;padding:24px 28px;border-left:5px solid var(--clay);background:var(--clay-soft)}.warning b{display:block;margin-bottom:5px;color:var(--clay)}.warning p{margin:0}
+    .compare-grid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);background:var(--surface)}.compare-item{min-height:270px;padding:24px 20px}.compare-item+.compare-item{border-left:1px solid var(--line)}
+    .compare-dot{width:12px;height:12px;margin-bottom:20px;border-radius:50%;background:var(--green)}.compare-item:nth-child(2) .compare-dot{background:var(--gold)}.compare-item:nth-child(3) .compare-dot{background:var(--blue)}.compare-item:nth-child(4) .compare-dot{background:var(--clay)}.compare-item:nth-child(5) .compare-dot{background:var(--violet)}
+    .compare-item h3{margin-bottom:8px;font-size:22px}.compare-item p{color:var(--muted);font-size:14px}.compare-item b{display:block;margin-top:18px;font-size:12px;text-transform:uppercase}
+    .test-strip{display:grid;grid-template-columns:180px minmax(0,1fr);border:1px solid var(--line);background:var(--surface)}.test-label{display:grid;place-items:center;padding:30px;background:var(--green);color:#fff;text-align:center}.test-label b{font-family:Georgia,serif;font-size:30px}
+    .test-body{padding:30px}.test-body ol{margin:0;padding-left:22px}.test-body li+li{margin-top:10px}
+    .principle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.principle{display:grid;grid-template-columns:58px 1fr;gap:18px;padding:24px;border-top:1px solid var(--line);background:var(--surface)}
+    .principle-no{color:var(--gold);font-family:Georgia,serif;font-size:28px}.principle h3{margin-bottom:6px;font-size:23px}.principle p{margin:0;color:var(--muted)}
+    .template-shell{display:grid;grid-template-columns:.78fr 1.22fr;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}.template-copy{padding:34px;background:var(--green);color:#fff}.template-copy h3{font-size:31px}.template-copy p{color:#dbe7e2}.template-copy ul{padding-left:20px}
+    pre{margin:0;padding:30px;overflow-x:auto;background:#202826;color:#f5f2e9;font-size:13px;line-height:1.65}
+    .decision{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:var(--surface)}.decision-side{padding:30px}.decision-side+.decision-side{border-left:1px solid var(--line)}.decision-side h3{font-size:28px}.decision-side p{color:var(--muted)}
+    .decision-row{padding:13px 0;border-top:1px solid var(--line)}.decision-row b,.decision-row span{display:block}.decision-row span{color:var(--muted);font-size:14px}
+    .source-list{border:1px solid var(--line);background:var(--surface)}.source-item{display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:20px;align-items:center;padding:22px 24px}.source-item+.source-item{border-top:1px solid var(--line)}
+    .source-type{color:var(--gold);font-size:12px;font-weight:800;text-transform:uppercase}.source-item b,.source-item span{display:block}.source-item span{color:var(--muted);font-size:14px}.source-item a{color:var(--green);font-size:13px;font-weight:800;white-space:nowrap}
+    .scope-note{margin-top:20px;padding:20px 24px;border-left:4px solid var(--gold);background:var(--gold-soft)}footer{border-top:1px solid var(--line)}.footer-inner{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}
+    @media(max-width:960px){.hero-grid{grid-template-columns:1fr}h1{font-size:52px}.style-console{max-width:660px}.layer-grid,.compare-grid{grid-template-columns:1fr 1fr}.layer+.layer,.compare-item+.compare-item{border-left:0}.layer:nth-child(even),.compare-item:nth-child(even){border-left:1px solid var(--line)}.layer:nth-child(n+3),.compare-item:nth-child(n+3){border-top:1px solid var(--line)}.setup-flow{grid-template-columns:1fr 1fr}.setup-step+.setup-step{border-left:0}.setup-step:nth-child(even){border-left:1px solid var(--line)}.setup-step:nth-child(n+3){border-top:1px solid var(--line)}.setup-step::after{display:none}.template-shell{grid-template-columns:1fr}}
+    @media(max-width:680px){.wrap{width:min(calc(100% - 28px),var(--max))}.topbar-inner{min-height:62px}.brand span:last-child{display:none}.nav{gap:16px}.nav a{font-size:13px}.hero{padding:46px 0 34px}.hero-grid{gap:36px}h1{font-size:43px;line-height:1.12}.hero-lead{font-size:17px}.style-console{width:100%}.core{grid-template-columns:68px 1fr;padding:20px 16px}.core-icon{width:60px;height:60px}.style-line{grid-template-columns:34px 1fr;padding:10px 16px}.style-use{display:none}.thesis{grid-template-columns:1fr;margin-bottom:66px}.thesis-item+.thesis-item{border-left:0;border-top:1px solid var(--line)}section{margin-bottom:68px}.section-head{grid-template-columns:1fr;gap:8px}h2{font-size:34px}.layer-grid,.compare-grid,.setup-flow,.principle-grid,.decision{grid-template-columns:1fr}.layer,.compare-item,.setup-step{min-height:auto}.layer+.layer,.layer:nth-child(even),.compare-item+.compare-item,.compare-item:nth-child(even),.setup-step+.setup-step,.setup-step:nth-child(even){border-left:0}.layer+.layer,.compare-item+.compare-item,.setup-step+.setup-step{border-top:1px solid var(--line)}.builtin-table{display:block;overflow-x:auto}.test-strip{grid-template-columns:1fr}.test-label{min-height:120px}.template-copy,pre{padding:24px 20px}.decision-side+.decision-side{border-left:0;border-top:1px solid var(--line)}.source-item{grid-template-columns:1fr;gap:8px}.source-item a{white-space:normal}.footer-inner{min-height:90px;align-items:flex-start;justify-content:center;flex-direction:column;gap:2px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">M</span><span>Michael Agent Lab</span></a>
+      <nav class="nav" aria-label="主要導覽">
+        <a href="../index.html">首頁</a><a href="../learning.html">教材</a><a href="../github-skills.html">GitHub</a>
+        <a href="../ai-agent-daily.html">AI Agent</a><a href="../ai-video-library.html">精選內容</a><a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Claude Code / Communication Design</p>
+        <h1>讓 AI 用你讀得懂的方式回報</h1>
+        <p class="hero-lead">模型能力沒有變，閱讀成本可以差很多。Output Style 用來固定語氣、結構與資訊密度，讓每次回覆都更接近你真正需要的工作格式。</p>
+        <div class="hero-note">先設計怎麼說，再判斷說得對不對。</div>
+      </div>
+      <div class="style-console" aria-label="同一個 AI 核心套用五種輸出方式">
+        <div class="console-head"><b>Output Style Router</b><span>Same capability · Different delivery</span></div>
+        <div class="core">
+          <span class="core-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v3h3v4h3v4h-3v4h-3v3H9v-3H6v-4H3v-4h3V6h3zM9 9h6v6H9z"/></svg></span>
+          <div><b>同一個 Claude Code</b><span>推理、工具與專案脈絡不因語氣改變</span></div>
+        </div>
+        <div class="style-lines">
+          <div class="style-line"><span class="style-no">1</span><div class="style-copy"><b>白話導覽</b><span>術語即時解釋，短句分步說明</span></div><span class="style-use">Beginner</span></div>
+          <div class="style-line"><span class="style-no">2</span><div class="style-copy"><b>決策摘要</b><span>先結論，再列選項與取捨</span></div><span class="style-use">Decision</span></div>
+          <div class="style-line"><span class="style-no">3</span><div class="style-copy"><b>工程短報</b><span>先說改了什麼、能否運作、剩餘風險</span></div><span class="style-use">Engineer</span></div>
+          <div class="style-line"><span class="style-no">4</span><div class="style-copy"><b>學習解說</b><span>補上原因、模式與程式脈絡</span></div><span class="style-use">Learning</span></div>
+          <div class="style-line"><span class="style-no">5</span><div class="style-copy"><b>風險優先</b><span>先揭露假設、不可逆動作與待確認事項</span></div><span class="style-use">Review</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap thesis" aria-label="核心觀念">
+    <div class="thesis-item"><b>Capability</b><span>AI 做得到什麼</span></div>
+    <div class="thesis-item"><b>Output Style</b><span>AI 平常怎麼回報</span></div>
+    <div class="thesis-item"><b>Skill</b><span>特定任務需要時怎麼做</span></div>
+  </div>
+
+  <main class="wrap">
+    <section id="layers">
+      <div class="section-head"><div class="section-no">01 / LAYERS</div><div><h2>先分清楚三件事</h2><p class="section-intro">輸出看不懂，不代表模型能力不足。先判斷問題是在能力、長期表達方式，還是某一次任務需要額外說明。</p></div></div>
+      <div class="layer-grid">
+        <article class="layer"><div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18"/></svg></div><h3>模型與工具能力</h3><p>決定 AI 能不能讀檔、改程式、呼叫工具與完成任務。換 Output Style 不會讓模型突然更聰明，也不會增加權限。</p><strong>回答：做不做得到</strong></article>
+        <article class="layer"><div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4zM8 9h8M8 12h6"/></svg></div><h3>Output Style</h3><p>修改系統提示詞，固定角色、語氣、資訊密度與輸出格式。適合處理每一輪都會重複出現的表達偏好。</p><strong>回答：平常怎麼說</strong></article>
+        <article class="layer"><div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v4h4v6h-4v4H8v-4H4V7h4zM9 9h6v6H9z"/></svg></div><h3>Skill</h3><p>在特定任務被觸發時，載入一套可重複的操作方法。它適合教 AI 怎麼執行流程，不適合承擔每一輪都要遵守的基本表達風格。</p><strong>回答：這一次怎麼做</strong></article>
+      </div>
+    </section>
+
+    <section id="built-in">
+      <div class="section-head"><div class="section-no">02 / BUILT-IN</div><div><h2>先試內建四種，不一定要自己寫</h2><p class="section-intro">目前 Claude Code 提供四種內建 Output Style。先用真實任務試過，再決定是否需要自訂，通常比一開始就寫長規則更省力。</p></div></div>
+      <table class="builtin-table">
+        <thead><tr><th>Style</th><th>主要行為</th><th>比較適合</th></tr></thead>
+        <tbody>
+          <tr><td>Default</td><td>以完成軟體工程任務為主，保持原本高效率工作方式。</td><td>已經熟悉 Claude Code、希望回覆精簡的人。</td></tr>
+          <tr><td>Proactive</td><td>對例行決定採合理假設並直接行動，但不會改變原本的權限與核准要求。</td><td>任務邊界清楚、不想頻繁停下確認的人。</td></tr>
+          <tr><td>Explanatory</td><td>在實作過程加入 Insight，說明選擇、模式與程式脈絡。</td><td>想了解「為什麼這樣改」的人。</td></tr>
+          <tr><td>Learning</td><td>以共同實作為主，除了解說，也會留下小段工作讓使用者親自完成。</td><td>希望邊做邊學、建立實作能力的人。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="setup">
+      <div class="section-head"><div class="section-no">03 / SETUP</div><div><h2>四步啟用自訂 Output Style</h2><p class="section-intro">自訂樣式是一個 Markdown 檔。檔名前的 metadata 決定名稱與是否保留軟體工程指令，正文則描述每次回覆都要遵守的方式。</p></div></div>
+      <div class="setup-flow">
+        <article class="setup-step"><span class="step-no">1</span><h3>決定範圍</h3><p>個人共用放在使用者目錄；專案共用放在專案內的 output-styles 目錄。</p><code>~/.claude/output-styles</code></article>
+        <article class="setup-step"><span class="step-no">2</span><h3>建立 Markdown</h3><p>加入名稱、簡介與清楚的輸出規則。檔名會成為預設樣式名稱。</p><code>decision-brief.md</code></article>
+        <article class="setup-step"><span class="step-no">3</span><h3>從設定選擇</h3><p>執行設定選單，進入 Output style，選擇內建或自訂樣式。</p><code>/config</code></article>
+        <article class="setup-step"><span class="step-no">4</span><h3>重新載入</h3><p>Output Style 在工作階段開始時讀取。切換後用新對話或清除目前對話讓設定生效。</p><code>/clear</code></article>
+      </div>
+      <div class="warning"><b>最重要的設定：keep-coding-instructions</b><p>自訂 Output Style 預設不保留 Claude Code 的軟體工程指令。若目的只是改變說話與回報方式，但仍要讓它照原本方式寫程式、控制範圍並驗證成果，請設定 <code>keep-coding-instructions: true</code>。</p></div>
+    </section>
+
+    <section id="five-way-test">
+      <div class="section-head"><div class="section-no">04 / COMPARE</div><div><h2>不要憑想像選風格，用同一題比較五種版本</h2><p class="section-intro">最可靠的方法不是問「我喜歡哪種語氣」，而是拿一個真的難讀回答，保留相同事實與結論，只改表達方式，再看哪一種最能幫你做決定。</p></div></div>
+      <div class="compare-grid">
+        <article class="compare-item"><div class="compare-dot"></div><h3>白話導覽</h3><p>保留必要術語，但第一次出現就用一句白話解釋。短句、一步一動作。</p><b>適合：剛接觸主題</b></article>
+        <article class="compare-item"><div class="compare-dot"></div><h3>決策摘要</h3><p>先給建議，再列兩到三個選項、取捨與下一步，不展開不影響決策的細節。</p><b>適合：PM 與決策者</b></article>
+        <article class="compare-item"><div class="compare-dot"></div><h3>工程短報</h3><p>先說改了什麼、測了什麼、是否完成；爭議決策與殘留風險優先浮出。</p><b>適合：熟悉技術脈絡</b></article>
+        <article class="compare-item"><div class="compare-dot"></div><h3>學習解說</h3><p>除了結果，也解釋模式、替代方案與程式脈絡，讓每次實作累積成能力。</p><b>適合：邊做邊學</b></article>
+        <article class="compare-item"><div class="compare-dot"></div><h3>風險優先</h3><p>先列假設、不可逆動作、資料風險與需要人工確認的地方，再進入執行內容。</p><b>適合：高風險任務</b></article>
+      </div>
+      <div class="test-strip">
+        <div class="test-label"><b>A/B/C/D/E</b></div>
+        <div class="test-body"><ol>
+          <li>挑一個真實、曾經讓你看不懂或花很多時間消化的回答。</li>
+          <li>要求五個版本保留相同事實、限制與結論，只改結構、語氣和解釋深度。</li>
+          <li>先不看名稱，依「最快看懂、最容易決定、最少追問」排序。</li>
+          <li>用第二個不同類型任務再測一次，避免只對單一案例有效。</li>
+          <li>選定後才整理成 Output Style；需要時再保留一個按需 Skill 補充深度解釋。</li>
+        </ol></div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="section-head"><div class="section-no">05 / WRITING</div><div><h2>技術表達清楚，靠的是可執行規則</h2><p class="section-intro">「請簡單一點」太模糊。更有效的作法，是定義句子、術語、順序與風險如何呈現，讓 AI 可以逐條遵守。</p></div></div>
+      <div class="principle-grid">
+        <article class="principle"><span class="principle-no">01</span><div><h3>一句只做一件事</h3><p>避免在同一句混入背景、動作、例外與結論。需要多個動作就拆成步驟。</p></div></article>
+        <article class="principle"><span class="principle-no">02</span><div><h3>同一個詞只代表一件事</h3><p>專案名詞固定，不在「任務、工作、流程」之間任意切換，降低誤讀。</p></div></article>
+        <article class="principle"><span class="principle-no">03</span><div><h3>術語不刪掉，第一次先解釋</h3><p>白話不等於犧牲精確度。保留專業詞，第一次出現時補一行可理解的定義。</p></div></article>
+        <article class="principle"><span class="principle-no">04</span><div><h3>先說讀者要採取的行動</h3><p>把結論、影響與下一步放前面；細節、證據和替代方案放後面。</p></div></article>
+      </div>
+      <div class="scope-note"><b>方法來源：</b>這些寫法與 Simplified Technical English 的精神一致：控制詞彙、降低歧義、簡化句型。但一般 AI 回報不必宣稱完全符合 ASD-STE100；正式技術文件仍應依官方標準與組織規範驗證。</div>
+    </section>
+
+    <section id="template">
+      <div class="section-head"><div class="section-no">06 / TEMPLATE</div><div><h2>一份可以開始修改的樣式骨架</h2><p class="section-intro">這份骨架刻意只規定回報方式，不替代專案規則、測試要求或特定任務 Skill。先短，再用真實使用經驗逐步修正。</p></div></div>
+      <div class="template-shell">
+        <div class="template-copy"><h3>Design brief</h3><p>好的 Output Style 至少回答六件事：</p><ul><li>讀者是誰</li><li>第一段先看什麼</li><li>術語怎麼處理</li><li>細節何時展開</li><li>風險怎麼浮出</li><li>完成後怎麼回報</li></ul></div>
+        <pre><code>---
+name: Decision brief
+description: 先給結論，再交代影響、證據與下一步
+keep-coding-instructions: true
+---
+
+使用繁體中文回覆。
+
+每次完成工作後，依序說明：
+1. 結果：一句話說明是否完成。
+2. 影響：使用者或系統會看到什麼改變。
+3. 驗證：列出真正執行過的檢查。
+4. 風險：只列仍存在、需要注意的事項。
+5. 下一步：僅在確實需要時提出。
+
+保留必要技術詞。第一次出現時，用一句白話解釋。
+一個句子只表達一個主要動作。
+若做了未經要求、可能有爭議的決定，先說明再展開細節。</code></pre>
+      </div>
+    </section>
+
+    <section id="boundaries">
+      <div class="section-head"><div class="section-no">07 / BOUNDARY</div><div><h2>哪些放進 Style，哪些留在別處</h2><p class="section-intro">Output Style 越長，維護成本與輸入 token 越高。只保留每次回覆都需要的表達規則，其他內容放到正確的位置。</p></div></div>
+      <div class="decision">
+        <div class="decision-side"><h3>適合放進 Output Style</h3><p>角色、語氣、固定結構與資訊密度，通常每一輪都會使用。</p><div class="decision-row"><b>先結論或先背景</b><span>決定讀者第一眼看到什麼。</span></div><div class="decision-row"><b>術語與解釋深度</b><span>決定新手與熟手的閱讀負擔。</span></div><div class="decision-row"><b>完成回報格式</b><span>結果、驗證、風險與下一步。</span></div></div>
+        <div class="decision-side"><h3>不適合塞進 Output Style</h3><p>專案知識、特定工作法與安全機制應各自管理。</p><div class="decision-row"><b>專案慣例 → CLAUDE.md</b><span>程式架構、測試指令與目錄規則。</span></div><div class="decision-row"><b>特定流程 → Skill</b><span>只有某類任務才需要載入的完整步驟。</span></div><div class="decision-row"><b>硬性限制 → 權限、Hook 或 CI</b><span>不能只靠文字提醒的安全底線。</span></div></div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head"><div class="section-no">08 / SOURCES</div><div><h2>來源與延伸閱讀</h2><p class="section-intro">本頁以原始示範建立學習主線，再以官方文件核對目前功能、設定方式與技術寫作原則。</p></div></div>
+      <div class="source-list">
+        <div class="source-item"><div class="source-type">Original</div><div><b>看不懂 Claude 的輸出？其實只要改一個內建設定</b><span>Gary Chen，Output Style 與讀者導向的表達設計</span></div><a href="https://youtu.be/E8Bx9OlpmdM" target="_blank" rel="noreferrer">查看原始內容 →</a></div>
+        <div class="source-item"><div class="source-type">Official</div><div><b>Claude Code Output Styles</b><span>內建樣式、自訂檔案、keep-coding-instructions 與套用方式</span></div><a href="https://code.claude.com/docs/en/output-styles" target="_blank" rel="noreferrer">官方文件 →</a></div>
+        <div class="source-item"><div class="source-type">Settings</div><div><b>Claude Code Settings</b><span>outputStyle 設定欄位與設定層級</span></div><a href="https://code.claude.com/docs/en/settings" target="_blank" rel="noreferrer">官方設定 →</a></div>
+        <div class="source-item"><div class="source-type">Language</div><div><b>ASD-STE100 Simplified Technical English</b><span>受控自然語言、寫作規則與控制詞彙的正式說明</span></div><a href="https://www.asd-ste100.org/" target="_blank" rel="noreferrer">官方標準 →</a></div>
+      </div>
+      <div class="scope-note"><b>版本提醒：</b>Claude Code 功能與指令會持續更新。實際設定前請再查看官方文件；本教材把 Output Style 當作溝通層設計，不把它誤當成模型升級、權限控制或安全機制。</div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>Michael Agent Lab · Public teaching note</span><span>更新日期：2026-08-12</span></div></footer>
+</body>
+</html>
