@@ -37,6 +37,7 @@
       ["Hermes Agent 資料庫", `${prefix}hermes-agent-resources.html`],
       ["AI 大神", `${prefix}ai-gods.html`],
       ["所有教材", `${prefix}tutorial-library.html`],
+      ["學習日誌", `${prefix}journal.html`],
     ];
 
     const nav = document.createElement("header");
@@ -60,6 +61,10 @@
     learning.href = `${prefix}learning.html`;
     learning.textContent = "Learning";
 
+    const journal = document.createElement("a");
+    journal.href = `${prefix}journal.html`;
+    journal.textContent = "Journal";
+
     const explore = document.createElement("details");
     explore.className = "training-explore-menu";
     const summary = document.createElement("summary");
@@ -81,7 +86,7 @@
     const about = document.createElement("a");
     about.href = `${prefix}about.html`;
     about.textContent = "About";
-    primary.append(home, learning, explore, about);
+    primary.append(home, learning, journal, explore, about);
 
     nav.append(brand, primary);
 
