@@ -123,6 +123,50 @@ body.journal-article-page {
   line-height: 1.65;
 }
 .journal-source a { color: var(--bronze); }
+.journal-language-label {
+  display: inline-block;
+  margin: 0 0 12px;
+  color: var(--olive);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.journal-english {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+.journal-english h2:first-of-type { margin-top: 0; }
+.journal-english p,
+.journal-english li {
+  color: #585750;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.journal-bilingual-title {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.38em;
+  line-height: 1.25;
+}
+.journal-article-lede .journal-intro-en {
+  display: block;
+  margin-top: 12px;
+  color: var(--olive);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78em;
+  line-height: 1.55;
+}
+.journal-storyboard figcaption small {
+  display: block;
+  margin-top: 4px;
+  color: var(--olive);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10px;
+  line-height: 1.45;
+}
 .journal-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .journal-tags span {
   border: 1px solid var(--line);

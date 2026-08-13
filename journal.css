@@ -75,6 +75,24 @@ body.journal-page {
   line-height: 1.75;
 }
 
+.journal-intro-en {
+  display: block;
+  margin-top: 8px;
+  color: var(--journal-olive);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.journal-en {
+  display: block;
+  margin-top: 5px;
+  color: var(--journal-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.58em;
+  line-height: 1.35;
+}
+
 .journal-categories {
   display: flex;
   align-items: center;

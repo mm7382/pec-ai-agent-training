@@ -3,116 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>學習日誌 - Michael Agent Lab</title>
-  <meta name="description" content="記錄 AI Agent 學習、工作方法、工具實驗與個人反思。">
+  <title>學習日誌 Journal - Michael Agent Lab</title>
+  <meta name="description" content="記錄 AI Agent 學習、工作方法、工具實驗與個人反思。Bilingual notes on AI practice, engineering and learning in public.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./journal.css?v=20260813-linkedin-1">
+  <link rel="stylesheet" href="./journal.css?v=20260813-bilingual-2">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 </head>
 <body class="journal-page">
   <main class="journal-shell">
     <header class="journal-masthead">
       <p class="journal-kicker">Journal</p>
-      <h1>學習日誌</h1>
-      <p class="journal-intro">記下我怎麼理解問題、試做工具，再把真正有效的方法留下來。</p>
+      <h1>學習日誌 <span class="journal-en">Learning Journal</span></h1>
+      <p class="journal-intro">記下我怎麼理解問題、試做工具，再把真正有效的方法留下來。<span class="journal-intro-en">How I understand problems, test ideas, and keep what actually works.</span></p>
     </header>
 
-    <nav class="journal-categories" aria-label="日誌分類">
-      <a href="#learning-notes">學習札記</a>
-      <a href="#work-methods">工作方法</a>
-      <a href="#tool-experiments">工具實驗</a>
-      <a href="#reflections">個人反思</a>
+    <nav class="journal-categories" aria-label="日誌分類 Journal categories">
+      <a href="#learning-notes">學習札記 Learning Notes</a>
+      <a href="#work-methods">工作方法 Work Methods</a>
+      <a href="#tool-experiments">工具實驗 Tool Experiments</a>
+      <a href="#reflections">個人反思 Reflections</a>
     </nav>
 
     <article class="journal-feature" id="tool-experiments">
-      <figure class="journal-feature-media">
-        <img
-          src="./assets/journal/message-integration-app.webp"
-          alt="訊息散落、集中處理與人工確認的三段分鏡"
-          width="1536"
-          height="1024"
-        >
-      </figure>
+      <figure class="journal-feature-media"><img src="./assets/journal/message-integration-app.webp" alt="訊息散落、集中處理與人工確認的三段分鏡" width="1774" height="887"></figure>
       <div class="journal-feature-copy">
-        <div class="journal-meta">
-          <span>工具實驗</span>
-          <time datetime="2026-08-12">2026.08.12</time>
-        </div>
-        <h2>訊息整合 App：少一點切換，把最後判斷留給人</h2>
-        <p>訊息集中進來並補回對話背景；我確認收件人與完整回覆後，Agent 才送回原本的平台。</p>
-        <a href="./journal-message-integration-app.html">閱讀全文 <span aria-hidden="true">&rarr;</span></a>
+        <div class="journal-meta"><span>工具實驗 Tool Experiment</span><time datetime="2026-08-12">2026.08.12</time></div>
+        <h2>訊息整合 App：少一點切換，把最後判斷留給人<span class="journal-en">A Message Integration App That Keeps the Final Decision Human</span></h2>
+        <p>訊息集中進來並補回對話背景；我確認收件人與完整回覆後，Agent 才送回原本的平台。<span class="journal-intro-en">Messages arrive with context. The agent sends only after I confirm the recipient and reply.</span></p>
+        <a href="./journal-message-integration-app.html">閱讀全文 Read article <span aria-hidden="true">&rarr;</span></a>
       </div>
     </article>
 
     <section class="journal-archive" id="recent-notes" aria-labelledby="recentNotesTitle">
-      <div class="journal-archive-heading">
-        <p class="journal-kicker">Latest notes</p>
-        <h2 id="recentNotesTitle">近期紀錄</h2>
-      </div>
-
+      <div class="journal-archive-heading"><p class="journal-kicker">All notes</p><h2 id="recentNotesTitle">全部紀錄<span class="journal-en">All Entries</span></h2></div>
       <div class="journal-note-list">
-        <a class="journal-note" id="work-methods" href="./journal-personal-message-relay.html">
-          <div class="journal-note-meta">
-            <span>工作方法</span>
-            <time datetime="2026-08-11">08.11</time>
-          </div>
-          <div>
-            <h3>私人訊息中繼站：先解決到處找訊息的疲勞</h3>
-            <p>把分散的收件匣集中起來，由 Second Brain 補回背景，人仍負責確認最後回覆。</p>
-          </div>
-          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-
-        <a class="journal-note" id="learning-notes" href="./journal-ai-code-review-depth.html">
-          <div class="journal-note-meta">
-            <span>學習札記</span>
-            <time datetime="2026-08-05">08.05</time>
-          </div>
-          <div>
-            <h3>AI 寫的 Code，到底還要不要逐行讀？</h3>
-            <p>答案不只分成讀或不讀；真正重要的是，讓審查深度跟著風險提高。</p>
-          </div>
-          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-
-        <a class="journal-note" href="./journal-voice-brief-agent.html">
-          <div class="journal-note-meta">
-            <span>工作方法</span>
-            <time datetime="2026-08-04">08.04</time>
-          </div>
-          <div>
-            <h3>從寫 Prompt，到用語音 Brief Agent</h3>
-            <p>先自然說出完整想法，再整理成目標、背景、限制與完成條件。</p>
-          </div>
-          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-
-        <a class="journal-note" href="./journal-ai-schematic-review.html">
-          <div class="journal-note-meta">
-            <span>工具實驗</span>
-            <time datetime="2026-08-03">08.03</time>
-          </div>
-          <div>
-            <h3>讓 AI Agent 先協助 EE 檢查線路圖</h3>
-            <p>先處理重複檢查與可能異常，再由工程師依設計意圖做最後判斷。</p>
-          </div>
-          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </a>
+        <a class="journal-note" id="work-methods" href="./journal-personal-message-relay.html"><div class="journal-note-meta"><span>工作方法<br>Work Method</span><time datetime="2026-08-11">2026.08.11</time></div><div><h3>私人訊息中繼站<span class="journal-en">A Personal Message Relay</span></h3><p>集中分散收件匣，補回背景，人仍負責最後回覆。<span class="journal-intro-en">One inbox restores context while people remain responsible for the final reply.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" id="learning-notes" href="./journal-ai-code-review-depth.html"><div class="journal-note-meta"><span>學習札記<br>Learning Note</span><time datetime="2026-08-05">2026.08.05</time></div><div><h3>AI 寫的 Code，還要不要逐行讀？<span class="journal-en">Should We Read AI-Generated Code Line by Line?</span></h3><p>審查深度不應固定，而應跟著風險提高。<span class="journal-intro-en">Review depth should rise with risk.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-voice-brief-agent.html"><div class="journal-note-meta"><span>工作方法<br>Work Method</span><time datetime="2026-08-04">2026.08.04</time></div><div><h3>從寫 Prompt，到用語音 Brief Agent<span class="journal-en">From Writing Prompts to Briefing Agents by Voice</span></h3><p>先說出完整想法，再整理成可執行的 Brief。<span class="journal-intro-en">Speak naturally first, then shape the idea into an executable brief.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-ai-schematic-review.html"><div class="journal-note-meta"><span>工具實驗<br>Tool Experiment</span><time datetime="2026-08-03">2026.08.03</time></div><div><h3>讓 AI Agent 先協助 EE 檢查線路圖<span class="journal-en">Using an AI Agent to Assist Schematic Review</span></h3><p>Agent 先整理疑點，工程師依設計意圖做最後判斷。<span class="journal-intro-en">The agent surfaces issues; engineers make the final call.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-public-learning-website.html"><div class="journal-note-meta"><span>個人反思<br>Reflection</span><time datetime="2026-07-30">2026.07.30</time></div><div><h3>把學習整理成一個公開入口<span class="journal-en">Turning My Learning into a Public Entrance</span></h3><p>不是再做一份資訊列表，而是讓知識更容易理解、比較與實作。<span class="journal-intro-en">Not another list, but a place where scattered knowledge becomes usable.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-one-brain-many-agents.html"><div class="journal-note-meta"><span>工具實驗<br>Tool Experiment</span><time datetime="2026-07-28">2026.07.28</time></div><div><h3>One Brain, Many Agents<span class="journal-en">Memory Should Follow the Person</span></h3><p>用自己擁有、可審核的知識庫，讓不同 Agent 共享長期記憶。<span class="journal-intro-en">A user-owned, reviewed knowledge base shared across agents.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-pageindex-rag.html"><div class="journal-note-meta"><span>學習札記<br>Learning Note</span><time datetime="2026-07-24">2026.07.24</time></div><div><h3>下一代 RAG，不只是更多 Chunks<span class="journal-en">Next-Generation RAG Is More Than More Chunks</span></h3><p>PageIndex 用文件結構、證據與可追溯推理改善大型知識庫搜尋。<span class="journal-intro-en">PageIndex uses structure and traceable evidence to improve retrieval.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-engineering-procurement.html"><div class="journal-note-meta"><span>工作方法<br>Work Method</span><time datetime="2025-07-31">2025.07.31</time></div><div><h3>工程設計與採購現實的三角平衡<span class="journal-en">Balancing Design, Cost, and Timing</span></h3><p>價格最低不等於做得出來；真正的決策要同時看設計、成本與時效。<span class="journal-intro-en">The lowest quote is not always buildable.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-ipc-test-toolkit.html"><div class="journal-note-meta"><span>工具實驗<br>Tool Experiment</span><time datetime="2025-07-17">2025.07.17</time></div><div><h3>把 IPC 測試指令整理成一個工具箱<span class="journal-en">Turning IPC Test Commands into a Toolkit</span></h3><p>一鍵執行、選單和 API，讓驗證不再依賴翻文件與手動拼指令。<span class="journal-intro-en">One-click tests, menus, and APIs reduce repetitive setup.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-dfmea-systems.html"><div class="journal-note-meta"><span>工作方法<br>Work Method</span><time datetime="2024-09-04">2024.09.04</time></div><div><h3>把複雜需求拆成可執行的 DFMEA<span class="journal-en">Turning Complex Requirements into an Actionable DFMEA</span></h3><p>從需求、邊界與系統圖，走到風險與驗證計畫。<span class="journal-intro-en">From requirements and boundaries to risk and verification.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-waterproof-cable.html"><div class="journal-note-meta"><span>工具實驗<br>Tool Experiment</span><time datetime="2024-03-30">2024.03.30</time></div><div><h3>帶纜線防水裝置的設計思考<span class="journal-en">Designing a Waterproof Cable Enclosure</span></h3><p>從上、下蓋、密封圈與纜線路徑，建立可靠的防水界面。<span class="journal-intro-en">A reliable sealing interface built from covers, gasket, and cable path.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-teamwork-award.html"><div class="journal-note-meta"><span>個人反思<br>Reflection</span><time datetime="2023-12-28">2023.12.28</time></div><div><h3>團隊的每個小成就，都值得被看見<span class="journal-en">Every Small Team Win Deserves Recognition</span></h3><p>真誠而具體的鼓勵，是困難工作裡很實際的推進力。<span class="journal-intro-en">Specific, sincere encouragement helps teams move forward.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-project-triangle.html"><div class="journal-note-meta"><span>學習札記<br>Learning Note</span><time datetime="2023-11-12">2023.11.12</time></div><div><h3>專案管理裡，不可能同時最大化一切<span class="journal-en">Projects Cannot Maximize Everything at Once</span></h3><p>預算、時程與範圍之間的取捨，必須成為明確決策。<span class="journal-intro-en">Budget, schedule, and scope require explicit trade-offs.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-professional-communication.html"><div class="journal-note-meta"><span>工作方法<br>Work Method</span><time datetime="2023-10-26">2023.10.26</time></div><div><h3>專業被質疑時，先把對話帶回證據<span class="journal-en">When Expertise Is Questioned, Return to Evidence</span></h3><p>冷靜、事實、傾聽與方案，比立刻防衛更有力量。<span class="journal-intro-en">Calm, evidence, listening, and solutions build trust.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
+        <a class="journal-note" href="./journal-industrial-systems-engineer.html"><div class="journal-note-meta"><span>學習札記<br>Learning Note</span><time datetime="2023-09-16">2023.09.16</time></div><div><h3>系統工程師看的，不只是硬體規格<span class="journal-en">A Systems Engineer Sees Beyond Hardware Specs</span></h3><p>需求、架構、風險、可靠性、散熱、成本與維護必須一起考慮。<span class="journal-intro-en">Requirements, risk, reliability, cost, and maintenance belong together.</span></p></div><span class="journal-note-arrow">&rarr;</span></a>
       </div>
     </section>
 
-    <section class="journal-empty-category" id="reflections" aria-labelledby="reflectionsTitle">
-      <p class="journal-kicker">Personal reflections</p>
-      <h2 id="reflectionsTitle">個人反思</h2>
-      <p>目前這一批 LinkedIn 貼文沒有歸入個人反思。之後有相關內容時，會依文章核心自動放在這裡。</p>
-    </section>
-
-    <footer class="journal-footer">
-      <p>Detailed notes from ongoing AI practice.</p>
-      <a href="./privacy.html">隱私說明</a>
-    </footer>
+    <section class="journal-empty-category" id="reflections" aria-labelledby="reflectionsTitle"><p class="journal-kicker">Personal reflections</p><h2 id="reflectionsTitle">個人反思 <span class="journal-en">Reflections</span></h2><p>學習不只留下結論，也留下我如何改變做法。<span class="journal-intro-en">Learning records not only conclusions, but how my way of working changes.</span></p></section>
+    <footer class="journal-footer"><p>Detailed bilingual notes from ongoing AI and engineering practice.</p><a href="./privacy.html">隱私說明 Privacy</a></footer>
   </main>
-
-  <script src="./tutorial-gate.js?v=20260812-journal-preview"></script>
+  <script src="./tutorial-gate.js?v=20260813-journal-bilingual"></script>
 </body>
 </html>
