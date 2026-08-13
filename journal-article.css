@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  --paper: #f5f2eb;
+  --surface: #fffefa;
+  --ink: #24231f;
+  --muted: #625e56;
+  --line: #d7d0c4;
+  --olive: #5f6747;
+  --bronze: #846b3f;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body.journal-article-page {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", "Noto Sans TC", system-ui, sans-serif;
+}
+.journal-article-shell {
+  width: min(1040px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 52px 0 80px;
+}
+.journal-back {
+  display: inline-block;
+  margin-bottom: 38px;
+  border-bottom: 1px solid currentColor;
+  color: var(--bronze);
+  padding-bottom: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.journal-article-header {
+  max-width: 880px;
+}
+.journal-article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  color: var(--olive);
+  font-size: 12px;
+  font-weight: 750;
+}
+.journal-article-meta time { color: var(--muted); }
+.journal-article-header h1 {
+  margin: 20px 0 0;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.journal-article-lede {
+  max-width: 760px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 22px;
+  line-height: 1.65;
+}
+.journal-storyboard {
+  margin: 48px 0 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.journal-storyboard img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.journal-storyboard figcaption {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+.journal-storyboard figcaption span {
+  padding: 16px 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.journal-storyboard figcaption span + span { border-left: 1px solid var(--line); }
+.journal-article-body {
+  width: min(720px, 100%);
+  margin: 54px auto 0;
+}
+.journal-article-body h2 {
+  margin: 46px 0 16px;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.journal-article-body p,
+.journal-article-body li {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.9;
+}
+.journal-article-body p { margin: 0 0 22px; }
+.journal-article-body ul { margin: 0 0 24px; padding-left: 1.25em; }
+.journal-callout {
+  margin: 38px 0;
+  padding: 24px 28px;
+  border-left: 3px solid var(--olive);
+  background: var(--surface);
+}
+.journal-callout p {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 22px;
+  line-height: 1.55;
+}
+.journal-source {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.journal-source a { color: var(--bronze); }
+.journal-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.journal-tags span {
+  border: 1px solid var(--line);
+  padding: 6px 9px;
+  color: var(--olive);
+  font-size: 11px;
+}
+@media (max-width: 620px) {
+  .journal-article-shell { width: 100%; padding: 32px 0 56px; }
+  .journal-back, .journal-article-header, .journal-article-body { margin-right: 20px; margin-left: 20px; }
+  .journal-article-header, .journal-article-body { width: auto; }
+  .journal-back { margin-bottom: 30px; }
+  .journal-article-header h1 { font-size: 42px; }
+  .journal-article-lede { margin-top: 20px; font-size: 19px; }
+  .journal-storyboard { margin-top: 36px; border-right: 0; border-left: 0; overflow-x: auto; }
+  .journal-storyboard img { width: 900px; max-width: none; }
+  .journal-storyboard figcaption { width: 900px; }
+  .journal-storyboard figcaption span { font-size: 12px; }
+  .journal-article-body { margin-top: 40px; }
+  .journal-article-body h2 { margin-top: 38px; font-size: 28px; }
+  .journal-article-body p, .journal-article-body li { font-size: 16px; line-height: 1.82; }
+}

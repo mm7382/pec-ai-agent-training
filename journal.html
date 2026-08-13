@@ -6,7 +6,7 @@
   <title>學習日誌 - Michael Agent Lab</title>
   <meta name="description" content="記錄 AI Agent 學習、工作方法、工具實驗與個人反思。">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./journal.css?v=20260812-preview-1">
+  <link rel="stylesheet" href="./journal.css?v=20260813-linkedin-1">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 </head>
 <body class="journal-page">
@@ -24,23 +24,23 @@
       <a href="#reflections">個人反思</a>
     </nav>
 
-    <article class="journal-feature" id="learning-notes">
+    <article class="journal-feature" id="tool-experiments">
       <figure class="journal-feature-media">
         <img
-          src="./assets/journal-workspace-preview.webp"
-          alt="自然光下的筆記本、電腦工作流程與技術書籍"
+          src="./assets/journal/message-integration-app.webp"
+          alt="訊息散落、集中處理與人工確認的三段分鏡"
           width="1536"
           height="1024"
         >
       </figure>
       <div class="journal-feature-copy">
         <div class="journal-meta">
-          <span>學習札記</span>
+          <span>工具實驗</span>
           <time datetime="2026-08-12">2026.08.12</time>
         </div>
-        <h2>把一次學習，整理成下一次能重複的方法</h2>
-        <p>真正有用的學習，不只是知道一個新工具，而是留下判斷、步驟與失敗經驗，讓下一次可以從更好的地方開始。</p>
-        <a href="#recent-notes">繼續閱讀 <span aria-hidden="true">&rarr;</span></a>
+        <h2>訊息整合 App：少一點切換，把最後判斷留給人</h2>
+        <p>訊息集中進來並補回對話背景；我確認收件人與完整回覆後，Agent 才送回原本的平台。</p>
+        <a href="./journal-message-integration-app.html">閱讀全文 <span aria-hidden="true">&rarr;</span></a>
       </div>
     </article>
 
@@ -51,42 +51,60 @@
       </div>
 
       <div class="journal-note-list">
-        <article class="journal-note" id="work-methods">
+        <a class="journal-note" id="work-methods" href="./journal-personal-message-relay.html">
           <div class="journal-note-meta">
             <span>工作方法</span>
-            <time datetime="2026-08-10">08.10</time>
+            <time datetime="2026-08-11">08.11</time>
           </div>
           <div>
-            <h3>先把問題說清楚，再決定要不要用 Agent</h3>
-            <p>從需求、限制與完成標準開始，避免工具跑得很快，方向卻完全錯了。</p>
+            <h3>私人訊息中繼站：先解決到處找訊息的疲勞</h3>
+            <p>把分散的收件匣集中起來，由 Second Brain 補回背景，人仍負責確認最後回覆。</p>
           </div>
           <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </article>
+        </a>
 
-        <article class="journal-note" id="tool-experiments">
+        <a class="journal-note" id="learning-notes" href="./journal-ai-code-review-depth.html">
+          <div class="journal-note-meta">
+            <span>學習札記</span>
+            <time datetime="2026-08-05">08.05</time>
+          </div>
+          <div>
+            <h3>AI 寫的 Code，到底還要不要逐行讀？</h3>
+            <p>答案不只分成讀或不讀；真正重要的是，讓審查深度跟著風險提高。</p>
+          </div>
+          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a class="journal-note" href="./journal-voice-brief-agent.html">
+          <div class="journal-note-meta">
+            <span>工作方法</span>
+            <time datetime="2026-08-04">08.04</time>
+          </div>
+          <div>
+            <h3>從寫 Prompt，到用語音 Brief Agent</h3>
+            <p>先自然說出完整想法，再整理成目標、背景、限制與完成條件。</p>
+          </div>
+          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <a class="journal-note" href="./journal-ai-schematic-review.html">
           <div class="journal-note-meta">
             <span>工具實驗</span>
-            <time datetime="2026-08-07">08.07</time>
-          </div>
-          <div>
-            <h3>我怎麼判斷一個 AI 工具值不值得留下</h3>
-            <p>不只看功能，而是看它能不能進入每天真正使用的工作流程。</p>
-          </div>
-          <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-
-        <article class="journal-note" id="reflections">
-          <div class="journal-note-meta">
-            <span>個人反思</span>
             <time datetime="2026-08-03">08.03</time>
           </div>
           <div>
-            <h3>學得更多，不代表做得更好</h3>
-            <p>當資訊越來越多，我開始更在意今天究竟完成了什麼。</p>
+            <h3>讓 AI Agent 先協助 EE 檢查線路圖</h3>
+            <p>先處理重複檢查與可能異常，再由工程師依設計意圖做最後判斷。</p>
           </div>
           <span class="journal-note-arrow" aria-hidden="true">&rarr;</span>
-        </article>
+        </a>
       </div>
+    </section>
+
+    <section class="journal-empty-category" id="reflections" aria-labelledby="reflectionsTitle">
+      <p class="journal-kicker">Personal reflections</p>
+      <h2 id="reflectionsTitle">個人反思</h2>
+      <p>目前這一批 LinkedIn 貼文沒有歸入個人反思。之後有相關內容時，會依文章核心自動放在這裡。</p>
     </section>
 
     <footer class="journal-footer">
