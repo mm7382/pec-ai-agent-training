@@ -1369,10 +1369,36 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.lesson-update-section--priority {
+  margin-top: 0;
+  padding: 18px;
+  border: 1px solid var(--home-line);
+  border-radius: 0;
+  background: var(--home-soft);
+}
+
+.lesson-update-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.lesson-update-heading span {
+  color: var(--home-muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
 .lesson-update-section h3 {
   margin: 0 0 8px;
-  color: #9bd23c;
+  color: var(--home-ink);
   font-size: 15px;
+}
+
+.lesson-update-heading h3 {
+  margin: 0;
 }
 
 .recent-update-list {
@@ -1532,16 +1558,25 @@ h3 {
 }
 
 .lesson-update-list .recent-update-item {
-  background: linear-gradient(90deg, rgba(184, 236, 114, 0.08), transparent 74%);
+  background: transparent;
 }
 
 .lesson-update-list .recent-update-item::before {
-  background: #9bd23c;
-  box-shadow: 0 0 14px rgba(155, 210, 60, 0.45);
+  background: var(--home-accent);
+  box-shadow: none;
 }
 
 .lesson-update-list .recent-update-item span {
-  color: #aebd9d;
+  color: var(--home-muted);
+}
+
+.lesson-update-list .recent-update-item a,
+.lesson-update-list .recent-update-item strong {
+  color: var(--home-ink);
+}
+
+.lesson-update-list .recent-update-item p {
+  color: var(--home-muted);
 }
 
 .recent-update-item a {
@@ -2117,6 +2152,15 @@ h3 {
   .left-rail {
     display: flex;
     flex-direction: column;
+  }
+
+  .left-rail {
+    display: contents;
+  }
+
+  .lesson-update-section--priority {
+    order: -20;
+    margin: 0 14px;
   }
 
   .focus-panel {
