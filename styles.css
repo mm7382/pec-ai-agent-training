@@ -141,6 +141,35 @@ button {
   background: var(--home-ink);
 }
 
+/* Keep the brand and navigation in separate layout columns before mobile. */
+@media (max-width: 1180px) and (min-width: 761px) {
+  .personal-home-page .topbar {
+    display: grid;
+    grid-template-columns: minmax(190px, 1fr) auto;
+    justify-content: initial;
+    padding-inline: clamp(24px, 4vw, 56px);
+  }
+
+  .personal-home-page .brand {
+    position: static;
+    min-width: 0;
+  }
+
+  .home-nav-links {
+    justify-self: end;
+    gap: clamp(18px, 2.8vw, 34px);
+  }
+
+  .home-nav-links a {
+    font-size: 16px;
+  }
+
+  .home-nav-links a[aria-current="page"]::after,
+  .home-nav-links a:hover::after {
+    bottom: -33px;
+  }
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
