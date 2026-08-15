@@ -369,6 +369,47 @@ button {
   line-height: 1.68;
 }
 
+.home-sharing-note {
+  max-width: 520px;
+  margin-top: 22px;
+}
+
+.home-sharing-note p {
+  margin: 0;
+}
+
+.home-landing p.home-sharing-quote {
+  color: var(--home-ink);
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.home-landing p.home-sharing-quote-translation {
+  margin-top: 4px;
+  color: var(--home-accent);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-landing p.home-sharing-detail {
+  margin-top: 12px;
+  color: var(--home-muted);
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.65;
+}
+
+.home-landing p.home-sharing-translation {
+  margin-top: 4px;
+  color: var(--home-muted);
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 1.5;
+}
+
 .home-landing-actions,
 .home-text-links {
   display: flex;
