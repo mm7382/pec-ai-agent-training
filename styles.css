@@ -371,7 +371,7 @@ button {
 
 .home-sharing-note {
   max-width: 520px;
-  margin-top: 22px;
+  margin-top: 0;
 }
 
 .home-sharing-note p {
@@ -381,21 +381,21 @@ button {
 .home-landing p.home-sharing-quote {
   color: var(--home-ink);
   font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
-  font-size: 18px;
+  font-size: clamp(32px, 3.2vw, 48px);
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.16;
 }
 
 .home-landing p.home-sharing-quote-translation {
-  margin-top: 4px;
+  margin-top: 10px;
   color: var(--home-accent);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
 
 .home-landing p.home-sharing-detail {
-  margin-top: 12px;
+  margin-top: 20px;
   color: var(--home-muted);
   font-size: 14px;
   font-weight: 450;
@@ -408,6 +408,15 @@ button {
   font-size: 12px;
   font-weight: 450;
   line-height: 1.5;
+}
+
+body.personal-home-page > .mal-privacy-notice {
+  margin-top: 0;
+  border-top-color: var(--home-line);
+  background: var(--home-paper);
+  color: var(--home-muted);
+  opacity: 1;
+  padding: 16px 22px 26px;
 }
 
 .home-landing-actions,
@@ -2068,6 +2077,25 @@ h3 {
     max-width: 12.5em;
     font-size: clamp(31px, 8.4vw, 46px);
     line-height: 1.16;
+  }
+
+  body.personal-home-page .home-landing p.home-sharing-quote {
+    font-size: clamp(29px, 8vw, 38px);
+    line-height: 1.2;
+  }
+
+  body.personal-home-page .home-landing p.home-sharing-quote-translation {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  body.personal-home-page .home-landing p.home-sharing-detail {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
+  body.personal-home-page .home-landing p.home-sharing-translation {
+    font-size: 13px;
   }
 
   .home-landing p:not(.section-label) {

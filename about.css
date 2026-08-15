@@ -153,6 +153,41 @@ body.about-page {
   line-height: 1.7;
 }
 
+.about-principle {
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid var(--about-line);
+}
+
+.about-principle p {
+  margin: 0;
+}
+
+.about-background .about-principle-quote {
+  color: var(--about-ink);
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.about-background .about-principle-translation {
+  margin-top: 8px;
+  color: var(--about-olive);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.about-background .about-principle-detail {
+  margin-top: 18px;
+}
+
+.about-background .about-principle-detail-translation {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 .about-work-list {
   margin-top: 12px;
 }
@@ -314,6 +349,15 @@ body.about-page {
   .about-background p {
     margin-top: 14px;
     font-size: 16px;
+  }
+
+  .about-principle {
+    margin-top: 26px;
+    padding-top: 20px;
+  }
+
+  .about-background .about-principle-quote {
+    font-size: 19px;
   }
 
   .about-work-list {
