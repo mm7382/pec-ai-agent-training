@@ -1,6 +1,6 @@
 {
   "siteTitle": "Michael AI Agent Lab",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-18T10:30:00+08:00",
   "duplicateHidden": [
     {
       "title": "Agent 自我蒸餾、Skill 化與定期自動化",
@@ -19,6 +19,24 @@
     "設計與輸出工作流"
   ],
   "items": [
+    {
+      "id": "claude-code-hooks-practice",
+      "title": "Claude Code Hooks：讓規則真的發生",
+      "category": "Agent 系統架構與可靠性",
+      "level": "實作",
+      "summary": "把 Claude Code 與 Codex 的 Hook 拆成事件、範圍、處理與停止規則，整理 15 個安全可落地的情境，讓常被遺忘的邊界變成可驗證的工作流。",
+      "tags": [
+        "Claude Code",
+        "Codex",
+        "Hooks",
+        "Agent Workflow",
+        "Safety",
+        "Verification"
+      ],
+      "url": "./pec-training/claude-code-hooks-practice.html",
+      "updatedAt": "2026-08-18T10:30:00+08:00",
+      "searchText": "Claude Code Hooks：讓規則真的發生 Michael Agent Lab Hook 實戰 Claude Code Codex Agent Workflow 安全 驗證 停止規則 Event Matcher Handler Stop rule 15 個常用情境 SessionStart UserPromptSubmit PreToolUse PostToolUse Stop PreCompact SubagentStart SubagentStop 危險 Git 指令 秘密檔案 全域設定 UI 手機可讀性 公開內容來源檢查 發布前人工關卡。"
+    },
     {
       "id": "claude-code-output-style",
       "title": "Claude Code Output Style：讓 AI 用你讀得懂的方式回報",
