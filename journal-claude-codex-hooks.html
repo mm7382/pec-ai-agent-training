@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>讓規則真的發生：Claude Code 與 Codex Hooks - Journal</title>
+  <meta name="description" content="Hook 把反覆提醒 Agent 的工作，改成固定時機、固定範圍、固定回應的工作規則。">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./journal-article.css?v=20260824-hooks">
+  <script src="./site-config.js"></script>
+</head>
+<body class="journal-article-page">
+  <main class="journal-article-shell">
+    <a class="journal-back" href="./journal.html">&larr; 回到學習日誌 Back to Journal</a>
+    <header class="journal-article-header">
+      <div class="journal-article-meta"><span>工具實驗 / Tool Experiment</span><time datetime="2026-08-24">2026.08.24</time></div>
+      <h1>讓規則真的發生：Claude Code 與 Codex Hooks<span class="journal-bilingual-title" lang="en">Making Rules Happen: Claude Code and Codex Hooks</span></h1>
+      <p class="journal-article-lede">真正有用的，不是把規則寫得越長越好，而是把規則放在對的時機。<span class="journal-intro-en" lang="en">The useful lesson is not to write longer rules. It is to put a small rule at the right moment.</span></p>
+    </header>
+    <figure class="journal-storyboard">
+      <img src="./assets/journal/hooks-storyboard.webp" alt="筆記本工作流、Hook 四個元件與安全實作情境的三段視覺">
+      <figcaption>
+        <span>01 把規則放在正確時機<small lang="en">Put the rule at the right moment</small></span>
+        <span>02 Event、Matcher、Handler、Stop rule<small lang="en">Four parts of a Hook</small></span>
+        <span>03 從窄範圍開始驗證<small lang="en">Start narrow and verify</small></span>
+      </figcaption>
+    </figure>
+    <article class="journal-article-body">
+      <span class="journal-language-label">中文版 Chinese version</span>
+      <h2>提醒不一定可靠</h2>
+      <p>Agent 可能忘記先讀專案規則，也可能在改完檔案後忘記驗證；遇到危險的 Git 指令，單靠對話提醒也不一定可靠。Hook 的價值，就是把這些提醒變成固定時機、固定範圍、固定回應的工作規則。</p>
+      <h2>一個 Hook 先回答四個問題</h2>
+      <ol>
+        <li><strong>Event</strong>：什麼時候觸發？例如 SessionStart、PreToolUse、PostToolUse 或 Stop。</li>
+        <li><strong>Matcher</strong>：哪些情況才執行？例如只匹配 Bash，或只在 Edit／Write 後處理。</li>
+        <li><strong>Handler</strong>：要檢查什麼，或補充什麼上下文？</li>
+        <li><strong>Stop rule</strong>：什麼時候放行、拒絕，或交給人判斷？</li>
+      </ol>
+      <p>這四個元件讓自動化變得比較可預測。規則被觸發時就執行，不必期待模型剛好記得；Matcher 把範圍縮小，避免每個動作都被慢檢查拖住；Stop rule 則防止自動化變成無限循環。</p>
+      <h2>從安全的窄範圍開始</h2>
+      <p>我整理了 15 個可實作的情境，從啟動時的專案範圍校正、隱私提醒，到工具使用前的危險 Git 指令攔截，再到改檔後的最小驗證與公開內容品質檢查。最先值得嘗試的通常不是複雜的自動修復，而是兩種窄範圍 Hook：</p>
+      <ul>
+        <li>在 PreToolUse／Bash 時，攔截 <code>git reset --hard</code>、強制 push 或破壞性清理，交回人工確認。</li>
+        <li>在 Stop 時，檢查本輪修改的公開內容是否保留來源、去除敏感資料，並完成基本版面驗證。</li>
+      </ul>
+      <div class="journal-callout"><p>Hook 不是讓 Agent 自動做更多事，而是讓它在不該忘記的地方更穩定地停下來、檢查，或把決定交還給人。</p></div>
+      <h2>Claude Code 與 Codex 不能照抄設定</h2>
+      <p>兩者的概念相近，但設定方式與支援能力不能直接照抄。實作時，我會先查各自的官方文件，再以本機、無外部網路的 command handler 開始；既有設定保留，新的 Hook 先用模擬輸入驗證，再由人審閱與信任。</p>
+      <p>從一個窄 Matcher 開始，通常比一次建立一整套規則更容易看出價值。</p>
+      <section class="journal-english" lang="en" aria-label="English version">
+        <span class="journal-language-label">English version</span>
+        <h2>Reminders Are Not Always Reliable</h2>
+        <p>An agent may forget to read project instructions, skip a check after editing a file, or run a risky command even after a reminder. A Hook turns that reminder into a rule with a fixed event, scope, response, and stop condition.</p>
+        <h2>Four Questions for Every Hook</h2>
+        <ol>
+          <li><strong>Event:</strong> What triggers it, such as SessionStart, PreToolUse, PostToolUse, or Stop?</li>
+          <li><strong>Matcher:</strong> Which cases should run, such as Bash or Edit／Write?</li>
+          <li><strong>Handler:</strong> What should it check or add to the context?</li>
+          <li><strong>Stop rule:</strong> When should it allow, deny, or return the decision to a person?</li>
+        </ol>
+        <p>These four parts make automation more predictable. The rule runs when the event happens instead of relying on the model to remember. A narrow matcher prevents slow checks from running everywhere. A stop rule keeps automation from turning into an endless loop.</p>
+        <h2>Start with a Safe, Narrow Boundary</h2>
+        <p>I organized 15 practical situations, from startup context checks and privacy reminders to risky Git command blocking, post-edit verification, and a human gate before public changes. I would start with one narrow Hook, such as blocking destructive Bash commands or checking public content at the end of a task.</p>
+        <h2>Claude Code and Codex Are Not Interchangeable</h2>
+        <p>They share the same idea, but their settings and supported handlers are different. Read the current official documentation for each tool, keep the handler local, test it with sample input, and have a person review and trust the change.</p>
+        <p>Hooks are not mainly about making agents do more. They make agents stop, verify, and return important decisions to people at the right time.</p>
+      </section>
+      <div class="journal-source"><div class="journal-tags"><span>Claude Code</span><span>Codex</span><span>Hooks</span><span>Agent Workflow</span><span>Safety</span></div></div>
+    </article>
+  </main>
+  <script src="./tutorial-gate.js?v=20260813-journal"></script>
+</body>
+</html>
