@@ -1,6 +1,6 @@
 {
   "siteTitle": "Michael AI Agent Lab",
-  "updatedAt": "2026-08-18T10:30:00+08:00",
+  "updatedAt": "2026-08-27T09:00:00+08:00",
   "duplicateHidden": [
     {
       "title": "Agent 自我蒸餾、Skill 化與定期自動化",
@@ -19,6 +19,17 @@
     "設計與輸出工作流"
   ],
   "items": [
+    {
+      "id": "chatgpt-chrome-browser-workflow",
+      "title": "把瀏覽器工作交給 Agent：ChatGPT Chrome 實作",
+      "category": "工具選型與上手",
+      "level": "實作",
+      "summary": "分清楚正式 App、Chrome 擴充功能與內建瀏覽器的使用情境，從跨頁整理與草稿工作流開始，建立每一步都保留人工核准權的瀏覽器協作方式。",
+      "tags": ["ChatGPT", "Chrome", "Browser Agent", "Workflow", "Safety", "Automation"],
+      "url": "./pec-training/chatgpt-chrome-browser-workflow.html",
+      "updatedAt": "2026-08-27T09:00:00+08:00",
+      "searchText": "把瀏覽器工作交給 Agent ChatGPT Chrome 實作 Browser workflow Agent Chrome Profile 已登入 分頁 擴充功能 工具選型 正式 App API Chrome extension Built-in browser 瀏覽器自動化 跨網站整理 草稿 人工核准 資料安全 不可逆動作 試算表 比較表 工作 Profile 官方擴充功能"
+    },
     {
       "id": "claude-code-hooks-practice",
       "title": "Claude Code Hooks：讓規則真的發生",
