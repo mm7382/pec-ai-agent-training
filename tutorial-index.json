@@ -25,10 +25,17 @@
       "category": "工具選型與上手",
       "level": "實作",
       "summary": "分清楚正式 App、Chrome 擴充功能與內建瀏覽器的使用情境，從跨頁整理與草稿工作流開始，建立每一步都保留人工核准權的瀏覽器協作方式。",
-      "tags": ["ChatGPT", "Chrome", "Browser Agent", "Workflow", "Safety", "Automation"],
+      "tags": [
+        "ChatGPT",
+        "Chrome",
+        "Browser Agent",
+        "Workflow",
+        "Safety",
+        "Automation"
+      ],
       "url": "./pec-training/chatgpt-chrome-browser-workflow.html",
       "updatedAt": "2026-08-27T09:00:00+08:00",
-      "searchText": "把瀏覽器工作交給 Agent ChatGPT Chrome 實作 Browser workflow Agent Chrome Profile 已登入 分頁 擴充功能 工具選型 正式 App API Chrome extension Built-in browser 瀏覽器自動化 跨網站整理 草稿 人工核准 資料安全 不可逆動作 試算表 比較表 工作 Profile 官方擴充功能"
+      "searchText": "把瀏覽器工作交給 Agent：ChatGPT Chrome 實作 - Michael Agent Lab Michael Agent Lab 公開教學・2026.08.27 Browser workflow / agent 把瀏覽器裡的 雜事，交給 Agent。 當工作需要沿用已登入的網站、開著的分頁與瀏覽器擴充功能時，ChatGPT in Chrome 能協助完成查找、整理與跨頁準備。真正重要的不是讓它代替你按下所有按鈕，而是把工作切在正確的人工關卡之前。 核心原則： 讓 Agent 蒐集、比對、填寫草稿；寄送、發布、刪除、付款與對外承諾，永遠停在最後確認畫面。 先定義任務，再決定它可以走到哪一步。 1 Prepare 帳號與範圍 2 Research 跨頁蒐集 3 Draft 整理成草稿 4 Approve 人工最後確認 沿用現有環境 適合需要既有 Chrome Profile、登入狀態、開啟分頁或已安裝擴充功能的任務。 跨頁協作 把查資料、比較內容、建立文件與準備草稿拆成可檢視的步驟。 權限先於效率 網站存取、上傳下載與敏感動作都要逐次確認；不要把帳密貼進對話。 Decision map 先選對入口， 再談自動化。 三種瀏覽器工作方式的差別，不在誰比較聰明，而在它使用哪一個瀏覽器環境、能否沿用既有登入狀態，以及你希望隔離到什麼程度。 01 / Connected app 有正式 App 或 API 若服務已有官方 App、Connector 或 API，優先使用結構化連接。資料範圍較清楚，也比模擬點擊更容易維護。 適合： 固定資料查詢、可重複的讀寫流程、需要權限與紀錄的工作。 02 / Chrome extension 要沿用現在的 Chrome 當任務需要你已登入的帳號、正在開的網站、現有分頁或 Chrome 擴充功能時，使用 Chrome 擴充功能較自然。 適合： 跨網站查找、彙整、填寫草稿，以及沒有正式整合入口的網頁工作。 03 / Built-in browser 要隔離一個任務 ChatGPT 桌面 App 的內建瀏覽器有自己的瀏覽狀態。需要本機測試、公開資料查找，或想和日常 Chrome 分開時較適合。 適合： 獨立研究、測試流程、想降低與私人分頁互相干擾的任務。 Two workflows 先從「整理」開始， 不要從「送出」開始。 第一批任務應可回復、可檢查、資料範圍明確。下面兩個模板把 Agent 的工作停在草稿與待核對狀態。 Workflow 01 / Document to sheet 把附件整理成可核對的表格 上傳一組你有權處理、且不含敏感資料的文件。先要求建立欄位、標註缺漏與提供摘要，不要要求直接寄給任何人。 請把這些文件整理成一份試算表草稿。 欄位：日期、來源、項目、金額、備註、待人工確認。 遇到看不清楚或無法判斷的內容請標記「待確認」，不要自行補值。 完成後停在試算表畫面，不要分享、寄送或下載檔案。 Workflow 02 / Cross-site research 跨網站做比較，先停在報告草稿 讓 Agent 蒐集條件、建立比較表與暫定行程。所有通知、預約、邀請或訊息都只建草稿，最後一個送出動作必須由你完成。 請在指定網站蒐集符合條件的三個選項，整理成比較表：費用、地點、可用時間、限制與來源連結。 再建立一份可編輯的行程草稿與通知草稿。 不要預約、不要寄送、不要發布；完成後列出需要我確認的資訊。 Setup 四步開始， 先把環境切乾淨。 功能可用性會依方案、地區、裝置與工作區設定而變動。安裝前先確認目前帳號與組織規範允許的範圍。 01 建立工作 Profile 把需要交給 Agent 的網站放在獨立 Chrome Profile。不要混用私人信箱、私訊、金融服務與工作帳號。 02 安裝官方擴充功能 只從官方 Chrome Web Store 頁面安裝，並確認開發者是 OpenAI。避免名稱相近的第三方版本。 03 先開低風險任務 從公開資料、整理草稿或網站測試開始。第一次存取新網站時，仔細看帳號、網址與授權提示。 04 用最小範圍驗收 確認它能看見正確分頁、能建立草稿，也能在最後一步停住，再逐步增加任務複雜度。 Safety boundary 效率要往前， 核准權要留在你手上。 瀏覽器 Agent 接觸的是你正在使用的數位環境。它能節省切換與整理時間，也因此需要比一般聊天更明確的資料與動作邊界。 每次任務前，先寫下四條規則 指定可使用的網站與帳號，不要寫「所有已登入網站」。 說清楚輸入資料、輸出格式與不能碰的內容。 不可逆動作一律寫成「建立草稿後停止」。 完成後要求列出已開啟的分頁、產出的草稿與待你確認事項。 不要交給 Agent 的事 輸入或分享密碼、一次性驗證碼、API key、Cookie、私鑰。 直接發信、發布貼文、送出表單、刪除資料或付款。 未經組織核准就讀取內部系統、客戶資料或受保護文件。 依未核對的搜尋結果做採購、合約、財務或人事決定。 資料說明與延伸閱讀 本頁依公開產品文件整理成瀏覽器工作方法。功能、可用方案與權限提示可能更新，實作前請以官方頁面顯示的內容為準。 OpenAI Help Center: Using the built-in browser in the ChatGPT desktop app ，比較內建瀏覽器與 Chrome 擴充功能的使用情境。 ChatGPT - Chrome Web Store ，官方擴充功能頁面與安裝資訊。 OpenAI Help Center: Using cloud browser in ChatGPT ，說明雲端瀏覽器的授權與網站限制。 公開教學筆記。請依你所在組織的資料分類、帳號與存取政策使用任何瀏覽器自動化功能。"
     },
     {
       "id": "claude-code-hooks-practice",
