@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>API Key 不是設定，是權限 - Journal</title>
+  <meta name="description" content="一次事件後的 30 分鐘 API Key 安全盤點：找出憑證、輪替有疑慮的 key，並設好上限與通知。">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./journal-article.css?v=20260831-api-key-security">
+  <script src="./site-config.js"></script>
+</head>
+<body class="journal-article-page">
+  <main class="journal-article-shell">
+    <a class="journal-back" href="./journal.html">&larr; 回到學習日誌 Back to Journal</a>
+    <header class="journal-article-header">
+      <div class="journal-article-meta"><span>學習札記 / Learning Note</span><time datetime="2026-08-31">2026.08.31</time></div>
+      <h1>API Key 不是設定，是權限<span class="journal-bilingual-title" lang="en">An API Key Is Not a Setting. It Is Access.</span></h1>
+      <p class="journal-article-lede">一次事件後的 30 分鐘安全盤點。<span class="journal-intro-en" lang="en">A practical 30-minute safety review after a security event.</span></p>
+    </header>
+    <figure class="journal-storyboard">
+      <img src="./assets/journal/api-key-security.webp" alt="筆記本檢查清單、實體鑰匙與電腦的安全盤點桌面" width="1672" height="941">
+      <figcaption>
+        <span>01 找出 key 曾出現的地方<small lang="en">Find every place a key may have appeared</small></span>
+        <span>02 有疑慮就撤銷並重建<small lang="en">Revoke and rotate when in doubt</small></span>
+        <span>03 設上限、通知與輪替日期<small lang="en">Set limits, alerts, and a rotation date</small></span>
+      </figcaption>
+    </figure>
+    <article class="journal-article-body">
+      <span class="journal-language-label">中文版 Chinese version</span>
+      <h2>API Key 是權限，不只是設定</h2>
+      <p>看到一則雲端平台的資安事件後，我做了一次很基本但很值得的檢查：網站裡有沒有 key？Git 歷史裡有沒有？本機設定檔有沒有被不小心追蹤？</p>
+      <p>API key 不只是串接服務的一行文字，它更像一把權限鑰匙。若被貼進公開 repository、截圖、文件、前端程式，或留在第三方平台的環境變數裡，就可能被用來呼叫服務、消耗額度，甚至接觸資料。</p>
+      <div class="journal-callout"><p>這篇不是要製造焦慮，而是整理一個每個人都能照著做的第一輪檢查。</p></div>
+      <h2>先做這三件事</h2>
+      <ol>
+        <li><strong>找出 key 曾經出現在哪裡。</strong>分開檢查公開網站原始碼、Git repository 與提交歷史、本機 <code>.env</code>、雲端平台環境變數、筆記與螢幕截圖。不要只看現在的檔案，因為刪掉的 key 仍可能留在 Git 歷史裡。</li>
+        <li><strong>有疑慮就輪替，不要等待「確定外洩」。</strong>若 key 曾放進公開 repo、發生事件的第三方平台，或你無法確認是否被看過，最乾淨的作法是撤銷舊 key、建立新 key，再停用舊的。</li>
+        <li><strong>補上使用上限與通知。</strong>為付費 API 設預算或用量上限、開啟異常通知、停用不需要的自動儲值，並定期看 usage log。它們不能阻止外洩，但能讓損失不要一路放大。</li>
+      </ol>
+      <h2>不要把 key 放在這些地方</h2>
+      <ul>
+        <li>前端 JavaScript、HTML、公開 JSON 或公開設定檔。</li>
+        <li>Git commit、Issue、PR、README、教學文件或聊天室截圖。</li>
+        <li><code>.env.example</code> 裡的真實值，或未被 <code>.gitignore</code> 排除的 <code>.env</code>。</li>
+        <li>可公開存取的筆記、試算表、雲端硬碟或貼文草稿。</li>
+      </ul>
+      <p>真正需要讓瀏覽器使用的服務，應改用後端或 serverless function 代理，由伺服器保管 secret；不要把長期有效的 key 送到使用者瀏覽器。</p>
+      <h2>一份可重複使用的 30 分鐘清單</h2>
+      <ol>
+        <li>列出使用中的 API、token、資料庫與機器人憑證。</li>
+        <li>搜尋目前程式碼與完整 Git 歷史是否有真實 key。</li>
+        <li>確認 <code>.env</code> 未被追蹤，並檢查 <code>.gitignore</code>。</li>
+        <li>檢查所有雲端部署平台中的環境變數。</li>
+        <li>對曾暴露或無法確認的 key 執行撤銷與重建。</li>
+        <li>設好預算、速率限制與異常通知。</li>
+        <li>記錄 key 的用途、負責人與輪替日期，但不要記錄 key 本身。</li>
+      </ol>
+      <h2>把輪替變成日常維護</h2>
+      <p>安全不是把工具全部停掉，而是把「方便」和「權限」分開管理。把 key 當成權限，而不是設定；把輪替當成日常維護，而不是事故後才開始的補救。</p>
+      <section class="journal-english" lang="en" aria-label="English version">
+        <span class="journal-language-label">English version</span>
+        <h2>An API Key Is Access, Not Just Configuration</h2>
+        <p>After reading about a cloud security incident, I did a basic but worthwhile review. Is there a key in the website? In Git history? Is a local configuration file being tracked by mistake?</p>
+        <p>An API key is more than a line of configuration. It is access. If it appears in a public repository, screenshot, document, frontend bundle, or third-party environment setting, someone may be able to call services, spend a budget, or reach data.</p>
+        <h2>Three Things to Do First</h2>
+        <ol>
+          <li><strong>Find every place a key may have appeared.</strong> Check source code, Git history, local <code>.env</code> files, cloud settings, notes, and screenshots.</li>
+          <li><strong>Rotate when there is doubt.</strong> Revoke the old key, create a new one, and disable the old credential. Do not wait for proof of exposure.</li>
+          <li><strong>Set limits and alerts.</strong> Use spending limits, rate limits, and unusual-usage notifications to keep an incident contained.</li>
+        </ol>
+        <h2>Keep Secrets Out of Public Surfaces</h2>
+        <p>Do not put a long-lived key in frontend code, public JSON, commits, documentation, screenshots, or a real-value example file. Use a backend or serverless function as the proxy when a browser needs to call a service.</p>
+        <h2>Make Rotation Routine</h2>
+        <p>Security is not about stopping useful tools. It is about separating convenience from access. Treat key rotation as normal maintenance, not a panic response.</p>
+      </section>
+      <div class="journal-source">
+        來源與延伸閱讀 Sources: <a href="https://status.zeabur.com/incident/1037896" target="_blank" rel="noopener">Zeabur incident notice</a> · <a href="https://zeabur.com/docs/en-US/get-started/best-practices" target="_blank" rel="noopener">Zeabur security best practices</a>
+        <div class="journal-tags"><span>API Security</span><span>Credential Hygiene</span><span>Git</span><span>Cloud Security</span><span>Learning Note</span></div>
+      </div>
+    </article>
+  </main>
+  <script src="./tutorial-gate.js?v=20260813-journal"></script>
+</body>
+</html>
