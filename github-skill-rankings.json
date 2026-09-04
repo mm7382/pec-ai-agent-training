@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T04:55:44.673Z",
+  "generatedAt": "2026-09-04T04:58:24.590Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-08-27",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-27、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-28",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-28、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "thedotmack-claude-mem",
@@ -91,10 +91,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 93043,
-              "forks": 8181,
-              "watchers": 93043,
-              "openIssues": 302,
+              "stars": 93122,
+              "forks": 8184,
+              "watchers": 93122,
+              "openIssues": 309,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -121,8 +121,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-09-03T04:38:22Z",
-              "pushedAt": "2026-09-03T03:00:33Z",
+              "updatedAt": "2026-09-04T04:42:32Z",
+              "pushedAt": "2026-09-03T15:33:32Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -131,8 +131,112 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "wshobson-agents",
+              "id": "zhayujie-cowagent",
               "rank": 2,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "zhayujie/CowAgent",
+              "name": "CowAgent",
+              "owner": "zhayujie",
+              "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
+              "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
+              "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
+              "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+              "contentZh": [
+                "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+                "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "全功能助理型 / 多工具 agent",
+                "用在任務規劃、MCP、技能與知識庫整合 workflow",
+                "想看 agent harness 如何串工具與記憶的人"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "Python",
+              "topics": [
+                "ai",
+                "ai-agent",
+                "ai-agents",
+                "chatgpt-on-wechat",
+                "claude",
+                "claude-code",
+                "codex",
+                "cowagent",
+                "deepseek",
+                "harness",
+                "llm",
+                "mcp",
+                "multi-agent",
+                "openai",
+                "openclaw",
+                "skills"
+              ],
+              "stars": 46776,
+              "forks": 10335,
+              "watchers": 46776,
+              "openIssues": 47,
+              "likes": 45,
+              "hearts": 2,
+              "reactionTotal": 51,
+              "reactionSamples": [
+                {
+                  "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/718",
+                  "likes": 6,
+                  "hearts": 0,
+                  "comments": 32
+                },
+                {
+                  "title": "tool插件 有关的一切都在这个文档里",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/776",
+                  "likes": 9,
+                  "hearts": 0,
+                  "comments": 53
+                },
+                {
+                  "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/8",
+                  "likes": 7,
+                  "hearts": 0,
+                  "comments": 49
+                }
+              ],
+              "updatedAt": "2026-09-04T04:45:25Z",
+              "pushedAt": "2026-09-04T04:25:59Z",
+              "createdAt": "2022-08-07T08:33:41Z",
+              "homepage": "https://cowagent.ai",
+              "url": "https://github.com/zhayujie/CowAgent",
+              "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
+              "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
+              "license": "MIT"
+            },
+            {
+              "id": "wshobson-agents",
+              "rank": 3,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "skill-workflow",
@@ -199,9 +303,9 @@
                 "prompt-engineering",
                 "subagents"
               ],
-              "stars": 39370,
-              "forks": 4195,
-              "watchers": 39370,
+              "stars": 39397,
+              "forks": 4201,
+              "watchers": 39397,
               "openIssues": 2,
               "likes": 22,
               "hearts": 0,
@@ -229,117 +333,13 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-09-03T04:13:59Z",
+              "updatedAt": "2026-09-04T04:00:11Z",
               "pushedAt": "2026-09-01T22:36:25Z",
               "createdAt": "2025-07-24T23:28:14Z",
               "homepage": "https://sethhobson.com",
               "url": "https://github.com/wshobson/agents",
               "downloadUrl": "https://github.com/wshobson/agents/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/wshobson/agents.git",
-              "license": "MIT"
-            },
-            {
-              "id": "zhayujie-cowagent",
-              "rank": 3,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "zhayujie/CowAgent",
-              "name": "CowAgent",
-              "owner": "zhayujie",
-              "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
-              "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
-              "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
-              "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-              "contentZh": [
-                "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-                "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "全功能助理型 / 多工具 agent",
-                "用在任務規劃、MCP、技能與知識庫整合 workflow",
-                "想看 agent harness 如何串工具與記憶的人"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "Python",
-              "topics": [
-                "ai",
-                "ai-agent",
-                "ai-agents",
-                "chatgpt-on-wechat",
-                "claude",
-                "claude-code",
-                "codex",
-                "cowagent",
-                "deepseek",
-                "harness",
-                "llm",
-                "mcp",
-                "multi-agent",
-                "openai",
-                "openclaw",
-                "skills"
-              ],
-              "stars": 46769,
-              "forks": 10336,
-              "watchers": 46769,
-              "openIssues": 44,
-              "likes": 45,
-              "hearts": 2,
-              "reactionTotal": 51,
-              "reactionSamples": [
-                {
-                  "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/718",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 32
-                },
-                {
-                  "title": "tool插件 有关的一切都在这个文档里",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/776",
-                  "likes": 9,
-                  "hearts": 0,
-                  "comments": 53
-                },
-                {
-                  "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/8",
-                  "likes": 7,
-                  "hearts": 0,
-                  "comments": 49
-                }
-              ],
-              "updatedAt": "2026-09-03T04:24:06Z",
-              "pushedAt": "2026-09-03T04:21:53Z",
-              "createdAt": "2022-08-07T08:33:41Z",
-              "homepage": "https://cowagent.ai",
-              "url": "https://github.com/zhayujie/CowAgent",
-              "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
-              "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
               "license": "MIT"
             },
             {
@@ -411,10 +411,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 25439,
-              "forks": 3598,
-              "watchers": 25439,
-              "openIssues": 12,
+              "stars": 25490,
+              "forks": 3603,
+              "watchers": 25490,
+              "openIssues": 11,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -441,7 +441,7 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-09-03T04:26:42Z",
+              "updatedAt": "2026-09-04T04:48:19Z",
               "pushedAt": "2026-08-30T09:46:16Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
@@ -451,7 +451,7 @@
               "license": "MIT"
             },
             {
-              "id": "mxyhi-ok-skills",
+              "id": "mksglu-context-mode",
               "rank": 5,
               "period": "weekly",
               "periodKey": "weekly",
@@ -459,26 +459,28 @@
               "categoryLabel": "GitHub 熱門 Skill / Workflow",
               "categoryShortLabel": "Skill / Workflow",
               "typeLabel": "Skill / Workflow",
-              "fullName": "mxyhi/ok-skills",
-              "name": "ok-skills",
-              "owner": "mxyhi",
-              "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-              "descriptionZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-              "oneLineZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-              "introZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。该存储库当前捆绑了 31 个可重用技能，全部作为该存储库中的顶级技能目录进行维护。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
+              "fullName": "mksglu/context-mode",
+              "name": "context-mode",
+              "owner": "mksglu",
+              "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+              "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
+              "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
               "contentZh": [
-                "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。该存储库当前捆绑了 31 个可重用技能，全部作为该存储库中的顶级技能目录进行维护。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
-                "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
+                "從 topics 來看，它和 antigravity、claude、claude-code、claude-code-hooks、claude-code-plugins、claude-code-skill、codex、codex-cli 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
               ],
               "discussionZh": [
-                "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
+                "「Sorry it's not a bug report」是目前較多人互動的討論之一（👍 2、❤️ 16、留言 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「feat: add opencode MCP agent support」是目前較多人互動的討論之一（❤️ 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Zombie MCP server processes consume 50-60% CPU each after session close」是目前較多人互動的討論之一（👍 2、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
-                "用在技能包、插件、可重用指令與團隊 SOP workflow",
-                "需要標準化交辦規則的 AI coding agent"
+                "容易爆 context 的 AI coding agent",
+                "用在工具輸出壓縮、session memory 與上下文整理 workflow",
+                "處理長 log、長檔案與多步驟任務的人"
               ],
               "useCases": [
                 "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
@@ -494,41 +496,67 @@
                 "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
                 "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
               ],
-              "language": "HTML",
+              "language": "TypeScript",
               "topics": [
-                "agent-skills",
-                "agents-md",
-                "ai",
-                "ai-agents",
+                "antigravity",
+                "claude",
                 "claude-code",
-                "claude-code-skills",
+                "claude-code-hooks",
+                "claude-code-plugins",
+                "claude-code-skill",
                 "codex",
-                "codex-skills",
-                "coding-agents",
-                "cursor",
-                "cursor-skills",
-                "openclaw-skills",
-                "openfang",
-                "pi-mono",
-                "prompt-engineering",
-                "skills"
+                "codex-cli",
+                "context-mode",
+                "copilot",
+                "cursor-plugin",
+                "kiro",
+                "mcp",
+                "mcp-server",
+                "mcp-tools",
+                "openclaw",
+                "opencode",
+                "pi-agent",
+                "skills",
+                "zed-extension"
               ],
-              "stars": 481,
-              "forks": 44,
-              "watchers": 481,
-              "openIssues": 2,
-              "likes": 0,
-              "hearts": 0,
-              "reactionTotal": 0,
-              "reactionSamples": [],
-              "updatedAt": "2026-09-02T03:49:30Z",
-              "pushedAt": "2026-09-02T03:56:43Z",
-              "createdAt": "2026-02-02T07:02:25Z",
-              "homepage": "",
-              "url": "https://github.com/mxyhi/ok-skills",
-              "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
-              "license": "Apache-2.0"
+              "stars": 20342,
+              "forks": 1477,
+              "watchers": 20342,
+              "openIssues": 206,
+              "likes": 24,
+              "hearts": 23,
+              "reactionTotal": 63,
+              "reactionSamples": [
+                {
+                  "title": "Sorry it's not a bug report",
+                  "url": "https://github.com/mksglu/context-mode/issues/403",
+                  "likes": 2,
+                  "hearts": 16,
+                  "comments": 7
+                },
+                {
+                  "title": "feat: add opencode MCP agent support",
+                  "url": "https://github.com/mksglu/context-mode/pull/20",
+                  "likes": 0,
+                  "hearts": 6,
+                  "comments": 2
+                },
+                {
+                  "title": "Zombie MCP server processes consume 50-60% CPU each after session close",
+                  "url": "https://github.com/mksglu/context-mode/issues/311",
+                  "likes": 2,
+                  "hearts": 0,
+                  "comments": 1
+                }
+              ],
+              "updatedAt": "2026-09-04T04:30:08Z",
+              "pushedAt": "2026-09-03T18:05:38Z",
+              "createdAt": "2026-02-23T05:56:28Z",
+              "homepage": "https://context-mode.com",
+              "url": "https://github.com/mksglu/context-mode",
+              "downloadUrl": "https://github.com/mksglu/context-mode/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/mksglu/context-mode.git",
+              "license": "NOASSERTION"
             }
           ]
         },
@@ -536,8 +564,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-08-04",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-04、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-05",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-05、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "thedotmack-claude-mem",
@@ -608,10 +636,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 93043,
-              "forks": 8181,
-              "watchers": 93043,
-              "openIssues": 302,
+              "stars": 93122,
+              "forks": 8184,
+              "watchers": 93122,
+              "openIssues": 309,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -638,8 +666,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-09-03T04:38:22Z",
-              "pushedAt": "2026-09-03T03:00:33Z",
+              "updatedAt": "2026-09-04T04:42:32Z",
+              "pushedAt": "2026-09-03T15:33:32Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -716,9 +744,9 @@
                 "prompt-engineering",
                 "subagents"
               ],
-              "stars": 39370,
-              "forks": 4195,
-              "watchers": 39370,
+              "stars": 39397,
+              "forks": 4201,
+              "watchers": 39397,
               "openIssues": 2,
               "likes": 22,
               "hearts": 0,
@@ -746,7 +774,7 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-09-03T04:13:59Z",
+              "updatedAt": "2026-09-04T04:00:11Z",
               "pushedAt": "2026-09-01T22:36:25Z",
               "createdAt": "2025-07-24T23:28:14Z",
               "homepage": "https://sethhobson.com",
@@ -820,10 +848,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 46769,
-              "forks": 10336,
-              "watchers": 46769,
-              "openIssues": 44,
+              "stars": 46776,
+              "forks": 10335,
+              "watchers": 46776,
+              "openIssues": 47,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -850,8 +878,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-09-03T04:24:06Z",
-              "pushedAt": "2026-09-03T04:21:53Z",
+              "updatedAt": "2026-09-04T04:45:25Z",
+              "pushedAt": "2026-09-04T04:25:59Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -928,10 +956,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 25439,
-              "forks": 3598,
-              "watchers": 25439,
-              "openIssues": 12,
+              "stars": 25490,
+              "forks": 3603,
+              "watchers": 25490,
+              "openIssues": 11,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -958,7 +986,7 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-09-03T04:26:42Z",
+              "updatedAt": "2026-09-04T04:48:19Z",
               "pushedAt": "2026-08-30T09:46:16Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
@@ -968,7 +996,7 @@
               "license": "MIT"
             },
             {
-              "id": "mxyhi-ok-skills",
+              "id": "mksglu-context-mode",
               "rank": 5,
               "period": "monthly",
               "periodKey": "monthly",
@@ -976,26 +1004,28 @@
               "categoryLabel": "GitHub 熱門 Skill / Workflow",
               "categoryShortLabel": "Skill / Workflow",
               "typeLabel": "Skill / Workflow",
-              "fullName": "mxyhi/ok-skills",
-              "name": "ok-skills",
-              "owner": "mxyhi",
-              "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-              "descriptionZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-              "oneLineZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-              "introZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 31 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
+              "fullName": "mksglu/context-mode",
+              "name": "context-mode",
+              "owner": "mksglu",
+              "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+              "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
+              "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
               "contentZh": [
-                "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 31 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
-                "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
+                "從 topics 來看，它和 antigravity、claude、claude-code、claude-code-hooks、claude-code-plugins、claude-code-skill、codex、codex-cli 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
               ],
               "discussionZh": [
-                "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
+                "「Sorry it's not a bug report」是目前較多人互動的討論之一（👍 2、❤️ 16、留言 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「feat: add opencode MCP agent support」是目前較多人互動的討論之一（❤️ 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Zombie MCP server processes consume 50-60% CPU each after session close」是目前較多人互動的討論之一（👍 2、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
-                "用在技能包、插件、可重用指令與團隊 SOP workflow",
-                "需要標準化交辦規則的 AI coding agent"
+                "容易爆 context 的 AI coding agent",
+                "用在工具輸出壓縮、session memory 與上下文整理 workflow",
+                "處理長 log、長檔案與多步驟任務的人"
               ],
               "useCases": [
                 "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
@@ -1011,41 +1041,67 @@
                 "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
                 "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
               ],
-              "language": "HTML",
+              "language": "TypeScript",
               "topics": [
-                "agent-skills",
-                "agents-md",
-                "ai",
-                "ai-agents",
+                "antigravity",
+                "claude",
                 "claude-code",
-                "claude-code-skills",
+                "claude-code-hooks",
+                "claude-code-plugins",
+                "claude-code-skill",
                 "codex",
-                "codex-skills",
-                "coding-agents",
-                "cursor",
-                "cursor-skills",
-                "openclaw-skills",
-                "openfang",
-                "pi-mono",
-                "prompt-engineering",
-                "skills"
+                "codex-cli",
+                "context-mode",
+                "copilot",
+                "cursor-plugin",
+                "kiro",
+                "mcp",
+                "mcp-server",
+                "mcp-tools",
+                "openclaw",
+                "opencode",
+                "pi-agent",
+                "skills",
+                "zed-extension"
               ],
-              "stars": 481,
-              "forks": 44,
-              "watchers": 481,
-              "openIssues": 2,
-              "likes": 0,
-              "hearts": 0,
-              "reactionTotal": 0,
-              "reactionSamples": [],
-              "updatedAt": "2026-09-02T03:49:30Z",
-              "pushedAt": "2026-09-02T03:56:43Z",
-              "createdAt": "2026-02-02T07:02:25Z",
-              "homepage": "",
-              "url": "https://github.com/mxyhi/ok-skills",
-              "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
-              "license": "Apache-2.0"
+              "stars": 20342,
+              "forks": 1477,
+              "watchers": 20342,
+              "openIssues": 206,
+              "likes": 24,
+              "hearts": 23,
+              "reactionTotal": 63,
+              "reactionSamples": [
+                {
+                  "title": "Sorry it's not a bug report",
+                  "url": "https://github.com/mksglu/context-mode/issues/403",
+                  "likes": 2,
+                  "hearts": 16,
+                  "comments": 7
+                },
+                {
+                  "title": "feat: add opencode MCP agent support",
+                  "url": "https://github.com/mksglu/context-mode/pull/20",
+                  "likes": 0,
+                  "hearts": 6,
+                  "comments": 2
+                },
+                {
+                  "title": "Zombie MCP server processes consume 50-60% CPU each after session close",
+                  "url": "https://github.com/mksglu/context-mode/issues/311",
+                  "likes": 2,
+                  "hearts": 0,
+                  "comments": 1
+                }
+              ],
+              "updatedAt": "2026-09-04T04:30:08Z",
+              "pushedAt": "2026-09-03T18:05:38Z",
+              "createdAt": "2026-02-23T05:56:28Z",
+              "homepage": "https://context-mode.com",
+              "url": "https://github.com/mksglu/context-mode",
+              "downloadUrl": "https://github.com/mksglu/context-mode/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/mksglu/context-mode.git",
+              "license": "NOASSERTION"
             }
           ]
         }
@@ -1061,8 +1117,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-08-27",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-27、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-28",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-28、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1133,10 +1189,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 70276,
-              "forks": 8381,
-              "watchers": 70276,
-              "openIssues": 897,
+              "stars": 70382,
+              "forks": 8383,
+              "watchers": 70382,
+              "openIssues": 903,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1163,8 +1219,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-09-03T04:48:29Z",
-              "pushedAt": "2026-09-02T13:40:40Z",
+              "updatedAt": "2026-09-04T04:47:21Z",
+              "pushedAt": "2026-09-03T06:26:27Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1185,11 +1241,11 @@
               "name": "haystack",
               "owner": "deepset-ai",
               "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-              "descriptionZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "oneLineZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
+              "descriptionZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "oneLineZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
               "contentZh": [
-                "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
+                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
                 "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1241,10 +1297,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26400,
-              "forks": 3065,
-              "watchers": 26400,
-              "openIssues": 105,
+              "stars": 26409,
+              "forks": 3074,
+              "watchers": 26409,
+              "openIssues": 107,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1271,8 +1327,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-09-03T02:10:07Z",
-              "pushedAt": "2026-09-02T17:17:42Z",
+              "updatedAt": "2026-09-04T04:13:34Z",
+              "pushedAt": "2026-09-04T02:16:36Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1295,9 +1351,9 @@
               "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
               "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
               "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署 |奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
+              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署|奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
               "contentZh": [
-                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署 |奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
+                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署|奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
                 "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1349,10 +1405,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 47663,
-              "forks": 8412,
-              "watchers": 47663,
-              "openIssues": 764,
+              "stars": 47701,
+              "forks": 8421,
+              "watchers": 47701,
+              "openIssues": 760,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1379,8 +1435,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-09-03T04:28:05Z",
-              "pushedAt": "2026-09-03T02:23:40Z",
+              "updatedAt": "2026-09-04T04:47:59Z",
+              "pushedAt": "2026-09-04T04:04:22Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1413,7 +1469,7 @@
               "discussionZh": [
                 "「[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode」是目前較多人互動的討論之一（👍 112、❤️ 15、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
                 "「[FEATURE] OpenCode plugin — headroom-opencode npm package」是目前較多人互動的討論之一（👍 72、留言 11）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Homebrew support for easier install」是目前較多人互動的討論之一（👍 57、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「Homebrew support for easier install」是目前較多人互動的討論之一（👍 58、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要壓縮大量上下文的 LLM / RAG agent",
@@ -1457,13 +1513,13 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 68640,
-              "forks": 5316,
-              "watchers": 68640,
-              "openIssues": 617,
-              "likes": 393,
+              "stars": 68836,
+              "forks": 5334,
+              "watchers": 68836,
+              "openIssues": 625,
+              "likes": 396,
               "hearts": 25,
-              "reactionTotal": 452,
+              "reactionTotal": 455,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode",
@@ -1482,13 +1538,13 @@
                 {
                   "title": "Homebrew support for easier install",
                   "url": "https://github.com/headroomlabs-ai/headroom/issues/527",
-                  "likes": 57,
+                  "likes": 58,
                   "hearts": 0,
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-09-03T04:51:54Z",
-              "pushedAt": "2026-09-02T16:35:59Z",
+              "updatedAt": "2026-09-04T04:37:20Z",
+              "pushedAt": "2026-09-04T04:06:55Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1511,9 +1567,9 @@
               "description": "AgentiLoop Agent! An Autonomous Agentic Agent for Mac, and exclusive Apple only harnesss. Suppprtd automation, scripting, coding, build anything and more. Powered by 18+ LLM providers across local and cloud platforms.",
               "descriptionZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。",
               "oneLineZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。",
-              "introZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於您的 Agentic AI  Mac 桌面自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 背景故事中的國際象棋和 Agent 背後的技術！代理人！不是一夕之間走在一起的。這是三年來建立代理人工智慧應用程式的結果，借鑒了沿途開發的大約十幾個項目。其中一些是在 ANIE、Game Changer、BattleScript、XCF MCP 伺服器和用戶端、D1F 以及大約八個原始 Swift 套件下發布的。缺少的部分是實現智慧自主時間循環。一旦實現，我就引進了過去三年最優秀的人才。結果是代理！適用於 macOS 26.4.1 或更高版本。最初的目標是建立一個遊標殺手。出現的是更有趣的東西：具有真正腿的代理人工智慧。代理人！僅受您的想像力限制。它可以編寫程式碼，包括 Boss-Man、https://github.com/AgentiLoop/bossman 等視訊遊戲、創建應用程式、透過 AppleScript 在 Pages 中寫詩、生成磁碟映像並將其附加到 GitHub 版本。它可以自動執行 Mac 上的大多數任務。用簡單的英語或您的母語詢問您想要什麼，經過一些初始配置和用戶批准後，它將盡一切努力實現您的願望。代理人！是無情的，並且旨在取悅。 Agent!的所有IP都是原創且開源的。每個 Swift 包依賴項和應用程式本身都...",
+              "introZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於 Mac 桌面的 Agentic AI 自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 中的國際象棋 什麼是 Agent!？一個應用程式。任何人工智慧。全面掌控您的 Mac。代理人！是一款 100% 原生 Swift 6.2 / SwiftUI 應用程序，它將 18 個 LLM 提供者（Claude、GPT、Gemini、Grok、Mistral、DeepSeek、Qwen、Z.ai、BigModel、Hugging Face、OpenRouter、Ollama（雲端和本地端）、vLLM、LM Studio、Coded、Mrs. Intelligence）連接到一個實際執行操作的自主任務循環中：讀取您的代碼庫，修復錯誤，構建 Xcode 項目，提交差異，通過 Accessibility API 驅動任何 Mac 應用程序，以您或 root 身份運行 shell 命令，通過 iMessage 發送結果文本，並回答口頭“代理！”。沒有 NPM，沒有 Electron，沒有訂閱，沒有遙測。攜帶您自己的 API 金鑰、完全本地運行或在 Apple Intelligence 上免費運行。它所依賴的每個 Swift 套件都是由同一作者編寫的。請參閱下面的背景故事。新功能 🚀 v1.1.x — Hardened Harness 版本 · 版本 → 情境壓縮、重建。閾值=模型視窗-保留輸出-緩衝區，由真實輸入令牌驅動。提供者端 9 部分 LLM 摘要取代設備上的 4K 摘要；每次壓縮後都會重新附加開啟的目標、計畫清單和編輯的檔案。過大的工具結果在發射時溢到磁碟，並可透過restoretoolresult復原。 4...",
               "contentZh": [
-                "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於您的 Agentic AI  Mac 桌面自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 背景故事中的國際象棋和 Agent 背後的技術！代理人！不是一夕之間走在一起的。這是三年來建立代理人工智慧應用程式的結果，借鑒了沿途開發的大約十幾個項目。其中一些是在 ANIE、Game Changer、BattleScript、XCF MCP 伺服器和用戶端、D1F 以及大約八個原始 Swift 套件下發布的。缺少的部分是實現智慧自主時間循環。一旦實現，我就引進了過去三年最優秀的人才。結果是代理！適用於 macOS 26.4.1 或更高版本。最初的目標是建立一個遊標殺手。出現的是更有趣的東西：具有真正腿的代理人工智慧。代理人！僅受您的想像力限制。它可以編寫程式碼，包括 Boss-Man、https://github.com/AgentiLoop/bossman 等視訊遊戲、創建應用程式、透過 AppleScript 在 Pages 中寫詩、生成磁碟映像並將其附加到 GitHub 版本。它可以自動執行 Mac 上的大多數任務。用簡單的英語或您的母語詢問您想要什麼，經過一些初始配置和用戶批准後，它將盡一切努力實現您的願望。代理人！是無情的，並且旨在取悅。 Agent!的所有IP都是原創且開源的。每個 Swift 包依賴項和應用程式本身都...",
+                "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於 Mac 桌面的 Agentic AI 自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 中的國際象棋 什麼是 Agent!？一個應用程式。任何人工智慧。全面掌控您的 Mac。代理人！是一款 100% 原生 Swift 6.2 / SwiftUI 應用程序，它將 18 個 LLM 提供者（Claude、GPT、Gemini、Grok、Mistral、DeepSeek、Qwen、Z.ai、BigModel、Hugging Face、OpenRouter、Ollama（雲端和本地端）、vLLM、LM Studio、Coded、Mrs. Intelligence）連接到一個實際執行操作的自主任務循環中：讀取您的代碼庫，修復錯誤，構建 Xcode 項目，提交差異，通過 Accessibility API 驅動任何 Mac 應用程序，以您或 root 身份運行 shell 命令，通過 iMessage 發送結果文本，並回答口頭“代理！”。沒有 NPM，沒有 Electron，沒有訂閱，沒有遙測。攜帶您自己的 API 金鑰、完全本地運行或在 Apple Intelligence 上免費運行。它所依賴的每個 Swift 套件都是由同一作者編寫的。請參閱下面的背景故事。新功能 🚀 v1.1.x — Hardened Harness 版本 · 版本 → 情境壓縮、重建。閾值=模型視窗-保留輸出-緩衝區，由真實輸入令牌驅動。提供者端 9 部分 LLM 摘要取代設備上的 4K 摘要；每次壓縮後都會重新附加開啟的目標、計畫清單和編輯的檔案。過大的工具結果在發射時溢到磁碟，並可透過restoretoolresult復原。 4...",
                 "從 topics 來看，它和 accessibility、agentic-framework、agentic-workflow、ai、ai-agent、apple-intelligence、applescript、automation 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1563,16 +1619,16 @@
                 "xcode",
                 "xpc"
               ],
-              "stars": 589,
+              "stars": 590,
               "forks": 65,
-              "watchers": 589,
+              "watchers": 590,
               "openIssues": 2,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-09-03T00:24:02Z",
-              "pushedAt": "2026-09-02T22:28:16Z",
+              "updatedAt": "2026-09-03T21:43:30Z",
+              "pushedAt": "2026-09-03T21:43:25Z",
               "createdAt": "2026-03-11T20:15:09Z",
               "homepage": "https://agentiloop.ai",
               "url": "https://github.com/AgentiLoop/Agent",
@@ -1586,8 +1642,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-08-04",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-04、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-05",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-05、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1658,10 +1714,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 70276,
-              "forks": 8381,
-              "watchers": 70276,
-              "openIssues": 897,
+              "stars": 70382,
+              "forks": 8383,
+              "watchers": 70382,
+              "openIssues": 903,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1688,8 +1744,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-09-03T04:48:29Z",
-              "pushedAt": "2026-09-02T13:40:40Z",
+              "updatedAt": "2026-09-04T04:47:21Z",
+              "pushedAt": "2026-09-03T06:26:27Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1710,11 +1766,11 @@
               "name": "haystack",
               "owner": "deepset-ai",
               "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-              "descriptionZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "oneLineZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
+              "descriptionZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "oneLineZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
               "contentZh": [
-                "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
+                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 |||:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 持續整合/持續交付 | 文檔 | ✨🎊🎉 請閱讀此處的公告！ 🥳 🎈 🎆 🪅 🎇 🍾 🥂 🎁 🌈 Haystack 是一個開源 AI 編排框架，用於在 Python 中建立可用於生產的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件 功能 Haystack Enterprise...",
                 "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1766,10 +1822,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26400,
-              "forks": 3065,
-              "watchers": 26400,
-              "openIssues": 105,
+              "stars": 26409,
+              "forks": 3074,
+              "watchers": 26409,
+              "openIssues": 107,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1796,8 +1852,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-09-03T02:10:07Z",
-              "pushedAt": "2026-09-02T17:17:42Z",
+              "updatedAt": "2026-09-04T04:13:34Z",
+              "pushedAt": "2026-09-04T02:16:36Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1820,9 +1876,9 @@
               "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
               "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
               "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署 |奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
+              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署|奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
               "contentZh": [
-                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署 |奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
+                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。它在 WebUI、終端或聊天應用程式中運行，並將工具、長期記憶、MCP 整合、模型路由、多代理委託、計劃自動化和 OpenAI 相容 API 組合在一個小型可讀核心中。從這裡開始 |你想... |前往 |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |快速安裝並獲得 CLI 回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |信息工具或安全性 |文件與配置 | | 理解或擴展內部結構 |建築與開發| |部署到雲端或保持奈米機器人作為服務運作 |部署|奈米機器人能做什麼？ nanobot 是一個自架的個人人工智慧agent運行時。它可以： 在瀏覽器 WebUI 或終端機中運行 連接到 Telegram、Discord、Slack、微信、電子郵件、Mattermost 和其他聊天應用程式 使用檔案、shell、Web 搜尋、Web fetch、MCP、cron、圖像生成等工具以及子agent 透過...保存會話歷史記錄和長期內存",
                 "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1874,10 +1930,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 47663,
-              "forks": 8412,
-              "watchers": 47663,
-              "openIssues": 764,
+              "stars": 47701,
+              "forks": 8421,
+              "watchers": 47701,
+              "openIssues": 760,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1904,8 +1960,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-09-03T04:28:05Z",
-              "pushedAt": "2026-09-03T02:23:40Z",
+              "updatedAt": "2026-09-04T04:47:59Z",
+              "pushedAt": "2026-09-04T04:04:22Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1938,7 +1994,7 @@
               "discussionZh": [
                 "「[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode」是目前較多人互動的討論之一（👍 112、❤️ 15、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
                 "「[FEATURE] OpenCode plugin — headroom-opencode npm package」是目前較多人互動的討論之一（👍 72、留言 11）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Homebrew support for easier install」是目前較多人互動的討論之一（👍 57、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「Homebrew support for easier install」是目前較多人互動的討論之一（👍 58、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要壓縮大量上下文的 LLM / RAG agent",
@@ -1982,13 +2038,13 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 68640,
-              "forks": 5316,
-              "watchers": 68640,
-              "openIssues": 617,
-              "likes": 393,
+              "stars": 68836,
+              "forks": 5334,
+              "watchers": 68836,
+              "openIssues": 625,
+              "likes": 396,
               "hearts": 25,
-              "reactionTotal": 452,
+              "reactionTotal": 455,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode",
@@ -2007,13 +2063,13 @@
                 {
                   "title": "Homebrew support for easier install",
                   "url": "https://github.com/headroomlabs-ai/headroom/issues/527",
-                  "likes": 57,
+                  "likes": 58,
                   "hearts": 0,
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-09-03T04:51:54Z",
-              "pushedAt": "2026-09-02T16:35:59Z",
+              "updatedAt": "2026-09-04T04:37:20Z",
+              "pushedAt": "2026-09-04T04:06:55Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -2036,9 +2092,9 @@
               "description": "AgentiLoop Agent! An Autonomous Agentic Agent for Mac, and exclusive Apple only harnesss. Suppprtd automation, scripting, coding, build anything and more. Powered by 18+ LLM providers across local and cloud platforms.",
               "descriptionZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。",
               "oneLineZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。",
-              "introZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於您的 Agentic AI  Mac 桌面自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 背景故事中的國際象棋和 Agent 背後的技術！代理人！不是一夕之間走在一起的。這是三年來建立代理人工智慧應用程式的結果，借鑒了沿途開發的大約十幾個項目。其中一些是在 ANIE、Game Changer、BattleScript、XCF MCP 伺服器和用戶端、D1F 以及大約八個原始 Swift 套件下發布的。缺少的部分是實現智慧自主時間循環。一旦實現，我就引進了過去三年最優秀的人才。結果是代理！適用於 macOS 26.4.1 或更高版本。最初的目標是建立一個遊標殺手。出現的是更有趣的東西：具有真正腿的代理人工智慧。代理人！僅受您的想像力限制。它可以編寫程式碼，包括 Boss-Man、https://github.com/AgentiLoop/bossman 等視訊遊戲、創建應用程式、透過 AppleScript 在 Pages 中寫詩、生成磁碟映像並將其附加到 GitHub 版本。它可以自動執行 Mac 上的大多數任務。用簡單的英語或您的母語詢問您想要什麼，經過一些初始配置和用戶批准後，它將盡一切努力實現您的願望。代理人！是無情的，並且旨在取悅。 Agent!的所有IP都是原創且開源的。每個 Swift 包依賴項和應用程式本身都...",
+              "introZh": "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於 Mac 桌面的 Agentic AI 自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 中的國際象棋 什麼是 Agent!？一個應用程式。任何人工智慧。全面掌控您的 Mac。代理人！是一款 100% 原生 Swift 6.2 / SwiftUI 應用程序，它將 18 個 LLM 提供者（Claude、GPT、Gemini、Grok、Mistral、DeepSeek、Qwen、Z.ai、BigModel、Hugging Face、OpenRouter、Ollama（雲端和本地端）、vLLM、LM Studio、Coded、Mrs. Intelligence）連接到一個實際執行操作的自主任務循環中：讀取您的代碼庫，修復錯誤，構建 Xcode 項目，提交差異，通過 Accessibility API 驅動任何 Mac 應用程序，以您或 root 身份運行 shell 命令，通過 iMessage 發送結果文本，並回答口頭“代理！”。沒有 NPM，沒有 Electron，沒有訂閱，沒有遙測。攜帶您自己的 API 金鑰、完全本地運行或在 Apple Intelligence 上免費運行。它所依賴的每個 Swift 套件都是由同一作者編寫的。請參閱下面的背景故事。新功能 🚀 v1.1.x — Hardened Harness 版本 · 版本 → 情境壓縮、重建。閾值=模型視窗-保留輸出-緩衝區，由真實輸入令牌驅動。提供者端 9 部分 LLM 摘要取代設備上的 4K 摘要；每次壓縮後都會重新附加開啟的目標、計畫清單和編輯的檔案。過大的工具結果在發射時溢到磁碟，並可透過restoretoolresult復原。 4...",
               "contentZh": [
-                "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於您的 Agentic AI  Mac 桌面自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 背景故事中的國際象棋和 Agent 背後的技術！代理人！不是一夕之間走在一起的。這是三年來建立代理人工智慧應用程式的結果，借鑒了沿途開發的大約十幾個項目。其中一些是在 ANIE、Game Changer、BattleScript、XCF MCP 伺服器和用戶端、D1F 以及大約八個原始 Swift 套件下發布的。缺少的部分是實現智慧自主時間循環。一旦實現，我就引進了過去三年最優秀的人才。結果是代理！適用於 macOS 26.4.1 或更高版本。最初的目標是建立一個遊標殺手。出現的是更有趣的東西：具有真正腿的代理人工智慧。代理人！僅受您的想像力限制。它可以編寫程式碼，包括 Boss-Man、https://github.com/AgentiLoop/bossman 等視訊遊戲、創建應用程式、透過 AppleScript 在 Pages 中寫詩、生成磁碟映像並將其附加到 GitHub 版本。它可以自動執行 Mac 上的大多數任務。用簡單的英語或您的母語詢問您想要什麼，經過一些初始配置和用戶批准後，它將盡一切努力實現您的願望。代理人！是無情的，並且旨在取悅。 Agent!的所有IP都是原創且開源的。每個 Swift 包依賴項和應用程式本身都...",
+                "AgentiLoop 代理！適用於 Mac 的自主代理代理，以及 Apple 獨有的安全帶。支援自動化、腳本、編碼、建置等等。由本地和雲端平台上超過 18 位法學碩士提供者提供支援。 🦾 AgentiLoop 代理商！適用於 Mac 桌面的 Agentic AI 自述文件翻譯 English Español Français Deutsch 中文 (簡體) Agent 中的國際象棋 什麼是 Agent!？一個應用程式。任何人工智慧。全面掌控您的 Mac。代理人！是一款 100% 原生 Swift 6.2 / SwiftUI 應用程序，它將 18 個 LLM 提供者（Claude、GPT、Gemini、Grok、Mistral、DeepSeek、Qwen、Z.ai、BigModel、Hugging Face、OpenRouter、Ollama（雲端和本地端）、vLLM、LM Studio、Coded、Mrs. Intelligence）連接到一個實際執行操作的自主任務循環中：讀取您的代碼庫，修復錯誤，構建 Xcode 項目，提交差異，通過 Accessibility API 驅動任何 Mac 應用程序，以您或 root 身份運行 shell 命令，通過 iMessage 發送結果文本，並回答口頭“代理！”。沒有 NPM，沒有 Electron，沒有訂閱，沒有遙測。攜帶您自己的 API 金鑰、完全本地運行或在 Apple Intelligence 上免費運行。它所依賴的每個 Swift 套件都是由同一作者編寫的。請參閱下面的背景故事。新功能 🚀 v1.1.x — Hardened Harness 版本 · 版本 → 情境壓縮、重建。閾值=模型視窗-保留輸出-緩衝區，由真實輸入令牌驅動。提供者端 9 部分 LLM 摘要取代設備上的 4K 摘要；每次壓縮後都會重新附加開啟的目標、計畫清單和編輯的檔案。過大的工具結果在發射時溢到磁碟，並可透過restoretoolresult復原。 4...",
                 "從 topics 來看，它和 accessibility、agentic-framework、agentic-workflow、ai、ai-agent、apple-intelligence、applescript、automation 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -2088,16 +2144,16 @@
                 "xcode",
                 "xpc"
               ],
-              "stars": 589,
+              "stars": 590,
               "forks": 65,
-              "watchers": 589,
+              "watchers": 590,
               "openIssues": 2,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-09-03T00:24:02Z",
-              "pushedAt": "2026-09-02T22:28:16Z",
+              "updatedAt": "2026-09-03T21:43:30Z",
+              "pushedAt": "2026-09-03T21:43:25Z",
               "createdAt": "2026-03-11T20:15:09Z",
               "homepage": "https://agentiloop.ai",
               "url": "https://github.com/AgentiLoop/Agent",
@@ -2115,8 +2171,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-08-27",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-27、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-08-28",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-28、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "thedotmack-claude-mem",
@@ -2187,10 +2243,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 93043,
-          "forks": 8181,
-          "watchers": 93043,
-          "openIssues": 302,
+          "stars": 93122,
+          "forks": 8184,
+          "watchers": 93122,
+          "openIssues": 309,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2217,8 +2273,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-09-03T04:38:22Z",
-          "pushedAt": "2026-09-03T03:00:33Z",
+          "updatedAt": "2026-09-04T04:42:32Z",
+          "pushedAt": "2026-09-03T15:33:32Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2227,8 +2283,112 @@
           "license": "Apache-2.0"
         },
         {
-          "id": "wshobson-agents",
+          "id": "zhayujie-cowagent",
           "rank": 2,
+          "period": "weekly",
+          "periodKey": "weekly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "zhayujie/CowAgent",
+          "name": "CowAgent",
+          "owner": "zhayujie",
+          "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
+          "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
+          "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
+          "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+          "contentZh": [
+            "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+            "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "全功能助理型 / 多工具 agent",
+            "用在任務規劃、MCP、技能與知識庫整合 workflow",
+            "想看 agent harness 如何串工具與記憶的人"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "Python",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "chatgpt-on-wechat",
+            "claude",
+            "claude-code",
+            "codex",
+            "cowagent",
+            "deepseek",
+            "harness",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "openai",
+            "openclaw",
+            "skills"
+          ],
+          "stars": 46776,
+          "forks": 10335,
+          "watchers": 46776,
+          "openIssues": 47,
+          "likes": 45,
+          "hearts": 2,
+          "reactionTotal": 51,
+          "reactionSamples": [
+            {
+              "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
+              "url": "https://github.com/zhayujie/CowAgent/issues/718",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 32
+            },
+            {
+              "title": "tool插件 有关的一切都在这个文档里",
+              "url": "https://github.com/zhayujie/CowAgent/issues/776",
+              "likes": 9,
+              "hearts": 0,
+              "comments": 53
+            },
+            {
+              "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
+              "url": "https://github.com/zhayujie/CowAgent/issues/8",
+              "likes": 7,
+              "hearts": 0,
+              "comments": 49
+            }
+          ],
+          "updatedAt": "2026-09-04T04:45:25Z",
+          "pushedAt": "2026-09-04T04:25:59Z",
+          "createdAt": "2022-08-07T08:33:41Z",
+          "homepage": "https://cowagent.ai",
+          "url": "https://github.com/zhayujie/CowAgent",
+          "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
+          "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
+          "license": "MIT"
+        },
+        {
+          "id": "wshobson-agents",
+          "rank": 3,
           "period": "weekly",
           "periodKey": "weekly",
           "categoryKey": "skill-workflow",
@@ -2295,9 +2455,9 @@
             "prompt-engineering",
             "subagents"
           ],
-          "stars": 39370,
-          "forks": 4195,
-          "watchers": 39370,
+          "stars": 39397,
+          "forks": 4201,
+          "watchers": 39397,
           "openIssues": 2,
           "likes": 22,
           "hearts": 0,
@@ -2325,117 +2485,13 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-09-03T04:13:59Z",
+          "updatedAt": "2026-09-04T04:00:11Z",
           "pushedAt": "2026-09-01T22:36:25Z",
           "createdAt": "2025-07-24T23:28:14Z",
           "homepage": "https://sethhobson.com",
           "url": "https://github.com/wshobson/agents",
           "downloadUrl": "https://github.com/wshobson/agents/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/wshobson/agents.git",
-          "license": "MIT"
-        },
-        {
-          "id": "zhayujie-cowagent",
-          "rank": 3,
-          "period": "weekly",
-          "periodKey": "weekly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "zhayujie/CowAgent",
-          "name": "CowAgent",
-          "owner": "zhayujie",
-          "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
-          "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
-          "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
-          "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-          "contentZh": [
-            "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-            "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "全功能助理型 / 多工具 agent",
-            "用在任務規劃、MCP、技能與知識庫整合 workflow",
-            "想看 agent harness 如何串工具與記憶的人"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "Python",
-          "topics": [
-            "ai",
-            "ai-agent",
-            "ai-agents",
-            "chatgpt-on-wechat",
-            "claude",
-            "claude-code",
-            "codex",
-            "cowagent",
-            "deepseek",
-            "harness",
-            "llm",
-            "mcp",
-            "multi-agent",
-            "openai",
-            "openclaw",
-            "skills"
-          ],
-          "stars": 46769,
-          "forks": 10336,
-          "watchers": 46769,
-          "openIssues": 44,
-          "likes": 45,
-          "hearts": 2,
-          "reactionTotal": 51,
-          "reactionSamples": [
-            {
-              "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
-              "url": "https://github.com/zhayujie/CowAgent/issues/718",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 32
-            },
-            {
-              "title": "tool插件 有关的一切都在这个文档里",
-              "url": "https://github.com/zhayujie/CowAgent/issues/776",
-              "likes": 9,
-              "hearts": 0,
-              "comments": 53
-            },
-            {
-              "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
-              "url": "https://github.com/zhayujie/CowAgent/issues/8",
-              "likes": 7,
-              "hearts": 0,
-              "comments": 49
-            }
-          ],
-          "updatedAt": "2026-09-03T04:24:06Z",
-          "pushedAt": "2026-09-03T04:21:53Z",
-          "createdAt": "2022-08-07T08:33:41Z",
-          "homepage": "https://cowagent.ai",
-          "url": "https://github.com/zhayujie/CowAgent",
-          "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
-          "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
           "license": "MIT"
         },
         {
@@ -2507,10 +2563,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 25439,
-          "forks": 3598,
-          "watchers": 25439,
-          "openIssues": 12,
+          "stars": 25490,
+          "forks": 3603,
+          "watchers": 25490,
+          "openIssues": 11,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -2537,7 +2593,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-09-03T04:26:42Z",
+          "updatedAt": "2026-09-04T04:48:19Z",
           "pushedAt": "2026-08-30T09:46:16Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
@@ -2547,7 +2603,7 @@
           "license": "MIT"
         },
         {
-          "id": "mxyhi-ok-skills",
+          "id": "mksglu-context-mode",
           "rank": 5,
           "period": "weekly",
           "periodKey": "weekly",
@@ -2555,26 +2611,28 @@
           "categoryLabel": "GitHub 熱門 Skill / Workflow",
           "categoryShortLabel": "Skill / Workflow",
           "typeLabel": "Skill / Workflow",
-          "fullName": "mxyhi/ok-skills",
-          "name": "ok-skills",
-          "owner": "mxyhi",
-          "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-          "descriptionZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-          "oneLineZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-          "introZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。该存储库当前捆绑了 31 个可重用技能，全部作为该存储库中的顶级技能目录进行维护。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
+          "fullName": "mksglu/context-mode",
+          "name": "context-mode",
+          "owner": "mksglu",
+          "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+          "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
+          "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
           "contentZh": [
-            "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。该存储库当前捆绑了 31 个可重用技能，全部作为该存储库中的顶级技能目录进行维护。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
-            "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
+            "從 topics 來看，它和 antigravity、claude、claude-code、claude-code-hooks、claude-code-plugins、claude-code-skill、codex、codex-cli 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
           ],
           "discussionZh": [
-            "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
+            "「Sorry it's not a bug report」是目前較多人互動的討論之一（👍 2、❤️ 16、留言 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「feat: add opencode MCP agent support」是目前較多人互動的討論之一（❤️ 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Zombie MCP server processes consume 50-60% CPU each after session close」是目前較多人互動的討論之一（👍 2、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
           ],
           "audience": [
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
-            "用在技能包、插件、可重用指令與團隊 SOP workflow",
-            "需要標準化交辦規則的 AI coding agent"
+            "容易爆 context 的 AI coding agent",
+            "用在工具輸出壓縮、session memory 與上下文整理 workflow",
+            "處理長 log、長檔案與多步驟任務的人"
           ],
           "useCases": [
             "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
@@ -2590,41 +2648,67 @@
             "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
             "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
           ],
-          "language": "HTML",
+          "language": "TypeScript",
           "topics": [
-            "agent-skills",
-            "agents-md",
-            "ai",
-            "ai-agents",
+            "antigravity",
+            "claude",
             "claude-code",
-            "claude-code-skills",
+            "claude-code-hooks",
+            "claude-code-plugins",
+            "claude-code-skill",
             "codex",
-            "codex-skills",
-            "coding-agents",
-            "cursor",
-            "cursor-skills",
-            "openclaw-skills",
-            "openfang",
-            "pi-mono",
-            "prompt-engineering",
-            "skills"
+            "codex-cli",
+            "context-mode",
+            "copilot",
+            "cursor-plugin",
+            "kiro",
+            "mcp",
+            "mcp-server",
+            "mcp-tools",
+            "openclaw",
+            "opencode",
+            "pi-agent",
+            "skills",
+            "zed-extension"
           ],
-          "stars": 481,
-          "forks": 44,
-          "watchers": 481,
-          "openIssues": 2,
-          "likes": 0,
-          "hearts": 0,
-          "reactionTotal": 0,
-          "reactionSamples": [],
-          "updatedAt": "2026-09-02T03:49:30Z",
-          "pushedAt": "2026-09-02T03:56:43Z",
-          "createdAt": "2026-02-02T07:02:25Z",
-          "homepage": "",
-          "url": "https://github.com/mxyhi/ok-skills",
-          "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
-          "license": "Apache-2.0"
+          "stars": 20342,
+          "forks": 1477,
+          "watchers": 20342,
+          "openIssues": 206,
+          "likes": 24,
+          "hearts": 23,
+          "reactionTotal": 63,
+          "reactionSamples": [
+            {
+              "title": "Sorry it's not a bug report",
+              "url": "https://github.com/mksglu/context-mode/issues/403",
+              "likes": 2,
+              "hearts": 16,
+              "comments": 7
+            },
+            {
+              "title": "feat: add opencode MCP agent support",
+              "url": "https://github.com/mksglu/context-mode/pull/20",
+              "likes": 0,
+              "hearts": 6,
+              "comments": 2
+            },
+            {
+              "title": "Zombie MCP server processes consume 50-60% CPU each after session close",
+              "url": "https://github.com/mksglu/context-mode/issues/311",
+              "likes": 2,
+              "hearts": 0,
+              "comments": 1
+            }
+          ],
+          "updatedAt": "2026-09-04T04:30:08Z",
+          "pushedAt": "2026-09-03T18:05:38Z",
+          "createdAt": "2026-02-23T05:56:28Z",
+          "homepage": "https://context-mode.com",
+          "url": "https://github.com/mksglu/context-mode",
+          "downloadUrl": "https://github.com/mksglu/context-mode/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/mksglu/context-mode.git",
+          "license": "NOASSERTION"
         }
       ]
     },
@@ -2632,8 +2716,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-08-04",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-04、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-08-05",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-05、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "thedotmack-claude-mem",
@@ -2704,10 +2788,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 93043,
-          "forks": 8181,
-          "watchers": 93043,
-          "openIssues": 302,
+          "stars": 93122,
+          "forks": 8184,
+          "watchers": 93122,
+          "openIssues": 309,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2734,8 +2818,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-09-03T04:38:22Z",
-          "pushedAt": "2026-09-03T03:00:33Z",
+          "updatedAt": "2026-09-04T04:42:32Z",
+          "pushedAt": "2026-09-03T15:33:32Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2812,9 +2896,9 @@
             "prompt-engineering",
             "subagents"
           ],
-          "stars": 39370,
-          "forks": 4195,
-          "watchers": 39370,
+          "stars": 39397,
+          "forks": 4201,
+          "watchers": 39397,
           "openIssues": 2,
           "likes": 22,
           "hearts": 0,
@@ -2842,7 +2926,7 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-09-03T04:13:59Z",
+          "updatedAt": "2026-09-04T04:00:11Z",
           "pushedAt": "2026-09-01T22:36:25Z",
           "createdAt": "2025-07-24T23:28:14Z",
           "homepage": "https://sethhobson.com",
@@ -2916,10 +3000,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 46769,
-          "forks": 10336,
-          "watchers": 46769,
-          "openIssues": 44,
+          "stars": 46776,
+          "forks": 10335,
+          "watchers": 46776,
+          "openIssues": 47,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2946,8 +3030,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-09-03T04:24:06Z",
-          "pushedAt": "2026-09-03T04:21:53Z",
+          "updatedAt": "2026-09-04T04:45:25Z",
+          "pushedAt": "2026-09-04T04:25:59Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -3024,10 +3108,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 25439,
-          "forks": 3598,
-          "watchers": 25439,
-          "openIssues": 12,
+          "stars": 25490,
+          "forks": 3603,
+          "watchers": 25490,
+          "openIssues": 11,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -3054,7 +3138,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-09-03T04:26:42Z",
+          "updatedAt": "2026-09-04T04:48:19Z",
           "pushedAt": "2026-08-30T09:46:16Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
@@ -3064,7 +3148,7 @@
           "license": "MIT"
         },
         {
-          "id": "mxyhi-ok-skills",
+          "id": "mksglu-context-mode",
           "rank": 5,
           "period": "monthly",
           "periodKey": "monthly",
@@ -3072,26 +3156,28 @@
           "categoryLabel": "GitHub 熱門 Skill / Workflow",
           "categoryShortLabel": "Skill / Workflow",
           "typeLabel": "Skill / Workflow",
-          "fullName": "mxyhi/ok-skills",
-          "name": "ok-skills",
-          "owner": "mxyhi",
-          "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-          "descriptionZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-          "oneLineZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。",
-          "introZh": "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 31 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
+          "fullName": "mksglu/context-mode",
+          "name": "context-mode",
+          "owner": "mksglu",
+          "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+          "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
+          "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
           "contentZh": [
-            "為 Codex、Claude Code、Cursor、OpenClaw 和其他 SKILL.md 相容工具精心策劃的 AI 編碼代理技能和 AGENTS.md 手冊。 OK 技能：Codex、Claude Code、Cursor、OpenClaw、Autohand Code 等 AI 編碼代理技能 | 簡體中文 | 繁體中文 | 日本語 | 한국어 |德語 |編碼代理技能和 CLAUDE.md / AGENTS.md 手冊，適用於 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 和其他 SKILL.md 相容工具。此儲存庫目前捆綁了 31 個可重複使用技能，全部作為該儲存庫中的頂級技能目錄進行維護。將其複製到 /.agents/skills/ok-skills 中；裡面的目錄已經匹配 AGENTS.md 驅動的工作流程所需的佈局，並且 CLAUDEAGENTS.md 提供了面向 Claude 代碼的代理劇本。如果您正在尋找 Codex 技能、Claude Code 技能、Cursor 技能、OpenClaw 技能、可重複使用的 CLAUDE.md / AGENTS.md 劇本或實用的 SKILL.md 範例，該儲存庫被設計為既可搜尋又可立即使用。流行的用例：文件查找、瀏覽器自動化、提示工程、規劃工作流程、程式碼庫理解、前端設計、PDF/Word/PPTX/XLSX 創作。此儲存庫適合誰 您使用 Codex、Claude Code、Cursor、OpenClaw、Autohand Code、Trae 或其他 AI 編碼代理，並且想要可重用的技能而不是臨時提示。您維護 CLAUDE.md / AGENTS.md / SKILL.md 工作流程，並需要跨專案工作的可移植指令。您需要經過實戰考驗的文檔查找、瀏覽器自動化技能...",
-            "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
+            "從 topics 來看，它和 antigravity、claude、claude-code、claude-code-hooks、claude-code-plugins、claude-code-skill、codex、codex-cli 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
           ],
           "discussionZh": [
-            "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
+            "「Sorry it's not a bug report」是目前較多人互動的討論之一（👍 2、❤️ 16、留言 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「feat: add opencode MCP agent support」是目前較多人互動的討論之一（❤️ 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Zombie MCP server processes consume 50-60% CPU each after session close」是目前較多人互動的討論之一（👍 2、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
           ],
           "audience": [
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
-            "用在技能包、插件、可重用指令與團隊 SOP workflow",
-            "需要標準化交辦規則的 AI coding agent"
+            "容易爆 context 的 AI coding agent",
+            "用在工具輸出壓縮、session memory 與上下文整理 workflow",
+            "處理長 log、長檔案與多步驟任務的人"
           ],
           "useCases": [
             "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
@@ -3107,41 +3193,67 @@
             "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
             "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
           ],
-          "language": "HTML",
+          "language": "TypeScript",
           "topics": [
-            "agent-skills",
-            "agents-md",
-            "ai",
-            "ai-agents",
+            "antigravity",
+            "claude",
             "claude-code",
-            "claude-code-skills",
+            "claude-code-hooks",
+            "claude-code-plugins",
+            "claude-code-skill",
             "codex",
-            "codex-skills",
-            "coding-agents",
-            "cursor",
-            "cursor-skills",
-            "openclaw-skills",
-            "openfang",
-            "pi-mono",
-            "prompt-engineering",
-            "skills"
+            "codex-cli",
+            "context-mode",
+            "copilot",
+            "cursor-plugin",
+            "kiro",
+            "mcp",
+            "mcp-server",
+            "mcp-tools",
+            "openclaw",
+            "opencode",
+            "pi-agent",
+            "skills",
+            "zed-extension"
           ],
-          "stars": 481,
-          "forks": 44,
-          "watchers": 481,
-          "openIssues": 2,
-          "likes": 0,
-          "hearts": 0,
-          "reactionTotal": 0,
-          "reactionSamples": [],
-          "updatedAt": "2026-09-02T03:49:30Z",
-          "pushedAt": "2026-09-02T03:56:43Z",
-          "createdAt": "2026-02-02T07:02:25Z",
-          "homepage": "",
-          "url": "https://github.com/mxyhi/ok-skills",
-          "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
-          "license": "Apache-2.0"
+          "stars": 20342,
+          "forks": 1477,
+          "watchers": 20342,
+          "openIssues": 206,
+          "likes": 24,
+          "hearts": 23,
+          "reactionTotal": 63,
+          "reactionSamples": [
+            {
+              "title": "Sorry it's not a bug report",
+              "url": "https://github.com/mksglu/context-mode/issues/403",
+              "likes": 2,
+              "hearts": 16,
+              "comments": 7
+            },
+            {
+              "title": "feat: add opencode MCP agent support",
+              "url": "https://github.com/mksglu/context-mode/pull/20",
+              "likes": 0,
+              "hearts": 6,
+              "comments": 2
+            },
+            {
+              "title": "Zombie MCP server processes consume 50-60% CPU each after session close",
+              "url": "https://github.com/mksglu/context-mode/issues/311",
+              "likes": 2,
+              "hearts": 0,
+              "comments": 1
+            }
+          ],
+          "updatedAt": "2026-09-04T04:30:08Z",
+          "pushedAt": "2026-09-03T18:05:38Z",
+          "createdAt": "2026-02-23T05:56:28Z",
+          "homepage": "https://context-mode.com",
+          "url": "https://github.com/mksglu/context-mode",
+          "downloadUrl": "https://github.com/mksglu/context-mode/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/mksglu/context-mode.git",
+          "license": "NOASSERTION"
         }
       ]
     }
