@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>模型一直在換，但你的流程要站得住 - Journal</title>
+  <meta name="description" content="新模型來得很快；真正可以累積的，是量測任務、設定權限邊界與驗收結果的工作方法。">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./journal-article.css?v=20260905-models-workflow">
+  <script src="./site-config.js"></script>
+  <style>
+    @media (max-width: 620px) {
+      .journal-storyboard--cover img,
+      .journal-storyboard--cover figcaption { width: 100%; }
+    }
+  </style>
+</head>
+<body class="journal-article-page">
+  <main class="journal-article-shell">
+    <a class="journal-back" href="./journal.html">&larr; 回到學習日誌 Back to Journal</a>
+    <header class="journal-article-header">
+      <div class="journal-article-meta"><span>學習札記 / Learning Note</span><time datetime="2026-09-05">2026.09.05</time></div>
+      <h1>模型一直在換，但你的流程要站得住<span class="journal-bilingual-title" lang="en">Models Keep Changing. Your Workflow Should Still Hold.</span></h1>
+      <p class="journal-article-lede">不要因為模型的名字或分數改變，就急著改掉自己的工作方法。先量清楚一件事怎麼完成、能交給它什麼、最後誰來驗收。<span class="journal-intro-en" lang="en">Do not rebuild your way of working just because a new model arrives. First measure the job, set the boundary, and decide who verifies the result.</span></p>
+    </header>
+    <figure class="journal-storyboard journal-storyboard--cover">
+      <img src="./assets/journal/models-workflow.webp" alt="筆記本上的三段流程、筆記型電腦與放大鏡，象徵量測任務、設定邊界與驗收成果" width="1672" height="941">
+      <figcaption>
+        <span>01 看完整任務，不只看單價<small lang="en">Measure the whole task, not only the price</small></span>
+        <span>02 先劃出 Agent 的操作邊界<small lang="en">Set the agent boundary first</small></span>
+        <span>03 用結果驗收，不只看它說完成<small lang="en">Verify the result, not only the claim</small></span>
+      </figcaption>
+    </figure>
+    <article class="journal-article-body">
+      <span class="journal-language-label">中文版 Chinese version</span>
+      <h2>模型更新很快，但真正要改的是你的流程</h2>
+      <p>這幾天又看到一波新模型、排行榜和示範影片。畫面裡的 Agent 會自己點介面、自己修錯、自己把流程做完，看起來很厲害。</p>
+      <p>但我覺得真正值得問的，不是「它有沒有比上一個強」，而是：<strong>我手上的流程，有沒有因為它而變得更可靠？</strong></p>
+      <p class="journal-intro-en" lang="en">New models, rankings, and demos arrive quickly. The better question is not “is it stronger?” but “does it make my workflow more reliable?”</p>
+      <p>我不想把模型當成一個更會聊天的工具，也不想把它當成不用看管的同事。比較接近的定位是：它可以幫我把一段工作跑得更遠，但我仍然要先畫好跑道。</p>
+      <p class="journal-intro-en" lang="en">I do not see a model as just a better chatbot, or as an employee I can ignore. It can take work further, but I still need to define the runway.</p>
+
+      <h2>第一件事：不要只看單價，要看一件事怎麼完成</h2>
+      <p>以前我很容易先看 token 價格，覺得便宜的模型就是比較省。但如果它在同一個任務裡反覆繞路、改來改去、最後還要我花很多時間收尾，單價再低也不是真的省。</p>
+      <p>我現在比較想記錄四個數字：</p>
+      <ul>
+        <li>從開始到交付，要走幾個步驟？</li>
+        <li>花了多少模型成本，也花了多少人的時間？</li>
+        <li>交付結果有多少地方需要回頭修？</li>
+        <li>下次遇到同類任務，我能不能重複使用這個做法？</li>
+      </ul>
+      <p class="journal-intro-en" lang="en">A cheap token is not always a cheap task. I look at steps, total cost, rework, and whether the workflow can be reused.</p>
+      <p>如果一個新模型能少掉很多來回，或把「做完、執行、看結果、再修」串成更短的閉環，它就值得我試。反過來說，如果只是摘要、翻譯或一問一答就完成的事情，不一定需要換到最強、最貴的模型。</p>
+      <p class="journal-intro-en" lang="en">A stronger model earns its place when it shortens the full loop: build, run, inspect, and fix. For simple tasks, the most capable model may be unnecessary.</p>
+
+      <h2>第二件事：能力變強，權限不能跟著失控</h2>
+      <p>當 Agent 可以操作瀏覽器、終端機或工作資料夾，真正要先想的不是它能做多少，而是<strong>它不該碰什麼</strong>。</p>
+      <ol>
+        <li><strong>可以自己做：</strong>整理檔案、建立草稿、跑測試、彙整結果。</li>
+        <li><strong>可以做，但要在隔離環境：</strong>修改程式、建立新檔案、測試外部整合。</li>
+        <li><strong>一定要人確認：</strong>發送訊息、公開發布、碰正式資料、使用金鑰或改動不可回復的設定。</li>
+      </ol>
+      <p class="journal-intro-en" lang="en">As agents gain access to browsers, terminals, and files, the first question is not what they can do. It is what they must never touch without a person.</p>
+      <p>這不是不信任 AI，而是把信任放在正確的位置。能力愈強的工具，愈值得有清楚的邊界、最小權限和可以回頭檢查的紀錄。</p>
+      <p class="journal-intro-en" lang="en">This is not distrust. It is placing trust in the right place: clear boundaries, least privilege, and an audit trail.</p>
+
+      <h2>第三件事：驗收比提示詞更重要</h2>
+      <p>以前我們花很多時間研究怎麼把 prompt 寫得更長、更精準。現在 Agent 能自己把工作往下跑，真正重要的問題慢慢變成：<strong>什麼叫做完成？</strong></p>
+      <p>我會先寫下驗收條件，再讓 Agent 開始做。例如：</p>
+      <ul>
+        <li>輸出是不是符合既有格式？</li>
+        <li>有沒有改到不該改的檔案？</li>
+        <li>測試有沒有真的跑過，而且結果可重現？</li>
+        <li>如果它判斷錯了，我能不能容易復原？</li>
+      </ul>
+      <p class="journal-intro-en" lang="en">As agents do more of the execution, “what counts as done?” matters more than a longer prompt.</p>
+      <div class="journal-callout"><p>我不需要逐行盯著它做，但也不會只看它說「完成」。我要看可以驗證的結果。</p></div>
+      <p>這也是人最後還不能省掉的價值：不是把每個步驟做完，而是判斷這個結果能不能真的用。</p>
+      <p class="journal-intro-en" lang="en">I do not need to watch every step. But I do need evidence. Human value is increasingly in judging whether the result is truly ready to use.</p>
+
+      <h2>今晚就能做的四件小事</h2>
+      <ol>
+        <li>挑一個你每週都會做的任務，記錄它原本的時間、步驟和成本。</li>
+        <li>選一個低風險版本，讓 Agent 在獨立資料夾或測試環境完成一次。</li>
+        <li>在開始前寫下三條「它不能做」的規則。</li>
+        <li>在結束前寫下三條「我怎麼知道它做對」的驗收條件。</li>
+      </ol>
+      <p class="journal-intro-en" lang="en">Pick one recurring task. Test it in a safe space. Set three limits. Define three checks.</p>
+      <p>不是每次模型更新都要立刻換工具。真正可以累積下來的，是你慢慢建立的流程、邊界和判斷標準。下個月模型名字又會換，但這些東西還會留在你手上。</p>
+      <p class="journal-intro-en" lang="en">You do not need to chase every release. Workflows, boundaries, and judgment are the things that compound.</p>
+
+      <section class="journal-english" lang="en" aria-label="English version">
+        <span class="journal-language-label">English version</span>
+        <h2>Models Change Quickly. Workflows Should Last.</h2>
+        <p>New models, rankings, and demos arrive quickly. The important question is not whether a model is stronger than the last one. It is whether the way we work becomes more reliable because of it.</p>
+        <p>I do not treat a model as a chatbot with better answers, or as an employee that needs no supervision. It can take a task further, but I still need to define the runway.</p>
+        <h2>Measure the Whole Task</h2>
+        <p>Token price is only one number. A model that takes fewer steps, needs less rework, and produces a reusable workflow may cost less for the actual job, even when its unit price is higher.</p>
+        <h2>Capability Needs a Boundary</h2>
+        <p>As agents gain browser, terminal, and file access, separate work they may do independently from work that needs isolation and actions that must return to a person. Stronger capability deserves clearer boundaries, least privilege, and a record that can be reviewed later.</p>
+        <h2>Verification Matters More Than a Longer Prompt</h2>
+        <p>When an agent can execute and correct more of the work, define done before it begins: expected format, allowed files, reproducible tests, and a recovery path. Do not only accept “completed”; ask for evidence.</p>
+        <h2>Four Small Things to Do Tonight</h2>
+        <p>Measure one recurring task, try a low-risk version in a safe space, write three limits, and define three checks. You do not need to chase every release. Workflows, boundaries, and judgment are the things that compound.</p>
+      </section>
+      <div class="journal-source">
+        資料來源與延伸閱讀 Sources: <a href="https://youtu.be/T8RgjwYDvoI" target="_blank" rel="noopener">AI 懶人報：GPT-6 Astra 怎麼用？</a> · <a href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">OpenAI: GPT-6 Astra</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank" rel="noopener">OpenAI model guidance</a> · <a href="https://arcprize.org/blog/arc-agi-3-launch" target="_blank" rel="noopener">ARC Prize: ARC-AGI-3</a>
+        <div class="journal-tags"><span>AI Agents</span><span>Workflow</span><span>Evaluation</span><span>Safety</span><span>Learning Note</span></div>
+      </div>
+    </article>
+  </main>
+  <script src="./tutorial-gate.js?v=20260813-journal"></script>
+</body>
+</html>
