@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./styles.css?v=20260813-home-nav-fix">
   <link rel="stylesheet" href="./natural-depth.css?v=20260910">
   <link rel="stylesheet" href="./living-desk.css?v=20260910">
+  <link rel="stylesheet" href="./small-experiment.css?v=20260910">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 </head>
 <body class="personal-home-page">
@@ -39,6 +40,7 @@
         </section>
         <div class="home-text-links" aria-label="首頁主要入口">
           <a href="./learning.html">進入教材資料庫</a>
+          <a href="#small-experiment">試一個小實驗 <span lang="en">Try an example</span></a>
         </div>
       </div>
 
@@ -51,8 +53,53 @@
       </nav>
     </section>
 
+    <section class="small-experiment" id="small-experiment" aria-labelledby="experiment-title">
+      <div class="experiment-heading">
+        <div><p class="experiment-eyebrow">A small experiment</p><h2 id="experiment-title">把一句想法，變成下一步。</h2><p lang="en">A small idea. A clear next step.</p></div>
+        <p class="experiment-disclosure">預設範例 · 非即時 AI<span lang="en">Prepared examples, not live AI.</span></p>
+      </div>
+      <div class="experiment-workbench" hidden>
+        <div class="experiment-source">
+          <label for="experiment-scenario">一個日常情境 <span lang="en">An everyday task</span></label>
+          <select id="experiment-scenario">
+            <option value="meeting">會議後的待辦 / After a meeting</option>
+            <option value="learning">每週學習整理 / A week of learning</option>
+            <option value="publishing">文章發布 / Publishing an article</option>
+          </select>
+          <div class="experiment-paper">
+            <p class="experiment-paper-label">還沒整理的想法 <span lang="en">The rough note</span></p>
+            <blockquote id="experiment-note"></blockquote>
+            <div class="experiment-fragments" id="experiment-fragments" aria-hidden="true"></div>
+            <span class="experiment-paper-number" aria-hidden="true">01 / 03</span>
+          </div>
+          <div class="experiment-actions">
+            <button type="button" id="experiment-run">整理這個範例 <span lang="en">Make a plan</span></button>
+            <button type="button" id="experiment-reset" hidden>重新開始 <span lang="en">Start again</span></button>
+          </div>
+        </div>
+        <div class="experiment-destination">
+          <div class="experiment-idle" id="experiment-idle">
+            <img src="./assets/about-hero-still-life.webp" alt="攤開的筆記本與一枝筆" width="1536" height="1024" loading="lazy">
+            <p>先想清楚，再交給工具。</p><p lang="en">Clarity comes before tools.</p>
+          </div>
+          <div id="experiment-result" hidden>
+            <div class="experiment-result-heading"><p>一份可以檢查的計畫<span lang="en">A plan you can check.</span></p><button type="button" id="experiment-copy">複製 <span lang="en">Copy</span></button></div>
+            <div class="experiment-tabs" role="tablist" aria-label="計畫內容 Plan sections">
+              <button type="button" role="tab" id="experiment-tab-workflow" aria-controls="experiment-panel" aria-selected="true" data-view="workflow">流程 <span lang="en">Steps</span></button>
+              <button type="button" role="tab" id="experiment-tab-checks" aria-controls="experiment-panel" aria-selected="false" tabindex="-1" data-view="checks">驗收 <span lang="en">Checks</span></button>
+              <button type="button" role="tab" id="experiment-tab-boundaries" aria-controls="experiment-panel" aria-selected="false" tabindex="-1" data-view="boundaries">界線 <span lang="en">Boundaries</span></button>
+            </div>
+            <div id="experiment-panel" role="tabpanel" aria-labelledby="experiment-tab-workflow" tabindex="0"></div>
+            <a class="experiment-deeper" href="./tutorial-library.html">繼續讀教材 <span lang="en">Keep learning →</span></a>
+          </div>
+        </div>
+      </div>
+      <p class="experiment-status" id="experiment-status" role="status" aria-live="polite"></p>
+      <noscript><p>互動範例需要啟用 JavaScript。<br><span lang="en">This example needs JavaScript.</span></p><a href="./tutorial-library.html">閱讀教材 / Read the lessons</a></noscript>
+    </section>
   </main>
   <script src="./analytics-tracker.js?v=20260804-d1"></script>
   <script src="./living-desk.js?v=20260910" defer></script>
+  <script src="./small-experiment.js?v=20260910" defer></script>
 </body>
 </html>
