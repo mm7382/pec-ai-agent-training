@@ -27,6 +27,10 @@
     stylesheet.rel = "stylesheet";
     stylesheet.href = `${prefix}editorial-system.css?v=20260730-ai-gods-contrast`;
     document.head.append(stylesheet);
+    const depthStylesheet = document.createElement("link");
+    depthStylesheet.rel = "stylesheet";
+    depthStylesheet.href = `${prefix}natural-depth.css?v=20260910`;
+    document.head.append(depthStylesheet);
 
     const links = [
       ["GitHub 熱門 Skill", `${prefix}github-skills.html`],
