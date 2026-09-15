@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T05:20:02.267Z",
+  "generatedAt": "2026-09-15T05:12:55.289Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-09-07",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-07、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-08",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "thedotmack-claude-mem",
@@ -91,10 +91,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 93814,
-              "forks": 8254,
-              "watchers": 93814,
-              "openIssues": 178,
+              "stars": 93904,
+              "forks": 8261,
+              "watchers": 93904,
+              "openIssues": 185,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -121,7 +121,7 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-09-14T04:52:39Z",
+              "updatedAt": "2026-09-15T05:04:48Z",
               "pushedAt": "2026-09-13T09:42:20Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
@@ -195,10 +195,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 46961,
+              "stars": 46973,
               "forks": 10351,
-              "watchers": 46961,
-              "openIssues": 22,
+              "watchers": 46973,
+              "openIssues": 24,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -225,8 +225,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-09-14T03:31:31Z",
-              "pushedAt": "2026-09-14T01:52:31Z",
+              "updatedAt": "2026-09-15T04:13:07Z",
+              "pushedAt": "2026-09-15T02:34:11Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -235,8 +235,106 @@
               "license": "MIT"
             },
             {
-              "id": "mksglu-context-mode",
+              "id": "dietrichgebert-ponytail",
               "rank": 3,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "DietrichGebert/ponytail",
+              "name": "ponytail",
+              "owner": "DietrichGebert",
+              "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+              "descriptionZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+              "oneLineZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+              "introZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+              "contentZh": [
+                "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+                "從 topics 來看，它和 agent-skills、ai-agents、claude、claude-code、claude-code-plugin、cursor-rules、developer-tools、llm 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「Impact on model performance?」是目前較多人互動的討論之一（👍 16、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)」是目前較多人互動的討論之一（👍 9、❤️ 5、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Question] Combining ponytail + caveman?」是目前較多人互動的討論之一（留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
+                "用在技能包、插件、可重用指令與團隊 SOP workflow",
+                "需要標準化交辦規則的 AI coding agent"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "JavaScript",
+              "topics": [
+                "agent-skills",
+                "ai-agents",
+                "claude",
+                "claude-code",
+                "claude-code-plugin",
+                "cursor-rules",
+                "developer-tools",
+                "llm",
+                "prompt-engineering",
+                "yagni"
+              ],
+              "stars": 138631,
+              "forks": 7446,
+              "watchers": 138631,
+              "openIssues": 270,
+              "likes": 54,
+              "hearts": 10,
+              "reactionTotal": 77,
+              "reactionSamples": [
+                {
+                  "title": "Impact on model performance?",
+                  "url": "https://github.com/DietrichGebert/ponytail/issues/65",
+                  "likes": 16,
+                  "hearts": 0,
+                  "comments": 16
+                },
+                {
+                  "title": "feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)",
+                  "url": "https://github.com/DietrichGebert/ponytail/pull/143",
+                  "likes": 9,
+                  "hearts": 5,
+                  "comments": 5
+                },
+                {
+                  "title": "[Question] Combining ponytail + caveman?",
+                  "url": "https://github.com/DietrichGebert/ponytail/issues/193",
+                  "likes": 0,
+                  "hearts": 0,
+                  "comments": 1
+                }
+              ],
+              "updatedAt": "2026-09-15T05:05:35Z",
+              "pushedAt": "2026-09-14T14:34:56Z",
+              "createdAt": "2026-06-12T00:52:37Z",
+              "homepage": "https://ponytail.dev",
+              "url": "https://github.com/DietrichGebert/ponytail",
+              "downloadUrl": "https://github.com/DietrichGebert/ponytail/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/DietrichGebert/ponytail.git",
+              "license": "MIT"
+            },
+            {
+              "id": "mksglu-context-mode",
+              "rank": 4,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "skill-workflow",
@@ -303,10 +401,10 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 22688,
-              "forks": 1636,
-              "watchers": 22688,
-              "openIssues": 243,
+              "stars": 22917,
+              "forks": 1655,
+              "watchers": 22917,
+              "openIssues": 246,
               "likes": 24,
               "hearts": 23,
               "reactionTotal": 63,
@@ -333,8 +431,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-09-14T05:09:57Z",
-              "pushedAt": "2026-09-13T12:06:08Z",
+              "updatedAt": "2026-09-15T04:57:54Z",
+              "pushedAt": "2026-09-14T12:06:53Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -344,7 +442,7 @@
             },
             {
               "id": "mxyhi-ok-skills",
-              "rank": 4,
+              "rank": 5,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "skill-workflow",
@@ -405,15 +503,15 @@
                 "prompt-engineering",
                 "skills"
               ],
-              "stars": 485,
+              "stars": 487,
               "forks": 46,
-              "watchers": 485,
+              "watchers": 487,
               "openIssues": 4,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-09-12T02:47:10Z",
+              "updatedAt": "2026-09-14T21:22:44Z",
               "pushedAt": "2026-09-12T02:47:06Z",
               "createdAt": "2026-02-02T07:02:25Z",
               "homepage": "",
@@ -421,102 +519,6 @@
               "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
               "license": "Apache-2.0"
-            },
-            {
-              "id": "affaan-m-ecc",
-              "rank": 5,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "affaan-m/ECC",
-              "name": "ECC",
-              "owner": "affaan-m",
-              "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-              "descriptionZh": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-              "oneLineZh": "把 Claude Code、Codex、Cursor 等 AI coding agent 的 skills、記憶、安全檢查與研究流程整理成一套工程化工作法。",
-              "introZh": "ECC 是給 AI coding agent 使用的工程工作流工具包。它不是單一聊天工具，而是把 skills、記憶、研究優先、安全掃描與多工具設定整理成可重複使用的 agent harness。",
-              "contentZh": [
-                "ECC 是給 AI coding agent 使用的工程工作流工具包。它不是單一聊天工具，而是把 skills、記憶、研究優先、安全掃描與多工具設定整理成可重複使用的 agent harness。",
-                "從 topics 來看，它和 ai-agents、anthropic、claude、claude-code、developer-tools、llm、mcp、productivity 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「Plugin install failes with `plugins.0.source: Invalid input`」是目前較多人互動的討論之一（👍 23、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「feat: Expand Swift/Apple support toward parity with Kotlin, Python, and TypeScript workflows」是目前較多人互動的討論之一（👍 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Plugin installation fails: Invalid manifest file - agents field validation error」是目前較多人互動的討論之一（👍 3、留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "Claude Code / Codex / Cursor 這類 coding agent",
-                "用在技能庫、記憶、安全檢查與研究優先的工程 workflow",
-                "想把 AI coding 從聊天改成標準作業流程的團隊"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "JavaScript",
-              "topics": [
-                "ai-agents",
-                "anthropic",
-                "claude",
-                "claude-code",
-                "developer-tools",
-                "llm",
-                "mcp",
-                "productivity"
-              ],
-              "stars": 257865,
-              "forks": 38564,
-              "watchers": 257865,
-              "openIssues": 201,
-              "likes": 52,
-              "hearts": 0,
-              "reactionTotal": 53,
-              "reactionSamples": [
-                {
-                  "title": "Plugin install failes with `plugins.0.source: Invalid input`",
-                  "url": "https://github.com/affaan-m/ECC/issues/15",
-                  "likes": 23,
-                  "hearts": 0,
-                  "comments": 16
-                },
-                {
-                  "title": "feat: Expand Swift/Apple support toward parity with Kotlin, Python, and TypeScript workflows",
-                  "url": "https://github.com/affaan-m/ECC/issues/912",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 2
-                },
-                {
-                  "title": "Plugin installation fails: Invalid manifest file - agents field validation error",
-                  "url": "https://github.com/affaan-m/ECC/issues/90",
-                  "likes": 3,
-                  "hearts": 0,
-                  "comments": 4
-                }
-              ],
-              "updatedAt": "2026-09-14T05:14:28Z",
-              "pushedAt": "2026-09-14T04:55:52Z",
-              "createdAt": "2026-01-18T00:51:51Z",
-              "homepage": "https://ecc.tools",
-              "url": "https://github.com/affaan-m/ECC",
-              "downloadUrl": "https://github.com/affaan-m/ECC/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/affaan-m/ECC.git",
-              "license": "MIT"
             }
           ]
         },
@@ -524,8 +526,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-08-15",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-16",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-16、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "thedotmack-claude-mem",
@@ -596,10 +598,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 93814,
-              "forks": 8254,
-              "watchers": 93814,
-              "openIssues": 178,
+              "stars": 93904,
+              "forks": 8261,
+              "watchers": 93904,
+              "openIssues": 185,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -626,7 +628,7 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-09-14T04:52:39Z",
+              "updatedAt": "2026-09-15T05:04:48Z",
               "pushedAt": "2026-09-13T09:42:20Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
@@ -700,10 +702,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 46961,
+              "stars": 46973,
               "forks": 10351,
-              "watchers": 46961,
-              "openIssues": 22,
+              "watchers": 46973,
+              "openIssues": 24,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -730,8 +732,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-09-14T03:31:31Z",
-              "pushedAt": "2026-09-14T01:52:31Z",
+              "updatedAt": "2026-09-15T04:13:07Z",
+              "pushedAt": "2026-09-15T02:34:11Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -808,10 +810,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 25928,
-              "forks": 3653,
-              "watchers": 25928,
-              "openIssues": 16,
+              "stars": 25967,
+              "forks": 3656,
+              "watchers": 25967,
+              "openIssues": 17,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -838,7 +840,7 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-09-14T05:11:26Z",
+              "updatedAt": "2026-09-15T04:39:00Z",
               "pushedAt": "2026-08-30T09:46:16Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
@@ -848,8 +850,106 @@
               "license": "MIT"
             },
             {
-              "id": "mksglu-context-mode",
+              "id": "dietrichgebert-ponytail",
               "rank": 4,
+              "period": "monthly",
+              "periodKey": "monthly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "DietrichGebert/ponytail",
+              "name": "ponytail",
+              "owner": "DietrichGebert",
+              "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+              "descriptionZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+              "oneLineZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+              "introZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+              "contentZh": [
+                "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+                "從 topics 來看，它和 agent-skills、ai-agents、claude、claude-code、claude-code-plugin、cursor-rules、developer-tools、llm 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「Impact on model performance?」是目前較多人互動的討論之一（👍 16、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)」是目前較多人互動的討論之一（👍 9、❤️ 5、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Question] Combining ponytail + caveman?」是目前較多人互動的討論之一（留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
+                "用在技能包、插件、可重用指令與團隊 SOP workflow",
+                "需要標準化交辦規則的 AI coding agent"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "JavaScript",
+              "topics": [
+                "agent-skills",
+                "ai-agents",
+                "claude",
+                "claude-code",
+                "claude-code-plugin",
+                "cursor-rules",
+                "developer-tools",
+                "llm",
+                "prompt-engineering",
+                "yagni"
+              ],
+              "stars": 138632,
+              "forks": 7446,
+              "watchers": 138632,
+              "openIssues": 270,
+              "likes": 54,
+              "hearts": 10,
+              "reactionTotal": 77,
+              "reactionSamples": [
+                {
+                  "title": "Impact on model performance?",
+                  "url": "https://github.com/DietrichGebert/ponytail/issues/65",
+                  "likes": 16,
+                  "hearts": 0,
+                  "comments": 16
+                },
+                {
+                  "title": "feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)",
+                  "url": "https://github.com/DietrichGebert/ponytail/pull/143",
+                  "likes": 9,
+                  "hearts": 5,
+                  "comments": 5
+                },
+                {
+                  "title": "[Question] Combining ponytail + caveman?",
+                  "url": "https://github.com/DietrichGebert/ponytail/issues/193",
+                  "likes": 0,
+                  "hearts": 0,
+                  "comments": 1
+                }
+              ],
+              "updatedAt": "2026-09-15T05:09:36Z",
+              "pushedAt": "2026-09-14T14:34:56Z",
+              "createdAt": "2026-06-12T00:52:37Z",
+              "homepage": "https://ponytail.dev",
+              "url": "https://github.com/DietrichGebert/ponytail",
+              "downloadUrl": "https://github.com/DietrichGebert/ponytail/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/DietrichGebert/ponytail.git",
+              "license": "MIT"
+            },
+            {
+              "id": "mksglu-context-mode",
+              "rank": 5,
               "period": "monthly",
               "periodKey": "monthly",
               "categoryKey": "skill-workflow",
@@ -916,10 +1016,10 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 22689,
-              "forks": 1636,
-              "watchers": 22689,
-              "openIssues": 243,
+              "stars": 22917,
+              "forks": 1655,
+              "watchers": 22917,
+              "openIssues": 246,
               "likes": 24,
               "hearts": 23,
               "reactionTotal": 63,
@@ -946,94 +1046,14 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-09-14T05:16:15Z",
-              "pushedAt": "2026-09-13T12:06:08Z",
+              "updatedAt": "2026-09-15T04:57:54Z",
+              "pushedAt": "2026-09-14T12:06:53Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
               "downloadUrl": "https://github.com/mksglu/context-mode/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/mksglu/context-mode.git",
               "license": "NOASSERTION"
-            },
-            {
-              "id": "mxyhi-ok-skills",
-              "rank": 5,
-              "period": "monthly",
-              "periodKey": "monthly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "mxyhi/ok-skills",
-              "name": "ok-skills",
-              "owner": "mxyhi",
-              "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-              "descriptionZh": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-              "oneLineZh": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-com...",
-              "introZh": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools. OK Skills: AI Coding Agent Skills for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, and More English | 简体中文 | 繁體中文 | 日本語 | 한국어 | Deutsch | Español | Tiếng Việt | Русский | हिन्दी Curated AI coding agent skills and CLAUDE.md / AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, and other SKILL.md-compatible tools. This repo currently bundles 31 reusable skills, all maintained as top-level skill directories in this repo. Clone it into /.agents/skills/ok-skills; the directories inside already match the layout expected by AGENTS.md-driven workflows, and CLAUDEAGENTS.md provides a Claude Code-oriented agent playbook. If you are looking for Codex skills, Claude Code skills, Cursor skills, OpenClaw skills, reusable CLAUDE.md / AGENTS.md playbooks, or practical SKILL.md examples, this repository is designed to be both searchable and immediately usable. Popular use cases: docs lookup, browser automation, prompt engineering, planning workflows, codebase understanding, frontend design, PDF/Word/PPTX/XLSX authoring. Who This Repo Is For You use Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, or another AI coding agent and want reusable skills instead of ad-hoc prompts. You maintain CLAUDE.md / AGENTS.md / SKILL.md workflows and want portable instructions that work across projects. You need battle-tested skills for docs lookup, browser autom...",
-              "contentZh": [
-                "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools. OK Skills: AI Coding Agent Skills for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, and More English | 简体中文 | 繁體中文 | 日本語 | 한국어 | Deutsch | Español | Tiếng Việt | Русский | हिन्दी Curated AI coding agent skills and CLAUDE.md / AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, and other SKILL.md-compatible tools. This repo currently bundles 31 reusable skills, all maintained as top-level skill directories in this repo. Clone it into /.agents/skills/ok-skills; the directories inside already match the layout expected by AGENTS.md-driven workflows, and CLAUDEAGENTS.md provides a Claude Code-oriented agent playbook. If you are looking for Codex skills, Claude Code skills, Cursor skills, OpenClaw skills, reusable CLAUDE.md / AGENTS.md playbooks, or practical SKILL.md examples, this repository is designed to be both searchable and immediately usable. Popular use cases: docs lookup, browser automation, prompt engineering, planning workflows, codebase understanding, frontend design, PDF/Word/PPTX/XLSX authoring. Who This Repo Is For You use Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, or another AI coding agent and want reusable skills instead of ad-hoc prompts. You maintain CLAUDE.md / AGENTS.md / SKILL.md workflows and want portable instructions that work across projects. You need battle-tested skills for docs lookup, browser autom...",
-                "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
-              ],
-              "audience": [
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
-                "用在技能包、插件、可重用指令與團隊 SOP workflow",
-                "需要標準化交辦規則的 AI coding agent"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "HTML",
-              "topics": [
-                "agent-skills",
-                "agents-md",
-                "ai",
-                "ai-agents",
-                "claude-code",
-                "claude-code-skills",
-                "codex",
-                "codex-skills",
-                "coding-agents",
-                "cursor",
-                "cursor-skills",
-                "openclaw-skills",
-                "openfang",
-                "pi-mono",
-                "prompt-engineering",
-                "skills"
-              ],
-              "stars": 485,
-              "forks": 46,
-              "watchers": 485,
-              "openIssues": 4,
-              "likes": 0,
-              "hearts": 0,
-              "reactionTotal": 0,
-              "reactionSamples": [],
-              "updatedAt": "2026-09-12T02:47:10Z",
-              "pushedAt": "2026-09-12T02:47:06Z",
-              "createdAt": "2026-02-02T07:02:25Z",
-              "homepage": "",
-              "url": "https://github.com/mxyhi/ok-skills",
-              "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
-              "license": "Apache-2.0"
             }
           ]
         }
@@ -1049,8 +1069,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-09-07",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-07、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-08",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1121,10 +1141,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 72351,
-              "forks": 8562,
-              "watchers": 72351,
-              "openIssues": 1000,
+              "stars": 72460,
+              "forks": 8579,
+              "watchers": 72460,
+              "openIssues": 980,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1151,8 +1171,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-09-14T05:10:18Z",
-              "pushedAt": "2026-09-14T03:42:37Z",
+              "updatedAt": "2026-09-15T04:55:22Z",
+              "pushedAt": "2026-09-15T00:55:22Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1229,10 +1249,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26503,
-              "forks": 3130,
-              "watchers": 26503,
-              "openIssues": 153,
+              "stars": 26510,
+              "forks": 3136,
+              "watchers": 26510,
+              "openIssues": 144,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1259,8 +1279,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-09-14T05:08:23Z",
-              "pushedAt": "2026-09-13T10:05:25Z",
+              "updatedAt": "2026-09-14T22:06:47Z",
+              "pushedAt": "2026-09-14T14:28:09Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1337,10 +1357,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 48125,
-              "forks": 8503,
-              "watchers": 48125,
-              "openIssues": 768,
+              "stars": 48157,
+              "forks": 8511,
+              "watchers": 48157,
+              "openIssues": 775,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1367,8 +1387,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-09-14T05:14:07Z",
-              "pushedAt": "2026-09-14T05:14:00Z",
+              "updatedAt": "2026-09-15T04:29:33Z",
+              "pushedAt": "2026-09-15T03:55:12Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1445,13 +1465,13 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 71948,
-              "forks": 5510,
-              "watchers": 71948,
-              "openIssues": 635,
-              "likes": 399,
+              "stars": 72178,
+              "forks": 5528,
+              "watchers": 72178,
+              "openIssues": 642,
+              "likes": 400,
               "hearts": 25,
-              "reactionTotal": 458,
+              "reactionTotal": 459,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode",
@@ -1475,8 +1495,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-09-14T04:57:49Z",
-              "pushedAt": "2026-09-13T17:09:20Z",
+              "updatedAt": "2026-09-15T05:10:10Z",
+              "pushedAt": "2026-09-15T04:39:29Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1508,7 +1528,7 @@
               ],
               "discussionZh": [
                 "「OrcaRouter provider support for Agent!」是目前較多人互動的討論之一（👍 2、留言 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「A2Agent integration and compatibility validation」是目前較多人互動的討論之一（👍 2、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「A2Agent integration and compatibility validation」是目前較多人互動的討論之一（👍 2、留言 6）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要工具連接的 MCP / tool server agent",
@@ -1552,9 +1572,9 @@
                 "xcode",
                 "xpc"
               ],
-              "stars": 602,
+              "stars": 604,
               "forks": 67,
-              "watchers": 602,
+              "watchers": 604,
               "openIssues": 2,
               "likes": 4,
               "hearts": 0,
@@ -1572,11 +1592,11 @@
                   "url": "https://github.com/AgentiLoop/Agent/issues/47",
                   "likes": 2,
                   "hearts": 0,
-                  "comments": 5
+                  "comments": 6
                 }
               ],
-              "updatedAt": "2026-09-14T03:14:02Z",
-              "pushedAt": "2026-09-14T03:13:58Z",
+              "updatedAt": "2026-09-14T23:39:33Z",
+              "pushedAt": "2026-09-14T23:41:16Z",
               "createdAt": "2026-03-11T20:15:09Z",
               "homepage": "https://agentiloop.ai",
               "url": "https://github.com/AgentiLoop/Agent",
@@ -1590,8 +1610,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-08-15",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-16",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-16、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1662,10 +1682,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 72351,
-              "forks": 8562,
-              "watchers": 72351,
-              "openIssues": 1000,
+              "stars": 72461,
+              "forks": 8579,
+              "watchers": 72461,
+              "openIssues": 980,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1692,8 +1712,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-09-14T05:10:18Z",
-              "pushedAt": "2026-09-14T03:42:37Z",
+              "updatedAt": "2026-09-15T05:12:02Z",
+              "pushedAt": "2026-09-15T00:55:22Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1770,10 +1790,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26503,
-              "forks": 3130,
-              "watchers": 26503,
-              "openIssues": 153,
+              "stars": 26510,
+              "forks": 3136,
+              "watchers": 26510,
+              "openIssues": 144,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1800,8 +1820,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-09-14T05:08:23Z",
-              "pushedAt": "2026-09-13T10:05:25Z",
+              "updatedAt": "2026-09-14T22:06:47Z",
+              "pushedAt": "2026-09-14T14:28:09Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1878,10 +1898,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 48125,
-              "forks": 8503,
-              "watchers": 48125,
-              "openIssues": 768,
+              "stars": 48157,
+              "forks": 8511,
+              "watchers": 48157,
+              "openIssues": 776,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1908,8 +1928,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-09-14T05:14:07Z",
-              "pushedAt": "2026-09-14T05:14:00Z",
+              "updatedAt": "2026-09-15T04:29:33Z",
+              "pushedAt": "2026-09-15T03:55:12Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1986,13 +2006,13 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 71948,
-              "forks": 5510,
-              "watchers": 71948,
-              "openIssues": 635,
-              "likes": 399,
+              "stars": 72178,
+              "forks": 5528,
+              "watchers": 72178,
+              "openIssues": 642,
+              "likes": 400,
               "hearts": 25,
-              "reactionTotal": 458,
+              "reactionTotal": 459,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode",
@@ -2016,8 +2036,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-09-14T04:57:49Z",
-              "pushedAt": "2026-09-13T17:09:20Z",
+              "updatedAt": "2026-09-15T05:10:10Z",
+              "pushedAt": "2026-09-15T04:39:29Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -2049,7 +2069,7 @@
               ],
               "discussionZh": [
                 "「OrcaRouter provider support for Agent!」是目前較多人互動的討論之一（👍 2、留言 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「A2Agent integration and compatibility validation」是目前較多人互動的討論之一（👍 2、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「A2Agent integration and compatibility validation」是目前較多人互動的討論之一（👍 2、留言 6）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要工具連接的 MCP / tool server agent",
@@ -2093,9 +2113,9 @@
                 "xcode",
                 "xpc"
               ],
-              "stars": 602,
+              "stars": 604,
               "forks": 67,
-              "watchers": 602,
+              "watchers": 604,
               "openIssues": 2,
               "likes": 4,
               "hearts": 0,
@@ -2113,11 +2133,11 @@
                   "url": "https://github.com/AgentiLoop/Agent/issues/47",
                   "likes": 2,
                   "hearts": 0,
-                  "comments": 5
+                  "comments": 6
                 }
               ],
-              "updatedAt": "2026-09-14T03:14:02Z",
-              "pushedAt": "2026-09-14T03:13:58Z",
+              "updatedAt": "2026-09-14T23:39:33Z",
+              "pushedAt": "2026-09-14T23:41:16Z",
               "createdAt": "2026-03-11T20:15:09Z",
               "homepage": "https://agentiloop.ai",
               "url": "https://github.com/AgentiLoop/Agent",
@@ -2135,8 +2155,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-09-07",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-07、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-09-08",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "thedotmack-claude-mem",
@@ -2207,10 +2227,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 93814,
-          "forks": 8254,
-          "watchers": 93814,
-          "openIssues": 178,
+          "stars": 93904,
+          "forks": 8261,
+          "watchers": 93904,
+          "openIssues": 185,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2237,7 +2257,7 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-09-14T04:52:39Z",
+          "updatedAt": "2026-09-15T05:04:48Z",
           "pushedAt": "2026-09-13T09:42:20Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
@@ -2311,10 +2331,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 46961,
+          "stars": 46973,
           "forks": 10351,
-          "watchers": 46961,
-          "openIssues": 22,
+          "watchers": 46973,
+          "openIssues": 24,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2341,8 +2361,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-09-14T03:31:31Z",
-          "pushedAt": "2026-09-14T01:52:31Z",
+          "updatedAt": "2026-09-15T04:13:07Z",
+          "pushedAt": "2026-09-15T02:34:11Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -2351,8 +2371,106 @@
           "license": "MIT"
         },
         {
-          "id": "mksglu-context-mode",
+          "id": "dietrichgebert-ponytail",
           "rank": 3,
+          "period": "weekly",
+          "periodKey": "weekly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "DietrichGebert/ponytail",
+          "name": "ponytail",
+          "owner": "DietrichGebert",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "descriptionZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "oneLineZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "introZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+          "contentZh": [
+            "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+            "從 topics 來看，它和 agent-skills、ai-agents、claude、claude-code、claude-code-plugin、cursor-rules、developer-tools、llm 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「Impact on model performance?」是目前較多人互動的討論之一（👍 16、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)」是目前較多人互動的討論之一（👍 9、❤️ 5、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Question] Combining ponytail + caveman?」是目前較多人互動的討論之一（留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
+            "用在技能包、插件、可重用指令與團隊 SOP workflow",
+            "需要標準化交辦規則的 AI coding agent"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "JavaScript",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "stars": 138631,
+          "forks": 7446,
+          "watchers": 138631,
+          "openIssues": 270,
+          "likes": 54,
+          "hearts": 10,
+          "reactionTotal": 77,
+          "reactionSamples": [
+            {
+              "title": "Impact on model performance?",
+              "url": "https://github.com/DietrichGebert/ponytail/issues/65",
+              "likes": 16,
+              "hearts": 0,
+              "comments": 16
+            },
+            {
+              "title": "feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)",
+              "url": "https://github.com/DietrichGebert/ponytail/pull/143",
+              "likes": 9,
+              "hearts": 5,
+              "comments": 5
+            },
+            {
+              "title": "[Question] Combining ponytail + caveman?",
+              "url": "https://github.com/DietrichGebert/ponytail/issues/193",
+              "likes": 0,
+              "hearts": 0,
+              "comments": 1
+            }
+          ],
+          "updatedAt": "2026-09-15T05:05:35Z",
+          "pushedAt": "2026-09-14T14:34:56Z",
+          "createdAt": "2026-06-12T00:52:37Z",
+          "homepage": "https://ponytail.dev",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "downloadUrl": "https://github.com/DietrichGebert/ponytail/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/DietrichGebert/ponytail.git",
+          "license": "MIT"
+        },
+        {
+          "id": "mksglu-context-mode",
+          "rank": 4,
           "period": "weekly",
           "periodKey": "weekly",
           "categoryKey": "skill-workflow",
@@ -2419,10 +2537,10 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 22688,
-          "forks": 1636,
-          "watchers": 22688,
-          "openIssues": 243,
+          "stars": 22917,
+          "forks": 1655,
+          "watchers": 22917,
+          "openIssues": 246,
           "likes": 24,
           "hearts": 23,
           "reactionTotal": 63,
@@ -2449,8 +2567,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-09-14T05:09:57Z",
-          "pushedAt": "2026-09-13T12:06:08Z",
+          "updatedAt": "2026-09-15T04:57:54Z",
+          "pushedAt": "2026-09-14T12:06:53Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
@@ -2460,7 +2578,7 @@
         },
         {
           "id": "mxyhi-ok-skills",
-          "rank": 4,
+          "rank": 5,
           "period": "weekly",
           "periodKey": "weekly",
           "categoryKey": "skill-workflow",
@@ -2521,15 +2639,15 @@
             "prompt-engineering",
             "skills"
           ],
-          "stars": 485,
+          "stars": 487,
           "forks": 46,
-          "watchers": 485,
+          "watchers": 487,
           "openIssues": 4,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
           "reactionSamples": [],
-          "updatedAt": "2026-09-12T02:47:10Z",
+          "updatedAt": "2026-09-14T21:22:44Z",
           "pushedAt": "2026-09-12T02:47:06Z",
           "createdAt": "2026-02-02T07:02:25Z",
           "homepage": "",
@@ -2537,102 +2655,6 @@
           "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
           "license": "Apache-2.0"
-        },
-        {
-          "id": "affaan-m-ecc",
-          "rank": 5,
-          "period": "weekly",
-          "periodKey": "weekly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "affaan-m/ECC",
-          "name": "ECC",
-          "owner": "affaan-m",
-          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-          "descriptionZh": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-          "oneLineZh": "把 Claude Code、Codex、Cursor 等 AI coding agent 的 skills、記憶、安全檢查與研究流程整理成一套工程化工作法。",
-          "introZh": "ECC 是給 AI coding agent 使用的工程工作流工具包。它不是單一聊天工具，而是把 skills、記憶、研究優先、安全掃描與多工具設定整理成可重複使用的 agent harness。",
-          "contentZh": [
-            "ECC 是給 AI coding agent 使用的工程工作流工具包。它不是單一聊天工具，而是把 skills、記憶、研究優先、安全掃描與多工具設定整理成可重複使用的 agent harness。",
-            "從 topics 來看，它和 ai-agents、anthropic、claude、claude-code、developer-tools、llm、mcp、productivity 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「Plugin install failes with `plugins.0.source: Invalid input`」是目前較多人互動的討論之一（👍 23、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「feat: Expand Swift/Apple support toward parity with Kotlin, Python, and TypeScript workflows」是目前較多人互動的討論之一（👍 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Plugin installation fails: Invalid manifest file - agents field validation error」是目前較多人互動的討論之一（👍 3、留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "Claude Code / Codex / Cursor 這類 coding agent",
-            "用在技能庫、記憶、安全檢查與研究優先的工程 workflow",
-            "想把 AI coding 從聊天改成標準作業流程的團隊"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "JavaScript",
-          "topics": [
-            "ai-agents",
-            "anthropic",
-            "claude",
-            "claude-code",
-            "developer-tools",
-            "llm",
-            "mcp",
-            "productivity"
-          ],
-          "stars": 257865,
-          "forks": 38564,
-          "watchers": 257865,
-          "openIssues": 201,
-          "likes": 52,
-          "hearts": 0,
-          "reactionTotal": 53,
-          "reactionSamples": [
-            {
-              "title": "Plugin install failes with `plugins.0.source: Invalid input`",
-              "url": "https://github.com/affaan-m/ECC/issues/15",
-              "likes": 23,
-              "hearts": 0,
-              "comments": 16
-            },
-            {
-              "title": "feat: Expand Swift/Apple support toward parity with Kotlin, Python, and TypeScript workflows",
-              "url": "https://github.com/affaan-m/ECC/issues/912",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 2
-            },
-            {
-              "title": "Plugin installation fails: Invalid manifest file - agents field validation error",
-              "url": "https://github.com/affaan-m/ECC/issues/90",
-              "likes": 3,
-              "hearts": 0,
-              "comments": 4
-            }
-          ],
-          "updatedAt": "2026-09-14T05:14:28Z",
-          "pushedAt": "2026-09-14T04:55:52Z",
-          "createdAt": "2026-01-18T00:51:51Z",
-          "homepage": "https://ecc.tools",
-          "url": "https://github.com/affaan-m/ECC",
-          "downloadUrl": "https://github.com/affaan-m/ECC/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/affaan-m/ECC.git",
-          "license": "MIT"
         }
       ]
     },
@@ -2640,8 +2662,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-08-15",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-08-16",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-16、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "thedotmack-claude-mem",
@@ -2712,10 +2734,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 93814,
-          "forks": 8254,
-          "watchers": 93814,
-          "openIssues": 178,
+          "stars": 93904,
+          "forks": 8261,
+          "watchers": 93904,
+          "openIssues": 185,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2742,7 +2764,7 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-09-14T04:52:39Z",
+          "updatedAt": "2026-09-15T05:04:48Z",
           "pushedAt": "2026-09-13T09:42:20Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
@@ -2816,10 +2838,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 46961,
+          "stars": 46973,
           "forks": 10351,
-          "watchers": 46961,
-          "openIssues": 22,
+          "watchers": 46973,
+          "openIssues": 24,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2846,8 +2868,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-09-14T03:31:31Z",
-          "pushedAt": "2026-09-14T01:52:31Z",
+          "updatedAt": "2026-09-15T04:13:07Z",
+          "pushedAt": "2026-09-15T02:34:11Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -2924,10 +2946,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 25928,
-          "forks": 3653,
-          "watchers": 25928,
-          "openIssues": 16,
+          "stars": 25967,
+          "forks": 3656,
+          "watchers": 25967,
+          "openIssues": 17,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -2954,7 +2976,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-09-14T05:11:26Z",
+          "updatedAt": "2026-09-15T04:39:00Z",
           "pushedAt": "2026-08-30T09:46:16Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
@@ -2964,8 +2986,106 @@
           "license": "MIT"
         },
         {
-          "id": "mksglu-context-mode",
+          "id": "dietrichgebert-ponytail",
           "rank": 4,
+          "period": "monthly",
+          "periodKey": "monthly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "DietrichGebert/ponytail",
+          "name": "ponytail",
+          "owner": "DietrichGebert",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "descriptionZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "oneLineZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "introZh": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+          "contentZh": [
+            "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. Ponytail He says nothing. He writes one line. It works. 54% less code (up to 94%) &middot; 20% cheaper &middot; 27% faster &middot; 100% safe Measured on real Claude Code sessions editing a real open-source repo (FastAPI + React), against the same agent with no skill. 54% is the mean across 12 feature tasks (Haiku 4.5, n=4); it reaches 94% where an agent over-builds (a date picker) and is near zero where the code is already minimal. ponytail keeps every safety guard while a bare \"write one-liners\" prompt drops one. (The earlier single-shot benchmark reported 80-94% as a flat figure; against a fair agentic baseline that is the per-task ceiling, not the average.) Full writeup &middot; reproduce it . Español &middot; 한국어 --- Already built with Ponytail --- You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Before / after You ask for a date picker. Your agent installs flatpickr, writes a wrapper component, adds a stylesheet, and starts a discussion about timezones. With ponytail: More survivors in examples/. Numbers The honest measurement is a real agent doing real work: a headless Claude Code session editing tiangolo's full-stack-fastapi-template (a real FastAPI + React repo), scored on the git diff it leave...",
+            "從 topics 來看，它和 agent-skills、ai-agents、claude、claude-code、claude-code-plugin、cursor-rules、developer-tools、llm 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「Impact on model performance?」是目前較多人互動的討論之一（👍 16、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)」是目前較多人互動的討論之一（👍 9、❤️ 5、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Question] Combining ponytail + caveman?」是目前較多人互動的討論之一（留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
+            "用在技能包、插件、可重用指令與團隊 SOP workflow",
+            "需要標準化交辦規則的 AI coding agent"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "JavaScript",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "stars": 138632,
+          "forks": 7446,
+          "watchers": 138632,
+          "openIssues": 270,
+          "likes": 54,
+          "hearts": 10,
+          "reactionTotal": 77,
+          "reactionSamples": [
+            {
+              "title": "Impact on model performance?",
+              "url": "https://github.com/DietrichGebert/ponytail/issues/65",
+              "likes": 16,
+              "hearts": 0,
+              "comments": 16
+            },
+            {
+              "title": "feat(opencode): publish ponytail as an installable npm package (opencode-ponytail)",
+              "url": "https://github.com/DietrichGebert/ponytail/pull/143",
+              "likes": 9,
+              "hearts": 5,
+              "comments": 5
+            },
+            {
+              "title": "[Question] Combining ponytail + caveman?",
+              "url": "https://github.com/DietrichGebert/ponytail/issues/193",
+              "likes": 0,
+              "hearts": 0,
+              "comments": 1
+            }
+          ],
+          "updatedAt": "2026-09-15T05:09:36Z",
+          "pushedAt": "2026-09-14T14:34:56Z",
+          "createdAt": "2026-06-12T00:52:37Z",
+          "homepage": "https://ponytail.dev",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "downloadUrl": "https://github.com/DietrichGebert/ponytail/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/DietrichGebert/ponytail.git",
+          "license": "MIT"
+        },
+        {
+          "id": "mksglu-context-mode",
+          "rank": 5,
           "period": "monthly",
           "periodKey": "monthly",
           "categoryKey": "skill-workflow",
@@ -3032,10 +3152,10 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 22689,
-          "forks": 1636,
-          "watchers": 22689,
-          "openIssues": 243,
+          "stars": 22917,
+          "forks": 1655,
+          "watchers": 22917,
+          "openIssues": 246,
           "likes": 24,
           "hearts": 23,
           "reactionTotal": 63,
@@ -3062,94 +3182,14 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-09-14T05:16:15Z",
-          "pushedAt": "2026-09-13T12:06:08Z",
+          "updatedAt": "2026-09-15T04:57:54Z",
+          "pushedAt": "2026-09-14T12:06:53Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
           "downloadUrl": "https://github.com/mksglu/context-mode/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/mksglu/context-mode.git",
           "license": "NOASSERTION"
-        },
-        {
-          "id": "mxyhi-ok-skills",
-          "rank": 5,
-          "period": "monthly",
-          "periodKey": "monthly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "mxyhi/ok-skills",
-          "name": "ok-skills",
-          "owner": "mxyhi",
-          "description": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-          "descriptionZh": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools.",
-          "oneLineZh": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-com...",
-          "introZh": "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools. OK Skills: AI Coding Agent Skills for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, and More English | 简体中文 | 繁體中文 | 日本語 | 한국어 | Deutsch | Español | Tiếng Việt | Русский | हिन्दी Curated AI coding agent skills and CLAUDE.md / AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, and other SKILL.md-compatible tools. This repo currently bundles 31 reusable skills, all maintained as top-level skill directories in this repo. Clone it into /.agents/skills/ok-skills; the directories inside already match the layout expected by AGENTS.md-driven workflows, and CLAUDEAGENTS.md provides a Claude Code-oriented agent playbook. If you are looking for Codex skills, Claude Code skills, Cursor skills, OpenClaw skills, reusable CLAUDE.md / AGENTS.md playbooks, or practical SKILL.md examples, this repository is designed to be both searchable and immediately usable. Popular use cases: docs lookup, browser automation, prompt engineering, planning workflows, codebase understanding, frontend design, PDF/Word/PPTX/XLSX authoring. Who This Repo Is For You use Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, or another AI coding agent and want reusable skills instead of ad-hoc prompts. You maintain CLAUDE.md / AGENTS.md / SKILL.md workflows and want portable instructions that work across projects. You need battle-tested skills for docs lookup, browser autom...",
-          "contentZh": [
-            "Curated AI coding agent skills and AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, and other SKILL.md-compatible tools. OK Skills: AI Coding Agent Skills for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, and More English | 简体中文 | 繁體中文 | 日本語 | 한국어 | Deutsch | Español | Tiếng Việt | Русский | हिन्दी Curated AI coding agent skills and CLAUDE.md / AGENTS.md playbooks for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, and other SKILL.md-compatible tools. This repo currently bundles 31 reusable skills, all maintained as top-level skill directories in this repo. Clone it into /.agents/skills/ok-skills; the directories inside already match the layout expected by AGENTS.md-driven workflows, and CLAUDEAGENTS.md provides a Claude Code-oriented agent playbook. If you are looking for Codex skills, Claude Code skills, Cursor skills, OpenClaw skills, reusable CLAUDE.md / AGENTS.md playbooks, or practical SKILL.md examples, this repository is designed to be both searchable and immediately usable. Popular use cases: docs lookup, browser automation, prompt engineering, planning workflows, codebase understanding, frontend design, PDF/Word/PPTX/XLSX authoring. Who This Repo Is For You use Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, or another AI coding agent and want reusable skills instead of ad-hoc prompts. You maintain CLAUDE.md / AGENTS.md / SKILL.md workflows and want portable instructions that work across projects. You need battle-tested skills for docs lookup, browser autom...",
-            "從 topics 來看，它和 agent-skills、agents-md、ai、ai-agents、claude-code、claude-code-skills、codex、codex-skills 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "目前沒有抓到足夠的公開 Issue / PR reaction 資料。建議先看 README、更新時間與 open issues 判斷專案活躍度。"
-          ],
-          "audience": [
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent",
-            "用在技能包、插件、可重用指令與團隊 SOP workflow",
-            "需要標準化交辦規則的 AI coding agent"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "HTML",
-          "topics": [
-            "agent-skills",
-            "agents-md",
-            "ai",
-            "ai-agents",
-            "claude-code",
-            "claude-code-skills",
-            "codex",
-            "codex-skills",
-            "coding-agents",
-            "cursor",
-            "cursor-skills",
-            "openclaw-skills",
-            "openfang",
-            "pi-mono",
-            "prompt-engineering",
-            "skills"
-          ],
-          "stars": 485,
-          "forks": 46,
-          "watchers": 485,
-          "openIssues": 4,
-          "likes": 0,
-          "hearts": 0,
-          "reactionTotal": 0,
-          "reactionSamples": [],
-          "updatedAt": "2026-09-12T02:47:10Z",
-          "pushedAt": "2026-09-12T02:47:06Z",
-          "createdAt": "2026-02-02T07:02:25Z",
-          "homepage": "",
-          "url": "https://github.com/mxyhi/ok-skills",
-          "downloadUrl": "https://github.com/mxyhi/ok-skills/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/mxyhi/ok-skills.git",
-          "license": "Apache-2.0"
         }
       ]
     }
