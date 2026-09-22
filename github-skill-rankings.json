@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T05:19:26.310Z",
+  "generatedAt": "2026-09-22T05:18:47.724Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-09-14",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-14、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-15",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "thedotmack-claude-mem",
@@ -91,10 +91,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 94356,
-              "forks": 8336,
-              "watchers": 94356,
-              "openIssues": 244,
+              "stars": 94429,
+              "forks": 8347,
+              "watchers": 94429,
+              "openIssues": 275,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -121,8 +121,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-09-21T04:26:25Z",
-              "pushedAt": "2026-09-20T23:56:06Z",
+              "updatedAt": "2026-09-22T04:47:59Z",
+              "pushedAt": "2026-09-22T03:14:26Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -142,8 +142,8 @@
               "fullName": "zhayujie/CowAgent",
               "name": "CowAgent",
               "owner": "zhayujie",
-              "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
-              "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
+              "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+              "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
               "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
               "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
               "contentZh": [
@@ -195,10 +195,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 47059,
-              "forks": 10366,
-              "watchers": 47059,
-              "openIssues": 24,
+              "stars": 47065,
+              "forks": 10369,
+              "watchers": 47065,
+              "openIssues": 25,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -225,8 +225,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-09-21T05:11:53Z",
-              "pushedAt": "2026-09-21T04:27:33Z",
+              "updatedAt": "2026-09-22T05:03:43Z",
+              "pushedAt": "2026-09-22T03:50:38Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -247,7 +247,7 @@
               "name": "context-mode",
               "owner": "mksglu",
               "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具输出（减少 98%）、保留会话内存，并通过 MCP + 挂钩强制跨 17 个平台进行路由。",
+              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
               "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
               "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
               "contentZh": [
@@ -303,10 +303,10 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 23789,
-              "forks": 1717,
-              "watchers": 23789,
-              "openIssues": 264,
+              "stars": 23898,
+              "forks": 1722,
+              "watchers": 23898,
+              "openIssues": 269,
               "likes": 25,
               "hearts": 23,
               "reactionTotal": 64,
@@ -333,8 +333,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-09-21T05:13:52Z",
-              "pushedAt": "2026-09-20T12:05:59Z",
+              "updatedAt": "2026-09-22T05:02:00Z",
+              "pushedAt": "2026-09-21T12:06:47Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -406,9 +406,9 @@
                 "skills"
               ],
               "stars": 490,
-              "forks": 46,
+              "forks": 47,
               "watchers": 490,
-              "openIssues": 4,
+              "openIssues": 5,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
@@ -479,10 +479,10 @@
                 "mcp",
                 "productivity"
               ],
-              "stars": 263946,
-              "forks": 39483,
-              "watchers": 263946,
-              "openIssues": 212,
+              "stars": 264844,
+              "forks": 39575,
+              "watchers": 264844,
+              "openIssues": 208,
               "likes": 53,
               "hearts": 0,
               "reactionTotal": 54,
@@ -509,8 +509,8 @@
                   "comments": 7
                 }
               ],
-              "updatedAt": "2026-09-21T05:12:28Z",
-              "pushedAt": "2026-09-21T04:55:15Z",
+              "updatedAt": "2026-09-22T05:13:21Z",
+              "pushedAt": "2026-09-21T19:00:51Z",
               "createdAt": "2026-01-18T00:51:51Z",
               "homepage": "https://ecc.tools",
               "url": "https://github.com/affaan-m/ECC",
@@ -524,8 +524,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-08-22",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-22、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-23",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-23、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "thedotmack-claude-mem",
@@ -596,10 +596,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 94356,
-              "forks": 8336,
-              "watchers": 94356,
-              "openIssues": 244,
+              "stars": 94429,
+              "forks": 8347,
+              "watchers": 94429,
+              "openIssues": 275,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -626,8 +626,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-09-21T04:26:25Z",
-              "pushedAt": "2026-09-20T23:56:06Z",
+              "updatedAt": "2026-09-22T04:47:59Z",
+              "pushedAt": "2026-09-22T03:14:26Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -647,8 +647,8 @@
               "fullName": "zhayujie/CowAgent",
               "name": "CowAgent",
               "owner": "zhayujie",
-              "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
-              "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
+              "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+              "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
               "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
               "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
               "contentZh": [
@@ -700,10 +700,10 @@
                 "openclaw",
                 "skills"
               ],
-              "stars": 47059,
-              "forks": 10366,
-              "watchers": 47059,
-              "openIssues": 24,
+              "stars": 47065,
+              "forks": 10369,
+              "watchers": 47065,
+              "openIssues": 25,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -730,8 +730,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-09-21T05:11:53Z",
-              "pushedAt": "2026-09-21T04:27:33Z",
+              "updatedAt": "2026-09-22T05:03:43Z",
+              "pushedAt": "2026-09-22T03:50:38Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -808,10 +808,10 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 23789,
-              "forks": 1717,
-              "watchers": 23789,
-              "openIssues": 264,
+              "stars": 23898,
+              "forks": 1722,
+              "watchers": 23898,
+              "openIssues": 269,
               "likes": 25,
               "hearts": 23,
               "reactionTotal": 64,
@@ -838,8 +838,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-09-21T05:13:52Z",
-              "pushedAt": "2026-09-20T12:05:59Z",
+              "updatedAt": "2026-09-22T05:02:00Z",
+              "pushedAt": "2026-09-21T12:06:47Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -916,10 +916,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 26192,
-              "forks": 3689,
-              "watchers": 26192,
-              "openIssues": 18,
+              "stars": 26227,
+              "forks": 3694,
+              "watchers": 26227,
+              "openIssues": 25,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -946,7 +946,7 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-09-21T04:57:25Z",
+              "updatedAt": "2026-09-22T05:06:40Z",
               "pushedAt": "2026-08-30T09:46:16Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
@@ -1019,9 +1019,9 @@
                 "skills"
               ],
               "stars": 490,
-              "forks": 46,
+              "forks": 47,
               "watchers": 490,
-              "openIssues": 4,
+              "openIssues": 5,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
@@ -1049,8 +1049,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-09-14",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-14、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-15",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1121,10 +1121,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 72953,
-              "forks": 8660,
-              "watchers": 72953,
-              "openIssues": 1002,
+              "stars": 73019,
+              "forks": 8667,
+              "watchers": 73019,
+              "openIssues": 1011,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1151,8 +1151,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-09-21T04:33:02Z",
-              "pushedAt": "2026-09-20T14:59:45Z",
+              "updatedAt": "2026-09-22T05:09:27Z",
+              "pushedAt": "2026-09-22T05:15:09Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1229,10 +1229,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26564,
+              "stars": 26576,
               "forks": 3157,
-              "watchers": 26564,
-              "openIssues": 184,
+              "watchers": 26576,
+              "openIssues": 169,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1259,8 +1259,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-09-21T05:14:03Z",
-              "pushedAt": "2026-09-21T04:58:51Z",
+              "updatedAt": "2026-09-22T04:17:25Z",
+              "pushedAt": "2026-09-21T16:12:41Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1337,10 +1337,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 48433,
-              "forks": 8556,
-              "watchers": 48433,
-              "openIssues": 788,
+              "stars": 48471,
+              "forks": 8567,
+              "watchers": 48471,
+              "openIssues": 803,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1367,8 +1367,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-09-21T04:47:50Z",
-              "pushedAt": "2026-09-21T04:59:22Z",
+              "updatedAt": "2026-09-22T05:07:21Z",
+              "pushedAt": "2026-09-21T21:42:03Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1445,13 +1445,13 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 73289,
-              "forks": 5636,
-              "watchers": 73289,
+              "stars": 73427,
+              "forks": 5657,
+              "watchers": 73427,
               "openIssues": 703,
-              "likes": 405,
+              "likes": 406,
               "hearts": 26,
-              "reactionTotal": 465,
+              "reactionTotal": 466,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode",
@@ -1475,8 +1475,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-09-21T04:57:36Z",
-              "pushedAt": "2026-09-19T19:07:21Z",
+              "updatedAt": "2026-09-22T04:41:26Z",
+              "pushedAt": "2026-09-22T02:49:31Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1552,9 +1552,9 @@
                 "xcode",
                 "xpc"
               ],
-              "stars": 617,
-              "forks": 67,
-              "watchers": 617,
+              "stars": 622,
+              "forks": 68,
+              "watchers": 622,
               "openIssues": 1,
               "likes": 4,
               "hearts": 0,
@@ -1575,8 +1575,8 @@
                   "comments": 6
                 }
               ],
-              "updatedAt": "2026-09-21T05:02:59Z",
-              "pushedAt": "2026-09-21T05:02:56Z",
+              "updatedAt": "2026-09-22T03:56:04Z",
+              "pushedAt": "2026-09-22T03:19:07Z",
               "createdAt": "2026-03-11T20:15:09Z",
               "homepage": "https://agentiloop.ai",
               "url": "https://github.com/AgentiLoop/Agent",
@@ -1590,8 +1590,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-08-22",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-22、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-08-23",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-08-23、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1662,10 +1662,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 72953,
-              "forks": 8660,
-              "watchers": 72953,
-              "openIssues": 1002,
+              "stars": 73019,
+              "forks": 8667,
+              "watchers": 73019,
+              "openIssues": 1011,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1692,8 +1692,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-09-21T04:33:02Z",
-              "pushedAt": "2026-09-20T14:59:45Z",
+              "updatedAt": "2026-09-22T05:09:27Z",
+              "pushedAt": "2026-09-22T05:15:09Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1770,10 +1770,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26564,
+              "stars": 26576,
               "forks": 3157,
-              "watchers": 26564,
-              "openIssues": 184,
+              "watchers": 26576,
+              "openIssues": 169,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1800,8 +1800,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-09-21T05:14:03Z",
-              "pushedAt": "2026-09-21T04:58:51Z",
+              "updatedAt": "2026-09-22T04:17:25Z",
+              "pushedAt": "2026-09-21T16:12:41Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1878,10 +1878,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 48433,
-              "forks": 8556,
-              "watchers": 48433,
-              "openIssues": 788,
+              "stars": 48471,
+              "forks": 8567,
+              "watchers": 48471,
+              "openIssues": 803,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1908,8 +1908,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-09-21T04:47:50Z",
-              "pushedAt": "2026-09-21T04:59:22Z",
+              "updatedAt": "2026-09-22T05:07:21Z",
+              "pushedAt": "2026-09-21T21:42:03Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1986,13 +1986,13 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 73289,
-              "forks": 5636,
-              "watchers": 73289,
+              "stars": 73427,
+              "forks": 5657,
+              "watchers": 73427,
               "openIssues": 703,
-              "likes": 405,
+              "likes": 406,
               "hearts": 26,
-              "reactionTotal": 465,
+              "reactionTotal": 466,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] headroom wrap opencode — CLI wrapper for OpenCode",
@@ -2016,8 +2016,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-09-21T04:57:36Z",
-              "pushedAt": "2026-09-19T19:07:21Z",
+              "updatedAt": "2026-09-22T04:41:26Z",
+              "pushedAt": "2026-09-22T02:49:31Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -2093,9 +2093,9 @@
                 "xcode",
                 "xpc"
               ],
-              "stars": 617,
-              "forks": 67,
-              "watchers": 617,
+              "stars": 622,
+              "forks": 68,
+              "watchers": 622,
               "openIssues": 1,
               "likes": 4,
               "hearts": 0,
@@ -2116,8 +2116,8 @@
                   "comments": 6
                 }
               ],
-              "updatedAt": "2026-09-21T05:02:59Z",
-              "pushedAt": "2026-09-21T05:02:56Z",
+              "updatedAt": "2026-09-22T03:56:04Z",
+              "pushedAt": "2026-09-22T03:19:07Z",
               "createdAt": "2026-03-11T20:15:09Z",
               "homepage": "https://agentiloop.ai",
               "url": "https://github.com/AgentiLoop/Agent",
@@ -2135,8 +2135,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-09-14",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-14、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-09-15",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "thedotmack-claude-mem",
@@ -2207,10 +2207,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 94356,
-          "forks": 8336,
-          "watchers": 94356,
-          "openIssues": 244,
+          "stars": 94429,
+          "forks": 8347,
+          "watchers": 94429,
+          "openIssues": 275,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2237,8 +2237,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-09-21T04:26:25Z",
-          "pushedAt": "2026-09-20T23:56:06Z",
+          "updatedAt": "2026-09-22T04:47:59Z",
+          "pushedAt": "2026-09-22T03:14:26Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2258,8 +2258,8 @@
           "fullName": "zhayujie/CowAgent",
           "name": "CowAgent",
           "owner": "zhayujie",
-          "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
-          "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
+          "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+          "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
           "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
           "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
           "contentZh": [
@@ -2311,10 +2311,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 47059,
-          "forks": 10366,
-          "watchers": 47059,
-          "openIssues": 24,
+          "stars": 47065,
+          "forks": 10369,
+          "watchers": 47065,
+          "openIssues": 25,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2341,8 +2341,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-09-21T05:11:53Z",
-          "pushedAt": "2026-09-21T04:27:33Z",
+          "updatedAt": "2026-09-22T05:03:43Z",
+          "pushedAt": "2026-09-22T03:50:38Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -2363,7 +2363,7 @@
           "name": "context-mode",
           "owner": "mksglu",
           "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具输出（减少 98%）、保留会话内存，并通过 MCP + 挂钩强制跨 17 个平台进行路由。",
+          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
           "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
           "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
           "contentZh": [
@@ -2419,10 +2419,10 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 23789,
-          "forks": 1717,
-          "watchers": 23789,
-          "openIssues": 264,
+          "stars": 23898,
+          "forks": 1722,
+          "watchers": 23898,
+          "openIssues": 269,
           "likes": 25,
           "hearts": 23,
           "reactionTotal": 64,
@@ -2449,8 +2449,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-09-21T05:13:52Z",
-          "pushedAt": "2026-09-20T12:05:59Z",
+          "updatedAt": "2026-09-22T05:02:00Z",
+          "pushedAt": "2026-09-21T12:06:47Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
@@ -2522,9 +2522,9 @@
             "skills"
           ],
           "stars": 490,
-          "forks": 46,
+          "forks": 47,
           "watchers": 490,
-          "openIssues": 4,
+          "openIssues": 5,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
@@ -2595,10 +2595,10 @@
             "mcp",
             "productivity"
           ],
-          "stars": 263946,
-          "forks": 39483,
-          "watchers": 263946,
-          "openIssues": 212,
+          "stars": 264844,
+          "forks": 39575,
+          "watchers": 264844,
+          "openIssues": 208,
           "likes": 53,
           "hearts": 0,
           "reactionTotal": 54,
@@ -2625,8 +2625,8 @@
               "comments": 7
             }
           ],
-          "updatedAt": "2026-09-21T05:12:28Z",
-          "pushedAt": "2026-09-21T04:55:15Z",
+          "updatedAt": "2026-09-22T05:13:21Z",
+          "pushedAt": "2026-09-21T19:00:51Z",
           "createdAt": "2026-01-18T00:51:51Z",
           "homepage": "https://ecc.tools",
           "url": "https://github.com/affaan-m/ECC",
@@ -2640,8 +2640,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-08-22",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-22、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-08-23",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-08-23、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "thedotmack-claude-mem",
@@ -2712,10 +2712,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 94356,
-          "forks": 8336,
-          "watchers": 94356,
-          "openIssues": 244,
+          "stars": 94429,
+          "forks": 8347,
+          "watchers": 94429,
+          "openIssues": 275,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2742,8 +2742,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-09-21T04:26:25Z",
-          "pushedAt": "2026-09-20T23:56:06Z",
+          "updatedAt": "2026-09-22T04:47:59Z",
+          "pushedAt": "2026-09-22T03:14:26Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2763,8 +2763,8 @@
           "fullName": "zhayujie/CowAgent",
           "name": "CowAgent",
           "owner": "zhayujie",
-          "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)",
-          "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。 （原微信上的chatgpt）",
+          "description": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+          "descriptionZh": "開源超級AI助理和Agent Harness。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
           "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
           "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
           "contentZh": [
@@ -2816,10 +2816,10 @@
             "openclaw",
             "skills"
           ],
-          "stars": 47059,
-          "forks": 10366,
-          "watchers": 47059,
-          "openIssues": 24,
+          "stars": 47065,
+          "forks": 10369,
+          "watchers": 47065,
+          "openIssues": 25,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2846,8 +2846,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-09-21T05:11:53Z",
-          "pushedAt": "2026-09-21T04:27:33Z",
+          "updatedAt": "2026-09-22T05:03:43Z",
+          "pushedAt": "2026-09-22T03:50:38Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -2924,10 +2924,10 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 23789,
-          "forks": 1717,
-          "watchers": 23789,
-          "openIssues": 264,
+          "stars": 23898,
+          "forks": 1722,
+          "watchers": 23898,
+          "openIssues": 269,
           "likes": 25,
           "hearts": 23,
           "reactionTotal": 64,
@@ -2954,8 +2954,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-09-21T05:13:52Z",
-          "pushedAt": "2026-09-20T12:05:59Z",
+          "updatedAt": "2026-09-22T05:02:00Z",
+          "pushedAt": "2026-09-21T12:06:47Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
@@ -3032,10 +3032,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 26192,
-          "forks": 3689,
-          "watchers": 26192,
-          "openIssues": 18,
+          "stars": 26227,
+          "forks": 3694,
+          "watchers": 26227,
+          "openIssues": 25,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -3062,7 +3062,7 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-09-21T04:57:25Z",
+          "updatedAt": "2026-09-22T05:06:40Z",
           "pushedAt": "2026-08-30T09:46:16Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
@@ -3135,9 +3135,9 @@
             "skills"
           ],
           "stars": 490,
-          "forks": 46,
+          "forks": 47,
           "watchers": 490,
-          "openIssues": 4,
+          "openIssues": 5,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
