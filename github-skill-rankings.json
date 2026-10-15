@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T05:15:25.005Z",
+  "generatedAt": "2026-10-15T05:04:09.904Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-10-07",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-07、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-10-08",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "paperclipai-paperclip",
@@ -35,11 +35,11 @@
               "name": "paperclip",
               "owner": "paperclipai",
               "description": "The open-source app everyone uses to manage agents at work",
-              "descriptionZh": "每個人都用它來管理工作中的agent的開源應用程式",
-              "oneLineZh": "每個人都用它來管理工作中的agent的開源應用程式",
-              "introZh": "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+              "descriptionZh": "The open-source app everyone uses to manage agents at work",
+              "oneLineZh": "The open-source app everyone uses to manage agents at work",
+              "introZh": "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
               "contentZh": [
-                "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+                "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
                 "從 topics 來看，它和 acpx、agent-orchestration、agent-skills、agentic-ai、ai-agents、ai-engineering、ai-governance、ai-tools 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -91,10 +91,10 @@
                 "project-management",
                 "workflow-automation"
               ],
-              "stars": 101668,
-              "forks": 17048,
-              "watchers": 101668,
-              "openIssues": 6080,
+              "stars": 102253,
+              "forks": 17134,
+              "watchers": 102253,
+              "openIssues": 5976,
               "likes": 266,
               "hearts": 11,
               "reactionTotal": 303,
@@ -121,8 +121,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-10-14T05:10:19Z",
-              "pushedAt": "2026-10-14T05:07:19Z",
+              "updatedAt": "2026-10-15T04:59:23Z",
+              "pushedAt": "2026-10-15T04:59:29Z",
               "createdAt": "2026-03-02T15:01:51Z",
               "homepage": "https://paperclip.ing",
               "url": "https://github.com/paperclipai/paperclip",
@@ -143,7 +143,7 @@
               "name": "claude-mem",
               "owner": "thedotmack",
               "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-              "descriptionZh": "每個agent跨會話的持久上下文 – 捕捉agent在會話期間所做的所有操作，使用 AI 對其進行壓縮，並將相關上下文注入到未來的會話中。適用於 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等",
+              "descriptionZh": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
               "oneLineZh": "替 Claude Code 類 agent 補上跨對話記憶，把重要上下文壓縮後帶到未來任務。",
               "introZh": "claude-mem 聚焦在 agent 記憶管理。它會捕捉工作過程中的重要資訊，壓縮成可重用上下文，讓下一次任務不必從零開始。",
               "contentZh": [
@@ -199,10 +199,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 100509,
-              "forks": 8806,
-              "watchers": 100509,
-              "openIssues": 90,
+              "stars": 100813,
+              "forks": 8833,
+              "watchers": 100813,
+              "openIssues": 101,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -229,7 +229,7 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-10-14T05:10:18Z",
+              "updatedAt": "2026-10-15T04:57:19Z",
               "pushedAt": "2026-10-13T21:35:02Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
@@ -239,8 +239,116 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "zhayujie-cowagent",
+              "id": "morluto-rea",
               "rank": 3,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "morluto/rea",
+              "name": "rea",
+              "owner": "morluto",
+              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "descriptionZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "oneLineZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "introZh": "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+              "contentZh": [
+                "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 12、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 7、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要記憶 / 上下文管理的 coding agent",
+                "用在長任務、跨對話延續與知識取回 workflow",
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "TypeScript",
+              "topics": [
+                "agent-skills",
+                "ai-agents",
+                "binary-analysis",
+                "claude-code",
+                "cli",
+                "codex",
+                "cordis",
+                "decompiler",
+                "developer-tools",
+                "dsh",
+                "dsh-plugin",
+                "ghidra",
+                "hopper",
+                "llm",
+                "mcp",
+                "model-context-protocol",
+                "rea",
+                "reverse-engineering",
+                "static-analysis",
+                "touhou"
+              ],
+              "stars": 248498,
+              "forks": 62345,
+              "watchers": 248498,
+              "openIssues": 809,
+              "likes": 36,
+              "hearts": 1,
+              "reactionTotal": 41,
+              "reactionSamples": [
+                {
+                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+                  "url": "https://github.com/morluto/rea/issues/1416",
+                  "likes": 12,
+                  "hearts": 0,
+                  "comments": 1
+                },
+                {
+                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
+                  "url": "https://github.com/morluto/rea/issues/1551",
+                  "likes": 7,
+                  "hearts": 0,
+                  "comments": 3
+                },
+                {
+                  "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
+                  "url": "https://github.com/morluto/rea/issues/1267",
+                  "likes": 3,
+                  "hearts": 0,
+                  "comments": 1
+                }
+              ],
+              "updatedAt": "2026-10-15T04:58:30Z",
+              "pushedAt": "2026-10-15T04:55:00Z",
+              "createdAt": "2026-04-14T00:51:32Z",
+              "homepage": "https://rea.tools",
+              "url": "https://github.com/morluto/rea",
+              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/morluto/rea.git",
+              "license": "MIT"
+            },
+            {
+              "id": "zhayujie-cowagent",
+              "rank": 4,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "skill-workflow",
@@ -251,7 +359,7 @@
               "name": "CowAgent",
               "owner": "zhayujie",
               "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-              "descriptionZh": "开源个人人工智能助理和代理线束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多渠道。轻量级、可扩展、单行安装。",
+              "descriptionZh": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
               "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
               "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
               "contentZh": [
@@ -304,10 +412,10 @@
                 "personal-agent",
                 "skills"
               ],
-              "stars": 47387,
-              "forks": 10387,
-              "watchers": 47387,
-              "openIssues": 71,
+              "stars": 47406,
+              "forks": 10396,
+              "watchers": 47406,
+              "openIssues": 80,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -334,121 +442,13 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-10-14T05:08:51Z",
-              "pushedAt": "2026-10-14T04:03:18Z",
+              "updatedAt": "2026-10-15T03:20:25Z",
+              "pushedAt": "2026-10-14T12:10:54Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
               "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
               "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-              "license": "MIT"
-            },
-            {
-              "id": "morluto-rea",
-              "rank": 4,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "morluto/rea",
-              "name": "rea",
-              "owner": "morluto",
-              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-              "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-              "contentZh": [
-                "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、ctf 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 9、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要記憶 / 上下文管理的 coding agent",
-                "用在長任務、跨對話延續與知識取回 workflow",
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "TypeScript",
-              "topics": [
-                "agent-skills",
-                "ai-agents",
-                "binary-analysis",
-                "claude-code",
-                "cli",
-                "codex",
-                "cordis",
-                "ctf",
-                "decompiler",
-                "developer-tools",
-                "dsh",
-                "dsh-plugin",
-                "ghidra",
-                "hopper",
-                "llm",
-                "mcp",
-                "model-context-protocol",
-                "rea",
-                "reverse-engineering",
-                "static-analysis"
-              ],
-              "stars": 215380,
-              "forks": 53098,
-              "watchers": 215380,
-              "openIssues": 534,
-              "likes": 32,
-              "hearts": 0,
-              "reactionTotal": 35,
-              "reactionSamples": [
-                {
-                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-                  "url": "https://github.com/morluto/rea/issues/1416",
-                  "likes": 9,
-                  "hearts": 0,
-                  "comments": 1
-                },
-                {
-                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
-                  "url": "https://github.com/morluto/rea/issues/1551",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 2
-                },
-                {
-                  "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
-                  "url": "https://github.com/morluto/rea/issues/1267",
-                  "likes": 3,
-                  "hearts": 0,
-                  "comments": 1
-                }
-              ],
-              "updatedAt": "2026-10-14T05:09:34Z",
-              "pushedAt": "2026-10-14T05:05:33Z",
-              "createdAt": "2026-04-14T00:51:32Z",
-              "homepage": "https://rea.tools",
-              "url": "https://github.com/morluto/rea",
-              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/morluto/rea.git",
               "license": "MIT"
             },
             {
@@ -464,7 +464,7 @@
               "name": "context-mode",
               "owner": "mksglu",
               "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+              "descriptionZh": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
               "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
               "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
               "contentZh": [
@@ -518,16 +518,16 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 28417,
-              "forks": 2000,
-              "watchers": 28417,
-              "openIssues": 357,
+              "stars": 29286,
+              "forks": 2054,
+              "watchers": 29286,
+              "openIssues": 359,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-10-14T05:09:17Z",
-              "pushedAt": "2026-10-14T01:57:23Z",
+              "updatedAt": "2026-10-15T04:57:33Z",
+              "pushedAt": "2026-10-14T22:18:40Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -541,8 +541,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-09-14",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-14、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-15",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "paperclipai-paperclip",
@@ -557,11 +557,11 @@
               "name": "paperclip",
               "owner": "paperclipai",
               "description": "The open-source app everyone uses to manage agents at work",
-              "descriptionZh": "每個人都用它來管理工作中的agent的開源應用程式",
-              "oneLineZh": "每個人都用它來管理工作中的agent的開源應用程式",
-              "introZh": "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+              "descriptionZh": "The open-source app everyone uses to manage agents at work",
+              "oneLineZh": "The open-source app everyone uses to manage agents at work",
+              "introZh": "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
               "contentZh": [
-                "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+                "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
                 "從 topics 來看，它和 acpx、agent-orchestration、agent-skills、agentic-ai、ai-agents、ai-engineering、ai-governance、ai-tools 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
                 "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
                 "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -613,10 +613,10 @@
                 "project-management",
                 "workflow-automation"
               ],
-              "stars": 101669,
-              "forks": 17048,
-              "watchers": 101669,
-              "openIssues": 6080,
+              "stars": 102254,
+              "forks": 17134,
+              "watchers": 102254,
+              "openIssues": 5975,
               "likes": 266,
               "hearts": 11,
               "reactionTotal": 303,
@@ -643,8 +643,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-10-14T05:11:37Z",
-              "pushedAt": "2026-10-14T05:07:19Z",
+              "updatedAt": "2026-10-15T05:01:02Z",
+              "pushedAt": "2026-10-15T05:01:02Z",
               "createdAt": "2026-03-02T15:01:51Z",
               "homepage": "https://paperclip.ing",
               "url": "https://github.com/paperclipai/paperclip",
@@ -665,7 +665,7 @@
               "name": "claude-mem",
               "owner": "thedotmack",
               "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-              "descriptionZh": "每個agent跨會話的持久上下文 – 捕捉agent在會話期間所做的所有操作，使用 AI 對其進行壓縮，並將相關上下文注入到未來的會話中。適用於 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等",
+              "descriptionZh": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
               "oneLineZh": "替 Claude Code 類 agent 補上跨對話記憶，把重要上下文壓縮後帶到未來任務。",
               "introZh": "claude-mem 聚焦在 agent 記憶管理。它會捕捉工作過程中的重要資訊，壓縮成可重用上下文，讓下一次任務不必從零開始。",
               "contentZh": [
@@ -721,10 +721,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 100509,
-              "forks": 8806,
-              "watchers": 100509,
-              "openIssues": 90,
+              "stars": 100813,
+              "forks": 8833,
+              "watchers": 100813,
+              "openIssues": 101,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -751,7 +751,7 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-10-14T05:10:18Z",
+              "updatedAt": "2026-10-15T04:57:19Z",
               "pushedAt": "2026-10-13T21:35:02Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
@@ -761,8 +761,116 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "zhayujie-cowagent",
+              "id": "morluto-rea",
               "rank": 3,
+              "period": "monthly",
+              "periodKey": "monthly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "morluto/rea",
+              "name": "rea",
+              "owner": "morluto",
+              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "descriptionZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "oneLineZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "introZh": "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+              "contentZh": [
+                "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 12、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 7、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要記憶 / 上下文管理的 coding agent",
+                "用在長任務、跨對話延續與知識取回 workflow",
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "TypeScript",
+              "topics": [
+                "agent-skills",
+                "ai-agents",
+                "binary-analysis",
+                "claude-code",
+                "cli",
+                "codex",
+                "cordis",
+                "decompiler",
+                "developer-tools",
+                "dsh",
+                "dsh-plugin",
+                "ghidra",
+                "hopper",
+                "llm",
+                "mcp",
+                "model-context-protocol",
+                "rea",
+                "reverse-engineering",
+                "static-analysis",
+                "touhou"
+              ],
+              "stars": 248533,
+              "forks": 62358,
+              "watchers": 248533,
+              "openIssues": 810,
+              "likes": 36,
+              "hearts": 1,
+              "reactionTotal": 41,
+              "reactionSamples": [
+                {
+                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+                  "url": "https://github.com/morluto/rea/issues/1416",
+                  "likes": 12,
+                  "hearts": 0,
+                  "comments": 1
+                },
+                {
+                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
+                  "url": "https://github.com/morluto/rea/issues/1551",
+                  "likes": 7,
+                  "hearts": 0,
+                  "comments": 3
+                },
+                {
+                  "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
+                  "url": "https://github.com/morluto/rea/issues/1267",
+                  "likes": 3,
+                  "hearts": 0,
+                  "comments": 1
+                }
+              ],
+              "updatedAt": "2026-10-15T05:00:13Z",
+              "pushedAt": "2026-10-15T04:59:03Z",
+              "createdAt": "2026-04-14T00:51:32Z",
+              "homepage": "https://rea.tools",
+              "url": "https://github.com/morluto/rea",
+              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/morluto/rea.git",
+              "license": "MIT"
+            },
+            {
+              "id": "zhayujie-cowagent",
+              "rank": 4,
               "period": "monthly",
               "periodKey": "monthly",
               "categoryKey": "skill-workflow",
@@ -773,7 +881,7 @@
               "name": "CowAgent",
               "owner": "zhayujie",
               "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-              "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
+              "descriptionZh": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
               "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
               "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
               "contentZh": [
@@ -826,10 +934,10 @@
                 "personal-agent",
                 "skills"
               ],
-              "stars": 47387,
-              "forks": 10387,
-              "watchers": 47387,
-              "openIssues": 71,
+              "stars": 47406,
+              "forks": 10396,
+              "watchers": 47406,
+              "openIssues": 80,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -856,121 +964,13 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-10-14T05:08:51Z",
-              "pushedAt": "2026-10-14T04:03:18Z",
+              "updatedAt": "2026-10-15T03:20:25Z",
+              "pushedAt": "2026-10-14T12:10:54Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
               "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
               "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-              "license": "MIT"
-            },
-            {
-              "id": "morluto-rea",
-              "rank": 4,
-              "period": "monthly",
-              "periodKey": "monthly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "morluto/rea",
-              "name": "rea",
-              "owner": "morluto",
-              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-              "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-              "contentZh": [
-                "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、ctf 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 9、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要記憶 / 上下文管理的 coding agent",
-                "用在長任務、跨對話延續與知識取回 workflow",
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "TypeScript",
-              "topics": [
-                "agent-skills",
-                "ai-agents",
-                "binary-analysis",
-                "claude-code",
-                "cli",
-                "codex",
-                "cordis",
-                "ctf",
-                "decompiler",
-                "developer-tools",
-                "dsh",
-                "dsh-plugin",
-                "ghidra",
-                "hopper",
-                "llm",
-                "mcp",
-                "model-context-protocol",
-                "rea",
-                "reverse-engineering",
-                "static-analysis"
-              ],
-              "stars": 215418,
-              "forks": 53110,
-              "watchers": 215418,
-              "openIssues": 535,
-              "likes": 32,
-              "hearts": 0,
-              "reactionTotal": 35,
-              "reactionSamples": [
-                {
-                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-                  "url": "https://github.com/morluto/rea/issues/1416",
-                  "likes": 9,
-                  "hearts": 0,
-                  "comments": 1
-                },
-                {
-                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
-                  "url": "https://github.com/morluto/rea/issues/1551",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 2
-                },
-                {
-                  "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
-                  "url": "https://github.com/morluto/rea/issues/1267",
-                  "likes": 3,
-                  "hearts": 0,
-                  "comments": 1
-                }
-              ],
-              "updatedAt": "2026-10-14T05:11:25Z",
-              "pushedAt": "2026-10-14T05:10:40Z",
-              "createdAt": "2026-04-14T00:51:32Z",
-              "homepage": "https://rea.tools",
-              "url": "https://github.com/morluto/rea",
-              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/morluto/rea.git",
               "license": "MIT"
             },
             {
@@ -986,7 +986,7 @@
               "name": "context-mode",
               "owner": "mksglu",
               "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+              "descriptionZh": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
               "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
               "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
               "contentZh": [
@@ -1040,16 +1040,16 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 28418,
-              "forks": 2000,
-              "watchers": 28418,
-              "openIssues": 357,
+              "stars": 29289,
+              "forks": 2054,
+              "watchers": 29289,
+              "openIssues": 359,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-10-14T05:10:50Z",
-              "pushedAt": "2026-10-14T01:57:23Z",
+              "updatedAt": "2026-10-15T05:00:12Z",
+              "pushedAt": "2026-10-14T22:18:40Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -1071,8 +1071,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-10-07",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-10-07、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-10-08",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-10-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1087,7 +1087,7 @@
               "name": "ruflo",
               "owner": "ruvnet",
               "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-              "descriptionZh": "🌊 原始特工安全帶。部署智慧多人群體、協調自主工作流程並建構對話式人工智慧系統。具有自適應記憶、自學習智慧、聯邦、向量 RAG 整合以及原生 Claude Code / Codex / Hermes 等整合功能",
+              "descriptionZh": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
               "oneLineZh": "面向多代理工作流的 agent harness，重點在記憶、協調、安全帶與自主流程管理。",
               "introZh": "ruflo 把多代理協作、記憶、RAG、工具與 Claude Code / OpenAI 類工作流放在一起，適合用來研究 agent workflow 如何被工程化管理。",
               "contentZh": [
@@ -1143,10 +1143,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 74585,
-              "forks": 8871,
-              "watchers": 74585,
-              "openIssues": 1067,
+              "stars": 74710,
+              "forks": 8891,
+              "watchers": 74710,
+              "openIssues": 1044,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1173,8 +1173,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-10-14T05:11:55Z",
-              "pushedAt": "2026-10-13T19:45:57Z",
+              "updatedAt": "2026-10-15T04:57:56Z",
+              "pushedAt": "2026-10-14T16:33:16Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1195,11 +1195,11 @@
               "name": "haystack",
               "owner": "deepset-ai",
               "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-              "descriptionZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "oneLineZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+              "descriptionZh": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+              "oneLineZh": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modul...",
+              "introZh": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems. | | | | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | CI/CD | | | Docs | | | Package | | | Meta | | Haystack is an open-source AI orchestration framework for building production-ready LLM applications in Python. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Build scalable RAG systems, multimodal applications, semantic search, question answering, and autonomous agents, all in a transparent architecture that lets you experiment, customize deeply, and deploy with confidence. Table of Contents Installation Documentation Features Haystack Enterprise: Support & Platform Telemetry 🖖 Community Contributing to Haystack Organizations using Haystack Inst...",
               "contentZh": [
-                "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+                "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems. | | | | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | CI/CD | | | Docs | | | Package | | | Meta | | Haystack is an open-source AI orchestration framework for building production-ready LLM applications in Python. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Build scalable RAG systems, multimodal applications, semantic search, question answering, and autonomous agents, all in a transparent architecture that lets you experiment, customize deeply, and deploy with confidence. Table of Contents Installation Documentation Features Haystack Enterprise: Support & Platform Telemetry 🖖 Community Contributing to Haystack Organizations using Haystack Inst...",
                 "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1251,10 +1251,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26738,
-              "forks": 3283,
-              "watchers": 26738,
-              "openIssues": 161,
+              "stars": 26745,
+              "forks": 3284,
+              "watchers": 26745,
+              "openIssues": 156,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1281,8 +1281,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-10-14T04:24:19Z",
-              "pushedAt": "2026-10-13T20:36:28Z",
+              "updatedAt": "2026-10-15T04:11:43Z",
+              "pushedAt": "2026-10-14T20:54:50Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1303,11 +1303,11 @@
               "name": "nanobot",
               "owner": "HKUDS",
               "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
-              "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+              "descriptionZh": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+              "oneLineZh": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi...",
+              "introZh": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps English | 简体中文 | 繁體中文 | Español | Français | Bahasa Indonesia | 日本語 | 한국어 | Русский | Tiếng Việt Discord · X · WeChat / Feishu nanobot 🐈 nanobot is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python. Use it in a browser, terminal, or chat app to work with files, remember preferences, and schedule tasks. Connect a supported model provider or local model server to supply the AI. Start Here | You want to... | Go to | |---|---| | Install nanobot with no terminal/config background | Start Without Technical Background | | Install quickly and get your first reply | Install and Quick Start | | Open the bundled browser UI | WebUI | | Connect Telegram, Discord, WeChat, Slack, Email, Mattermost, Linear, or another channel | Chat app guide | | Configure providers, fallback models, Langfuse, MCP, web tools, or security | Docs and Configuration | | Develop the browser UI | Install current source, then WebUI development and Contributing | | Integrate from Python or HTTP | Python SDK or Agent API | | Understand or extend the internals | Architecture, Contributing, and Provider extensions | | Deploy to the cloud or keep nanobot running as a service | Deployment | What can nanobot do? nanobot can: run in a browser WebUI or terminal connect to Telegram, Discord, Slack, WeChat, Email, Mattermost, Linear, and other channels read PDF, Word (.docx), Excel (...",
               "contentZh": [
-                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+                "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps English | 简体中文 | 繁體中文 | Español | Français | Bahasa Indonesia | 日本語 | 한국어 | Русский | Tiếng Việt Discord · X · WeChat / Feishu nanobot 🐈 nanobot is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python. Use it in a browser, terminal, or chat app to work with files, remember preferences, and schedule tasks. Connect a supported model provider or local model server to supply the AI. Start Here | You want to... | Go to | |---|---| | Install nanobot with no terminal/config background | Start Without Technical Background | | Install quickly and get your first reply | Install and Quick Start | | Open the bundled browser UI | WebUI | | Connect Telegram, Discord, WeChat, Slack, Email, Mattermost, Linear, or another channel | Chat app guide | | Configure providers, fallback models, Langfuse, MCP, web tools, or security | Docs and Configuration | | Develop the browser UI | Install current source, then WebUI development and Contributing | | Integrate from Python or HTTP | Python SDK or Agent API | | Understand or extend the internals | Architecture, Contributing, and Provider extensions | | Deploy to the cloud or keep nanobot running as a service | Deployment | What can nanobot do? nanobot can: run in a browser WebUI or terminal connect to Telegram, Discord, Slack, WeChat, Email, Mattermost, Linear, and other channels read PDF, Word (.docx), Excel (...",
                 "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1359,10 +1359,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 49006,
+              "stars": 49040,
               "forks": 8630,
-              "watchers": 49006,
-              "openIssues": 842,
+              "watchers": 49040,
+              "openIssues": 858,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1389,8 +1389,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-10-14T05:08:12Z",
-              "pushedAt": "2026-10-14T04:04:10Z",
+              "updatedAt": "2026-10-15T05:01:01Z",
+              "pushedAt": "2026-10-15T05:00:11Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1411,7 +1411,7 @@
               "name": "headroom",
               "owner": "headroomlabs-ai",
               "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-              "descriptionZh": "在工具輸出、日誌、檔案和 RAG 區塊到達 LLM 之前對其進行壓縮。編碼代理的標記減少了 20%，JSON 的標記減少了 60-95%，答案相同。庫、代理、MCP 伺服器。",
+              "descriptionZh": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
               "oneLineZh": "在內容送進 LLM 前先壓縮工具輸出、log、檔案與 RAG 區塊，降低 token 消耗。",
               "introZh": "Headroom 解決的是 LLM/agent 工作流常見的上下文爆量問題。它可用在工具輸出、log、檔案與 RAG 區塊進入模型前的壓縮與整理。",
               "contentZh": [
@@ -1467,10 +1467,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 75282,
-              "forks": 5842,
-              "watchers": 75282,
-              "openIssues": 428,
+              "stars": 75383,
+              "forks": 5850,
+              "watchers": 75383,
+              "openIssues": 445,
               "likes": 408,
               "hearts": 26,
               "reactionTotal": 468,
@@ -1497,8 +1497,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-10-14T04:55:06Z",
-              "pushedAt": "2026-10-13T23:39:02Z",
+              "updatedAt": "2026-10-15T04:13:13Z",
+              "pushedAt": "2026-10-14T22:46:08Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1519,18 +1519,18 @@
               "name": "harness-sdk",
               "owner": "strands-agents",
               "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
-              "descriptionZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
-              "oneLineZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
-              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？載入用於框架選擇、腳手架、工具、MCP 整合和 LangGraph 遷移的 Strands 技能。 Claude Code 透過 .claude/skills/strands 在此儲存庫中自動發現它；在另一個儲存庫中，將相同資料夾複製或符號連結到 .claude/skills/strands。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自...的線束代理聊天",
+              "descriptionZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+              "oneLineZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any...",
+              "introZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud. Strands Agents A model-driven approach to building AI agents in just a few lines of code. Documentation ◆ Samples ◆ MCP Server ◆ Discord Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript. Choose Strands when you would otherwise write your own agent loop: it runs in your process with no hosted control plane, and it covers the jobs a hand-rolled loop grows into. In one SDK you get lifecycle controls (turn limits, token budgets, cancellation, stop reasons), tools and structured output, MCP, multi-agent patterns, memory and sessions, model portability, streaming, guardrails, tracing, and evals. Using a coding agent? Install the Strands plugin for Claude Code, Codex, or Cursor. It adds framework selection, scaffolding, tool authoring, MCP server connections, web framework guides, and LangGraph migration guidance. See Use Strands with AI coding agents for install and verification steps. This monorepo contains Strands harness, the Python and TypeScript SDKs, the documentation site, and supporting packages: | Directory | Description | |-----------|-------------| | harness-py/ | Python Strands harness: fully assembled agent via createharness() (PyPI · docs) | | harness-ts/ | TypeScript Strands harness: fully assembled agent via createHarness() (npm · docs) | | strands-cli/ | strands CLI: prototype and chat with a harness agent from the ter...",
               "contentZh": [
-                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？載入用於框架選擇、腳手架、工具、MCP 整合和 LangGraph 遷移的 Strands 技能。 Claude Code 透過 .claude/skills/strands 在此儲存庫中自動發現它；在另一個儲存庫中，將相同資料夾複製或符號連結到 .claude/skills/strands。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自...的線束代理聊天",
+                "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud. Strands Agents A model-driven approach to building AI agents in just a few lines of code. Documentation ◆ Samples ◆ MCP Server ◆ Discord Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript. Choose Strands when you would otherwise write your own agent loop: it runs in your process with no hosted control plane, and it covers the jobs a hand-rolled loop grows into. In one SDK you get lifecycle controls (turn limits, token budgets, cancellation, stop reasons), tools and structured output, MCP, multi-agent patterns, memory and sessions, model portability, streaming, guardrails, tracing, and evals. Using a coding agent? Install the Strands plugin for Claude Code, Codex, or Cursor. It adds framework selection, scaffolding, tool authoring, MCP server connections, web framework guides, and LangGraph migration guidance. See Use Strands with AI coding agents for install and verification steps. This monorepo contains Strands harness, the Python and TypeScript SDKs, the documentation site, and supporting packages: | Directory | Description | |-----------|-------------| | harness-py/ | Python Strands harness: fully assembled agent via createharness() (PyPI · docs) | | harness-ts/ | TypeScript Strands harness: fully assembled agent via createHarness() (npm · docs) | | strands-cli/ | strands CLI: prototype and chat with a harness agent from the ter...",
                 "從 topics 來看，它和 agent-framework、agentic、agentic-ai、agents、ai、ai-agents、anthropic、autonomous-agents 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
               ],
               "discussionZh": [
                 "「[FEATURE] Add TypeScript/JavaScript/NodeJS SDK」是目前較多人互動的討論之一（👍 121、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[FEATURE] Request to Develop a Go SDK for Strands」是目前較多人互動的討論之一（👍 94、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] Request to Develop a Go SDK for Strands」是目前較多人互動的討論之一（👍 95、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
                 "「[FEATURE] Add support for skills」是目前較多人互動的討論之一（👍 51、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
@@ -1575,13 +1575,13 @@
                 "strands-agents",
                 "typescript"
               ],
-              "stars": 8797,
-              "forks": 1365,
-              "watchers": 8797,
-              "openIssues": 1008,
-              "likes": 398,
+              "stars": 8817,
+              "forks": 1369,
+              "watchers": 8817,
+              "openIssues": 1000,
+              "likes": 399,
               "hearts": 1,
-              "reactionTotal": 426,
+              "reactionTotal": 427,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] Add TypeScript/JavaScript/NodeJS SDK",
@@ -1593,7 +1593,7 @@
                 {
                   "title": "[FEATURE] Request to Develop a Go SDK for Strands",
                   "url": "https://github.com/strands-agents/harness-sdk/issues/616",
-                  "likes": 94,
+                  "likes": 95,
                   "hearts": 0,
                   "comments": 8
                 },
@@ -1605,8 +1605,8 @@
                   "comments": 16
                 }
               ],
-              "updatedAt": "2026-10-14T04:56:41Z",
-              "pushedAt": "2026-10-13T21:06:51Z",
+              "updatedAt": "2026-10-15T02:51:42Z",
+              "pushedAt": "2026-10-14T22:30:22Z",
               "createdAt": "2025-05-14T19:59:51Z",
               "homepage": "http://strandsagents.com/",
               "url": "https://github.com/strands-agents/harness-sdk",
@@ -1620,8 +1620,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-09-14",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-14、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-15",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1636,7 +1636,7 @@
               "name": "ruflo",
               "owner": "ruvnet",
               "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-              "descriptionZh": "🌊 原始特工安全帶。部署智慧多人群體、協調自主工作流程並建構對話式人工智慧系統。具有自適應記憶、自學習智慧、聯邦、向量 RAG 整合以及原生 Claude Code / Codex / Hermes 等整合功能",
+              "descriptionZh": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
               "oneLineZh": "面向多代理工作流的 agent harness，重點在記憶、協調、安全帶與自主流程管理。",
               "introZh": "ruflo 把多代理協作、記憶、RAG、工具與 Claude Code / OpenAI 類工作流放在一起，適合用來研究 agent workflow 如何被工程化管理。",
               "contentZh": [
@@ -1692,10 +1692,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 74586,
-              "forks": 8871,
-              "watchers": 74586,
-              "openIssues": 1067,
+              "stars": 74710,
+              "forks": 8891,
+              "watchers": 74710,
+              "openIssues": 1044,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1722,8 +1722,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-10-14T05:13:40Z",
-              "pushedAt": "2026-10-13T19:45:57Z",
+              "updatedAt": "2026-10-15T04:57:56Z",
+              "pushedAt": "2026-10-14T16:33:16Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1744,11 +1744,11 @@
               "name": "haystack",
               "owner": "deepset-ai",
               "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-              "descriptionZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "oneLineZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+              "descriptionZh": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+              "oneLineZh": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modul...",
+              "introZh": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems. | | | | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | CI/CD | | | Docs | | | Package | | | Meta | | Haystack is an open-source AI orchestration framework for building production-ready LLM applications in Python. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Build scalable RAG systems, multimodal applications, semantic search, question answering, and autonomous agents, all in a transparent architecture that lets you experiment, customize deeply, and deploy with confidence. Table of Contents Installation Documentation Features Haystack Enterprise: Support & Platform Telemetry 🖖 Community Contributing to Haystack Organizations using Haystack Inst...",
               "contentZh": [
-                "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+                "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems. | | | | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | CI/CD | | | Docs | | | Package | | | Meta | | Haystack is an open-source AI orchestration framework for building production-ready LLM applications in Python. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Build scalable RAG systems, multimodal applications, semantic search, question answering, and autonomous agents, all in a transparent architecture that lets you experiment, customize deeply, and deploy with confidence. Table of Contents Installation Documentation Features Haystack Enterprise: Support & Platform Telemetry 🖖 Community Contributing to Haystack Organizations using Haystack Inst...",
                 "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1800,10 +1800,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26738,
-              "forks": 3283,
-              "watchers": 26738,
-              "openIssues": 161,
+              "stars": 26745,
+              "forks": 3284,
+              "watchers": 26745,
+              "openIssues": 156,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1830,8 +1830,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-10-14T04:24:19Z",
-              "pushedAt": "2026-10-13T20:36:28Z",
+              "updatedAt": "2026-10-15T04:11:43Z",
+              "pushedAt": "2026-10-14T20:54:50Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1852,11 +1852,11 @@
               "name": "nanobot",
               "owner": "HKUDS",
               "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
-              "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+              "descriptionZh": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+              "oneLineZh": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi...",
+              "introZh": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps English | 简体中文 | 繁體中文 | Español | Français | Bahasa Indonesia | 日本語 | 한국어 | Русский | Tiếng Việt Discord · X · WeChat / Feishu nanobot 🐈 nanobot is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python. Use it in a browser, terminal, or chat app to work with files, remember preferences, and schedule tasks. Connect a supported model provider or local model server to supply the AI. Start Here | You want to... | Go to | |---|---| | Install nanobot with no terminal/config background | Start Without Technical Background | | Install quickly and get your first reply | Install and Quick Start | | Open the bundled browser UI | WebUI | | Connect Telegram, Discord, WeChat, Slack, Email, Mattermost, Linear, or another channel | Chat app guide | | Configure providers, fallback models, Langfuse, MCP, web tools, or security | Docs and Configuration | | Develop the browser UI | Install current source, then WebUI development and Contributing | | Integrate from Python or HTTP | Python SDK or Agent API | | Understand or extend the internals | Architecture, Contributing, and Provider extensions | | Deploy to the cloud or keep nanobot running as a service | Deployment | What can nanobot do? nanobot can: run in a browser WebUI or terminal connect to Telegram, Discord, Slack, WeChat, Email, Mattermost, Linear, and other channels read PDF, Word (.docx), Excel (...",
               "contentZh": [
-                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+                "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps English | 简体中文 | 繁體中文 | Español | Français | Bahasa Indonesia | 日本語 | 한국어 | Русский | Tiếng Việt Discord · X · WeChat / Feishu nanobot 🐈 nanobot is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python. Use it in a browser, terminal, or chat app to work with files, remember preferences, and schedule tasks. Connect a supported model provider or local model server to supply the AI. Start Here | You want to... | Go to | |---|---| | Install nanobot with no terminal/config background | Start Without Technical Background | | Install quickly and get your first reply | Install and Quick Start | | Open the bundled browser UI | WebUI | | Connect Telegram, Discord, WeChat, Slack, Email, Mattermost, Linear, or another channel | Chat app guide | | Configure providers, fallback models, Langfuse, MCP, web tools, or security | Docs and Configuration | | Develop the browser UI | Install current source, then WebUI development and Contributing | | Integrate from Python or HTTP | Python SDK or Agent API | | Understand or extend the internals | Architecture, Contributing, and Provider extensions | | Deploy to the cloud or keep nanobot running as a service | Deployment | What can nanobot do? nanobot can: run in a browser WebUI or terminal connect to Telegram, Discord, Slack, WeChat, Email, Mattermost, Linear, and other channels read PDF, Word (.docx), Excel (...",
                 "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1908,10 +1908,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 49006,
+              "stars": 49040,
               "forks": 8630,
-              "watchers": 49006,
-              "openIssues": 842,
+              "watchers": 49040,
+              "openIssues": 858,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1938,8 +1938,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-10-14T05:08:12Z",
-              "pushedAt": "2026-10-14T04:04:10Z",
+              "updatedAt": "2026-10-15T05:01:01Z",
+              "pushedAt": "2026-10-15T05:00:11Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1960,7 +1960,7 @@
               "name": "headroom",
               "owner": "headroomlabs-ai",
               "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-              "descriptionZh": "在工具輸出、日誌、檔案和 RAG 區塊到達 LLM 之前對其進行壓縮。編碼代理的標記減少了 20%，JSON 的標記減少了 60-95%，答案相同。庫、代理、MCP 伺服器。",
+              "descriptionZh": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
               "oneLineZh": "在內容送進 LLM 前先壓縮工具輸出、log、檔案與 RAG 區塊，降低 token 消耗。",
               "introZh": "Headroom 解決的是 LLM/agent 工作流常見的上下文爆量問題。它可用在工具輸出、log、檔案與 RAG 區塊進入模型前的壓縮與整理。",
               "contentZh": [
@@ -2016,10 +2016,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 75282,
-              "forks": 5842,
-              "watchers": 75282,
-              "openIssues": 428,
+              "stars": 75383,
+              "forks": 5850,
+              "watchers": 75383,
+              "openIssues": 445,
               "likes": 408,
               "hearts": 26,
               "reactionTotal": 468,
@@ -2046,8 +2046,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-10-14T04:55:06Z",
-              "pushedAt": "2026-10-13T23:39:02Z",
+              "updatedAt": "2026-10-15T04:13:13Z",
+              "pushedAt": "2026-10-14T22:46:08Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -2068,18 +2068,18 @@
               "name": "harness-sdk",
               "owner": "strands-agents",
               "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
-              "descriptionZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
-              "oneLineZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
-              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？載入用於框架選擇、腳手架、工具、MCP 整合和 LangGraph 遷移的 Strands 技能。 Claude Code 透過 .claude/skills/strands 在此儲存庫中自動發現它；在另一個儲存庫中，將相同資料夾複製或符號連結到 .claude/skills/strands。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自...的線束代理聊天",
+              "descriptionZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+              "oneLineZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any...",
+              "introZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud. Strands Agents A model-driven approach to building AI agents in just a few lines of code. Documentation ◆ Samples ◆ MCP Server ◆ Discord Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript. Choose Strands when you would otherwise write your own agent loop: it runs in your process with no hosted control plane, and it covers the jobs a hand-rolled loop grows into. In one SDK you get lifecycle controls (turn limits, token budgets, cancellation, stop reasons), tools and structured output, MCP, multi-agent patterns, memory and sessions, model portability, streaming, guardrails, tracing, and evals. Using a coding agent? Install the Strands plugin for Claude Code, Codex, or Cursor. It adds framework selection, scaffolding, tool authoring, MCP server connections, web framework guides, and LangGraph migration guidance. See Use Strands with AI coding agents for install and verification steps. This monorepo contains Strands harness, the Python and TypeScript SDKs, the documentation site, and supporting packages: | Directory | Description | |-----------|-------------| | harness-py/ | Python Strands harness: fully assembled agent via createharness() (PyPI · docs) | | harness-ts/ | TypeScript Strands harness: fully assembled agent via createHarness() (npm · docs) | | strands-cli/ | strands CLI: prototype and chat with a harness agent from the ter...",
               "contentZh": [
-                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？載入用於框架選擇、腳手架、工具、MCP 整合和 LangGraph 遷移的 Strands 技能。 Claude Code 透過 .claude/skills/strands 在此儲存庫中自動發現它；在另一個儲存庫中，將相同資料夾複製或符號連結到 .claude/skills/strands。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自...的線束代理聊天",
+                "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud. Strands Agents A model-driven approach to building AI agents in just a few lines of code. Documentation ◆ Samples ◆ MCP Server ◆ Discord Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript. Choose Strands when you would otherwise write your own agent loop: it runs in your process with no hosted control plane, and it covers the jobs a hand-rolled loop grows into. In one SDK you get lifecycle controls (turn limits, token budgets, cancellation, stop reasons), tools and structured output, MCP, multi-agent patterns, memory and sessions, model portability, streaming, guardrails, tracing, and evals. Using a coding agent? Install the Strands plugin for Claude Code, Codex, or Cursor. It adds framework selection, scaffolding, tool authoring, MCP server connections, web framework guides, and LangGraph migration guidance. See Use Strands with AI coding agents for install and verification steps. This monorepo contains Strands harness, the Python and TypeScript SDKs, the documentation site, and supporting packages: | Directory | Description | |-----------|-------------| | harness-py/ | Python Strands harness: fully assembled agent via createharness() (PyPI · docs) | | harness-ts/ | TypeScript Strands harness: fully assembled agent via createHarness() (npm · docs) | | strands-cli/ | strands CLI: prototype and chat with a harness agent from the ter...",
                 "從 topics 來看，它和 agent-framework、agentic、agentic-ai、agents、ai、ai-agents、anthropic、autonomous-agents 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
               ],
               "discussionZh": [
                 "「[FEATURE] Add TypeScript/JavaScript/NodeJS SDK」是目前較多人互動的討論之一（👍 121、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[FEATURE] Request to Develop a Go SDK for Strands」是目前較多人互動的討論之一（👍 94、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] Request to Develop a Go SDK for Strands」是目前較多人互動的討論之一（👍 95、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
                 "「[FEATURE] Add support for skills」是目前較多人互動的討論之一（👍 51、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
@@ -2124,13 +2124,13 @@
                 "strands-agents",
                 "typescript"
               ],
-              "stars": 8797,
-              "forks": 1365,
-              "watchers": 8797,
-              "openIssues": 1008,
-              "likes": 398,
+              "stars": 8818,
+              "forks": 1369,
+              "watchers": 8818,
+              "openIssues": 1000,
+              "likes": 399,
               "hearts": 1,
-              "reactionTotal": 426,
+              "reactionTotal": 427,
               "reactionSamples": [
                 {
                   "title": "[FEATURE] Add TypeScript/JavaScript/NodeJS SDK",
@@ -2142,7 +2142,7 @@
                 {
                   "title": "[FEATURE] Request to Develop a Go SDK for Strands",
                   "url": "https://github.com/strands-agents/harness-sdk/issues/616",
-                  "likes": 94,
+                  "likes": 95,
                   "hearts": 0,
                   "comments": 8
                 },
@@ -2154,8 +2154,8 @@
                   "comments": 16
                 }
               ],
-              "updatedAt": "2026-10-14T04:56:41Z",
-              "pushedAt": "2026-10-13T21:06:51Z",
+              "updatedAt": "2026-10-15T05:02:55Z",
+              "pushedAt": "2026-10-14T22:30:22Z",
               "createdAt": "2025-05-14T19:59:51Z",
               "homepage": "http://strandsagents.com/",
               "url": "https://github.com/strands-agents/harness-sdk",
@@ -2173,8 +2173,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-10-07",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-07、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-10-08",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-08、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "paperclipai-paperclip",
@@ -2189,11 +2189,11 @@
           "name": "paperclip",
           "owner": "paperclipai",
           "description": "The open-source app everyone uses to manage agents at work",
-          "descriptionZh": "每個人都用它來管理工作中的agent的開源應用程式",
-          "oneLineZh": "每個人都用它來管理工作中的agent的開源應用程式",
-          "introZh": "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+          "descriptionZh": "The open-source app everyone uses to manage agents at work",
+          "oneLineZh": "The open-source app everyone uses to manage agents at work",
+          "introZh": "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
           "contentZh": [
-            "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+            "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
             "從 topics 來看，它和 acpx、agent-orchestration、agent-skills、agentic-ai、ai-agents、ai-engineering、ai-governance、ai-tools 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -2245,10 +2245,10 @@
             "project-management",
             "workflow-automation"
           ],
-          "stars": 101668,
-          "forks": 17048,
-          "watchers": 101668,
-          "openIssues": 6080,
+          "stars": 102253,
+          "forks": 17134,
+          "watchers": 102253,
+          "openIssues": 5976,
           "likes": 266,
           "hearts": 11,
           "reactionTotal": 303,
@@ -2275,8 +2275,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-10-14T05:10:19Z",
-          "pushedAt": "2026-10-14T05:07:19Z",
+          "updatedAt": "2026-10-15T04:59:23Z",
+          "pushedAt": "2026-10-15T04:59:29Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "homepage": "https://paperclip.ing",
           "url": "https://github.com/paperclipai/paperclip",
@@ -2297,7 +2297,7 @@
           "name": "claude-mem",
           "owner": "thedotmack",
           "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-          "descriptionZh": "每個agent跨會話的持久上下文 – 捕捉agent在會話期間所做的所有操作，使用 AI 對其進行壓縮，並將相關上下文注入到未來的會話中。適用於 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等",
+          "descriptionZh": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
           "oneLineZh": "替 Claude Code 類 agent 補上跨對話記憶，把重要上下文壓縮後帶到未來任務。",
           "introZh": "claude-mem 聚焦在 agent 記憶管理。它會捕捉工作過程中的重要資訊，壓縮成可重用上下文，讓下一次任務不必從零開始。",
           "contentZh": [
@@ -2353,10 +2353,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 100509,
-          "forks": 8806,
-          "watchers": 100509,
-          "openIssues": 90,
+          "stars": 100813,
+          "forks": 8833,
+          "watchers": 100813,
+          "openIssues": 101,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2383,7 +2383,7 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-10-14T05:10:18Z",
+          "updatedAt": "2026-10-15T04:57:19Z",
           "pushedAt": "2026-10-13T21:35:02Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
@@ -2393,8 +2393,116 @@
           "license": "Apache-2.0"
         },
         {
-          "id": "zhayujie-cowagent",
+          "id": "morluto-rea",
           "rank": 3,
+          "period": "weekly",
+          "periodKey": "weekly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "morluto/rea",
+          "name": "rea",
+          "owner": "morluto",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "descriptionZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "oneLineZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "introZh": "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+          "contentZh": [
+            "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 12、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 7、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "需要記憶 / 上下文管理的 coding agent",
+            "用在長任務、跨對話延續與知識取回 workflow",
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "TypeScript",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "stars": 248498,
+          "forks": 62345,
+          "watchers": 248498,
+          "openIssues": 809,
+          "likes": 36,
+          "hearts": 1,
+          "reactionTotal": 41,
+          "reactionSamples": [
+            {
+              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+              "url": "https://github.com/morluto/rea/issues/1416",
+              "likes": 12,
+              "hearts": 0,
+              "comments": 1
+            },
+            {
+              "title": "Feature: Add support for Binary Ninja as an analysis backend",
+              "url": "https://github.com/morluto/rea/issues/1551",
+              "likes": 7,
+              "hearts": 0,
+              "comments": 3
+            },
+            {
+              "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
+              "url": "https://github.com/morluto/rea/issues/1267",
+              "likes": 3,
+              "hearts": 0,
+              "comments": 1
+            }
+          ],
+          "updatedAt": "2026-10-15T04:58:30Z",
+          "pushedAt": "2026-10-15T04:55:00Z",
+          "createdAt": "2026-04-14T00:51:32Z",
+          "homepage": "https://rea.tools",
+          "url": "https://github.com/morluto/rea",
+          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/morluto/rea.git",
+          "license": "MIT"
+        },
+        {
+          "id": "zhayujie-cowagent",
+          "rank": 4,
           "period": "weekly",
           "periodKey": "weekly",
           "categoryKey": "skill-workflow",
@@ -2405,7 +2513,7 @@
           "name": "CowAgent",
           "owner": "zhayujie",
           "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-          "descriptionZh": "开源个人人工智能助理和代理线束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多渠道。轻量级、可扩展、单行安装。",
+          "descriptionZh": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
           "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
           "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
           "contentZh": [
@@ -2458,10 +2566,10 @@
             "personal-agent",
             "skills"
           ],
-          "stars": 47387,
-          "forks": 10387,
-          "watchers": 47387,
-          "openIssues": 71,
+          "stars": 47406,
+          "forks": 10396,
+          "watchers": 47406,
+          "openIssues": 80,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2488,121 +2596,13 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-10-14T05:08:51Z",
-          "pushedAt": "2026-10-14T04:03:18Z",
+          "updatedAt": "2026-10-15T03:20:25Z",
+          "pushedAt": "2026-10-14T12:10:54Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
           "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
           "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-          "license": "MIT"
-        },
-        {
-          "id": "morluto-rea",
-          "rank": 4,
-          "period": "weekly",
-          "periodKey": "weekly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "morluto/rea",
-          "name": "rea",
-          "owner": "morluto",
-          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-          "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-          "contentZh": [
-            "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、ctf 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 9、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "需要記憶 / 上下文管理的 coding agent",
-            "用在長任務、跨對話延續與知識取回 workflow",
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "TypeScript",
-          "topics": [
-            "agent-skills",
-            "ai-agents",
-            "binary-analysis",
-            "claude-code",
-            "cli",
-            "codex",
-            "cordis",
-            "ctf",
-            "decompiler",
-            "developer-tools",
-            "dsh",
-            "dsh-plugin",
-            "ghidra",
-            "hopper",
-            "llm",
-            "mcp",
-            "model-context-protocol",
-            "rea",
-            "reverse-engineering",
-            "static-analysis"
-          ],
-          "stars": 215380,
-          "forks": 53098,
-          "watchers": 215380,
-          "openIssues": 534,
-          "likes": 32,
-          "hearts": 0,
-          "reactionTotal": 35,
-          "reactionSamples": [
-            {
-              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-              "url": "https://github.com/morluto/rea/issues/1416",
-              "likes": 9,
-              "hearts": 0,
-              "comments": 1
-            },
-            {
-              "title": "Feature: Add support for Binary Ninja as an analysis backend",
-              "url": "https://github.com/morluto/rea/issues/1551",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 2
-            },
-            {
-              "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
-              "url": "https://github.com/morluto/rea/issues/1267",
-              "likes": 3,
-              "hearts": 0,
-              "comments": 1
-            }
-          ],
-          "updatedAt": "2026-10-14T05:09:34Z",
-          "pushedAt": "2026-10-14T05:05:33Z",
-          "createdAt": "2026-04-14T00:51:32Z",
-          "homepage": "https://rea.tools",
-          "url": "https://github.com/morluto/rea",
-          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/morluto/rea.git",
           "license": "MIT"
         },
         {
@@ -2618,7 +2618,7 @@
           "name": "context-mode",
           "owner": "mksglu",
           "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+          "descriptionZh": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
           "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
           "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
           "contentZh": [
@@ -2672,16 +2672,16 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 28417,
-          "forks": 2000,
-          "watchers": 28417,
-          "openIssues": 357,
+          "stars": 29286,
+          "forks": 2054,
+          "watchers": 29286,
+          "openIssues": 359,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
           "reactionSamples": [],
-          "updatedAt": "2026-10-14T05:09:17Z",
-          "pushedAt": "2026-10-14T01:57:23Z",
+          "updatedAt": "2026-10-15T04:57:33Z",
+          "pushedAt": "2026-10-14T22:18:40Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
@@ -2695,8 +2695,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-09-14",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-14、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-09-15",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-15、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "paperclipai-paperclip",
@@ -2711,11 +2711,11 @@
           "name": "paperclip",
           "owner": "paperclipai",
           "description": "The open-source app everyone uses to manage agents at work",
-          "descriptionZh": "每個人都用它來管理工作中的agent的開源應用程式",
-          "oneLineZh": "每個人都用它來管理工作中的agent的開源應用程式",
-          "introZh": "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+          "descriptionZh": "The open-source app everyone uses to manage agents at work",
+          "oneLineZh": "The open-source app everyone uses to manage agents at work",
+          "introZh": "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
           "contentZh": [
-            "每個人都用它來管理工作中的agent的開源應用程式 快速入門 · 文件 · GitHub · Discord · Twitter · 網站 註冊 Paperclip Cloud 候補名單 → Paperclip 是人們用來管理 AI 代理工作的應用程式。人工智慧代理團隊的開源編排。如果 OpenClaw 是員工，那麼 Paperclip 就是公司。 Paperclip 是一個 Node.js 伺服器和 React UI，可協調一組 AI 代理來運作業務。攜帶您自己的代理商、分配目標並透過一個儀表板追蹤工作和成本。為每個代理人選擇模型和工具，同時將團隊的任務、技能、權限和歷史記錄保存在一個地方。它看起來像一個任務管理器。底層：組織結構圖、預算、治理、目標調整與代理協調。管理業務目標，而不是拉取請求。 | |步驟| 範例| | ------ | ---------------- |-------------------------------------------------------------------------------- |01 |定義目標 | “打造 1 個人工智慧筆記應用程序，年收入達 100 萬美元。”| | 02 |聘請團隊|首席執行官、首席技術官、工程師、設計師、營銷人員——任何機器人、任何提供商。 | | 03 |批准並運行 |審查策略。設定預算。打吧。從儀表板進行監控。 |與 OpenClaw 一起使用 Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok 構建 Kimi Code 如果可以接收心跳，則已被雇用。自訂進程、HTTP 端點和外部適配器套件擴展了名冊。查看適配器概述...",
+            "The open-source app everyone uses to manage agents at work Quickstart &middot; Docs &middot; GitHub &middot; Discord &middot; Twitter &middot; Website Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. If OpenClaw is an employee, Paperclip is the company. Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination. Manage business goals, not pull requests. | | Step | Example | | ------ | --------------- | ------------------------------------------------------------------ | | 01 | Define the goal | \"Build the 1 AI note-taking app to $1M MRR.\" | | 02 | Hire the team | CEO, CTO, engineers, designers, marketers — any bot, any provider. | | 03 | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard. | Works with OpenClaw Claude Code Codex Cursor + Cloud Gemini CLI OpenCode Pi Hermes + Gateway Grok Build Kimi Code If it can receive a heartbeat, it's hired. Custom processes, HTTP endpoints, and external adapter packages extend the roster. See the adapter overv...",
             "從 topics 來看，它和 acpx、agent-orchestration、agent-skills、agentic-ai、ai-agents、ai-engineering、ai-governance、ai-tools 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
             "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
             "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
@@ -2767,10 +2767,10 @@
             "project-management",
             "workflow-automation"
           ],
-          "stars": 101669,
-          "forks": 17048,
-          "watchers": 101669,
-          "openIssues": 6080,
+          "stars": 102254,
+          "forks": 17134,
+          "watchers": 102254,
+          "openIssues": 5975,
           "likes": 266,
           "hearts": 11,
           "reactionTotal": 303,
@@ -2797,8 +2797,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-10-14T05:11:37Z",
-          "pushedAt": "2026-10-14T05:07:19Z",
+          "updatedAt": "2026-10-15T05:01:02Z",
+          "pushedAt": "2026-10-15T05:01:02Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "homepage": "https://paperclip.ing",
           "url": "https://github.com/paperclipai/paperclip",
@@ -2819,7 +2819,7 @@
           "name": "claude-mem",
           "owner": "thedotmack",
           "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-          "descriptionZh": "每個agent跨會話的持久上下文 – 捕捉agent在會話期間所做的所有操作，使用 AI 對其進行壓縮，並將相關上下文注入到未來的會話中。適用於 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等",
+          "descriptionZh": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
           "oneLineZh": "替 Claude Code 類 agent 補上跨對話記憶，把重要上下文壓縮後帶到未來任務。",
           "introZh": "claude-mem 聚焦在 agent 記憶管理。它會捕捉工作過程中的重要資訊，壓縮成可重用上下文，讓下一次任務不必從零開始。",
           "contentZh": [
@@ -2875,10 +2875,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 100509,
-          "forks": 8806,
-          "watchers": 100509,
-          "openIssues": 90,
+          "stars": 100813,
+          "forks": 8833,
+          "watchers": 100813,
+          "openIssues": 101,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2905,7 +2905,7 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-10-14T05:10:18Z",
+          "updatedAt": "2026-10-15T04:57:19Z",
           "pushedAt": "2026-10-13T21:35:02Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
@@ -2915,8 +2915,116 @@
           "license": "Apache-2.0"
         },
         {
-          "id": "zhayujie-cowagent",
+          "id": "morluto-rea",
           "rank": 3,
+          "period": "monthly",
+          "periodKey": "monthly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "morluto/rea",
+          "name": "rea",
+          "owner": "morluto",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "descriptionZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "oneLineZh": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "introZh": "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+          "contentZh": [
+            "Reverse engineer anything with agents, from app behavior down to native binaries. English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά REA: Reverse Engineer Anything One MCP for reverse engineering across binaries, applications, and runtime behavior. See a feature you like. Understand how it works, down to the binary level. Website · Guides · Showcases Quick start · How REA works · What you can analyze · Showcases · FAQ · Documentation npx rea-agents setup [!IMPORTANT] Get REA from morluto/rea, rea.tools, or the rea-agents npm package. Follow the installation and release links from these official sources. A similar repository name or copied README does not establish that a download is official. Join the Reverse Engineering Community Discord · Q&amp;A · Show and Tell --- See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent ...",
+            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 12、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 7、留言 3）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "需要記憶 / 上下文管理的 coding agent",
+            "用在長任務、跨對話延續與知識取回 workflow",
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "TypeScript",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "stars": 248533,
+          "forks": 62358,
+          "watchers": 248533,
+          "openIssues": 810,
+          "likes": 36,
+          "hearts": 1,
+          "reactionTotal": 41,
+          "reactionSamples": [
+            {
+              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+              "url": "https://github.com/morluto/rea/issues/1416",
+              "likes": 12,
+              "hearts": 0,
+              "comments": 1
+            },
+            {
+              "title": "Feature: Add support for Binary Ninja as an analysis backend",
+              "url": "https://github.com/morluto/rea/issues/1551",
+              "likes": 7,
+              "hearts": 0,
+              "comments": 3
+            },
+            {
+              "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
+              "url": "https://github.com/morluto/rea/issues/1267",
+              "likes": 3,
+              "hearts": 0,
+              "comments": 1
+            }
+          ],
+          "updatedAt": "2026-10-15T05:00:13Z",
+          "pushedAt": "2026-10-15T04:59:03Z",
+          "createdAt": "2026-04-14T00:51:32Z",
+          "homepage": "https://rea.tools",
+          "url": "https://github.com/morluto/rea",
+          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/morluto/rea.git",
+          "license": "MIT"
+        },
+        {
+          "id": "zhayujie-cowagent",
+          "rank": 4,
           "period": "monthly",
           "periodKey": "monthly",
           "categoryKey": "skill-workflow",
@@ -2927,7 +3035,7 @@
           "name": "CowAgent",
           "owner": "zhayujie",
           "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-          "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
+          "descriptionZh": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
           "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
           "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
           "contentZh": [
@@ -2980,10 +3088,10 @@
             "personal-agent",
             "skills"
           ],
-          "stars": 47387,
-          "forks": 10387,
-          "watchers": 47387,
-          "openIssues": 71,
+          "stars": 47406,
+          "forks": 10396,
+          "watchers": 47406,
+          "openIssues": 80,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -3010,121 +3118,13 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-10-14T05:08:51Z",
-          "pushedAt": "2026-10-14T04:03:18Z",
+          "updatedAt": "2026-10-15T03:20:25Z",
+          "pushedAt": "2026-10-14T12:10:54Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
           "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
           "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-          "license": "MIT"
-        },
-        {
-          "id": "morluto-rea",
-          "rank": 4,
-          "period": "monthly",
-          "periodKey": "monthly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "morluto/rea",
-          "name": "rea",
-          "owner": "morluto",
-          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-          "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-          "contentZh": [
-            "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語 義大利語 REA：對任何內容進行逆向工程 One MCP 用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括每個結論背後的證據和局限性。安裝程式向您的代理註冊 REA ...",
-            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、ctf 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 9、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 6、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「[Feature] Live native debugging through x64dbg, GDB and LLDB adapters」是目前較多人互動的討論之一（👍 3、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "需要記憶 / 上下文管理的 coding agent",
-            "用在長任務、跨對話延續與知識取回 workflow",
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "TypeScript",
-          "topics": [
-            "agent-skills",
-            "ai-agents",
-            "binary-analysis",
-            "claude-code",
-            "cli",
-            "codex",
-            "cordis",
-            "ctf",
-            "decompiler",
-            "developer-tools",
-            "dsh",
-            "dsh-plugin",
-            "ghidra",
-            "hopper",
-            "llm",
-            "mcp",
-            "model-context-protocol",
-            "rea",
-            "reverse-engineering",
-            "static-analysis"
-          ],
-          "stars": 215418,
-          "forks": 53110,
-          "watchers": 215418,
-          "openIssues": 535,
-          "likes": 32,
-          "hearts": 0,
-          "reactionTotal": 35,
-          "reactionSamples": [
-            {
-              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-              "url": "https://github.com/morluto/rea/issues/1416",
-              "likes": 9,
-              "hearts": 0,
-              "comments": 1
-            },
-            {
-              "title": "Feature: Add support for Binary Ninja as an analysis backend",
-              "url": "https://github.com/morluto/rea/issues/1551",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 2
-            },
-            {
-              "title": "[Feature] Live native debugging through x64dbg, GDB and LLDB adapters",
-              "url": "https://github.com/morluto/rea/issues/1267",
-              "likes": 3,
-              "hearts": 0,
-              "comments": 1
-            }
-          ],
-          "updatedAt": "2026-10-14T05:11:25Z",
-          "pushedAt": "2026-10-14T05:10:40Z",
-          "createdAt": "2026-04-14T00:51:32Z",
-          "homepage": "https://rea.tools",
-          "url": "https://github.com/morluto/rea",
-          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/morluto/rea.git",
           "license": "MIT"
         },
         {
@@ -3140,7 +3140,7 @@
           "name": "context-mode",
           "owner": "mksglu",
           "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+          "descriptionZh": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
           "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
           "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
           "contentZh": [
@@ -3194,16 +3194,16 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 28418,
-          "forks": 2000,
-          "watchers": 28418,
-          "openIssues": 357,
+          "stars": 29289,
+          "forks": 2054,
+          "watchers": 29289,
+          "openIssues": 359,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
           "reactionSamples": [],
-          "updatedAt": "2026-10-14T05:10:50Z",
-          "pushedAt": "2026-10-14T01:57:23Z",
+          "updatedAt": "2026-10-15T05:00:12Z",
+          "pushedAt": "2026-10-14T22:18:40Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
