@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T05:07:26.770Z",
+  "generatedAt": "2026-10-20T05:11:09.766Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-10-12",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-12、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-10-13",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-13、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "paperclipai-paperclip",
@@ -91,13 +91,13 @@
                 "project-management",
                 "workflow-automation"
               ],
-              "stars": 104240,
-              "forks": 17408,
-              "watchers": 104240,
-              "openIssues": 6183,
-              "likes": 268,
+              "stars": 104848,
+              "forks": 17476,
+              "watchers": 104848,
+              "openIssues": 6236,
+              "likes": 269,
               "hearts": 11,
-              "reactionTotal": 305,
+              "reactionTotal": 306,
               "reactionSamples": [
                 {
                   "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -121,8 +121,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-10-19T05:02:38Z",
-              "pushedAt": "2026-10-19T03:54:37Z",
+              "updatedAt": "2026-10-20T05:03:02Z",
+              "pushedAt": "2026-10-20T04:55:41Z",
               "createdAt": "2026-03-02T15:01:51Z",
               "homepage": "https://paperclip.ing",
               "url": "https://github.com/paperclipai/paperclip",
@@ -199,10 +199,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 101658,
-              "forks": 8931,
-              "watchers": 101658,
-              "openIssues": 166,
+              "stars": 101839,
+              "forks": 8961,
+              "watchers": 101839,
+              "openIssues": 96,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -229,8 +229,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-10-19T04:48:57Z",
-              "pushedAt": "2026-10-19T02:18:16Z",
+              "updatedAt": "2026-10-20T04:59:12Z",
+              "pushedAt": "2026-10-20T01:28:51Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -262,8 +262,8 @@
               ],
               "discussionZh": [
                 "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 19、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 5、留言 14）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 6）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要記憶 / 上下文管理的 coding agent",
@@ -307,13 +307,13 @@
                 "static-analysis",
                 "touhou"
               ],
-              "stars": 325247,
-              "forks": 82365,
-              "watchers": 325247,
-              "openIssues": 1225,
-              "likes": 53,
+              "stars": 338951,
+              "forks": 85555,
+              "watchers": 338951,
+              "openIssues": 1280,
+              "likes": 54,
               "hearts": 0,
-              "reactionTotal": 55,
+              "reactionTotal": 56,
               "reactionSamples": [
                 {
                   "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
@@ -327,18 +327,18 @@
                   "url": "https://github.com/morluto/rea/issues/1551",
                   "likes": 10,
                   "hearts": 0,
-                  "comments": 4
+                  "comments": 6
                 },
                 {
                   "title": "[Feature] Java Reverse Engineering",
                   "url": "https://github.com/morluto/rea/issues/1558",
-                  "likes": 5,
+                  "likes": 6,
                   "hearts": 0,
-                  "comments": 14
+                  "comments": 15
                 }
               ],
-              "updatedAt": "2026-10-19T05:02:00Z",
-              "pushedAt": "2026-10-19T05:01:59Z",
+              "updatedAt": "2026-10-20T05:04:57Z",
+              "pushedAt": "2026-10-20T05:00:07Z",
               "createdAt": "2026-04-14T00:51:32Z",
               "homepage": "https://rea.tools",
               "url": "https://github.com/morluto/rea",
@@ -412,10 +412,10 @@
                 "personal-agent",
                 "skills"
               ],
-              "stars": 47460,
-              "forks": 10395,
-              "watchers": 47460,
-              "openIssues": 19,
+              "stars": 47467,
+              "forks": 10397,
+              "watchers": 47467,
+              "openIssues": 22,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -442,8 +442,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-10-19T04:31:57Z",
-              "pushedAt": "2026-10-19T03:16:11Z",
+              "updatedAt": "2026-10-20T02:59:54Z",
+              "pushedAt": "2026-10-20T02:58:42Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -464,7 +464,7 @@
               "name": "context-mode",
               "owner": "mksglu",
               "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-              "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+              "descriptionZh": "AI 编码代理的上下文窗口优化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
               "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
               "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
               "contentZh": [
@@ -518,16 +518,16 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 30828,
-              "forks": 2286,
-              "watchers": 30828,
+              "stars": 31148,
+              "forks": 2346,
+              "watchers": 31148,
               "openIssues": 356,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-10-19T04:58:31Z",
-              "pushedAt": "2026-10-19T04:58:33Z",
+              "updatedAt": "2026-10-20T04:45:39Z",
+              "pushedAt": "2026-10-20T05:02:08Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -541,8 +541,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-09-19",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-19、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-20",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-20、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "paperclipai-paperclip",
@@ -613,13 +613,13 @@
                 "project-management",
                 "workflow-automation"
               ],
-              "stars": 104240,
-              "forks": 17408,
-              "watchers": 104240,
-              "openIssues": 6183,
-              "likes": 268,
+              "stars": 104848,
+              "forks": 17476,
+              "watchers": 104848,
+              "openIssues": 6236,
+              "likes": 269,
               "hearts": 11,
-              "reactionTotal": 305,
+              "reactionTotal": 306,
               "reactionSamples": [
                 {
                   "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -643,8 +643,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-10-19T05:02:38Z",
-              "pushedAt": "2026-10-19T03:54:37Z",
+              "updatedAt": "2026-10-20T05:03:02Z",
+              "pushedAt": "2026-10-20T04:55:41Z",
               "createdAt": "2026-03-02T15:01:51Z",
               "homepage": "https://paperclip.ing",
               "url": "https://github.com/paperclipai/paperclip",
@@ -721,10 +721,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 101658,
-              "forks": 8931,
-              "watchers": 101658,
-              "openIssues": 166,
+              "stars": 101839,
+              "forks": 8961,
+              "watchers": 101839,
+              "openIssues": 96,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -751,8 +751,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-10-19T04:48:57Z",
-              "pushedAt": "2026-10-19T02:18:16Z",
+              "updatedAt": "2026-10-20T04:59:12Z",
+              "pushedAt": "2026-10-20T01:28:51Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -784,8 +784,8 @@
               ],
               "discussionZh": [
                 "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 19、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 5、留言 14）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 6）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要記憶 / 上下文管理的 coding agent",
@@ -829,13 +829,13 @@
                 "static-analysis",
                 "touhou"
               ],
-              "stars": 325267,
-              "forks": 82371,
-              "watchers": 325267,
-              "openIssues": 1224,
-              "likes": 53,
+              "stars": 338957,
+              "forks": 85560,
+              "watchers": 338957,
+              "openIssues": 1280,
+              "likes": 54,
               "hearts": 0,
-              "reactionTotal": 55,
+              "reactionTotal": 56,
               "reactionSamples": [
                 {
                   "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
@@ -849,18 +849,18 @@
                   "url": "https://github.com/morluto/rea/issues/1551",
                   "likes": 10,
                   "hearts": 0,
-                  "comments": 4
+                  "comments": 6
                 },
                 {
                   "title": "[Feature] Java Reverse Engineering",
                   "url": "https://github.com/morluto/rea/issues/1558",
-                  "likes": 5,
+                  "likes": 6,
                   "hearts": 0,
-                  "comments": 14
+                  "comments": 15
                 }
               ],
-              "updatedAt": "2026-10-19T05:03:26Z",
-              "pushedAt": "2026-10-19T05:01:59Z",
+              "updatedAt": "2026-10-20T05:06:57Z",
+              "pushedAt": "2026-10-20T05:00:07Z",
               "createdAt": "2026-04-14T00:51:32Z",
               "homepage": "https://rea.tools",
               "url": "https://github.com/morluto/rea",
@@ -934,10 +934,10 @@
                 "personal-agent",
                 "skills"
               ],
-              "stars": 47460,
-              "forks": 10395,
-              "watchers": 47460,
-              "openIssues": 19,
+              "stars": 47467,
+              "forks": 10397,
+              "watchers": 47467,
+              "openIssues": 22,
               "likes": 45,
               "hearts": 2,
               "reactionTotal": 51,
@@ -964,8 +964,8 @@
                   "comments": 49
                 }
               ],
-              "updatedAt": "2026-10-19T04:31:57Z",
-              "pushedAt": "2026-10-19T03:16:11Z",
+              "updatedAt": "2026-10-20T02:59:54Z",
+              "pushedAt": "2026-10-20T02:58:42Z",
               "createdAt": "2022-08-07T08:33:41Z",
               "homepage": "https://cowagent.ai",
               "url": "https://github.com/zhayujie/CowAgent",
@@ -1040,16 +1040,16 @@
                 "skills",
                 "zed-extension"
               ],
-              "stars": 30829,
-              "forks": 2286,
-              "watchers": 30829,
+              "stars": 31149,
+              "forks": 2346,
+              "watchers": 31149,
               "openIssues": 356,
               "likes": 0,
               "hearts": 0,
               "reactionTotal": 0,
               "reactionSamples": [],
-              "updatedAt": "2026-10-19T05:04:25Z",
-              "pushedAt": "2026-10-19T05:04:40Z",
+              "updatedAt": "2026-10-20T05:06:08Z",
+              "pushedAt": "2026-10-20T05:07:22Z",
               "createdAt": "2026-02-23T05:56:28Z",
               "homepage": "https://context-mode.com",
               "url": "https://github.com/mksglu/context-mode",
@@ -1071,8 +1071,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-10-12",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-10-12、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-10-13",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-10-13、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1087,7 +1087,7 @@
               "name": "ruflo",
               "owner": "ruvnet",
               "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-              "descriptionZh": "🌊 原始特工安全帶。部署智慧多人群體、協調自主工作流程並建構對話式人工智慧系統。具有自適應記憶、自學習智慧、聯邦、向量 RAG 整合以及原生 Claude Code / Codex / Hermes 等整合功能",
+              "descriptionZh": "🌊 原始特工背帶。部署智慧多人群體、協調自主工作流程並建構對話式人工智慧系統。具有自適應記憶、自學習智慧、聯邦、向量 RAG 整合以及原生 Claude Code / Codex / Hermes 等整合功能",
               "oneLineZh": "面向多代理工作流的 agent harness，重點在記憶、協調、安全帶與自主流程管理。",
               "introZh": "ruflo 把多代理協作、記憶、RAG、工具與 Claude Code / OpenAI 類工作流放在一起，適合用來研究 agent workflow 如何被工程化管理。",
               "contentZh": [
@@ -1143,10 +1143,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 76655,
-              "forks": 9062,
-              "watchers": 76655,
-              "openIssues": 1059,
+              "stars": 77331,
+              "forks": 9113,
+              "watchers": 77331,
+              "openIssues": 1003,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1173,8 +1173,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-10-19T05:04:41Z",
-              "pushedAt": "2026-10-19T01:50:10Z",
+              "updatedAt": "2026-10-20T05:07:21Z",
+              "pushedAt": "2026-10-20T04:59:41Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1183,8 +1183,116 @@
               "license": "MIT"
             },
             {
-              "id": "hkuds-nanobot",
+              "id": "deepset-ai-haystack",
               "rank": 2,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "ai-open-source",
+              "categoryLabel": "GitHub 熱門 AI 開源工具",
+              "categoryShortLabel": "AI 開源工具",
+              "typeLabel": "AI 開源工具",
+              "fullName": "deepset-ai/haystack",
+              "name": "haystack",
+              "owner": "deepset-ai",
+              "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+              "descriptionZh": "开源人工智能编排框架，用于构建上下文工程、生产就绪的 LLM 应用程序。通过对检索、路由、内存和生成的显式控制来设计模块化管道和代理工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "oneLineZh": "开源人工智能编排框架，用于构建上下文工程、生产就绪的 LLM 应用程序。通过对检索、路由、内存和生成的显式控制来设计模块化管道和代理工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+              "contentZh": [
+                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+                "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
+                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
+                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
+              ],
+              "discussionZh": [
+                "「Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  」是目前較多人互動的討論之一（👍 6、❤️ 4、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Option to enable structured outputs with OpenAI Generators」是目前較多人互動的討論之一（👍 12、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)」是目前較多人互動的討論之一（👍 8、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要工具連接的 MCP / tool server agent",
+                "用在內部系統、API 與外部工具串接 workflow",
+                "知識庫型 / RAG 型 agent"
+              ],
+              "useCases": [
+                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
+                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
+                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
+              ],
+              "notFor": [
+                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
+                "完全不想看 README、授權、issues 或基本安裝條件的人。"
+              ],
+              "attentionNotes": [
+                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
+                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
+                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
+              ],
+              "language": "Python",
+              "topics": [
+                "agent-framework",
+                "agentic-ai",
+                "agentic-rag",
+                "agents",
+                "ai",
+                "ai-agents",
+                "context-engineering",
+                "framework",
+                "genai",
+                "generative-ai",
+                "information-retrieval",
+                "large-language-models",
+                "llm",
+                "mcp",
+                "multi-agent",
+                "orchestration",
+                "python",
+                "rag",
+                "retrieval-augmented-generation",
+                "semantic-search"
+              ],
+              "stars": 26782,
+              "forks": 3307,
+              "watchers": 26782,
+              "openIssues": 153,
+              "likes": 47,
+              "hearts": 4,
+              "reactionTotal": 67,
+              "reactionSamples": [
+                {
+                  "title": "Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  ",
+                  "url": "https://github.com/deepset-ai/haystack/issues/8761",
+                  "likes": 6,
+                  "hearts": 4,
+                  "comments": 8
+                },
+                {
+                  "title": "Option to enable structured outputs with OpenAI Generators",
+                  "url": "https://github.com/deepset-ai/haystack/issues/8276",
+                  "likes": 12,
+                  "hearts": 0,
+                  "comments": 9
+                },
+                {
+                  "title": "Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)",
+                  "url": "https://github.com/deepset-ai/haystack/issues/544",
+                  "likes": 8,
+                  "hearts": 0,
+                  "comments": 9
+                }
+              ],
+              "updatedAt": "2026-10-19T23:31:21Z",
+              "pushedAt": "2026-10-20T02:14:54Z",
+              "createdAt": "2019-11-14T09:05:28Z",
+              "homepage": "https://haystack.deepset.ai",
+              "url": "https://github.com/deepset-ai/haystack",
+              "downloadUrl": "https://github.com/deepset-ai/haystack/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/deepset-ai/haystack.git",
+              "license": "Apache-2.0"
+            },
+            {
+              "id": "hkuds-nanobot",
+              "rank": 3,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "ai-open-source",
@@ -1251,10 +1359,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 49161,
-              "forks": 8641,
-              "watchers": 49161,
-              "openIssues": 842,
+              "stars": 49198,
+              "forks": 8650,
+              "watchers": 49198,
+              "openIssues": 856,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1281,8 +1389,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-10-19T05:04:01Z",
-              "pushedAt": "2026-10-19T05:02:27Z",
+              "updatedAt": "2026-10-20T03:46:37Z",
+              "pushedAt": "2026-10-20T05:08:30Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1292,7 +1400,7 @@
             },
             {
               "id": "headroomlabs-ai-headroom",
-              "rank": 3,
+              "rank": 4,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "ai-open-source",
@@ -1359,10 +1467,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 75923,
-              "forks": 5902,
-              "watchers": 75923,
-              "openIssues": 466,
+              "stars": 76352,
+              "forks": 5929,
+              "watchers": 76352,
+              "openIssues": 492,
               "likes": 408,
               "hearts": 26,
               "reactionTotal": 468,
@@ -1389,8 +1497,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-10-19T04:38:49Z",
-              "pushedAt": "2026-10-17T18:29:50Z",
+              "updatedAt": "2026-10-20T05:07:55Z",
+              "pushedAt": "2026-10-20T02:56:03Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1399,115 +1507,7 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "deepset-ai-haystack",
-              "rank": 4,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "ai-open-source",
-              "categoryLabel": "GitHub 熱門 AI 開源工具",
-              "categoryShortLabel": "AI 開源工具",
-              "typeLabel": "AI 開源工具",
-              "fullName": "deepset-ai/haystack",
-              "name": "haystack",
-              "owner": "deepset-ai",
-              "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-              "descriptionZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "oneLineZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
-              "contentZh": [
-                "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
-                "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
-                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
-                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
-              ],
-              "discussionZh": [
-                "「Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  」是目前較多人互動的討論之一（👍 6、❤️ 4、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Option to enable structured outputs with OpenAI Generators」是目前較多人互動的討論之一（👍 12、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)」是目前較多人互動的討論之一（👍 8、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要工具連接的 MCP / tool server agent",
-                "用在內部系統、API 與外部工具串接 workflow",
-                "知識庫型 / RAG 型 agent"
-              ],
-              "useCases": [
-                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
-                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
-                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
-              ],
-              "notFor": [
-                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
-                "完全不想看 README、授權、issues 或基本安裝條件的人。"
-              ],
-              "attentionNotes": [
-                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
-                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
-                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
-              ],
-              "language": "Python",
-              "topics": [
-                "agent-framework",
-                "agentic-ai",
-                "agentic-rag",
-                "agents",
-                "ai",
-                "ai-agents",
-                "context-engineering",
-                "framework",
-                "genai",
-                "generative-ai",
-                "information-retrieval",
-                "large-language-models",
-                "llm",
-                "mcp",
-                "multi-agent",
-                "orchestration",
-                "python",
-                "rag",
-                "retrieval-augmented-generation",
-                "semantic-search"
-              ],
-              "stars": 26772,
-              "forks": 3303,
-              "watchers": 26772,
-              "openIssues": 155,
-              "likes": 47,
-              "hearts": 4,
-              "reactionTotal": 67,
-              "reactionSamples": [
-                {
-                  "title": "Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  ",
-                  "url": "https://github.com/deepset-ai/haystack/issues/8761",
-                  "likes": 6,
-                  "hearts": 4,
-                  "comments": 8
-                },
-                {
-                  "title": "Option to enable structured outputs with OpenAI Generators",
-                  "url": "https://github.com/deepset-ai/haystack/issues/8276",
-                  "likes": 12,
-                  "hearts": 0,
-                  "comments": 9
-                },
-                {
-                  "title": "Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)",
-                  "url": "https://github.com/deepset-ai/haystack/issues/544",
-                  "likes": 8,
-                  "hearts": 0,
-                  "comments": 9
-                }
-              ],
-              "updatedAt": "2026-10-19T02:20:03Z",
-              "pushedAt": "2026-10-17T02:14:47Z",
-              "createdAt": "2019-11-14T09:05:28Z",
-              "homepage": "https://haystack.deepset.ai",
-              "url": "https://github.com/deepset-ai/haystack",
-              "downloadUrl": "https://github.com/deepset-ai/haystack/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/deepset-ai/haystack.git",
-              "license": "Apache-2.0"
-            },
-            {
-              "id": "tooljet-tooljet",
+              "id": "strands-agents-harness-sdk",
               "rank": 5,
               "period": "weekly",
               "periodKey": "weekly",
@@ -1515,28 +1515,28 @@
               "categoryLabel": "GitHub 熱門 AI 開源工具",
               "categoryShortLabel": "AI 開源工具",
               "typeLabel": "AI 開源工具",
-              "fullName": "ToolJet/ToolJet",
-              "name": "ToolJet",
-              "owner": "ToolJet",
-              "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP 🚀",
-              "descriptionZh": "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀",
-              "oneLineZh": "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀",
-              "introZh": "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀 ToolJet 是一個開源平台，用於建立內部工具：管理面板、儀表板以及在現有資料庫、API 和 SaaS 系統上運行的操作應用程式。透過提示來建構它們。 ToolJet AI 將描述轉換為頁面、查詢和元件，並且您已經使用的編碼代理可以透過 ToolJet 的 MCP 伺服器執行相同的操作。代理根據 ToolJet 的真實元件和資料契約進行構建，而不是發出自由格式的程式碼，因此您得到的是一個實際的 ToolJet 應用程式：您的團隊在與其他所有內容相同的權限、環境和版本歷史記錄下，在視覺化建構器中不斷進行編輯。自行託管，或使用 ToolJet Cloud。 :star: 如果您發現 ToolJet 有用，請考慮在 GitHub 上給我們一個星星！您的支持幫助我們持續創新並提供令人興奮的功能。使用編碼agent進行建立 ToolJet 附帶了模型上下文協定伺服器，因此您已使用的編碼agent可以直接建立 ToolJet 應用程式：根據提示產生頁面、查詢和元件，並就地修改現有應用程式。可作為插件與 Claude Code、Codex 和 Grok Build 配合使用，捆綁 ToolJet 的應用程式建構器技能，並可單獨透過 MCP 伺服器與 Cursor 或任何其他 MCP 相容客戶端配合使用。代理根據 ToolJet 受管理的第一方合約構建，因此它們根據平台的真實模式工作，而不是猜測它們，並且操作由您自己運行...",
+              "fullName": "strands-agents/harness-sdk",
+              "name": "harness-sdk",
+              "owner": "strands-agents",
+              "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+              "descriptionZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
+              "oneLineZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
+              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文档 ◆ 示例 ◆ MCP 服务器 ◆ Discord Strands Agents 是一个开源 SDK，用于在 Python 和 TypeScript 中构建和运行 AI 代理。当您要编写自己的代理循环时，请选择 Strands：它在没有托管控制平面的进程中运行，并且涵盖了手动循环发展到的作业。在一个 SDK 中，您可以获得生命周期控制（回合限制、代币预算、取消、停止原因）、工具和结构化输出、MCP、多代理模式、内存和会话、模型可移植性、流式传输、护栏、跟踪和评估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文档站点和支持包： |目录 |描述 | |------------|-------------| |线束-py/ | Python Strandsharness：通过 createharness() 完全组装代理（PyPI·文档）| |线束-ts/ | TypeScript Strandsharness：通过 createHarness() 完全组装代理（npm·文档）| |股线-cli/ | Strands CLI：原型並與來自該領域的線束代理聊天...",
               "contentZh": [
-                "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀 ToolJet 是一個開源平台，用於建立內部工具：管理面板、儀表板以及在現有資料庫、API 和 SaaS 系統上運行的操作應用程式。透過提示來建構它們。 ToolJet AI 將描述轉換為頁面、查詢和元件，並且您已經使用的編碼代理可以透過 ToolJet 的 MCP 伺服器執行相同的操作。代理根據 ToolJet 的真實元件和資料契約進行構建，而不是發出自由格式的程式碼，因此您得到的是一個實際的 ToolJet 應用程式：您的團隊在與其他所有內容相同的權限、環境和版本歷史記錄下，在視覺化建構器中不斷進行編輯。自行託管，或使用 ToolJet Cloud。 :star: 如果您發現 ToolJet 有用，請考慮在 GitHub 上給我們一個星星！您的支持幫助我們持續創新並提供令人興奮的功能。使用編碼agent進行建立 ToolJet 附帶了模型上下文協定伺服器，因此您已使用的編碼agent可以直接建立 ToolJet 應用程式：根據提示產生頁面、查詢和元件，並就地修改現有應用程式。可作為插件與 Claude Code、Codex 和 Grok Build 配合使用，捆綁 ToolJet 的應用程式建構器技能，並可單獨透過 MCP 伺服器與 Cursor 或任何其他 MCP 相容客戶端配合使用。代理根據 ToolJet 受管理的第一方合約構建，因此它們根據平台的真實模式工作，而不是猜測它們，並且操作由您自己運行...",
-                "從 topics 來看，它和 ai-app-builder、docker、internal-applications、internal-project、internal-tool、internal-tools、javascript、kubernetes 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
+                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文档 ◆ 示例 ◆ MCP 服务器 ◆ Discord Strands Agents 是一个开源 SDK，用于在 Python 和 TypeScript 中构建和运行 AI 代理。当您要编写自己的代理循环时，请选择 Strands：它在没有托管控制平面的进程中运行，并且涵盖了手动循环发展到的作业。在一个 SDK 中，您可以获得生命周期控制（回合限制、代币预算、取消、停止原因）、工具和结构化输出、MCP、多代理模式、内存和会话、模型可移植性、流式传输、护栏、跟踪和评估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文档站点和支持包： |目录 |描述 | |------------|-------------| |线束-py/ | Python Strandsharness：通过 createharness() 完全组装代理（PyPI·文档）| |线束-ts/ | TypeScript Strandsharness：通过 createHarness() 完全组装代理（npm·文档）| |股线-cli/ | Strands CLI：原型並與來自該領域的線束代理聊天...",
+                "從 topics 來看，它和 agent-framework、agentic、agentic-ai、agents、ai、ai-agents、anthropic、autonomous-agents 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
               ],
               "discussionZh": [
-                "「Publish arm Tooljet docker images」是目前較多人互動的討論之一（👍 14、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[docs]: Contributing Guide Mac OS Instructions - Need to update npm version that is included with Node 14.17.3」是目前較多人互動的討論之一（👍 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Add check for null or empty string group name on creation」是目前較多人互動的討論之一（👍 5、❤️ 1、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「[FEATURE] Add TypeScript/JavaScript/NodeJS SDK」是目前較多人互動的討論之一（👍 121、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] Request to Develop a Go SDK for Strands」是目前較多人互動的討論之一（👍 95、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] Add support for skills」是目前較多人互動的討論之一（👍 51、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要工具連接的 MCP / tool server agent",
                 "用在內部系統、API 與外部工具串接 workflow",
-                "AI coding / developer assistant agent"
+                "要自建 agent framework 或 prototype 的工程師"
               ],
               "useCases": [
                 "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
@@ -1552,65 +1552,67 @@
                 "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
                 "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
               ],
-              "language": "HTML",
+              "language": "TypeScript",
               "topics": [
-                "ai-app-builder",
-                "docker",
-                "internal-applications",
-                "internal-project",
-                "internal-tool",
-                "internal-tools",
-                "javascript",
-                "kubernetes",
-                "low-code",
-                "low-code-development-platform",
-                "low-code-framework",
-                "no-code",
-                "nodejs",
-                "reactjs",
-                "self-hosted",
-                "typescript",
-                "web-development-tools",
-                "workflow-automation"
+                "agent-framework",
+                "agentic",
+                "agentic-ai",
+                "agents",
+                "ai",
+                "ai-agents",
+                "anthropic",
+                "autonomous-agents",
+                "bedrock",
+                "generative-ai",
+                "harness",
+                "llm",
+                "llm-agent",
+                "mcp",
+                "multi-agent-systems",
+                "openai",
+                "python",
+                "sdk",
+                "strands-agents",
+                "typescript"
               ],
-              "stars": 41106,
-              "forks": 5506,
-              "watchers": 41106,
-              "openIssues": 877,
-              "likes": 43,
+              "stars": 8868,
+              "forks": 1399,
+              "watchers": 8868,
+              "openIssues": 1045,
+              "likes": 399,
               "hearts": 1,
-              "reactionTotal": 49,
+              "reactionTotal": 427,
               "reactionSamples": [
                 {
-                  "title": "Publish arm Tooljet docker images",
-                  "url": "https://github.com/ToolJet/ToolJet/issues/7222",
-                  "likes": 14,
+                  "title": "[FEATURE] Add TypeScript/JavaScript/NodeJS SDK",
+                  "url": "https://github.com/strands-agents/harness-sdk/issues/156",
+                  "likes": 121,
                   "hearts": 0,
-                  "comments": 9
+                  "comments": 8
                 },
                 {
-                  "title": "[docs]: Contributing Guide Mac OS Instructions - Need to update npm version that is included with Node 14.17.3",
-                  "url": "https://github.com/ToolJet/ToolJet/issues/2712",
-                  "likes": 7,
+                  "title": "[FEATURE] Request to Develop a Go SDK for Strands",
+                  "url": "https://github.com/strands-agents/harness-sdk/issues/616",
+                  "likes": 95,
                   "hearts": 0,
-                  "comments": 0
+                  "comments": 8
                 },
                 {
-                  "title": "Add check for null or empty string group name on creation",
-                  "url": "https://github.com/ToolJet/ToolJet/pull/2711",
-                  "likes": 5,
-                  "hearts": 1,
-                  "comments": 1
+                  "title": "[FEATURE] Add support for skills",
+                  "url": "https://github.com/strands-agents/harness-sdk/issues/1181",
+                  "likes": 51,
+                  "hearts": 0,
+                  "comments": 16
                 }
               ],
-              "updatedAt": "2026-10-19T03:29:59Z",
-              "pushedAt": "2026-10-19T04:17:57Z",
-              "createdAt": "2021-03-30T08:51:34Z",
-              "homepage": "https://tooljet.com",
-              "url": "https://github.com/ToolJet/ToolJet",
-              "downloadUrl": "https://github.com/ToolJet/ToolJet/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/ToolJet/ToolJet.git",
-              "license": "AGPL-3.0"
+              "updatedAt": "2026-10-19T20:40:21Z",
+              "pushedAt": "2026-10-19T20:40:19Z",
+              "createdAt": "2025-05-14T19:59:51Z",
+              "homepage": "http://strandsagents.com/",
+              "url": "https://github.com/strands-agents/harness-sdk",
+              "downloadUrl": "https://github.com/strands-agents/harness-sdk/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/strands-agents/harness-sdk.git",
+              "license": "Apache-2.0"
             }
           ]
         },
@@ -1618,8 +1620,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-09-19",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-19、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-20",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-20、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1634,7 +1636,7 @@
               "name": "ruflo",
               "owner": "ruvnet",
               "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-              "descriptionZh": "🌊 原始特工安全帶。部署智慧多人群體、協調自主工作流程並建構對話式人工智慧系統。具有自適應記憶、自學習智慧、聯邦、向量 RAG 整合以及原生 Claude Code / Codex / Hermes 等整合功能",
+              "descriptionZh": "🌊 原始特工背帶。部署智慧多人群體、協調自主工作流程並建構對話式人工智慧系統。具有自適應記憶、自學習智慧、聯邦、向量 RAG 整合以及原生 Claude Code / Codex / Hermes 等整合功能",
               "oneLineZh": "面向多代理工作流的 agent harness，重點在記憶、協調、安全帶與自主流程管理。",
               "introZh": "ruflo 把多代理協作、記憶、RAG、工具與 Claude Code / OpenAI 類工作流放在一起，適合用來研究 agent workflow 如何被工程化管理。",
               "contentZh": [
@@ -1690,10 +1692,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 76656,
-              "forks": 9062,
-              "watchers": 76656,
-              "openIssues": 1059,
+              "stars": 77332,
+              "forks": 9113,
+              "watchers": 77332,
+              "openIssues": 1003,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1720,8 +1722,8 @@
                   "comments": 18
                 }
               ],
-              "updatedAt": "2026-10-19T05:05:56Z",
-              "pushedAt": "2026-10-19T01:50:10Z",
+              "updatedAt": "2026-10-20T05:10:19Z",
+              "pushedAt": "2026-10-20T04:59:41Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1730,8 +1732,116 @@
               "license": "MIT"
             },
             {
-              "id": "hkuds-nanobot",
+              "id": "deepset-ai-haystack",
               "rank": 2,
+              "period": "monthly",
+              "periodKey": "monthly",
+              "categoryKey": "ai-open-source",
+              "categoryLabel": "GitHub 熱門 AI 開源工具",
+              "categoryShortLabel": "AI 開源工具",
+              "typeLabel": "AI 開源工具",
+              "fullName": "deepset-ai/haystack",
+              "name": "haystack",
+              "owner": "deepset-ai",
+              "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
+              "descriptionZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "oneLineZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
+              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+              "contentZh": [
+                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+                "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
+                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
+                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
+              ],
+              "discussionZh": [
+                "「Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  」是目前較多人互動的討論之一（👍 6、❤️ 4、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Option to enable structured outputs with OpenAI Generators」是目前較多人互動的討論之一（👍 12、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)」是目前較多人互動的討論之一（👍 8、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要工具連接的 MCP / tool server agent",
+                "用在內部系統、API 與外部工具串接 workflow",
+                "知識庫型 / RAG 型 agent"
+              ],
+              "useCases": [
+                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
+                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
+                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
+              ],
+              "notFor": [
+                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
+                "完全不想看 README、授權、issues 或基本安裝條件的人。"
+              ],
+              "attentionNotes": [
+                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
+                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
+                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
+              ],
+              "language": "Python",
+              "topics": [
+                "agent-framework",
+                "agentic-ai",
+                "agentic-rag",
+                "agents",
+                "ai",
+                "ai-agents",
+                "context-engineering",
+                "framework",
+                "genai",
+                "generative-ai",
+                "information-retrieval",
+                "large-language-models",
+                "llm",
+                "mcp",
+                "multi-agent",
+                "orchestration",
+                "python",
+                "rag",
+                "retrieval-augmented-generation",
+                "semantic-search"
+              ],
+              "stars": 26782,
+              "forks": 3307,
+              "watchers": 26782,
+              "openIssues": 153,
+              "likes": 47,
+              "hearts": 4,
+              "reactionTotal": 67,
+              "reactionSamples": [
+                {
+                  "title": "Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  ",
+                  "url": "https://github.com/deepset-ai/haystack/issues/8761",
+                  "likes": 6,
+                  "hearts": 4,
+                  "comments": 8
+                },
+                {
+                  "title": "Option to enable structured outputs with OpenAI Generators",
+                  "url": "https://github.com/deepset-ai/haystack/issues/8276",
+                  "likes": 12,
+                  "hearts": 0,
+                  "comments": 9
+                },
+                {
+                  "title": "Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)",
+                  "url": "https://github.com/deepset-ai/haystack/issues/544",
+                  "likes": 8,
+                  "hearts": 0,
+                  "comments": 9
+                }
+              ],
+              "updatedAt": "2026-10-19T23:31:21Z",
+              "pushedAt": "2026-10-20T02:14:54Z",
+              "createdAt": "2019-11-14T09:05:28Z",
+              "homepage": "https://haystack.deepset.ai",
+              "url": "https://github.com/deepset-ai/haystack",
+              "downloadUrl": "https://github.com/deepset-ai/haystack/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/deepset-ai/haystack.git",
+              "license": "Apache-2.0"
+            },
+            {
+              "id": "hkuds-nanobot",
+              "rank": 3,
               "period": "monthly",
               "periodKey": "monthly",
               "categoryKey": "ai-open-source",
@@ -1798,10 +1908,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 49161,
-              "forks": 8641,
-              "watchers": 49161,
-              "openIssues": 843,
+              "stars": 49198,
+              "forks": 8650,
+              "watchers": 49198,
+              "openIssues": 856,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1828,8 +1938,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-10-19T05:04:01Z",
-              "pushedAt": "2026-10-19T05:02:27Z",
+              "updatedAt": "2026-10-20T03:46:37Z",
+              "pushedAt": "2026-10-20T05:08:30Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -1839,7 +1949,7 @@
             },
             {
               "id": "headroomlabs-ai-headroom",
-              "rank": 3,
+              "rank": 4,
               "period": "monthly",
               "periodKey": "monthly",
               "categoryKey": "ai-open-source",
@@ -1906,10 +2016,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 75923,
-              "forks": 5902,
-              "watchers": 75923,
-              "openIssues": 466,
+              "stars": 76352,
+              "forks": 5929,
+              "watchers": 76352,
+              "openIssues": 492,
               "likes": 408,
               "hearts": 26,
               "reactionTotal": 468,
@@ -1936,8 +2046,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-10-19T04:38:49Z",
-              "pushedAt": "2026-10-17T18:29:50Z",
+              "updatedAt": "2026-10-20T05:07:55Z",
+              "pushedAt": "2026-10-20T02:56:03Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1946,115 +2056,7 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "deepset-ai-haystack",
-              "rank": 4,
-              "period": "monthly",
-              "periodKey": "monthly",
-              "categoryKey": "ai-open-source",
-              "categoryLabel": "GitHub 熱門 AI 開源工具",
-              "categoryShortLabel": "AI 開源工具",
-              "typeLabel": "AI 開源工具",
-              "fullName": "deepset-ai/haystack",
-              "name": "haystack",
-              "owner": "deepset-ai",
-              "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-              "descriptionZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "oneLineZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
-              "contentZh": [
-                "開源 AI 編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
-                "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
-                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
-                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
-              ],
-              "discussionZh": [
-                "「Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  」是目前較多人互動的討論之一（👍 6、❤️ 4、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Option to enable structured outputs with OpenAI Generators」是目前較多人互動的討論之一（👍 12、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)」是目前較多人互動的討論之一（👍 8、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要工具連接的 MCP / tool server agent",
-                "用在內部系統、API 與外部工具串接 workflow",
-                "知識庫型 / RAG 型 agent"
-              ],
-              "useCases": [
-                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
-                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
-                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
-              ],
-              "notFor": [
-                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
-                "完全不想看 README、授權、issues 或基本安裝條件的人。"
-              ],
-              "attentionNotes": [
-                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
-                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
-                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
-              ],
-              "language": "Python",
-              "topics": [
-                "agent-framework",
-                "agentic-ai",
-                "agentic-rag",
-                "agents",
-                "ai",
-                "ai-agents",
-                "context-engineering",
-                "framework",
-                "genai",
-                "generative-ai",
-                "information-retrieval",
-                "large-language-models",
-                "llm",
-                "mcp",
-                "multi-agent",
-                "orchestration",
-                "python",
-                "rag",
-                "retrieval-augmented-generation",
-                "semantic-search"
-              ],
-              "stars": 26772,
-              "forks": 3303,
-              "watchers": 26772,
-              "openIssues": 155,
-              "likes": 47,
-              "hearts": 4,
-              "reactionTotal": 67,
-              "reactionSamples": [
-                {
-                  "title": "Chunk Positioning After Cleaning and Recursive Splitting – Need to Retain Original Document Position for PDF Navigation / Highlight  ",
-                  "url": "https://github.com/deepset-ai/haystack/issues/8761",
-                  "likes": 6,
-                  "hearts": 4,
-                  "comments": 8
-                },
-                {
-                  "title": "Option to enable structured outputs with OpenAI Generators",
-                  "url": "https://github.com/deepset-ai/haystack/issues/8276",
-                  "likes": 12,
-                  "hearts": 0,
-                  "comments": 9
-                },
-                {
-                  "title": "Refactor Finder to allow more flexibility (multiple retrievers, pure document search ...)",
-                  "url": "https://github.com/deepset-ai/haystack/issues/544",
-                  "likes": 8,
-                  "hearts": 0,
-                  "comments": 9
-                }
-              ],
-              "updatedAt": "2026-10-19T02:20:03Z",
-              "pushedAt": "2026-10-17T02:14:47Z",
-              "createdAt": "2019-11-14T09:05:28Z",
-              "homepage": "https://haystack.deepset.ai",
-              "url": "https://github.com/deepset-ai/haystack",
-              "downloadUrl": "https://github.com/deepset-ai/haystack/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/deepset-ai/haystack.git",
-              "license": "Apache-2.0"
-            },
-            {
-              "id": "tooljet-tooljet",
+              "id": "strands-agents-harness-sdk",
               "rank": 5,
               "period": "monthly",
               "periodKey": "monthly",
@@ -2062,28 +2064,28 @@
               "categoryLabel": "GitHub 熱門 AI 開源工具",
               "categoryShortLabel": "AI 開源工具",
               "typeLabel": "AI 開源工具",
-              "fullName": "ToolJet/ToolJet",
-              "name": "ToolJet",
-              "owner": "ToolJet",
-              "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP 🚀",
-              "descriptionZh": "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀",
-              "oneLineZh": "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀",
-              "introZh": "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀 ToolJet 是一個開源平台，用於建立內部工具：管理面板、儀表板以及在現有資料庫、API 和 SaaS 系統上運行的操作應用程式。透過提示來建構它們。 ToolJet AI 將描述轉換為頁面、查詢和元件，並且您已經使用的編碼代理可以透過 ToolJet 的 MCP 伺服器執行相同的操作。代理根據 ToolJet 的真實元件和資料契約進行構建，而不是發出自由格式的程式碼，因此您得到的是一個實際的 ToolJet 應用程式：您的團隊在與其他所有內容相同的權限、環境和版本歷史記錄下，在視覺化建構器中不斷進行編輯。自行託管，或使用 ToolJet Cloud。 :star: 如果您發現 ToolJet 有用，請考慮在 GitHub 上給我們一個星星！您的支持幫助我們持續創新並提供令人興奮的功能。使用編碼agent進行建立 ToolJet 附帶了模型上下文協定伺服器，因此您已使用的編碼agent可以直接建立 ToolJet 應用程式：根據提示產生頁面、查詢和元件，並就地修改現有應用程式。可作為插件與 Claude Code、Codex 和 Grok Build 配合使用，捆綁 ToolJet 的應用程式建構器技能，並可單獨透過 MCP 伺服器與 Cursor 或任何其他 MCP 相容客戶端配合使用。代理根據 ToolJet 受管理的第一方合約構建，因此它們根據平台的真實模式工作，而不是猜測它們，並且操作由您自己運行...",
+              "fullName": "strands-agents/harness-sdk",
+              "name": "harness-sdk",
+              "owner": "strands-agents",
+              "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+              "descriptionZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
+              "oneLineZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
+              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
               "contentZh": [
-                "ToolJet AI 的開源基礎 - 用於內部工具、儀表板、業務應用程式、工作流程和 AI agent的企業應用程式產生平台。透過提示或透過 MCP 上的 Claude Code、Codex 和 Cursor 進行視覺化建置 🚀 ToolJet 是一個開源平台，用於建立內部工具：管理面板、儀表板以及在現有資料庫、API 和 SaaS 系統上運行的操作應用程式。透過提示來建構它們。 ToolJet AI 將描述轉換為頁面、查詢和元件，並且您已經使用的編碼代理可以透過 ToolJet 的 MCP 伺服器執行相同的操作。代理根據 ToolJet 的真實元件和資料契約進行構建，而不是發出自由格式的程式碼，因此您得到的是一個實際的 ToolJet 應用程式：您的團隊在與其他所有內容相同的權限、環境和版本歷史記錄下，在視覺化建構器中不斷進行編輯。自行託管，或使用 ToolJet Cloud。 :star: 如果您發現 ToolJet 有用，請考慮在 GitHub 上給我們一個星星！您的支持幫助我們持續創新並提供令人興奮的功能。使用編碼agent進行建立 ToolJet 附帶了模型上下文協定伺服器，因此您已使用的編碼agent可以直接建立 ToolJet 應用程式：根據提示產生頁面、查詢和元件，並就地修改現有應用程式。可作為插件與 Claude Code、Codex 和 Grok Build 配合使用，捆綁 ToolJet 的應用程式建構器技能，並可單獨透過 MCP 伺服器與 Cursor 或任何其他 MCP 相容客戶端配合使用。代理根據 ToolJet 受管理的第一方合約構建，因此它們根據平台的真實模式工作，而不是猜測它們，並且操作由您自己運行...",
-                "從 topics 來看，它和 ai-app-builder、docker、internal-applications、internal-project、internal-tool、internal-tools、javascript、kubernetes 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
+                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
+                "從 topics 來看，它和 agent-framework、agentic、agentic-ai、agents、ai、ai-agents、anthropic、autonomous-agents 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
               ],
               "discussionZh": [
-                "「Publish arm Tooljet docker images」是目前較多人互動的討論之一（👍 14、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[docs]: Contributing Guide Mac OS Instructions - Need to update npm version that is included with Node 14.17.3」是目前較多人互動的討論之一（👍 7）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Add check for null or empty string group name on creation」是目前較多人互動的討論之一（👍 5、❤️ 1、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「[FEATURE] Add TypeScript/JavaScript/NodeJS SDK」是目前較多人互動的討論之一（👍 121、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] Request to Develop a Go SDK for Strands」是目前較多人互動的討論之一（👍 95、留言 8）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[FEATURE] Add support for skills」是目前較多人互動的討論之一（👍 51、留言 16）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "需要工具連接的 MCP / tool server agent",
                 "用在內部系統、API 與外部工具串接 workflow",
-                "AI coding / developer assistant agent"
+                "要自建 agent framework 或 prototype 的工程師"
               ],
               "useCases": [
                 "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
@@ -2099,65 +2101,67 @@
                 "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
                 "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
               ],
-              "language": "HTML",
+              "language": "TypeScript",
               "topics": [
-                "ai-app-builder",
-                "docker",
-                "internal-applications",
-                "internal-project",
-                "internal-tool",
-                "internal-tools",
-                "javascript",
-                "kubernetes",
-                "low-code",
-                "low-code-development-platform",
-                "low-code-framework",
-                "no-code",
-                "nodejs",
-                "reactjs",
-                "self-hosted",
-                "typescript",
-                "web-development-tools",
-                "workflow-automation"
+                "agent-framework",
+                "agentic",
+                "agentic-ai",
+                "agents",
+                "ai",
+                "ai-agents",
+                "anthropic",
+                "autonomous-agents",
+                "bedrock",
+                "generative-ai",
+                "harness",
+                "llm",
+                "llm-agent",
+                "mcp",
+                "multi-agent-systems",
+                "openai",
+                "python",
+                "sdk",
+                "strands-agents",
+                "typescript"
               ],
-              "stars": 41106,
-              "forks": 5506,
-              "watchers": 41106,
-              "openIssues": 877,
-              "likes": 43,
+              "stars": 8868,
+              "forks": 1399,
+              "watchers": 8868,
+              "openIssues": 1045,
+              "likes": 399,
               "hearts": 1,
-              "reactionTotal": 49,
+              "reactionTotal": 427,
               "reactionSamples": [
                 {
-                  "title": "Publish arm Tooljet docker images",
-                  "url": "https://github.com/ToolJet/ToolJet/issues/7222",
-                  "likes": 14,
+                  "title": "[FEATURE] Add TypeScript/JavaScript/NodeJS SDK",
+                  "url": "https://github.com/strands-agents/harness-sdk/issues/156",
+                  "likes": 121,
                   "hearts": 0,
-                  "comments": 9
+                  "comments": 8
                 },
                 {
-                  "title": "[docs]: Contributing Guide Mac OS Instructions - Need to update npm version that is included with Node 14.17.3",
-                  "url": "https://github.com/ToolJet/ToolJet/issues/2712",
-                  "likes": 7,
+                  "title": "[FEATURE] Request to Develop a Go SDK for Strands",
+                  "url": "https://github.com/strands-agents/harness-sdk/issues/616",
+                  "likes": 95,
                   "hearts": 0,
-                  "comments": 0
+                  "comments": 8
                 },
                 {
-                  "title": "Add check for null or empty string group name on creation",
-                  "url": "https://github.com/ToolJet/ToolJet/pull/2711",
-                  "likes": 5,
-                  "hearts": 1,
-                  "comments": 1
+                  "title": "[FEATURE] Add support for skills",
+                  "url": "https://github.com/strands-agents/harness-sdk/issues/1181",
+                  "likes": 51,
+                  "hearts": 0,
+                  "comments": 16
                 }
               ],
-              "updatedAt": "2026-10-19T03:29:59Z",
-              "pushedAt": "2026-10-19T04:17:57Z",
-              "createdAt": "2021-03-30T08:51:34Z",
-              "homepage": "https://tooljet.com",
-              "url": "https://github.com/ToolJet/ToolJet",
-              "downloadUrl": "https://github.com/ToolJet/ToolJet/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/ToolJet/ToolJet.git",
-              "license": "AGPL-3.0"
+              "updatedAt": "2026-10-19T20:40:21Z",
+              "pushedAt": "2026-10-19T20:40:19Z",
+              "createdAt": "2025-05-14T19:59:51Z",
+              "homepage": "http://strandsagents.com/",
+              "url": "https://github.com/strands-agents/harness-sdk",
+              "downloadUrl": "https://github.com/strands-agents/harness-sdk/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/strands-agents/harness-sdk.git",
+              "license": "Apache-2.0"
             }
           ]
         }
@@ -2169,8 +2173,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-10-12",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-12、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-10-13",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-13、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "paperclipai-paperclip",
@@ -2241,13 +2245,13 @@
             "project-management",
             "workflow-automation"
           ],
-          "stars": 104240,
-          "forks": 17408,
-          "watchers": 104240,
-          "openIssues": 6183,
-          "likes": 268,
+          "stars": 104848,
+          "forks": 17476,
+          "watchers": 104848,
+          "openIssues": 6236,
+          "likes": 269,
           "hearts": 11,
-          "reactionTotal": 305,
+          "reactionTotal": 306,
           "reactionSamples": [
             {
               "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -2271,8 +2275,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-10-19T05:02:38Z",
-          "pushedAt": "2026-10-19T03:54:37Z",
+          "updatedAt": "2026-10-20T05:03:02Z",
+          "pushedAt": "2026-10-20T04:55:41Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "homepage": "https://paperclip.ing",
           "url": "https://github.com/paperclipai/paperclip",
@@ -2349,10 +2353,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 101658,
-          "forks": 8931,
-          "watchers": 101658,
-          "openIssues": 166,
+          "stars": 101839,
+          "forks": 8961,
+          "watchers": 101839,
+          "openIssues": 96,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2379,8 +2383,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-10-19T04:48:57Z",
-          "pushedAt": "2026-10-19T02:18:16Z",
+          "updatedAt": "2026-10-20T04:59:12Z",
+          "pushedAt": "2026-10-20T01:28:51Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2412,8 +2416,8 @@
           ],
           "discussionZh": [
             "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 19、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 5、留言 14）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 6）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
           ],
           "audience": [
             "需要記憶 / 上下文管理的 coding agent",
@@ -2457,13 +2461,13 @@
             "static-analysis",
             "touhou"
           ],
-          "stars": 325247,
-          "forks": 82365,
-          "watchers": 325247,
-          "openIssues": 1225,
-          "likes": 53,
+          "stars": 338951,
+          "forks": 85555,
+          "watchers": 338951,
+          "openIssues": 1280,
+          "likes": 54,
           "hearts": 0,
-          "reactionTotal": 55,
+          "reactionTotal": 56,
           "reactionSamples": [
             {
               "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
@@ -2477,18 +2481,18 @@
               "url": "https://github.com/morluto/rea/issues/1551",
               "likes": 10,
               "hearts": 0,
-              "comments": 4
+              "comments": 6
             },
             {
               "title": "[Feature] Java Reverse Engineering",
               "url": "https://github.com/morluto/rea/issues/1558",
-              "likes": 5,
+              "likes": 6,
               "hearts": 0,
-              "comments": 14
+              "comments": 15
             }
           ],
-          "updatedAt": "2026-10-19T05:02:00Z",
-          "pushedAt": "2026-10-19T05:01:59Z",
+          "updatedAt": "2026-10-20T05:04:57Z",
+          "pushedAt": "2026-10-20T05:00:07Z",
           "createdAt": "2026-04-14T00:51:32Z",
           "homepage": "https://rea.tools",
           "url": "https://github.com/morluto/rea",
@@ -2562,10 +2566,10 @@
             "personal-agent",
             "skills"
           ],
-          "stars": 47460,
-          "forks": 10395,
-          "watchers": 47460,
-          "openIssues": 19,
+          "stars": 47467,
+          "forks": 10397,
+          "watchers": 47467,
+          "openIssues": 22,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -2592,8 +2596,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-10-19T04:31:57Z",
-          "pushedAt": "2026-10-19T03:16:11Z",
+          "updatedAt": "2026-10-20T02:59:54Z",
+          "pushedAt": "2026-10-20T02:58:42Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -2614,7 +2618,7 @@
           "name": "context-mode",
           "owner": "mksglu",
           "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
-          "descriptionZh": "AI 編碼agent的上下文視窗最佳化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
+          "descriptionZh": "AI 编码代理的上下文窗口优化。沙箱工具輸出（減少 98%）、保留會話內存，並透過 MCP + 掛鉤強制跨 17 個平台進行路由。",
           "oneLineZh": "幫 AI coding agent 管理 context window，壓縮工具輸出並降低上下文浪費。",
           "introZh": "context-mode 的重點是上下文管理。它把工具輸出、session memory 與跨平台路由整理成一套機制，適合學習如何讓 agent 在長任務中不被雜訊拖慢。",
           "contentZh": [
@@ -2668,16 +2672,16 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 30828,
-          "forks": 2286,
-          "watchers": 30828,
+          "stars": 31148,
+          "forks": 2346,
+          "watchers": 31148,
           "openIssues": 356,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
           "reactionSamples": [],
-          "updatedAt": "2026-10-19T04:58:31Z",
-          "pushedAt": "2026-10-19T04:58:33Z",
+          "updatedAt": "2026-10-20T04:45:39Z",
+          "pushedAt": "2026-10-20T05:02:08Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
@@ -2691,8 +2695,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-09-19",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-19、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-09-20",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-20、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "paperclipai-paperclip",
@@ -2763,13 +2767,13 @@
             "project-management",
             "workflow-automation"
           ],
-          "stars": 104240,
-          "forks": 17408,
-          "watchers": 104240,
-          "openIssues": 6183,
-          "likes": 268,
+          "stars": 104848,
+          "forks": 17476,
+          "watchers": 104848,
+          "openIssues": 6236,
+          "likes": 269,
           "hearts": 11,
-          "reactionTotal": 305,
+          "reactionTotal": 306,
           "reactionSamples": [
             {
               "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -2793,8 +2797,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-10-19T05:02:38Z",
-          "pushedAt": "2026-10-19T03:54:37Z",
+          "updatedAt": "2026-10-20T05:03:02Z",
+          "pushedAt": "2026-10-20T04:55:41Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "homepage": "https://paperclip.ing",
           "url": "https://github.com/paperclipai/paperclip",
@@ -2871,10 +2875,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 101658,
-          "forks": 8931,
-          "watchers": 101658,
-          "openIssues": 166,
+          "stars": 101839,
+          "forks": 8961,
+          "watchers": 101839,
+          "openIssues": 96,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2901,8 +2905,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-10-19T04:48:57Z",
-          "pushedAt": "2026-10-19T02:18:16Z",
+          "updatedAt": "2026-10-20T04:59:12Z",
+          "pushedAt": "2026-10-20T01:28:51Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2934,8 +2938,8 @@
           ],
           "discussionZh": [
             "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 19、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 4）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 5、留言 14）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 10、留言 6）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
           ],
           "audience": [
             "需要記憶 / 上下文管理的 coding agent",
@@ -2979,13 +2983,13 @@
             "static-analysis",
             "touhou"
           ],
-          "stars": 325267,
-          "forks": 82371,
-          "watchers": 325267,
-          "openIssues": 1224,
-          "likes": 53,
+          "stars": 338957,
+          "forks": 85560,
+          "watchers": 338957,
+          "openIssues": 1280,
+          "likes": 54,
           "hearts": 0,
-          "reactionTotal": 55,
+          "reactionTotal": 56,
           "reactionSamples": [
             {
               "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
@@ -2999,18 +3003,18 @@
               "url": "https://github.com/morluto/rea/issues/1551",
               "likes": 10,
               "hearts": 0,
-              "comments": 4
+              "comments": 6
             },
             {
               "title": "[Feature] Java Reverse Engineering",
               "url": "https://github.com/morluto/rea/issues/1558",
-              "likes": 5,
+              "likes": 6,
               "hearts": 0,
-              "comments": 14
+              "comments": 15
             }
           ],
-          "updatedAt": "2026-10-19T05:03:26Z",
-          "pushedAt": "2026-10-19T05:01:59Z",
+          "updatedAt": "2026-10-20T05:06:57Z",
+          "pushedAt": "2026-10-20T05:00:07Z",
           "createdAt": "2026-04-14T00:51:32Z",
           "homepage": "https://rea.tools",
           "url": "https://github.com/morluto/rea",
@@ -3084,10 +3088,10 @@
             "personal-agent",
             "skills"
           ],
-          "stars": 47460,
-          "forks": 10395,
-          "watchers": 47460,
-          "openIssues": 19,
+          "stars": 47467,
+          "forks": 10397,
+          "watchers": 47467,
+          "openIssues": 22,
           "likes": 45,
           "hearts": 2,
           "reactionTotal": 51,
@@ -3114,8 +3118,8 @@
               "comments": 49
             }
           ],
-          "updatedAt": "2026-10-19T04:31:57Z",
-          "pushedAt": "2026-10-19T03:16:11Z",
+          "updatedAt": "2026-10-20T02:59:54Z",
+          "pushedAt": "2026-10-20T02:58:42Z",
           "createdAt": "2022-08-07T08:33:41Z",
           "homepage": "https://cowagent.ai",
           "url": "https://github.com/zhayujie/CowAgent",
@@ -3190,16 +3194,16 @@
             "skills",
             "zed-extension"
           ],
-          "stars": 30829,
-          "forks": 2286,
-          "watchers": 30829,
+          "stars": 31149,
+          "forks": 2346,
+          "watchers": 31149,
           "openIssues": 356,
           "likes": 0,
           "hearts": 0,
           "reactionTotal": 0,
           "reactionSamples": [],
-          "updatedAt": "2026-10-19T05:04:25Z",
-          "pushedAt": "2026-10-19T05:04:40Z",
+          "updatedAt": "2026-10-20T05:06:08Z",
+          "pushedAt": "2026-10-20T05:07:22Z",
           "createdAt": "2026-02-23T05:56:28Z",
           "homepage": "https://context-mode.com",
           "url": "https://github.com/mksglu/context-mode",
