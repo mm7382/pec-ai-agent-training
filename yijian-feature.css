@@ -8,6 +8,13 @@ body.personal-home-page .featured-work {
   color: #25362d;
 }
 
+body.personal-home-page .featured-work + .featured-work { margin-top: 108px; }
+body.personal-home-page .featured-work--bazi .featured-work-image { background: #e4d9c9; }
+body.personal-home-page .featured-work--bazi .featured-work-image > span { color: #80613f; }
+body.personal-home-page .featured-work--bazi .featured-work-label { color: #80613f; }
+body.personal-home-page .featured-work--bazi .featured-work-link { color: #80613f; border-color: #80613f; }
+body.personal-home-page .featured-work--bazi .featured-work-link:hover { color: #61452b; }
+
 .featured-work-image {
   position: relative;
   display: block;
@@ -95,6 +102,7 @@ body.personal-home-page .featured-work {
     margin-top: 34px;
     padding: 0 14px;
   }
+  body.personal-home-page .featured-work + .featured-work { margin-top: 52px; }
   .featured-work-image { min-height: 0; height: min(105vw, 460px); }
   .featured-work-copy { padding: 0 4px 36px; }
   .featured-work-copy h2 { font-size: clamp(36px, 10vw, 48px); }
