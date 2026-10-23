@@ -14,6 +14,11 @@ body.personal-home-page .featured-work--bazi .featured-work-image > span { color
 body.personal-home-page .featured-work--bazi .featured-work-label { color: #80613f; }
 body.personal-home-page .featured-work--bazi .featured-work-link { color: #80613f; border-color: #80613f; }
 body.personal-home-page .featured-work--bazi .featured-work-link:hover { color: #61452b; }
+body.personal-home-page .featured-work--ziwei .featured-work-image { background: #d7d6dd; }
+body.personal-home-page .featured-work--ziwei .featured-work-image > span { color: #524c68; }
+body.personal-home-page .featured-work--ziwei .featured-work-label { color: #524c68; }
+body.personal-home-page .featured-work--ziwei .featured-work-link { color: #524c68; border-color: #524c68; }
+body.personal-home-page .featured-work--ziwei .featured-work-link:hover { color: #39324e; }
 
 .featured-work-image {
   position: relative;
