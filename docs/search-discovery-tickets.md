@@ -26,21 +26,23 @@ Type: AFK。Status: published and verified（2026-10-24；`4994b9b`）。Blocked
 
 ## S3：入門與工具選型教材路徑
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 初學者知道從哪篇開始。
+Type: AFK。Status: published and verified（2026-10-24；`2f59827`）。Blocked by: S1, S2。User story: 初學者知道從哪篇開始。
 
 整理「AI Agent 入門與學習路線」5 篇和「工具選型與上手」8 篇的主題導覽、搜尋摘要、正文開頭與相關閱讀。
 
 驗收：13 篇各有與原文一致的獨立摘要、清楚下一篇連結，無重複空泛段落；原始教學事實及來源不被改寫成未證實主張。驗證：逐頁對照內容與靜態連結。
 
-本機證據：13 篇已有各自的搜尋摘要；原文開頭抽查保留具體主題與原有說法；每頁附同類下一篇及完整教材入口。原始 HTML 測試通過。
+本機證據：13 篇已有各自的搜尋摘要；原文開頭抽查保留具體主題與原有說法；每頁附同類下一篇及完整教材入口。原始 HTML 測試通過，正式站抽查摘要與延伸閱讀均可讀取。
 
 ## S4：任務交辦與需求釐清教材路徑
 
-Type: AFK。Status: proposed。Blocked by: S1, S2。User story: 訪客能從問題找到具體做法。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 訪客能從問題找到具體做法。
 
 整理「任務交辦、Prompt 與需求釐清」9 篇的搜尋入口與教材間閱讀順序。
 
 驗收：9 篇有互相區分的主題與摘要，主題頁可進可出，標題和正文能回答其目標搜尋問題。驗證：逐頁閱讀、連結檢查與手機操作。
+
+本機證據：9 篇原文標題與開頭維持原有主題；缺漏的搜尋摘要已補齊，原有精確摘要保留；每頁加入同主題下一篇及完整教材入口。靜態頁面測試通過。
 
 ## S5：可靠 Agent 系統教材路徑
 
