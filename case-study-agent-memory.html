@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>實作案例：讓 AI Agent 使用可審核的共用知識｜Michael Agent Lab</title>
+  <meta name="description" content="公開個人實作案例：AI Agent 如何先查既有知識、執行任務，再由人審核新經驗，避免未確認內容被重複引用。">
+  <link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="實作案例：讓 AI Agent 使用可審核的共用知識">
+  <meta property="og:description" content="從查找既有知識到人工審核新經驗，一個可公開檢視的個人工作流案例。">
+  <meta property="og:url" content="https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html">
+  <link rel="stylesheet" href="./styles.css?v=20261024-services">
+  <link rel="stylesheet" href="./field-notes.css?v=20261024">
+</head>
+<body class="personal-home-page field-page">
+  <main class="app-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="Michael Agent Lab 首頁"><span class="brand-mark" aria-hidden="true">M</span><span><strong>Michael Agent Lab</strong></span></a>
+      <nav class="home-nav-links" aria-label="首頁導覽"><a href="./index.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a><a href="./tutorial-library.html">Articles</a><a href="./journal.html">Journal</a><a href="./learning.html">Learning</a></nav>
+    </header>
+    <header class="field-hero">
+      <p class="field-kicker">公開實作案例 · AI AGENT WORKFLOW</p>
+      <h1>讓 AI Agent 使用可審核的共用知識</h1>
+      <p class="field-lead">當不同任務都需要參考過去的決策與做法，關鍵不只是讓 AI「記得」，而是讓資料有來源、更新有審核、使用前能查證。</p>
+      <p class="field-meta">Michael Agent Lab 的個人工作流示例 · 非客戶專案</p>
+    </header>
+    <div class="field-layout">
+      <article class="field-article">
+        <section>
+          <h2>要解決的問題</h2>
+          <p>AI Agent 在不同任務中工作時，先前確認過的規則、判斷與成果容易散落在各自的對話裡。下一次執行若只憑當下對話，可能重問同一題，也可能沿用已過期的答案。</p>
+          <p>這個個人實作將知識的查找與更新放進工作流程，讓 Agent 在行動前先查既有資料；新發現則必須經過人確認，才進入正式知識來源。</p>
+        </section>
+        <section>
+          <h2>實作流程</h2>
+          <ol class="field-steps">
+            <li><strong>查找既有資料</strong><br>先找與任務相關的規則、先前決策和來源，再決定下一步。</li>
+            <li><strong>執行並保留依據</strong><br>按已確認的規則處理任務；碰到衝突或資訊不足時，標出待判斷處。</li>
+            <li><strong>提交新經驗</strong><br>值得保留的做法先進待審核區，附上來源與適用範圍。</li>
+            <li><strong>人工審核後更新</strong><br>檢查敏感資料、重複或矛盾內容，再決定是否納入正式知識。</li>
+          </ol>
+        </section>
+        <section>
+          <h2>驗收時看什麼</h2>
+          <ul>
+            <li>Agent 是否能指出採用哪份既有資料與理由。</li>
+            <li>資料不足時，是否把不確定處交回人工確認。</li>
+            <li>新內容是否經審核才成為後續任務可引用的知識。</li>
+          </ul>
+          <div class="field-callout"><p><strong>可觀察的成果：</strong>這套流程把「先查資料」和「更新需審核」設為固定步驟。此頁沒有宣稱節省多少時間，也沒有把個人實作當作客戶成效。</p></div>
+        </section>
+        <section>
+          <h2>這個案例能怎麼套用</h2>
+          <p>需要跨任務沿用知識的團隊，可以先選一類重複工作，確認資料來源與負責審核的人，再用少量真實案例測試查找、執行與更新流程。若資料涉及敏感資訊，應先決定哪些內容可以進入知識庫。</p>
+          <p>想看更完整的公開說明，可讀 <a href="./pec-training/ai-brain-shared-memory-across-agents.html">共用知識工作流的原始教學 ↗</a>；想評估自己的流程，可看 <a href="./ai-agent-workflow-fit.html">AI Agent 導入判斷指南 ↗</a>。</p>
+        </section>
+      </article>
+      <aside class="field-aside" aria-label="合作資訊">
+        <h2>從你的流程開始</h2>
+        <p>先找一項規則明確、結果能檢查的工作。試做前一起定義資料範圍、人工確認點與完成條件。</p>
+        <p><a href="./services.html">查看合作方式 ↗</a></p>
+        <p><a href="mailto:mm7382@gmail.com?subject=AI%20Agent%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%B4%BD%E8%A9%A2">透過 Email 洽談 ↗</a></p>
+      </aside>
+    </div>
+    <footer class="field-footer"><a href="./services.html">返回服務頁</a> · Michael Agent Lab</footer>
+  </main>
+</body>
+</html>
