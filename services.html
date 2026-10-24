@@ -3,18 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Agent 導入接案與顧問｜Michael Agent Lab</title>
-  <meta name="description" content="Michael 接 AI Agent 導入與自動化工作流專案：盤點可自動化的工作、選工具與模型、把流程做成可重複的 Skill 與驗收方式。先聊 30 分鐘，再從小範圍試做開始。">
+  <title>AI Agent 導入與工作流程設計｜Michael Agent Lab</title>
+  <meta name="description" content="Michael 提供 AI Agent 導入與工作流程設計服務：需求盤點、工具選型、流程實作、驗收與交接。從明確的小範圍開始，建立可持續使用的工作方法。">
   <link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/services.html">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI Agent 導入接案與顧問｜Michael Agent Lab">
-  <meta property="og:description" content="接 AI Agent 導入與自動化工作流專案：盤點、選型、做成可重複的流程，並留下可驗收的成果。">
+  <meta property="og:title" content="AI Agent 導入與工作流程設計｜Michael Agent Lab">
+  <meta property="og:description" content="AI Agent 導入與工作流程設計：從需求盤點、工具選型到流程實作、驗收與交接。">
   <meta property="og:url" content="https://mm7382.github.io/pec-ai-agent-training/services.html">
 
   <link rel="stylesheet" href="./styles.css?v=20261024-services">
   <link rel="stylesheet" href="./services.css?v=20261024-services-2">
+  <style>
+    .services-page .services-hero { align-items: start; }
+    .services-page .services-hero h1 { max-width: 14em; font-size: clamp(2.25rem, 4.5vw, 3.6rem); line-height: 1.23; letter-spacing: -.025em; }
+    .services-page .services-hero-copy > p:not(.services-en) { max-width: 40em; }
+    .services-page .services-proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .services-page .services-proof-grid .services-card { display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 28px; border-radius: 4px; background: #fffefa; }
+    .services-page .services-proof-grid .services-card-kicker { margin: 0; color: #48644f; font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+    .services-page .services-proof-grid h3 { margin: 0; font-size: 1.17rem; line-height: 1.45; }
+    .services-page .services-proof-grid .services-card p:not(.services-card-kicker) { flex: 1; color: #444d44; line-height: 1.75; }
+    .services-page .services-proof-grid a { display: inline-flex; gap: 8px; align-self: flex-start; margin-top: 8px; color: #244b33; font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
+    .services-page .services-proof-grid a:hover, .services-page .services-proof-grid a:focus-visible { color: #153521; outline-offset: 4px; }
+    @media (max-width: 980px) {
+      .services-page .services-hero { grid-template-columns: minmax(0,1fr); gap: 34px; }
+      .services-page .services-hero h1 { max-width: 100%; }
+      .services-page .services-start { max-width: 680px; }
+      .services-page .services-proof-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .services-page .services-hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
+      .services-page .services-proof-grid .services-card { padding: 22px; }
+    }
+  </style>
   <script src="./site-config.js?v=20260711-resource-library"></script>
   <script type="application/ld+json">
   {
@@ -98,51 +120,51 @@
 
     <section class="services-hero" aria-labelledby="servicesTitle">
       <div class="services-hero-copy">
-        <h1 id="servicesTitle" lang="zh-Hant">我也接案：<br>讓 AI Agent 用在你的工作上。</h1>
-        <p class="services-en" lang="en">Available for AI agent adoption and workflow automation projects.</p>
-        <p lang="zh-Hant">除了在這個網站整理免費教材，我也承接 AI Agent 導入與自動化工作流的專案。重點不是「用了 AI」，而是那段工作之後能不能穩定跑完、而且看得出哪裡做錯。</p>
-        <p lang="zh-Hant">我的背景是工程、專案管理與帶團隊，現在把同一套工程做法用在 AI 上：先問清楚要解決什麼、挑合適的工具、把流程寫成可以重複執行的步驟，最後留下驗收方式與交接文件。</p>
+        <h1 id="servicesTitle" lang="zh-Hant">AI Agent 導入與<br>工作流程設計</h1>
+        <p class="services-en" lang="en">AI agent adoption, workflow design, and implementation.</p>
+        <p lang="zh-Hant">協助團隊辨識適合導入 AI Agent 的工作，設計可重複執行、可檢查結果的流程。從實際任務出發，讓工具選型、資料處理與人工確認各有清楚的位置。</p>
+        <p lang="zh-Hant">我以工程、專案管理與團隊協作經驗規劃導入：先確認目標與限制，再完成小範圍實作，最後交付驗收標準、操作說明與維護方式。</p>
         <a class="services-contact" href="https://www.linkedin.com/in/michael-c-976876264/" target="_blank" rel="noopener">
-          用 LinkedIn 跟我聊聊 <span aria-hidden="true">↗</span>
+          透過 LinkedIn 洽談合作 <span aria-hidden="true">↗</span>
         </a>
       </div>
       <aside class="services-start" aria-labelledby="servicesStartTitle">
-        <h2 id="servicesStartTitle" lang="zh-Hant">帶一段工作來談就好</h2>
-        <p lang="zh-Hant">第一次聯絡不用準備企劃書。告訴我下面三件事，我們就能判斷從哪裡開始：</p>
+        <h2 id="servicesStartTitle" lang="zh-Hant">從具體工作情境開始</h2>
+        <p lang="zh-Hant">初次討論可以先聚焦三個問題，評估導入的可行性與優先順序：</p>
         <ol lang="zh-Hant">
           <li>哪段工作最花時間？</li>
           <li>現在由誰、用什麼方式完成？</li>
           <li>你希望改善什麼？</li>
         </ol>
-        <p class="services-start-note" lang="zh-Hant">先談 30 分鐘，不收費。</p>
+        <p class="services-start-note" lang="zh-Hant">首次 30 分鐘需求討論不收費。</p>
       </aside>
     </section>
 
     <section class="services-block" aria-labelledby="servicesWhatTitle">
-      <h2 id="servicesWhatTitle" lang="zh-Hant">我能幫什麼忙</h2>
+      <h2 id="servicesWhatTitle" lang="zh-Hant">服務範圍</h2>
       <p class="services-en" lang="en">What I can take on.</p>
       <div class="services-grid">
         <article class="services-card">
           <h3 lang="zh-Hant">盤點與可行性評估</h3>
-          <p lang="zh-Hant">先把你現在的工作攤開來看，分出哪些適合交給 AI、哪些還是人做比較快，並說清楚各自的代價。</p>
+          <p lang="zh-Hant">盤點現有任務與限制，區分適合自動化、需要人工判斷與暫不建議導入的環節，提出可行的起點。</p>
         </article>
         <article class="services-card">
           <h3 lang="zh-Hant">工具與模型選型</h3>
-          <p lang="zh-Hant">不綁單一品牌。依資料能不能外流、預算、團隊會不會用，挑合適的工具與模型，並寫下為什麼這樣選。</p>
+          <p lang="zh-Hant">依資料安全、預算、既有系統與團隊能力評估工具和模型，記錄選型依據與取捨。</p>
         </article>
         <article class="services-card">
           <h3 lang="zh-Hant">做成可重複的流程</h3>
-          <p lang="zh-Hant">把一次性的嘗試變成可以重複執行的 Agent、Skill 與排程，換人操作、換時間執行結果都一樣。</p>
+          <p lang="zh-Hant">將已確認的作法整理成可重複執行的 Agent 工作流，加入必要的人工確認、例外處理與結果檢查。</p>
         </article>
         <article class="services-card">
           <h3 lang="zh-Hant">驗收方式與交接</h3>
-          <p lang="zh-Hant">交付時附上怎麼檢查、哪裡會壞、壞了怎麼看，讓你的團隊自己維護得下去，不用一直回來問我。</p>
+          <p lang="zh-Hant">交付操作說明、驗收標準與常見異常處理方式，協助團隊理解、使用及後續維護。</p>
         </article>
       </div>
     </section>
 
     <section class="services-block" aria-labelledby="servicesHowTitle">
-      <h2 id="servicesHowTitle" lang="zh-Hant">怎麼合作</h2>
+      <h2 id="servicesHowTitle" lang="zh-Hant">合作流程</h2>
       <p class="services-en" lang="en">How we start — small, verifiable, then wider.</p>
       <ol class="services-steps">
         <li lang="zh-Hant"><strong>先聊 30 分鐘</strong>說清楚你卡在哪一段工作、希望省下什麼。這一步不收費。</li>
@@ -154,7 +176,7 @@
     </section>
 
     <section class="services-block" aria-labelledby="servicesFitTitle">
-      <h2 id="servicesFitTitle" lang="zh-Hant">適合與不適合</h2>
+      <h2 id="servicesFitTitle" lang="zh-Hant">適用情境</h2>
       <p class="services-en" lang="en">Where this works, and where it does not.</p>
       <div class="services-fit">
         <div>
@@ -178,23 +200,29 @@
     </section>
 
     <section class="services-block" aria-labelledby="servicesProofTitle">
-      <h2 id="servicesProofTitle" lang="zh-Hant">可以先看我的公開實作</h2>
-      <p class="services-en" lang="en">My own work and methods, available to read and try.</p>
-      <div class="services-grid">
+      <h2 id="servicesProofTitle" lang="zh-Hant">公開方法與作品</h2>
+      <p class="services-en" lang="en">Selected methods and products you can review.</p>
+      <div class="services-grid services-proof-grid">
         <article class="services-card">
-          <h3 lang="zh-Hant">共用知識的 Agent 工作流</h3>
-          <p lang="zh-Hant">我在自己的工作中，先與 Agent 釐清需求、查找既有知識，再執行與驗證。值得保留的新經驗會先進待審核區，由我確認後才成為正式知識。<a href="./pec-training/ai-brain-shared-memory-across-agents.html">看做法 ↗</a></p>
+          <p class="services-card-kicker">工作方法 01</p>
+          <h3 lang="zh-Hant">Agent 知識與審核流程</h3>
+          <p lang="zh-Hant">以既有知識作為任務起點，讓新經驗經過確認後再納入共用資料，降低資訊失真與重複查找。</p>
+          <a href="./pec-training/ai-brain-shared-memory-across-agents.html">閱讀工作方法 <span aria-hidden="true">↗</span></a>
         </article>
         <article class="services-card">
-          <h3 lang="zh-Hant">從需求到驗收的做法</h3>
-          <p lang="zh-Hant">做 App 與網站時，我會先談清楚目標和限制，再拆成可檢查的工作，完成後看實際畫面與結果。<a href="./pec-training/matt-pocock-skills-codex-workflow.html">看流程 ↗</a></p>
+          <p class="services-card-kicker">工作方法 02</p>
+          <h3 lang="zh-Hant">需求到驗收的流程</h3>
+          <p lang="zh-Hant">先釐清目標與限制，再拆分可檢查的工作；完成後用實際結果驗收，保留決策依據與交接資訊。</p>
+          <a href="./pec-training/matt-pocock-skills-codex-workflow.html">了解執行流程 <span aria-hidden="true">↗</span></a>
         </article>
         <article class="services-card">
-          <h3 lang="zh-Hant">四款上線的網頁工具</h3>
-          <p lang="zh-Hant">易見、時來八字、時來紫微、時來星座，免費開放實際操作。<a href="https://mm7382.github.io/">去看看 ↗</a></p>
+          <p class="services-card-kicker">公開作品 03</p>
+          <h3 lang="zh-Hant">已上線的網頁工具</h3>
+          <p lang="zh-Hant">易見、時來八字、時來紫微與時來星座皆可直接操作，展示從內容設計到產品交付的成果。</p>
+          <a href="https://mm7382.github.io/">查看 App 作品集 <span aria-hidden="true">↗</span></a>
         </article>
       </div>
-      <p class="services-proof-note" lang="zh-Hant">以上是我的個人公開實作與方法，讓你先看我怎麼做事。</p>
+      <p class="services-proof-note" lang="zh-Hant">以上為個人公開作品與方法，供你評估合作方向。</p>
     </section>
 
     <section class="services-block" aria-labelledby="servicesFaqTitle">

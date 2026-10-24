@@ -910,6 +910,55 @@
     .matt-workflow-page.lesson-editorial-page .priority.now,
     .matt-workflow-page.lesson-editorial-page .priority.next,
     .matt-workflow-page.lesson-editorial-page .priority.later { color: #282722; }
+    .matt-workflow-page.lesson-editorial-page .section-nav {
+      background: #fffefa;
+      border-top: 1px solid #d8ded7;
+      border-bottom: 1px solid #d8ded7;
+    }
+    .matt-workflow-page.lesson-editorial-page .section-nav a {
+      background: #f7f8f4;
+      border-color: #cbd5cb;
+      color: #274b34;
+      font-weight: 700;
+    }
+    .matt-workflow-page.lesson-editorial-page .section-nav a:hover,
+    .matt-workflow-page.lesson-editorial-page .section-nav a:focus-visible {
+      background: #e7eee6;
+      border-color: #5a765f;
+      color: #173d28;
+    }
+    .matt-workflow-page.lesson-editorial-page .module-diagram {
+      background: #f3f5f1;
+      border-color: #d2dbd2;
+    }
+    .matt-workflow-page.lesson-editorial-page .shallow-interface {
+      background: #f2e5c8;
+      border-color: #af8139;
+      color: #49300d;
+    }
+    .matt-workflow-page.lesson-editorial-page .shallow-body {
+      background: #fffdf8;
+      border-color: #a99470;
+      color: #4c463c;
+      height: auto;
+      min-height: 52px;
+      padding: 10px;
+      text-align: center;
+    }
+    .matt-workflow-page.lesson-editorial-page .deep-interface {
+      background: #dcebdc;
+      border-color: #709675;
+      color: #214a2b;
+    }
+    .matt-workflow-page.lesson-editorial-page .deep-body {
+      background: #e5f0e5;
+      border-color: #709675;
+      color: #214a2b;
+    }
+    @media (max-width: 760px) {
+      .matt-workflow-page.lesson-editorial-page .module-diagram { min-height: 220px; }
+      .matt-workflow-page.lesson-editorial-page .deep-interface { width: min(100%, 280px); }
+    }
   </style>
   <script src="../site-config.js?v=20260723-matt-skills"></script>
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
