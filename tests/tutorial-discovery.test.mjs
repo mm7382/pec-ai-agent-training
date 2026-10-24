@@ -10,11 +10,14 @@ const coveredCategories = new Set([
   'Agent 系統架構與可靠性',
   'Skill、蒸餾與能力沉澱',
   '知識庫、文件轉換與上下文治理',
+  'Agent 管理、可視化與營運',
+  '設計與輸出工作流',
+  'Skill / Workflow · AI Open Source',
 ]);
 
 test('selected tutorials explain themselves and link to more reading in raw HTML', () => {
   const selected = index.items.filter((item) => coveredCategories.has(item.category));
-  assert.equal(selected.length, 43);
+  assert.equal(selected.length, 47);
 
   for (const item of selected) {
     const page = readFileSync(new URL(`../${item.url.slice(2)}`, import.meta.url), 'utf8');

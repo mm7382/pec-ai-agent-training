@@ -66,11 +66,13 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S7：其餘教材的精確入口
 
-Type: AFK。Status: proposed。Blocked by: S1, S2。User story: 小類別教材也不會在目錄中消失。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 小類別教材也不會在目錄中消失。
 
 整理「Agent 管理、可視化與營運」2 篇、「設計與輸出工作流」1 篇、「Skill / Workflow · AI Open Source」1 篇。
 
 驗收：4 篇分類與導覽合理，保留真正原文主題，沒有為了塞關鍵字而改變教學內容。驗證：目錄分類、頁面摘要與靜態連結比對。
+
+本機證據：4 篇保留原始主題與文案，補齊缺漏摘要；單篇分類連到相近工具或 Skill 教材。47 篇教材的靜態頁面測試全部通過。
 
 ## S8：AI 實作學習日誌入口
 

@@ -20,8 +20,12 @@ function href(from, to) {
 function relatedItems(item) {
   const group = index.items.filter((other) => other.category === item.category);
   const current = group.findIndex((other) => other.url === item.url);
-  return [group[current - 1], group[current + 1], group[current + 2]]
+  const neighbors = [group[current - 1], group[current + 1], group[current + 2]]
     .filter((other) => other && other.url !== item.url).slice(0, 2);
+  if (neighbors.length) return neighbors;
+  const crossTopic = item.category === '設計與輸出工作流'
+    ? '工具選型與上手' : 'Skill、蒸餾與能力沉澱';
+  return index.items.filter((other) => other.category === crossTopic).slice(0, 2);
 }
 
 function updatePage(item) {
