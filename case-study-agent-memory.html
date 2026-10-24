@@ -12,7 +12,7 @@
   <meta property="og:description" content="以共用記憶與人工審核流程，說明 AI Agent 知識庫的問題、設計、示範、驗收與限制。">
   <meta property="og:url" content="https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html">
   <link rel="stylesheet" href="./styles.css?v=20261024-services">
-  <link rel="stylesheet" href="./field-notes.css?v=20261024">
+  <link rel="stylesheet" href="./field-notes.css?v=20261024-spacing">
   <style>
     .case-toc {display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:24px}
     .case-toc a {color:#244f35;text-underline-offset:4px}
@@ -25,6 +25,17 @@
     .field-page .case-demo {padding:22px;background:#f2f1eb;border:1px solid #cbd2c7;border-radius:8px}
     .field-page .case-demo h3:first-child {margin-top:0}
     @media(max-width:600px){.field-page .app-shell{width:calc(100% - 32px)}.case-facts{grid-template-columns:1fr;gap:12px}.field-page .topbar{padding-left:0;padding-right:0}.field-page .home-nav-links{flex-wrap:wrap;overflow:visible;gap:14px 20px}}
+    .case-toc { gap:10px; margin:28px 0 0; }
+    .case-toc a { display:block; padding:12px 16px; background:#fffefa; border:1px solid #cbd2c7; border-radius:4px; text-decoration:none; font-weight:600; line-height:1.5; }
+    .case-toc a:hover { background:#e8ede5; }
+    .field-page .case-reading-tip { margin:18px 0 0; line-height:1.85; color:#404b42; }
+    .field-page .case-reading-tip a { color:#244f35; text-underline-offset:4px; }
+    .field-page .case-demo { margin-bottom:32px; }
+    .field-page .case-demo p:last-child { margin-bottom:0; }
+    .case-actions { display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px; margin:24px 0; }
+    .field-page .case-primary { display:inline-flex; padding:14px 20px; background:#293f33; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; line-height:1.6; }
+    .field-page .case-primary:hover { background:#1c3024; }
+    @media(max-width:600px){.case-toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.case-toc a{padding:12px;font-size:.9rem}.field-page .case-demo{padding:20px}.case-actions{align-items:stretch;flex-direction:column}}
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html#article", "headline": "AI Agent 知識庫實作案例：共用記憶與人工審核", "description": "個人實作案例，說明 AI Agent 如何查詢已審核知識、提交候選內容與保留人工確認。", "inLanguage": "zh-Hant", "dateModified": "2026-10-24", "mainEntityOfPage": "https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html", "author": {"@type": "Organization", "name": "Michael Agent Lab", "url": "https://mm7382.github.io/pec-ai-agent-training/"}, "about": ["AI Agent 知識庫", "共用記憶", "人工審核工作流程"], "isBasedOn": "https://mm7382.github.io/pec-ai-agent-training/pec-training/ai-brain-shared-memory-across-agents.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mm7382.github.io/pec-ai-agent-training/"}, {"@type": "ListItem", "position": 2, "name": "AI Agent 導入服務", "item": "https://mm7382.github.io/pec-ai-agent-training/services.html"}, {"@type": "ListItem", "position": 3, "name": "共用知識庫實作案例", "item": "https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html"}]}]}</script>
 </head>
@@ -32,15 +43,18 @@
   <main class="app-shell">
     <header class="topbar" aria-label="網站導覽">
       <a class="brand" href="./index.html" aria-label="Michael Agent Lab 首頁"><span class="brand-mark" aria-hidden="true">M</span><span><strong>Michael Agent Lab</strong></span></a>
-      <nav class="home-nav-links" aria-label="首頁導覽"><a href="./index.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a><a href="./tutorial-library.html">Articles</a><a href="./journal.html">Journal</a><a href="./learning.html">Learning</a></nav>
+      <nav class="home-nav-links" aria-label="首頁導覽"><a href="./index.html">首頁</a><a href="./about.html">關於本站</a><a href="./services.html">合作服務</a><a href="./tutorial-library.html">實作教材</a><a href="./journal.html">實作紀錄</a><a href="./learning.html">學習資源</a></nav>
     </header>
-    <header class="field-hero">
+    <header class="field-hero" id="overview">
       <p class="field-kicker">公開實作案例 · AI AGENT WORKFLOW</p>
       <h1>AI Agent 知識庫：<br>讓共用記憶有來源、有審核</h1>
-      <p class="field-lead">當不同任務都需要參考過去的決策與做法，關鍵不只是讓 AI「記得」，而是讓資料有來源、更新有審核、使用前能查證。</p>
+      <p class="field-lead">讓 AI 在工作前查詢已確認的規則，完成後交由人檢查；新做法經過審核，才成為下次可用的知識。以下以週報整理為例，說明完整流程。</p>
       <p class="field-meta">Michael Agent Lab · 個人實作，非客戶專案 · 更新於 <time datetime="2026-10-24">2026 年 10 月 24 日</time></p>
       <dl class="case-facts"><div><dt>解決的問題</dt><dd>跨任務的規則與決策散落在對話中。</dd></div><div><dt>實作重點</dt><dd>共用來源、候選知識與人工審核。</dd></div><div><dt>公開方式</dt><dd>流程說明與虛構資料示範，不開放私人知識庫。</dd></div></dl>
-      <nav class="case-toc" aria-label="案例章節"><a href="#problem">問題與設計</a><a href="#walkthrough">看一次完整流程</a><a href="#acceptance">成果與驗收</a><a href="#faq">常見問題</a></nav>
+      <nav class="case-toc" aria-label="案例章節">
+        <a href="#problem">01 問題與做法</a><a href="#walkthrough">02 流程示範</a><a href="#acceptance">03 如何驗收</a><a href="#boundaries">04 適用情境</a><a href="#faq">05 常見問題</a><a href="#project-brief">06 合作準備</a>
+      </nav>
+      <p class="case-reading-tip">第一次閱讀？先看<a href="#walkthrough">流程示範</a>。已有明確需求？可直接查看<a href="#project-brief">合作準備清單</a>。</p>
     </header>
     <div class="field-layout">
       <article class="field-article">
@@ -53,7 +67,7 @@
           <p>這些設計取自本站的<a href="./pec-training/ai-brain-shared-memory-across-agents.html">跨 Agent 共用記憶實作教學</a>，公開內容呈現方法與資料流，不包含私人資料庫或內部紀錄。</p>
         </section>
         <section id="walkthrough">
-          <h2>示範：把一項新經驗變成可重用的知識</h2>
+          <h2>流程示範：完成一份可檢查的週報摘要</h2>
           <p>以下是用虛構資料重建的說明情境，不是實際客戶對話或產品執行紀錄。</p>
           <div class="case-demo"><h3>輸入任務</h3><p>「幫我整理本週待辦摘要。沿用先前確認的格式，完成後先給我檢查。」</p><h3>已確認的規則</h3><p>摘要包含「已完成、待確認、下一步」三部分；沒有依據的事項列為待確認，不當作已完成。</p><h3>預期輸出</h3><p>一份依照既有格式整理的摘要，附上採用的規則來源，以及缺少依據的項目。這裡展示的是流程與輸出規格，不是連線執行中的 Agent。</p></div>
           <ol class="field-steps"><li><strong>查找相關規則</strong><br>找出摘要格式與適用範圍。沒有找到時先說明缺漏，不自行聲稱已存在某項規定。</li><li><strong>產生待確認成果</strong><br>依規則整理內容，分開列出有依據的結果與待確認事項。</li><li><strong>提交候選知識</strong><br>若使用者希望下次新增「負責人」欄位，先記為候選更新，附上來源、日期與適用範圍。</li><li><strong>人工審核後再沿用</strong><br>確認這是長期規則後才更新正式知識。下一次執行再查正式版本；未核准內容不視為既定規則。</li></ol>
@@ -78,17 +92,17 @@
           <h3>能先做一小部分再決定是否擴大嗎？</h3><p>可以先選一類任務，確認輸入、預期輸出、人工審核點與驗收方式，再評估是否擴大。查看<a href="./services.html">AI Agent 導入服務與合作方式</a>。</p>
         </section>
         <section id="project-brief"><h2>想做類似的知識庫？先準備這五項資訊</h2><p>初次討論可用概述或去識別的例子，不需先提供完整文件或私人資料。</p><ol><li><strong>想改善的工作：</strong>例如找作業規則、整理週報或交接專案背景。</li><li><strong>現在的資料：</strong>大致有哪些文件、格式與數量？誰能使用？</li><li><strong>預期成果：</strong>希望得到附來源的回答、摘要，或一份待確認清單？</li><li><strong>確認方式：</strong>由誰判斷結果正確、哪些動作必須先得到同意？</li><li><strong>範圍與時間：</strong>想先試做哪一小部分？是否有預算或時間限制？</li></ol><p>首次 30 分鐘需求討論不收費。討論後再確認試做範圍、交付內容與報價；公開案例不代表所有需求都能直接套用。</p></section>
-        <section id="next"><h2>把這個方法用在你的工作</h2><p>洽談時提供一項想改善的工作、目前資料來源，以及希望交付的結果即可。第一次討論先確認資料範圍與試做目標；任何實作範圍、費用與完成條件都在動工前確認。</p><p>還在評估是否合適，可先讀<a href="./ai-agent-workflow-fit.html">AI Agent 導入判斷指南</a>或<a href="./choose-ai-agent-consultant.html">選擇導入顧問的檢查清單</a>。</p></section>
+        <section id="next"><h2>下一步：評估你的工作情境</h2><p>洽談時提供一項想改善的工作、目前資料來源，以及希望交付的結果即可。第一次討論先確認資料範圍與試做目標；任何實作範圍、費用與完成條件都在動工前確認。</p><div class="case-actions"><a class="case-primary" href="./services.html#inquiry-brief">準備專案需求簡報 ↗</a><a href="./services.html">查看合作服務</a></div><p>還在評估是否合適，可先讀<a href="./ai-agent-workflow-fit.html">AI Agent 導入判斷指南</a>或<a href="./choose-ai-agent-consultant.html">選擇導入顧問的檢查清單</a>。</p></section>
       </article>
       <aside class="field-aside" aria-label="合作資訊">
         <h2>從你的流程開始</h2>
         <p>先找一項規則明確、結果能檢查的工作。試做前一起定義資料範圍、人工確認點與完成條件。</p>
         <p><a href="#project-brief">先看洽詢準備清單 ↓</a></p>
         <p><a href="./services.html">查看合作方式 ↗</a></p>
-        <p><a href="mailto:mm7382@gmail.com?subject=AI+Agent+%E7%9F%A5%E8%AD%98%E5%BA%AB%E6%A1%88%E4%BE%8B%EF%BD%9C%E8%A9%A6%E5%81%9A%E6%B4%BD%E8%A9%A2&amp;body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E7%9C%8B%E9%81%8E%E3%80%8CAI+Agent+%E5%85%B1%E7%94%A8%E7%9F%A5%E8%AD%98%E5%BA%AB%E3%80%8D%E6%A1%88%E4%BE%8B%EF%BC%8C%E6%83%B3%E8%A9%95%E4%BC%B0%E4%B8%80%E9%A0%85%E5%B7%A5%E4%BD%9C%E3%80%82%0A%0A1.+%E6%83%B3%E6%94%B9%E5%96%84%E7%9A%84%E5%B7%A5%E4%BD%9C%EF%BC%9A%0A2.+%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E8%88%87%E5%A4%A7%E8%87%B4%E6%95%B8%E9%87%8F%EF%BC%88%E5%85%88%E4%B8%8D%E9%99%84%E7%A7%81%E4%BA%BA%E6%88%96%E6%95%8F%E6%84%9F%E8%B3%87%E6%96%99%EF%BC%89%EF%BC%9A%0A3.+%E5%B8%8C%E6%9C%9B%E5%BE%97%E5%88%B0%E7%9A%84%E6%88%90%E6%9E%9C%EF%BC%9A%0A4.+%E8%B2%A0%E8%B2%AC%E7%A2%BA%E8%AA%8D%E7%B5%90%E6%9E%9C%E7%9A%84%E4%BA%BA%E6%88%96%E8%A7%92%E8%89%B2%EF%BC%9A%0A5.+%E5%B8%8C%E6%9C%9B%E8%A9%A6%E5%81%9A%E7%9A%84%E7%AF%84%E5%9C%8D%E3%80%81%E6%99%82%E9%96%93%E8%88%87%E9%A0%90%E7%AE%97%EF%BC%88%E5%B0%9A%E6%9C%AA%E7%A2%BA%E5%AE%9A%E5%8F%AF%E8%A8%BB%E6%98%8E%EF%BC%89%EF%BC%9A%0A%0A%E6%96%B9%E4%BE%BF%E8%81%AF%E7%B5%A1%E7%9A%84%E6%99%82%E9%96%93%EF%BC%9A">寄出知識庫試做洽詢 ↗</a></p>
+        <p><a href="mailto:mm7382@gmail.com?subject=AI+Agent+%E7%9F%A5%E8%AD%98%E5%BA%AB%E6%A1%88%E4%BE%8B%EF%BD%9C%E8%A9%A6%E5%81%9A%E6%B4%BD%E8%A9%A2&amp;body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E7%9C%8B%E9%81%8E%E3%80%8CAI+Agent+%E5%85%B1%E7%94%A8%E7%9F%A5%E8%AD%98%E5%BA%AB%E3%80%8D%E6%A1%88%E4%BE%8B%EF%BC%8C%E6%83%B3%E8%A9%95%E4%BC%B0%E4%B8%80%E9%A0%85%E5%B7%A5%E4%BD%9C%E3%80%82%0A%0A1.+%E6%83%B3%E6%94%B9%E5%96%84%E7%9A%84%E5%B7%A5%E4%BD%9C%EF%BC%9A%0A2.+%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E8%88%87%E5%A4%A7%E8%87%B4%E6%95%B8%E9%87%8F%EF%BC%88%E5%85%88%E4%B8%8D%E9%99%84%E7%A7%81%E4%BA%BA%E6%88%96%E6%95%8F%E6%84%9F%E8%B3%87%E6%96%99%EF%BC%89%EF%BC%9A%0A3.+%E5%B8%8C%E6%9C%9B%E5%BE%97%E5%88%B0%E7%9A%84%E6%88%90%E6%9E%9C%EF%BC%9A%0A4.+%E8%B2%A0%E8%B2%AC%E7%A2%BA%E8%AA%8D%E7%B5%90%E6%9E%9C%E7%9A%84%E4%BA%BA%E6%88%96%E8%A7%92%E8%89%B2%EF%BC%9A%0A5.+%E5%B8%8C%E6%9C%9B%E8%A9%A6%E5%81%9A%E7%9A%84%E7%AF%84%E5%9C%8D%E3%80%81%E6%99%82%E9%96%93%E8%88%87%E9%A0%90%E7%AE%97%EF%BC%88%E5%B0%9A%E6%9C%AA%E7%A2%BA%E5%AE%9A%E5%8F%AF%E8%A8%BB%E6%98%8E%EF%BC%89%EF%BC%9A%0A%0A%E6%96%B9%E4%BE%BF%E8%81%AF%E7%B5%A1%E7%9A%84%E6%99%82%E9%96%93%EF%BC%9A">洽詢知識庫試做 ↗</a></p>
       </aside>
     </div>
-    <footer class="field-footer"><a href="./services.html">返回服務頁</a> · Michael Agent Lab</footer>
+    <footer class="field-footer"><a href="./services.html">返回合作服務</a> · <a href="#overview">回到案例開頭 ↑</a> · Michael Agent Lab</footer>
   </main>
 </body>
 </html>
