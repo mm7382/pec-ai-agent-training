@@ -96,19 +96,23 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S10：四款免費 App 與個人品牌形成清楚回路
 
-Type: AFK。Status: proposed。Blocked by: S2。User story: 工具使用者知道作者及其他免費作品。
+Type: AFK。Status: published and verified（2026-10-24；App 站 `6d52f7d`）。Blocked by: S2。User story: 工具使用者知道作者及其他免費作品。
 
 整理作品入口的介紹與連結，並在四款 App 合適的公開頁提供回到 Michael Agent Lab 的作者／作品連結。
 
 驗收：四款工具各自可從個人網站找到，回連不干擾排盤；署名一致，私密資料不出現在網址或公開頁。驗證：五個正式入口的手機瀏覽與跳轉檢查。
 
+正式站證據：四款 App 首頁都可直接回 Michael Agent Lab，個人網站首頁保留四款作品入口；390px 手機檢查沒有橫向溢出。
+
 ## S11：全站搜尋與 AI 可讀性驗收
 
-Type: AFK。Status: proposed。Blocked by: S1–S10。User story: 搜尋服務有穩定、真實且可理解的公開內容。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1–S10。User story: 搜尋服務有穩定、真實且可理解的公開內容。
 
 對 84 個個人網站公開頁與四款 App 主要入口稽核抓取、HTML 主內容、必要 canonical、sitemap、robots、手機可讀性和效能；逐頁留下保留或修訂結果。
 
 驗收：公開網址正常；應索引頁可由連結或 sitemap 發現；別名、私人或預覽頁不誤列；不以 `llms.txt`、結構化資料或單一 SEO 分數代替內容品質。驗證：完整網址稽核、抽樣瀏覽器實測與發布後讀回。
+
+稽核結果見 [逐頁報告](search-discovery-audit-2026-10-24.md)：原 84 頁中找出 1 個舊轉址與 1 個審稿預覽，已從公開 sitemap 移除；預覽頁增設 noindex。剩餘 82 頁及 4 款 App 首頁：86/86 回應 200，0 頁缺搜尋摘要或主標題，0 頁有錯誤 canonical。390px 手機抽查日誌與四款 App 無橫向溢出。效能風險：少數舊教材仍內嵌大型圖片（最大約 4.82 MiB）；本批保留原教材，後續可獨立優化。
 
 ## S12：建立搜尋成效基線與後續調整節奏
 
