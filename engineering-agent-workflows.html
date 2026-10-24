@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工程團隊如何試做 AI Agent？三種工作與驗收方法｜Michael Agent Lab</title>
+  <meta name="description" content="工程與技術專案團隊導入 AI Agent，可以從文件版本比對、事項追蹤和測試資料整理開始。了解每項工作的輸入、人工確認點與試做驗收方式。">
+  <link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="工程團隊如何試做 AI Agent？三種工作與驗收方法">
+  <meta property="og:description" content="從具體工作開始，先定資料、人工確認點和驗收條件，再決定要不要擴大導入。">
+  <meta property="og:url" content="https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html">
+  <link rel="stylesheet" href="./styles.css?v=20261024-services">
+  <link rel="stylesheet" href="./field-notes.css?v=20261024">
+</head>
+<body class="personal-home-page field-page">
+  <main class="app-shell">
+    <header class="topbar" aria-label="網站導覽">
+      <a class="brand" href="./index.html" aria-label="Michael Agent Lab 首頁"><span class="brand-mark" aria-hidden="true">M</span><span><strong>Michael Agent Lab</strong></span></a>
+      <nav class="home-nav-links" aria-label="首頁導覽"><a href="./index.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a><a href="./tutorial-library.html">Articles</a><a href="./journal.html">Journal</a><a href="./learning.html">Learning</a></nav>
+    </header>
+    <header class="field-hero">
+      <p class="field-kicker">工程團隊 · AI AGENT 導入</p>
+      <h1>工程團隊如何試做 AI Agent？</h1>
+      <p class="field-lead">先挑一項每週都會做、來源找得到、結果能檢查的工作。把規則和人工確認點寫清楚，再用真實案例試跑，比展示一個什麼都會的 Agent 更容易判斷是否值得導入。</p>
+      <p class="field-meta">三種可評估的工作情境 · 非客戶成果</p>
+    </header>
+    <div class="field-layout">
+      <article class="field-article">
+        <section>
+          <h2>從哪三種工作開始？</h2>
+          <h3>1. 文件與版本差異整理</h3>
+          <p>輸入指定版本的規格、會議結論或操作文件，讓 Agent 標出新增、刪除及可能互相衝突的地方。輸出應附原始位置，方便負責人回查；Agent 不自行決定哪個版本才是正式要求。</p>
+          <h3>2. 待辦與阻礙追蹤</h3>
+          <p>從已授權的事項清單整理負責人、期限和未解決問題，產出待確認摘要。缺少負責人或日期時明確標示，由專案負責人確認後才對外發送。</p>
+          <h3>3. 測試資料與證據整理</h3>
+          <p>依事先定義的欄位，檢查紀錄是否缺檔、缺版本或缺對應項目，並整理可追溯的資料清單。是否符合技術要求仍由有責任的工程人員判斷。</p>
+          <div class="field-callout"><p>以上是用來說明試做方法的情境範例，並非已完成的客戶專案，也不代表所有團隊都能直接套用。</p></div>
+        </section>
+        <section>
+          <h2>一輪試做交付什麼？</h2>
+          <ul>
+            <li><strong>流程範圍：</strong>觸發時機、輸入與輸出，以及不交給 Agent 處理的決策。</li>
+            <li><strong>資料邊界：</strong>可使用的來源、權限、保存位置和敏感資訊處理方式。</li>
+            <li><strong>可操作成果：</strong>依約定範圍試跑的流程，或清楚說明目前無法實作的原因。</li>
+            <li><strong>驗收與交接：</strong>測試案例、人工確認點、操作說明及異常時的處理方式。</li>
+          </ul>
+          <p>實際交付內容、時間與費用須依資料環境和試做範圍先確認。</p>
+        </section>
+        <section>
+          <h2>驗收時不要只看順利的一次</h2>
+          <p>試做前先準備幾個已知結果的案例，再加上資料缺漏、版本衝突、沒有權限與重複執行等情況。驗收時檢查 Agent 是否說明依據、標出不確定處，並在需要人確認的位置停下來。</p>
+          <p>如果來源不可靠、權限未釐清，或沒有人負責檢查輸出，應先整理流程與責任分工。更一般的篩選方式可看 <a href="./ai-agent-workflow-fit.html">哪些工作適合導入 AI Agent？↗</a></p>
+        </section>
+        <section>
+          <h2>先看方法，再談合作</h2>
+          <p><a href="./case-study-agent-memory.html">共用知識與人工審核案例 ↗</a>展示了另一種可公開檢視的個人工作流：先查既有資料，執行後由人確認新經驗。若你有一項工程或專案工作想試做，可看 <a href="./services.html">AI Agent 導入與工作流程設計服務 ↗</a>，從小範圍開始討論。</p>
+        </section>
+      </article>
+      <aside class="field-aside" aria-label="試做準備">
+        <h2>討論前準備三件事</h2>
+        <ul>
+          <li>一項最耗時或最常出錯的工作</li>
+          <li>目前使用的資料和工具</li>
+          <li>希望改善的結果</li>
+        </ul>
+        <p>還沒整理成完整計畫也可以。</p>
+        <p><a href="./services.html">查看合作方式與洽談入口 ↗</a></p>
+      </aside>
+    </div>
+    <footer class="field-footer"><a href="./services.html">返回服務頁</a> · Michael Agent Lab</footer>
+  </main>
+</body>
+</html>
