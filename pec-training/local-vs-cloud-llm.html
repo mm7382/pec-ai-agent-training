@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Local LLM 與 Cloud LLM 差異教學｜工程師教學</title>
+  <meta name="description" content="判斷什麼任務適合雲端模型、什麼資料該留在本地，以及工程團隊如何做混合選型。">
   
   <style>
     :root {
@@ -657,6 +658,7 @@
 
   <script src="../site-config.js?v=20260710-top5"></script>
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
+  <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 </head>
 <body>
 
@@ -732,5 +734,18 @@
 <section id="summary"><div class="wrap section-card"><h2>10. 最後總結</h2><div class="grid-3"><div class="card"><span class="tag tag-green">Local LLM</span><h3>適合資料敏感與大量批次處理</h3><p>例如內部 issue、log、BOM、測試摘要與不能外流的專案資料。</p></div><div class="card"><span class="tag tag-blue">Cloud LLM</span><h3>適合高推理與高品質產出</h3><p>例如教材產出、公開資料整理、報告語氣改寫、Prompt 設計與概念討論。</p></div><div class="card"><span class="tag tag-purple">Hybrid</span><h3>最適合正式導入</h3><p>Local 負責敏感資料處理，Cloud 負責去識別化後的高品質產出，最後由工程師確認。</p></div></div><div class="callout"><strong>帶回去的一句話：</strong>AI Agent 導入不是只看模型強不強，而是要同時看 <span class="highlight">資料能不能出去、任務需不需要推理、成本是否可控、結果能不能被驗證。</span></div></div></section>
 <footer class="footer"><div class="wrap"><p><strong>Local LLM 與 Cloud LLM 差異教學｜工程師教學版</strong></p><p class="muted">適用對象：RF / SIE / EMC / Thermal / ME / Safety 工程師</p></div></footer>
   <script src="../learning-path.js?v=20260710-learning-path"></script>
+<!-- mal-related:start -->
+<nav class="mal-related" aria-label="同主題教材">
+  <div class="mal-related-inner">
+    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <h2>工具選型與上手</h2>
+    <ul>
+      <li><a href="./chatgpt-chrome-browser-workflow.html">把瀏覽器工作交給 Agent：ChatGPT Chrome 實作</a></li>
+      <li><a href="./free-ai-creation-tools-2026.html">2026 免費 AI 創作工具：零成本內容製作入門</a></li>
+      <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- mal-related:end -->
 </body>
 </html>

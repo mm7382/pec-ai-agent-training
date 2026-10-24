@@ -1,6 +1,6 @@
 # Michael Agent Lab 搜尋曝光：分階段驗收票
 
-基於 [搜尋曝光規格](search-discovery-spec.md)。日期：2026-10-24。狀態：提案，待 Michael 確認後依序實作。AFK 表示已定義範圍內可自主完成；HITL 表示需要站主帳戶或內容判斷。每票發布後各自驗收，必要時可在不改變主題與網址的前提下分批校稿。
+基於 [搜尋曝光規格](search-discovery-spec.md)。日期：2026-10-24。狀態：Michael 已確認 12 項依序完成並逐項上線。AFK 表示已定義範圍內可自主完成；HITL 表示需要站主帳戶或內容判斷。每票發布後各自驗收，必要時可在不改變主題與網址的前提下分批校稿。
 
 ## S1：讓公開教材從 HTML 目錄可被找到
 
@@ -16,21 +16,23 @@ Type: AFK。Status: published and verified（2026-10-24；`a896aad`）。Blocked
 
 ## S2：首頁與學習入口聚焦 AI Agent 學習者
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1。User story: 新訪客一眼看懂網站的核心價值。
+Type: AFK。Status: published and verified（2026-10-24；`4994b9b`）。Blocked by: S1。User story: 新訪客一眼看懂網站的核心價值。
 
 調整首頁與學習入口的標題、前兩屏文字、導覽與作品位置；「工程思維學 AI Agent」為主，四款免費 App 作作品入口。
 
 驗收：繁體中文自然、英文輔助可懂；首頁到教材與作品均不超過兩次點擊；現有雜誌式視覺、真實 App 圖像及原有網址保留。驗證：手機與桌面實際瀏覽、文案核對。
 
-本機證據：首頁與學習入口皆以 AI Agent 學習作主題，四款免費 App 卡片保留；47 份教材、9 個分類與索引一致。390px 手機及 1280px 桌面預覽通過，無水平溢出或瀏覽器錯誤。
+本機證據：首頁與學習入口皆以 AI Agent 學習作主題，四款免費 App 卡片保留；47 份教材、9 個分類與索引一致。390px 手機及 1280px 桌面預覽通過，無水平溢出或瀏覽器錯誤。正式站發布成功，首頁可讀到 AI Agent 主標題與四款 App 入口。
 
 ## S3：入門與工具選型教材路徑
 
-Type: AFK。Status: proposed。Blocked by: S1, S2。User story: 初學者知道從哪篇開始。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 初學者知道從哪篇開始。
 
 整理「AI Agent 入門與學習路線」5 篇和「工具選型與上手」8 篇的主題導覽、搜尋摘要、正文開頭與相關閱讀。
 
 驗收：13 篇各有與原文一致的獨立摘要、清楚下一篇連結，無重複空泛段落；原始教學事實及來源不被改寫成未證實主張。驗證：逐頁對照內容與靜態連結。
+
+本機證據：13 篇已有各自的搜尋摘要；原文開頭抽查保留具體主題與原有說法；每頁附同類下一篇及完整教材入口。原始 HTML 測試通過。
 
 ## S4：任務交辦與需求釐清教材路徑
 
