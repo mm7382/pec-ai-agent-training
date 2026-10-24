@@ -96,6 +96,25 @@
    ]
   }
   </script>
+  <style>
+    .services-page .project-brief { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:32px 56px; color:#29352e; }
+    .project-brief p { line-height:1.85; }
+    .project-brief .brief-eyebrow { margin:0 0 12px; font-size:.75rem; letter-spacing:.18em; color:#586659; font-weight:600; }
+    .project-brief h2 { line-height:1.4; }
+    .project-brief .brief-intro { font-size:1.15rem; margin:16px 0 12px; }
+    .brief-topics { list-style:none; padding:0; margin:28px 0 0; }
+    .brief-topics li { border-top:1px solid #d7ddd5; padding:14px 0; display:grid; gap:4px; line-height:1.65; }
+    .brief-topics span { color:#536054; font-size:.95rem; }
+    .brief-download { align-self:start; padding:32px; background:#f0f0e9; border:1px solid #d7ddd5; border-radius:8px; }
+    .brief-download h3 { margin:0 0 12px; font-size:1.2rem; }
+    .services-page .brief-button { display:flex; justify-content:space-between; gap:16px; padding:15px 20px; border-radius:4px; background:#293f33; color:#fff; text-decoration:none; font-weight:600; line-height:1.6; }
+    .services-page .brief-button:hover { background:#1c3024; }
+    .services-page .brief-contact { color:#293f33; font-weight:600; text-underline-offset:5px; display:inline-block; margin-top:16px; }
+    .project-brief a:focus-visible { outline:3px solid #8b622c; outline-offset:5px; }
+    .project-brief .brief-meta { color:#536054; font-size:.85rem; margin:12px 0 0; }
+    .project-brief .brief-note { grid-column:1/-1; margin:0; color:#536054; font-size:.85rem; padding-top:20px; border-top:1px solid #d7ddd5; }
+    @media(max-width:760px) { .services-page .project-brief { grid-template-columns:minmax(0,1fr); gap:28px; } .brief-download { padding:24px; } }
+  </style>
 </head>
 <body class="personal-home-page services-page">
   <main class="app-shell">
@@ -260,16 +279,31 @@
       </dl>
     </section>
 
-    <section class="services-block" id="inquiry-brief" aria-labelledby="inquiryBriefTitle">
-      <h2 id="inquiryBriefTitle" lang="zh-Hant">免費下載：AI Agent 導入需求單</h2>
-      <p lang="zh-Hant">想先和同事討論，再決定是否洽詢？這份簡短需求單可協助整理現有流程、資料限制與驗收方式，不用註冊或留下資料。</p>
-      <p lang="zh-Hant"><a href="./ai-agent-project-brief.txt" download>下載可編輯的需求單（純文字） ↗</a></p>
-      <p lang="zh-Hant">填寫你已知道的部分即可；其他項目可以在首次討論時一起釐清。請先用去識別化的工作描述，不必提供客戶名單、帳號密碼或原始文件。</p>
-      <p lang="zh-Hant">若點擊寄信按鈕沒有反應，可自行開啟常用信箱，寄到 <a href="mailto:mm7382@gmail.com">mm7382@gmail.com</a>，主旨填「AI Agent 導入需求」。下載或填寫需求單不會自動寄出，也不代表已預約或成立委託。</p>
+    <section class="services-block project-brief" id="inquiry-brief" aria-labelledby="inquiryBriefTitle">
+      <div>
+        <p class="brief-eyebrow" lang="en">PROJECT BRIEF</p>
+        <h2 id="inquiryBriefTitle">AI Agent 專案需求簡報</h2>
+        <p class="brief-intro">從明確的需求，開始有效的合作。</p>
+        <p>整理現有流程、資料條件與預期成果，作為內部討論與初步評估的共同基礎。尚未確定的項目，可於需求訪談中一起釐清。</p>
+        <ol class="brief-topics">
+          <li><strong>釐清目標</strong><span>目前的工作方式與優先改善的問題</span></li>
+          <li><strong>界定範圍</strong><span>資料來源、使用權限與試做邊界</span></li>
+          <li><strong>建立驗收標準</strong><span>預期交付、確認方式與人工審核點</span></li>
+        </ol>
+      </div>
+      <aside class="brief-download" aria-label="下載與合作洽詢">
+        <h3>準備你的專案需求</h3>
+        <p>可編輯範本，適合先自行整理或與團隊共同填寫。</p>
+        <a class="brief-button" href="./ai-agent-project-brief.txt" download>下載需求簡報範本 <span aria-hidden="true">↓</span></a>
+        <p class="brief-meta">免費下載 · 無須註冊 · TXT 格式</p>
+        <a class="brief-contact" href="mailto:mm7382@gmail.com?subject=AI%20Agent%20%E5%B0%88%E6%A1%88%E5%90%88%E4%BD%9C%E6%B4%BD%E8%A9%A2">專案合作洽詢 ↗</a>
+        <p class="brief-meta">首次 30 分鐘需求討論不收費。<br>點擊洽詢將開啟你的郵件應用程式。</p>
+      </aside>
+      <p class="brief-note">初步評估僅需去識別化的工作描述。範本由你自行保存，不會自動上傳或寄出；實際合作範圍與費用於評估後確認。</p>
     </section>
 
     <footer class="services-footer">
-      <p lang="zh-Hant">合作洽詢：<a href="mailto:mm7382@gmail.com">mm7382@gmail.com</a>。也可以先讀 <a href="./about.html">About</a> 了解本站的工作方法，或查看<a href="./sitemap.xml">網站地圖</a>。</p>
+      <p lang="zh-Hant"><a href="mailto:mm7382@gmail.com">專案合作洽詢 ↗</a> · 也可以先讀 <a href="./about.html">About</a> 了解本站的工作方法，或查看<a href="./sitemap.xml">網站地圖</a>。</p>
       <p lang="zh-Hant">本頁說明承接的專案類型，不構成醫療、法律或投資建議。</p>
     </footer>
   </main>
