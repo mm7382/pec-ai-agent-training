@@ -20,8 +20,10 @@
 .field-page .field-aside ul { padding-left: 1.1em; margin: 0 0 16px; }
 .field-page .field-callout { padding: 24px 26px; margin: 24px 0; border-left: 4px solid #315842; background: #f2f1eb; }
 .field-page .field-callout p:last-child { margin-bottom: 0; }
-.field-page .field-steps { display: grid; gap: 12px; padding: 0; list-style: none; counter-reset: stage; }
+.field-page .field-article .field-steps { display: grid; gap: 20px; padding: 0; margin: 28px 0; list-style: none; counter-reset: stage; }
 .field-page .field-steps li { counter-increment: stage; padding: 18px 20px; border: 1px solid #d5d9d2; border-radius: 8px; background: #fffefa; }
 .field-page .field-steps li::before { content: "0" counter(stage); display: block; margin-bottom: 8px; color: #345a42; font-weight: 700; }
 .field-page .field-footer { padding: 32px 0 60px; border-top: 1px solid var(--home-line); color: #465147; }
 @media (max-width: 760px) { .field-page .field-layout { grid-template-columns: 1fr; } .field-page .field-aside { position: static; } }
+
+.field-page .field-article .field-steps li + li { margin-top: 0; }
