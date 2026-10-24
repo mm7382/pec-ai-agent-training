@@ -36,6 +36,12 @@
       .services-page .services-hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
       .services-page .services-proof-grid .services-card { padding: 22px; }
     }
+    .services-proof-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .services-proof-grid .services-card { min-width:0; }
+    .service-work-image { width:100%;height:230px;object-fit:contain;background:#eef0e9;display:block;margin-bottom:22px;border-radius:4px; }
+    .service-work-image.landscape { object-fit:contain; }
+    .services-proof-grid .services-card a { display:inline-block;margin-top:18px;color:#293f33;line-height:1.7;text-underline-offset:4px;font-weight:600; }
+    @media(max-width:600px){.services-proof-grid{grid-template-columns:1fr}}
   </style>
   <script src="./site-config.js?v=20260711-resource-library"></script>
   <script type="application/ld+json">
@@ -114,6 +120,12 @@
     .project-brief .brief-meta { color:#536054; font-size:.85rem; margin:12px 0 0; }
     .project-brief .brief-note { grid-column:1/-1; margin:0; color:#536054; font-size:.85rem; padding-top:20px; border-top:1px solid #d7ddd5; }
     @media(max-width:760px) { .services-page .project-brief { grid-template-columns:minmax(0,1fr); gap:28px; } .brief-download { padding:24px; } }
+    .services-proof-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .services-proof-grid .services-card { min-width:0; }
+    .service-work-image { width:100%;height:230px;object-fit:contain;background:#eef0e9;display:block;margin-bottom:22px;border-radius:4px; }
+    .service-work-image.landscape { object-fit:contain; }
+    .services-proof-grid .services-card a { display:inline-block;margin-top:18px;color:#293f33;line-height:1.7;text-underline-offset:4px;font-weight:600; }
+    @media(max-width:600px){.services-proof-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body class="personal-home-page services-page">
@@ -214,54 +226,25 @@
     </section>
 
     <section class="services-block" aria-labelledby="servicesFitTitle">
-      <h2 id="servicesFitTitle" lang="zh-Hant">適用情境</h2>
-      <p class="services-en" lang="en">Where this works, and where it does not.</p>
-      <div class="services-fit">
-        <div>
-          <h3 lang="zh-Hant">適合</h3>
-          <ul lang="zh-Hant">
-            <li>重複、吃時間，但規則講得出來的工作</li>
-            <li>資料與文件整理、報表、通知、例行檢查</li>
-            <li>已經試過 AI 工具，但做不穩、無法交給別人用</li>
-            <li>想讓團隊真的會用，而不是只看過一次示範</li>
-          </ul>
-        </div>
-        <div>
-          <h3 lang="zh-Hant">不適合</h3>
-          <ul lang="zh-Hant">
-            <li>期待 AI 自己決定一切、完全不需要人看</li>
-            <li>需要保證業績、投資報酬這類結果</li>
-            <li>醫療、法律等需要專業執照認定的判斷</li>
-          </ul>
-        </div>
+      <h2 id="servicesFitTitle">你想解決哪一類問題？</h2>
+      <p>從具體需求開始，不必先懂 AI 或寫好規格。</p>
+      <div class="services-grid">
+        <article class="services-card"><h3>每週都在整理相同資料</h3><p>例如彙整表格、把文件整理成摘要，或從多份紀錄中找出待辦。可以討論做成方便反覆使用的小工具。</p></article>
+        <article class="services-card"><h3>有服務，卻沒有清楚的展示網站</h3><p>希望客人看懂你提供什麼、找到作品，並知道怎麼詢問。可以從服務介紹頁或互動 Demo 開始。</p></article>
+        <article class="services-card"><h3>有 App 想法，想先做出能看的版本</h3><p>例如學習工具、排班工具或簡單互動功能。先確認主要使用情境，再討論第一版要包含什麼。</p></article>
       </div>
-      <p class="services-step-contact" lang="zh-Hant">工程或技術專案團隊可先看 <a href="./engineering-agent-workflows.html">三種可試做工作與驗收方式 ↗</a>。正在比較合作對象？可讀 <a href="./choose-ai-agent-consultant.html">AI Agent 導入顧問怎麼選 ↗</a>。</p>
+      <p class="services-proof-note">是否適合承接，會依需求、資料條件與時程評估。重要結果仍需由你確認；不承諾業績或投資報酬。</p>
     </section>
-
     <section class="services-block" aria-labelledby="servicesProofTitle">
-      <h2 id="servicesProofTitle" lang="zh-Hant">公開方法與作品</h2>
-      <p class="services-en" lang="en">Selected methods and products you can review.</p>
+      <h2 id="servicesProofTitle">作品分類</h2>
+      <p>直接看實際畫面、功能與完成狀態，找到與你的需求接近的作品。</p>
       <div class="services-grid services-proof-grid">
-        <article class="services-card">
-          <p class="services-card-kicker">精選案例 01</p>
-          <h3 lang="zh-Hant">AI Agent 共用知識庫實作</h3>
-          <p lang="zh-Hant">查看如何把分散的規則整理成可查詢、可審核的共用知識。包含設計選擇、示範情境、驗收清單與適用限制。</p>
-          <a href="./case-study-agent-memory.html">閱讀完整案例 <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="services-card">
-          <p class="services-card-kicker">工作方法 02</p>
-          <h3 lang="zh-Hant">需求到驗收的流程</h3>
-          <p lang="zh-Hant">先釐清目標與限制，再拆分可檢查的工作；完成後用實際結果驗收，保留決策依據與交接資訊。</p>
-          <a href="./pec-training/matt-pocock-skills-codex-workflow.html">了解執行流程 <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="services-card">
-          <p class="services-card-kicker">公開作品 03</p>
-          <h3 lang="zh-Hant">已上線的網頁工具</h3>
-          <p lang="zh-Hant">易見、時來八字、時來紫微與時來星座皆可直接操作，展示從內容設計到產品交付的成果。</p>
-          <a href="https://mm7382.github.io/">查看 App 作品集 <span aria-hidden="true">↗</span></a>
-        </article>
+        <article class="services-card"><img class="service-work-image" src="https://mm7382.github.io/assets/natural/yijian.png" alt="易見學習 App 實際畫面" loading="lazy"><h3>生活與學習 App</h3><p>易見、時來八字、紫微與星座。四款網頁工具可以直接開啟使用。</p><a href="https://mm7382.github.io/#learning">查看四款學習工具 ↗</a></article>
+        <article class="services-card"><img class="service-work-image" src="https://mm7382.github.io/assets/portfolio/shiftok.png" alt="排得好班表測試畫面，使用測試資料" loading="lazy"><h3>工作工具</h3><p>排得好：集中查看班表、出勤與薪資，現階段仍在測試。</p><a href="https://mm7382.github.io/#tools">查看排得好 ↗</a></article>
+        <article class="services-card"><img class="service-work-image" src="https://mm7382.github.io/assets/portfolio/sugar-boom.png" alt="Sugar Boom 遊戲開發測試畫面" loading="lazy"><h3>遊戲作品</h3><p>Sugar Boom：糖果主題的彈射打磚塊遊戲，目前開發中。</p><a href="https://mm7382.github.io/#games">查看遊戲畫面 ↗</a></article>
+        <article class="services-card"><img class="service-work-image landscape" src="https://mm7382.github.io/assets/portfolio/diving-demo.png" alt="淺水網頁設計 Demo 實際畫面" loading="lazy"><h3>網站與互動展示</h3><p>淺水主題網站 Demo 與已公開的教材網站，展示不同的內容與導覽方式。</p><a href="https://mm7382.github.io/#websites">查看網站作品 ↗</a></article>
       </div>
-      <p class="services-proof-note" lang="zh-Hant">這些公開內容可供查看工作方法與完成的作品。</p>
+      <p class="services-proof-note"><a href="https://mm7382.github.io/#works">瀏覽全部作品與文件成果 ↗</a>。各作品均標示公開可用、測試中或設計 Demo。</p>
     </section>
 
     <section class="services-block" aria-labelledby="servicesFaqTitle">
