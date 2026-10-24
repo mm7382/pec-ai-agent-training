@@ -174,7 +174,15 @@ body.journal-article-page {
   color: var(--olive);
   font-size: 11px;
 }
+.journal-related { max-width: 880px; margin: 60px auto 0; padding: 28px 0; border-top: 1px solid var(--line); }
+.journal-related > p { margin: 0 0 9px; color: var(--olive); font-size: 12px; letter-spacing: .08em; }
+.journal-related h2 { margin: 0 0 16px; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; }
+.journal-related ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 28px; margin: 0; padding: 0; list-style: none; }
+.journal-related a { display: block; padding: 12px 0; border-top: 1px solid var(--line); color: inherit; line-height: 1.5; text-decoration: none; }
+.journal-related a:hover, .journal-related a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 620px) {
+  .journal-related { margin: 44px 20px 0; }
+  .journal-related ul { grid-template-columns: 1fr; }
   .journal-article-shell { width: 100%; padding: 32px 0 56px; }
   .journal-back, .journal-article-header, .journal-article-body { margin-right: 20px; margin-left: 20px; }
   .journal-article-header, .journal-article-body { width: auto; }

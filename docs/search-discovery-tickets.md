@@ -76,11 +76,13 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S8：AI 實作學習日誌入口
 
-Type: AFK。Status: proposed。Blocked by: S2。User story: 訪客從真實實作案例理解 Michael 的方法。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S2。User story: 訪客從真實實作案例理解 Michael 的方法。
 
 整理學習日誌中 AI、Agent、模型、工作流、安全與教學網站相關文章的索引、摘要及相關閱讀；以現有公開文章為準，先在票內固定清單。
 
 驗收：每篇保留原日期、來源與作者語氣；AI 主題文章有彼此可循的連結，未將日誌偽裝成新發布的教學教材。驗證：文章清單、日期、連結及手機頁逐篇核對。
+
+固定清單：15 篇 AI 主題日誌，詳見 `scripts/journal-discovery-data.mjs` 的 ai 分組。保留既有文章日期、出處與原文；日誌首頁增加主題閱讀路徑，文章增加相鄰延伸閱讀。原始 HTML 測試通過。
 
 ## S9：工程與專業經驗學習日誌入口
 
