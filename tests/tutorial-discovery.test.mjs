@@ -7,11 +7,12 @@ const coveredCategories = new Set([
   'AI Agent 入門與學習路線',
   '工具選型與上手',
   '任務交辦、Prompt 與需求釐清',
+  'Agent 系統架構與可靠性',
 ]);
 
 test('selected tutorials explain themselves and link to more reading in raw HTML', () => {
   const selected = index.items.filter((item) => coveredCategories.has(item.category));
-  assert.equal(selected.length, 22);
+  assert.equal(selected.length, 31);
 
   for (const item of selected) {
     const page = readFileSync(new URL(`../${item.url.slice(2)}`, import.meta.url), 'utf8');
