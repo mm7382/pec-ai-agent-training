@@ -378,7 +378,7 @@ button {
   margin: 0;
 }
 
-.home-landing p.home-sharing-quote {
+.home-landing .home-sharing-quote {
   color: var(--home-ink);
   font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
   font-size: clamp(32px, 3.2vw, 48px);
@@ -2079,7 +2079,7 @@ h3 {
     line-height: 1.16;
   }
 
-  body.personal-home-page .home-landing p.home-sharing-quote {
+  body.personal-home-page .home-landing .home-sharing-quote {
     font-size: clamp(29px, 8vw, 38px);
     line-height: 1.2;
   }

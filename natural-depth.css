@@ -65,10 +65,17 @@ body.personal-home-page .home-landing-copy {
   justify-content: center;
 }
 body.personal-home-page .home-sharing-note { max-width: 480px; }
-body.personal-home-page .home-landing p.home-sharing-quote {
+body.personal-home-page .home-landing p.home-sharing-principle {
+  margin-bottom: 18px;
+  color: var(--depth-muted);
+  font-size: 14px;
+  letter-spacing: .08em;
+}
+body.personal-home-page .home-landing .home-sharing-quote {
+  margin: 0;
   font-family: var(--depth-serif);
-  font-size: 54px;
-  line-height: 1.4;
+  font-size: 48px;
+  line-height: 1.28;
   color: var(--depth-ink);
   font-weight: 400;
   max-width: 400px;
@@ -186,7 +193,7 @@ body :is(a,button,input,summary):focus-visible { outline: 2px solid #3b6049; out
 }
 @media (max-width:1000px) {
   body.personal-home-page .home-landing-copy { width: 52%; padding-left: 32px; }
-  body.personal-home-page .home-landing p.home-sharing-quote { font-size: 42px; }
+  body.personal-home-page .home-landing .home-sharing-quote { font-size: 42px; }
   body.site-editorial-system .training-site-nav { grid-template-columns: auto 1fr; gap: 24px; }
   body.site-editorial-system .training-primary-links { justify-content: end; gap: 20px; }
   body.home-page.site-editorial-system .workspace { grid-template-columns: 1fr; }
@@ -196,7 +203,7 @@ body :is(a,button,input,summary):focus-visible { outline: 2px solid #3b6049; out
   body.personal-home-page .home-landing-copy { width: 100%; max-width: none; padding: 44px 26px 24px; }
   body.personal-home-page .home-hero-visual { position: relative; inset: auto; z-index: 0; width: 100%; aspect-ratio: 3/2; }
   body.personal-home-page .home-hero-visual img { height: auto; object-fit: contain; }
-  body.personal-home-page .home-landing p.home-sharing-quote { font-size: 38px; max-width: 300px; }
+  body.personal-home-page .home-landing .home-sharing-quote { font-size: 38px; max-width: 300px; }
   body.personal-home-page .home-landing p.home-sharing-quote-translation { font-size: 19px; }
   body.personal-home-page .home-landing p.home-sharing-detail { font-size: 16px; margin-top: 22px; }
   body.personal-home-page .home-landing p.home-sharing-translation { font-size: 15px; }
