@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { journalPaths } from '../scripts/journal-discovery-data.mjs';
 
-const selected = ['ai'];
+const selected = ['ai', 'engineering'];
 
 test('journal topic paths are readable in HTML and preserve article dates', () => {
   const archive = readFileSync(new URL('../journal.html', import.meta.url), 'utf8');
