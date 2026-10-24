@@ -8,11 +8,13 @@ const coveredCategories = new Set([
   '工具選型與上手',
   '任務交辦、Prompt 與需求釐清',
   'Agent 系統架構與可靠性',
+  'Skill、蒸餾與能力沉澱',
+  '知識庫、文件轉換與上下文治理',
 ]);
 
 test('selected tutorials explain themselves and link to more reading in raw HTML', () => {
   const selected = index.items.filter((item) => coveredCategories.has(item.category));
-  assert.equal(selected.length, 31);
+  assert.equal(selected.length, 43);
 
   for (const item of selected) {
     const page = readFileSync(new URL(`../${item.url.slice(2)}`, import.meta.url), 'utf8');

@@ -46,7 +46,7 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S5：可靠 Agent 系統教材路徑
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 工程讀者能循序進入可靠性與架構實作。
+Type: AFK。Status: pushed；正式站部署中。Blocked by: S1, S2。User story: 工程讀者能循序進入可靠性與架構實作。
 
 整理「Agent 系統架構與可靠性」9 篇的導覽、摘要、開頭與相關閱讀。
 
@@ -56,11 +56,13 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S6：Skill 與知識治理教材路徑
 
-Type: AFK。Status: proposed。Blocked by: S1, S2。User story: 讀者能理解如何沉澱、更新與驗證 Agent 能力。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 讀者能理解如何沉澱、更新與驗證 Agent 能力。
 
 整理「Skill、蒸餾與能力沉澱」6 篇及「知識庫、文件轉換與上下文治理」6 篇。
 
 驗收：12 篇有清楚的閱讀階梯與獨立摘要，避免同一段泛用介紹重複出現；引用與操作限制保留。驗證：逐頁原文比對與相關閱讀連結檢查。
+
+本機證據：12 篇保留原文與引用；各篇有獨立搜尋摘要與相鄰課程延伸閱讀，靜態頁面測試通過。
 
 ## S7：其餘教材的精確入口
 
