@@ -3,16 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>實作案例：讓 AI Agent 使用可審核的共用知識｜Michael Agent Lab</title>
-  <meta name="description" content="公開個人實作案例：AI Agent 如何先查既有知識、執行任務，再由人審核新經驗，避免未確認內容被重複引用。">
+  <title>AI Agent 知識庫實作案例：共用記憶與人工審核｜Michael Agent Lab</title>
+  <meta name="description" content="AI Agent 知識庫如何設計？以個人共用記憶實作說明資料來源、待審核區、人工確認與跨任務查詢，附示範情境、驗收清單和導入範圍。">
   <link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="實作案例：讓 AI Agent 使用可審核的共用知識">
-  <meta property="og:description" content="從查找既有知識到人工審核新經驗，一個可公開檢視的個人工作流案例。">
+  <meta property="og:title" content="AI Agent 知識庫實作案例：共用記憶與人工審核">
+  <meta property="og:description" content="以共用記憶與人工審核流程，說明 AI Agent 知識庫的問題、設計、示範、驗收與限制。">
   <meta property="og:url" content="https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html">
   <link rel="stylesheet" href="./styles.css?v=20261024-services">
   <link rel="stylesheet" href="./field-notes.css?v=20261024">
+  <style>
+    .case-toc {display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:24px}
+    .case-toc a {color:#244f35;text-underline-offset:4px}
+    .case-facts {margin:24px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .case-facts div {border-top:1px solid #a9b5a8;padding-top:12px}
+    .case-facts dt {font-weight:700;color:#253b2c}
+    .case-facts dd {margin:6px 0 0;color:#404b42;line-height:1.7}
+    .field-page section[id] {scroll-margin-top:100px}
+    .field-page a:focus-visible {outline:2px solid #244f35;outline-offset:4px}
+    .field-page .case-demo {padding:22px;background:#f2f1eb;border:1px solid #cbd2c7;border-radius:8px}
+    .field-page .case-demo h3:first-child {margin-top:0}
+    @media(max-width:600px){.field-page .app-shell{width:calc(100% - 32px)}.case-facts{grid-template-columns:1fr;gap:12px}.field-page .topbar{padding-left:0;padding-right:0}.field-page .home-nav-links{flex-wrap:wrap;overflow:visible;gap:14px 20px}}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html#article", "headline": "AI Agent 知識庫實作案例：共用記憶與人工審核", "description": "個人實作案例，說明 AI Agent 如何查詢已審核知識、提交候選內容與保留人工確認。", "inLanguage": "zh-Hant", "dateModified": "2026-10-24", "mainEntityOfPage": "https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html", "author": {"@type": "Organization", "name": "Michael Agent Lab", "url": "https://mm7382.github.io/pec-ai-agent-training/"}, "about": ["AI Agent 知識庫", "共用記憶", "人工審核工作流程"], "isBasedOn": "https://mm7382.github.io/pec-ai-agent-training/pec-training/ai-brain-shared-memory-across-agents.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mm7382.github.io/pec-ai-agent-training/"}, {"@type": "ListItem", "position": 2, "name": "AI Agent 導入服務", "item": "https://mm7382.github.io/pec-ai-agent-training/services.html"}, {"@type": "ListItem", "position": 3, "name": "共用知識庫實作案例", "item": "https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html"}]}]}</script>
 </head>
 <body class="personal-home-page field-page">
   <main class="app-shell">
@@ -22,40 +36,48 @@
     </header>
     <header class="field-hero">
       <p class="field-kicker">公開實作案例 · AI AGENT WORKFLOW</p>
-      <h1>讓 AI Agent 使用可審核的共用知識</h1>
+      <h1>AI Agent 知識庫：<br>讓共用記憶有來源、有審核</h1>
       <p class="field-lead">當不同任務都需要參考過去的決策與做法，關鍵不只是讓 AI「記得」，而是讓資料有來源、更新有審核、使用前能查證。</p>
-      <p class="field-meta">Michael Agent Lab 的個人工作流示例 · 非客戶專案</p>
+      <p class="field-meta">Michael Agent Lab · 個人實作，非客戶專案 · 更新於 <time datetime="2026-10-24">2026 年 10 月 24 日</time></p>
+      <dl class="case-facts"><div><dt>解決的問題</dt><dd>跨任務的規則與決策散落在對話中。</dd></div><div><dt>實作重點</dt><dd>共用來源、候選知識與人工審核。</dd></div><div><dt>公開方式</dt><dd>流程說明與虛構資料示範，不開放私人知識庫。</dd></div></dl>
+      <nav class="case-toc" aria-label="案例章節"><a href="#problem">問題與設計</a><a href="#walkthrough">看一次完整流程</a><a href="#acceptance">成果與驗收</a><a href="#faq">常見問題</a></nav>
     </header>
     <div class="field-layout">
       <article class="field-article">
-        <section>
-          <h2>要解決的問題</h2>
-          <p>AI Agent 在不同任務中工作時，先前確認過的規則、判斷與成果容易散落在各自的對話裡。下一次執行若只憑當下對話，可能重問同一題，也可能沿用已過期的答案。</p>
-          <p>這個個人實作將知識的查找與更新放進工作流程，讓 Agent 在行動前先查既有資料；新發現則必須經過人確認，才進入正式知識來源。</p>
+        <section id="problem">
+          <h2>問題：同一條規則，不該每次重新交代</h2>
+          <p>在不同任務或不同 AI 工具之間切換時，已確認的規則容易留在各自的聊天紀錄裡。使用者需要反覆交代背景，也難以判斷 AI 引用的是已確認的決策，還是尚未驗證的建議。</p>
+          <p>這個個人實作把長期知識放在對話之外。Agent 執行前先查相關資料；值得保留的新發現先成為候選知識，由人審核後才進入正式來源。</p>
+          <h3>設計範圍與選擇</h3>
+          <ul><li><strong>一份共用來源：</strong>由使用者管理知識，不必為每個聊天視窗重新複製背景。</li><li><strong>三種資料狀態：</strong>原始資料保留依據，候選區收集新提案，正式區只放已審核知識。</li><li><strong>受控的讀取與更新：</strong>透過一致的查詢入口找少量相關資料；查詢權限與更新權限分開考慮。</li><li><strong>人工確認：</strong>資料有矛盾、缺少來源或涉及敏感內容時，保留人工決定的位置。</li></ul>
+          <p>這些設計取自本站的<a href="./pec-training/ai-brain-shared-memory-across-agents.html">跨 Agent 共用記憶實作教學</a>，公開內容呈現方法與資料流，不包含私人資料庫或內部紀錄。</p>
         </section>
-        <section>
-          <h2>實作流程</h2>
-          <ol class="field-steps">
-            <li><strong>查找既有資料</strong><br>先找與任務相關的規則、先前決策和來源，再決定下一步。</li>
-            <li><strong>執行並保留依據</strong><br>按已確認的規則處理任務；碰到衝突或資訊不足時，標出待判斷處。</li>
-            <li><strong>提交新經驗</strong><br>值得保留的做法先進待審核區，附上來源與適用範圍。</li>
-            <li><strong>人工審核後更新</strong><br>檢查敏感資料、重複或矛盾內容，再決定是否納入正式知識。</li>
-          </ol>
+        <section id="walkthrough">
+          <h2>示範：把一項新經驗變成可重用的知識</h2>
+          <p>以下是用虛構資料重建的說明情境，不是實際客戶對話或產品執行紀錄。</p>
+          <div class="case-demo"><h3>輸入任務</h3><p>「幫我整理本週待辦摘要。沿用先前確認的格式，完成後先給我檢查。」</p><h3>已確認的規則</h3><p>摘要包含「已完成、待確認、下一步」三部分；沒有依據的事項列為待確認，不當作已完成。</p><h3>預期輸出</h3><p>一份依照既有格式整理的摘要，附上採用的規則來源，以及缺少依據的項目。這裡展示的是流程與輸出規格，不是連線執行中的 Agent。</p></div>
+          <ol class="field-steps"><li><strong>查找相關規則</strong><br>找出摘要格式與適用範圍。沒有找到時先說明缺漏，不自行聲稱已存在某項規定。</li><li><strong>產生待確認成果</strong><br>依規則整理內容，分開列出有依據的結果與待確認事項。</li><li><strong>提交候選知識</strong><br>若使用者希望下次新增「負責人」欄位，先記為候選更新，附上來源、日期與適用範圍。</li><li><strong>人工審核後再沿用</strong><br>確認這是長期規則後才更新正式知識。下一次執行再查正式版本；未核准內容不視為既定規則。</li></ol>
         </section>
-        <section>
-          <h2>驗收時看什麼</h2>
-          <ul>
-            <li>Agent 是否能指出採用哪份既有資料與理由。</li>
-            <li>資料不足時，是否把不確定處交回人工確認。</li>
-            <li>新內容是否經審核才成為後續任務可引用的知識。</li>
-          </ul>
-          <div class="field-callout"><p><strong>可觀察的成果：</strong>這套流程把「先查資料」和「更新需審核」設為固定步驟。此頁沒有宣稱節省多少時間，也沒有把個人實作當作客戶成效。</p></div>
+        <section id="acceptance">
+          <h2>成果與驗收：要能檢查每次引用的依據</h2>
+          <p>這個案例可公開呈現的成果，是一套將查詢、候選提交與人工審核分開的個人工作流，以及可閱讀的實作教學。沒有公開節省工時、正確率或客戶營運成效數據。</p>
+          <h3>導入時使用的驗收清單</h3>
+          <ul><li><strong>找得到資料：</strong>給定一項已知規則，能找到對應內容並指出來源。</li><li><strong>找不到就說明：</strong>沒有相關資料時，回報缺漏，不捏造過去決策。</li><li><strong>候選內容不直接生效：</strong>新提案仍停在待審核狀態時，不作為正式規則引用。</li><li><strong>衝突可交回人處理：</strong>新舊說法不一致時，列出來源差異並等待確認。</li><li><strong>更新可以追查：</strong>保留來源、日期與狀態，方便核對此次採用的版本。</li></ul>
+          <div class="field-callout"><p>這份清單是試做與驗收的依據，不代表所有導入情境都已通過測試。合作時會以雙方同意的測試資料逐項驗收。</p></div>
         </section>
-        <section>
-          <h2>這個案例能怎麼套用</h2>
-          <p>需要跨任務沿用知識的團隊，可以先選一類重複工作，確認資料來源與負責審核的人，再用少量真實案例測試查找、執行與更新流程。若資料涉及敏感資訊，應先決定哪些內容可以進入知識庫。</p>
-          <p>想看更完整的公開說明，可讀 <a href="./pec-training/ai-brain-shared-memory-across-agents.html">共用知識工作流的原始教學 ↗</a>；想評估自己的流程，可看 <a href="./ai-agent-workflow-fit.html">AI Agent 導入判斷指南 ↗</a>。</p>
+        <section id="boundaries">
+          <h2>適用情境與限制</h2>
+          <p>適合需要重複沿用規則、工作方法或專案決策的情境，例如週報整理、作業說明查找與專案交接。第一步應選定一類工作和少量可用資料，再確認由誰審核更新。</p>
+          <p>資料品質、存取權限、過期內容與審核負擔仍需要管理。共用知識庫不保證 AI 每次回答正確；重要結果仍須核對原始來源。私人知識庫也不因這篇案例而對外開放。</p>
         </section>
+        <section id="faq">
+          <h2>AI Agent 知識庫常見問題</h2>
+          <h3>這和把文件貼進聊天視窗有什麼不同？</h3><p>文件貼進對話可提供當次背景；這個案例另外管理長期來源、候選與正式狀態，讓後續任務可以重新查詢已確認的知識。</p>
+          <h3>需要重新訓練 AI 模型嗎？</h3><p>這個案例採用外部知識查詢與工作流程設計，不以重新訓練模型為前提。工具與模型仍需依資料、權限和任務需求選擇。</p>
+          <h3>可以讓不同 Agent 共用嗎？</h3><p>可以設計共用入口，但各工具都必須具備適當權限和連接方式。共用來源不等於把所有資料交給每一個工具。</p>
+          <h3>能先做一小部分再決定是否擴大嗎？</h3><p>可以先選一類任務，確認輸入、預期輸出、人工審核點與驗收方式，再評估是否擴大。查看<a href="./services.html">AI Agent 導入服務與合作方式</a>。</p>
+        </section>
+        <section id="next"><h2>把這個方法用在你的工作</h2><p>洽談時提供一項想改善的工作、目前資料來源，以及希望交付的結果即可。第一次討論先確認資料範圍與試做目標；任何實作範圍、費用與完成條件都在動工前確認。</p><p>還在評估是否合適，可先讀<a href="./ai-agent-workflow-fit.html">AI Agent 導入判斷指南</a>或<a href="./choose-ai-agent-consultant.html">選擇導入顧問的檢查清單</a>。</p></section>
       </article>
       <aside class="field-aside" aria-label="合作資訊">
         <h2>從你的流程開始</h2>
