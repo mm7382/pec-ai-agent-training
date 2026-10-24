@@ -1,13 +1,13 @@
 # 搜尋曝光基線與檢查節奏
 
-日期：2026-10-24。狀態：站主已確認能開啟 `https://mm7382.github.io/` 的 Search Console 網站資源；此自動稽核沒有該帳戶的報表存取權，本文件不填入任何推測數據。
+日期：2026-10-24。狀態：站主已確認能開啟 `https://mm7382.github.io/` 的 Search Console 網站資源，並已重新提交兩份網站地圖。`sitemap-lab.xml` 的成功提交畫面已核對；`sitemap.xml` 的成功提交由站主確認。提交完成不代表 Google 已成功讀取或收錄。此自動稽核沒有該帳戶的報表存取權，本文件不填入任何推測數據。
 
 公開檢查已確認 [網站地圖](https://mm7382.github.io/sitemap-lab.xml) 列出 82 個個人網站正式頁；四款 App 首頁也正常開啟。這只代表公開頁可讀，不能證明 Google 已收錄、搜尋排名，或 AI 搜尋服務會推薦本站。
 
-## 站主一次完成
+## 提交後的驗收與觀察
 
 1. 在 [Google Search Console](https://search.google.com/search-console/) 使用現有的 `https://mm7382.github.io/` 網站資源。根目錄資源可涵蓋個人網站與四款 App；不要把 Google 帳戶密碼交給任何人。
-2. 在該資源的「Sitemaps」確認 `https://mm7382.github.io/sitemap.xml` 與 `https://mm7382.github.io/sitemap-lab.xml` 是否已提交及成功讀取。`robots.txt` 已列出兩份網站地圖，但被發現不等於在 Search Console 有提交紀錄。
+2. 兩份網站地圖的重新提交已於 2026-10-24 完成，不需為同一次提交反覆操作。後續需從「Sitemaps」確認更新後的讀取時間、狀態與探索到的頁數。此前錯誤畫面的上次讀取日期是 2026-10-15；僅憑舊紀錄及目前公開網址正常，不能判定原失敗原因或確認 Google 已恢復讀取。
 3. 在「搜尋結果成效」選最近完整 28 天，分別用「網頁」篩選 `/pec-ai-agent-training/`、`/bazi-web/`、`/ziwei-web/`、`/astrology-web/`、`/yijian-web/`。保留總曝光、總點擊、點閱率、平均排名，以及前 20 個查詢與頁面。
 4. 在「網頁索引」檢查各路徑已收錄數、未收錄原因；遇到具體異常再用「網址審查」檢查單頁。每 28 天比較一次實際變化，優先改進已有曝光但內容仍不夠回答問題的頁面。
 
@@ -22,3 +22,11 @@
 Search Console 的 Google 搜尋成效不能代表 ChatGPT 或其他 AI 助理的實際引用量。後者要用各平台可提供的來源或網站分析資料另行觀察，不把公開可抓取當成已被 AI 推薦。
 
 依據：[Google 站主驗證](https://support.google.com/webmasters/answer/9008080)、[網站資源範圍](https://support.google.com/webmasters/answer/34592)、[Sitemaps 報告](https://support.google.com/webmasters/answer/7451001)。
+
+## 提交後公開驗證（2026-10-24）
+
+- 個人網站首頁與四款 App 首頁全部回傳 200。
+- 根目錄 `sitemap.xml` 回傳 200，XML 可解析，298 個不重複網址；`sitemap-lab.xml` 回傳 200，XML 可解析，82 個不重複網址。
+- 根目錄 `robots.txt` 列出兩份網站地圖；依其規則解析，Googlebot、Bingbot、OAI-SearchBot、ChatGPT-User 與 PerplexityBot 可讀取個人網站首頁。這是規則檢查，不代表這些服務已實際造訪。
+- AI 摘要檔的正式位置為根目錄 `/llms.txt`，回傳 200；沒有以它作為收錄或推薦的證據。
+- 尚未取得：重新提交後的 Google 成功讀取證據、各路徑的收錄資料及完整 28 天成效。沒有設定自動存取私有後台，也未宣稱正在持續監測。
