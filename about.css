@@ -78,14 +78,6 @@ body.about-page {
   text-decoration: none;
 }
 
-.about-byline img {
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--about-line);
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .about-byline span:not(.about-byline-arrow) {
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -317,11 +309,6 @@ body.about-page {
   .about-byline {
     margin-top: 24px;
     font-size: 15px;
-  }
-
-  .about-byline img {
-    width: 42px;
-    height: 42px;
   }
 
   .about-hero-media {
