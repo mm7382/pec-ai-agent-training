@@ -31,8 +31,8 @@
         <img src="./assets/tutorial-library-workspace.jpg" alt="整理成分類資料夾的 AI 教材與搜尋目錄">
       </figure>
       <dl class="catalog-stats">
-        <div><dt id="catalogTotal">—</dt><dd>上架教材</dd></div>
-        <div><dt id="catalogCategoryTotal">—</dt><dd>分類</dd></div>
+        <div><dt id="catalogTotal">47</dt><dd>上架教材</dd></div>
+        <div><dt id="catalogCategoryTotal">9</dt><dd>分類</dd></div>
       </dl>
     </section>
 
@@ -43,14 +43,337 @@
       </label>
       <div class="catalog-filter-row" id="catalogFilters" aria-label="分類"></div>
     </section>
+    <noscript><p>下方教材可以直接閱讀；若要搜尋或篩選，請啟用瀏覽器的 JavaScript。</p></noscript>
 
     <div class="catalog-meta" aria-live="polite">
-      <span id="catalogResultCount">載入中...</span>
+      <span id="catalogResultCount">共 47 份教材</span>
       <button type="button" id="catalogClearButton">清除搜尋與篩選</button>
     </div>
 
-    <nav class="catalog-jump-nav" id="catalogJumpNav" aria-label="快速跳到分類"></nav>
-    <section class="catalog-groups" id="catalogGroups" aria-label="分類教材列表"></section>
+    <nav class="catalog-jump-nav" id="catalogJumpNav" aria-label="快速跳到分類">
+      <!-- static-catalog-nav:start -->
+      <a href="#category-ai-agent-入門與學習路線">AI Agent 入門與學習路線 5</a>
+      <a href="#category-工具選型與上手">工具選型與上手 8</a>
+      <a href="#category-任務交辦-prompt-與需求釐清">任務交辦、Prompt 與需求釐清 9</a>
+      <a href="#category-agent-系統架構與可靠性">Agent 系統架構與可靠性 9</a>
+      <a href="#category-skill-蒸餾與能力沉澱">Skill、蒸餾與能力沉澱 6</a>
+      <a href="#category-知識庫-文件轉換與上下文治理">知識庫、文件轉換與上下文治理 6</a>
+      <a href="#category-agent-管理-可視化與營運">Agent 管理、可視化與營運 2</a>
+      <a href="#category-設計與輸出工作流">設計與輸出工作流 1</a>
+      <a href="#category-skill-workflow-ai-open-source">Skill / Workflow · AI Open Source 1</a>
+      <!-- static-catalog-nav:end -->
+    </nav>
+    <section class="catalog-groups" id="catalogGroups" aria-label="分類教材列表">
+      <!-- static-catalog-groups:start -->
+      <section class="catalog-group" id="category-ai-agent-入門與學習路線">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>AI Agent 入門與學習路線</h2></div>
+          <span>5 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/ai-agent-engineering-overview.html">AI Agent 工程應用學習筆記</a></h3>
+            <p>建立工程師學 AI Agent 的完整地圖，先知道術語、工具、資料安全與可落地工作流要怎麼串起來。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>觀念</span></div>
+            <h3><a href="./pec-training/ai-workplace-restructure.html">55,000 人被裁，留下的人為什麼更累？</a></h3>
+            <p>用 AI 時代職場重組的案例，理解為什麼低槓桿工作會被壓縮，以及工程師要如何提高工作槓桿。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/ai-30-day-learning-path.html">現在學 AI，真的還不晚：30 天從小白到上手</a></h3>
+            <p>把 AI 學習拆成 30 天導入路線，從會問問題進步到能用 AI 整理資料、報告與工作流程。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/ai-agent-terms.html">AI Agent 術語與名詞解釋</a></h3>
+            <p>先搞懂 Prompt、Context、Workflow、API Key、Local LLM 等常見名詞，避免需求講不清楚或誤用工具。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/finding-your-unknowns-knowledge-map.html">先畫出你的知識地圖：AI 盲點掃描入門</a></h3>
+            <p>把 Anthropic 的 unknowns 方法整理成入門工作法：先做盲點掃描、AI 反問訪談、多版本草稿與參考範例，再請 AI 動工。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-工具選型與上手">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>工具選型與上手</h2></div>
+          <span>8 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>實作</span></div>
+            <h3><a href="./pec-training/chatgpt-chrome-browser-workflow.html">把瀏覽器工作交給 Agent：ChatGPT Chrome 實作</a></h3>
+            <p>分清楚正式 App、Chrome 擴充功能與內建瀏覽器的使用情境，從跨頁整理與草稿工作流開始，建立每一步都保留人工核准權的瀏覽器協作方式。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/local-vs-cloud-llm.html">Local LLM 與 Cloud LLM 差異教學</a></h3>
+            <p>判斷什麼任務適合雲端模型、什麼資料該留在本地，以及工程團隊如何做混合選型。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/free-ai-creation-tools-2026.html">2026 免費 AI 創作工具：零成本內容製作入門</a></h3>
+            <p>整理免費 AI 影片生成、圖片生成、文生影片、圖生影片、AI 配音與創作工具，建立低成本試作與合法使用檢查流程。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/claude-desktop-sop.html">Claude Desktop Chat / Cowork / Code 新手 SOP</a></h3>
+            <p>分清楚 Chat、Cowork、Code 什麼時候用，避免把所有任務都丟進同一個聊天框。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/claude-code-workbench.html">Claude Code 工作台設定與上手路線</a></h3>
+            <p>設定 Claude Code 的語言規則、成本觀念、CLAUDE.md、CLI、MCP、Skill 與 Subagent 上手順序。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/codex-gemini-cli-intro.html">Codex &amp; Gemini CLI 簡介</a></h3>
+            <p>理解 AI CLI 如何讀專案資料夾、改檔、整理報告，並用在 RF、SIE、EMC、Thermal、ME 工作情境。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/github-beginner-open-source.html">GitHub 入門：非工程背景也能找到、判斷、下載開源工具</a></h3>
+            <p>學會看 README、Release、Issues、Stars 與授權，先判斷專案可靠度，再決定是否下載或交給 agent 處理。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/github-vibe-coding-git-workflow.html">GitHub Vibe Coding 安全工作流：commit、branch、PR 與 worktree</a></h3>
+            <p>給非工程背景使用 Claude、Cursor、Codex 做 AI coding 的 Git/GitHub 上手教材，先懂何時該存檔、隔離風險、送審、合併與回復。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-任務交辦-prompt-與需求釐清">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>任務交辦、Prompt 與需求釐清</h2></div>
+          <span>9 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>實作</span></div>
+            <h3><a href="./pec-training/claude-code-output-style.html">Claude Code Output Style：讓 AI 用你讀得懂的方式回報</a></h3>
+            <p>分清楚模型能力、長期輸出風格與按需 Skill，透過五方案比較建立讀得快、看得懂、能採取行動的 AI 回報格式。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/engineering-prompt-writing.html">工程 Prompt 寫法教學</a></h3>
+            <p>把需求、輸入資料、輸出格式、限制條件與驗收標準寫成 AI 能穩定執行的任務規格。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/task-definition-brief.html">你不是不會寫 Prompt，是不會定義任務</a></h3>
+            <p>用五欄位 brief 先定義目標、背景、素材、邊界與完成定義，讓 AI 產出能支援決策。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/grill-me-requirement-interview.html">AI Agent 開工前需求訪談：Grill Me 工作法</a></h3>
+            <p>讓 agent 在動手前先追問受眾、限制、輸出與成功標準，把模糊想法變成可執行 brief。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/matt-pocock-skills-codex-workflow.html">Grill Me 與 Matt Pocock Skills：官方流程與 Codex 路由</a></h3>
+            <p>依 Matt Pocock 官方 main 拆解手動流程入口與可自動採用的工程紀律，並說明 Codex 的繁體中文自然語句路由。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/brainstorming-skill-design-first.html">Brainstorming Skill：先設計再開工</a></h3>
+            <p>把 Brainstorming 當作設計審查，先比較方案、補齊上下文、取得設計核准，再交給實作流程。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/voice-input-agent-context.html">語音輸入 x AI Agent：Context 轉換工作法</a></h3>
+            <p>用語音先完整收集想法、會議和 review context，再讓 AI 轉成 SOP、issue、prompt 或 agent 任務。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>實作</span></div>
+            <h3><a href="./pec-training/claude-md-agents-md.html">CLAUDE.md 與 AGENTS.md：把 AI 協作規則寫在對的位置</a></h3>
+            <p>釐清個人、專案與目錄層級的 AI 協作規則，學會把長流程、安全檢查與必要知識放在正確位置。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>實作</span></div>
+            <h3><a href="./pec-training/human-sop-agentic-workflow.html">把 SOP 拆成 Agent 真能執行的 Workflow</a></h3>
+            <p>用格式標準化、任務拆解、真實迭代與工具整合，把靠人腦補判斷的 Human SOP 變成可執行、可檢查的 Agentic Workflow。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-agent-系統架構與可靠性">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>Agent 系統架構與可靠性</h2></div>
+          <span>9 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>實作</span></div>
+            <h3><a href="./pec-training/claude-code-hooks-practice.html">Claude Code Hooks：讓規則真的發生</a></h3>
+            <p>把 Claude Code 與 Codex 的 Hook 拆成事件、範圍、處理與停止規則，整理 15 個安全可落地的情境，讓常被遺忘的邊界變成可驗證的工作流。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/agent-harness-reliable-system.html">Agent Harness：把聰明模型包成可靠系統</a></h3>
+            <p>理解模型外圍的上下文、工具、記憶、驗證、觀測、安全與錯誤恢復，讓 agent 不只會 demo。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/harness-engineering-system-design.html">Harness Engineering：讓 Agent 穩定工作的系統設計</a></h3>
+            <p>把工具、文件、評分、回饋與品質閘門包成一套系統，讓 agent 能穩定完成任務。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/loop-engineering-guide.html">Loop Engineering 實作指南</a></h3>
+            <p>從手動提示改成設計可觀察、可驗證、可停止、可回滾的 agent 工作循環。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/claude-code-loop-engineering.html">Claude Code Loop 設計：觸發、驗證與停止條件</a></h3>
+            <p>用四種 Loop 模式理解 Claude Code 工作流設計，學會先定義觸發、驗證、停止條件與人工關卡，再讓 agent 進入可控循環。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>實作</span></div>
+            <h3><a href="./pec-training/brownfield-ai-code-sop.html">先看懂，再動手：舊專案 AI 改 Code 安全流程</a></h3>
+            <p>把 AI 導入既有 codebase 前，先定位畫面、追 data flow、寫 guardrails，再用小步 review 與回歸驗證避免改 A 壞 B。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/claude-codex-cross-review.html">Claude + Codex 交叉審核：把 AI 寫碼變成可管控流程</a></h3>
+            <p>把實作者、審核者與 stop gate 拆開，讓 AI 寫碼流程有攔截、放行與共識收斂條件。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/mcp-a2a-production-agent-skills.html">從連接工具到 Production Skill：MCP、A2A、AP2 與上線防線</a></h3>
+            <p>分清 MCP、A2A、AP2 與 Agent Skill 的責任，並用觸發、資料集、紅隊與 canary 建立可驗證的上線流程。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/ai-production-readiness.html">AI 能做，不代表可以放心上線：Spec、安全與驗收</a></h3>
+            <p>用 Spec、安全邊界、Evaluation、人工審核與發布關卡，把 AI 的可用能力變成可驗證的正式交付。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-skill-蒸餾與能力沉澱">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>Skill、蒸餾與能力沉澱</h2></div>
+          <span>6 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/claude-skill-engineering.html">Claude Skill 觸發率與 Skill Engineering</a></h3>
+            <p>把 Skill 當成工作協議，設計觸發描述、progressive disclosure、腳本驗證與版本化管理。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/codex-plugin-skill-workflows.html">Codex 插件與 Skill 入門：6 種工作流的導入判斷</a></h3>
+            <p>分清楚 Plugin、Skill、Record &amp; Replay，依任務類型判斷該裝能力包、寫流程包，還是錄製示範。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/codex-skill-feedback-loop.html">Codex Skill：把常用工作變成 AI SOP</a></h3>
+            <p>把本地 agent 的修正紀錄、偏好與 know-how 萃取成 Codex Skill，讓團隊 SOP 可以重複使用。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/nuwa-skill-distillation.html">Nuwa Skill：把專家方法變成 AI Skill</a></h3>
+            <p>把專家的說話方式、思考方法、判斷標準、拒絕邊界與局限整理成 agent 可用的 skill。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/skillopt-trainable-skill.html">SkillOpt：把提示詞工程變成可訓練的 Skill 系統</a></h3>
+            <p>把 skill 文件當成可優化對象，用 rollout、驗證集、受控編輯與部署產物管理 prompt 治理。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/agent-evolution-self-distillation.html">如何讓自己的 Agent 越用越懂你</a></h3>
+            <p>把日常使用經驗先蒸餾成文件，再把重複流程變成 skill，最後用安全自動化定期整理。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-知識庫-文件轉換與上下文治理">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>知識庫、文件轉換與上下文治理</h2></div>
+          <span>6 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/markitdown-ingestion-layer.html">MarkItDown：把多格式文件整理成 AI 可讀 Markdown</a></h3>
+            <p>把 PDF、Office、HTML、資料檔與音訊先標準化成 Markdown，讓 AI 與 agent workflow 更容易處理。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/ai-second-brain-knowledge-base.html">AI 第二大腦：文字、圖片與 Skill 的 Agent 知識庫</a></h3>
+            <p>建立讓 agent 可讀、可分類、可提煉、可回寫的本地知識庫，而不是只給人看的筆記庫。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/ai-brain-shared-memory-across-agents.html">一顆大腦，讓每個 AI 都記得你</a></h3>
+            <p>用一份自己擁有、可審核、可搜尋的外部知識庫，讓多個 AI、專案與裝置共用長期記憶。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/wiki-agent-nightly-maintenance.html">Wiki Agent 知識營運：讓知識庫每天自己變乾淨</a></h3>
+            <p>把零散文件、工作輸出、專案紀錄與教學素材整理成可追溯、可審核、可被 AI 工具使用的長期知識。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/context-headroom.html">Headroom：本地 Agent 的 Context Headroom 導入策略</a></h3>
+            <p>把長任務中的工具輸出、log、RAG 結果與逐字稿先清理，降低 context 爆掉和摘要失焦的風險。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/opensquilla-metaskill.html">OpenSquilla 與 MetaSkill 技術入門</a></h3>
+            <p>理解 token efficiency、smart routing、durable memory 與 MetaSkill request 如何影響 agent runtime。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-agent-管理-可視化與營運">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>Agent 管理、可視化與營運</h2></div>
+          <span>2 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/agentic-os-dashboard.html">可視化管理 Agent：Claude Agentic OS</a></h3>
+            <p>把模型訂閱、知識庫、skills、agent 活動、成本與改善流程集中到可視化控制台。</p>
+          </article>
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>入門</span></div>
+            <h3><a href="./pec-training/manager-agent-governance.html">管理 agent 的 agent 入門</a></h3>
+            <p>用管理者 agent 先規劃、分工、檢查與整理，讓多 agent 系統有權限分級和交接紀錄。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-設計與輸出工作流">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>設計與輸出工作流</h2></div>
+          <span>1 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./pec-training/claude-design-code-ui-workflow.html">Claude Design + Claude Code：從想法到介面、再到開發交接</a></h3>
+            <p>把需求、原型、視覺規格與後續開發接成閉環，讓設計和程式能互相讀懂。</p>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" id="category-skill-workflow-ai-open-source">
+        <div class="catalog-group-header">
+          <div><p class="section-label">Category</p><h2>Skill / Workflow · AI Open Source</h2></div>
+          <span>1 份教材</span>
+        </div>
+        <div class="catalog-item-grid">
+          <article class="catalog-item">
+            <div class="catalog-item-top"><span>進階</span></div>
+            <h3><a href="./github-skills.html">GitHub 熱門 Skill / AI 工具</a></h3>
+            <p>每週整理 GitHub 上值得學的 Skill、AI workflow 與 AI 開源工具，先看白話介紹，再決定要不要深入研究。</p>
+          </article>
+        </div>
+      </section>
+      <!-- static-catalog-groups:end -->
+    </section>
     <p class="empty-state" id="catalogEmptyState" hidden>找不到符合的教材。換個關鍵字，或清除篩選。</p>
   </main>
 

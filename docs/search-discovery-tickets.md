@@ -4,11 +4,13 @@
 
 ## S1：讓公開教材從 HTML 目錄可被找到
 
-Type: AFK。Status: proposed。Blocked by: None。User story: 搜尋工具與訪客都找得到教材。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: None。User story: 搜尋工具與訪客都找得到教材。
 
 建立依主題分組的靜態教材連結，保留既有搜尋／篩選。
 
 驗收：關閉 JavaScript 仍能從首頁或學習入口走到全部 47 筆應公開教材；手機搜尋與篩選不退化；範本、預覽或轉址頁不變成教材。驗證：原始 HTML 連結盤點、瀏覽器互動與正式網址抽查。
+
+本機證據：原始 HTML 已有 47 條教材連結，47 個目標頁均存在；不執行 JavaScript 的公開 HTML 測試先紅後綠。390px 瀏覽器顯示 47 張卡片、10 個分類篩選，搜尋 MCP 後顯示 13 筆，無水平溢出或瀏覽器錯誤。
 
 ## S2：首頁與學習入口聚焦 AI Agent 學習者
 
