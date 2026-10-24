@@ -86,11 +86,13 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S9：工程與專業經驗學習日誌入口
 
-Type: AFK。Status: proposed。Blocked by: S2。User story: 訪客看得見工程背景與 AI 教學的連結。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S2。User story: 訪客看得見工程背景與 AI 教學的連結。
 
 整理學習日誌中系統工程、硬體、PM、採購及工作反思相關文章的索引、摘要與相關閱讀；以現有公開文章為準，先在票內固定清單。
 
 驗收：保留原文事件與來源，不增添未確認的公司、學歷或職稱宣稱；讀者能由 About 或日誌入口找到相關文章。驗證：原文逐篇核對、靜態連結與手機頁檢查。
+
+固定清單：8 篇工程與工作方法日誌，詳見 `scripts/journal-discovery-data.mjs` 的 engineering 分組。日誌首頁增加獨立閱讀路徑，各篇增加同主題延伸閱讀，原文事件、日期和出處保留。原始 HTML 測試通過。
 
 ## S10：四款免費 App 與個人品牌形成清楚回路
 
