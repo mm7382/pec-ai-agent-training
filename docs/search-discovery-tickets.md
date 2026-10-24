@@ -116,10 +116,10 @@ Type: AFK。Status: published and verified（2026-10-24；`c6e0fde`；網站地�
 
 ## S12：建立搜尋成效基線與後續調整節奏
 
-Type: HITL（只限站主帳戶驗證與授權部分）。Status: 公開基線與站主操作已備妥；真實成效數據待站主登入。Blocked by: S11。User story: Michael 能按真實查詢與曝光資料調整內容。
+Type: HITL（只限站主帳戶驗證與授權部分）。Status: 已確認站主能開啟 Search Console；網站地圖狀態與 28 天成效仍待站主報表。Blocked by: S11。User story: Michael 能按真實查詢與曝光資料調整內容。
 
 整理 Google Search Console 的網站所有權、sitemap 提交與成效檢查；若 Michael 已有可用權限，建立 28 天查詢、曝光、點擊及收錄基線。
 
 驗收：清楚區分「頁面可抓取」與「實際已收錄／有曝光」，只用真實資料決定下一輪內容；不索取或儲存密碼。驗證：站主可見的 Search Console 報表或明確記錄其尚未連接。
 
-公開基線與操作節奏見 [Search Console 基線](search-console-baseline.md)。本工作階段沒有站主 Search Console 登入狀態，未取得私有成效資料，沒有編造曝光或收錄數。
+公開基線與操作節奏見 [Search Console 基線](search-console-baseline.md)。站主已確認可開啟網站資源；本工作階段沒有其 Google 帳戶登入狀態，未取得完整私有報表，也沒有將截圖中的帳戶數字寫入公開程式庫。
