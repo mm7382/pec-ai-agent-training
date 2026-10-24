@@ -4,7 +4,7 @@
 
 ## S1：讓公開教材從 HTML 目錄可被找到
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: None。User story: 搜尋工具與訪客都找得到教材。
+Type: AFK。Status: published and verified（2026-10-24；`a896aad`）。Blocked by: None。User story: 搜尋工具與訪客都找得到教材。
 
 建立依主題分組的靜態教材連結，保留既有搜尋／篩選。
 
@@ -12,13 +12,17 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 本機證據：原始 HTML 已有 47 條教材連結，47 個目標頁均存在；不執行 JavaScript 的公開 HTML 測試先紅後綠。390px 瀏覽器顯示 47 張卡片、10 個分類篩選，搜尋 MCP 後顯示 13 筆，無水平溢出或瀏覽器錯誤。
 
+正式站證據：GitHub Pages 發布成功；正式目錄回傳 200，47 筆索引教材在原始 HTML 各有可直接讀取的連結。
+
 ## S2：首頁與學習入口聚焦 AI Agent 學習者
 
-Type: AFK。Status: proposed。Blocked by: S1。User story: 新訪客一眼看懂網站的核心價值。
+Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1。User story: 新訪客一眼看懂網站的核心價值。
 
 調整首頁與學習入口的標題、前兩屏文字、導覽與作品位置；「工程思維學 AI Agent」為主，四款免費 App 作作品入口。
 
 驗收：繁體中文自然、英文輔助可懂；首頁到教材與作品均不超過兩次點擊；現有雜誌式視覺、真實 App 圖像及原有網址保留。驗證：手機與桌面實際瀏覽、文案核對。
+
+本機證據：首頁與學習入口皆以 AI Agent 學習作主題，四款免費 App 卡片保留；47 份教材、9 個分類與索引一致。390px 手機及 1280px 桌面預覽通過，無水平溢出或瀏覽器錯誤。
 
 ## S3：入門與工具選型教材路徑
 
