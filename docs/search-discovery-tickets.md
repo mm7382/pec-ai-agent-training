@@ -36,7 +36,7 @@ Type: AFK。Status: published and verified（2026-10-24；`2f59827`）。Blocked
 
 ## S4：任務交辦與需求釐清教材路徑
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 訪客能從問題找到具體做法。
+Type: AFK。Status: published and verified（2026-10-24；`cbf1520`，後續正式版讀回）。Blocked by: S1, S2。User story: 訪客能從問題找到具體做法。
 
 整理「任務交辦、Prompt 與需求釐清」9 篇的搜尋入口與教材間閱讀順序。
 
@@ -46,7 +46,7 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S5：可靠 Agent 系統教材路徑
 
-Type: AFK。Status: pushed；正式站部署中。Blocked by: S1, S2。User story: 工程讀者能循序進入可靠性與架構實作。
+Type: AFK。Status: published and verified（2026-10-24；`6c15ec7`）。Blocked by: S1, S2。User story: 工程讀者能循序進入可靠性與架構實作。
 
 整理「Agent 系統架構與可靠性」9 篇的導覽、摘要、開頭與相關閱讀。
 
@@ -56,7 +56,7 @@ Type: AFK。Status: pushed；正式站部署中。Blocked by: S1, S2。User stor
 
 ## S6：Skill 與知識治理教材路徑
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 讀者能理解如何沉澱、更新與驗證 Agent 能力。
+Type: AFK。Status: published and verified（2026-10-24；`2ff9caa`）。Blocked by: S1, S2。User story: 讀者能理解如何沉澱、更新與驗證 Agent 能力。
 
 整理「Skill、蒸餾與能力沉澱」6 篇及「知識庫、文件轉換與上下文治理」6 篇。
 
@@ -66,7 +66,7 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S7：其餘教材的精確入口
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1, S2。User story: 小類別教材也不會在目錄中消失。
+Type: AFK。Status: published and verified（2026-10-24；`f5ca340`）。Blocked by: S1, S2。User story: 小類別教材也不會在目錄中消失。
 
 整理「Agent 管理、可視化與營運」2 篇、「設計與輸出工作流」1 篇、「Skill / Workflow · AI Open Source」1 篇。
 
@@ -76,7 +76,7 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S8：AI 實作學習日誌入口
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S2。User story: 訪客從真實實作案例理解 Michael 的方法。
+Type: AFK。Status: published and verified（2026-10-24；`1859cca`）。Blocked by: S2。User story: 訪客從真實實作案例理解 Michael 的方法。
 
 整理學習日誌中 AI、Agent、模型、工作流、安全與教學網站相關文章的索引、摘要及相關閱讀；以現有公開文章為準，先在票內固定清單。
 
@@ -86,7 +86,7 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S9：工程與專業經驗學習日誌入口
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S2。User story: 訪客看得見工程背景與 AI 教學的連結。
+Type: AFK。Status: published and verified（2026-10-24；`1a64ba1`）。Blocked by: S2。User story: 訪客看得見工程背景與 AI 教學的連結。
 
 整理學習日誌中系統工程、硬體、PM、採購及工作反思相關文章的索引、摘要與相關閱讀；以現有公開文章為準，先在票內固定清單。
 
@@ -106,7 +106,7 @@ Type: AFK。Status: published and verified（2026-10-24；App 站 `6d52f7d`）�
 
 ## S11：全站搜尋與 AI 可讀性驗收
 
-Type: AFK。Status: implemented and locally verified；待正式發布驗證。Blocked by: S1–S10。User story: 搜尋服務有穩定、真實且可理解的公開內容。
+Type: AFK。Status: published and verified（2026-10-24；`c6e0fde`；網站地圖於 App 站 `f5a3c23`）。Blocked by: S1–S10。User story: 搜尋服務有穩定、真實且可理解的公開內容。
 
 對 84 個個人網站公開頁與四款 App 主要入口稽核抓取、HTML 主內容、必要 canonical、sitemap、robots、手機可讀性和效能；逐頁留下保留或修訂結果。
 
@@ -116,8 +116,10 @@ Type: AFK。Status: implemented and locally verified；待正式發布驗證。B
 
 ## S12：建立搜尋成效基線與後續調整節奏
 
-Type: HITL（只限站主帳戶驗證與授權部分）。Status: proposed。Blocked by: S11。User story: Michael 能按真實查詢與曝光資料調整內容。
+Type: HITL（只限站主帳戶驗證與授權部分）。Status: 公開基線與站主操作已備妥；真實成效數據待站主登入。Blocked by: S11。User story: Michael 能按真實查詢與曝光資料調整內容。
 
 整理 Google Search Console 的網站所有權、sitemap 提交與成效檢查；若 Michael 已有可用權限，建立 28 天查詢、曝光、點擊及收錄基線。
 
 驗收：清楚區分「頁面可抓取」與「實際已收錄／有曝光」，只用真實資料決定下一輪內容；不索取或儲存密碼。驗證：站主可見的 Search Console 報表或明確記錄其尚未連接。
+
+公開基線與操作節奏見 [Search Console 基線](search-console-baseline.md)。本工作階段沒有站主 Search Console 登入狀態，未取得私有成效資料，沒有編造曝光或收錄數。
