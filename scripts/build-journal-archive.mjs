@@ -1,4 +1,6 @@
 import { writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
 const entries = [
   {
@@ -155,3 +157,4 @@ for (const e of entries) {
 }
 
 console.log(`Built ${entries.length} bilingual journal articles.`);
+execFileSync(process.execPath, [fileURLToPath(new URL('./enrich-journal-discovery.mjs', import.meta.url)), 'ai', 'engineering'], { stdio: 'inherit' });
