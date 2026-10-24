@@ -1,0 +1,27 @@
+.field-page .app-shell { width: min(1040px, calc(100vw - 32px)); }
+.field-page .field-hero { padding: clamp(48px, 7vw, 88px) 0 44px; border-bottom: 1px solid var(--home-line); }
+.field-page .field-kicker { margin: 0 0 16px; color: #345a42; font-size: .82rem; font-weight: 700; letter-spacing: .08em; }
+.field-page h1 { max-width: 18ch; margin: 0 0 22px; color: #263b2d; font-size: clamp(2.15rem, 5vw, 3.5rem); line-height: 1.2; letter-spacing: -.025em; }
+.field-page .field-lead { max-width: 44em; margin: 0; color: #404b42; font-size: clamp(1.05rem, 2vw, 1.22rem); line-height: 1.8; }
+.field-page .field-meta { margin: 18px 0 0; color: #526153; font-size: .94rem; }
+.field-page .field-layout { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: clamp(30px, 6vw, 72px); padding: 50px 0 70px; }
+.field-page .field-article { min-width: 0; }
+.field-page .field-article section { padding: 0 0 38px; margin: 0 0 38px; border-bottom: 1px solid var(--home-line); }
+.field-page .field-article h2 { margin: 0 0 16px; color: #253b2c; font-size: clamp(1.4rem, 3vw, 1.85rem); line-height: 1.38; }
+.field-page .field-article h3 { margin: 24px 0 8px; font-size: 1.1rem; line-height: 1.5; }
+.field-page .field-article p, .field-page .field-article li { color: #343e35; line-height: 1.85; }
+.field-page .field-article p { margin: 0 0 16px; }
+.field-page .field-article ul, .field-page .field-article ol { padding-left: 1.45em; margin: 0 0 18px; }
+.field-page .field-article li + li { margin-top: 9px; }
+.field-page .field-article a, .field-page .field-aside a, .field-page .field-footer a { color: #244f35; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.field-page .field-aside { align-self: start; position: sticky; top: 110px; padding: 24px; border-top: 2px solid #315842; background: #f2f1eb; }
+.field-page .field-aside h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.field-page .field-aside p, .field-page .field-aside li { margin: 0 0 10px; color: #3f493f; line-height: 1.7; }
+.field-page .field-aside ul { padding-left: 1.1em; margin: 0 0 16px; }
+.field-page .field-callout { padding: 24px 26px; margin: 24px 0; border-left: 4px solid #315842; background: #f2f1eb; }
+.field-page .field-callout p:last-child { margin-bottom: 0; }
+.field-page .field-steps { display: grid; gap: 12px; padding: 0; list-style: none; counter-reset: stage; }
+.field-page .field-steps li { counter-increment: stage; padding: 18px 20px; border: 1px solid #d5d9d2; border-radius: 8px; background: #fffefa; }
+.field-page .field-steps li::before { content: "0" counter(stage); display: block; margin-bottom: 8px; color: #345a42; font-weight: 700; }
+.field-page .field-footer { padding: 32px 0 60px; border-top: 1px solid var(--home-line); color: #465147; }
+@media (max-width: 760px) { .field-page .field-layout { grid-template-columns: 1fr; } .field-page .field-aside { position: static; } }
