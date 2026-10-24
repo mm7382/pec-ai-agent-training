@@ -3,21 +3,17 @@
 }
 
 .services-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.7fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 112px);
   padding: 72px 0 56px;
   border-bottom: 1px solid var(--home-line);
 }
 
-.services-eyebrow {
-  margin: 0 0 18px;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--home-accent);
-}
-
 .services-hero h1 {
   margin: 0 0 20px;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 4.2vw, 2.6rem);
   line-height: 1.22;
   font-weight: 600;
 }
@@ -52,6 +48,37 @@
 .services-contact:focus-visible {
   border-color: var(--home-accent);
   color: var(--home-accent);
+}
+
+.services-start {
+  padding: 32px;
+  border-top: 2px solid var(--home-accent);
+  background: var(--home-soft);
+}
+
+.services-start h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  line-height: 1.4;
+}
+
+.services-start p,
+.services-start li {
+  line-height: 1.8;
+}
+
+.services-start ol {
+  margin: 20px 0;
+  padding-left: 1.4em;
+}
+
+.services-start li + li {
+  margin-top: 10px;
+}
+
+.services-start-note {
+  margin: 0;
+  font-weight: 600;
 }
 
 .services-block {
@@ -99,6 +126,12 @@
   color: var(--home-muted);
 }
 
+.services-proof-note {
+  margin: 24px 0 0;
+  color: var(--home-muted);
+  line-height: 1.8;
+}
+
 .services-steps {
   margin: 0;
   padding: 0;
@@ -134,6 +167,39 @@
 .services-steps strong {
   display: block;
   font-weight: 600;
+}
+
+.services-step-contact {
+  margin: 28px 0 0 46px;
+  line-height: 1.8;
+}
+
+.services-step-contact a {
+  color: var(--home-ink);
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .services-hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 44px;
+  }
+
+  .services-start {
+    padding: 24px;
+  }
+
+  .services-page .home-nav-links {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 14px 22px;
+  }
+
+  .services-step-contact {
+    margin-left: 0;
+  }
 }
 
 .services-fit {
