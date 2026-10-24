@@ -1,0 +1,19 @@
+.mal-related {
+  box-sizing: border-box;
+  margin: 0;
+  padding: clamp(32px, 5vw, 64px) 24px;
+  border-top: 1px solid #d8d7d1;
+  background: #f7f5f0;
+  color: #23362e;
+  font-family: system-ui, "Noto Sans TC", sans-serif;
+}
+.mal-related *, .mal-related *::before, .mal-related *::after { box-sizing: border-box; }
+.mal-related-inner { width: min(100%, 1000px); margin: 0 auto; }
+.mal-related-label { margin: 0 0 8px; color: #5e6b61; font-size: 13px; letter-spacing: .04em; }
+.mal-related h2 { margin: 0 0 20px; color: #23362e; font-family: Georgia, "Noto Serif TC", serif; font-size: clamp(24px, 3vw, 34px); font-weight: 500; line-height: 1.3; }
+.mal-related ul { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0; padding: 0; list-style: none; }
+.mal-related li { max-width: min(100%, 440px); }
+.mal-related a { color: #2b5f47; font-size: 15px; line-height: 1.6; text-decoration: underline; text-underline-offset: 4px; }
+.mal-related a:hover { color: #19412d; }
+.mal-related a:focus-visible { outline: 2px solid #2b5f47; outline-offset: 4px; }
+@media (max-width: 600px) { .mal-related ul { display: block; } .mal-related li + li { margin-top: 12px; } }
