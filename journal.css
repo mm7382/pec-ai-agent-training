@@ -458,6 +458,19 @@ body.journal-page {
   }
 }
 
+.journal-path { margin: 64px 0; padding: 34px 0; border-top: 1px solid var(--line); }
+.journal-path-head { max-width: 760px; }
+.journal-path-head h2 { margin: 10px 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.15; }
+.journal-path-head > p:last-child { max-width: 600px; line-height: 1.8; }
+.journal-path-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 34px; margin: 30px 0 0; padding: 0; list-style: none; counter-reset: path; }
+.journal-path-list li { counter-increment: path; border-top: 1px solid var(--line); }
+.journal-path-list a { display: grid; grid-template-columns: 30px 1fr; gap: 4px 12px; padding: 15px 0 18px; color: inherit; text-decoration: none; }
+.journal-path-list a::before { content: counter(path, decimal-leading-zero); grid-row: span 2; color: var(--olive); font: 12px Georgia, serif; }
+.journal-path-list strong { font-weight: 600; line-height: 1.5; }
+.journal-path-list span { color: var(--olive); font-size: 13px; line-height: 1.55; }
+.journal-path-list a:hover strong, .journal-path-list a:focus-visible strong { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 620px) { .journal-path { margin: 46px 0; } .journal-path-list { grid-template-columns: 1fr; } }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
