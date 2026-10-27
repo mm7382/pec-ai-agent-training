@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T05:12:04.478Z",
+  "generatedAt": "2026-10-27T05:27:43.546Z",
   "title": "GitHub 熱門 Skill / AI 工具",
   "source": "GitHub Search API + GitHub README + GitHub Issue/PR reactions",
   "notes": [
@@ -19,8 +19,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-10-19",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-19、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-10-20",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-20、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "paperclipai-paperclip",
@@ -91,13 +91,13 @@
                 "project-management",
                 "workflow-automation"
               ],
-              "stars": 107364,
-              "forks": 17836,
-              "watchers": 107364,
-              "openIssues": 6596,
+              "stars": 107737,
+              "forks": 17869,
+              "watchers": 107737,
+              "openIssues": 6677,
               "likes": 271,
               "hearts": 11,
-              "reactionTotal": 310,
+              "reactionTotal": 311,
               "reactionSamples": [
                 {
                   "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -121,8 +121,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-10-26T05:02:09Z",
-              "pushedAt": "2026-10-26T04:50:50Z",
+              "updatedAt": "2026-10-27T05:15:32Z",
+              "pushedAt": "2026-10-27T05:22:24Z",
               "createdAt": "2026-03-02T15:01:51Z",
               "homepage": "https://paperclip.ing",
               "url": "https://github.com/paperclipai/paperclip",
@@ -131,8 +131,116 @@
               "license": "MIT"
             },
             {
-              "id": "thedotmack-claude-mem",
+              "id": "morluto-rea",
               "rank": 2,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "morluto/rea",
+              "name": "rea",
+              "owner": "morluto",
+              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+              "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+              "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+              "contentZh": [
+                "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 12、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要記憶 / 上下文管理的 coding agent",
+                "用在長任務、跨對話延續與知識取回 workflow",
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "TypeScript",
+              "topics": [
+                "agent-skills",
+                "ai-agents",
+                "binary-analysis",
+                "claude-code",
+                "cli",
+                "codex",
+                "cordis",
+                "decompiler",
+                "developer-tools",
+                "dsh",
+                "dsh-plugin",
+                "ghidra",
+                "hopper",
+                "llm",
+                "mcp",
+                "model-context-protocol",
+                "rea",
+                "reverse-engineering",
+                "static-analysis",
+                "touhou"
+              ],
+              "stars": 392829,
+              "forks": 98453,
+              "watchers": 392829,
+              "openIssues": 1211,
+              "likes": 60,
+              "hearts": 0,
+              "reactionTotal": 61,
+              "reactionSamples": [
+                {
+                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+                  "url": "https://github.com/morluto/rea/issues/1416",
+                  "likes": 22,
+                  "hearts": 0,
+                  "comments": 2
+                },
+                {
+                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
+                  "url": "https://github.com/morluto/rea/issues/1551",
+                  "likes": 12,
+                  "hearts": 0,
+                  "comments": 10
+                },
+                {
+                  "title": "[Feature] Java Reverse Engineering",
+                  "url": "https://github.com/morluto/rea/issues/1558",
+                  "likes": 6,
+                  "hearts": 0,
+                  "comments": 15
+                }
+              ],
+              "updatedAt": "2026-10-27T05:22:05Z",
+              "pushedAt": "2026-10-27T05:21:47Z",
+              "createdAt": "2026-04-14T00:51:32Z",
+              "homepage": "https://rea.tools",
+              "url": "https://github.com/morluto/rea",
+              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/morluto/rea.git",
+              "license": "MIT"
+            },
+            {
+              "id": "thedotmack-claude-mem",
+              "rank": 3,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "skill-workflow",
@@ -199,10 +307,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 103170,
-              "forks": 9110,
-              "watchers": 103170,
-              "openIssues": 101,
+              "stars": 103493,
+              "forks": 9134,
+              "watchers": 103493,
+              "openIssues": 117,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -229,8 +337,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-10-26T05:06:35Z",
-              "pushedAt": "2026-10-25T21:00:05Z",
+              "updatedAt": "2026-10-27T05:21:42Z",
+              "pushedAt": "2026-10-26T23:57:05Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -239,221 +347,8 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "morluto-rea",
-              "rank": 3,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "morluto/rea",
-              "name": "rea",
-              "owner": "morluto",
-              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-              "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-              "contentZh": [
-                "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 11、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要記憶 / 上下文管理的 coding agent",
-                "用在長任務、跨對話延續與知識取回 workflow",
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "TypeScript",
-              "topics": [
-                "agent-skills",
-                "ai-agents",
-                "binary-analysis",
-                "claude-code",
-                "cli",
-                "codex",
-                "cordis",
-                "decompiler",
-                "developer-tools",
-                "dsh",
-                "dsh-plugin",
-                "ghidra",
-                "hopper",
-                "llm",
-                "mcp",
-                "model-context-protocol",
-                "rea",
-                "reverse-engineering",
-                "static-analysis",
-                "touhou"
-              ],
-              "stars": 385859,
-              "forks": 96639,
-              "watchers": 385859,
-              "openIssues": 1097,
-              "likes": 59,
-              "hearts": 0,
-              "reactionTotal": 60,
-              "reactionSamples": [
-                {
-                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-                  "url": "https://github.com/morluto/rea/issues/1416",
-                  "likes": 22,
-                  "hearts": 0,
-                  "comments": 2
-                },
-                {
-                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
-                  "url": "https://github.com/morluto/rea/issues/1551",
-                  "likes": 11,
-                  "hearts": 0,
-                  "comments": 9
-                },
-                {
-                  "title": "[Feature] Java Reverse Engineering",
-                  "url": "https://github.com/morluto/rea/issues/1558",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 15
-                }
-              ],
-              "updatedAt": "2026-10-26T05:06:30Z",
-              "pushedAt": "2026-10-25T19:21:28Z",
-              "createdAt": "2026-04-14T00:51:32Z",
-              "homepage": "https://rea.tools",
-              "url": "https://github.com/morluto/rea",
-              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/morluto/rea.git",
-              "license": "MIT"
-            },
-            {
-              "id": "zhayujie-cowagent",
-              "rank": 4,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "zhayujie/CowAgent",
-              "name": "CowAgent",
-              "owner": "zhayujie",
-              "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-              "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
-              "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
-              "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-              "contentZh": [
-                "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-                "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "全功能助理型 / 多工具 agent",
-                "用在任務規劃、MCP、技能與知識庫整合 workflow",
-                "想看 agent harness 如何串工具與記憶的人"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "Python",
-              "topics": [
-                "ai",
-                "ai-agent",
-                "ai-agents",
-                "chatgpt-on-wechat",
-                "claude",
-                "claude-code",
-                "codex",
-                "cowagent",
-                "deepseek",
-                "harness",
-                "llm",
-                "mcp",
-                "multi-agent",
-                "openai",
-                "openclaw",
-                "personal-agent",
-                "skills"
-              ],
-              "stars": 47588,
-              "forks": 10406,
-              "watchers": 47588,
-              "openIssues": 43,
-              "likes": 45,
-              "hearts": 2,
-              "reactionTotal": 51,
-              "reactionSamples": [
-                {
-                  "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/718",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 32
-                },
-                {
-                  "title": "tool插件 有关的一切都在这个文档里",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/776",
-                  "likes": 9,
-                  "hearts": 0,
-                  "comments": 53
-                },
-                {
-                  "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/8",
-                  "likes": 7,
-                  "hearts": 0,
-                  "comments": 49
-                }
-              ],
-              "updatedAt": "2026-10-26T04:19:14Z",
-              "pushedAt": "2026-10-25T02:44:27Z",
-              "createdAt": "2022-08-07T08:33:41Z",
-              "homepage": "https://cowagent.ai",
-              "url": "https://github.com/zhayujie/CowAgent",
-              "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
-              "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-              "license": "MIT"
-            },
-            {
               "id": "alirezarezvani-claude-skills",
-              "rank": 5,
+              "rank": 4,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "skill-workflow",
@@ -520,10 +415,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 28724,
-              "forks": 3988,
-              "watchers": 28724,
-              "openIssues": 1,
+              "stars": 28789,
+              "forks": 3996,
+              "watchers": 28789,
+              "openIssues": 2,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -550,13 +445,118 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-10-26T04:08:00Z",
-              "pushedAt": "2026-10-23T11:30:28Z",
+              "updatedAt": "2026-10-27T04:49:04Z",
+              "pushedAt": "2026-10-26T16:54:47Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
               "url": "https://github.com/alirezarezvani/claude-skills",
               "downloadUrl": "https://github.com/alirezarezvani/claude-skills/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/alirezarezvani/claude-skills.git",
+              "license": "MIT"
+            },
+            {
+              "id": "zhayujie-cowagent",
+              "rank": 5,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "zhayujie/CowAgent",
+              "name": "CowAgent",
+              "owner": "zhayujie",
+              "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+              "descriptionZh": "开源个人人工智能助理和代理线束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多渠道。轻量级、可扩展、单行安装。",
+              "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
+              "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+              "contentZh": [
+                "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+                "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "全功能助理型 / 多工具 agent",
+                "用在任務規劃、MCP、技能與知識庫整合 workflow",
+                "想看 agent harness 如何串工具與記憶的人"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "Python",
+              "topics": [
+                "ai",
+                "ai-agent",
+                "ai-agents",
+                "chatgpt-on-wechat",
+                "claude",
+                "claude-code",
+                "codex",
+                "cowagent",
+                "deepseek",
+                "harness",
+                "llm",
+                "mcp",
+                "multi-agent",
+                "openai",
+                "openclaw",
+                "personal-agent",
+                "skills"
+              ],
+              "stars": 47615,
+              "forks": 10407,
+              "watchers": 47615,
+              "openIssues": 46,
+              "likes": 45,
+              "hearts": 2,
+              "reactionTotal": 51,
+              "reactionSamples": [
+                {
+                  "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/718",
+                  "likes": 6,
+                  "hearts": 0,
+                  "comments": 32
+                },
+                {
+                  "title": "tool插件 有关的一切都在这个文档里",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/776",
+                  "likes": 9,
+                  "hearts": 0,
+                  "comments": 53
+                },
+                {
+                  "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/8",
+                  "likes": 7,
+                  "hearts": 0,
+                  "comments": 49
+                }
+              ],
+              "updatedAt": "2026-10-27T03:57:55Z",
+              "pushedAt": "2026-10-26T14:03:03Z",
+              "createdAt": "2022-08-07T08:33:41Z",
+              "homepage": "https://cowagent.ai",
+              "url": "https://github.com/zhayujie/CowAgent",
+              "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
+              "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
               "license": "MIT"
             }
           ]
@@ -565,8 +565,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-09-26",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-26、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-27",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-27、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "paperclipai-paperclip",
@@ -637,13 +637,13 @@
                 "project-management",
                 "workflow-automation"
               ],
-              "stars": 107364,
-              "forks": 17836,
-              "watchers": 107364,
-              "openIssues": 6597,
+              "stars": 107739,
+              "forks": 17869,
+              "watchers": 107739,
+              "openIssues": 6677,
               "likes": 271,
               "hearts": 11,
-              "reactionTotal": 310,
+              "reactionTotal": 311,
               "reactionSamples": [
                 {
                   "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -667,8 +667,8 @@
                   "comments": 1
                 }
               ],
-              "updatedAt": "2026-10-26T05:02:09Z",
-              "pushedAt": "2026-10-26T05:08:48Z",
+              "updatedAt": "2026-10-27T05:24:41Z",
+              "pushedAt": "2026-10-27T05:22:24Z",
               "createdAt": "2026-03-02T15:01:51Z",
               "homepage": "https://paperclip.ing",
               "url": "https://github.com/paperclipai/paperclip",
@@ -677,8 +677,116 @@
               "license": "MIT"
             },
             {
-              "id": "thedotmack-claude-mem",
+              "id": "morluto-rea",
               "rank": 2,
+              "period": "monthly",
+              "periodKey": "monthly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "morluto/rea",
+              "name": "rea",
+              "owner": "morluto",
+              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+              "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+              "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+              "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+              "contentZh": [
+                "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 12、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要記憶 / 上下文管理的 coding agent",
+                "用在長任務、跨對話延續與知識取回 workflow",
+                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "TypeScript",
+              "topics": [
+                "agent-skills",
+                "ai-agents",
+                "binary-analysis",
+                "claude-code",
+                "cli",
+                "codex",
+                "cordis",
+                "decompiler",
+                "developer-tools",
+                "dsh",
+                "dsh-plugin",
+                "ghidra",
+                "hopper",
+                "llm",
+                "mcp",
+                "model-context-protocol",
+                "rea",
+                "reverse-engineering",
+                "static-analysis",
+                "touhou"
+              ],
+              "stars": 392833,
+              "forks": 98453,
+              "watchers": 392833,
+              "openIssues": 1211,
+              "likes": 60,
+              "hearts": 0,
+              "reactionTotal": 61,
+              "reactionSamples": [
+                {
+                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+                  "url": "https://github.com/morluto/rea/issues/1416",
+                  "likes": 22,
+                  "hearts": 0,
+                  "comments": 2
+                },
+                {
+                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
+                  "url": "https://github.com/morluto/rea/issues/1551",
+                  "likes": 12,
+                  "hearts": 0,
+                  "comments": 10
+                },
+                {
+                  "title": "[Feature] Java Reverse Engineering",
+                  "url": "https://github.com/morluto/rea/issues/1558",
+                  "likes": 6,
+                  "hearts": 0,
+                  "comments": 15
+                }
+              ],
+              "updatedAt": "2026-10-27T05:23:54Z",
+              "pushedAt": "2026-10-27T05:23:14Z",
+              "createdAt": "2026-04-14T00:51:32Z",
+              "homepage": "https://rea.tools",
+              "url": "https://github.com/morluto/rea",
+              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/morluto/rea.git",
+              "license": "MIT"
+            },
+            {
+              "id": "thedotmack-claude-mem",
+              "rank": 3,
               "period": "monthly",
               "periodKey": "monthly",
               "categoryKey": "skill-workflow",
@@ -745,10 +853,10 @@
                 "sqlite",
                 "supermemory"
               ],
-              "stars": 103170,
-              "forks": 9110,
-              "watchers": 103170,
-              "openIssues": 101,
+              "stars": 103493,
+              "forks": 9134,
+              "watchers": 103493,
+              "openIssues": 117,
               "likes": 75,
               "hearts": 42,
               "reactionTotal": 124,
@@ -775,8 +883,8 @@
                   "comments": 2
                 }
               ],
-              "updatedAt": "2026-10-26T05:06:35Z",
-              "pushedAt": "2026-10-25T21:00:05Z",
+              "updatedAt": "2026-10-27T05:21:42Z",
+              "pushedAt": "2026-10-26T23:57:05Z",
               "createdAt": "2025-08-31T20:50:03Z",
               "homepage": "https://claude-mem.ai",
               "url": "https://github.com/thedotmack/claude-mem",
@@ -785,221 +893,8 @@
               "license": "Apache-2.0"
             },
             {
-              "id": "morluto-rea",
-              "rank": 3,
-              "period": "monthly",
-              "periodKey": "monthly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "morluto/rea",
-              "name": "rea",
-              "owner": "morluto",
-              "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-              "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-              "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-              "contentZh": [
-                "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-                "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 11、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要記憶 / 上下文管理的 coding agent",
-                "用在長任務、跨對話延續與知識取回 workflow",
-                "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "TypeScript",
-              "topics": [
-                "agent-skills",
-                "ai-agents",
-                "binary-analysis",
-                "claude-code",
-                "cli",
-                "codex",
-                "cordis",
-                "decompiler",
-                "developer-tools",
-                "dsh",
-                "dsh-plugin",
-                "ghidra",
-                "hopper",
-                "llm",
-                "mcp",
-                "model-context-protocol",
-                "rea",
-                "reverse-engineering",
-                "static-analysis",
-                "touhou"
-              ],
-              "stars": 385866,
-              "forks": 96643,
-              "watchers": 385866,
-              "openIssues": 1097,
-              "likes": 59,
-              "hearts": 0,
-              "reactionTotal": 60,
-              "reactionSamples": [
-                {
-                  "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-                  "url": "https://github.com/morluto/rea/issues/1416",
-                  "likes": 22,
-                  "hearts": 0,
-                  "comments": 2
-                },
-                {
-                  "title": "Feature: Add support for Binary Ninja as an analysis backend",
-                  "url": "https://github.com/morluto/rea/issues/1551",
-                  "likes": 11,
-                  "hearts": 0,
-                  "comments": 9
-                },
-                {
-                  "title": "[Feature] Java Reverse Engineering",
-                  "url": "https://github.com/morluto/rea/issues/1558",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 15
-                }
-              ],
-              "updatedAt": "2026-10-26T05:08:12Z",
-              "pushedAt": "2026-10-25T19:21:28Z",
-              "createdAt": "2026-04-14T00:51:32Z",
-              "homepage": "https://rea.tools",
-              "url": "https://github.com/morluto/rea",
-              "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/morluto/rea.git",
-              "license": "MIT"
-            },
-            {
-              "id": "zhayujie-cowagent",
-              "rank": 4,
-              "period": "monthly",
-              "periodKey": "monthly",
-              "categoryKey": "skill-workflow",
-              "categoryLabel": "GitHub 熱門 Skill / Workflow",
-              "categoryShortLabel": "Skill / Workflow",
-              "typeLabel": "Skill / Workflow",
-              "fullName": "zhayujie/CowAgent",
-              "name": "CowAgent",
-              "owner": "zhayujie",
-              "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-              "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
-              "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
-              "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-              "contentZh": [
-                "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-                "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-              ],
-              "discussionZh": [
-                "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "全功能助理型 / 多工具 agent",
-                "用在任務規劃、MCP、技能與知識庫整合 workflow",
-                "想看 agent harness 如何串工具與記憶的人"
-              ],
-              "useCases": [
-                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-              ],
-              "notFor": [
-                "只想直接下載一個現成 App、完全不想調整流程的人。",
-                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-              ],
-              "attentionNotes": [
-                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-              ],
-              "language": "Python",
-              "topics": [
-                "ai",
-                "ai-agent",
-                "ai-agents",
-                "chatgpt-on-wechat",
-                "claude",
-                "claude-code",
-                "codex",
-                "cowagent",
-                "deepseek",
-                "harness",
-                "llm",
-                "mcp",
-                "multi-agent",
-                "openai",
-                "openclaw",
-                "personal-agent",
-                "skills"
-              ],
-              "stars": 47588,
-              "forks": 10406,
-              "watchers": 47588,
-              "openIssues": 43,
-              "likes": 45,
-              "hearts": 2,
-              "reactionTotal": 51,
-              "reactionSamples": [
-                {
-                  "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/718",
-                  "likes": 6,
-                  "hearts": 0,
-                  "comments": 32
-                },
-                {
-                  "title": "tool插件 有关的一切都在这个文档里",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/776",
-                  "likes": 9,
-                  "hearts": 0,
-                  "comments": 53
-                },
-                {
-                  "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
-                  "url": "https://github.com/zhayujie/CowAgent/issues/8",
-                  "likes": 7,
-                  "hearts": 0,
-                  "comments": 49
-                }
-              ],
-              "updatedAt": "2026-10-26T04:19:14Z",
-              "pushedAt": "2026-10-25T02:44:27Z",
-              "createdAt": "2022-08-07T08:33:41Z",
-              "homepage": "https://cowagent.ai",
-              "url": "https://github.com/zhayujie/CowAgent",
-              "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
-              "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-              "license": "MIT"
-            },
-            {
               "id": "alirezarezvani-claude-skills",
-              "rank": 5,
+              "rank": 4,
               "period": "monthly",
               "periodKey": "monthly",
               "categoryKey": "skill-workflow",
@@ -1066,10 +961,10 @@
                 "openclaw-skills",
                 "prompt-engineering"
               ],
-              "stars": 28724,
-              "forks": 3988,
-              "watchers": 28724,
-              "openIssues": 1,
+              "stars": 28789,
+              "forks": 3996,
+              "watchers": 28789,
+              "openIssues": 2,
               "likes": 12,
               "hearts": 2,
               "reactionTotal": 16,
@@ -1096,13 +991,118 @@
                   "comments": 3
                 }
               ],
-              "updatedAt": "2026-10-26T04:08:00Z",
-              "pushedAt": "2026-10-23T11:30:28Z",
+              "updatedAt": "2026-10-27T04:49:04Z",
+              "pushedAt": "2026-10-26T16:54:47Z",
               "createdAt": "2025-10-19T04:04:05Z",
               "homepage": "https://alirezarezvani.medium.com/",
               "url": "https://github.com/alirezarezvani/claude-skills",
               "downloadUrl": "https://github.com/alirezarezvani/claude-skills/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/alirezarezvani/claude-skills.git",
+              "license": "MIT"
+            },
+            {
+              "id": "zhayujie-cowagent",
+              "rank": 5,
+              "period": "monthly",
+              "periodKey": "monthly",
+              "categoryKey": "skill-workflow",
+              "categoryLabel": "GitHub 熱門 Skill / Workflow",
+              "categoryShortLabel": "Skill / Workflow",
+              "typeLabel": "Skill / Workflow",
+              "fullName": "zhayujie/CowAgent",
+              "name": "CowAgent",
+              "owner": "zhayujie",
+              "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+              "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
+              "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
+              "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+              "contentZh": [
+                "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+                "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+                "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+                "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+              ],
+              "discussionZh": [
+                "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "全功能助理型 / 多工具 agent",
+                "用在任務規劃、MCP、技能與知識庫整合 workflow",
+                "想看 agent harness 如何串工具與記憶的人"
+              ],
+              "useCases": [
+                "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+                "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+                "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+              ],
+              "notFor": [
+                "只想直接下載一個現成 App、完全不想調整流程的人。",
+                "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+              ],
+              "attentionNotes": [
+                "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+                "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+                "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+              ],
+              "language": "Python",
+              "topics": [
+                "ai",
+                "ai-agent",
+                "ai-agents",
+                "chatgpt-on-wechat",
+                "claude",
+                "claude-code",
+                "codex",
+                "cowagent",
+                "deepseek",
+                "harness",
+                "llm",
+                "mcp",
+                "multi-agent",
+                "openai",
+                "openclaw",
+                "personal-agent",
+                "skills"
+              ],
+              "stars": 47615,
+              "forks": 10407,
+              "watchers": 47615,
+              "openIssues": 46,
+              "likes": 45,
+              "hearts": 2,
+              "reactionTotal": 51,
+              "reactionSamples": [
+                {
+                  "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/718",
+                  "likes": 6,
+                  "hearts": 0,
+                  "comments": 32
+                },
+                {
+                  "title": "tool插件 有关的一切都在这个文档里",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/776",
+                  "likes": 9,
+                  "hearts": 0,
+                  "comments": 53
+                },
+                {
+                  "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
+                  "url": "https://github.com/zhayujie/CowAgent/issues/8",
+                  "likes": 7,
+                  "hearts": 0,
+                  "comments": 49
+                }
+              ],
+              "updatedAt": "2026-10-27T03:57:55Z",
+              "pushedAt": "2026-10-26T14:03:03Z",
+              "createdAt": "2022-08-07T08:33:41Z",
+              "homepage": "https://cowagent.ai",
+              "url": "https://github.com/zhayujie/CowAgent",
+              "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
+              "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
               "license": "MIT"
             }
           ]
@@ -1119,8 +1119,8 @@
           "key": "weekly",
           "label": "每週 Top 5",
           "days": 7,
-          "sinceDate": "2026-10-19",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-10-19、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-10-20",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-10-20、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1146,8 +1146,8 @@
               ],
               "discussionZh": [
                 "「[Feature Request] Add proper uninstallation/removal command for Claude-Flow」是目前較多人互動的討論之一（👍 22、留言 19）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Error: table sessions has no column named swarm_name」是目前較多人互動的討論之一（👍 16、留言 18）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「📝 A Note on Alpha Software, Expectations, and Open Source Reality」是目前較多人互動的討論之一（❤️ 19、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「📝 A Note on Alpha Software, Expectations, and Open Source Reality」是目前較多人互動的討論之一（❤️ 19、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Error: table sessions has no column named swarm_name」是目前較多人互動的討論之一（👍 16、留言 18）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "多代理協作型 agent",
@@ -1191,10 +1191,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 79323,
-              "forks": 9315,
-              "watchers": 79323,
-              "openIssues": 986,
+              "stars": 79598,
+              "forks": 9347,
+              "watchers": 79598,
+              "openIssues": 981,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1207,22 +1207,22 @@
                   "comments": 19
                 },
                 {
-                  "title": "Error: table sessions has no column named swarm_name",
-                  "url": "https://github.com/ruvnet/ruflo/issues/662",
-                  "likes": 16,
-                  "hearts": 0,
-                  "comments": 18
-                },
-                {
                   "title": "📝 A Note on Alpha Software, Expectations, and Open Source Reality",
                   "url": "https://github.com/ruvnet/ruflo/issues/659",
                   "likes": 0,
                   "hearts": 19,
                   "comments": 5
+                },
+                {
+                  "title": "Error: table sessions has no column named swarm_name",
+                  "url": "https://github.com/ruvnet/ruflo/issues/662",
+                  "likes": 16,
+                  "hearts": 0,
+                  "comments": 18
                 }
               ],
-              "updatedAt": "2026-10-26T05:05:52Z",
-              "pushedAt": "2026-10-26T03:25:17Z",
+              "updatedAt": "2026-10-27T05:21:40Z",
+              "pushedAt": "2026-10-27T05:21:35Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1231,116 +1231,8 @@
               "license": "MIT"
             },
             {
-              "id": "hkuds-nanobot",
-              "rank": 2,
-              "period": "weekly",
-              "periodKey": "weekly",
-              "categoryKey": "ai-open-source",
-              "categoryLabel": "GitHub 熱門 AI 開源工具",
-              "categoryShortLabel": "AI 開源工具",
-              "typeLabel": "AI 開源工具",
-              "fullName": "HKUDS/nanobot",
-              "name": "nanobot",
-              "owner": "HKUDS",
-              "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
-              "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往| |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動| |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構作為架構、貢獻和提供者擴展 |部署到雲端或保持奈米機器人服務 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
-              "contentZh": [
-                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往| |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動| |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構作為架構、貢獻和提供者擴展 |部署到雲端或保持奈米機器人服務 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
-                "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
-                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
-                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
-              ],
-              "discussionZh": [
-                "「说明文档无中文」是目前較多人互動的討論之一（👍 1、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「feat: add context builder plugin system」是目前較多人互動的討論之一（👍 9、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「🎭 Feature Discussion: Should nanobot have its own WebUI?」是目前較多人互動的討論之一（👍 13、❤️ 2、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-              ],
-              "audience": [
-                "需要工具連接的 MCP / tool server agent",
-                "用在內部系統、API 與外部工具串接 workflow",
-                "自動化流程型 agent"
-              ],
-              "useCases": [
-                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
-                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
-                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
-              ],
-              "notFor": [
-                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
-                "完全不想看 README、授權、issues 或基本安裝條件的人。"
-              ],
-              "attentionNotes": [
-                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
-                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
-                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
-              ],
-              "language": "Python",
-              "topics": [
-                "agent-framework",
-                "ai-agent",
-                "ai-agents",
-                "chatbot",
-                "chatops",
-                "discord-bot",
-                "llm-agents",
-                "llms",
-                "local-llm",
-                "mcp",
-                "model-context-protocol",
-                "multi-agent",
-                "openai-compatible",
-                "openclaw",
-                "personal-ai-assistant",
-                "python",
-                "self-hosted",
-                "telegram-bot-ai-assistant",
-                "webui",
-                "workflow-automation"
-              ],
-              "stars": 49353,
-              "forks": 8677,
-              "watchers": 49353,
-              "openIssues": 867,
-              "likes": 70,
-              "hearts": 6,
-              "reactionTotal": 116,
-              "reactionSamples": [
-                {
-                  "title": "说明文档无中文",
-                  "url": "https://github.com/HKUDS/nanobot/issues/1617",
-                  "likes": 1,
-                  "hearts": 0,
-                  "comments": 10
-                },
-                {
-                  "title": "feat: add context builder plugin system",
-                  "url": "https://github.com/HKUDS/nanobot/pull/445",
-                  "likes": 9,
-                  "hearts": 0,
-                  "comments": 1
-                },
-                {
-                  "title": "🎭 Feature Discussion: Should nanobot have its own WebUI?",
-                  "url": "https://github.com/HKUDS/nanobot/issues/2949",
-                  "likes": 13,
-                  "hearts": 2,
-                  "comments": 10
-                }
-              ],
-              "updatedAt": "2026-10-26T05:06:48Z",
-              "pushedAt": "2026-10-26T05:07:28Z",
-              "createdAt": "2026-02-01T07:16:15Z",
-              "homepage": "https://nanobot.wiki",
-              "url": "https://github.com/HKUDS/nanobot",
-              "downloadUrl": "https://github.com/HKUDS/nanobot/archive/refs/heads/main.zip",
-              "cloneUrl": "https://github.com/HKUDS/nanobot.git",
-              "license": "MIT"
-            },
-            {
               "id": "deepset-ai-haystack",
-              "rank": 3,
+              "rank": 2,
               "period": "weekly",
               "periodKey": "weekly",
               "categoryKey": "ai-open-source",
@@ -1353,9 +1245,9 @@
               "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
               "descriptionZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
               "oneLineZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
               "contentZh": [
-                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
                 "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1407,10 +1299,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26843,
-              "forks": 3342,
-              "watchers": 26843,
-              "openIssues": 184,
+              "stars": 26852,
+              "forks": 3347,
+              "watchers": 26852,
+              "openIssues": 188,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1437,14 +1329,122 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-10-26T03:19:19Z",
-              "pushedAt": "2026-10-24T10:46:55Z",
+              "updatedAt": "2026-10-27T03:51:14Z",
+              "pushedAt": "2026-10-26T17:22:29Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
               "downloadUrl": "https://github.com/deepset-ai/haystack/archive/refs/heads/main.zip",
               "cloneUrl": "https://github.com/deepset-ai/haystack.git",
               "license": "Apache-2.0"
+            },
+            {
+              "id": "hkuds-nanobot",
+              "rank": 3,
+              "period": "weekly",
+              "periodKey": "weekly",
+              "categoryKey": "ai-open-source",
+              "categoryLabel": "GitHub 熱門 AI 開源工具",
+              "categoryShortLabel": "AI 開源工具",
+              "typeLabel": "AI 開源工具",
+              "fullName": "HKUDS/nanobot",
+              "name": "nanobot",
+              "owner": "HKUDS",
+              "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+              "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
+              "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
+              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+              "contentZh": [
+                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+                "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
+                "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
+                "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
+              ],
+              "discussionZh": [
+                "「说明文档无中文」是目前較多人互動的討論之一（👍 1、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「feat: add context builder plugin system」是目前較多人互動的討論之一（👍 9、留言 1）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「🎭 Feature Discussion: Should nanobot have its own WebUI?」是目前較多人互動的討論之一（👍 13、❤️ 2、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+              ],
+              "audience": [
+                "需要工具連接的 MCP / tool server agent",
+                "用在內部系統、API 與外部工具串接 workflow",
+                "自動化流程型 agent"
+              ],
+              "useCases": [
+                "快速了解 GitHub 上工程師正在關注哪些 AI 工具與開源框架。",
+                "作為技術選型的第一輪觀察清單，再決定是否深入測試或交給 agent 研究。",
+                "補充 Local Agent 之外的開源趨勢，例如 SDK、MCP、AI coding 與 automation toolkit。"
+              ],
+              "notFor": [
+                "只想找可以立刻本機安裝的 Local Agent 使用者；這類請看 Local Agent 熱門分頁。",
+                "完全不想看 README、授權、issues 或基本安裝條件的人。"
+              ],
+              "attentionNotes": [
+                "先看 license、最近更新、open issues 與安全邊界，再決定是否下載或交給 agent 測試。",
+                "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
+                "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
+              ],
+              "language": "Python",
+              "topics": [
+                "agent-framework",
+                "ai-agent",
+                "ai-agents",
+                "chatbot",
+                "chatops",
+                "discord-bot",
+                "llm-agents",
+                "llms",
+                "local-llm",
+                "mcp",
+                "model-context-protocol",
+                "multi-agent",
+                "openai-compatible",
+                "openclaw",
+                "personal-ai-assistant",
+                "python",
+                "self-hosted",
+                "telegram-bot-ai-assistant",
+                "webui",
+                "workflow-automation"
+              ],
+              "stars": 49441,
+              "forks": 8684,
+              "watchers": 49441,
+              "openIssues": 873,
+              "likes": 70,
+              "hearts": 6,
+              "reactionTotal": 116,
+              "reactionSamples": [
+                {
+                  "title": "说明文档无中文",
+                  "url": "https://github.com/HKUDS/nanobot/issues/1617",
+                  "likes": 1,
+                  "hearts": 0,
+                  "comments": 10
+                },
+                {
+                  "title": "feat: add context builder plugin system",
+                  "url": "https://github.com/HKUDS/nanobot/pull/445",
+                  "likes": 9,
+                  "hearts": 0,
+                  "comments": 1
+                },
+                {
+                  "title": "🎭 Feature Discussion: Should nanobot have its own WebUI?",
+                  "url": "https://github.com/HKUDS/nanobot/issues/2949",
+                  "likes": 13,
+                  "hearts": 2,
+                  "comments": 10
+                }
+              ],
+              "updatedAt": "2026-10-27T05:22:41Z",
+              "pushedAt": "2026-10-27T05:22:42Z",
+              "createdAt": "2026-02-01T07:16:15Z",
+              "homepage": "https://nanobot.wiki",
+              "url": "https://github.com/HKUDS/nanobot",
+              "downloadUrl": "https://github.com/HKUDS/nanobot/archive/refs/heads/main.zip",
+              "cloneUrl": "https://github.com/HKUDS/nanobot.git",
+              "license": "MIT"
             },
             {
               "id": "headroomlabs-ai-headroom",
@@ -1515,10 +1515,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 77834,
-              "forks": 6047,
-              "watchers": 77834,
-              "openIssues": 550,
+              "stars": 77954,
+              "forks": 6062,
+              "watchers": 77954,
+              "openIssues": 563,
               "likes": 409,
               "hearts": 26,
               "reactionTotal": 469,
@@ -1545,8 +1545,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-10-26T05:03:01Z",
-              "pushedAt": "2026-10-24T19:15:37Z",
+              "updatedAt": "2026-10-27T05:20:17Z",
+              "pushedAt": "2026-10-26T23:43:20Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -1569,9 +1569,9 @@
               "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
               "descriptionZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
               "oneLineZh": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any...",
-              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
+              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。請參閱將 Strands 與 AI 編碼agent結合使用以了解安裝和驗證步驟。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
               "contentZh": [
-                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
+                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。請參閱將 Strands 與 AI 編碼agent結合使用以了解安裝和驗證步驟。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
                 "從 topics 來看，它和 agent-framework、agentic、agentic-ai、agents、ai、ai-agents、anthropic、autonomous-agents 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1600,7 +1600,7 @@
                 "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
                 "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
               ],
-              "language": "Python",
+              "language": "TypeScript",
               "topics": [
                 "agent-framework",
                 "agentic",
@@ -1623,10 +1623,10 @@
                 "strands-agents",
                 "typescript"
               ],
-              "stars": 8950,
-              "forks": 1431,
-              "watchers": 8950,
-              "openIssues": 1027,
+              "stars": 8960,
+              "forks": 1438,
+              "watchers": 8960,
+              "openIssues": 1046,
               "likes": 400,
               "hearts": 1,
               "reactionTotal": 428,
@@ -1653,8 +1653,8 @@
                   "comments": 16
                 }
               ],
-              "updatedAt": "2026-10-26T02:44:37Z",
-              "pushedAt": "2026-10-25T01:50:50Z",
+              "updatedAt": "2026-10-27T02:01:59Z",
+              "pushedAt": "2026-10-26T23:03:30Z",
               "createdAt": "2025-05-14T19:59:51Z",
               "homepage": "http://strandsagents.com/",
               "url": "https://github.com/strands-agents/harness-sdk",
@@ -1668,8 +1668,8 @@
           "key": "monthly",
           "label": "每月 Top 5",
           "days": 30,
-          "sinceDate": "2026-09-26",
-          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-26、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+          "sinceDate": "2026-09-27",
+          "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 AI 開源工具 相關、pushed >= 2026-09-27、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
           "repos": [
             {
               "id": "ruvnet-ruflo",
@@ -1695,8 +1695,8 @@
               ],
               "discussionZh": [
                 "「[Feature Request] Add proper uninstallation/removal command for Claude-Flow」是目前較多人互動的討論之一（👍 22、留言 19）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「Error: table sessions has no column named swarm_name」是目前較多人互動的討論之一（👍 16、留言 18）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-                "「📝 A Note on Alpha Software, Expectations, and Open Source Reality」是目前較多人互動的討論之一（❤️ 19、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+                "「📝 A Note on Alpha Software, Expectations, and Open Source Reality」是目前較多人互動的討論之一（❤️ 19、留言 5）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+                "「Error: table sessions has no column named swarm_name」是目前較多人互動的討論之一（👍 16、留言 18）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
               ],
               "audience": [
                 "多代理協作型 agent",
@@ -1740,10 +1740,10 @@
                 "swarm-intelligence",
                 "typescript"
               ],
-              "stars": 79323,
-              "forks": 9315,
-              "watchers": 79323,
-              "openIssues": 986,
+              "stars": 79598,
+              "forks": 9347,
+              "watchers": 79598,
+              "openIssues": 981,
               "likes": 102,
               "hearts": 19,
               "reactionTotal": 134,
@@ -1756,22 +1756,22 @@
                   "comments": 19
                 },
                 {
-                  "title": "Error: table sessions has no column named swarm_name",
-                  "url": "https://github.com/ruvnet/ruflo/issues/662",
-                  "likes": 16,
-                  "hearts": 0,
-                  "comments": 18
-                },
-                {
                   "title": "📝 A Note on Alpha Software, Expectations, and Open Source Reality",
                   "url": "https://github.com/ruvnet/ruflo/issues/659",
                   "likes": 0,
                   "hearts": 19,
                   "comments": 5
+                },
+                {
+                  "title": "Error: table sessions has no column named swarm_name",
+                  "url": "https://github.com/ruvnet/ruflo/issues/662",
+                  "likes": 16,
+                  "hearts": 0,
+                  "comments": 18
                 }
               ],
-              "updatedAt": "2026-10-26T05:05:52Z",
-              "pushedAt": "2026-10-26T03:25:17Z",
+              "updatedAt": "2026-10-27T05:21:40Z",
+              "pushedAt": "2026-10-27T05:21:35Z",
               "createdAt": "2025-06-02T21:24:20Z",
               "homepage": "https://Cognitum.One",
               "url": "https://github.com/ruvnet/ruflo",
@@ -1794,9 +1794,9 @@
               "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
               "descriptionZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
               "oneLineZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。",
-              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+              "introZh": "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
               "contentZh": [
-                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------ 是一個開源 開源程式 可供生產 |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
+                "開源人工智慧編排框架，用於建立上下文工程、生產就緒的 LLM 應用程式。透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。專為可擴展代理、RAG、多模式應用程式、語義搜尋和對話系統而建置。 || |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |透過對檢索、路由、記憶體和產生的明確控制來設計模組化管道和agent工作流程。建立可擴展的 RAG 系統、多模式應用程式、語義搜尋、問答和自主代理，所有這些都在透明的架構中，讓您可以放心地進行實驗、深度自訂和部署。目錄 安裝文件功能 Haystack Enterprise：支援與平台遙測 🖖 社群使用 Haystack Inst 為 Haystack 組織做出貢獻...",
                 "從 topics 來看，它和 agent-framework、agentic-ai、agentic-rag、agents、ai、ai-agents、context-engineering、framework 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1848,10 +1848,10 @@
                 "retrieval-augmented-generation",
                 "semantic-search"
               ],
-              "stars": 26843,
-              "forks": 3342,
-              "watchers": 26843,
-              "openIssues": 184,
+              "stars": 26852,
+              "forks": 3347,
+              "watchers": 26852,
+              "openIssues": 188,
               "likes": 47,
               "hearts": 4,
               "reactionTotal": 67,
@@ -1878,8 +1878,8 @@
                   "comments": 9
                 }
               ],
-              "updatedAt": "2026-10-26T03:19:19Z",
-              "pushedAt": "2026-10-24T10:46:55Z",
+              "updatedAt": "2026-10-27T03:51:14Z",
+              "pushedAt": "2026-10-26T17:22:29Z",
               "createdAt": "2019-11-14T09:05:28Z",
               "homepage": "https://haystack.deepset.ai",
               "url": "https://github.com/deepset-ai/haystack",
@@ -1902,9 +1902,9 @@
               "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
               "descriptionZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
               "oneLineZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式",
-              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往| |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動| |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構作為架構、貢獻和提供者擴展 |部署到雲端或保持奈米機器人服務 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+              "introZh": "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
               "contentZh": [
-                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往| |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動| |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構作為架構、貢獻和提供者擴展 |部署到雲端或保持奈米機器人服務 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
+                "Python 中的超輕量級、開源、自架個人 AI 代理框架，具有 WebUI、工具、記憶體、MCP、多代理工作流程、自動化和聊天應用程式 英文 | 簡體中文 | 繁體中文 |西班牙文 |法 |印尼語 | 日本文 | 한국어 | Русский | 俄羅斯Tiếng Việt Discord · X · 微信/飛天書 nanobot 🐈 nanobot 是一個用程式託管的原始程式碼。在瀏覽器、終端機或聊天應用程式中使用它來處理文件、記住首選項和安排任務。連接受支援的模型提供者或本地模型伺服器以提供 AI。從這裡開始 |你想... |前往 | |---|---| |在沒有終端/配置背景的情況下安裝 Nanobot |無需技術背景即可開始 | |快速安裝並獲得您的第一條回复 |安裝和快速啟動 | |打開捆綁的瀏覽器 UI |網頁界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | |連接 Telegram、Discord、微信、Slack、打開捆綁的瀏覽器 UI |Line界面 | | |配置提供者、後備模型、Langfuse、MCP、Web 工具或安全性 |文檔和配置 | |開發瀏覽器 UI |安裝當前源代碼，然後進行 WebUI 開發和貢獻 | |從 Python 或 HTTP 集成 | Python SDK 或代理 API | |理解或擴展內部結構 | nanobot可以：在瀏覽器WebUI或終端機中執行連接Telegram、Discord、Slack、微信、電子郵件、Mattermost、Linear等管道讀取PDF、Word（.docx）、Excel（...",
                 "從 topics 來看，它和 agent-framework、ai-agent、ai-agents、chatbot、chatops、discord-bot、llm-agents、llms 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -1956,10 +1956,10 @@
                 "webui",
                 "workflow-automation"
               ],
-              "stars": 49353,
-              "forks": 8677,
-              "watchers": 49353,
-              "openIssues": 867,
+              "stars": 49441,
+              "forks": 8684,
+              "watchers": 49441,
+              "openIssues": 873,
               "likes": 70,
               "hearts": 6,
               "reactionTotal": 116,
@@ -1986,8 +1986,8 @@
                   "comments": 10
                 }
               ],
-              "updatedAt": "2026-10-26T05:06:48Z",
-              "pushedAt": "2026-10-26T05:07:28Z",
+              "updatedAt": "2026-10-27T05:22:41Z",
+              "pushedAt": "2026-10-27T05:22:42Z",
               "createdAt": "2026-02-01T07:16:15Z",
               "homepage": "https://nanobot.wiki",
               "url": "https://github.com/HKUDS/nanobot",
@@ -2064,10 +2064,10 @@
                 "tokens",
                 "typescript"
               ],
-              "stars": 77835,
-              "forks": 6047,
-              "watchers": 77835,
-              "openIssues": 550,
+              "stars": 77954,
+              "forks": 6062,
+              "watchers": 77954,
+              "openIssues": 566,
               "likes": 409,
               "hearts": 26,
               "reactionTotal": 469,
@@ -2094,8 +2094,8 @@
                   "comments": 4
                 }
               ],
-              "updatedAt": "2026-10-26T05:10:51Z",
-              "pushedAt": "2026-10-24T19:15:37Z",
+              "updatedAt": "2026-10-27T05:20:17Z",
+              "pushedAt": "2026-10-26T23:43:20Z",
               "createdAt": "2026-01-07T19:58:51Z",
               "homepage": "https://docs.headroomlabs.ai/docs",
               "url": "https://github.com/headroomlabs-ai/headroom",
@@ -2118,9 +2118,9 @@
               "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
               "descriptionZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
               "oneLineZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。",
-              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
+              "introZh": "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。請參閱將 Strands 與 AI 編碼agent結合使用以了解安裝和驗證步驟。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
               "contentZh": [
-                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。如需安裝和驗證步驟，請參閱將 Strands 與 AI 編碼agent結合使用。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
+                "建立代理線束並對其進行端對端控制。用於 Python 和 TypeScript 中的生產 AI agent的開源 SDK - 任何模型、任何雲端。 Strands Agents 一種模型驅動的方法，只需幾行程式碼即可建立 AI agent。文件 ◆ 範例 ◆ MCP 伺服器 ◆ Discord Strands Agents 是一個開源 SDK，用於在 Python 和 TypeScript 中建置和執行 AI agent。當您要編寫自己的代理循環時，請選擇 Strands：它在沒有託管控制平面的進程中運行，並且涵蓋了手動循環發展到的作業。在一個 SDK 中，您可以獲得生命週期控制（回合限制、代幣預算、取消、停止原因）、工具和結構化輸出、MCP、多代理模式、記憶體和會話、模型可移植性、串流、護欄、追蹤和評估。使用編碼劑？安裝 Claude Code、Codex 或 Cursor 的 Strands 插件。它添加了框架選擇、鷹架、工具創作、MCP 伺服器連接、Web 框架指南和 LangGraph 遷移指南。請參閱將 Strands 與 AI 編碼agent結合使用以了解安裝和驗證步驟。此 monorepo 包含 Strands 工具、Python 和 TypeScript SDK、文檔站點和支援包： |目錄 |描述 |------------|-------------| | Strands CLI：原型並與來自該領域的線束代理聊天...",
                 "從 topics 來看，它和 agent-framework、agentic、agentic-ai、agents、ai、ai-agents、anthropic、autonomous-agents 有關。閱讀時可以先判斷它是 framework、SDK、MCP server、AI coding 工具、RAG 工具還是 automation toolkit。",
                 "這類 repo 適合用來看 GitHub 上的 AI 工具趨勢。你不一定要立刻安裝，而是先理解它解決什麼痛點、需要哪些前置條件，以及能不能放進自己的 AI Agent 工作流。",
                 "導入前建議檢查授權、近期更新、open issues、安裝方式與資料存放位置。AI 工具通常會接觸程式碼、指令、資料或 API key，不能只看星數決定是否採用。"
@@ -2149,7 +2149,7 @@
                 "這裡收錄的是 GitHub 開源趨勢，不代表每個專案都適合直接導入正式工作。",
                 "如果專案主打本機安裝或 self-host Agent，會盡量留到 Local Agent 熱門分頁處理。"
               ],
-              "language": "Python",
+              "language": "TypeScript",
               "topics": [
                 "agent-framework",
                 "agentic",
@@ -2172,10 +2172,10 @@
                 "strands-agents",
                 "typescript"
               ],
-              "stars": 8950,
-              "forks": 1431,
-              "watchers": 8950,
-              "openIssues": 1027,
+              "stars": 8960,
+              "forks": 1438,
+              "watchers": 8960,
+              "openIssues": 1046,
               "likes": 400,
               "hearts": 1,
               "reactionTotal": 428,
@@ -2202,8 +2202,8 @@
                   "comments": 16
                 }
               ],
-              "updatedAt": "2026-10-26T02:44:37Z",
-              "pushedAt": "2026-10-25T01:50:50Z",
+              "updatedAt": "2026-10-27T02:01:59Z",
+              "pushedAt": "2026-10-26T23:03:30Z",
               "createdAt": "2025-05-14T19:59:51Z",
               "homepage": "http://strandsagents.com/",
               "url": "https://github.com/strands-agents/harness-sdk",
@@ -2221,8 +2221,8 @@
       "key": "weekly",
       "label": "每週 Top 5",
       "days": 7,
-      "sinceDate": "2026-10-19",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-19、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-10-20",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-10-20、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "paperclipai-paperclip",
@@ -2293,13 +2293,13 @@
             "project-management",
             "workflow-automation"
           ],
-          "stars": 107364,
-          "forks": 17836,
-          "watchers": 107364,
-          "openIssues": 6596,
+          "stars": 107737,
+          "forks": 17869,
+          "watchers": 107737,
+          "openIssues": 6677,
           "likes": 271,
           "hearts": 11,
-          "reactionTotal": 310,
+          "reactionTotal": 311,
           "reactionSamples": [
             {
               "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -2323,8 +2323,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-10-26T05:02:09Z",
-          "pushedAt": "2026-10-26T04:50:50Z",
+          "updatedAt": "2026-10-27T05:15:32Z",
+          "pushedAt": "2026-10-27T05:22:24Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "homepage": "https://paperclip.ing",
           "url": "https://github.com/paperclipai/paperclip",
@@ -2333,8 +2333,116 @@
           "license": "MIT"
         },
         {
-          "id": "thedotmack-claude-mem",
+          "id": "morluto-rea",
           "rank": 2,
+          "period": "weekly",
+          "periodKey": "weekly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "morluto/rea",
+          "name": "rea",
+          "owner": "morluto",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+          "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+          "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+          "contentZh": [
+            "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 12、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "需要記憶 / 上下文管理的 coding agent",
+            "用在長任務、跨對話延續與知識取回 workflow",
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "TypeScript",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "stars": 392829,
+          "forks": 98453,
+          "watchers": 392829,
+          "openIssues": 1211,
+          "likes": 60,
+          "hearts": 0,
+          "reactionTotal": 61,
+          "reactionSamples": [
+            {
+              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+              "url": "https://github.com/morluto/rea/issues/1416",
+              "likes": 22,
+              "hearts": 0,
+              "comments": 2
+            },
+            {
+              "title": "Feature: Add support for Binary Ninja as an analysis backend",
+              "url": "https://github.com/morluto/rea/issues/1551",
+              "likes": 12,
+              "hearts": 0,
+              "comments": 10
+            },
+            {
+              "title": "[Feature] Java Reverse Engineering",
+              "url": "https://github.com/morluto/rea/issues/1558",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 15
+            }
+          ],
+          "updatedAt": "2026-10-27T05:22:05Z",
+          "pushedAt": "2026-10-27T05:21:47Z",
+          "createdAt": "2026-04-14T00:51:32Z",
+          "homepage": "https://rea.tools",
+          "url": "https://github.com/morluto/rea",
+          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/morluto/rea.git",
+          "license": "MIT"
+        },
+        {
+          "id": "thedotmack-claude-mem",
+          "rank": 3,
           "period": "weekly",
           "periodKey": "weekly",
           "categoryKey": "skill-workflow",
@@ -2401,10 +2509,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 103170,
-          "forks": 9110,
-          "watchers": 103170,
-          "openIssues": 101,
+          "stars": 103493,
+          "forks": 9134,
+          "watchers": 103493,
+          "openIssues": 117,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2431,8 +2539,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-10-26T05:06:35Z",
-          "pushedAt": "2026-10-25T21:00:05Z",
+          "updatedAt": "2026-10-27T05:21:42Z",
+          "pushedAt": "2026-10-26T23:57:05Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2441,221 +2549,8 @@
           "license": "Apache-2.0"
         },
         {
-          "id": "morluto-rea",
-          "rank": 3,
-          "period": "weekly",
-          "periodKey": "weekly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "morluto/rea",
-          "name": "rea",
-          "owner": "morluto",
-          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-          "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-          "contentZh": [
-            "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 11、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "需要記憶 / 上下文管理的 coding agent",
-            "用在長任務、跨對話延續與知識取回 workflow",
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "TypeScript",
-          "topics": [
-            "agent-skills",
-            "ai-agents",
-            "binary-analysis",
-            "claude-code",
-            "cli",
-            "codex",
-            "cordis",
-            "decompiler",
-            "developer-tools",
-            "dsh",
-            "dsh-plugin",
-            "ghidra",
-            "hopper",
-            "llm",
-            "mcp",
-            "model-context-protocol",
-            "rea",
-            "reverse-engineering",
-            "static-analysis",
-            "touhou"
-          ],
-          "stars": 385859,
-          "forks": 96639,
-          "watchers": 385859,
-          "openIssues": 1097,
-          "likes": 59,
-          "hearts": 0,
-          "reactionTotal": 60,
-          "reactionSamples": [
-            {
-              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-              "url": "https://github.com/morluto/rea/issues/1416",
-              "likes": 22,
-              "hearts": 0,
-              "comments": 2
-            },
-            {
-              "title": "Feature: Add support for Binary Ninja as an analysis backend",
-              "url": "https://github.com/morluto/rea/issues/1551",
-              "likes": 11,
-              "hearts": 0,
-              "comments": 9
-            },
-            {
-              "title": "[Feature] Java Reverse Engineering",
-              "url": "https://github.com/morluto/rea/issues/1558",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 15
-            }
-          ],
-          "updatedAt": "2026-10-26T05:06:30Z",
-          "pushedAt": "2026-10-25T19:21:28Z",
-          "createdAt": "2026-04-14T00:51:32Z",
-          "homepage": "https://rea.tools",
-          "url": "https://github.com/morluto/rea",
-          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/morluto/rea.git",
-          "license": "MIT"
-        },
-        {
-          "id": "zhayujie-cowagent",
-          "rank": 4,
-          "period": "weekly",
-          "periodKey": "weekly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "zhayujie/CowAgent",
-          "name": "CowAgent",
-          "owner": "zhayujie",
-          "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-          "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
-          "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
-          "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-          "contentZh": [
-            "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-            "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "全功能助理型 / 多工具 agent",
-            "用在任務規劃、MCP、技能與知識庫整合 workflow",
-            "想看 agent harness 如何串工具與記憶的人"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "Python",
-          "topics": [
-            "ai",
-            "ai-agent",
-            "ai-agents",
-            "chatgpt-on-wechat",
-            "claude",
-            "claude-code",
-            "codex",
-            "cowagent",
-            "deepseek",
-            "harness",
-            "llm",
-            "mcp",
-            "multi-agent",
-            "openai",
-            "openclaw",
-            "personal-agent",
-            "skills"
-          ],
-          "stars": 47588,
-          "forks": 10406,
-          "watchers": 47588,
-          "openIssues": 43,
-          "likes": 45,
-          "hearts": 2,
-          "reactionTotal": 51,
-          "reactionSamples": [
-            {
-              "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
-              "url": "https://github.com/zhayujie/CowAgent/issues/718",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 32
-            },
-            {
-              "title": "tool插件 有关的一切都在这个文档里",
-              "url": "https://github.com/zhayujie/CowAgent/issues/776",
-              "likes": 9,
-              "hearts": 0,
-              "comments": 53
-            },
-            {
-              "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
-              "url": "https://github.com/zhayujie/CowAgent/issues/8",
-              "likes": 7,
-              "hearts": 0,
-              "comments": 49
-            }
-          ],
-          "updatedAt": "2026-10-26T04:19:14Z",
-          "pushedAt": "2026-10-25T02:44:27Z",
-          "createdAt": "2022-08-07T08:33:41Z",
-          "homepage": "https://cowagent.ai",
-          "url": "https://github.com/zhayujie/CowAgent",
-          "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
-          "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-          "license": "MIT"
-        },
-        {
           "id": "alirezarezvani-claude-skills",
-          "rank": 5,
+          "rank": 4,
           "period": "weekly",
           "periodKey": "weekly",
           "categoryKey": "skill-workflow",
@@ -2722,10 +2617,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 28724,
-          "forks": 3988,
-          "watchers": 28724,
-          "openIssues": 1,
+          "stars": 28789,
+          "forks": 3996,
+          "watchers": 28789,
+          "openIssues": 2,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -2752,13 +2647,118 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-10-26T04:08:00Z",
-          "pushedAt": "2026-10-23T11:30:28Z",
+          "updatedAt": "2026-10-27T04:49:04Z",
+          "pushedAt": "2026-10-26T16:54:47Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
           "url": "https://github.com/alirezarezvani/claude-skills",
           "downloadUrl": "https://github.com/alirezarezvani/claude-skills/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/alirezarezvani/claude-skills.git",
+          "license": "MIT"
+        },
+        {
+          "id": "zhayujie-cowagent",
+          "rank": 5,
+          "period": "weekly",
+          "periodKey": "weekly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "zhayujie/CowAgent",
+          "name": "CowAgent",
+          "owner": "zhayujie",
+          "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+          "descriptionZh": "开源个人人工智能助理和代理线束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多渠道。轻量级、可扩展、单行安装。",
+          "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
+          "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+          "contentZh": [
+            "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+            "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "全功能助理型 / 多工具 agent",
+            "用在任務規劃、MCP、技能與知識庫整合 workflow",
+            "想看 agent harness 如何串工具與記憶的人"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "Python",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "chatgpt-on-wechat",
+            "claude",
+            "claude-code",
+            "codex",
+            "cowagent",
+            "deepseek",
+            "harness",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "openai",
+            "openclaw",
+            "personal-agent",
+            "skills"
+          ],
+          "stars": 47615,
+          "forks": 10407,
+          "watchers": 47615,
+          "openIssues": 46,
+          "likes": 45,
+          "hearts": 2,
+          "reactionTotal": 51,
+          "reactionSamples": [
+            {
+              "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
+              "url": "https://github.com/zhayujie/CowAgent/issues/718",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 32
+            },
+            {
+              "title": "tool插件 有关的一切都在这个文档里",
+              "url": "https://github.com/zhayujie/CowAgent/issues/776",
+              "likes": 9,
+              "hearts": 0,
+              "comments": 53
+            },
+            {
+              "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
+              "url": "https://github.com/zhayujie/CowAgent/issues/8",
+              "likes": 7,
+              "hearts": 0,
+              "comments": 49
+            }
+          ],
+          "updatedAt": "2026-10-27T03:57:55Z",
+          "pushedAt": "2026-10-26T14:03:03Z",
+          "createdAt": "2022-08-07T08:33:41Z",
+          "homepage": "https://cowagent.ai",
+          "url": "https://github.com/zhayujie/CowAgent",
+          "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
+          "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
           "license": "MIT"
         }
       ]
@@ -2767,8 +2767,8 @@
       "key": "monthly",
       "label": "每月 Top 5",
       "days": 30,
-      "sinceDate": "2026-09-26",
-      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-26、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
+      "sinceDate": "2026-09-27",
+      "rankingMethod": "GitHub Search API；條件為 GitHub 熱門 Skill / Workflow 相關、pushed >= 2026-09-27、非 fork、非 archived；依 stars、更新時間、forks、主題關聯度與人工品質檢查綜合排序。",
       "repos": [
         {
           "id": "paperclipai-paperclip",
@@ -2839,13 +2839,13 @@
             "project-management",
             "workflow-automation"
           ],
-          "stars": 107364,
-          "forks": 17836,
-          "watchers": 107364,
-          "openIssues": 6597,
+          "stars": 107739,
+          "forks": 17869,
+          "watchers": 107739,
+          "openIssues": 6677,
           "likes": 271,
           "hearts": 11,
-          "reactionTotal": 310,
+          "reactionTotal": 311,
           "reactionSamples": [
             {
               "title": "Feature Request: Support for Local LLMs via Ollama",
@@ -2869,8 +2869,8 @@
               "comments": 1
             }
           ],
-          "updatedAt": "2026-10-26T05:02:09Z",
-          "pushedAt": "2026-10-26T05:08:48Z",
+          "updatedAt": "2026-10-27T05:24:41Z",
+          "pushedAt": "2026-10-27T05:22:24Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "homepage": "https://paperclip.ing",
           "url": "https://github.com/paperclipai/paperclip",
@@ -2879,8 +2879,116 @@
           "license": "MIT"
         },
         {
-          "id": "thedotmack-claude-mem",
+          "id": "morluto-rea",
           "rank": 2,
+          "period": "monthly",
+          "periodKey": "monthly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "morluto/rea",
+          "name": "rea",
+          "owner": "morluto",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+          "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
+          "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+          "contentZh": [
+            "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：逆向工程任何東西 One MCP，用於跨二進位檔案、應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括......背後的證據和局限性",
+            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 12、留言 10）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "需要記憶 / 上下文管理的 coding agent",
+            "用在長任務、跨對話延續與知識取回 workflow",
+            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "TypeScript",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "binary-analysis",
+            "claude-code",
+            "cli",
+            "codex",
+            "cordis",
+            "decompiler",
+            "developer-tools",
+            "dsh",
+            "dsh-plugin",
+            "ghidra",
+            "hopper",
+            "llm",
+            "mcp",
+            "model-context-protocol",
+            "rea",
+            "reverse-engineering",
+            "static-analysis",
+            "touhou"
+          ],
+          "stars": 392833,
+          "forks": 98453,
+          "watchers": 392833,
+          "openIssues": 1211,
+          "likes": 60,
+          "hearts": 0,
+          "reactionTotal": 61,
+          "reactionSamples": [
+            {
+              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
+              "url": "https://github.com/morluto/rea/issues/1416",
+              "likes": 22,
+              "hearts": 0,
+              "comments": 2
+            },
+            {
+              "title": "Feature: Add support for Binary Ninja as an analysis backend",
+              "url": "https://github.com/morluto/rea/issues/1551",
+              "likes": 12,
+              "hearts": 0,
+              "comments": 10
+            },
+            {
+              "title": "[Feature] Java Reverse Engineering",
+              "url": "https://github.com/morluto/rea/issues/1558",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 15
+            }
+          ],
+          "updatedAt": "2026-10-27T05:23:54Z",
+          "pushedAt": "2026-10-27T05:23:14Z",
+          "createdAt": "2026-04-14T00:51:32Z",
+          "homepage": "https://rea.tools",
+          "url": "https://github.com/morluto/rea",
+          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
+          "cloneUrl": "https://github.com/morluto/rea.git",
+          "license": "MIT"
+        },
+        {
+          "id": "thedotmack-claude-mem",
+          "rank": 3,
           "period": "monthly",
           "periodKey": "monthly",
           "categoryKey": "skill-workflow",
@@ -2947,10 +3055,10 @@
             "sqlite",
             "supermemory"
           ],
-          "stars": 103170,
-          "forks": 9110,
-          "watchers": 103170,
-          "openIssues": 101,
+          "stars": 103493,
+          "forks": 9134,
+          "watchers": 103493,
+          "openIssues": 117,
           "likes": 75,
           "hearts": 42,
           "reactionTotal": 124,
@@ -2977,8 +3085,8 @@
               "comments": 2
             }
           ],
-          "updatedAt": "2026-10-26T05:06:35Z",
-          "pushedAt": "2026-10-25T21:00:05Z",
+          "updatedAt": "2026-10-27T05:21:42Z",
+          "pushedAt": "2026-10-26T23:57:05Z",
           "createdAt": "2025-08-31T20:50:03Z",
           "homepage": "https://claude-mem.ai",
           "url": "https://github.com/thedotmack/claude-mem",
@@ -2987,221 +3095,8 @@
           "license": "Apache-2.0"
         },
         {
-          "id": "morluto-rea",
-          "rank": 3,
-          "period": "monthly",
-          "periodKey": "monthly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "morluto/rea",
-          "name": "rea",
-          "owner": "morluto",
-          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-          "descriptionZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "oneLineZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。",
-          "introZh": "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-          "contentZh": [
-            "使用agent對任何內容進行逆向工程，從應用程式行為到本機二進位檔案。 英文 · 簡體中文 · 繁體中文 · 日本語 · 한국어 · 土耳其語 · Русский · Tiếng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с ng Việt · ไทย · 德語 с巴尼亞語 ·印尼語、義大利語、Ελληνικά、മലയാളം、羅馬烏爾都語、Română REA：對任何內容進行逆向工程 One MCP，用於跨二進位檔案、逆向應用程式和運行時行為進行逆向工程。查看您喜歡的功能。了解其工作原理，直至二進位層級。網站 · 指南 · 展示 快速入門 · REA 工作原理 · 您可以分析什麼 · 展示 · 建立 RL 環境 · 常見問題 · 文件 npx rea-agents 設定 [!重要] 從 morluto/rea、rea.tools 或 rea-agents npm 套件取得 REA。按照這些官方來源的安裝和發布連結進行操作。類似的儲存庫名稱或複製的自述文件並不能證明下載是官方的。加入逆向工程社群 Discord · 問與答 · 展示與講述 --- 在應用程式中看到您想要在自己的產品中使用的功能嗎？請您的代理人透過 REA 進行調查。它可以在沒有原始程式碼的情況下檢查應用程序，解釋該功能如何運作，顯示證據，並為您的專案建立版本。 REA 將您的agent連接到用於檢查本機二進位檔案、JavaScript 和 Electron 應用程式、.NET 組件和網站的工具。您也可以從終端使用相同的工具。分析在本地進行，結果包括背後的證據和局限性...",
-            "從 topics 來看，它和 agent-skills、ai-agents、binary-analysis、claude-code、cli、codex、cordis、decompiler 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider」是目前較多人互動的討論之一（👍 22、留言 2）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Feature: Add support for Binary Ninja as an analysis backend」是目前較多人互動的討論之一（👍 11、留言 9）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「[Feature] Java Reverse Engineering」是目前較多人互動的討論之一（👍 6、留言 15）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "需要記憶 / 上下文管理的 coding agent",
-            "用在長任務、跨對話延續與知識取回 workflow",
-            "Claude Code / Codex / Cursor 這類可掛 Skill 的 agent"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "TypeScript",
-          "topics": [
-            "agent-skills",
-            "ai-agents",
-            "binary-analysis",
-            "claude-code",
-            "cli",
-            "codex",
-            "cordis",
-            "decompiler",
-            "developer-tools",
-            "dsh",
-            "dsh-plugin",
-            "ghidra",
-            "hopper",
-            "llm",
-            "mcp",
-            "model-context-protocol",
-            "rea",
-            "reverse-engineering",
-            "static-analysis",
-            "touhou"
-          ],
-          "stars": 385866,
-          "forks": 96643,
-          "watchers": 385866,
-          "openIssues": 1097,
-          "likes": 59,
-          "hearts": 0,
-          "reactionTotal": 60,
-          "reactionSamples": [
-            {
-              "title": "[Feature] Support the official Hex-Rays IDA MCP server as an analysis provider",
-              "url": "https://github.com/morluto/rea/issues/1416",
-              "likes": 22,
-              "hearts": 0,
-              "comments": 2
-            },
-            {
-              "title": "Feature: Add support for Binary Ninja as an analysis backend",
-              "url": "https://github.com/morluto/rea/issues/1551",
-              "likes": 11,
-              "hearts": 0,
-              "comments": 9
-            },
-            {
-              "title": "[Feature] Java Reverse Engineering",
-              "url": "https://github.com/morluto/rea/issues/1558",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 15
-            }
-          ],
-          "updatedAt": "2026-10-26T05:08:12Z",
-          "pushedAt": "2026-10-25T19:21:28Z",
-          "createdAt": "2026-04-14T00:51:32Z",
-          "homepage": "https://rea.tools",
-          "url": "https://github.com/morluto/rea",
-          "downloadUrl": "https://github.com/morluto/rea/archive/refs/heads/main.zip",
-          "cloneUrl": "https://github.com/morluto/rea.git",
-          "license": "MIT"
-        },
-        {
-          "id": "zhayujie-cowagent",
-          "rank": 4,
-          "period": "monthly",
-          "periodKey": "monthly",
-          "categoryKey": "skill-workflow",
-          "categoryLabel": "GitHub 熱門 Skill / Workflow",
-          "categoryShortLabel": "Skill / Workflow",
-          "typeLabel": "Skill / Workflow",
-          "fullName": "zhayujie/CowAgent",
-          "name": "CowAgent",
-          "owner": "zhayujie",
-          "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-          "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
-          "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
-          "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-          "contentZh": [
-            "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
-            "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
-            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
-            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
-          ],
-          "discussionZh": [
-            "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
-            "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
-          ],
-          "audience": [
-            "全功能助理型 / 多工具 agent",
-            "用在任務規劃、MCP、技能與知識庫整合 workflow",
-            "想看 agent harness 如何串工具與記憶的人"
-          ],
-          "useCases": [
-            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
-            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
-            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
-          ],
-          "notFor": [
-            "只想直接下載一個現成 App、完全不想調整流程的人。",
-            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
-          ],
-          "attentionNotes": [
-            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
-            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
-            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
-          ],
-          "language": "Python",
-          "topics": [
-            "ai",
-            "ai-agent",
-            "ai-agents",
-            "chatgpt-on-wechat",
-            "claude",
-            "claude-code",
-            "codex",
-            "cowagent",
-            "deepseek",
-            "harness",
-            "llm",
-            "mcp",
-            "multi-agent",
-            "openai",
-            "openclaw",
-            "personal-agent",
-            "skills"
-          ],
-          "stars": 47588,
-          "forks": 10406,
-          "watchers": 47588,
-          "openIssues": 43,
-          "likes": 45,
-          "hearts": 2,
-          "reactionTotal": 51,
-          "reactionSamples": [
-            {
-              "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
-              "url": "https://github.com/zhayujie/CowAgent/issues/718",
-              "likes": 6,
-              "hearts": 0,
-              "comments": 32
-            },
-            {
-              "title": "tool插件 有关的一切都在这个文档里",
-              "url": "https://github.com/zhayujie/CowAgent/issues/776",
-              "likes": 9,
-              "hearts": 0,
-              "comments": 53
-            },
-            {
-              "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
-              "url": "https://github.com/zhayujie/CowAgent/issues/8",
-              "likes": 7,
-              "hearts": 0,
-              "comments": 49
-            }
-          ],
-          "updatedAt": "2026-10-26T04:19:14Z",
-          "pushedAt": "2026-10-25T02:44:27Z",
-          "createdAt": "2022-08-07T08:33:41Z",
-          "homepage": "https://cowagent.ai",
-          "url": "https://github.com/zhayujie/CowAgent",
-          "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
-          "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
-          "license": "MIT"
-        },
-        {
           "id": "alirezarezvani-claude-skills",
-          "rank": 5,
+          "rank": 4,
           "period": "monthly",
           "periodKey": "monthly",
           "categoryKey": "skill-workflow",
@@ -3268,10 +3163,10 @@
             "openclaw-skills",
             "prompt-engineering"
           ],
-          "stars": 28724,
-          "forks": 3988,
-          "watchers": 28724,
-          "openIssues": 1,
+          "stars": 28789,
+          "forks": 3996,
+          "watchers": 28789,
+          "openIssues": 2,
           "likes": 12,
           "hearts": 2,
           "reactionTotal": 16,
@@ -3298,13 +3193,118 @@
               "comments": 3
             }
           ],
-          "updatedAt": "2026-10-26T04:08:00Z",
-          "pushedAt": "2026-10-23T11:30:28Z",
+          "updatedAt": "2026-10-27T04:49:04Z",
+          "pushedAt": "2026-10-26T16:54:47Z",
           "createdAt": "2025-10-19T04:04:05Z",
           "homepage": "https://alirezarezvani.medium.com/",
           "url": "https://github.com/alirezarezvani/claude-skills",
           "downloadUrl": "https://github.com/alirezarezvani/claude-skills/archive/refs/heads/main.zip",
           "cloneUrl": "https://github.com/alirezarezvani/claude-skills.git",
+          "license": "MIT"
+        },
+        {
+          "id": "zhayujie-cowagent",
+          "rank": 5,
+          "period": "monthly",
+          "periodKey": "monthly",
+          "categoryKey": "skill-workflow",
+          "categoryLabel": "GitHub 熱門 Skill / Workflow",
+          "categoryShortLabel": "Skill / Workflow",
+          "typeLabel": "Skill / Workflow",
+          "fullName": "zhayujie/CowAgent",
+          "name": "CowAgent",
+          "owner": "zhayujie",
+          "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+          "descriptionZh": "開源個人人工智慧助理和代理線束。規劃任務，運行工具和技能，利用記憶和知識進行自我進化。多代理、多模式、多通路。輕量級、可擴充、單行安裝。",
+          "oneLineZh": "開源 AI 助理與 agent harness，可規劃任務、使用工具與技能，並結合記憶和知識。",
+          "introZh": "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+          "contentZh": [
+            "CowAgent 是偏完整助理架構的開源專案。它把任務規劃、工具使用、技能、記憶與知識放進同一個 agent harness，適合研究完整 agent 系統如何組合。",
+            "從 topics 來看，它和 ai、ai-agent、ai-agents、chatgpt-on-wechat、claude、claude-code、codex、cowagent 有關。閱讀時可以先判斷它是在解決 prompt、rules、context、memory、workflow 還是團隊操作方法。",
+            "這類 repo 最值得學的通常不是照抄檔案，而是理解作者如何把模糊任務拆成可重複執行的流程。你可以把它當作範例，練習改寫成自己的 AGENTS.md、Skill 或團隊工作規則。",
+            "導入前建議先用一個小任務驗證：讓 AI 依照它的流程完成一次真實工作，再看輸出品質、上下文消耗、風險邊界與維護成本。"
+          ],
+          "discussionZh": [
+            "「记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）」是目前較多人互動的討論之一（👍 6、留言 32）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「tool插件 有关的一切都在这个文档里」是目前較多人互動的討論之一（👍 9、留言 53）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。",
+            "「Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录」是目前較多人互動的討論之一（👍 7、留言 49）。這代表使用者關注的可能是功能缺口、安裝問題、設定方式或專案方向，閱讀時可以把它當成導入前的風險與需求提示。"
+          ],
+          "audience": [
+            "全功能助理型 / 多工具 agent",
+            "用在任務規劃、MCP、技能與知識庫整合 workflow",
+            "想看 agent harness 如何串工具與記憶的人"
+          ],
+          "useCases": [
+            "拿來學習別人如何設計 AI Agent 的任務流程、規則與上下文。",
+            "拆解 README 或範本，轉成自己的 AGENTS.md、Skill 或團隊 SOP。",
+            "作為教學案例，練習判斷一個 workflow 是否能落地到真實工作。"
+          ],
+          "notFor": [
+            "只想直接下載一個現成 App、完全不想調整流程的人。",
+            "沒有打算整理自己的任務規則、知識庫或交辦方式的人。"
+          ],
+          "attentionNotes": [
+            "不要看到熱門就直接整包套用，先確認它的規則是否符合自己的工作方式。",
+            "如果要放進公司或團隊流程，應先檢查是否會要求敏感資料、API key 或過高權限。",
+            "Skill / Workflow 的價值通常在設計思路，不一定是安裝後立刻有工具可用。"
+          ],
+          "language": "Python",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "chatgpt-on-wechat",
+            "claude",
+            "claude-code",
+            "codex",
+            "cowagent",
+            "deepseek",
+            "harness",
+            "llm",
+            "mcp",
+            "multi-agent",
+            "openai",
+            "openclaw",
+            "personal-agent",
+            "skills"
+          ],
+          "stars": 47615,
+          "forks": 10407,
+          "watchers": 47615,
+          "openIssues": 46,
+          "likes": 45,
+          "hearts": 2,
+          "reactionTotal": 51,
+          "reactionSamples": [
+            {
+              "title": "记录一下2023.3.31，微信封号大地震。关注：Youngerer，扫码进群交流（不要加我为微信啦）",
+              "url": "https://github.com/zhayujie/CowAgent/issues/718",
+              "likes": 6,
+              "hearts": 0,
+              "comments": 32
+            },
+            {
+              "title": "tool插件 有关的一切都在这个文档里",
+              "url": "https://github.com/zhayujie/CowAgent/issues/776",
+              "likes": 9,
+              "hearts": 0,
+              "comments": 53
+            },
+            {
+              "title": "Log in time out, reloading QR code. 二维码一直刷新，手机来不及登录",
+              "url": "https://github.com/zhayujie/CowAgent/issues/8",
+              "likes": 7,
+              "hearts": 0,
+              "comments": 49
+            }
+          ],
+          "updatedAt": "2026-10-27T03:57:55Z",
+          "pushedAt": "2026-10-26T14:03:03Z",
+          "createdAt": "2022-08-07T08:33:41Z",
+          "homepage": "https://cowagent.ai",
+          "url": "https://github.com/zhayujie/CowAgent",
+          "downloadUrl": "https://github.com/zhayujie/CowAgent/archive/refs/heads/master.zip",
+          "cloneUrl": "https://github.com/zhayujie/CowAgent.git",
           "license": "MIT"
         }
       ]
