@@ -120,6 +120,17 @@
   font-weight: 600;
 }
 
+.services-card h3 a {
+  color: var(--home-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.services-card h3 a:hover,
+.services-card h3 a:focus-visible {
+  color: var(--home-accent);
+}
+
 .services-card p {
   margin: 0;
   line-height: 1.8;
