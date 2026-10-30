@@ -27,6 +27,7 @@
     .privacy-content strong{color:#20231f}
     @media(max-width:700px){.privacy-shell{padding-top:42px}.privacy-sections{grid-template-columns:1fr;gap:28px}.privacy-sections nav{position:static;grid-template-columns:1fr 1fr;padding-bottom:24px;border-bottom:1px solid #d8d2c6}.privacy-nav{padding:0 16px}}
   </style>
+<script defer src="/assets/site-analytics.js?v=20261030"></script>
 </head>
 <body>
   <nav class="privacy-nav" aria-label="網站導覽"><a href="./index.html">Michael Agent Lab</a><a href="./index.html">回首頁</a></nav>
@@ -41,14 +42,14 @@
         <a href="#collect">蒐集內容</a><a href="#purpose">使用目的</a><a href="#retention">保留期間</a><a href="#feedback">主動留言</a><a href="#control">你的選擇</a>
       </nav>
       <div class="privacy-content">
-        <section id="collect"><h2>蒐集哪些資料</h2><p>網站記錄匿名代號、瀏覽頁面、閱讀時間、最大捲動深度、裝置類型、概略國家、來源網站與 UTM 活動標記。搜尋資料只保留彙整後的關鍵字與結果數。</p><p><strong>不會蒐集一般訪客的姓名、電子郵件、電話或精確位置。</strong>已知搜尋引擎與自動程式會被排除。</p></section>
+        <section id="site-wide"><h2>全站流量統計</h2><p>本說明涵蓋本站作品集、App 公開網頁、教材與服務頁。使用匿名瀏覽器代號估算每日訪客，閒置 30 分鐘後視為新造訪；同一人不同裝置可能分開計算。代號最多保留 90 天，瀏覽紀錄保留 15 天。僅記錄頁面路徑、來源網站網域及基本瀏覽資訊；不讀取表單、命盤輸入或照片，也不傳送完整來源網址與搜尋字詞。瀏覽器封鎖統計或停用 JavaScript 時可能漏計。</p><p>每天依台北日期彙整前一天的流量，私人報告不會公開於網站。你可清除網站資料重設代號，或使用下方按鈕停止這個瀏覽器的統計。</p><button type="button" id="disableStats">停止此瀏覽器的流量統計</button><p id="statsChoice" role="status"></p></section><section id="collect"><h2>蒐集哪些資料</h2><p>目前全站統計記錄匿名瀏覽器代號、造訪代號、頁面路徑、來源網站網域、瀏覽器語言與概略國家。新的全站統計不收集搜尋字詞、表單輸入或完整來源網址。啟用前的舊統計欄位會依原有保留期限清除。</p><p><strong>不會蒐集一般訪客的姓名、電子郵件、電話或精確位置。</strong>已知搜尋引擎與自動程式會被排除。</p></section>
         <section id="purpose"><h2>資料用來做什麼</h2><ul><li>判斷哪些教材、新聞、GitHub Skill 或影片最值得持續整理。</li><li>了解 LinkedIn 貼文是否帶來真正的閱讀，而不只看點擊。</li><li>找出大家搜尋卻沒有結果的主題，作為補充教材的依據。</li></ul></section>
-        <section id="retention"><h2>保留多久</h2><p>瀏覽事件與分析趨勢只保留最近 <strong>15 天</strong>。瀏覽器中的隨機匿名代號最多保留 90 天，用來辨認短期回訪；它不包含姓名，也不會顯示在公開頁面。</p></section>
+        <section id="retention"><h2>保留多久</h2><p>瀏覽事件與分析趨勢只保留最近 <strong>15 天</strong>。瀏覽器中的隨機匿名瀏覽器代號最多保留 90 天，用來辨認短期回訪；它不包含姓名，也不會顯示在公開頁面。</p></section>
         <section id="feedback"><h2>主動留言時</h2><p>只有在你按下「留言／討論」並主動送出內容時，網站才會處理你填寫的稱呼與留言。這些內容會傳送給 Michael 的 Telegram，不會出現在流量後臺。</p></section>
-        <section id="control"><h2>你可以怎麼控制</h2><p>你可以清除瀏覽器的網站資料來重設匿名代號。Michael 自己的測試裝置則可從分析後臺設定為排除，不計入網站流量。</p></section>
+        <section id="control"><h2>你可以怎麼控制</h2><p>你可以清除瀏覽器的網站資料來重設匿名瀏覽器代號。Michael 自己的測試裝置則可從分析後臺設定為排除，不計入網站流量。</p></section>
       </div>
     </div>
   </main>
-  <script src="./analytics-tracker.js?v=20260804-d1"></script>
-</body>
+
+<script>document.getElementById('disableStats')?.addEventListener('click',()=>{try{localStorage.setItem('mal.analyticsExcluded.v1','true');document.getElementById('statsChoice').textContent='已停止此瀏覽器的流量統計。'}catch{document.getElementById('statsChoice').textContent='無法保存偏好；可在瀏覽器設定中停用本站 JavaScript。'}});</script></body>
 </html>
