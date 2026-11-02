@@ -79,27 +79,27 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/ee6ae7d682a514d0.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="hero">
     <div class="wrap">
       <div class="brand">
         <span class="lesson-brand-text">Michael AI Agent Lab</span>
-        <div class="doc-meta">Michael 教學筆記｜2026-07-08<br>Voice Input / AI Agent Workflow</div>
+        <div class="doc-meta">Michael 教學筆記｜2026-07-08<br>語音輸入／AI Agent 工作流程</div>
       </div>
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Public Learning Note</div>
-          <h1>語音輸入 x AI Agent：Context 轉換工作法</h1>
-          <p class="lead">語音輸入不是單純省打字，而是把想法、會議、review、客戶需求更完整地捕捉下來，再轉成 AI agent 能執行的任務指令。</p>
+          <div class="eyebrow">公開學習筆記</div>
+          <h1>語音輸入 x AI Agent：上下文 轉換工作法</h1>
+          <p class="lead">語音輸入不是單純省打字，而是把想法、會議、審核、客戶需求更完整地捕捉下來，再轉成 AI 代理 能執行的任務指令。</p>
         </div>
         <aside class="hero-panel">
           <strong>一句話結論</strong>
-          <p>語音適合拿來收集 context；AI 適合把 context 轉成格式、任務與成果。Michael AI Agent Lab 使用時先做資料分類，機密內容不要直接進雲端語音工具。</p>
+          <p>語音適合拿來收集 上下文；AI 適合把 上下文 轉成格式、任務與成果。Michael AI Agent Lab 使用時先做資料分類，機密內容不要直接進雲端語音工具。</p>
           <div class="decision">
             <span>先講完整<br>不要邊想邊刪</span>
             <span>再補缺口<br>讓 AI 反問</span>
-            <span>最後轉任務<br>交給 agent 執行</span>
+            <span>最後轉任務<br>交給 代理 執行</span>
           </div>
         </aside>
       </div>
@@ -114,31 +114,31 @@
       <a href="#practice">實務場景</a>
       <a href="#security">安全紅線</a>
       <a href="#prompts">提示詞</a>
-      <a href="#sources">Sources</a>
+      <a href="#sources">來源</a>
     </div>
   </nav>
 
   <main class="wrap">
     <section id="model">
-      <div class="section-title"><span class="bar"></span><h2>先理解：知識工作就是 context 轉換</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>先理解：知識工作就是 上下文 轉換</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <div class="mini-label">Mental Model</div>
-          <p>很多 AI 成果不好，不是模型不夠強，而是輸入給它的 context 太乾、太短、太像最後結論。語音輸入的價值，是讓腦中的背景、品味、限制、猶豫與例外情況先完整流出來。</p>
+          <div class="mini-label">思考模型</div>
+          <p>很多 AI 成果不好，不是模型不夠強，而是輸入給它的 上下文 太乾、太短、太像最後結論。語音輸入的價值，是讓腦中的背景、品味、限制、猶豫與例外情況先完整流出來。</p>
           <div class="model">
-            <div class="model-step"><div class="step-no">1</div><h3>Capture</h3><p>用語音先把想法、會議、review 全部收下來，不急著修文字。</p></div>
-            <div class="model-step"><div class="step-no">2</div><h3>Clarify</h3><p>請 AI 標出缺少的資訊、矛盾、範圍與成功標準。</p></div>
-            <div class="model-step"><div class="step-no">3</div><h3>Convert</h3><p>把自然語言轉成 email、SOP、issue、prompt 或 agent 任務。</p></div>
-            <div class="model-step"><div class="step-no">4</div><h3>Execute</h3><p>交給合適的 AI 工具、專案管理或教材產出流程完成成果。</p></div>
+            <div class="model-step"><div class="step-no">1</div><h3>擷取</h3><p>用語音先把想法、會議、審核 全部收下來，不急著修文字。</p></div>
+            <div class="model-step"><div class="step-no">2</div><h3>釐清</h3><p>請 AI 標出缺少的資訊、矛盾、範圍與成功標準。</p></div>
+            <div class="model-step"><div class="step-no">3</div><h3>轉換</h3><p>把自然語言轉成 電子郵件、SOP、問題、提示詞 或 代理 任務。</p></div>
+            <div class="model-step"><div class="step-no">4</div><h3>執行</h3><p>交給合適的 AI 工具、專案管理或教材產出流程完成成果。</p></div>
           </div>
         </div>
         <div class="card span-5">
-          <div class="mini-label">Flow Diagram</div>
-          <svg class="diagram" viewBox="0 0 520 320" role="img" aria-label="語音輸入到 AI agent 的 context 轉換流程">
+          <div class="mini-label">流程圖</div>
+          <svg class="diagram" viewbox="0 0 520 320" role="img" aria-label="語音輸入到 AI agent 的 context 轉換流程">
             <rect width="520" height="320" fill="#fff"/>
             <rect x="32" y="38" width="142" height="74" rx="8" fill="#243033"/>
             <text x="103" y="69" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">口述想法</text>
-            <text x="103" y="91" fill="#d8e0e2" font-size="12" text-anchor="middle">原始 context</text>
+            <text x="103" y="91" fill="#d8e0e2" font-size="12" text-anchor="middle">原始 上下文</text>
             <path d="M174 75 H224" stroke="#d72f38" stroke-width="4"/><path d="M224 75 l-10 -7 v14 z" fill="#d72f38"/>
             <rect x="224" y="38" width="142" height="74" rx="8" fill="#fff4f5" stroke="#f1cdd1"/>
             <text x="295" y="69" fill="#b8202a" font-size="16" font-weight="700" text-anchor="middle">整理補洞</text>
@@ -146,9 +146,9 @@
             <path d="M366 75 H416" stroke="#d72f38" stroke-width="4"/><path d="M416 75 l-10 -7 v14 z" fill="#d72f38"/>
             <rect x="416" y="38" width="72" height="74" rx="8" fill="#18a8bd"/>
             <text x="452" y="69" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">指令</text>
-            <text x="452" y="91" fill="#e8fbfd" font-size="12" text-anchor="middle">Prompt</text>
+            <text x="452" y="91" fill="#e8fbfd" font-size="12" text-anchor="middle">提示詞</text>
             <rect x="74" y="168" width="372" height="82" rx="8" fill="#f2f5f5" stroke="#dfe4e5"/>
-            <text x="260" y="200" fill="#202629" font-size="18" font-weight="800" text-anchor="middle">AI Agent 執行</text>
+            <text x="260" y="200" fill="#202629" font-size="18" font-weight="800" text-anchor="middle">AI 代理 執行</text>
             <text x="260" y="226" fill="#667174" font-size="13" text-anchor="middle">寫作整理 / 知識庫 / 專案任務 / 教材產出</text>
             <path d="M452 112 V168 H260" stroke="#667174" stroke-width="3" fill="none"/>
             <rect x="148" y="274" width="224" height="30" rx="15" fill="#243033"/>
@@ -162,8 +162,8 @@
       <div class="section-title"><span class="bar"></span><h2>Typeless 怎麼放進這套流程</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <div class="mini-label">Tool Setup</div>
-          <p>Typeless 的定位不是「錄音轉逐字稿」，而是把你自然講出的內容即時整理成可讀文字。它會處理贅詞、重複、改口、段落格式與語氣，適合拿來做 AI Agent 任務前的 context 捕捉。</p>
+          <div class="mini-label">工具設定</div>
+          <p>Typeless 的定位不是「錄音轉逐字稿」，而是把你自然講出的內容即時整理成可讀文字。它會處理贅詞、重複、改口、段落格式與語氣，適合拿來做 AI 代理 任務前的 上下文 捕捉。</p>
           <div class="typeless-grid">
             <div class="typeless-step"><div class="step-no">1</div><h3>安裝與權限</h3><p>桌機可用 macOS / Windows，手機可用 iOS / Android。第一次使用要開麥克風權限；桌機版也需要輔助使用權限，才能把文字輸入到目前游標位置。</p></div>
             <div class="typeless-step"><div class="step-no">2</div><h3>游標放到目標欄位</h3><p>先打開 Notion、Google Docs、Gmail、Slack、Chrome 或任何文字輸入框，再用快捷鍵開始講話。</p></div>
@@ -172,26 +172,26 @@
           </div>
         </div>
         <div class="card span-5">
-          <div class="mini-label">Best Use</div>
+          <div class="mini-label">適用方式</div>
           <h3>最適合用 Typeless 的三種情境</h3>
           <ul>
-            <li><strong>快速 brain dump：</strong>把腦中還沒成形的想法先講出來，再請 AI 幫你整理成大綱。</li>
-            <li><strong>口頭 review：</strong>看著畫面講「哪裡怪、為什麼怪、想改成什麼」，再轉成修改清單。</li>
-            <li><strong>跨 App 輸入：</strong>在 email、文件、聊天、瀏覽器欄位都用同一套語音輸入習慣，不必切換工具。</li>
+            <li><strong>快速 思緒傾倒：</strong>把腦中還沒成形的想法先講出來，再請 AI 幫你整理成大綱。</li>
+            <li><strong>口頭 審核：</strong>看著畫面講「哪裡怪、為什麼怪、想改成什麼」，再轉成修改清單。</li>
+            <li><strong>跨 應用程式 輸入：</strong>在 電子郵件、文件、聊天、瀏覽器欄位都用同一套語音輸入習慣，不必切換工具。</li>
           </ul>
-          <div class="tag-row"><span class="tag">去贅詞</span><span class="tag">自動格式</span><span class="tag">100+ 語言</span><span class="tag">個人字典</span><span class="tag">跨 App</span></div>
+          <div class="tag-row"><span class="tag">去贅詞</span><span class="tag">自動格式</span><span class="tag">100+ 語言</span><span class="tag">個人字典</span><span class="tag">跨 應用程式</span></div>
         </div>
         <div class="card span-6">
-          <div class="mini-label">Personal Dictionary</div>
+          <div class="mini-label">個人詞彙庫</div>
           <h3>先把專有名詞放進字典</h3>
-          <p>如果常講 Michael AI Agent Lab、產品名、客戶縮寫、工具名稱或內部慣用詞，先到 Typeless 的 Dictionary 新增字詞。官方 Quickstart 建議：打開 Typeless app，進入 Dictionary，點選 Add new，把容易辨識錯的詞加進去。</p>
-          <p class="muted">這一步會直接影響後面 AI 整理品質。語音輸入錯一個產品名，後面產出的任務、摘要、email 都可能跟著歪掉。</p>
+          <p>如果常講 Michael AI Agent Lab、產品名、客戶縮寫、工具名稱或內部慣用詞，先到 Typeless 的 字典 新增字詞。官方 快速入門 建議：打開 Typeless 應用程式，進入 字典，點選 新增，把容易辨識錯的詞加進去。</p>
+          <p class="muted">這一步會直接影響後面 AI 整理品質。語音輸入錯一個產品名，後面產出的任務、摘要、電子郵件 都可能跟著歪掉。</p>
         </div>
         <div class="card span-6">
-          <div class="mini-label">Privacy Check</div>
+          <div class="mini-label">隱私檢查</div>
           <h3>使用前先分級資料</h3>
-          <p>Typeless 官方說明包含 zero cloud data retention、dictation data 不用於模型訓練，以及歷史紀錄保留在裝置上。但在公司環境仍要用資料分級來管控：公開資料與個人學習可以先試，客戶機密、合約、報價、token、帳密與未公開產品資訊不要直接口述進任何外部工具。</p>
-          <p class="muted">實務上先用 dummy data 測流程，確認輸出品質與權限設定，再決定是否能放進工作流程。</p>
+          <p>Typeless 官方說明包含 雲端零資料留存、口述資料 不用於模型訓練，以及歷史紀錄保留在裝置上。但在公司環境仍要用資料分級來管控：公開資料與個人學習可以先試，客戶機密、合約、報價、token、帳密與未公開產品資訊不要直接口述進任何外部工具。</p>
+          <p class="muted">實務上先用 測試資料 測流程，確認輸出品質與權限設定，再決定是否能放進工作流程。</p>
         </div>
       </div>
     </section>
@@ -200,23 +200,23 @@
       <div class="section-title"><span class="bar"></span><h2>四種最值得導入的語音工作流</h2></div>
       <div class="grid">
         <article class="card span-6">
-          <div class="head"><div class="icon red">1</div><div><h3>Brain Dump：先完整講出來</h3><p class="muted">適合新專案、教學檔、網站、報告、產品想法。</p></div></div>
+          <div class="head"><div class="icon red">1</div><div><h3>思緒傾倒：先完整講出來</h3><p class="muted">適合新專案、教學檔、網站、報告、產品想法。</p></div></div>
           <p>不要一開始就要求自己講得漂亮。先把背景、目標、風格、限制、不要做什麼、你在意的感覺全都說出來。這些看似混亂的細節，通常就是 AI 做對味道的關鍵。</p>
           <div class="tag-row"><span class="tag">低摩擦</span><span class="tag">保留品味</span><span class="tag">避免過度壓縮</span></div>
         </article>
         <article class="card span-6">
-          <div class="head"><div class="icon cyan">2</div><div><h3>Prompt 補完：讓 AI 先反問</h3><p class="muted">適合把自然想法變成 AI coding 工具或專案管理任務。</p></div></div>
-          <p>口述後不要立刻送給 agent。先請 AI 檢查這段話缺什麼資訊，並用括號標出需要補充的地方，例如資料來源、成功標準、使用者、版型、限制條件。</p>
+          <div class="head"><div class="icon cyan">2</div><div><h3>提示詞 補完：讓 AI 先反問</h3><p class="muted">適合把自然想法變成 AI 程式設計 工具或專案管理任務。</p></div></div>
+          <p>口述後不要立刻送給 代理。先請 AI 檢查這段話缺什麼資訊，並用括號標出需要補充的地方，例如資料來源、成功標準、使用者、版型、限制條件。</p>
           <div class="tag-row"><span class="tag">補缺口</span><span class="tag">反問</span><span class="tag">降低返工</span></div>
         </article>
         <article class="card span-6">
-          <div class="head"><div class="icon amber">3</div><div><h3>Review 轉指令：口頭 feedback 變修改清單</h3><p class="muted">適合看完設計、程式、報告、簡報後的修改意見。</p></div></div>
-          <p>review 最珍貴的是當下的感受與判斷。把「哪裡不對、為什麼不對、想帶給使用者什麼感覺」用講的記下來，再請 AI 轉成明確的修改指令。</p>
-          <div class="tag-row"><span class="tag">設計回饋</span><span class="tag">Code review</span><span class="tag">報告修訂</span></div>
+          <div class="head"><div class="icon amber">3</div><div><h3>審核 轉指令：口頭 回饋 變修改清單</h3><p class="muted">適合看完設計、程式、報告、簡報後的修改意見。</p></div></div>
+          <p>審核 最珍貴的是當下的感受與判斷。把「哪裡不對、為什麼不對、想帶給使用者什麼感覺」用講的記下來，再請 AI 轉成明確的修改指令。</p>
+          <div class="tag-row"><span class="tag">設計回饋</span><span class="tag">程式碼審查</span><span class="tag">報告修訂</span></div>
         </article>
         <article class="card span-6">
-          <div class="head"><div class="icon green">4</div><div><h3>Mobile Capture：走路也能派任務</h3><p class="muted">適合通勤、散步、臨時靈感、會後補充。</p></div></div>
-          <p>靈感保鮮期很短。手機語音可以把零散念頭先抓下來，整理成待辦、issue、報告補充或下一次 AI 任務。</p>
+          <div class="head"><div class="icon green">4</div><div><h3>行動捕捉：走路也能派任務</h3><p class="muted">適合通勤、散步、臨時靈感、會後補充。</p></div></div>
+          <p>靈感保鮮期很短。手機語音可以把零散念頭先抓下來，整理成待辦、問題、報告補充或下一次 AI 任務。</p>
           <div class="tag-row"><span class="tag">手機</span><span class="tag">遠端任務</span><span class="tag">靈感捕捉</span></div>
         </article>
       </div>
@@ -228,11 +228,11 @@
         <table>
           <thead><tr><th>場景</th><th>語音輸入做什麼</th><th>後續整理方式</th><th>驗收重點</th></tr></thead>
           <tbody>
-            <tr><td>客戶會議後</td><td>把會議重點、疑問、承諾事項口述成 raw notes。</td><td>轉成專案追蹤欄位</td><td>輸出 issue、owner、deadline、risk、next action。</td></tr>
+            <tr><td>客戶會議後</td><td>把會議重點、疑問、承諾事項口述成 原始筆記。</td><td>轉成專案追蹤欄位</td><td>輸出 問題、負責人、期限、風險、下一步行動。</td></tr>
             <tr><td>教學 HTML 發想</td><td>先講主題、章節、讀者、希望看完能做什麼。</td><td>轉成教材大綱與版面需求</td><td>手機可讀、個人教學網站風格、圖解清楚，不像原始紀錄。</td></tr>
             <tr><td>技術研究</td><td>把問題背景、已知資料、要比較的方向說清楚。</td><td>轉成研究筆記與來源清單</td><td>保留來源、不確定性、比較條件與下一步。</td></tr>
             <tr><td>程式或畫面修改需求</td><td>看著畫面把不滿意的地方講出來。</td><td>轉成修改清單</td><td>整理成明確目標、影響範圍、檔案範圍、測試方式。</td></tr>
-            <tr><td>每日維護報告</td><td>口述今天看到的異常、疑問、想追的東西。</td><td>轉成狀態更新</td><td>整理成異常、原因、下一步，不塞滿 log。</td></tr>
+            <tr><td>每日維護報告</td><td>口述今天看到的異常、疑問、想追的東西。</td><td>轉成狀態更新</td><td>整理成異常、原因、下一步，不塞滿 紀錄。</td></tr>
           </tbody>
         </table>
       </div>
@@ -249,8 +249,8 @@
           <div class="mini-label">可以先試</div>
           <ul>
             <li>個人學習筆記、公開資料整理、非機密教學大綱。</li>
-            <li>用 dummy data 測試「語音 -> prompt -> agent 任務」流程。</li>
-            <li>把個人口述轉成 todo、草稿、公開技術研究問題。</li>
+            <li>用 測試資料 測試「語音 -&gt; 提示詞 -&gt; 代理 任務」流程。</li>
+            <li>把個人口述轉成 待辦、草稿、公開技術研究問題。</li>
             <li>先由人工或內部核准流程做二次清理，再決定是否進正式知識庫。</li>
           </ul>
         </div>
@@ -271,7 +271,7 @@
       <div class="grid">
         <div class="card span-6">
           <h3>口述後補洞</h3>
-          <pre class="prompt">請把我剛剛口述的內容整理成給 AI agent 的任務。
+          <pre class="prompt" data-language-code="">請把我剛剛口述的內容整理成給 AI agent 的任務。
 先不要執行，請先標出：
 - 缺少的背景
 - 需要我決定的選項
@@ -280,8 +280,8 @@
 用括號標示我要補充的資訊。</pre>
         </div>
         <div class="card span-6">
-          <h3>review 轉修改指令</h3>
-          <pre class="prompt">請把這段口頭 review 轉成 coding/design agent 的修改指令。
+          <h3>審核 轉修改指令</h3>
+          <pre class="prompt" data-language-code="">請把這段口頭 review 轉成 coding/design agent 的修改指令。
 請整理成：
 1. 問題
 2. 為什麼會影響使用者
@@ -290,8 +290,8 @@
 5. 驗收方式</pre>
         </div>
         <div class="card span-6">
-          <h3>會議轉 action</h3>
-          <pre class="prompt">請把這段會議口述整理成專案追蹤格式：
+          <h3>會議轉 行動</h3>
+          <pre class="prompt" data-language-code="">請把這段會議口述整理成專案追蹤格式：
 - 結論
 - 待確認問題
 - 風險
@@ -302,7 +302,7 @@
         </div>
         <div class="card span-6">
           <h3>手機靈感轉任務</h3>
-          <pre class="prompt">請把這段散步時的想法整理成可執行任務。
+          <pre class="prompt" data-language-code="">請把這段散步時的想法整理成可執行任務。
 輸出：
 - 一句話目標
 - 背景
@@ -315,29 +315,29 @@
     </section>
 
     <section id="sources">
-      <div class="section-title"><span class="bar"></span><h2>Sources</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>來源</h2></div>
       <div class="card">
         <p class="muted">以下來源用來核對語音輸入、Typeless 功能與資安資訊，以及語音速度與工作中斷研究。工具導入前仍需依 個人或團隊資安規範審查。</p>
         <ul class="source-list">
           <li><a href="https://www.typeless.com/">Typeless 官方網站</a></li>
-          <li><a href="https://www.typeless.com/help/quickstart/key-features">Typeless Quickstart：Key Features</a></li>
-          <li><a href="https://www.typeless.com/help/faqs">Typeless FAQ</a></li>
-          <li><a href="https://www.typeless.com/downloads">Typeless Downloads</a></li>
-          <li><a href="https://trust.typeless.com/">Typeless Trust Center</a></li>
+          <li><a href="https://www.typeless.com/help/quickstart/key-features">Typeless 快速入門：主要功能</a></li>
+          <li><a href="https://www.typeless.com/help/faqs">Typeless 常見問題</a></li>
+          <li><a href="https://www.typeless.com/downloads">Typeless 下載</a></li>
+          <li><a href="https://trust.typeless.com/">Typeless 信任中心</a></li>
           <li><a href="https://apps.apple.com/us/app/typeless-ai-voice-keyboard/id6749257650">Typeless App Store 頁面</a></li>
-          <li><a href="https://hci.stanford.edu/research/speech/">Stanford HCI：Speech input study</a></li>
-          <li><a href="https://news.stanford.edu/stories/2016/08/stanford-study-speech-recognition-faster-texting">Stanford Report：speech recognition faster at texting</a></li>
-          <li><a href="https://www.ics.uci.edu/~gmark/chi08-mark.pdf">Mark et al.：The Cost of Interrupted Work</a></li>
+          <li><a href="https://hci.stanford.edu/research/speech/">Stanford HCI：語音輸入研究</a></li>
+          <li><a href="https://news.stanford.edu/stories/2016/08/stanford-study-speech-recognition-faster-texting">Stanford Report：語音辨識輸入文字更快</a></li>
+          <li><a href="https://www.ics.uci.edu/~gmark/chi08-mark.pdf">Mark 等人：工作中斷的成本</a></li>
         </ul>
-        <div class="footer">Prepared for Michael AI Agent learning. Voice capture is useful, but private data classification comes first.</div>
+        <div class="footer">為 Michael 的 AI Agent 學習整理。語音擷取很有用，但應先完成私密資料分類。</div>
       </div>
     </section>
   </main>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
       <li><a href="./brainstorming-skill-design-first.html">Brainstorming Skill：先設計再開工</a></li>
       <li><a href="./claude-md-agents-md.html">CLAUDE.md 與 AGENTS.md：把 AI 協作規則寫在對的位置</a></li>

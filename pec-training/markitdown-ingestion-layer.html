@@ -159,18 +159,18 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/8959944b129e5c62.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <div class="cover">
     <div class="wrap cover-inner">
       <div class="cover-top">
         <div class="report-logo" aria-label="個人品牌標記"></div>
-        <div class="cover-kicker">Document Ingestion / Michael Teaching Notes</div>
+        <div class="cover-kicker">文件匯入／Michael 教學筆記</div>
       </div>
       <div class="cover-main">
         <span class="label">Michael 教學筆記</span>
         <h1>MarkItDown：把多格式文件整理成 AI 可讀 Markdown</h1>
-        <p class="subtitle">這份教材把 MarkItDown 拆成文件 ingestion 問題：不是追求高擬真轉檔，而是用一致的 Markdown 結構，讓 PDF、Office、HTML、資料檔、音訊與延伸多模態內容更適合進入 AI 與 agent workflow。</p>
+        <p class="subtitle">這份教材把 MarkItDown 拆成文件 匯入 問題：不是追求高擬真轉檔，而是用一致的 Markdown 結構，讓 PDF、Office、HTML、資料檔、音訊與延伸多模態內容更適合進入 AI 與 代理 工作流程。</p>
       </div>
       <div class="cover-footer">
         <span>整理基礎：MarkItDown GitHub / MCP README / Microsoft Learn</span>
@@ -182,13 +182,13 @@
   <header>
     <div class="wrap">
       <div class="ad-logo-full" aria-label="Michael AI Agent Lab full logo"></div>
-      <span class="eyebrow">Course Framing</span>
+      <span class="eyebrow">課程定位</span>
       <h2>這堂課要回答的不是「怎麼把文件轉得漂亮」，而是「怎麼把各種文件整理成 AI 真正看得懂的輸入」。</h2>
-      <p class="lead">MarkItDown 最值得吸收的地方，不是它支援格式很多，而是它把文件前處理標準化。對實務團隊 這種會碰到 PDF 規格書、PPT 簡報、Excel 資料表、HTML 文件與知識庫 ingestion 的團隊來說，這層標準化非常實用。</p>
+      <p class="lead">MarkItDown 最值得吸收的地方，不是它支援格式很多，而是它把文件前處理標準化。對實務團隊 這種會碰到 PDF 規格書、PPT 簡報、Excel 資料表、HTML 文件與知識庫 匯入 的團隊來說，這層標準化非常實用。</p>
       <div class="metrics">
         <div class="metric"><b>10+</b><small>核心格式類型</small></div>
         <div class="metric"><b>CLI</b><small>一行命令可用</small></div>
-        <div class="metric"><b>MCP</b><small>本機 agent 可接入</small></div>
+        <div class="metric"><b>MCP</b><small>本機 代理 可接入</small></div>
         <div class="metric"><b>Azure CU</b><small>多模態高品質延伸</small></div>
       </div>
     </div>
@@ -212,13 +212,13 @@
     <section id="positioning">
       <div class="hero-media">
         <div>
-          <h2>MarkItDown 的正確定位：文件 ingestion layer，不是排版還原器</h2>
+          <h2>MarkItDown 的正確定位：文件 匯入層，不是排版還原器</h2>
           <p>官方 README 已經講得很清楚：它是給 LLM 與文字分析流程使用的 Markdown 轉換工具。這代表它的輸出重點是標題、列表、表格、連結、段落層次這些「語義與結構」，不是為了讓人眼看起來與原稿一模一樣。</p>
           <div class="callout">
             <strong>一句話定義</strong><br>
             如果你的目標是讓 AI 更好讀文件，MarkItDown 是前處理工具；如果你的目標是做高擬真出版還原，它就不是主角。
           </div>
-          <div class="soft" style="margin-top:12px">核心觀點：同樣是一份 PDF，亂掉的純文字與有結構的 Markdown，對下游 agent、RAG 與摘要流程的效果差很多。</div>
+          <div class="soft" style="margin-top:12px">核心觀點：同樣是一份 PDF，亂掉的純文字與有結構的 Markdown，對下游 代理、RAG 與摘要流程的效果差很多。</div>
         </div>
         <figure class="screenshot">
           <img src="../assets/tutorials-markitdown-preview.webp" alt="MarkItDown preview">
@@ -251,7 +251,7 @@
           <div class="card-body">
             <span class="tag green">MarkItDown 解法</span>
             <h3>統一轉成 Markdown</h3>
-            <p>把不同來源先轉成同一種結構化文字格式，讓後續摘要、索引、embedding、問答與 agent 調用比較穩。</p>
+            <p>把不同來源先轉成同一種結構化文字格式，讓後續摘要、索引、向量嵌入、問答與 代理 調用比較穩。</p>
           </div>
         </div>
         <div class="card orange">
@@ -259,7 +259,7 @@
           <div class="card-body">
             <span class="tag orange">工程價值</span>
             <h3>減少前處理碎工</h3>
-            <p>你不用每個格式各找一套 parser，再自己拼接清洗流程。</p>
+            <p>你不用每個格式各找一套 解析器，再自己拼接清洗流程。</p>
           </div>
         </div>
       </div>
@@ -273,24 +273,24 @@
         </thead>
         <tbody>
           <tr>
-            <td>PDF / Word / PowerPoint / Excel</td>
+            <td>PDF／Word／PowerPoint／Excel</td>
             <td>核心支援</td>
-            <td>最適合拿來做文件 ingestion 與知識整理前處理。</td>
+            <td>最適合拿來做文件 匯入 與知識整理前處理。</td>
           </tr>
           <tr>
-            <td>HTML / CSV / JSON / XML</td>
+            <td>HTML／CSV／JSON／XML</td>
             <td>核心支援</td>
             <td>對資料與網頁型內容特別方便，能統一落到 Markdown。</td>
           </tr>
           <tr>
-            <td>ZIP / EPub</td>
+            <td>ZIP／EPUB</td>
             <td>核心支援</td>
             <td>適合做批次內容整理，但輸出仍以分析友善為主，不是人眼最佳化排版。</td>
           </tr>
           <tr>
-            <td>Images / Audio</td>
+            <td>圖片／音訊</td>
             <td>支援，但能力深度有差</td>
-            <td>圖片與音訊可處理，但更高品質 OCR / transcription 往往需要 plugin 或雲端路徑。</td>
+            <td>圖片與音訊可處理，但更高品質 OCR / 語音轉寫 往往需要 外掛 或雲端路徑。</td>
           </tr>
           <tr>
             <td>影音網址</td>
@@ -299,7 +299,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="warn" style="margin-top:18px">這裡最容易被講太滿的是 OCR。官方 README 說得很明白，`markitdown-ocr` 是 plugin，而且沒有 `llm_client` 時會直接略過 OCR，不是每個環境都自動滿血。</div>
+      <div class="warn" style="margin-top:18px">這裡最容易被講太滿的是 OCR。官方 README 說得很明白，`markitdown-ocr` 是 外掛，而且沒有 `llm_client` 時會直接略過 OCR，不是每個環境都自動滿血。</div>
     </section>
 
     <section id="usage">
@@ -309,24 +309,24 @@
           <div class="bar"></div>
           <div class="card-body">
             <h3>CLI 用法</h3>
-            <pre>pip install 'markitdown[all]'
+            <pre data-language-code="">pip install 'markitdown[all]'
 
 markitdown path-to-file.pdf &gt; document.md
 
 markitdown path-to-file.pdf -o document.md</pre>
-            <p>最適合本機快速轉檔、腳本批次化，以及接在既有的 shell workflow 後面。</p>
+            <p>最適合本機快速轉檔、腳本批次化，以及接在既有的 命令列工作流程 後面。</p>
           </div>
         </div>
         <div class="card purple">
           <div class="bar"></div>
           <div class="card-body">
             <h3>Python API 用法</h3>
-            <pre>from markitdown import MarkItDown
+            <pre data-language-code="">from markitdown import MarkItDown
 
 md = MarkItDown()
 result = md.convert("test.xlsx")
 print(result.text_content)</pre>
-            <p>適合你要把轉換能力嵌進自己的 pipeline、agent service 或資料清洗程式裡。</p>
+            <p>適合你要把轉換能力嵌進自己的 處理管線、代理服務 或資料清洗程式裡。</p>
           </div>
         </div>
       </div>
@@ -339,7 +339,7 @@ print(result.text_content)</pre>
         <div class="card">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag">Scenario 1</span>
+            <span class="tag">情境 1</span>
             <h3>技術文件整理</h3>
             <p>把 PDF 白皮書、規格文件或研究報告轉成 Markdown，再匯入 Obsidian、Notion、Joplin 或向量索引流程。</p>
           </div>
@@ -347,7 +347,7 @@ print(result.text_content)</pre>
         <div class="card cyan">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag cyan">Scenario 2</span>
+            <span class="tag cyan">情境 2</span>
             <h3>簡報與匯報材料提煉</h3>
             <p>從 PowerPoint 或 Word 中抽出重點、章節與圖表說明，讓 AI 做摘要、比對與問答。</p>
           </div>
@@ -355,25 +355,25 @@ print(result.text_content)</pre>
         <div class="card green">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag green">Scenario 3</span>
-            <h3>RAG / Agent ingestion</h3>
-            <p>先用 Markdown 保存結構，再做 chunk、embedding、檢索或 agent 工具調用，效果通常比原始二進位檔案穩定。</p>
+            <span class="tag green">情境 3</span>
+            <h3>RAG／Agent 資料匯入</h3>
+            <p>先用 Markdown 保存結構，再做 切塊、向量嵌入、檢索或 代理 工具調用，效果通常比原始二進位檔案穩定。</p>
           </div>
         </div>
         <div class="card orange">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag orange">Scenario 4</span>
+            <span class="tag orange">情境 4</span>
             <h3>批量資料前處理</h3>
-            <p>配合 shell loop 或 Python，處理整個資料夾、ZIP、結構化輸入，統一輸出標準 Markdown。</p>
+            <p>配合 命令列循環 或 Python，處理整個資料夾、ZIP、結構化輸入，統一輸出標準 Markdown。</p>
           </div>
         </div>
         <div class="card purple">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag purple">Scenario 5</span>
+            <span class="tag purple">情境 5</span>
             <h3>本機 MCP 文件工具</h3>
-            <p>讓本機 agent 直接把檔案或 URL 轉成 Markdown，而不是每次手動開檔、複製、貼上。</p>
+            <p>讓本機 代理 直接把檔案或 URL 轉成 Markdown，而不是每次手動開檔、複製、貼上。</p>
           </div>
         </div>
         <div class="card yellow">
@@ -388,51 +388,51 @@ print(result.text_content)</pre>
     </section>
 
     <section id="advanced">
-      <h2>進階功能真正重要的有三條：plugin、MCP、Azure cloud path</h2>
+      <h2>進階功能真正重要的有三條：外掛、MCP、Azure 雲端路徑</h2>
       <div class="grid-2">
         <div class="card orange">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>1. OCR Plugin</h3>
-            <p><code>markitdown-ocr</code> 不是預設核心能力，而是 plugin。它用 LLM Vision 來補 PDF、DOCX、PPTX、XLSX 內嵌圖片的 OCR，不提供 LLM client 時 OCR 會被跳過。</p>
+            <h3>1. OCR 外掛</h3>
+            <p><code data-language-code="">markitdown-ocr</code> 不是預設核心能力，而是 外掛。它用 LLM Vision 來補 PDF、DOCX、PPTX、XLSX 內嵌圖片的 OCR，不提供 LLM client 時 OCR 會被跳過。</p>
           </div>
         </div>
         <div class="card cyan">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>2. MCP Server</h3>
-            <p><code>markitdown-mcp</code> 讓 agent 用 <code>convert_to_markdown(uri)</code> 工具轉換本機檔、遠端 URL、甚至 data URI。重點是它預設只該跑在 <code>localhost</code> 的可信任環境。</p>
+            <h3>2. MCP 伺服器</h3>
+            <p><code data-language-code="">markitdown-mcp</code> 讓 代理 用 <code data-language-code="">convert_to_markdown(uri)</code> 工具轉換本機檔、遠端 URL、甚至 data URI。重點是它預設只該跑在 <code data-language-code="">localhost</code> 的可信任環境。</p>
           </div>
         </div>
         <div class="card green">
           <div class="bar"></div>
           <div class="card-body">
             <h3>3. Azure Content Understanding</h3>
-            <p>當你碰到掃描 PDF、複雜表格、多頁文件、音訊、視訊與結構化欄位抽取時，官方推薦走 Azure Content Understanding。它還能輸出 YAML front matter 做欄位抽取。</p>
+            <p>當你碰到掃描 PDF、複雜表格、多頁文件、音訊、視訊與結構化欄位抽取時，官方推薦走 Azure Content Understanding。它還能輸出 YAML 前置中繼資料 做欄位抽取。</p>
           </div>
         </div>
         <div class="card purple">
           <div class="bar"></div>
           <div class="card-body">
             <h3>4. Azure Document Intelligence</h3>
-            <p>如果你主要要的是 document layout 與 cloud extraction，也有 Document Intelligence 路徑。它和 Content Understanding 不同，後者更強調多模態與欄位抽取。</p>
+            <p>如果你主要要的是 文件版面 與 雲端擷取，也有 Document Intelligence 路徑。它和 Content Understanding 不同，後者更強調多模態與欄位抽取。</p>
           </div>
         </div>
       </div>
       <div class="diagram" style="margin-top:18px">
-        <svg viewBox="0 0 1120 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MarkItDown capability map">
+        <svg viewbox="0 0 1120 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MarkItDown capability map">
           <rect width="1120" height="320" fill="#ffffff"/>
           <text x="42" y="54" font-size="30" font-family="Calibri, Noto Sans TC, sans-serif" font-weight="700" fill="#252c2e">MarkItDown 能力分層</text>
           <rect x="42" y="96" width="320" height="170" rx="14" fill="#eefbff" stroke="#d8d8d8"/>
           <rect x="400" y="96" width="320" height="170" rx="14" fill="#fbfff5" stroke="#d8d8d8"/>
           <rect x="758" y="96" width="320" height="170" rx="14" fill="#fff7f7" stroke="#d8d8d8"/>
-          <text x="72" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">Core</text>
-          <text x="72" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">CLI / Python API</text>
-          <text x="72" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">PDF / Office / HTML / data</text>
-          <text x="430" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">Extensions</text>
-          <text x="430" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">OCR plugin / image description</text>
+          <text x="72" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">核心</text>
+          <text x="72" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">CLI／Python API</text>
+          <text x="72" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">PDF／Office／HTML／資料</text>
+          <text x="430" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">擴充功能</text>
+          <text x="430" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">OCR 外掛／圖片描述</text>
           <text x="430" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">MCP / 影音轉寫</text>
-          <text x="788" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">Cloud Quality Path</text>
+          <text x="788" y="136" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">雲端品質路徑</text>
           <text x="788" y="168" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">Azure Document Intelligence</text>
           <text x="788" y="196" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">Azure Content Understanding</text>
           <path d="M362 181H390M720 181H748" stroke="#d0333a" stroke-width="4" stroke-linecap="round"/>
@@ -441,7 +441,7 @@ print(result.text_content)</pre>
     </section>
 
     <section id="risk">
-      <h2>這些限制與風險不能省略，尤其是 agent workflow</h2>
+      <h2>這些限制與風險不能省略，尤其是 代理 工作流程</h2>
       <table class="compare">
         <thead>
           <tr><th>項目</th><th>官方邊界</th><th>Michael 教學筆記上要怎麼提醒</th></tr>
@@ -453,7 +453,7 @@ print(result.text_content)</pre>
             <td>不能把不可信任的路徑、URL、內網資源直接交給它處理。</td>
           </tr>
           <tr>
-            <td>MCP server</td>
+            <td>MCP 伺服器</td>
             <td>本機可信任用途，預設綁 localhost</td>
             <td>不要為了方便就暴露到公網或任意網段。</td>
           </tr>
@@ -464,17 +464,17 @@ print(result.text_content)</pre>
           </tr>
           <tr>
             <td>OCR</td>
-            <td>plugin + LLM client 才完整</td>
+            <td>外掛 + LLM client 才完整</td>
             <td>不要把 OCR 當成預設免費內建滿血能力。</td>
           </tr>
           <tr>
             <td>輸出品質</td>
-            <td>偏向 LLM consumption，不保證人眼排版完美</td>
+            <td>偏向 LLM 讀取，不保證人眼排版完美</td>
             <td>如果交付給人看，通常還要再經過清理或版面整理。</td>
           </tr>
         </tbody>
       </table>
-      <div class="warn" style="margin-top:18px">最容易踩坑的是把 MarkItDown 當成「任何文件都能完美還原」的轉檔器。它真正擅長的是統一 ingestion，不是所有文件都零損失重建。</div>
+      <div class="warn" style="margin-top:18px">最容易踩坑的是把 MarkItDown 當成「任何文件都能完美還原」的轉檔器。它真正擅長的是統一 匯入，不是所有文件都零損失重建。</div>
     </section>
 
     <section id="practice">
@@ -487,7 +487,7 @@ print(result.text_content)</pre>
           <tr>
             <td>教學教材產線</td>
             <td>來源檔案很雜，PDF / PPT / HTML 混在一起</td>
-            <td>先統一轉 Markdown，再交給 lesson brief、summary agent 或 HTML 產線。</td>
+            <td>先統一轉 Markdown，再交給 課程摘要、摘要代理 或 HTML 產線。</td>
           </tr>
           <tr>
             <td>研究報告與白皮書整理</td>
@@ -495,32 +495,32 @@ print(result.text_content)</pre>
             <td>把來源先轉為可索引 Markdown，方便做摘要、比對與引用整理。</td>
           </tr>
           <tr>
-            <td>Wiki / RAG ingestion</td>
+            <td>Wiki／RAG 資料匯入</td>
             <td>不同文件格式進知識庫很難一致</td>
-            <td>先標準化，再做 chunk、embedding、metadata 與檢索。</td>
+            <td>先標準化，再做 切塊、向量嵌入、中繼資料 與檢索。</td>
           </tr>
           <tr>
-            <td>Agent 文件讀取</td>
-            <td>每次都手開 PDF、複製內容給 agent</td>
-            <td>可透過本機 MCP 或預處理流程，讓 agent 直接吃 Markdown 輸入。</td>
+            <td>代理 文件讀取</td>
+            <td>每次都手開 PDF、複製內容給 代理</td>
+            <td>可透過本機 MCP 或預處理流程，讓 代理 直接吃 Markdown 輸入。</td>
           </tr>
           <tr>
             <td>客戶文件與規格表</td>
             <td>表格、章節與重點難抽</td>
-            <td>先做文件層轉換，再把真正難的掃描件交給 Azure cloud path。</td>
+            <td>先做文件層轉換，再把真正難的掃描件交給 Azure 雲端路徑。</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>一句話比較：它不是 Pandoc 的替代思路，而是 AI ingestion 思路</h2>
+      <h2>一句話比較：它不是 Pandoc 的替代思路，而是 AI 匯入 思路</h2>
       <div class="grid-2">
         <div class="card orange">
           <div class="bar"></div>
           <div class="card-body">
             <h3>傳統文件轉檔思路</h3>
-            <pre>目標：給人看
+            <pre data-language-code="">目標：給人看
 重點：版面接近原稿
 常見要求：字型、頁碼、段距、視覺還原</pre>
           </div>
@@ -529,33 +529,33 @@ print(result.text_content)</pre>
           <div class="bar"></div>
           <div class="card-body">
             <h3>MarkItDown 思路</h3>
-            <pre>目標：給 AI / agent / text pipeline 用
+            <pre data-language-code="">目標：給 AI / agent / text pipeline 用
 重點：結構穩定、內容可讀、token 友善
 常見要求：標題、列表、表格、欄位、可索引</pre>
           </div>
         </div>
       </div>
-      <div class="soft" style="margin-top:18px">這個角度很重要。你一旦把目標換成 ingestion，很多工具選型與驗收標準都會跟傳統文件轉換完全不同。</div>
+      <div class="soft" style="margin-top:18px">這個角度很重要。你一旦把目標換成 匯入，很多工具選型與驗收標準都會跟傳統文件轉換完全不同。</div>
     </section>
 
     <section id="checklist">
       <h2>導入前先過這張清單</h2>
       <ol class="step-list">
-        <li><strong>先確認目標是 AI ingestion，不是排版還原。</strong><br>如果需求是給人類閱讀的精緻排版，後面還要再接另一層整理。</li>
+        <li><strong>先確認目標是 AI 匯入，不是排版還原。</strong><br>如果需求是給人類閱讀的精緻排版，後面還要再接另一層整理。</li>
         <li><strong>先挑一批高頻文件類型。</strong><br>例如 PDF 規格書、PPT 匯報、Word 文件、Excel 表格，先用這些做轉換品質抽查。</li>
         <li><strong>把 OCR 與掃描件分流。</strong><br>不要假設所有圖像型文件都能本地一次解決，高難度場景要預留 Azure 路徑。</li>
-        <li><strong>如果要給 agent 用，先處理權限邊界。</strong><br>MCP server 與本地轉換工具都應該設在可信任環境，不要亂開網路存取。</li>
-        <li><strong>把 Markdown 輸出接進後續流程。</strong><br>真正價值不是「轉完就放著」，而是進 chunk、embedding、RAG、summary、wiki intake 或 HTML 教材產線。</li>
+        <li><strong>如果要給 代理 用，先處理權限邊界。</strong><br>MCP 伺服器 與本地轉換工具都應該設在可信任環境，不要亂開網路存取。</li>
+        <li><strong>把 Markdown 輸出接進後續流程。</strong><br>真正價值不是「轉完就放著」，而是進 切塊、向量嵌入、RAG、摘要、知識庫匯入 或 HTML 教材產線。</li>
       </ol>
     </section>
 
     <section id="sources">
       <h2>來源</h2>
       <div class="source-list">
-        <a href="https://github.com/microsoft/markitdown">GitHub：microsoft / markitdown</a>
+        <a href="https://github.com/microsoft/markitdown">GitHub：microsoft／markitdown</a>
         <a href="https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp">GitHub：markitdown-mcp README</a>
-        <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/whats-new">Microsoft Learn：What's new in Azure Content Understanding</a>
-        <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/document/markdown">Microsoft Learn：Document analysis Markdown representation</a>
+        <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/whats-new">Microsoft Learn：Azure Content Understanding 最新消息</a>
+        <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/document/markdown">Microsoft Learn：文件分析的 Markdown 表示法</a>
         <a href="https://pypi.org/project/markitdown/">PyPI：markitdown</a>
       </div>
     </section>
@@ -567,7 +567,7 @@ print(result.text_content)</pre>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>知識庫、文件轉換與上下文治理</h2>
     <ul>
       <li><a href="./ai-second-brain-knowledge-base.html">AI 第二大腦：文字、圖片與 Skill 的 Agent 知識庫</a></li>

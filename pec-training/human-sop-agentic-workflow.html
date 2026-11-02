@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="把 Human SOP 轉成可執行、可檢查、可迭代的 Agentic Workflow。">
-  <title>把 SOP 拆成 Agent 真能執行的 Workflow</title>
+  <title>把 SOP 拆成 Agent 真能執行的 工作流程</title>
   <style>
     :root {
       color-scheme: light;
@@ -339,14 +339,14 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/f3258d9ef434ae14.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <div class="brand">
         <span class="brand-mark" aria-hidden="true">M</span>
         <span class="brand-label">Michael Agent Lab</span>
-        <span class="draft">Teaching note</span>
+        <span class="draft">教學筆記</span>
       </div>
       <nav class="nav" aria-label="頁面章節">
         <a href="#method">四步方法</a>
@@ -360,97 +360,97 @@
   <div class="wrap hero">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Agentic Workflow Design</p>
-        <h1>把 SOP 拆成 Agent 真能執行的 Workflow</h1>
-        <p class="hero-lead">Agent 不缺能力，常缺的是明確邊界。把大任務拆成小節點，定義每一步的輸入、輸出與驗收條件，才有機會穩定運作。</p>
+        <p class="eyebrow">代理工作流程設計</p>
+        <h1>把 SOP 拆成 Agent 真能執行的 工作流程</h1>
+        <p class="hero-lead">代理 不缺能力，常缺的是明確邊界。把大任務拆成小節點，定義每一步的輸入、輸出與驗收條件，才有機會穩定運作。</p>
         <div class="hero-note">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           先做出可觀察的小流程，再逐步增加自動化。
         </div>
       </div>
 
       <div class="workflow-board" aria-label="Agent 工作流程示意">
-        <div class="board-head"><b>Workflow map</b><span>Artifact by artifact</span></div>
+        <div class="board-head"><b>工作流程圖</b><span>逐份成品處理</span></div>
         <div class="flow-node">
-          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6"/></svg></span>
+          <span class="flow-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6"/></svg></span>
           <div><b>接收請求</b><small>讀取原始內容與必要背景</small></div>
-          <span class="artifact">RAW</span>
+          <span class="artifact">原始資料</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
-          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M7 10h10M10 15h4M12 15v5"/></svg></span>
+          <span class="flow-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M7 10h10M10 15h4M12 15v5"/></svg></span>
           <div><b>分類與結構化</b><small>輸出固定欄位，不靠下一步猜</small></div>
           <span class="artifact">JSON</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
-          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h4l10-10-4-4L4 14zM13 5l4 4"/></svg></span>
+          <span class="flow-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 18h4l10-10-4-4L4 14zM13 5l4 4"/></svg></span>
           <div><b>產生處理草稿</b><small>依分類、規則與資料撰寫</small></div>
-          <span class="artifact">DRAFT</span>
+          <span class="artifact">草稿</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node approval-node">
-          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7zM9 12l2 2 4-4"/></svg></span>
+          <span class="flow-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7zM9 12l2 2 4-4"/></svg></span>
           <div><b>高風險人工確認</b><small>通過後才寫回系統或執行動作</small></div>
-          <span class="artifact">APPROVE</span>
+          <span class="artifact">核准</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="wrap thesis" aria-label="核心轉換">
-    <div class="thesis-side"><b>Before</b><span>一份靠人腦補判斷的 Human SOP</span></div>
+    <div class="thesis-side"><b>之前</b><span>一份靠人腦補判斷的 人工 SOP</span></div>
     <div class="thesis-arrow" aria-hidden="true">→</div>
-    <div class="thesis-side"><b>After</b><span>可執行、可檢查、可修正的 Agentic Workflow</span></div>
+    <div class="thesis-side"><b>之後</b><span>可執行、可檢查、可修正的 代理工作流程</span></div>
   </div>
 
   <main class="wrap">
     <section id="layers">
       <div class="section-head">
-        <div class="section-no">01 / LAYERS</div>
-        <div><h2>先分清楚三個層級</h2><p class="section-intro">Human SOP、Skill 與 Agentic Workflow 不是三種名稱，而是從「人怎麼做」一路走到「系統如何完成整件事」的三個層級。</p></div>
+        <div class="section-no">01／層次</div>
+        <div><h2>先分清楚三個層級</h2><p class="section-intro">人工 SOP、技能 與 代理工作流程 不是三種名稱，而是從「人怎麼做」一路走到「系統如何完成整件事」的三個層級。</p></div>
       </div>
       <div class="layer-grid">
         <article class="layer">
-          <div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h5"/></svg></div>
-          <h3>Human SOP</h3>
+          <div class="layer-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h5"/></svg></div>
+          <h3>人工 SOP</h3>
           <p>寫給人看的流程文件。人會用經驗補上例外、優先順序與「大家都知道」的默會知識。</p>
           <dl><dt>主要讀者</dt><dd>人</dd><dt>常見問題</dt><dd>規則藏在腦中，文件更新慢</dd></dl>
         </article>
         <article class="layer">
-          <div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v4h4v6h-4v4H9v-4H5V7h4zM9 9h6v6H9z"/></svg></div>
-          <h3>Skill</h3>
+          <div class="layer-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v4h4v6h-4v4H9v-4H5V7h4zM9 9h6v6H9z"/></svg></div>
+          <h3>技能</h3>
           <p>一個界線清楚的能力單元，包含何時使用、判斷規則、參考資料，以及必要時可執行的腳本。</p>
           <dl><dt>主要讀者</dt><dd>Agent</dd><dt>合理範圍</dt><dd>一次負責一類明確任務</dd></dl>
         </article>
         <article class="layer">
-          <div class="layer-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h5v5H5zM14 14h5v5h-5zM14 5h5M7.5 10v4h6.5M16.5 10v4"/></svg></div>
-          <h3>Agentic Workflow</h3>
-          <p>把多個步驟、Skill、工具、資料與人工決策點串成一條完成任務的流程。</p>
-          <dl><dt>主要目標</dt><dd>從輸入一路產出可驗收結果</dd><dt>核心設計</dt><dd>節點、Artifact、規則與控制點</dd></dl>
+          <div class="layer-icon"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M5 5h5v5H5zM14 14h5v5h-5zM14 5h5M7.5 10v4h6.5M16.5 10v4"/></svg></div>
+          <h3>代理工作流程</h3>
+          <p>把多個步驟、技能、工具、資料與人工決策點串成一條完成任務的流程。</p>
+          <dl><dt>主要目標</dt><dd>從輸入一路產出可驗收結果</dd><dt>核心設計</dt><dd>節點、產物、規則與控制點</dd></dl>
         </article>
       </div>
     </section>
 
     <section id="mega-agent">
       <div class="section-head">
-        <div class="section-no">02 / BOUNDARY</div>
+        <div class="section-no">02／界線</div>
         <div><h2>問題往往不在模型，而在任務太大</h2><p class="section-intro">一句「幫我優化整個流程」把判斷、搜尋、操作與驗收全塞在一起。即使結果看起來完整，也難以知道哪一段可靠。</p></div>
       </div>
       <div class="contrast">
         <article class="contrast-card bad">
-          <h3>Mega Agent</h3>
-          <p>一個 Agent 從頭做到尾，中間決策缺少明確介面。</p>
+          <h3>大型綜合 Agent</h3>
+          <p>一個 代理 從頭做到尾，中間決策缺少明確介面。</p>
           <div class="signal"><b>出錯時</b><span>難以定位是哪一段推理或工具呼叫出了問題。</span></div>
-          <div class="signal"><b>修改時</b><span>常得重寫整段 Prompt，容易影響原本正確的部分。</span></div>
+          <div class="signal"><b>修改時</b><span>常得重寫整段 提示詞，容易影響原本正確的部分。</span></div>
           <div class="signal"><b>驗收時</b><span>只能看最後結果，很難逐步檢查。</span></div>
         </article>
-        <div class="contrast-vs">VS</div>
+        <div class="contrast-vs">對比</div>
         <article class="contrast-card good">
-          <h3>可組合 Workflow</h3>
-          <p>每個節點只處理一個明確問題，靠結構化 Artifact 串接。</p>
-          <div class="signal"><b>出錯時</b><span>可以從 Log 與中間產物找到問題節點。</span></div>
-          <div class="signal"><b>修改時</b><span>只調整失準的規則、Skill 或工具。</span></div>
+          <h3>可組合 工作流程</h3>
+          <p>每個節點只處理一個明確問題，靠結構化 產物 串接。</p>
+          <div class="signal"><b>出錯時</b><span>可以從 紀錄 與中間產物找到問題節點。</span></div>
+          <div class="signal"><b>修改時</b><span>只調整失準的規則、技能 或工具。</span></div>
           <div class="signal"><b>驗收時</b><span>每一步都有成功條件與人工檢查點。</span></div>
         </article>
       </div>
@@ -458,53 +458,53 @@
 
     <section id="method">
       <div class="section-head">
-        <div class="section-no">03 / METHOD</div>
-        <div><h2>四步把 Human SOP 轉成 Workflow</h2><p class="section-intro">每一步都應留下看得見的產物。沒有產物，就很難驗證流程是否真的變得更清楚。</p></div>
+        <div class="section-no">03／方法</div>
+        <div><h2>四步把 人工 SOP 轉成 工作流程</h2><p class="section-intro">每一步都應留下看得見的產物。沒有產物，就很難驗證流程是否真的變得更清楚。</p></div>
       </div>
       <div class="method">
         <article class="method-card">
-          <div class="method-index"><strong>01</strong><span>Standardize</span></div>
+          <div class="method-index"><strong>01</strong><span>標準化</span></div>
           <div class="method-body">
             <h3>格式標準化</h3>
-            <p>把散文式 SOP 改成 Agent 可判讀的規格：抽出參數、標示規則強度，並把步驟、錯誤處理與輸出格式分區。</p>
-            <div class="rule-row"><div class="rule-word">MUST</div><div class="rule-copy"><b>不能省略的硬規則</b><span>例如：執行前必須驗證申請人身分。</span></div></div>
-            <div class="rule-row"><div class="rule-word">SHOULD</div><div class="rule-copy"><b>原則上要做</b><span>若有充分理由可例外，但要留下原因。</span></div></div>
-            <div class="rule-row"><div class="rule-word">MAY</div><div class="rule-copy"><b>視情況採用</b><span>不影響核心正確性的選配行為。</span></div></div>
-            <div class="io-grid"><div class="io-cell"><b>Input</b><span>現有 SOP、使用情境與例外經驗</span></div><div class="io-cell"><b>Action</b><span>參數化、規則分級、區塊化</span></div><div class="io-cell"><b>Deliverable</b><span>結構化 Agent SOP v1</span></div></div>
+            <p>把散文式 SOP 改成 代理 可判讀的規格：抽出參數、標示規則強度，並把步驟、錯誤處理與輸出格式分區。</p>
+            <div class="rule-row"><div class="rule-word">必須</div><div class="rule-copy"><b>不能省略的硬規則</b><span>例如：執行前必須驗證申請人身分。</span></div></div>
+            <div class="rule-row"><div class="rule-word">應該</div><div class="rule-copy"><b>原則上要做</b><span>若有充分理由可例外，但要留下原因。</span></div></div>
+            <div class="rule-row"><div class="rule-word">可以</div><div class="rule-copy"><b>視情況採用</b><span>不影響核心正確性的選配行為。</span></div></div>
+            <div class="io-grid"><div class="io-cell"><b>輸入</b><span>現有 SOP、使用情境與例外經驗</span></div><div class="io-cell"><b>行動</b><span>參數化、規則分級、區塊化</span></div><div class="io-cell"><b>交付成果</b><span>結構化 代理 SOP v1</span></div></div>
           </div>
         </article>
 
         <article class="method-card">
-          <div class="method-index"><strong>02</strong><span>Decompose</span></div>
+          <div class="method-index"><strong>02</strong><span>拆解</span></div>
           <div class="method-body">
-            <h3>拆成節點，用 Artifact 串起來</h3>
+            <h3>拆成節點，用 產物 串起來</h3>
             <p>每個節點都要能獨立執行、獨立驗收、獨立替換。上一個節點的輸出，必須成為下一個節點不用猜的輸入。</p>
-            <div class="io-grid"><div class="io-cell"><b>Input</b><span>結構化 SOP 與完整任務目標</span></div><div class="io-cell"><b>Action</b><span>定義節點邊界、輸入輸出、成功標準</span></div><div class="io-cell"><b>Deliverable</b><span>流程圖與 Artifact Schema</span></div></div>
+            <div class="io-grid"><div class="io-cell"><b>輸入</b><span>結構化 SOP 與完整任務目標</span></div><div class="io-cell"><b>行動</b><span>定義節點邊界、輸入輸出、成功標準</span></div><div class="io-cell"><b>交付成果</b><span>流程圖與 產物 結構規格</span></div></div>
           </div>
         </article>
 
         <article class="method-card">
-          <div class="method-index"><strong>03</strong><span>Iterate</span></div>
+          <div class="method-index"><strong>03</strong><span>反覆改進</span></div>
           <div class="method-body">
             <h3>用真實執行找出默會知識</h3>
-            <p>第一版不會完整。讓流程在低風險資料上跑，觀察 Agent 哪裡誤判，再把原本只存在人腦裡的條件補回規格。</p>
+            <p>第一版不會完整。讓流程在低風險資料上跑，觀察 代理 哪裡誤判，再把原本只存在人腦裡的條件補回規格。</p>
             <div class="iteration-loop" aria-label="迭代循環">
               <div class="loop-step"><b>寫 v1</b><span>先求能跑，不假裝一次完美。</span></div>
               <div class="loop-step"><b>小量執行</b><span>用真實但低風險案例測試。</span></div>
-              <div class="loop-step"><b>看 Artifact</b><span>找出誤判發生在哪個節點。</span></div>
+              <div class="loop-step"><b>看 產物</b><span>找出誤判發生在哪個節點。</span></div>
               <div class="loop-step"><b>補規則</b><span>把隱藏的判斷寫進 SOP。</span></div>
               <div class="loop-step"><b>再測一次</b><span>確認問題修好且沒有新回歸。</span></div>
             </div>
-            <div class="io-grid"><div class="io-cell"><b>Input</b><span>第一版流程與代表性案例</span></div><div class="io-cell"><b>Action</b><span>執行、觀察、修規則、回歸測試</span></div><div class="io-cell"><b>Deliverable</b><span>錯誤紀錄、測試集與 SOP v2+</span></div></div>
+            <div class="io-grid"><div class="io-cell"><b>輸入</b><span>第一版流程與代表性案例</span></div><div class="io-cell"><b>行動</b><span>執行、觀察、修規則、回歸測試</span></div><div class="io-cell"><b>交付成果</b><span>錯誤紀錄、測試集與 SOP v2+</span></div></div>
           </div>
         </article>
 
         <article class="method-card">
-          <div class="method-index"><strong>04</strong><span>Integrate</span></div>
+          <div class="method-index"><strong>04</strong><span>整合</span></div>
           <div class="method-body">
             <h3>接上工具，也接上控制點</h3>
-            <p>工具讓 Agent 能讀取資料或執行動作；人工確認、權限、記錄與停止條件，則讓流程保持可控。MCP 是連接外部能力的協定，不會替你設計整條工作流。</p>
-            <div class="io-grid"><div class="io-cell"><b>Input</b><span>已驗證的節點、權限需求與風險分級</span></div><div class="io-cell"><b>Action</b><span>接工具、限制權限、加 Log 與人工閘門</span></div><div class="io-cell"><b>Deliverable</b><span>可觀測、可停止、可回復的流程</span></div></div>
+            <p>工具讓 代理 能讀取資料或執行動作；人工確認、權限、記錄與停止條件，則讓流程保持可控。MCP 是連接外部能力的協定，不會替你設計整條工作流。</p>
+            <div class="io-grid"><div class="io-cell"><b>輸入</b><span>已驗證的節點、權限需求與風險分級</span></div><div class="io-cell"><b>行動</b><span>接工具、限制權限、加 紀錄 與人工閘門</span></div><div class="io-cell"><b>交付成果</b><span>可觀測、可停止、可回復的流程</span></div></div>
           </div>
         </article>
       </div>
@@ -512,56 +512,56 @@
 
     <section id="case">
       <div class="section-head">
-        <div class="section-no">04 / CASE</div>
+        <div class="section-no">04／案例</div>
         <div><h2>案例：公司內部請求分類</h2><p class="section-intro">表單、Email 或通訊軟體送來的請求，常需要分類、判斷優先級、找負責人與草擬回覆。這類重複工作適合先做成窄而清楚的流程。</p></div>
       </div>
       <div class="case-shell">
-        <div class="case-head"><h3>Internal Request Triage</h3><span>示意資料，不含真實公司資訊</span></div>
+        <div class="case-head"><h3>內部需求分流</h3><span>示意資料，不含真實公司資訊</span></div>
         <div class="case-flow">
           <div class="case-step"><span class="case-step-no">1</span><h4>讀取請求</h4><p>保留原文、來源、時間與必要識別欄位。</p></div>
-          <div class="case-step"><span class="case-step-no">2</span><h4>分類</h4><p>輸出 IT、HR、Finance 或 Other，並附信心程度。</p></div>
+          <div class="case-step"><span class="case-step-no">2</span><h4>分類</h4><p>輸出 資訊、人資、財務 或 其他，並附信心程度。</p></div>
           <div class="case-step"><span class="case-step-no">3</span><h4>補充資訊</h4><p>若內容不足，產生兩至三個具體釐清問題。</p></div>
           <div class="case-step"><span class="case-step-no">4</span><h4>回覆草稿</h4><p>根據分類與 SLA 產生回覆，不直接送出。</p></div>
           <div class="case-step approval"><span class="case-step-no">5</span><h4>確認與寫回</h4><p>高權限、財務或低信心案件先由人確認。</p></div>
         </div>
         <div class="artifact-strip">
-          <div class="artifact-item"><b>Artifact A</b><code>request.normalized.json</code></div>
-          <div class="artifact-item"><b>Artifact B</b><code>triage.result.json</code></div>
-          <div class="artifact-item"><b>Artifact C</b><code>reply.draft.md</code></div>
+          <div class="artifact-item"><b>成品 A</b><code data-language-code="">request.normalized.json</code></div>
+          <div class="artifact-item"><b>成品 B</b><code data-language-code="">triage.result.json</code></div>
+          <div class="artifact-item"><b>成品 C</b><code data-language-code="">reply.draft.md</code></div>
         </div>
       </div>
     </section>
 
     <section id="worksheet">
       <div class="section-head">
-        <div class="section-no">05 / PRACTICE</div>
+        <div class="section-no">05／練習</div>
         <div><h2>從一件最無聊的重複工作開始</h2><p class="section-intro">先挑每週都在做、規則大致穩定、失敗風險可控制的工作。第一版只要能省下一部分時間，不必一次追求全自動。</p></div>
       </div>
       <div class="worksheet">
         <div class="worksheet-copy">
           <h3>一頁工作表</h3>
-          <p>把答案寫清楚，再決定要用哪個 Agent、模型或工具。</p>
+          <p>把答案寫清楚，再決定要用哪個 代理、模型或工具。</p>
           <ol><li>先縮小任務邊界。</li><li>先定義輸出，再寫步驟。</li><li>先保留人工確認，再逐步放寬。</li></ol>
         </div>
         <div class="worksheet-form">
-          <div class="field"><b>Task</b><span>哪一件重複工作最耗時間？開始與結束在哪裡？</span></div>
-          <div class="field"><b>Inputs</b><span>流程一定需要哪些資料？哪些資料可能缺漏？</span></div>
-          <div class="field"><b>Artifacts</b><span>每一步要留下什麼結構化輸出，下一步才不用猜？</span></div>
-          <div class="field"><b>Rules</b><span>哪些是 MUST、SHOULD、MAY？例外怎麼處理？</span></div>
-          <div class="field"><b>Acceptance</b><span>什麼情況算成功？要用哪些案例驗證？</span></div>
-          <div class="field"><b>Human Gate</b><span>哪些動作涉及權限、金錢、外部溝通或不可逆變更？</span></div>
+          <div class="field"><b>任務</b><span>哪一件重複工作最耗時間？開始與結束在哪裡？</span></div>
+          <div class="field"><b>輸入資料</b><span>流程一定需要哪些資料？哪些資料可能缺漏？</span></div>
+          <div class="field"><b>成品</b><span>每一步要留下什麼結構化輸出，下一步才不用猜？</span></div>
+          <div class="field"><b>規則</b><span>哪些是 MUST、SHOULD、MAY？例外怎麼處理？</span></div>
+          <div class="field"><b>驗收</b><span>什麼情況算成功？要用哪些案例驗證？</span></div>
+          <div class="field"><b>人工確認關卡</b><span>哪些動作涉及權限、金錢、外部溝通或不可逆變更？</span></div>
         </div>
       </div>
     </section>
 
     <section id="checklist">
       <div class="section-head">
-        <div class="section-no">06 / REVIEW</div>
+        <div class="section-no">06／審查</div>
         <div><h2>上線前的六項檢查</h2><p class="section-intro">流程不是能跑就算完成；還要能理解、能追蹤、能停止，也要知道失敗後怎麼恢復。</p></div>
       </div>
       <div class="check-grid">
         <div class="check-item"><span class="check-mark">1</span><div class="check-copy"><b>邊界明確</b><span>每個節點只處理一類任務，沒有偷偷接管整條流程。</span></div></div>
-        <div class="check-item"><span class="check-mark">2</span><div class="check-copy"><b>輸入輸出固定</b><span>Artifact 有 Schema、必要欄位與錯誤格式。</span></div></div>
+        <div class="check-item"><span class="check-mark">2</span><div class="check-copy"><b>輸入輸出固定</b><span>產物 有 結構規格、必要欄位與錯誤格式。</span></div></div>
         <div class="check-item"><span class="check-mark">3</span><div class="check-copy"><b>成功可以驗證</b><span>每一步都有可測量的接受條件與代表性案例。</span></div></div>
         <div class="check-item"><span class="check-mark">4</span><div class="check-copy"><b>過程可以觀察</b><span>保留執行紀錄、中間產物、錯誤原因與版本。</span></div></div>
         <div class="check-item"><span class="check-mark">5</span><div class="check-copy"><b>權限最小化</b><span>讀取與寫入權限分開，只開放任務真正需要的能力。</span></div></div>
@@ -571,28 +571,28 @@
 
     <section id="sources">
       <div class="section-head">
-        <div class="section-no">07 / SOURCES</div>
+        <div class="section-no">07／來源</div>
         <div><h2>來源與延伸閱讀</h2><p class="section-intro">本頁以原始內容為主軸，再用官方資料核對技術名詞與設計邊界；不是逐字轉錄。</p></div>
       </div>
       <div class="source-list">
-        <div class="source-item"><div class="source-type">Original</div><div><b>AI 時代非技術人最該學的設計能力</b><span>Gary Chen，Human SOP 到 Agentic Workflow</span></div><a href="https://www.youtube.com/watch?v=Yzpx4Xaigms" target="_blank" rel="noreferrer">觀看原始內容 →</a></div>
-        <div class="source-item"><div class="source-type">Architecture</div><div><b>Building Effective AI Agents</b><span>Anthropic：可組合 Workflow、Routing、Evaluator 與人工檢查點</span></div><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noreferrer">官方文章 →</a></div>
-        <div class="source-item"><div class="source-type">Specification</div><div><b>Agent Skills Specification</b><span>Skill 目錄、SKILL.md、scripts 與 references 的正式結構</span></div><a href="https://agentskills.io/specification" target="_blank" rel="noreferrer">查看規格 →</a></div>
-        <div class="source-item"><div class="source-type">Protocol</div><div><b>Model Context Protocol Architecture</b><span>MCP 的 Host、Client、Server，以及 Tools、Resources、Prompts</span></div><a href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noreferrer">官方文件 →</a></div>
-        <div class="source-item"><div class="source-type">Language</div><div><b>RFC 2119</b><span>MUST、SHOULD、MAY 的要求強度定義</span></div><a href="https://datatracker.ietf.org/doc/rfc2119/" target="_blank" rel="noreferrer">查看 RFC →</a></div>
+        <div class="source-item"><div class="source-type">原始版本</div><div><b>AI 時代非技術人最該學的設計能力</b><span>Gary Chen，Human SOP 到 Agentic Workflow</span></div><a href="https://www.youtube.com/watch?v=Yzpx4Xaigms" target="_blank" rel="noreferrer">觀看原始內容 →</a></div>
+        <div class="source-item"><div class="source-type">架構</div><div><b>建構有效的 AI Agent</b><span>Anthropic：可組合 工作流程、Routing、評估器 與人工檢查點</span></div><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noreferrer">官方文章 →</a></div>
+        <div class="source-item"><div class="source-type">規格</div><div><b>Agent Skills 規格</b><span>技能 目錄、SKILL.md、scripts 與 references 的正式結構</span></div><a href="https://agentskills.io/specification" target="_blank" rel="noreferrer">查看規格 →</a></div>
+        <div class="source-item"><div class="source-type">協定</div><div><b>模型上下文協定架構</b><span>MCP 的 Host、Client、Server，以及 工具、Resources、Prompts</span></div><a href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noreferrer">官方文件 →</a></div>
+        <div class="source-item"><div class="source-type">語言</div><div><b>RFC 2119</b><span>MUST、SHOULD、MAY 的要求強度定義</span></div><a href="https://datatracker.ietf.org/doc/rfc2119/" target="_blank" rel="noreferrer">查看 RFC →</a></div>
       </div>
       <div class="scope-note"><b>範圍說明：</b>本教材整理的是工作流設計方法。實際導入時仍需依資料敏感度、權限、法規、錯誤成本與使用平台調整；MCP 解決的是標準化連接，不等於自動提供安全、驗收或流程治理。</div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-inner"><span>Michael Agent Lab · Public teaching note</span><span>更新日期：2026-08-07</span></div>
+    <div class="wrap footer-inner"><span>Michael Agent Lab · 公開教學筆記</span><span>更新日期：2026-08-07</span></div>
   </footer>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
       <li><a href="./claude-md-agents-md.html">CLAUDE.md 與 AGENTS.md：把 AI 協作規則寫在對的位置</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>

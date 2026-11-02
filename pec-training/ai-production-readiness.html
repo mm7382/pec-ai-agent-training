@@ -345,20 +345,20 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/4576c5e5ab94838c.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <div class="brand">Michael Agent Lab</div>
       <nav class="nav" aria-label="章節導覽">
         <a href="#gates">三道關卡</a>
-        <a href="#spec">Spec</a>
+        <a href="#spec">規格</a>
         <a href="#security">安全邊界</a>
         <a href="#evaluation">驗收</a>
-        <a href="#review">Review</a>
+        <a href="#review">複習</a>
         <a href="#sources">來源</a>
       </nav>
-      <div class="draft">Teaching note</div>
+      <div class="draft">教學筆記</div>
     </div>
   </header>
 
@@ -366,59 +366,59 @@
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Production-ready AI / Agentic Engineering</p>
+          <p class="eyebrow">可正式上線的 AI／代理工程</p>
           <h1 id="page-title">AI 能做，不代表可以放心上線。</h1>
           <p class="hero-lead">真正的正式環境，不靠「相信模型」。它靠清楚的規格、能限制損害的邊界，以及可重複驗證的證據。</p>
           <div class="hero-thesis">能力回答「做不做得到」；工程回答「敢不敢交付」。</div>
         </div>
         <aside class="hero-visual" aria-label="AI 正式環境三道關卡示意圖">
           <div class="visual-head">
-            <span>Production Readiness</span>
-            <span class="visual-status">Release Gate</span>
+            <span>上線準備度</span>
+            <span class="visual-status">發布關卡</span>
           </div>
           <div class="readiness-core">
             <span class="ai-core">AI</span>
-            <div><b>具備能力</b><span>Capability confirmed</span></div>
+            <div><b>具備能力</b><span>能力已確認</span></div>
           </div>
           <div class="visual-connector" aria-hidden="true"></div>
           <div class="visual-gates">
             <div class="visual-gate">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 11h6M9 15h6"/></svg>
-              <div><b>Spec</b><span>意圖與完成標準清楚</span></div>
-              <span class="gate-pass">Defined</span>
+              <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 11h6M9 15h6"/></svg>
+              <div><b>規格</b><span>意圖與完成標準清楚</span></div>
+              <span class="gate-pass">已定義</span>
             </div>
             <div class="visual-gate">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4.2 2.5 7.3 7 9 4.5-1.7 7-4.8 7-9V6z"/><path d="m9 12 2 2 4-5"/></svg>
+              <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4.2 2.5 7.3 7 9 4.5-1.7 7-4.8 7-9V6z"/><path d="m9 12 2 2 4-5"/></svg>
               <div><b>安全邊界</b><span>權限、隔離與人工關卡</span></div>
-              <span class="gate-pass">Contained</span>
+              <span class="gate-pass">已限制範圍</span>
             </div>
             <div class="visual-gate">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg>
-              <div><b>Evaluation</b><span>以可重複證據驗收</span></div>
-              <span class="gate-pass">Verified</span>
+              <svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+              <div><b>評估</b><span>以可重複證據驗收</span></div>
+              <span class="gate-pass">已驗證</span>
             </div>
           </div>
           <div class="release-output">
             <span class="release-mark">✓</span>
-            <div><b>可以交付</b><small>Reviewable · Contained · Verified</small></div>
+            <div><b>可以交付</b><small>可審查 · 範圍受控 · 已驗證</small></div>
           </div>
         </aside>
       </div>
     </section>
 
     <aside class="premise" aria-label="核心觀念">
-      <div class="premise-side"><b>Capability</b><span>AI 能產生程式、操作工具並完成任務。</span></div>
+      <div class="premise-side"><b>能力</b><span>AI 能產生程式、操作工具並完成任務。</span></div>
       <div class="premise-arrow">→</div>
-      <div class="premise-side"><b>Trust</b><span>系統能證明它沒有越界，而且成果符合預期。</span></div>
+      <div class="premise-side"><b>信任</b><span>系統能證明它沒有越界，而且成果符合預期。</span></div>
     </aside>
 
     <main>
       <section id="gates">
         <div class="section-head">
-          <div class="section-no">01 / Gates</div>
+          <div class="section-no">01／關卡</div>
           <div>
             <h2>正式環境前，先過三道關卡</h2>
-            <p class="section-intro">這三道關卡分別處理不同風險。Spec 避免 AI 猜錯方向，安全邊界限制錯誤的破壞範圍，Evaluation 則確認成果是否真的值得發布。</p>
+            <p class="section-intro">這三道關卡分別處理不同風險。規格 避免 AI 猜錯方向，安全邊界限制錯誤的破壞範圍，評估 則確認成果是否真的值得發布。</p>
           </div>
         </div>
 
@@ -426,30 +426,30 @@
           <article class="gate">
             <span class="gate-no">01</span>
             <h3>把話講清楚</h3>
-            <p>把意圖、背景、工具、禁區與完成標準寫進可審查的 Spec。</p>
-            <div class="gate-result">Output · Direction</div>
+            <p>把意圖、背景、工具、禁區與完成標準寫進可審查的 規格。</p>
+            <div class="gate-result">成果 · 方向</div>
           </article>
           <article class="gate">
             <span class="gate-no">02</span>
             <h3>把邊界設好</h3>
-            <p>預設 Agent 可能犯錯，用隔離、權限與人工 checkpoint 限制後果。</p>
-            <div class="gate-result">Output · Containment</div>
+            <p>預設 代理 可能犯錯，用隔離、權限與人工 檢查點 限制後果。</p>
+            <div class="gate-result">成果 · 範圍控制</div>
           </article>
           <article class="gate">
             <span class="gate-no">03</span>
             <h3>把驗收做好</h3>
             <p>留下可觀測證據，依客觀標準判斷功能、品質與風險是否可接受。</p>
-            <div class="gate-result">Output · Evidence</div>
+            <div class="gate-result">成果 · 證據</div>
           </article>
         </div>
       </section>
 
       <section id="spec">
         <div class="section-head">
-          <div class="section-no">02 / Specify</div>
+          <div class="section-no">02／明定規格</div>
           <div>
-            <h2>Spec 的任務，是讓 AI 沒有必要猜</h2>
-            <p class="section-intro">好的 Spec 不必很長，但至少要回答五個問題。它也是團隊與 AI 共用的意圖來源，需求改變時先改 Spec，再改實作。</p>
+            <h2>規格 的任務，是讓 AI 沒有必要猜</h2>
+            <p class="section-intro">好的 規格 不必很長，但至少要回答五個問題。它也是團隊與 AI 共用的意圖來源，需求改變時先改 規格，再改實作。</p>
           </div>
         </div>
 
@@ -465,9 +465,9 @@
           <aside class="acceptance">
             <h3>用 Given / When / Then 寫完成標準</h3>
             <div class="given-flow">
-              <div class="given-step"><b>Given</b><strong>已知情境</strong><span>使用者已登入，並停留在個人設定頁。</span></div>
-              <div class="given-step"><b>When</b><strong>執行動作</strong><span>更新顯示名稱並按下儲存。</span></div>
-              <div class="given-step"><b>Then</b><strong>可見結果</strong><span>成功訊息出現，重新整理後仍保留新名稱。</span></div>
+              <div class="given-step"><b>前提</b><strong>已知情境</strong><span>使用者已登入，並停留在個人設定頁。</span></div>
+              <div class="given-step"><b>當</b><strong>執行動作</strong><span>更新顯示名稱並按下儲存。</span></div>
+              <div class="given-step"><b>則</b><strong>可見結果</strong><span>成功訊息出現，重新整理後仍保留新名稱。</span></div>
             </div>
             <p class="negative-case"><strong>別漏掉失敗情境：</strong>輸入不合法時應顯示明確提示，而且不應寫入資料。</p>
           </aside>
@@ -476,7 +476,7 @@
 
       <section id="security">
         <div class="section-head">
-          <div class="section-no">03 / Contain</div>
+          <div class="section-no">03／限制範圍</div>
           <div>
             <h2>安全設計不是要求 AI 永遠不犯錯</h2>
             <p class="section-intro">比較可靠的思路，是先假設錯誤一定會發生，再讓錯誤停在可承受的範圍內。高風險動作不能只靠提示詞提醒。</p>
@@ -486,35 +486,35 @@
         <div class="defense-stack">
           <article class="defense">
             <div class="defense-no">01</div><h3>隔離執行</h3>
-            <p>讓不受信任的程式在可丟棄的 sandbox 或測試環境中執行，不能直接碰正式資料與主機。</p>
+            <p>讓不受信任的程式在可丟棄的 隔離環境 或測試環境中執行，不能直接碰正式資料與主機。</p>
             <div class="defense-proof">Evidence · 隔離範圍</div>
           </article>
           <article class="defense">
             <div class="defense-no">02</div><h3>風險式簽核</h3>
             <p>部署、資料庫變更、付費與不可逆操作必須停下來。簽核前先提供人看得懂的意圖與變更摘要。</p>
-            <div class="defense-proof">Evidence · Diff + Plan</div>
+            <div class="defense-proof">證據 · 差異與計畫</div>
           </article>
           <article class="defense">
             <div class="defense-no">03</div><h3>供應鏈控管</h3>
             <p>依賴套件只從可信來源取得，鎖定版本，確認名稱與維護狀態，並在 CI 中執行安全掃描。</p>
-            <div class="defense-proof">Evidence · Lockfile + Scan</div>
+            <div class="defense-proof">證據 · 鎖定檔與掃描</div>
           </article>
         </div>
       </section>
 
       <section id="distinction">
         <div class="section-head">
-          <div class="section-no">04 / Distinguish</div>
+          <div class="section-no">04／區分</div>
           <div>
             <h2>沒有越界，不等於做得正確</h2>
-            <p class="section-intro">Security 與 Evaluation 是兩條不同的判斷線。只做其中一條，都不足以決定成果是否能進正式環境。</p>
+            <p class="section-intro">安全性 與 評估 是兩條不同的判斷線。只做其中一條，都不足以決定成果是否能進正式環境。</p>
           </div>
         </div>
 
         <div class="compare">
           <article class="compare-panel">
-            <h3>Security</h3>
-            <p class="compare-question">Agent 有沒有做不該做的事？</p>
+            <h3>安全</h3>
+            <p class="compare-question">代理 有沒有做不該做的事？</p>
             <ul>
               <li>是否碰到未授權資料或環境</li>
               <li>是否執行不可逆或高風險動作</li>
@@ -523,8 +523,8 @@
             <div class="compare-answer">通過代表：錯誤被限制在邊界內。</div>
           </article>
           <article class="compare-panel eval">
-            <h3>Evaluation</h3>
-            <p class="compare-question">Agent 做出來的東西值不值得交付？</p>
+            <h3>評估</h3>
+            <p class="compare-question">代理 做出來的東西值不值得交付？</p>
             <ul>
               <li>功能是否符合原始意圖與驗收條件</li>
               <li>使用者實際看到的結果是否正確</li>
@@ -537,19 +537,19 @@
 
       <section id="evaluation">
         <div class="section-head">
-          <div class="section-no">05 / Evaluate</div>
+          <div class="section-no">05／評估</div>
           <div>
             <h2>先看得見，才有辦法驗收</h2>
-            <p class="section-intro">可觀測性把對話、工具呼叫、狀態與結果留成證據。驗收則用這些證據判斷 Agent 是否偏題、是否收斂，以及錯誤是否反覆出現。</p>
+            <p class="section-intro">可觀測性把對話、工具呼叫、狀態與結果留成證據。驗收則用這些證據判斷 代理 是否偏題、是否收斂，以及錯誤是否反覆出現。</p>
           </div>
         </div>
 
         <div class="evidence-board">
           <aside class="observability">
-            <h3>Observable evidence</h3>
-            <p>只看最後一句回答，無法判斷 Agent 中間做了什麼。至少要能回看：</p>
+            <h3>可觀察的證據</h3>
+            <p>只看最後一句回答，無法判斷 代理 中間做了什麼。至少要能回看：</p>
             <ul class="signal-list">
-              <li><b>01</b><span>原始目標與使用的 Spec 版本</span></li>
+              <li><b>01</b><span>原始目標與使用的 規格 版本</span></li>
               <li><b>02</b><span>工具呼叫、參數、結果與錯誤</span></li>
               <li><b>03</b><span>變更內容、測試證據與人工簽核</span></li>
               <li><b>04</b><span>時間、成本與重試次數</span></li>
@@ -558,34 +558,34 @@
 
           <div class="eval-grid">
             <article class="eval-card"><b>01</b><h3>保存原始任務</h3><p>每個步驟都回頭對照最初要求，檢查是否越做越偏。</p></article>
-            <article class="eval-card"><b>02</b><h3>驗成品，不只驗程式</h3><p>網頁就實際操作桌面與手機；報表就讀結果與數字，而不只看 code。</p></article>
+            <article class="eval-card"><b>02</b><h3>驗成品，不只驗程式</h3><p>網頁就實際操作桌面與手機；報表就讀結果與數字，而不只看 程式碼。</p></article>
             <article class="eval-card"><b>03</b><h3>看是否收斂</h3><p>記錄修改幾輪才達標。反覆修不好的任務，是最值得研究的失敗樣本。</p></article>
-            <article class="eval-card"><b>04</b><h3>保存每次糾正</h3><p>把「不對、不是這樣」轉成測試案例、規則或新版 Spec，形成可重用的防錯資料。</p></article>
+            <article class="eval-card"><b>04</b><h3>保存每次糾正</h3><p>把「不對、不是這樣」轉成測試案例、規則或新版 規格，形成可重用的防錯資料。</p></article>
           </div>
         </div>
       </section>
 
       <section id="review">
         <div class="section-head">
-          <div class="section-no">06 / Review</div>
+          <div class="section-no">06／審查</div>
           <div>
-            <h2>AI 加速產出後，瓶頸會移到 Review</h2>
+            <h2>AI 加速產出後，瓶頸會移到 審核</h2>
             <p class="section-intro">如果每個小動作都要求人按同意，人很快會失去注意力。更好的分工，是讓自動檢查處理日常證據，把人的判斷留給架構、風險與不可逆決策。</p>
           </div>
         </div>
 
         <div class="review-line">
-          <article class="review-node"><b>Machine</b><h3>自動檢查</h3><p>格式、測試、依賴、漏洞、權限與既定驗收條件。</p></article>
+          <article class="review-node"><b>機器</b><h3>自動檢查</h3><p>格式、測試、依賴、漏洞、權限與既定驗收條件。</p></article>
           <div class="review-arrow">→</div>
-          <article class="review-node"><b>Human</b><h3>高價值判斷</h3><p>需求是否合理、架構取捨、風險承受度與是否值得發布。</p></article>
+          <article class="review-node"><b>人員</b><h3>高價值判斷</h3><p>需求是否合理、架構取捨、風險承受度與是否值得發布。</p></article>
           <div class="review-arrow">→</div>
-          <article class="review-node"><b>Merge</b><h3>條件式批准</h3><p>人的方向批准，加上自動化證據全部通過，才允許進入下一階段。</p></article>
+          <article class="review-node"><b>合併</b><h3>條件式批准</h3><p>人的方向批准，加上自動化證據全部通過，才允許進入下一階段。</p></article>
         </div>
       </section>
 
       <section id="launch">
         <div class="section-head">
-          <div class="section-no">07 / Apply</div>
+          <div class="section-no">07／應用</div>
           <div>
             <h2>下一個功能，就從這張清單開始</h2>
             <p class="section-intro">不需要一次建立完整平台。先對下一個真實功能補齊三道關卡，再把失敗案例逐步寫回流程。</p>
@@ -594,17 +594,17 @@
 
         <div class="launch-grid">
           <ul class="checklist">
-            <li>先寫一份至少回答五個問題的 Spec。</li>
+            <li>先寫一份至少回答五個問題的 規格。</li>
             <li>用 Given / When / Then 定義成功與失敗情境。</li>
             <li>把正式環境、資料庫與金流列為明確禁區。</li>
             <li>讓程式在隔離環境中執行，並限制權限。</li>
-            <li>高風險動作前提供白話變更摘要與人工 checkpoint。</li>
+            <li>高風險動作前提供白話變更摘要與人工 檢查點。</li>
             <li>驗收實際成品，保存每次糾正作為下一輪測試。</li>
           </ul>
 
           <aside class="prompt-box">
             <h3>開工前提示詞</h3>
-            <pre>在開始實作前，先把我的需求整理成 production-ready spec。
+            <pre data-language-code="">在開始實作前，先把我的需求整理成 production-ready spec。
 
 請依序確認：
 1. 要做什麼，以及為什麼做
@@ -623,30 +623,30 @@
       <section id="sources" class="sources">
         <h2>來源與延伸閱讀</h2>
         <ul class="source-list">
-          <li><span class="source-type">Video</span><a href="https://www.youtube.com/watch?v=h7abDtqN9gs" target="_blank" rel="noreferrer">Gary Chen：Google AI 課程 Day 4+5 解析</a></li>
-          <li><span class="source-type">Google</span><a href="https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/" target="_blank" rel="noreferrer">Google and Kaggle AI Agents Vibe Coding Course</a></li>
-          <li><span class="source-type">Google Cloud</span><a href="https://cloud.google.com/blog/products/ai-machine-learning/a-devs-guide-to-production-ready-ai-agents" target="_blank" rel="noreferrer">A developer's guide to production-ready AI agents</a></li>
-          <li><span class="source-type">Codelab</span><a href="https://codelabs.developers.google.com/sdd-adk-antigravity" target="_blank" rel="noreferrer">Spec-Driven ADK Agent Development</a></li>
-          <li><span class="source-type">Security</span><a href="https://codelabs.developers.google.com/codelabs/production-ready-ai-roadshow/3-securing-a-multi-agent-system/securing-a-multi-agent-system" target="_blank" rel="noreferrer">Securing a Multi-Agent System</a></li>
-          <li><span class="source-type">Sandbox</span><a href="https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox" target="_blank" rel="noreferrer">Google Cloud Agent Sandbox</a></li>
-          <li><span class="source-type">Evaluation</span><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/optimize/evaluation/agent-evaluation" target="_blank" rel="noreferrer">Google Cloud Agent Evaluation</a></li>
-          <li><span class="source-type">Acceptance</span><a href="https://cucumber.io/docs/gherkin/reference/" target="_blank" rel="noreferrer">Cucumber Gherkin Reference</a></li>
-          <li><span class="source-type">Research</span><a href="https://arxiv.org/abs/2501.19012" target="_blank" rel="noreferrer">Importing Phantoms: Measuring LLM Package Hallucination Vulnerabilities</a></li>
+          <li><span class="source-type">影片</span><a href="https://www.youtube.com/watch?v=h7abDtqN9gs" target="_blank" rel="noreferrer">Gary Chen：Google AI 課程 Day 4+5 解析</a></li>
+          <li><span class="source-type">Google</span><a href="https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/" target="_blank" rel="noreferrer">Google 與 Kaggle AI Agents Vibe Coding 課程</a></li>
+          <li><span class="source-type">Google Cloud</span><a href="https://cloud.google.com/blog/products/ai-machine-learning/a-devs-guide-to-production-ready-ai-agents" target="_blank" rel="noreferrer">開發者的正式環境 AI Agent 指南</a></li>
+          <li><span class="source-type">程式實作教學</span><a href="https://codelabs.developers.google.com/sdd-adk-antigravity" target="_blank" rel="noreferrer">以規格驅動的 ADK Agent 開發</a></li>
+          <li><span class="source-type">安全</span><a href="https://codelabs.developers.google.com/codelabs/production-ready-ai-roadshow/3-securing-a-multi-agent-system/securing-a-multi-agent-system" target="_blank" rel="noreferrer">多 Agent 系統的安全防護</a></li>
+          <li><span class="source-type">隔離環境</span><a href="https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox" target="_blank" rel="noreferrer">Google Cloud Agent 隔離環境</a></li>
+          <li><span class="source-type">評估</span><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/optimize/evaluation/agent-evaluation" target="_blank" rel="noreferrer">Google Cloud Agent 評估</a></li>
+          <li><span class="source-type">驗收</span><a href="https://cucumber.io/docs/gherkin/reference/" target="_blank" rel="noreferrer">Cucumber Gherkin 參考文件</a></li>
+          <li><span class="source-type">研究</span><a href="https://arxiv.org/abs/2501.19012" target="_blank" rel="noreferrer">匯入幻影：衡量大型語言模型套件幻覺的弱點</a></li>
         </ul>
       </section>
     </main>
   </div>
 
-  <footer><div class="wrap">Michael Agent Lab · Public teaching note · 2026-08-04</div></footer>
+  <footer><div class="wrap">Michael Agent Lab · 公開教學筆記 · 2026-08-04</div></footer>
   <script src="../tutorial-gate.js?v=20260804-analytics"></script>
   <script src="../feedback-widget.js?v=20260804-analytics"></script>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Agent 系統架構與可靠性</h2>
     <ul>
-      <li><a href="./mcp-a2a-production-agent-skills.html">從連接工具到 Production Skill：MCP、A2A、AP2 與上線防線</a></li>
+      <li><a href="./mcp-a2a-production-agent-skills.html">從連接工具到 正式上線技能：MCP、A2A、AP2 與上線防線</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>
   </div>

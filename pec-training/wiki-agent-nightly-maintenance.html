@@ -470,7 +470,7 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/3203f725f8aae81d.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <main class="page">
     <header class="topbar">
@@ -479,7 +479,7 @@
           <span class="lesson-brand-text">Michael AI Agent Lab</span>
         </div>
         <div>
-          <strong>Michael AI Agent Lab AI Agent Training</strong>
+          <strong>Michael AI Agent Lab：AI Agent 培訓</strong>
           <small>Wiki Agent 知識營運</small>
         </div>
       </div>
@@ -488,9 +488,9 @@
 
     <section class="hero">
       <div class="hero-main">
-        <p class="kicker">Knowledge Operations / Agent Memory</p>
+        <p class="kicker">知識維運／Agent 記憶</p>
         <h1>讓知識庫每天自己變乾淨。</h1>
-        <p class="lead">白天收進來的聊天、文件、工具輸出與專案線索，不應該隔天就散掉。Wiki Agent 的任務，是把它們整理成可追溯、可審核、可被 agent 使用的長期知識。</p>
+        <p class="lead">白天收進來的聊天、文件、工具輸出與專案線索，不應該隔天就散掉。Wiki Agent 的任務，是把它們整理成可追溯、可審核、可被 代理 使用的長期知識。</p>
         <div class="promise">
           <span>核心目標</span>
           <span>先整理，再記憶；先審核，再放進正式 wiki。</span>
@@ -498,20 +498,20 @@
       </div>
       <aside class="hero-side">
         <div class="metric">
-          <b>Daily</b>
+          <b>每日</b>
           <span>每天自動更新知識狀態</span>
         </div>
         <div class="metric">
-          <b>Review</b>
+          <b>複習</b>
           <span>候選知識先審核再採用</span>
         </div>
         <div class="metric">
-          <b>Trace</b>
+          <b>追蹤</b>
           <span>每段重點都保留來源</span>
         </div>
         <div class="metric">
           <b>5 層</b>
-          <span>raw / inbox / lint / archive / wiki</span>
+          <span>raw／inbox／lint／archive／wiki</span>
         </div>
       </aside>
     </section>
@@ -519,43 +519,43 @@
     <section>
       <div class="section-head">
         <h2>這不是筆記系統，是知識營運管線</h2>
-        <p>OpenWiki 的精神是讓 coding agent 不必把整個 repo 背進上下文，而是知道該去 wiki 哪裡查。企業導入 Wiki Agent 時，也可以用同樣邏輯整理文件、SOP、專案紀錄與教學資料。</p>
+        <p>OpenWiki 的精神是讓 程式代理 不必把整個 repo 背進上下文，而是知道該去 wiki 哪裡查。企業導入 Wiki Agent 時，也可以用同樣邏輯整理文件、SOP、專案紀錄與教學資料。</p>
       </div>
 
       <div class="flow">
         <div class="flow-step">
           <div class="icon c-cyan">
-            <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <svg viewbox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
           </div>
-          <h3>Capture</h3>
+          <h3>擷取</h3>
           <p>收進文件、網址、專案紀錄與工作輸出。先保留來源，不急著變成正式知識。</p>
         </div>
         <div class="flow-step">
           <div class="icon c-green">
-            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><path d="m17 15 2 2 3-4"/></svg>
+            <svg viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><path d="m17 15 2 2 3-4"/></svg>
           </div>
-          <h3>Intake</h3>
-          <p>把有價值的片段轉成 raw / inbox proposal，讓 Wiki Agent 可以審核。</p>
+          <h3>接收</h3>
+          <p>把有價值的片段轉成 raw / inbox 提案，讓 Wiki Agent 可以審核。</p>
         </div>
         <div class="flow-step">
           <div class="icon c-yellow">
-            <svg viewBox="0 0 24 24"><path d="M12 3 3 7l9 4 9-4-9-4Z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+            <svg viewbox="0 0 24 24"><path d="M12 3 3 7l9 4 9-4-9-4Z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
           </div>
-          <h3>Curate</h3>
-          <p>檢查來源、日期、可信度、重複、過期、疑似 secret。品質過關才往前。</p>
+          <h3>整理</h3>
+          <p>檢查來源、日期、可信度、重複、過期、疑似 機密。品質過關才往前。</p>
         </div>
         <div class="flow-step">
           <div class="icon c-orange">
-            <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg>
+            <svg viewbox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg>
           </div>
-          <h3>Publish</h3>
-          <p>正式 wiki 只放整理後的知識。舊資料不直接刪除，而是移到 archive。</p>
+          <h3>發布</h3>
+          <p>正式 wiki 只放整理後的知識。舊資料不直接刪除，而是移到 封存區。</p>
         </div>
         <div class="flow-step">
           <div class="icon c-violet">
-            <svg viewBox="0 0 24 24"><path d="M6 18 18 6"/><path d="M8 6h10v10"/><path d="M5 5h.01M5 12h.01M12 19h.01"/></svg>
+            <svg viewbox="0 0 24 24"><path d="M6 18 18 6"/><path d="M8 6h10v10"/><path d="M5 5h.01M5 12h.01M12 19h.01"/></svg>
           </div>
-          <h3>Route</h3>
+          <h3>路由</h3>
           <p>讓使用者與 AI 工具讀整理後的摘要，不直接吞原始雜訊，避免越用越亂。</p>
         </div>
       </div>
@@ -564,29 +564,29 @@
     <section>
       <div class="section-head">
         <h2>OpenWiki 給我們的三個啟發</h2>
-        <p>這份教材不是要照搬 OpenWiki，而是取它最重要的設計原則：文件要給 agent 用、要能自動更新、要用短引用連到長知識。</p>
+        <p>這份教材不是要照搬 OpenWiki，而是取它最重要的設計原則：文件要給 代理 用、要能自動更新、要用短引用連到長知識。</p>
       </div>
       <div class="compare">
         <div class="compare-card">
-          <span class="tag cyan">01 / Agent-ready Docs</span>
+          <span class="tag cyan">01／Agent 可用的文件</span>
           <h3>文件不是只給人看的</h3>
-          <p>coding agent 需要知道關鍵邏輯在哪裡、檔案怎麼連、專案習慣是什麼。Wiki 的價值，是讓 agent 可以查到上下文，而不是每次重新猜。</p>
+          <p>程式代理 需要知道關鍵邏輯在哪裡、檔案怎麼連、專案習慣是什麼。Wiki 的價值，是讓 代理 可以查到上下文，而不是每次重新猜。</p>
           <div class="mini-list">
             <div><span class="bullet c-cyan">A</span><span>AGENTS.md / CLAUDE.md 只放指路規則，不塞整本百科。</span></div>
-            <div><span class="bullet c-cyan">B</span><span>真正的內容留在 wiki，讓 agent 需要時再讀。</span></div>
+            <div><span class="bullet c-cyan">B</span><span>真正的內容留在 wiki，讓 代理 需要時再讀。</span></div>
           </div>
         </div>
         <div class="compare-card">
-          <span class="tag yellow">02 / Daily Refresh</span>
+          <span class="tag yellow">02／每日更新</span>
           <h3>知識會過期，所以要排程</h3>
           <p>文件第一次生成不難，難的是每天跟著專案、工具和流程改變。夜間維護的目的，是讓知識品質不靠人想到才整理。</p>
           <div class="mini-list">
             <div><span class="bullet c-yellow">A</span><span>每天掃新資料、補狀態、重建索引。</span></div>
-            <div><span class="bullet c-yellow">B</span><span>用 lint 和 archive 控制雜訊，不讓待整理區變垃圾場。</span></div>
+            <div><span class="bullet c-yellow">B</span><span>用 規則檢查 和 封存區 控制雜訊，不讓待整理區變垃圾場。</span></div>
           </div>
         </div>
         <div class="compare-card">
-          <span class="tag green">03 / Proactive Memory</span>
+          <span class="tag green">03／主動記憶</span>
           <h3>不是記你說過什麼，是整理你工作裡發生什麼</h3>
           <p>OpenWiki Brains 把多個來源轉成可維護的 wiki。對企業訓練來說，重點是把零散文件、專案紀錄、操作 SOP 與教學素材沉澱成可查的工作記憶。</p>
           <div class="mini-list">
@@ -605,43 +605,43 @@
       <div class="stations">
         <div class="station">
           <div class="station-no c-cyan">1</div>
-          <h3>Harvest</h3>
+          <h3>蒐集</h3>
           <p>掃描新增文件、工作紀錄、會議整理與教學素材。保留「可能可重用」的片段。</p>
         </div>
         <div class="station">
           <div class="station-no c-green">2</div>
-          <h3>Intake</h3>
-          <p>把片段變成 proposal，送進 <code>raw/</code> 和 <code>inbox/</code>。這一步是候選知識，不是正式知識。</p>
+          <h3>接收</h3>
+          <p>把片段變成 提案，送進 <code data-language-code="">raw/</code> 和 <code data-language-code="">inbox/</code>。這一步是候選知識，不是正式知識。</p>
         </div>
         <div class="station">
           <div class="station-no c-yellow">3</div>
-          <h3>Lint</h3>
-          <p>檢查 Source、Source date、Confidence、重複來源、過期項目和疑似 secret。品質問題要先浮出來。</p>
+          <h3>檢查格式</h3>
+          <p>檢查 來源、來源日期、信心程度、重複來源、過期項目和疑似 機密。品質問題要先浮出來。</p>
         </div>
         <div class="station">
           <div class="station-no c-orange">4</div>
-          <h3>Archive</h3>
-          <p>舊的或重複的 top-level raw / inbox 會移到 <code>archive/</code>。不是刪除，而是可回溯地降噪。</p>
+          <h3>封存</h3>
+          <p>舊的或重複的 頂層 raw / inbox 會移到 <code data-language-code="">archive/</code>。不是刪除，而是可回溯地降噪。</p>
         </div>
         <div class="station">
           <div class="station-no c-violet">5</div>
-          <h3>Index</h3>
+          <h3>建立索引</h3>
           <p>重建索引與知識圖，讓後續查找不是靠運氣，而是有穩定入口和結構。</p>
         </div>
         <div class="station">
           <div class="station-no c-cyan">6</div>
-          <h3>Eval</h3>
-          <p>用 golden QA 和日常評估確認知識搜尋還能回答問題。知識庫不是只要多，還要答得準。</p>
+          <h3>評估</h3>
+          <p>用 標準問答測試 和日常評估確認知識搜尋還能回答問題。知識庫不是只要多，還要答得準。</p>
         </div>
         <div class="station">
           <div class="station-no c-green">7</div>
-          <h3>Refresh</h3>
-          <p>更新 quickstart、open questions、maintenance 頁面，讓人和 agent 都看得懂現在狀態。</p>
+          <h3>更新</h3>
+          <p>更新 快速入門、未決問題、維護 頁面，讓人和 代理 都看得懂現在狀態。</p>
         </div>
         <div class="station">
           <div class="station-no c-yellow">8</div>
-          <h3>Evolve</h3>
-          <p>如果 backlog 或 metadata 問題變多，產生改善提案，讓負責人判斷要不要升級流程。</p>
+          <h3>演進</h3>
+          <p>如果 待處理事項 或 中繼資料 問題變多，產生改善提案，讓負責人判斷要不要升級流程。</p>
         </div>
       </div>
     </section>
@@ -665,7 +665,7 @@
             </div>
             <div class="role">
               <b>Wiki Agent</b>
-              <span>維護 raw / inbox / wiki / archive 的品質。</span>
+              <span>維護 raw / inbox / wiki / 封存區 的品質。</span>
             </div>
             <div class="role">
               <b>審核者</b>
@@ -679,9 +679,9 @@
           <table class="matrix">
             <tr><th>資料狀態</th><th>處理方式</th></tr>
             <tr><td>新來源</td><td>先進 raw，保留原始路徑或網址。</td></tr>
-            <tr><td>候選知識</td><td>進 inbox，等待審核與補 metadata。</td></tr>
+            <tr><td>候選知識</td><td>進 inbox，等待審核與補 中繼資料。</td></tr>
             <tr><td>正式知識</td><td>進 wiki，可被團隊和 AI 工具引用。</td></tr>
-            <tr><td>過期或重複</td><td>進 archive，不直接刪除。</td></tr>
+            <tr><td>過期或重複</td><td>進 封存區，不直接刪除。</td></tr>
           </table>
         </div>
       </div>
@@ -690,23 +690,23 @@
     <section>
       <div class="section-head">
         <h2>導入時要看的品質訊號</h2>
-        <p>如果只看「今天新增幾頁」，很容易被假成長騙到。真正要看的，是 backlog、引用品質、重複率與是否能回答問題。</p>
+        <p>如果只看「今天新增幾頁」，很容易被假成長騙到。真正要看的，是 待處理事項、引用品質、重複率與是否能回答問題。</p>
       </div>
       <div class="compare">
         <div class="compare-card">
-          <span class="tag violet">Signal</span>
-          <h3>Inbox backlog</h3>
+          <span class="tag violet">訊號</span>
+          <h3>收件匣積壓量</h3>
           <p>待整理越堆越多，代表系統有收資料，但沒有完成知識整理。這時要做批次分類和優先級整理。</p>
         </div>
         <div class="compare-card">
-          <span class="tag yellow">Signal</span>
-          <h3>Metadata issues</h3>
-          <p>缺 Source、日期或 Confidence，代表未來很難判斷這段知識可信不可信。這種資料不能直接升正式 wiki。</p>
+          <span class="tag yellow">訊號</span>
+          <h3>中繼資料問題</h3>
+          <p>缺 來源、日期或 信心程度，代表未來很難判斷這段知識可信不可信。這種資料不能直接升正式 wiki。</p>
         </div>
         <div class="compare-card">
-          <span class="tag cyan">Signal</span>
-          <h3>Answer quality</h3>
-          <p>知識庫不是收藏夾。最後要測的是：agent 查得到嗎？答得準嗎？引用來源夠少、夠精準嗎？</p>
+          <span class="tag cyan">訊號</span>
+          <h3>回答品質</h3>
+          <p>知識庫不是收藏夾。最後要測的是：代理 查得到嗎？答得準嗎？引用來源夠少、夠精準嗎？</p>
         </div>
       </div>
     </section>
@@ -723,7 +723,7 @@
         </div>
         <div class="prompt">
           <b>收新來源</b>
-          請把這個網址或檔案先做 intake，保留原始來源，不要直接寫進正式 wiki。
+          請把這個網址或檔案先做 收件處理，保留原始來源，不要直接寫進正式 wiki。
         </div>
         <div class="prompt">
           <b>整理候選知識</b>
@@ -731,7 +731,7 @@
         </div>
         <div class="prompt">
           <b>夜間維護</b>
-          每天固定整理新增來源、封存過期項目、檢查 metadata，並回報新增、封存、待審核與索引更新狀態。
+          每天固定整理新增來源、封存過期項目、檢查 中繼資料，並回報新增、封存、待審核與索引更新狀態。
         </div>
       </div>
     </section>
@@ -744,11 +744,11 @@
       <div class="sources">
         <div class="source-card">
           <b>OpenWiki 官方介紹</b>
-          <p><a href="https://www.langchain.com/blog/introducing-openwiki-an-open-source-agent-for-repo-documentation">LangChain: OpenWiki for repo documentation</a></p>
+          <p><a href="https://www.langchain.com/blog/introducing-openwiki-an-open-source-agent-for-repo-documentation">LangChain：用於儲存庫文件的 OpenWiki</a></p>
         </div>
         <div class="source-card">
           <b>OpenWiki Brains</b>
-          <p><a href="https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents">LangChain: general-purpose wiki memory for agents</a></p>
+          <p><a href="https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents">LangChain：Agent 的通用 Wiki 記憶</a></p>
         </div>
         <div class="source-card">
           <b>OpenWiki GitHub</b>
@@ -756,7 +756,7 @@
         </div>
         <div class="source-card">
           <b>研究參考</b>
-          <p><a href="https://arxiv.org/abs/2607.04576">Progressive Disclosure for LLM-Maintained Wiki Knowledge Bases</a></p>
+          <p><a href="https://arxiv.org/abs/2607.04576">由大型語言模型維護的 Wiki 知識庫之漸進揭露</a></p>
         </div>
         <div class="source-card">
           <b>教學整理方向</b>
@@ -767,18 +767,18 @@
           <p>正式上架前，需再次確認來源連結、品牌圖樣、敏感資訊與行動建議。</p>
         </div>
       </div>
-      <p class="footer-note">Michael public teaching note. This page explains the Wiki Agent maintenance pattern as a reusable knowledge-operations workflow.</p>
+      <p class="footer-note">Michael 公開教學筆記：將 Wiki Agent 維護模式說明為可重用的知識維運工作流程。</p>
     </section>
   </main>
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>知識庫、文件轉換與上下文治理</h2>
     <ul>
       <li><a href="./ai-brain-shared-memory-across-agents.html">一顆大腦，讓每個 AI 都記得你</a></li>
-      <li><a href="./context-headroom.html">Headroom：本地 Agent 的 Context Headroom 導入策略</a></li>
+      <li><a href="./context-headroom.html">Headroom：本地 Agent 的 上下文餘裕 導入策略</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>
   </div>

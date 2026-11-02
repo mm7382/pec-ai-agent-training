@@ -437,18 +437,18 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/23c06db3f800654d.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <div class="cover">
     <div class="wrap cover-inner">
       <div class="cover-top">
         <div class="report-logo" aria-label="個人品牌標記"></div>
-        <div class="cover-kicker">Prompt Training / Michael Teaching Notes</div>
+        <div class="cover-kicker">提示詞訓練／Michael 教學筆記</div>
       </div>
       <div class="cover-main">
         <span class="label">Michael 教學筆記</span>
         <h1>SkillOpt：把提示詞工程變成可訓練的 Skill 系統</h1>
-        <p class="subtitle">這份教材把 SkillOpt 拆成一個工程問題：skill 不再只是手工 prompt，而是 frozen agent 的外部可訓練狀態，能用 rollout、驗證集、受控編輯與部署產物來管理。</p>
+        <p class="subtitle">這份教材把 SkillOpt 拆成一個工程問題：技能 不再只是手工 提示詞，而是 權重凍結代理 的外部可訓練狀態，能用 試跑、驗證集、受控編輯與部署產物來管理。</p>
       </div>
       <div class="cover-footer">
         <span>整理基礎：SkillOpt project / GitHub / arXiv</span>
@@ -460,14 +460,14 @@
   <header>
     <div class="wrap">
       <div class="ad-logo-full" aria-label="Michael AI Agent Lab full logo"></div>
-      <span class="eyebrow">Course Framing</span>
-      <h2>這堂課要回答的不是「prompt 要怎麼寫更漂亮」，而是「skill 能不能像模型一樣被訓練、驗證、版本化」。</h2>
-      <p class="lead">SkillOpt 的突破點在於：它不去碰模型權重，而是把 skill 文件本身當成可優化對象。對實務團隊 這種會長期維護教學 HTML、研究報告、Codex SOP 與多 agent 流程的團隊來說，這件事的價值比單次 prompt 技巧更大。</p>
+      <span class="eyebrow">課程定位</span>
+      <h2>這堂課要回答的不是「提示詞 要怎麼寫更漂亮」，而是「技能 能不能像模型一樣被訓練、驗證、版本化」。</h2>
+      <p class="lead">SkillOpt 的突破點在於：它不去碰模型權重，而是把 技能 文件本身當成可優化對象。對實務團隊 這種會長期維護教學 HTML、研究報告、Codex SOP 與多 代理 流程的團隊來說，這件事的價值比單次 提示詞 技巧更大。</p>
       <div class="metrics">
         <div class="metric"><b>52 / 52</b><small>最佳或並列最佳測試格</small></div>
         <div class="metric"><b>+23.5</b><small>GPT-5.5 direct chat 平均提升</small></div>
-        <div class="metric"><b>+24.8</b><small>Codex harness 平均提升</small></div>
-        <div class="metric"><b>+19.1</b><small>Claude Code harness 平均提升</small></div>
+        <div class="metric"><b>+24.8</b><small>Codex 執行框架 平均提升</small></div>
+        <div class="metric"><b>+19.1</b><small>Claude Code 執行框架 平均提升</small></div>
       </div>
     </div>
   </header>
@@ -489,30 +489,30 @@
     <section id="reframe">
       <div class="hero-media">
         <div>
-          <h2>SkillOpt 重新定義的，不是修辭，而是 prompt 的治理方式</h2>
-          <p>傳統 prompt engineering 的問題不是完全沒效，而是太依賴個人經驗。你可以寫出一份能跑的 prompt，但很難知道它是不是已經接近最佳、是不是可穩定重複、是不是可以移轉到另一個 harness。SkillOpt 的回答是：把 skill 文件當成 agent 的外部狀態，像訓練模型那樣去優化它。</p>
+          <h2>SkillOpt 重新定義的，不是修辭，而是 提示詞 的治理方式</h2>
+          <p>傳統 提示詞 engineering 的問題不是完全沒效，而是太依賴個人經驗。你可以寫出一份能跑的 提示詞，但很難知道它是不是已經接近最佳、是不是可穩定重複、是不是可以移轉到另一個 執行框架。SkillOpt 的回答是：把 技能 文件當成 代理 的外部狀態，像訓練模型那樣去優化它。</p>
           <div class="callout">
             <strong>一句話定義</strong><br>
-            Fine-tuning 解決的是權重怎麼變；SkillOpt 解決的是在權重不變的前提下，工作協議怎麼變得更強。
+            微調 解決的是權重怎麼變；SkillOpt 解決的是在權重不變的前提下，工作協議怎麼變得更強。
           </div>
-          <div class="soft" style="margin-top:12px">核心觀點：不要再把 skill 當成一段寫完就算的提示詞，而要把它當成一個有評估集、有版本、有最佳產物的可訓練元件。</div>
+          <div class="soft" style="margin-top:12px">核心觀點：不要再把 技能 當成一段寫完就算的提示詞，而要把它當成一個有評估集、有版本、有最佳產物的可訓練元件。</div>
         </div>
         <figure class="screenshot">
           <img src="../assets/tutorials/skillopt-g8Ik-0aYfiQ/thumbnail.webp" alt="SkillOpt teaching thumbnail">
-          <figcaption class="caption">這個主題聚焦在同一個轉向：寫 prompt 不再只是經驗活，而是開始有 rollout、gate、learning-rate budget 與 best_skill.md 這種訓練語彙。</figcaption>
+          <figcaption class="caption">這個主題聚焦在同一個轉向：寫 提示詞 不再只是經驗活，而是開始有 試跑、驗證關卡、學習率預算 與 best_skill.md 這種訓練語彙。</figcaption>
         </figure>
       </div>
     </section>
 
     <section>
-      <h2>先把舊世界講清楚：為什麼手工 skill 會很快碰到天花板</h2>
+      <h2>先把舊世界講清楚：為什麼手工 技能 會很快碰到天花板</h2>
       <div class="grid-4">
         <div class="card">
           <div class="bar"></div>
           <div class="card-body">
             <span class="tag">舊做法</span>
             <h3>靠直覺寫</h3>
-            <p>人或大模型憑感覺起草一份 skill，跑幾次不壞就收工。</p>
+            <p>人或大模型憑感覺起草一份 技能，跑幾次不壞就收工。</p>
           </div>
         </div>
         <div class="card cyan">
@@ -535,106 +535,106 @@
           <div class="bar"></div>
           <div class="card-body">
             <span class="tag orange">SkillOpt 的解法</span>
-            <h3>把 skill 變成訓練目標</h3>
-            <p>重點不再是「這份 prompt 能不能跑」，而是「這份 skill 能不能在 held-out gate 上穩定變強」。</p>
+            <h3>把 技能 變成訓練目標</h3>
+            <p>重點不再是「這份 提示詞 能不能跑」，而是「這份 技能 能不能在 保留集驗證關卡 上穩定變強」。</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="loop">
-      <h2>核心迴圈：Rollout、Reflect、Edit、Gate</h2>
-      <p>SkillOpt 的 loop 刻意模仿深度學習。target model 與 harness 固定不動，只有 skill 文件會變。每一輪先用當前 skill 跑任務，蒐集成功與失敗軌跡，再由 optimizer model 提出小幅編輯，最後用 held-out validation 決定要不要接受。</p>
+      <h2>核心迴圈：試跑、反思、編輯、驗證關卡</h2>
+      <p>SkillOpt 的 loop 刻意模仿深度學習。目標模型 與 執行框架 固定不動，只有 技能 文件會變。每一輪先用當前 技能 跑任務，蒐集成功與失敗軌跡，再由 最佳化模型 提出小幅編輯，最後用 保留集驗證 決定要不要接受。</p>
       <div class="diagram">
-        <svg viewBox="0 0 1100 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillOpt loop">
+        <svg viewbox="0 0 1100 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillOpt loop">
           <rect width="1100" height="330" fill="#ffffff"/>
-          <text x="42" y="54" font-size="30" font-family="Calibri, Noto Sans TC, sans-serif" font-weight="700" fill="#252c2e">SkillOpt Training Loop</text>
+          <text x="42" y="54" font-size="30" font-family="Calibri, Noto Sans TC, sans-serif" font-weight="700" fill="#252c2e">SkillOpt 訓練迴圈</text>
           <rect x="42" y="96" width="220" height="170" rx="14" fill="#eefbff" stroke="#d8d8d8"/>
           <rect x="304" y="96" width="220" height="170" rx="14" fill="#fbfff5" stroke="#d8d8d8"/>
           <rect x="566" y="96" width="220" height="170" rx="14" fill="#fffaf0" stroke="#d8d8d8"/>
           <rect x="828" y="96" width="220" height="170" rx="14" fill="#fff7f7" stroke="#d8d8d8"/>
-          <text x="70" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">1. Rollout</text>
-          <text x="70" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">固定 target model</text>
+          <text x="70" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">1. 執行試驗</text>
+          <text x="70" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">固定 目標模型</text>
           <text x="70" y="194" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">跑任務、收軌跡、打分</text>
-          <text x="332" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">2. Reflect</text>
-          <text x="332" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">拆成功與失敗 minibatch</text>
+          <text x="332" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">2. 反思</text>
+          <text x="332" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">拆成功與失敗 小批次</text>
           <text x="332" y="194" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">找可重用規則與錯誤模式</text>
-          <text x="594" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">3. Edit</text>
-          <text x="594" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">add / delete / replace</text>
-          <text x="594" y="194" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">受 learning-rate budget 約束</text>
-          <text x="856" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">4. Gate</text>
-          <text x="856" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">只在 held-out score 提升時</text>
-          <text x="856" y="194" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">候選 skill 才被接受</text>
+          <text x="594" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">3. 編輯</text>
+          <text x="594" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">新增／刪除／取代</text>
+          <text x="594" y="194" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">受 學習率預算 約束</text>
+          <text x="856" y="134" font-size="24" font-weight="700" font-family="Calibri, Noto Sans TC, sans-serif" fill="#252c2e">4. 關卡檢查</text>
+          <text x="856" y="166" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">只在 保留集分數 提升時</text>
+          <text x="856" y="194" font-size="18" font-family="Calibri, Noto Sans TC, sans-serif" fill="#4b5558">候選 技能 才被接受</text>
           <path d="M262 181H294M524 181H556M786 181H818" stroke="#d0333a" stroke-width="4" stroke-linecap="round"/>
           <circle cx="294" cy="181" r="6" fill="#d0333a"/>
           <circle cx="556" cy="181" r="6" fill="#1cb9d8"/>
           <circle cx="818" cy="181" r="6" fill="#94c11f"/>
         </svg>
       </div>
-      <div class="warn" style="margin-top:18px">重點不是讓 optimizer 每次整份重寫。SkillOpt 的穩定性來自「受控小改」，不是來自「一次大翻修」。</div>
+      <div class="warn" style="margin-top:18px">重點不是讓 最佳化器 每次整份重寫。SkillOpt 的穩定性來自「受控小改」，不是來自「一次大翻修」。</div>
     </section>
 
     <section id="controls">
-      <h2>真正讓它像訓練而不是像亂改 prompt 的，是這些控制項</h2>
+      <h2>真正讓它像訓練而不是像亂改 提示詞 的，是這些控制項</h2>
       <div class="grid-2">
         <div class="card green">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>Textual Learning Rate</h3>
-            <p>論文把 edit budget 視為文字空間的 learning rate。一次只允許有限次 add / delete / replace，避免把本來有效的規則一起洗掉。</p>
+            <h3>文字學習率</h3>
+            <p>論文把 編輯預算 視為文字空間的 學習率。一次只允許有限次 新增／刪除／取代，避免把本來有效的規則一起洗掉。</p>
           </div>
         </div>
         <div class="card purple">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>Rejected-Edit Buffer</h3>
-            <p>被 gate 擋下的候選編輯不直接消失，而是變成負面經驗，讓下一輪 optimizer 避開類似失敗方向。</p>
+            <h3>被拒修改緩衝區</h3>
+            <p>被 驗證關卡 擋下的候選編輯不直接消失，而是變成負面經驗，讓下一輪 最佳化器 避開類似失敗方向。</p>
           </div>
         </div>
         <div class="card orange">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>Slow / Meta Update</h3>
-            <p>除了步進式 edits，還保留較長週期的總結與穩定規律，避免 skill 只會追逐短期 gain。</p>
+            <h3>慢速／後設更新</h3>
+            <p>除了步進式 編輯，還保留較長週期的總結與穩定規律，避免 技能 只會追逐短期 增益。</p>
           </div>
         </div>
         <div class="card cyan">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>Separate Optimizer Model</h3>
-            <p>寫 skill 的模型與執行任務的 target model 分工，讓「反思怎麼改」與「照規則執行」這兩種能力不要互相干擾。</p>
+            <h3>獨立的最佳化模型</h3>
+            <p>寫 技能 的模型與執行任務的 目標模型 分工，讓「反思怎麼改」與「照規則執行」這兩種能力不要互相干擾。</p>
           </div>
         </div>
       </div>
-      <div class="soft" style="margin-top:18px">工程上的意思很直接：如果沒有受控步長、沒有 reject memory、沒有 gate，你做的就不是訓練，而比較像高級版 prompt 瞎猜。</div>
+      <div class="soft" style="margin-top:18px">工程上的意思很直接：如果沒有受控步長、沒有 拒絕紀錄記憶、沒有 驗證關卡，你做的就不是訓練，而比較像高級版 提示詞 瞎猜。</div>
     </section>
 
     <section id="results">
-      <h2>結果不是小修小補，而是把 skill 這層證明成有效的 domain adaptation</h2>
+      <h2>結果不是小修小補，而是把 技能 這層證明成有效的 領域調適</h2>
       <table class="compare">
         <thead>
           <tr><th>設定</th><th>SkillOpt 觀察</th><th>你應該怎麼解讀</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>7 個 target models</td>
+            <td>7 個 目標模型</td>
             <td>包含 frontier-scale GPT 與小型 Qwen</td>
             <td>這不是只對單一超大模型有效的技巧。</td>
           </tr>
           <tr>
-            <td>6 個 benchmarks</td>
-            <td>QA、spreadsheets、documents、math、embodied tasks</td>
-            <td>skill 優化不是只對一種任務型別有幫助。</td>
+            <td>6 個 評測集</td>
+            <td>問答、試算表、文件、數學、具身任務</td>
+            <td>技能 優化不是只對一種任務型別有幫助。</td>
           </tr>
           <tr>
-            <td>3 種 execution harnesses</td>
-            <td>direct chat、Codex、Claude Code</td>
-            <td>對我們最重要，因為這證明 agent 執行環境也吃得到 skill 訓練成果。</td>
+            <td>3 種 執行框架</td>
+            <td>直接聊天、Codex、Claude Code</td>
+            <td>對我們最重要，因為這證明 代理 執行環境也吃得到 技能 訓練成果。</td>
           </tr>
           <tr>
-            <td>52 / 52 cells</td>
-            <td>best or tied-best</td>
-            <td>不是少數 benchmark 撐起平均，而是整體表現很整齊。</td>
+            <td>52／52 格</td>
+            <td>最佳或並列最佳</td>
+            <td>不是少數 評測集 撐起平均，而是整體表現很整齊。</td>
           </tr>
         </tbody>
       </table>
@@ -642,9 +642,9 @@
         <div class="card">
           <div class="bar"></div>
           <div class="card-body">
-            <span class="tag">Direct Chat</span>
+            <span class="tag">直接聊天</span>
             <h3>+23.5</h3>
-            <p>GPT-5.5 從 no-skill baseline 到 SkillOpt skill 的平均增幅。</p>
+            <p>GPT-5.5 從 無技能基準 到 SkillOpt 技能 的平均增幅。</p>
           </div>
         </div>
         <div class="card cyan">
@@ -652,7 +652,7 @@
           <div class="card-body">
             <span class="tag cyan">Codex</span>
             <h3>+24.8</h3>
-            <p>相同方法搬進 agentic coding harness 仍成立，不是只對 chat UI 有效。</p>
+            <p>相同方法搬進 代理程式執行框架 仍成立，不是只對 聊天介面 有效。</p>
           </div>
         </div>
         <div class="card green">
@@ -668,16 +668,16 @@
 
     <section id="transfer">
       <h2>最有營運價值的地方：best_skill.md 可以轉移</h2>
-      <p>論文與專案頁都強調，部署時 target model 不需要帶 optimizer memory，只需要最終的 <code>best_skill.md</code>。而且這份 skill 不只對原本的 target model 有用，還能跨模型尺寸、跨 Codex / Claude Code harness、甚至對相近 benchmark 帶來正向效果。</p>
+      <p>論文與專案頁都強調，部署時 目標模型 不需要帶 最佳化器記憶，只需要最終的 <code data-language-code="">best_skill.md</code>。而且這份 技能 不只對原本的 目標模型 有用，還能跨模型尺寸、跨 Codex / Claude Code 執行框架、甚至對相近 評測集 帶來正向效果。</p>
       <div class="grid-2">
         <div class="card">
           <div class="bar"></div>
           <div class="card-body">
             <h3>對企業的意義</h3>
             <ul>
-              <li>可以集中在較強算力環境做 skill 訓練。</li>
-              <li>訓練好後，把產物分發到不同 agent 與不同模型。</li>
-              <li>不用每個場景都重新 fine-tune 或重新手寫 prompt。</li>
+              <li>可以集中在較強算力環境做 技能 訓練。</li>
+              <li>訓練好後，把產物分發到不同 代理 與不同模型。</li>
+              <li>不用每個場景都重新 微調 或重新手寫 提示詞。</li>
             </ul>
           </div>
         </div>
@@ -686,9 +686,9 @@
           <div class="card-body">
             <h3>對個人的意義</h3>
             <ul>
-              <li>你維護的不再是很多段 prompt，而是一組經過驗證的 skill 資產。</li>
-              <li>真正值錢的能力會慢慢從「很會寫 prompt」轉向「很會設 benchmark、很會做 gate」。</li>
-              <li>Agent engineering 開始更像 ML engineering。</li>
+              <li>你維護的不再是很多段 提示詞，而是一組經過驗證的 技能 資產。</li>
+              <li>真正值錢的能力會慢慢從「很會寫 提示詞」轉向「很會設 評測集、很會做 驗證關卡」。</li>
+              <li>代理工程 開始更像 ML engineering。</li>
             </ul>
           </div>
         </div>
@@ -704,37 +704,37 @@
         <tbody>
           <tr>
             <td>教學 HTML 產線</td>
-            <td>每次重寫 prompt，靠人工看順不順</td>
-            <td>固定 lesson brief 結構、版面規則、禁用詞與 mobile gate，定期用評估樣本訓練教學 skill</td>
+            <td>每次重寫 提示詞，靠人工看順不順</td>
+            <td>固定 課程摘要 結構、版面規則、禁用詞與 手機驗證關卡，定期用評估樣本訓練教學 技能</td>
           </tr>
           <tr>
-            <td>Codex / Claude Code SOP</td>
+            <td>Codex／Claude Code SOP</td>
             <td>手工維護長指令，靠記憶提醒</td>
-            <td>把任務拆成可評測 skill，量化成功率、回合數、工具失敗率與格式一致性</td>
+            <td>把任務拆成可評測 技能，量化成功率、回合數、工具失敗率與格式一致性</td>
           </tr>
           <tr>
             <td>研究報告</td>
             <td>每篇報告都重講來源標準與保守語氣</td>
-            <td>把引用規則、可信度排序、禁止過度結論化等行為封裝成可驗證 skill</td>
+            <td>把引用規則、可信度排序、禁止過度結論化等行為封裝成可驗證 技能</td>
           </tr>
           <tr>
-            <td>PM / triage</td>
-            <td>靠人手判斷 priority 與 owner</td>
-            <td>把分類標準、缺資訊時的追問、不可自動派工條件放進 skill，再用 held-out case 做驗證</td>
+            <td>PM／分流</td>
+            <td>靠人手判斷 優先級 與 負責人</td>
+            <td>把分類標準、缺資訊時的追問、不可自動派工條件放進 技能，再用 保留測試案例 做驗證</td>
           </tr>
         </tbody>
       </table>
-      <div class="warn" style="margin-top:18px">如果只是把更多規則塞進 prompt，這還不叫 SkillOpt。真正的改變是：你開始有驗證集、接受條件、被拒絕的編輯記錄，以及可以分發的最佳 skill 產物。</div>
+      <div class="warn" style="margin-top:18px">如果只是把更多規則塞進 提示詞，這還不叫 SkillOpt。真正的改變是：你開始有驗證集、接受條件、被拒絕的編輯記錄，以及可以分發的最佳 技能 產物。</div>
     </section>
 
     <section>
-      <h2>一句話比較：SkillOpt 改的是 prompt 的生命週期</h2>
+      <h2>一句話比較：SkillOpt 改的是 提示詞 的生命週期</h2>
       <div class="grid-2">
         <div class="card orange">
           <div class="bar"></div>
           <div class="card-body">
-            <h3>傳統 prompt engineering</h3>
-            <pre>人寫 prompt
+            <h3>傳統 提示詞 engineering</h3>
+            <pre data-language-code="">人寫 prompt
 人試幾次
 覺得順就上
 失敗再改
@@ -745,7 +745,7 @@
           <div class="bar"></div>
           <div class="card-body">
             <h3>SkillOpt 思路</h3>
-            <pre>定義任務與評估集
+            <pre data-language-code="">定義任務與評估集
 rollout 收集軌跡
 optimizer 提出小幅 edits
 held-out gate 決定是否接受
@@ -753,40 +753,40 @@ held-out gate 決定是否接受
           </div>
         </div>
       </div>
-      <div class="soft" style="margin-top:18px">對使用者來說，這代表未來你可能不需要一直手調 prompt；對團隊來說，這代表真正要投資的是 skill 設計、評估樣本與驗證流程。</div>
+      <div class="soft" style="margin-top:18px">對使用者來說，這代表未來你可能不需要一直手調 提示詞；對團隊來說，這代表真正要投資的是 技能 設計、評估樣本與驗證流程。</div>
     </section>
 
     <section id="checklist">
-      <h2>如果你要在自己的 agent 系統借鏡 SkillOpt，先過這張清單</h2>
+      <h2>如果你要在自己的 代理 系統借鏡 SkillOpt，先過這張清單</h2>
       <ol class="step-list">
-        <li><strong>先挑一個高重複、可評分的工作流。</strong><br>例如教學 HTML、資料整理、ticket triage、PR review。不要一開始就選超開放、沒有驗收標準的任務。</li>
-        <li><strong>先定義評估集，不要先堆 prompt。</strong><br>SkillOpt 成立的前提，是你知道什麼叫成功、什麼叫退步。</li>
-        <li><strong>把 skill 當外部狀態，而不是把所有希望寄託在模型本身。</strong><br>模型可以固定，skill 可以迭代，這正是成本與可控性的關鍵。</li>
+        <li><strong>先挑一個高重複、可評分的工作流。</strong><br>例如教學 HTML、資料整理、任務票分流、PR 審核。不要一開始就選超開放、沒有驗收標準的任務。</li>
+        <li><strong>先定義評估集，不要先堆 提示詞。</strong><br>SkillOpt 成立的前提，是你知道什麼叫成功、什麼叫退步。</li>
+        <li><strong>把 技能 當外部狀態，而不是把所有希望寄託在模型本身。</strong><br>模型可以固定，技能 可以迭代，這正是成本與可控性的關鍵。</li>
         <li><strong>限制每輪修改幅度。</strong><br>大改容易把既有有效規則一起改壞，小步編輯比較適合長期收斂。</li>
-        <li><strong>保留 rejected edits 與驗證紀錄。</strong><br>這些不是失敗垃圾，而是之後避免重犯的負面樣本。</li>
-        <li><strong>部署時只帶最佳產物，不要把訓練過程一起背上線。</strong><br><code>best_skill.md</code> 應該是乾淨、可稽核、可分發的最終協議。</li>
+        <li><strong>保留 被拒絕編輯 與驗證紀錄。</strong><br>這些不是失敗垃圾，而是之後避免重犯的負面樣本。</li>
+        <li><strong>部署時只帶最佳產物，不要把訓練過程一起背上線。</strong><br><code data-language-code="">best_skill.md</code> 應該是乾淨、可稽核、可分發的最終協議。</li>
       </ol>
     </section>
 
     <section id="sources">
       <h2>來源</h2>
       <div class="source-list">
-        <a href="https://microsoft.github.io/SkillOpt/">SkillOpt project page</a>
-        <a href="https://github.com/microsoft/SkillOpt">microsoft / SkillOpt GitHub</a>
-        <a href="https://arxiv.org/abs/2605.23904">SkillOpt: Executive Strategy for Self-Evolving Agent Skills (arXiv)</a>
+        <a href="https://microsoft.github.io/SkillOpt/">SkillOpt 專案頁面</a>
+        <a href="https://github.com/microsoft/SkillOpt">microsoft／SkillOpt GitHub</a>
+        <a href="https://arxiv.org/abs/2605.23904">SkillOpt：自我演進 Agent 技能的執行策略（arXiv）</a>
         <a href="https://github.com/microsoft/SkillOpt/blob/main/README.md">SkillOpt README</a>
-        <a href="https://youtu.be/g8Ik-0aYfiQ?si=waHWh-PeVpswul9n">參考內容：當 Prompt 變成可訓練模型：SkillOpt 重新定義提示詞工程</a>
+        <a href="https://youtu.be/g8Ik-0aYfiQ?si=waHWh-PeVpswul9n">參考內容：當 提示詞 變成可訓練模型：SkillOpt 重新定義提示詞工程</a>
       </div>
     </section>
   </main>
 
   <footer>
-    Michael public teaching note. Grounded in SkillOpt official project materials, paper, repository notes, and source-backed content review.
+    Michael 公開教學筆記，依據 SkillOpt 官方專案資料、論文、儲存庫筆記與有來源依據的內容審查整理。
   </footer>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Skill、蒸餾與能力沉澱</h2>
     <ul>
       <li><a href="./nuwa-skill-distillation.html">Nuwa Skill：把專家方法變成 AI Skill</a></li>

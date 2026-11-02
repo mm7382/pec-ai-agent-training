@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Agent 術語入門｜工程師學習筆記</title>
   <meta name="description" content="先搞懂 Prompt、Context、Workflow、API Key、Local LLM 等常見名詞，避免需求講不清楚或誤用工具。">
 
@@ -637,23 +637,23 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/053485694f12347d.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
 
 <section class="ad-cover" aria-label="Michael teaching cover">
   <div class="ad-cover-inner">
     <div class="ad-cover-top">
       <div class="ad-logo-white" aria-label="個人品牌標記"></div>
-      <div class="ad-cover-kicker">Michael Agent Lab<br/>April 2026</div>
+      <div class="ad-cover-kicker">Michael Agent Lab<br/>2026 年 4 月</div>
     </div>
     <div class="ad-cover-main">
-      <div class="ad-cover-label">Engineering AI Training</div>
+      <div class="ad-cover-label">工程 AI 培訓</div>
       <h1>AI Agent 術語與名詞解釋</h1>
-      <p class="ad-cover-subtitle">AI Agent 入門前置課｜RF / SIE / EMC / Thermal / ME / Safety 工程師</p>
+      <p class="ad-cover-subtitle">AI 代理 入門前置課｜RF / SIE / EMC / Thermal / ME / Safety 工程師</p>
     </div>
     <div class="ad-cover-footer">
       <span>Michael AI Agent Lab</span>
-      <span>HTML Training Material</span>
+      <span>HTML 培訓教材</span>
     </div>
   </div>
 </section>
@@ -661,14 +661,14 @@
 <header>
     <div class="wrap">
       <div class="ad-logo-full" aria-label="個人品牌標記"></div>
-      <div class="eyebrow">AI Agent 入門前置課｜RF / SIE / EMC / Thermal / ME / Safety 工程師</div>
+      <div class="eyebrow">AI 代理 入門前置課｜RF / SIE / EMC / Thermal / ME / Safety 工程師</div>
       <h1>AI Agent 術語與名詞解釋</h1>
-      <p class="lead">在學 Gemini CLI、Codex、MCP 或自動化 Agent 之前，先把常見名詞講清楚。這份教材用工程師熟悉的測試、issue、BOM、log、報告與跨部門協作情境，說明 AI Agent 的基本語言。</p>
+      <p class="lead">在學 Gemini CLI、Codex、MCP 或自動化 代理 之前，先把常見名詞講清楚。這份教材用工程師熟悉的測試、問題、BOM、紀錄、報告與跨部門協作情境，說明 AI 代理 的基本語言。</p>
       <div class="hero-metrics">
         <div class="metric"><b>20+</b><small>常見術語</small></div>
         <div class="metric"><b>6</b><small>工程職能範例</small></div>
-        <div class="metric"><b>45 min</b><small>可作一堂入門課</small></div>
-        <div class="metric"><b>1 page</b><small>快速複習表</small></div>
+        <div class="metric"><b>45 分鐘</b><small>可作一堂入門課</small></div>
+        <div class="metric"><b>1 頁</b><small>快速複習表</small></div>
       </div>
     </div>
   </header>
@@ -687,34 +687,34 @@
 
   <main>
     <section id="why">
-      <div class="section-title"><span>1</span><h2>為什麼工程師學 Agent 前，要先懂這些名詞？</h2></div>
+      <div class="section-title"><span>1</span><h2>為什麼工程師學 代理 前，要先懂這些名詞？</h2></div>
       <div class="grid">
         <div class="card span-4">
           <h3>避免把 AI 當成搜尋引擎</h3>
-          <p>ChatGPT 類工具可以回答問題，但 AI Agent 更像是一個可以「看資料、用工具、照流程、產出結果」的自動化助手。名詞搞懂後，才知道它能做什麼、不能做什麼。</p>
+          <p>ChatGPT 類工具可以回答問題，但 AI 代理 更像是一個可以「看資料、用工具、照流程、產出結果」的自動化助手。名詞搞懂後，才知道它能做什麼、不能做什麼。</p>
         </div>
         <div class="card span-4">
           <h3>避免需求講不清楚</h3>
-          <p>工程師常需要描述測試條件、限制、判斷標準與輸出格式。懂 Prompt、Context、Workflow 後，才能把需求講成 AI 可以執行的任務。</p>
+          <p>工程師常需要描述測試條件、限制、判斷標準與輸出格式。懂 提示詞、上下文、工作流程 後，才能把需求講成 AI 可以執行的任務。</p>
         </div>
         <div class="card span-4">
           <h3>避免資安與誤用風險</h3>
-          <p>API Key、Local LLM、Cloud LLM、Permission、Tool 都跟資料安全有關。越早建立邊界，越能避免把組織內部資料丟到不該去的地方。</p>
+          <p>API Key、本機 LLM、雲端 LLM、Permission、Tool 都跟資料安全有關。越早建立邊界，越能避免把組織內部資料丟到不該去的地方。</p>
         </div>
       </div>
     </section>
 
     <section id="map">
-      <div class="section-title"><span>2</span><h2>AI Agent 的整體關係圖</h2></div>
+      <div class="section-title"><span>2</span><h2>AI 代理 的整體關係圖</h2></div>
       <div class="card span-12">
         <div class="flow">
-          <div class="flow-step"><b>Prompt</b>你下達任務，例如「整理 thermal log 並找出 fail 原因」。</div>
-          <div class="flow-step"><b>Context</b>提供背景，例如專案、測試條件、判斷標準、相關文件。</div>
-          <div class="flow-step"><b>LLM / Model</b>模型負責理解、推理、產生計畫與文字內容。</div>
-          <div class="flow-step"><b>Tool / MCP</b>讓 Agent 可以讀檔、查資料、跑程式、操作系統或連接外部工具。</div>
-          <div class="flow-step"><b>Workflow</b>把任務拆成固定流程，例如讀取 → 分類 → 摘要 → 產出報告 → 寄信。</div>
+          <div class="flow-step"><b>提示詞</b>你下達任務，例如「整理 thermal 紀錄 並找出 失敗 原因」。</div>
+          <div class="flow-step"><b>背景 上下文</b>提供背景，例如專案、測試條件、判斷標準、相關文件。</div>
+          <div class="flow-step"><b>大型語言模型／模型</b>模型負責理解、推理、產生計畫與文字內容。</div>
+          <div class="flow-step"><b>工具／MCP</b>讓 代理 可以讀檔、查資料、跑程式、操作系統或連接外部工具。</div>
+          <div class="flow-step"><b>工作流程</b>把任務拆成固定流程，例如讀取 → 分類 → 摘要 → 產出報告 → 寄信。</div>
         </div>
-        <div class="example"><strong>一句話理解：</strong>Prompt 是你交代工作，Context 是你給背景資料，LLM 是大腦，Tool 是手腳，Workflow 是 SOP，MCP 是讓工具可以標準化連接的接口。</div>
+        <div class="example"><strong>一句話理解：</strong>提示詞 是你交代工作，上下文 是你給背景資料，LLM 是大腦，Tool 是手腳，工作流程 是 SOP，MCP 是讓工具可以標準化連接的接口。</div>
       </div>
     </section>
 
@@ -722,23 +722,23 @@
       <div class="section-title"><span>3</span><h2>核心名詞解釋</h2></div>
       <div class="grid">
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">API Key</div><div class="term-sub">像是 AI 服務的鑰匙或通行證</div></div><span class="pill">資安重點</span></div>
+          <div class="term-head"><div><div class="term-title">API 金鑰</div><div class="term-sub">像是 AI 服務的鑰匙或通行證</div></div><span class="pill">資安重點</span></div>
           <p>API Key 是用來讓程式呼叫某個 AI 服務或雲端服務的憑證。程式拿著這把鑰匙，才能向服務發送請求。</p>
           <div class="example"><strong>工程範例：</strong>你的通知機器人要呼叫雲端 AI 產生週報摘要，程式就需要 API Key 來證明「我是被允許使用這個 AI 服務的人」。</div>
           <div class="warning"><strong>注意：</strong>API Key 不要貼在公開 GitHub、Teams 截圖、簡報或共用文件裡。外洩後可能造成費用、資料與帳號風險。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">MCP</div><div class="term-sub">Model Context Protocol，讓 AI 連接工具與資料的標準接口</div></div><span class="pill">Agent 關鍵</span></div>
-          <p>MCP 可以想成 AI Agent 的「標準插座」。不同工具、資料庫、檔案系統、內部系統都可以用一致方式接給 AI 使用。</p>
-          <div class="example"><strong>工程範例：</strong>AI 透過 MCP 讀取指定資料夾中的測試 log、Excel issue list 或規格文件，再整理成報告。</div>
-          <div class="ok"><strong>白話比喻：</strong>以前每個設備都要自己寫轉接線；MCP 則像 USB-C，讓工具比較容易被 Agent 接上。</div>
+          <div class="term-head"><div><div class="term-title">MCP</div><div class="term-sub">Model 上下文 Protocol，讓 AI 連接工具與資料的標準接口</div></div><span class="pill">代理 關鍵</span></div>
+          <p>MCP 可以想成 AI 代理 的「標準插座」。不同工具、資料庫、檔案系統、內部系統都可以用一致方式接給 AI 使用。</p>
+          <div class="example"><strong>工程範例：</strong>AI 透過 MCP 讀取指定資料夾中的測試 紀錄、Excel 問題清單 或規格文件，再整理成報告。</div>
+          <div class="ok"><strong>白話比喻：</strong>以前每個設備都要自己寫轉接線；MCP 則像 USB-C，讓工具比較容易被 代理 接上。</div>
         </article>
 
         <article class="card term-card span-6">
           <div class="term-head"><div><div class="term-title">Markdown</div><div class="term-sub">一種容易讀、也容易轉成文件的文字格式</div></div><span class="pill">輸出格式</span></div>
           <p>Markdown 用簡單符號表示標題、清單、表格、粗體與程式碼。AI 很適合產生 Markdown，因為它結構清楚、容易轉成 HTML、Word 或簡報內容。</p>
-          <pre># Thermal Test Summary
+          <pre data-language-code=""># Thermal Test Summary
 - Project: DLAP-3500
 - Condition: 45°C / Full Load
 - Result: Fail
@@ -746,47 +746,47 @@
 | Item | Finding | Action |
 |---|---|---|
 | CPU Temp | Over limit | Check fan curve |</pre>
-          <div class="example"><strong>工程範例：</strong>把每週 project status 先輸出成 Markdown，再轉成 HTML 報告或 email 內容。</div>
+          <div class="example"><strong>工程範例：</strong>把每週 專案狀態 先輸出成 Markdown，再轉成 HTML 報告或 電子郵件 內容。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Context</div><div class="term-sub">AI 判斷時需要看的背景資訊</div></div><span class="pill">準確度關鍵</span></div>
-          <p>Context 是你提供給 AI 的背景資料，例如專案名稱、角色、限制條件、測試標準、過去對話、檔案內容或組織內部規則。</p>
-          <div class="example"><strong>工程範例：</strong>只說「幫我整理 fail 原因」太模糊；補上「這是 EMC pre-scan，測項是 RE 30MHz–1GHz，超標點在 600–800MHz」後，AI 才能給更接近工程判斷的摘要。</div>
-          <div class="warning"><strong>常見錯誤：</strong>Context 不足時，AI 可能會用一般常識補空白，導致看起來合理但不一定符合專案事實。</div>
+          <div class="term-head"><div><div class="term-title">背景 上下文</div><div class="term-sub">AI 判斷時需要看的背景資訊</div></div><span class="pill">準確度關鍵</span></div>
+          <p>上下文 是你提供給 AI 的背景資料，例如專案名稱、角色、限制條件、測試標準、過去對話、檔案內容或組織內部規則。</p>
+          <div class="example"><strong>工程範例：</strong>只說「幫我整理 失敗 原因」太模糊；補上「這是 EMC pre-scan，測項是 RE 30MHz–1GHz，超標點在 600–800MHz」後，AI 才能給更接近工程判斷的摘要。</div>
+          <div class="warning"><strong>常見錯誤：</strong>上下文 不足時，AI 可能會用一般常識補空白，導致看起來合理但不一定符合專案事實。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Prompt</div><div class="term-sub">你對 AI 下的指令與需求描述</div></div><span class="pill">需求表達</span></div>
-          <p>Prompt 不只是問問題，而是把任務、背景、輸入資料、輸出格式、限制條件與判斷標準講清楚。</p>
-          <pre>請扮演 SIE 工程師，根據以下 issue list：
+          <div class="term-head"><div><div class="term-title">提示詞</div><div class="term-sub">你對 AI 下的指令與需求描述</div></div><span class="pill">需求表達</span></div>
+          <p>提示詞 不只是問問題，而是把任務、背景、輸入資料、輸出格式、限制條件與判斷標準講清楚。</p>
+          <pre data-language-code="">請扮演 SIE 工程師，根據以下 issue list：
 1. 找出 Critical open items
 2. 依 RF / ME / Thermal / Safety 分類
 3. 輸出成表格
 4. 每個 item 給下一步 action owner 建議
 限制：不要自行假設未提供的測試結果。</pre>
-          <div class="example"><strong>工程範例：</strong>好的 Prompt 就像交代新人做報告：要說明目的、資料來源、格式、不要做什麼。</div>
+          <div class="example"><strong>工程範例：</strong>好的 提示詞 就像交代新人做報告：要說明目的、資料來源、格式、不要做什麼。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Token</div><div class="term-sub">AI 模型讀取與輸出文字的基本計算單位</div></div><span class="pill">成本 / 長度</span></div>
-          <p>Token 可以粗略理解為文字切片。模型讀你的輸入與產生回答都會消耗 token。文件越長、輸出越長，token 越多。</p>
-          <div class="example"><strong>工程範例：</strong>一次丟 20 個 Excel 檔、每個檔案都有大量 issue，會消耗很多 token，也可能超過模型可處理的長度。這時要先做篩選、摘要或分批處理。</div>
+          <div class="term-head"><div><div class="term-title">詞元</div><div class="term-sub">AI 模型讀取與輸出文字的基本計算單位</div></div><span class="pill">成本 / 長度</span></div>
+          <p>代元 可以粗略理解為文字切片。模型讀你的輸入與產生回答都會消耗 代元。文件越長、輸出越長，代元 越多。</p>
+          <div class="example"><strong>工程範例：</strong>一次丟 20 個 Excel 檔、每個檔案都有大量 問題，會消耗很多 代元，也可能超過模型可處理的長度。這時要先做篩選、摘要或分批處理。</div>
           <div class="ok"><strong>實務建議：</strong>大量資料先用程式整理成重點，再交給 AI 分析，通常比整包丟給 AI 更穩。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Tool</div><div class="term-sub">AI Agent 可以使用的外部能力</div></div><span class="pill">Agent 手腳</span></div>
-          <p>Tool 是 Agent 可以呼叫的功能，例如讀檔、寫檔、搜尋、寄信、跑 Python、查資料庫、操作瀏覽器或產生圖表。</p>
-          <div class="example"><strong>工程範例：</strong>Agent 不是只回答「你應該整理 Excel」，而是可以真的讀取 Excel，找出 Critical Issues，產出 HTML report，然後準備寄信。</div>
+          <div class="term-head"><div><div class="term-title">工具</div><div class="term-sub">AI 代理 可以使用的外部能力</div></div><span class="pill">代理 手腳</span></div>
+          <p>Tool 是 代理 可以呼叫的功能，例如讀檔、寫檔、搜尋、寄信、跑 Python、查資料庫、操作瀏覽器或產生圖表。</p>
+          <div class="example"><strong>工程範例：</strong>代理 不是只回答「你應該整理 Excel」，而是可以真的讀取 Excel，找出 Critical Issues，產出 HTML 報告，然後準備寄信。</div>
           <div class="warning"><strong>注意：</strong>Tool 權限越大，風險越高。能讀哪些資料夾、能不能刪檔、能不能寄信，都要設定清楚。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Workflow</div><div class="term-sub">把工作拆成可重複執行的流程</div></div><span class="pill">工程 SOP</span></div>
-          <p>Workflow 是一連串固定步驟，讓 Agent 不只是單次回答，而是照流程完成任務。</p>
-          <div class="example"><strong>工程範例：</strong>PM Excel Agent 的 workflow 可以是：掃描資料夾 → 找出 Excel → 讀取欄位 → 篩選 Critical open → 分類 RF/ME/Thermal/Safety → 產生 HTML → 發送通知 → 使用者確認 → 寄出 mail。</div>
-          <div class="ok"><strong>白話比喻：</strong>Prompt 是一次交辦，Workflow 是可重複的 SOP。</div>
+          <div class="term-head"><div><div class="term-title">工作流程</div><div class="term-sub">把工作拆成可重複執行的流程</div></div><span class="pill">工程 SOP</span></div>
+          <p>工作流程 是一連串固定步驟，讓 代理 不只是單次回答，而是照流程完成任務。</p>
+          <div class="example"><strong>工程範例：</strong>PM Excel Agent 的 工作流程 可以是：掃描資料夾 → 找出 Excel → 讀取欄位 → 篩選 Critical open → 分類 RF/ME/Thermal/Safety → 產生 HTML → 發送通知 → 使用者確認 → 寄出 電子郵件。</div>
+          <div class="ok"><strong>白話比喻：</strong>提示詞 是一次交辦，工作流程 是可重複的 SOP。</div>
         </article>
       </div>
     </section>
@@ -795,8 +795,8 @@
       <div class="section-title"><span>4</span><h2>建議一併補上的常見名詞</h2></div>
       <div class="grid">
         <div class="card span-4">
-          <h3>LLM / Model</h3>
-          <p>大型語言模型，是 AI Agent 的大腦。ChatGPT、Gemini、Claude、Llama、Qwen 都屬於這類模型或模型家族。</p>
+          <h3>大型語言模型／模型</h3>
+          <p>大型語言模型，是 AI 代理 的大腦。ChatGPT、Gemini、Claude、Llama、Qwen 都屬於這類模型或模型家族。</p>
           <span class="tag blue">理解</span><span class="tag">推理</span><span class="tag">產生內容</span>
         </div>
         <div class="card span-4">
@@ -810,62 +810,62 @@
           <span class="tag blue">文件問答</span><span class="tag">內部知識庫</span>
         </div>
         <div class="card span-4">
-          <h3>Embedding</h3>
+          <h3>向量嵌入</h3>
           <p>把文字轉成向量，讓系統可以判斷兩段文字語意是否相近。常用在文件搜尋與知識庫。</p>
           <span class="tag blue">語意搜尋</span><span class="tag">知識庫</span>
         </div>
         <div class="card span-4">
-          <h3>Vector Database</h3>
+          <h3>向量資料庫</h3>
           <p>儲存 embedding 的資料庫，用來讓 AI 快速找到與問題最相關的文件段落。</p>
           <span class="tag blue">RAG</span><span class="tag">資料檢索</span>
         </div>
         <div class="card span-4">
-          <h3>System Prompt</h3>
-          <p>比一般 Prompt 更高層的行為規則，例如要求 AI 用繁體中文、遵守公司格式、不可臆測測試結果。</p>
+          <h3>系統提示詞</h3>
+          <p>比一般 提示詞 更高層的行為規則，例如要求 AI 用繁體中文、遵守公司格式、不可臆測測試結果。</p>
           <span class="tag warn">規則</span><span class="tag">風格</span>
         </div>
         <div class="card span-4">
-          <h3>Hallucination</h3>
+          <h3>幻覺</h3>
           <p>AI 產生看似合理但其實沒有根據的內容。工程文件、測試結論與規格判斷尤其要避免。</p>
           <span class="tag red">風險</span><span class="tag warn">需驗證</span>
         </div>
         <div class="card span-4">
-          <h3>Guardrail</h3>
+          <h3>防護規則</h3>
           <p>限制 AI 行為的安全護欄，例如禁止讀取未授權資料夾、禁止自動寄出外部郵件、禁止修改原始檔。</p>
           <span class="tag red">權限</span><span class="tag warn">安全</span>
         </div>
         <div class="card span-4">
-          <h3>Human-in-the-loop</h3>
-          <p>關鍵決策仍由人確認。Agent 可以整理與建議，但寄信、改 BOM、提交報告前要由工程師審核。</p>
+          <h3>人工介入</h3>
+          <p>關鍵決策仍由人確認。代理 可以整理與建議，但寄信、改 BOM、提交報告前要由工程師審核。</p>
           <span class="tag blue">人工確認</span><span class="tag">審核</span>
         </div>
         <div class="card span-4">
-          <h3>Local LLM</h3>
+          <h3>本機大型語言模型</h3>
           <p>在本機或組織內部環境執行的模型。優點是資料較容易控管，缺點是硬體需求高，能力可能受模型大小限制。</p>
           <span class="tag blue">本地</span><span class="tag warn">效能限制</span>
         </div>
         <div class="card span-4">
-          <h3>Cloud LLM</h3>
+          <h3>雲端大型語言模型</h3>
           <p>透過雲端服務使用的模型，例如 ChatGPT、Gemini、Claude。通常能力強、更新快，但要注意資料與權限規範。</p>
           <span class="tag blue">雲端</span><span class="tag red">資料邊界</span>
         </div>
         <div class="card span-4">
           <h3>CLI</h3>
           <p>Command Line Interface，命令列工具。Gemini CLI、Codex CLI 讓工程師可以在 terminal 中使用 AI 讀專案、改檔案、產出文件。</p>
-          <span class="tag blue">Terminal</span><span class="tag">工程工具</span>
+          <span class="tag blue">終端機</span><span class="tag">工程工具</span>
         </div>
         <div class="card span-4">
-          <h3>Permission / 權限</h3>
-          <p>Agent 能看什麼、能做什麼、能不能寫檔或刪檔。權限控管是 Agent 導入工程流程的基本要求。</p>
+          <h3>權限 / 權限</h3>
+          <p>代理 能看什麼、能做什麼、能不能寫檔或刪檔。權限控管是 代理 導入工程流程的基本要求。</p>
           <span class="tag red">資安</span><span class="tag warn">控管</span>
         </div>
         <div class="card span-4">
-          <h3>Memory</h3>
-          <p>讓 Agent 記住偏好、專案規則或歷史紀錄的能力。但組織內部資料是否可被記憶，要有清楚規範。</p>
+          <h3>記憶 記憶</h3>
+          <p>讓 代理 記住偏好、專案規則或歷史紀錄的能力。但組織內部資料是否可被記憶，要有清楚規範。</p>
           <span class="tag blue">個人化</span><span class="tag red">隱私</span>
         </div>
         <div class="card span-4">
-          <h3>Evaluation / Eval</h3>
+          <h3>評估</h3>
           <p>評估 AI 輸出是否正確、穩定、符合格式。工程應用不能只看一次成功，要能重複驗證。</p>
           <span class="tag blue">驗證</span><span class="tag">品質</span>
         </div>
@@ -876,18 +876,18 @@
       <div class="section-title"><span>5</span><h2>用工程情境理解這些名詞</h2></div>
       <div class="grid">
         <div class="card span-6">
-          <h3>範例 A：SIE / PM Issue 自動整理 Agent</h3>
+          <h3>範例 A：SIE / PM 問題 自動整理 代理</h3>
           <p><strong>目標：</strong>掃描專案資料夾中的 Excel，找出 Critical open issues，並依 RF / ME / Thermal / EMC / Safety 分類。</p>
-          <pre>Prompt：請讀取指定資料夾內的 Excel，找出包含 Critical open 的項目。
+          <pre data-language-code="">Prompt：請讀取指定資料夾內的 Excel，找出包含 Critical open 的項目。
 Context：只看 weekly status 與 issue list，不看 hidden sheet。
 Tool：Excel reader、file system、HTML generator。
 Workflow：掃描 → 擷取 → 分類 → 產生報告 → 人工確認 → 寄信。
 Guardrail：不得刪除檔案，不得自動寄信給外部客戶。</pre>
         </div>
         <div class="card span-6">
-          <h3>範例 B：Thermal Test Log 摘要 Agent</h3>
-          <p><strong>目標：</strong>整理 thermal chamber 與 recorder log，判斷是否超出 spec，並產出測試摘要。</p>
-          <pre>Prompt：請根據 thermal log 找出最高溫點與超標時間。
+          <h3>範例 B：Thermal Test 紀錄 摘要 代理</h3>
+          <p><strong>目標：</strong>整理 thermal chamber 與 recorder 紀錄，判斷是否超出 規格，並產出測試摘要。</p>
+          <pre data-language-code="">Prompt：請根據 thermal log 找出最高溫點與超標時間。
 Context：CPU limit 95°C，Ambient 45°C，Fan curve version v1.2。
 Token：大量 log 要先分段或壓縮摘要。
 RAG：從 Thermal Test Request Form 找測試條件。
@@ -896,15 +896,15 @@ Human-in-the-loop：Fail conclusion 由 Thermal RD 或 SIE 確認。</pre>
         <div class="card span-6">
           <h3>範例 C：EMC / RF Pre-scan 報告整理</h3>
           <p><strong>目標：</strong>將 EMC pre-scan 或 RF 測試紀錄整理成問題點與下一步建議。</p>
-          <pre>Prompt：請整理 RE 超標點，依頻段、可能來源與建議 action 輸出。
+          <pre data-language-code="">Prompt：請整理 RE 超標點，依頻段、可能來源與建議 action 輸出。
 Context：測項 RE，超標頻段 600–800MHz，系統狀態 full load。
 Tool：PDF reader、image/table extraction、report generator。
 Hallucination 風險：AI 不可直接宣稱 root cause，只能列可能方向。</pre>
         </div>
         <div class="card span-6">
-          <h3>範例 D：ME / Safety Checklist Agent</h3>
+          <h3>範例 D：ME / Safety Checklist 代理</h3>
           <p><strong>目標：</strong>根據設計變更、BOM 與安規需求，整理檢查項目與未完成風險。</p>
-          <pre>Prompt：請根據 BOM change list，整理可能影響 Safety / Mechanical 的項目。
+          <pre data-language-code="">Prompt：請根據 BOM change list，整理可能影響 Safety / Mechanical 的項目。
 Context：產品進入 DVT，需確認 label、enclosure、creepage/clearance、material flammability。
 Tool：BOM reader、checklist template、HTML output。
 Workflow：讀 BOM → 比對 checklist → 標示缺口 → 產出 review list。</pre>
@@ -919,14 +919,14 @@ Workflow：讀 BOM → 比對 checklist → 標示缺口 → 產出 review list�
           <tr><th>名詞</th><th>一句話解釋</th><th>工程師最常遇到的用法</th><th>容易搞錯的地方</th></tr>
         </thead>
         <tbody>
-          <tr><td>Prompt</td><td>你交代 AI 的任務</td><td>要求整理 issue、摘要報告、產出表格</td><td>只問一句話但期待 AI 知道所有背景</td></tr>
-          <tr><td>Context</td><td>AI 需要參考的背景</td><td>專案、測試條件、規格、限制</td><td>Context 不足時，AI 可能自行補猜</td></tr>
-          <tr><td>Token</td><td>模型處理文字的計量單位</td><td>長文件、log、Excel 會消耗大量 token</td><td>以為 AI 可以無限制讀全部資料</td></tr>
-          <tr><td>Tool</td><td>Agent 的外部能力</td><td>讀 Excel、跑程式、產生 HTML、寄信</td><td>工具權限沒控管，可能造成資安風險</td></tr>
+          <tr><td>提示詞</td><td>你交代 AI 的任務</td><td>要求整理 問題、摘要報告、產出表格</td><td>只問一句話但期待 AI 知道所有背景</td></tr>
+          <tr><td>背景 上下文</td><td>AI 需要參考的背景</td><td>專案、測試條件、規格、限制</td><td>上下文 不足時，AI 可能自行補猜</td></tr>
+          <tr><td>詞元</td><td>模型處理文字的計量單位</td><td>長文件、紀錄、Excel 會消耗大量 代元</td><td>以為 AI 可以無限制讀全部資料</td></tr>
+          <tr><td>工具</td><td>代理 的外部能力</td><td>讀 Excel、跑程式、產生 HTML、寄信</td><td>工具權限沒控管，可能造成資安風險</td></tr>
           <tr><td>MCP</td><td>讓工具與 AI 標準化連接的接口</td><td>連接檔案、資料庫、團隊工具</td><td>以為 MCP 本身就是模型</td></tr>
-          <tr><td>Workflow</td><td>可重複執行的任務流程</td><td>掃描 → 分析 → 報告 → 確認 → 寄出</td><td>把單次 Prompt 當成穩定流程</td></tr>
+          <tr><td>工作流程</td><td>可重複執行的任務流程</td><td>掃描 → 分析 → 報告 → 確認 → 寄出</td><td>把單次 提示詞 當成穩定流程</td></tr>
           <tr><td>RAG</td><td>先找資料再回答</td><td>內部文件問答、規格查詢、SOP 查詢</td><td>以為 RAG 可以保證 100% 正確</td></tr>
-          <tr><td>Guardrail</td><td>限制 AI 行為的安全規則</td><td>禁止刪檔、禁止外寄、限制資料夾</td><td>等出事才補權限控管</td></tr>
+          <tr><td>防護規則</td><td>限制 AI 行為的安全規則</td><td>禁止刪檔、禁止外寄、限制資料夾</td><td>等出事才補權限控管</td></tr>
         </tbody>
       </table>
     </section>
@@ -934,60 +934,60 @@ Workflow：讀 BOM → 比對 checklist → 標示缺口 → 產出 review list�
     <section>
       <div class="section-title"><span>7</span><h2>建議 45 分鐘教學流程</h2></div>
       <div class="grid">
-        <div class="card span-4"><h3>0–10 分鐘：建立共同語言</h3><p>說明 Agent 與 Chatbot 差異，先用整體關係圖讓大家知道 Prompt、Context、Tool、Workflow 的位置。</p></div>
-        <div class="card span-4"><h3>10–25 分鐘：核心名詞拆解</h3><p>逐一說明 API Key、MCP、Markdown、Context、Prompt、Token、Tool、Workflow，搭配工程例子。</p></div>
-        <div class="card span-4"><h3>25–35 分鐘：工程案例</h3><p>用 SIE Excel Agent、Thermal log、EMC pre-scan、ME/Safety checklist 做小案例。</p></div>
-        <div class="card span-6"><h3>35–42 分鐘：風險與邊界</h3><p>說明 Hallucination、Guardrail、Permission、Human-in-the-loop，強調 AI 產出必須驗證。</p></div>
-        <div class="card span-6"><h3>42–45 分鐘：小測驗與討論</h3><p>請工程師提出自己部門最想自動化的一個工作，並判斷需要哪些 Context 與 Tool。</p></div>
+        <div class="card span-4"><h3>0–10 分鐘：建立共同語言</h3><p>說明 代理 與 Chatbot 差異，先用整體關係圖讓大家知道 提示詞、上下文、工具、工作流程 的位置。</p></div>
+        <div class="card span-4"><h3>10–25 分鐘：核心名詞拆解</h3><p>逐一說明 API Key、MCP、Markdown、上下文、提示詞、代元、工具、工作流程，搭配工程例子。</p></div>
+        <div class="card span-4"><h3>25–35 分鐘：工程案例</h3><p>用 SIE Excel Agent、Thermal 紀錄、EMC pre-scan、ME/Safety checklist 做小案例。</p></div>
+        <div class="card span-6"><h3>35–42 分鐘：風險與邊界</h3><p>說明 幻覺、安全護欄、權限、人工介入，強調 AI 產出必須驗證。</p></div>
+        <div class="card span-6"><h3>42–45 分鐘：小測驗與討論</h3><p>請工程師提出自己部門最想自動化的一個工作，並判斷需要哪些 上下文 與 工具。</p></div>
       </div>
     </section>
 
     <section id="quiz" class="quiz">
       <div class="section-title"><span>8</span><h2>課後小測驗</h2></div>
       <details>
-        <summary>1. 使用 Cloud LLM 或 AI Agent 時，哪一種做法最符合組織內部資料保護原則？</summary>
-        <p><strong>答案：</strong>先移除或遮蔽機密資訊，再只提供必要背景讓 AI 協助分析。組織內部資料、客戶名稱、專案代號、BOM、測試報告、issue log、帳號密碼、API Key、內部路徑與未公開規格，都不應直接貼到未核准的雲端 AI 工具。比較安全的做法是先去識別化、摘要化、遮蔽敏感欄位，或改用公司核准的工具與本地端流程。</p>
+        <summary>1. 使用 雲端 LLM 或 AI 代理 時，哪一種做法最符合組織內部資料保護原則？</summary>
+        <p><strong>答案：</strong>先移除或遮蔽機密資訊，再只提供必要背景讓 AI 協助分析。組織內部資料、客戶名稱、專案代號、BOM、測試報告、問題 紀錄、帳號密碼、API Key、內部路徑與未公開規格，都不應直接貼到未核准的雲端 AI 工具。比較安全的做法是先去識別化、摘要化、遮蔽敏感欄位，或改用公司核准的工具與本地端流程。</p>
       </details>
       <details>
-        <summary>2. 要讓 Agent 讀 Excel、產生 HTML、寄出 email，這些能力屬於什麼？</summary>
-        <p><strong>答案：</strong>Tool。這些是 Agent 的外部能力，但必須搭配 Permission 與 Guardrail 控管。</p>
+        <summary>2. 要讓 代理 讀 Excel、產生 HTML、寄出 電子郵件，這些能力屬於什麼？</summary>
+        <p><strong>答案：</strong>工具。這些是 代理 的外部能力，但必須搭配 權限 與 安全護欄 控管。</p>
       </details>
       <details>
         <summary>3. 只說「幫我整理報告」通常不夠，還缺什麼？</summary>
-        <p><strong>答案：</strong>缺 Context 與明確 Prompt。要補上專案背景、資料來源、輸出格式、判斷標準與限制條件。</p>
+        <p><strong>答案：</strong>缺 上下文 與明確 提示詞。要補上專案背景、資料來源、輸出格式、判斷標準與限制條件。</p>
       </details>
       <details>
         <summary>4. MCP 是模型嗎？</summary>
-        <p><strong>答案：</strong>不是。MCP 是讓模型或 Agent 能標準化連接工具與資料來源的協定或接口。</p>
+        <p><strong>答案：</strong>不是。MCP 是讓模型或 代理 能標準化連接工具與資料來源的協定或接口。</p>
       </details>
       <details>
-        <summary>5. 為什麼大量 log 不建議整包直接丟給 AI？</summary>
-        <p><strong>答案：</strong>因為 token 會很多，可能超過模型限制，也會增加成本與錯誤風險。比較好的方式是先分段、篩選、摘要，再交給 AI 分析。</p>
+        <summary>5. 為什麼大量 紀錄 不建議整包直接丟給 AI？</summary>
+        <p><strong>答案：</strong>因為 代元 會很多，可能超過模型限制，也會增加成本與錯誤風險。比較好的方式是先分段、篩選、摘要，再交給 AI 分析。</p>
       </details>
     </section>
 
     <section>
       <div class="section-title"><span>9</span><h2>一頁式重點：上課可以直接收尾用</h2></div>
       <div class="card print-note">
-        <h3>AI Agent = 模型大腦 + 背景資料 + 工具能力 + 流程控制 + 人工驗證</h3>
-        <p><strong>學會 Prompt：</strong>把需求講清楚。<br>
-        <strong>補足 Context：</strong>讓 AI 知道工程背景與限制。<br>
-        <strong>管理 Tool：</strong>讓 AI 可以做事，但不要給過大權限。<br>
-        <strong>設計 Workflow：</strong>把一次性的回答變成可重複的流程。<br>
-        <strong>加入 Guardrail：</strong>避免資料外洩、誤判與錯誤操作。<br>
-        <strong>保留 Human-in-the-loop：</strong>工程判斷、寄信、對外結論仍需人確認。</p>
+        <h3>AI 代理 = 模型大腦 + 背景資料 + 工具能力 + 流程控制 + 人工驗證</h3>
+        <p><strong>學會 提示詞：</strong>把需求講清楚。<br>
+        <strong>補足 上下文：</strong>讓 AI 知道工程背景與限制。<br>
+        <strong>管理 工具：</strong>讓 AI 可以做事，但不要給過大權限。<br>
+        <strong>設計 工作流程：</strong>把一次性的回答變成可重複的流程。<br>
+        <strong>加入 安全護欄：</strong>避免資料外洩、誤判與錯誤操作。<br>
+        <strong>保留 人工介入：</strong>工程判斷、寄信、對外結論仍需人確認。</p>
       </div>
     </section>
   </main>
 
   <div class="footer">
-    AI Agent 術語入門教材｜適用工程師與 AI 初學者的公開學習筆記
+    AI 代理 術語入門教材｜適用工程師與 AI 初學者的公開學習筆記
   </div>
   <script src="../learning-path.js?v=20260710-learning-path"></script>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>AI Agent 入門與學習路線</h2>
     <ul>
       <li><a href="./ai-30-day-learning-path.html">現在學 AI，真的還不晚：30 天從小白到上手</a></li>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>工程 Prompt 寫法教學｜AI Agent 前置課</title>
   <meta name="description" content="把需求、輸入資料、輸出格式、限制條件與驗收標準寫成 AI 能穩定執行的任務規格。">
 
@@ -660,23 +660,23 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/2b74ce187d89bc72.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
 
 <section class="ad-cover" aria-label="Michael teaching cover">
   <div class="ad-cover-inner">
     <div class="ad-cover-top">
       <div class="ad-logo-white" aria-label="個人品牌標記"></div>
-      <div class="ad-cover-kicker">Michael Agent Lab<br/>April 2026</div>
+      <div class="ad-cover-kicker">Michael Agent Lab<br/>2026 年 4 月</div>
     </div>
     <div class="ad-cover-main">
-      <div class="ad-cover-label">Engineering AI Training</div>
-      <h1>工程 Prompt 寫法教學</h1>
+      <div class="ad-cover-label">工程 AI 培訓</div>
+      <h1>工程 提示詞 寫法教學</h1>
       <p class="ad-cover-subtitle">把需求、輸入資料、輸出格式、限制條件與判斷標準描述清楚</p>
     </div>
     <div class="ad-cover-footer">
       <span>Michael AI Agent Lab</span>
-      <span>HTML Training Material</span>
+      <span>HTML 培訓教材</span>
     </div>
   </div>
 </section>
@@ -684,50 +684,50 @@
 <header>
   <div class="wrap hero">
     <div>
-      <h1>工程 Prompt 寫法教學</h1>
-      <p class="subtitle">練習如何把「需求、輸入資料、輸出格式、限制條件與判斷標準」描述清楚，讓 AI Agent 不只是回答，而是能穩定產出工程師可用的結果。</p>
-      <div class="badge-row"><span class="badge">AI Agent 前置課</span><span class="badge">Prompt Spec</span><span class="badge">工程需求描述</span><span class="badge">輸出格式</span><span class="badge">驗收標準</span></div>
+      <h1>工程 提示詞 寫法教學</h1>
+      <p class="subtitle">練習如何把「需求、輸入資料、輸出格式、限制條件與判斷標準」描述清楚，讓 AI 代理 不只是回答，而是能穩定產出工程師可用的結果。</p>
+      <div class="badge-row"><span class="badge">AI 代理 前置課</span><span class="badge">提示詞規格</span><span class="badge">工程需求描述</span><span class="badge">輸出格式</span><span class="badge">驗收標準</span></div>
     </div>
     <div class="hero-card">
       <strong>一句話先懂</strong>
-      <p>Prompt 不是「跟 AI 聊天」，而是把工程需求寫成 AI 看得懂、做得出來、工程師能驗收的任務規格。</p>
+      <p>提示詞 不是「跟 AI 聊天」，而是把工程需求寫成 AI 看得懂、做得出來、工程師能驗收的任務規格。</p>
       <ul><li>需求不清楚，AI 就會猜</li><li>資料不完整，AI 就會補腦</li><li>格式不指定，結果就難以重複使用</li><li>沒有驗收標準，就不知道答案能不能用</li></ul>
     </div>
   </div>
 </header>
 
-<nav><div class="wrap"><a href="#why">為什麼要學</a><a href="#framework">六段式 Prompt</a><a href="#elements">五大要素</a><a href="#examples">工程範例</a><a href="#badgood">錯誤 vs 正確</a><a href="#practice">練習題</a><a href="#template">模板</a><a href="#quiz">小測驗</a></div></nav>
+<nav><div class="wrap"><a href="#why">為什麼要學</a><a href="#framework">六段式 提示詞</a><a href="#elements">五大要素</a><a href="#examples">工程範例</a><a href="#badgood">錯誤 vs 正確</a><a href="#practice">練習題</a><a href="#template">模板</a><a href="#quiz">小測驗</a></div></nav>
 
 <section id="why"><div class="wrap section-card">
-  <h2>1. 為什麼工程師要學 Prompt 寫法？</h2>
-  <p>對工程師來說，AI Agent 最有價值的地方不是幫你「講得好聽」，而是能協助整理 issue、分類測試資料、產出報告初稿、比對規格、建立 checklist、甚至協助修改程式或 HTML 教材。</p>
+  <h2>1. 為什麼工程師要學 提示詞 寫法？</h2>
+  <p>對工程師來說，AI 代理 最有價值的地方不是幫你「講得好聽」，而是能協助整理 issue、分類測試資料、產出報告初稿、比對規格、建立 檢查清單、甚至協助修改程式或 HTML 教材。</p>
   <div class="grid-3">
     <div class="card"><span class="tag tag-blue">效率</span><h3>少改很多次</h3><p>需求一開始講清楚，AI 產出的結果比較接近你要的格式，不需要一直叫它「再改一下」。</p></div>
     <div class="card"><span class="tag tag-green">品質</span><h3>降低 AI 亂猜</h3><p>給清楚背景、資料範圍與禁止事項，可以降低 AI 把不存在的資訊補進去。</p></div>
     <div class="card"><span class="tag tag-purple">可驗收</span><h3>結果能不能用，一眼看得出來</h3><p>先定義輸出格式與判斷標準，AI 產物才容易被檢查、比較與交付。</p></div>
   </div>
-  <div class="callout"><strong>課程目標：</strong>讓 RF / SIE / EMC / Thermal / ME / Safety 工程師學會用同一套結構描述 AI 任務，讓 AI Agent 更像工程助理，而不是隨機聊天工具。</div>
+  <div class="callout"><strong>課程目標：</strong>讓 RF / SIE / EMC / Thermal / ME / Safety 工程師學會用同一套結構描述 AI 任務，讓 AI 代理 更像工程助理，而不是隨機聊天工具。</div>
 </div></section>
 
 <section id="framework"><div class="wrap section-card">
-  <h2>2. 六段式工程 Prompt 架構</h2>
+  <h2>2. 六段式工程 提示詞 架構</h2>
   <p>這堂課建議用一個固定架構：<span class="highlight">角色 → 目標 → 背景 → 輸入資料 → 輸出格式 → 限制與驗收標準</span>。</p>
-  <div class="flow"><div class="flow-step">1. 角色 Role</div><div class="arrow">→</div><div class="flow-step">2. 目標 Goal</div><div class="arrow">→</div><div class="flow-step">3. 背景 Context</div><div class="arrow">→</div><div class="flow-step">4. 輸入 Input</div><div class="arrow">→</div><div class="flow-step">5. 輸出 Output</div><div class="arrow">→</div><div class="flow-step">6. 驗收 Check</div></div>
+  <div class="flow"><div class="flow-step">1. 角色 角色</div><div class="arrow">→</div><div class="flow-step">2. 目標 目標</div><div class="arrow">→</div><div class="flow-step">3. 背景 上下文</div><div class="arrow">→</div><div class="flow-step">4. 輸入 輸入</div><div class="arrow">→</div><div class="flow-step">5. 輸出 輸出</div><div class="arrow">→</div><div class="flow-step">6. 驗收 驗收</div></div>
   <table style="margin-top:22px;"><thead><tr><th>段落</th><th>要寫什麼</th><th>工程範例</th></tr></thead><tbody>
-    <tr><td>角色 Role</td><td>指定 AI 要用什麼角度工作</td><td>你是資深 SIE 工程師，熟悉 EVT/DVT issue tracking。</td></tr>
-    <tr><td>目標 Goal</td><td>清楚描述要完成的任務</td><td>請把以下 issue list 分類成 SIE / RF / EMC / Thermal / ME / Safety。</td></tr>
-    <tr><td>背景 Context</td><td>補足任務情境與使用者目的</td><td>這份資料要用於 weekly meeting，重點是找出需跨部門追蹤的 high risk item。</td></tr>
-    <tr><td>輸入 Input</td><td>貼資料、欄位說明、資料來源與範圍</td><td>輸入欄位包含 Project、Issue、Owner、Due date、Status。</td></tr>
-    <tr><td>輸出 Output</td><td>指定格式、欄位、長度、語言</td><td>請輸出 Markdown 表格，欄位包含 Project、Issue Summary、Category、Risk、Next Action。</td></tr>
-    <tr><td>驗收 Check</td><td>定義結果如何判斷可用</td><td>不得新增資料中不存在的 owner；不確定請標示「需人工確認」。</td></tr>
+    <tr><td>角色 角色</td><td>指定 AI 要用什麼角度工作</td><td>你是資深 SIE 工程師，熟悉 EVT/DVT issue tracking。</td></tr>
+    <tr><td>目標 目標</td><td>清楚描述要完成的任務</td><td>請把以下 issue list 分類成 SIE / RF / EMC / Thermal / ME / Safety。</td></tr>
+    <tr><td>背景 上下文</td><td>補足任務情境與使用者目的</td><td>這份資料要用於 每週會議，重點是找出需跨部門追蹤的 高風險項目。</td></tr>
+    <tr><td>輸入 輸入</td><td>貼資料、欄位說明、資料來源與範圍</td><td>輸入欄位包含 專案、問題、負責人、期限、狀態。</td></tr>
+    <tr><td>輸出 輸出</td><td>指定格式、欄位、長度、語言</td><td>請輸出 Markdown 表格，欄位包含 專案、問題摘要、分類、風險、下一步行動。</td></tr>
+    <tr><td>驗收 驗收</td><td>定義結果如何判斷可用</td><td>不得新增資料中不存在的 負責人；不確定請標示「需人工確認」。</td></tr>
   </tbody></table>
 </div></section>
 
-<section id="elements"><div class="wrap"><h2>3. Prompt 一定要講清楚的五大要素</h2>
+<section id="elements"><div class="wrap"><h2>3. 提示詞 一定要講清楚的五大要素</h2>
   <div class="grid-2">
-    <div class="card"><span class="tag tag-blue">需求</span><h3>我要 AI 做什麼？</h3><p>不要只寫「幫我整理」。要寫成「幫我分類、摘要、找風險、產出下一步 action」。</p></div>
+    <div class="card"><span class="tag tag-blue">需求</span><h3>我要 AI 做什麼？</h3><p>不要只寫「幫我整理」。要寫成「幫我分類、摘要、找風險、產出下一步 行動」。</p></div>
     <div class="card"><span class="tag tag-green">輸入資料</span><h3>AI 可以依據哪些資料？</h3><p>說明資料欄位、資料範圍、哪些欄位可靠、哪些欄位只是備註。</p></div>
-    <div class="card"><span class="tag tag-purple">輸出格式</span><h3>結果要長什麼樣子？</h3><p>指定表格、條列、mail、PPT 大綱、JSON、HTML、checklist，並列出欄位。</p></div>
+    <div class="card"><span class="tag tag-purple">輸出格式</span><h3>結果要長什麼樣子？</h3><p>指定表格、條列、mail、PPT 大綱、JSON、HTML、檢查清單，並列出欄位。</p></div>
     <div class="card"><span class="tag tag-red">限制條件</span><h3>哪些事情不能做？</h3><p>例如不可猜測、不可新增不存在的資料、不可外洩客戶名稱、不可改變原始數值。</p></div>
     <div class="card"><span class="tag tag-orange">判斷標準</span><h3>怎樣才算好？</h3><p>例如分類必須能追溯原句、風險高低要有理由、不確定要標示，不可硬下結論。</p></div>
     <div class="card"><span class="tag tag-blue">回饋修正</span><h3>第一次不完美，要怎麼改？</h3><p>把錯誤變成規則，例如「下次遇到 Mechanical / ME / 機構 都歸類為 ME」。</p></div>
@@ -735,9 +735,9 @@
 </div></section>
 
 <section id="examples"><div class="wrap section-card">
-  <h2>4. 工程範例 Prompt</h2>
-  <h3>SIE：Excel Issue List 分類</h3>
-  <pre>你是資深 SIE 工程師，熟悉工業電腦 EVT/DVT issue tracking。
+  <h2>4. 工程範例 提示詞</h2>
+  <h3>SIE：Excel 問題 List 分類</h3>
+  <pre data-language-code="">你是資深 SIE 工程師，熟悉工業電腦 EVT/DVT issue tracking。
 
 目標：
 請根據我提供的 issue list，分類哪些項目需要 SIE 追蹤、哪些需要轉給 RF / EMC / Thermal / ME / Safety。
@@ -765,8 +765,8 @@
 - 不要新增資料裡沒有的結論
 - 請使用繁體中文</pre>
 
-  <h3>Thermal：測試 Log 摘要</h3>
-  <pre>你是 Thermal 測試資料整理助理。
+  <h3>Thermal：測試 紀錄 摘要</h3>
+  <pre data-language-code="">你是 Thermal 測試資料整理助理。
 
 目標：
 請根據溫度 log 摘要，找出可能的 thermal risk 與需要補測的條件。
@@ -790,8 +790,8 @@
 - 沒有數據支持的推論請標示「推測」
 - 不要刪除任何關鍵溫度數值</pre>
 
-  <h3>EMC / RF：Fail Item 初步分類</h3>
-  <pre>你是 EMC / RF 問題整理助理。
+  <h3>EMC / RF：失敗項目 初步分類</h3>
+  <pre data-language-code="">你是 EMC / RF 問題整理助理。
 
 目標：
 請把以下 fail item 依照可能方向分類，方便工程師安排 debug。
@@ -814,8 +814,8 @@ Fail Item｜可能分類｜判斷依據｜建議下一步｜信心程度
 - 不要宣稱已找到 root cause
 - 若缺少頻率、測試條件或 setup 資訊，請列在「需要補充資料」</pre>
 
-  <h3>Safety：安規 Checklist 產出</h3>
-  <pre>你是 Safety / 安規文件整理助理。
+  <h3>Safety：安規 檢查清單 產出</h3>
+  <pre data-language-code="">你是 Safety / 安規文件整理助理。
 
 目標：
 請根據以下產品描述，產出安規初步檢查 checklist。
@@ -833,10 +833,10 @@ Fail Item｜可能分類｜判斷依據｜建議下一步｜信心程度
 - 請使用繁體中文</pre>
 </div></section>
 
-<section id="badgood"><div class="wrap"><h2>5. 錯誤 Prompt vs 正確 Prompt</h2>
+<section id="badgood"><div class="wrap"><h2>5. 錯誤 提示詞 vs 正確 提示詞</h2>
   <div class="badgood">
-    <div class="card bad"><span class="tag tag-red">不建議</span><h3>太模糊</h3><pre>幫我整理這些 issue，給我重點。</pre><p>問題：沒有角色、沒有用途、沒有分類規則、沒有輸出格式、沒有禁止 AI 猜測。</p></div>
-    <div class="card good"><span class="tag tag-green">建議</span><h3>可驗收</h3><pre>你是 SIE project issue reviewer。
+    <div class="card bad"><span class="tag tag-red">不建議</span><h3>太模糊</h3><pre data-language-code="">幫我整理這些 issue，給我重點。</pre><p>問題：沒有角色、沒有用途、沒有分類規則、沒有輸出格式、沒有禁止 AI 猜測。</p></div>
+    <div class="card good"><span class="tag tag-green">建議</span><h3>可驗收</h3><pre data-language-code="">你是 SIE project issue reviewer。
 請根據以下 issue list，找出需要跨部門追蹤的 high risk open item。
 請輸出 Markdown 表格：
 Project｜Issue｜Category｜Risk｜Reason｜Next Action。
@@ -846,19 +846,19 @@ Project｜Issue｜Category｜Risk｜Reason｜Next Action。
 </div></section>
 
 <section id="practice"><div class="wrap section-card">
-  <h2>6. 課堂練習：把一句話改成工程 Prompt</h2>
+  <h2>6. 課堂練習：把一句話改成工程 提示詞</h2>
   <table><thead><tr><th>原始需求</th><th>要補上的資訊</th><th>練習目標</th></tr></thead><tbody>
-    <tr><td>幫我看這份測試報告。</td><td>看什麼？找 fail？摘要？轉成 mail？要不要判斷風險？</td><td>改成包含目標、輸入欄位、輸出格式、限制條件的 Prompt。</td></tr>
-    <tr><td>幫我分析 EMC 問題。</td><td>是 fail frequency、setup、cable、shielding、grounding 還是 layout？</td><td>加入「不可直接下 root cause」與「需要補充資料」欄位。</td></tr>
-    <tr><td>幫我做成報告。</td><td>給誰看？主管、PM、客戶還是工程師？要幾頁？語氣？格式？</td><td>指定 audience、章節、長度與語氣。</td></tr>
+    <tr><td>幫我看這份測試報告。</td><td>看什麼？找 fail？摘要？轉成 mail？要不要判斷風險？</td><td>改成包含目標、輸入欄位、輸出格式、限制條件的 提示詞。</td></tr>
+    <tr><td>幫我分析 EMC 問題。</td><td>是 失敗頻率、測試配置、線材、屏蔽、接地 還是 佈局？</td><td>加入「不可直接下 根因」與「需要補充資料」欄位。</td></tr>
+    <tr><td>幫我做成報告。</td><td>給誰看？主管、PM、客戶還是工程師？要幾頁？語氣？格式？</td><td>指定 讀者、章節、長度與語氣。</td></tr>
     <tr><td>幫我改 HTML。</td><td>要改哪個區塊？保留哪些內容？風格？是否需要互動功能？</td><td>加入檔案範圍、保留條件、修改目標與驗收方式。</td></tr>
   </tbody></table>
-  <div class="callout note"><strong>練習提醒：</strong>工程 Prompt 的重點不是寫很長，而是讓 AI 知道「根據什麼資料，做什麼事情，輸出成什麼格式，哪些不能做，以及怎麼判斷好不好」。</div>
+  <div class="callout note"><strong>練習提醒：</strong>工程 提示詞 的重點不是寫很長，而是讓 AI 知道「根據什麼資料，做什麼事情，輸出成什麼格式，哪些不能做，以及怎麼判斷好不好」。</div>
 </div></section>
 
 <section id="template"><div class="wrap section-card">
-  <h2>7. 可直接複製使用的工程 Prompt 模板</h2>
-  <pre>角色：
+  <h2>7. 可直接複製使用的工程 提示詞 模板</h2>
+  <pre data-language-code="">角色：
 你是 [角色 / 專業背景]，熟悉 [工程領域 / 流程 / 測試項目]。
 
 任務目標：
@@ -893,7 +893,7 @@ Project｜Issue｜Category｜Risk｜Reason｜Next Action。
 - 高風險項目要說明原因
 - 輸出格式必須可直接複製到報告或 mail
 - 若資料不足，請列出需要補充的資訊</pre>
-  <h3>Prompt 自我檢查清單</h3>
+  <h3>提示詞 自我檢查清單</h3>
   <ul class="checklist">
     <li>☐ 我有說明 AI 要扮演什麼角色嗎？</li>
     <li>☐ 我有說明這份輸出的用途與讀者嗎？</li>
@@ -907,10 +907,10 @@ Project｜Issue｜Category｜Risk｜Reason｜Next Action。
 <section id="lesson"><div class="wrap section-card">
   <h2>8. 45 分鐘教學建議流程</h2>
   <table><thead><tr><th>時間</th><th>主題</th><th>內容</th></tr></thead><tbody>
-    <tr><td>0–5 分鐘</td><td>開場</td><td>說明 Prompt 對 AI Agent 的重要性，不是問問題，而是寫任務規格。</td></tr>
+    <tr><td>0–5 分鐘</td><td>開場</td><td>說明 提示詞 對 AI 代理 的重要性，不是問問題，而是寫任務規格。</td></tr>
     <tr><td>5–15 分鐘</td><td>六段式架構</td><td>角色、目標、背景、輸入、輸出、驗收。</td></tr>
-    <tr><td>15–25 分鐘</td><td>工程範例</td><td>SIE issue、Thermal log、EMC/RF fail item、ME BOM、Safety checklist。</td></tr>
-    <tr><td>25–35 分鐘</td><td>Prompt 改寫練習</td><td>把一句模糊需求改成工程 Prompt。</td></tr>
+    <tr><td>15–25 分鐘</td><td>工程範例</td><td>SIE 議題、熱測試紀錄、EMC／RF 失敗項目、ME BOM、安全檢查清單。</td></tr>
+    <tr><td>25–35 分鐘</td><td>提示詞 改寫練習</td><td>把一句模糊需求改成工程 提示詞。</td></tr>
     <tr><td>35–42 分鐘</td><td>資安與限制條件</td><td>練習加入不可外洩、不可猜測、需人工確認等限制。</td></tr>
     <tr><td>42–45 分鐘</td><td>小測驗</td><td>確認學員理解需求、輸入、輸出、限制與驗收標準。</td></tr>
   </tbody></table>
@@ -918,21 +918,21 @@ Project｜Issue｜Category｜Risk｜Reason｜Next Action。
 
 <section id="quiz"><div class="wrap section-card">
   <h2>9. 課後小測驗</h2>
-  <details open><summary>1. 為什麼「幫我整理這份資料」不是一個好的工程 Prompt？</summary><p>因為它沒有說明整理目的、輸入資料範圍、輸出格式、限制條件與判斷標準，AI 很容易自己猜。</p></details>
-  <details><summary>2. 如果資料包含客戶名稱、料號、BOM 與 fail log，Prompt 裡應該加入什麼限制？</summary><p>應要求不要輸出或外洩敏感資訊，必要時先去識別化；也應避免把高度敏感資料直接貼到未核准的 Cloud LLM。</p></details>
-  <details><summary>3. 為什麼要指定輸出格式？</summary><p>指定格式可以讓結果更容易複製到 mail、報告、Excel、HTML 或下一個 AI workflow，也能降低後續整理時間。</p></details>
-  <details><summary>4. 「不確定請標示需人工確認」屬於哪一類 Prompt 要素？</summary><p>這是限制條件與驗收標準，可以降低 AI 硬下結論或產生幻覺的風險。</p></details>
+  <details open><summary>1. 為什麼「幫我整理這份資料」不是一個好的工程 提示詞？</summary><p>因為它沒有說明整理目的、輸入資料範圍、輸出格式、限制條件與判斷標準，AI 很容易自己猜。</p></details>
+  <details><summary>2. 如果資料包含客戶名稱、料號、BOM 與 fail 紀錄，提示詞 裡應該加入什麼限制？</summary><p>應要求不要輸出或外洩敏感資訊，必要時先去識別化；也應避免把高度敏感資料直接貼到未核准的 Cloud LLM。</p></details>
+  <details><summary>3. 為什麼要指定輸出格式？</summary><p>指定格式可以讓結果更容易複製到 mail、報告、Excel、HTML 或下一個 AI 工作流程，也能降低後續整理時間。</p></details>
+  <details><summary>4. 「不確定請標示需人工確認」屬於哪一類 提示詞 要素？</summary><p>這是限制條件與驗收標準，可以降低 AI 硬下結論或產生幻覺的風險。</p></details>
 </div></section>
 
 <section id="references"><div class="wrap section-card">
   <h2>10. 延伸學習資料</h2>
-  <p>本教材整理自官方 Prompt 設計建議、AI Agent spec 寫法與公開教學資源，並改寫為工程師教學版本。</p>
+  <p>本教材整理自官方 提示詞 設計建議、AI 代理 spec 寫法與公開教學資源，並改寫為工程師教學版本。</p>
   <ul>
-    <li>OpenAI：Prompt engineering / Prompt guidance</li>
-    <li>Google Gemini：Prompt design strategies，強調 persona、task、context、format 與反覆修正</li>
-    <li>Microsoft：Prompt engineering techniques，包含 instruction、cue、few-shot examples 與 output format</li>
-    <li>DAIR.AI Prompt Engineering Guide：Prompt engineering 學習資源與技術彙整</li>
-    <li>AI Agent spec writing：強調清楚任務、邊界、測試與可驗收的工作項目</li>
+    <li>OpenAI：提示詞工程／提示詞指南</li>
+    <li>Google Gemini：提示詞 design strategies，強調 persona、task、上下文、format 與反覆修正</li>
+    <li>Microsoft：提示詞 engineering techniques，包含 instruction、cue、few-shot 範例 與 output format</li>
+    <li>DAIR.AI 提示詞 Engineering Guide：提示詞 engineering 學習資源與技術彙整</li>
+    <li>AI 代理 spec writing：強調清楚任務、邊界、測試與可驗收的工作項目</li>
   </ul>
 </div></section>
 
@@ -941,11 +941,11 @@ Project｜Issue｜Category｜Risk｜Reason｜Next Action。
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
-      <li><a href="./claude-code-output-style.html">Claude Code Output Style：讓 AI 用你讀得懂的方式回報</a></li>
-      <li><a href="./task-definition-brief.html">你不是不會寫 Prompt，是不會定義任務</a></li>
+      <li><a href="./claude-code-output-style.html">Claude Code 輸出風格：讓 AI 用你讀得懂的方式回報</a></li>
+      <li><a href="./task-definition-brief.html">你不是不會寫 提示詞，是不會定義任務</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>
   </div>

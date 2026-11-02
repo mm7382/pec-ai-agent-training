@@ -75,22 +75,22 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/bc75549612424cbf.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <section class="cover" aria-label="Michael cover">
     <div class="cover-inner">
       <div class="cover-top">
         <div class="ad-logo-white" aria-label="個人品牌標記"></div>
-        <div class="cover-kicker">Course Material<br/>HTML Training</div>
+        <div class="cover-kicker">課程教材<br/>HTML 培訓</div>
       </div>
       <div class="cover-main">
-        <div class="label">Content Analysis</div>
+        <div class="label">內容分析</div>
         <h1>Harness Engineering：讓 Agent 穩定工作的系統設計</h1>
         <p class="subtitle">依主題研究整理成課程大綱、核心概念與重點分析。</p>
       </div>
       <div class="cover-footer">
         <span>Michael AI Agent Lab</span>
-        <span>Research-backed Course Material</span>
+        <span>有研究依據的課程教材</span>
       </div>
     </div>
   </section>
@@ -100,7 +100,7 @@
       <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
       <h1>Harness Engineering：讓 Agent 穩定工作的系統設計</h1>
-      <p class="lead">本教材聚焦 Harness Engineering：如何把工具、文件、評分、回饋與品質閘門包成一套讓 agent 穩定工作的系統。</p>
+      <p class="lead">本教材聚焦 執行框架工程：如何把工具、文件、評分、回饋與品質閘門包成一套讓 代理 穩定工作的系統。</p>
       <div class="metrics">
         <div class="metric"><b>7</b><small>主要大綱</small></div>
         <div class="metric"><b>2</b><small>研究資料</small></div>
@@ -126,18 +126,18 @@
     <section id="outline">
       <div class="section-title"><span>1</span><h2>課程大綱</h2></div>
       <div class="grid">
-          <article class="card span-6"><h3>Harness 是什麼</h3><p>Harness 不是更長的 prompt，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 agent 能穩定完成任務。</p><div><span class="tag blue">Harness</span><span class="tag blue">Agent System</span><span class="tag blue">Workflow</span></div></article><article class="card span-6"><h3>為什麼不是只做 Prompt Engineering</h3><p>Prompt 只能告訴模型要做什麼；Harness 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</p><div><span class="tag blue">Prompt</span><span class="tag blue">Context</span><span class="tag blue">Feedback Loop</span></div></article><article class="card span-6"><h3>Harness 的核心組件</h3><p>一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</p><div><span class="tag blue">Planner</span><span class="tag blue">Tools</span><span class="tag blue">Evaluator</span></div></article><article class="card span-6"><h3>OpenAI 的重點：讓 Codex 看得懂系統</h3><p>OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</p><div><span class="tag blue">Codex</span><span class="tag blue">Agent Legibility</span><span class="tag blue">System of Record</span></div></article><article class="card span-6"><h3>Anthropic 的重點：Generator 與 Evaluator 分工</h3><p>Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</p><div><span class="tag blue">Generator</span><span class="tag blue">Evaluator</span><span class="tag blue">Quality</span></div></article><article class="card span-6"><h3>AutoHarness 的啟發：小模型也能靠系統變強</h3><p>AutoHarness 論文指出，小模型可透過迭代回饋自動合成 code harness，避免非法動作，甚至在某些任務超過更大的模型。</p><div><span class="tag blue">AutoHarness</span><span class="tag blue">Code Harness</span><span class="tag blue">Policy</span></div></article><article class="card span-6"><h3>實務上可以怎麼導入</h3><p>先從高頻流程做 Harness，不要一開始做大平台；教材產線、PR review、issue triage 都適合先做。</p><div><span class="tag blue">Learning Workflow</span><span class="tag blue">Agent Workflow</span><span class="tag blue">Prototype</span></div></article>
+          <article class="card span-6"><h3>執行框架 是什麼</h3><p>執行框架 不是更長的 提示詞，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 代理 能穩定完成任務。</p><div><span class="tag blue">執行框架</span><span class="tag blue">Agent 系統</span><span class="tag blue">工作流程</span></div></article><article class="card span-6"><h3>為什麼不是只做 Prompt Engineering</h3><p>提示詞 只能告訴模型要做什麼；執行框架 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</p><div><span class="tag blue">提示詞</span><span class="tag blue">背景 上下文</span><span class="tag blue">回饋迴圈</span></div></article><article class="card span-6"><h3>執行框架 的核心組件</h3><p>一個實用 執行框架 通常包含 規劃器、工具、記憶、評估器、品質關卡 與 迭代循環。</p><div><span class="tag blue">規劃者</span><span class="tag blue">工具</span><span class="tag blue">評估者</span></div></article><article class="card span-6"><h3>OpenAI 的重點：讓 Codex 看得懂系統</h3><p>OpenAI 的 執行框架工程 文章強調 代理可理解性：把文件、工具、紀錄、指標、測試與架構規則放到 Codex 可讀的位置。</p><div><span class="tag blue">Codex</span><span class="tag blue">Agent 可讀性</span><span class="tag blue">權威紀錄系統</span></div></article><article class="card span-6"><h3>Anthropic 的重點：產生器 與 評估器 分工</h3><p>Anthropic 的案例說明，讓同一個 代理 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</p><div><span class="tag blue">產生器</span><span class="tag blue">評估者</span><span class="tag blue">品質</span></div></article><article class="card span-6"><h3>AutoHarness 的啟發：小模型也能靠系統變強</h3><p>AutoHarness 論文指出，小模型可透過迭代回饋自動合成 程式碼 執行框架，避免非法動作，甚至在某些任務超過更大的模型。</p><div><span class="tag blue">AutoHarness</span><span class="tag blue">程式執行框架</span><span class="tag blue">政策</span></div></article><article class="card span-6"><h3>實務上可以怎麼導入</h3><p>先從高頻流程做 執行框架，不要一開始做大平台；教材產線、PR 審核、問題分流 都適合先做。</p><div><span class="tag blue">學習流程</span><span class="tag blue">Agent 工作流程</span><span class="tag blue">原型</span></div></article>
       </div>
     </section>
 
     <section id="map">
-      <div class="section-title"><span>2</span><h2>Harness 工作系統閉環</h2></div>
+      <div class="section-title"><span>2</span><h2>執行框架 工作系統閉環</h2></div>
       <div class="grid">
         <div class="card span-12">
           <div class="flow">
-            <div class="flow-step"><b>Harness 是什麼</b>Harness 不是更長的 prompt，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 agent 能穩定完成任務。</div><div class="flow-step"><b>為什麼不是只做 Prompt Engineering</b>Prompt 只能告訴模型要做什麼；Harness 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</div><div class="flow-step"><b>Harness 的核心組件</b>一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</div><div class="flow-step"><b>OpenAI 的重點：讓 Codex 看得懂系統</b>OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</div><div class="flow-step"><b>Anthropic 的重點：Generator 與 Evaluator 分工</b>Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</div>
+            <div class="flow-step"><b>執行框架 是什麼</b>執行框架 不是更長的 提示詞，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 代理 能穩定完成任務。</div><div class="flow-step"><b>為什麼不是只做 Prompt Engineering</b>提示詞 只能告訴模型要做什麼；執行框架 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</div><div class="flow-step"><b>執行框架 的核心組件</b>一個實用 執行框架 通常包含 規劃器、工具、記憶、評估器、品質關卡 與 迭代循環。</div><div class="flow-step"><b>OpenAI 的重點：讓 Codex 看得懂系統</b>OpenAI 的 執行框架工程 文章強調 代理可理解性：把文件、工具、紀錄、指標、測試與架構規則放到 Codex 可讀的位置。</div><div class="flow-step"><b>Anthropic 的重點：產生器 與 評估器 分工</b>Anthropic 的案例說明，讓同一個 代理 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</div>
           </div>
-          <div class="example"><strong>閱讀方式：</strong>先看 Harness 如何把任務環境化，再看 Planner、Tools、Evaluator 與 Quality Gate 如何形成可迭代流程。</div>
+          <div class="example"><strong>閱讀方式：</strong>先看 執行框架 如何把任務環境化，再看 規劃器、工具、評估器 與 品質關卡 如何形成可迭代流程。</div>
         </div>
       </div>
     </section>
@@ -146,33 +146,33 @@
       <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
       <div class="grid">
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Harness 是什麼</div><div class="term-sub">Harness 不是更長的 prompt，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 agent 能穩定完成任務。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>Prompt 解決「怎麼問」；Context 解決「給什麼資料」；Harness 解決「agent 在什麼環境裡做事」。</li><li>OpenAI 的案例把重點放在環境、規則、工具與回饋迴圈，而不是只靠模型自己變聰明。</li><li>對工程團隊來說，Harness 就是把工作流程系統化，讓 agent 有路徑、有工具、有界線。</li></ul>
-          <div class="example"><strong>教學提示：</strong>可以把 Harness 想成工程師旁邊的一整套工作台：文件、工具、測試、log、review 規則都準備好，agent 才能做穩。</div>
+          <div class="term-head"><div><div class="term-title">執行框架 是什麼</div><div class="term-sub">執行框架 不是更長的 提示詞，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 代理 能穩定完成任務。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>提示詞 解決「怎麼問」；上下文 解決「給什麼資料」；執行框架 解決「代理 在什麼環境裡做事」。</li><li>OpenAI 的案例把重點放在環境、規則、工具與回饋迴圈，而不是只靠模型自己變聰明。</li><li>對工程團隊來說，執行框架 就是把工作流程系統化，讓 代理 有路徑、有工具、有界線。</li></ul>
+          <div class="example"><strong>教學提示：</strong>可以把 執行框架 想成工程師旁邊的一整套工作台：文件、工具、測試、紀錄、審核 規則都準備好，代理 才能做穩。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">為什麼不是只做 Prompt Engineering</div><div class="term-sub">Prompt 只能告訴模型要做什麼；Harness 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>OpenAI 提到，人類工程師的角色變成設計環境、指定意圖、建立 feedback loops，讓 Codex agents 能可靠工作。</li><li>Anthropic 的 harness design 也強調 generator 與 evaluator 分工，讓一個 agent 做事，另一個 agent 更嚴格地評分與回饋。</li><li>這代表 AI 工程的重點從「寫好一句話」升級成「設計一個會自我修正的工作系統」。</li></ul>
-          <div class="example"><strong>教學提示：</strong>同一句需求，如果沒有工具與檢查，agent 可能只產出漂亮草稿；有 Harness，agent 會跑測試、看錯誤、改到通過。</div>
+          <div class="term-head"><div><div class="term-title">為什麼不是只做 Prompt Engineering</div><div class="term-sub">提示詞 只能告訴模型要做什麼；執行框架 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>OpenAI 提到，人類工程師的角色變成設計環境、指定意圖、建立 回饋循環，讓 Codex agents 能可靠工作。</li><li>Anthropic 的 執行框架設計 也強調 產生器 與 評估器 分工，讓一個 代理 做事，另一個 代理 更嚴格地評分與回饋。</li><li>這代表 AI 工程的重點從「寫好一句話」升級成「設計一個會自我修正的工作系統」。</li></ul>
+          <div class="example"><strong>教學提示：</strong>同一句需求，如果沒有工具與檢查，代理 可能只產出漂亮草稿；有 執行框架，代理 會跑測試、看錯誤、改到通過。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Harness 的核心組件</div><div class="term-sub">一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>Planner：先拆任務與定義完成條件，避免 agent 一開始就亂做。</li><li>Tools：讓 agent 能讀檔、跑測試、查 log、操作瀏覽器或呼叫 API。</li><li>Evaluator：用標準檢查結果，並把具體問題回饋給 generator。</li></ul>
-          <div class="example"><strong>教學提示：</strong>做 Michael AI Agent Lab 教材時，Planner 定義章節，Tools 抓來源與官方資料，Evaluator 檢查繁體、手機版、個人品牌標記 與內容是否重複。</div>
+          <div class="term-head"><div><div class="term-title">執行框架 的核心組件</div><div class="term-sub">一個實用 執行框架 通常包含 規劃器、工具、記憶、評估器、品質關卡 與 迭代循環。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>規劃器：先拆任務與定義完成條件，避免 代理 一開始就亂做。</li><li>工具：讓 代理 能讀檔、跑測試、查 紀錄、操作瀏覽器或呼叫 API。</li><li>評估器：用標準檢查結果，並把具體問題回饋給 產生器。</li></ul>
+          <div class="example"><strong>教學提示：</strong>做 Michael AI Agent Lab 教材時，規劃器 定義章節，工具 抓來源與官方資料，評估器 檢查繁體、手機版、個人品牌標記 與內容是否重複。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">OpenAI 的重點：讓 Codex 看得懂系統</div><div class="term-sub">OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>OpenAI 提到 repository knowledge 要成為 system of record，AGENTS.md 更像目錄，不是一本塞滿規則的大百科。</li><li>把 log、metrics、browser state、測試結果暴露給 Codex，能讓 Codex 自己觀察、修正、再驗證。</li><li>人類的 taste、review comment 與 bug feedback 應持續回寫成文件、工具或檢查規則。</li></ul>
-          <div class="example"><strong>教學提示：</strong>對實務團隊 來說，不是每次口頭提醒 agent，而是把教材規則、產品資料、版型要求與檢查腳本放在 Codex 找得到的位置。</div>
+          <div class="term-head"><div><div class="term-title">OpenAI 的重點：讓 Codex 看得懂系統</div><div class="term-sub">OpenAI 的 執行框架工程 文章強調 代理可理解性：把文件、工具、紀錄、指標、測試與架構規則放到 Codex 可讀的位置。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>OpenAI 提到 儲存庫知識 要成為 權威紀錄來源，AGENTS.md 更像目錄，不是一本塞滿規則的大百科。</li><li>把 紀錄、指標、瀏覽器狀態、測試結果暴露給 Codex，能讓 Codex 自己觀察、修正、再驗證。</li><li>人類的 美感判斷、審核意見 與 錯誤回饋 應持續回寫成文件、工具或檢查規則。</li></ul>
+          <div class="example"><strong>教學提示：</strong>對實務團隊 來說，不是每次口頭提醒 代理，而是把教材規則、產品資料、版型要求與檢查腳本放在 Codex 找得到的位置。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Anthropic 的重點：Generator 與 Evaluator 分工</div><div class="term-sub">Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>Evaluator 要有明確評分標準，例如設計品質、功能、可用性、code quality。</li><li>Evaluator 可以實際操作頁面、看結果、寫出具體 critique，再讓 generator 迭代。</li><li>這個模式適合用在 HTML 教材、前端 UI、測試修正、客戶文件等需要品質判斷的任務。</li></ul>
-          <div class="example"><strong>教學提示：</strong>內容輸出 agent 產 HTML 後，不應只看是否有檔案；還要有 evaluator 檢查手機可讀、內容不重複、沒有禁用字。</div>
+          <div class="term-head"><div><div class="term-title">Anthropic 的重點：產生器 與 評估器 分工</div><div class="term-sub">Anthropic 的案例說明，讓同一個 代理 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>評估器 要有明確評分標準，例如設計品質、功能、可用性、程式碼品質。</li><li>評估器 可以實際操作頁面、看結果、寫出具體 具體評語，再讓 產生器 迭代。</li><li>這個模式適合用在 HTML 教材、前端 介面、測試修正、客戶文件等需要品質判斷的任務。</li></ul>
+          <div class="example"><strong>教學提示：</strong>內容輸出 代理 產 HTML 後，不應只看是否有檔案；還要有 評估器 檢查手機可讀、內容不重複、沒有禁用字。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">AutoHarness 的啟發：小模型也能靠系統變強</div><div class="term-sub">AutoHarness 論文指出，小模型可透過迭代回饋自動合成 code harness，避免非法動作，甚至在某些任務超過更大的模型。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>論文摘要提到，Gemini-2.5-Flash 的許多失敗來自非法動作；harness 能把外部規則變成可執行防護。</li><li>重點不是模型本身最大，而是能否把環境規則、限制與修正流程寫成 code 或 policy。</li><li>這對本地 agent 很重要：本地模型不一定最強，但如果 Harness 設計好，仍可在特定任務上穩定輸出。</li></ul>
-          <div class="example"><strong>教學提示：</strong>內容輸出 agent 不必靠最強模型硬猜，只要有來源取得、官方資料查詢、個人教學頁 renderer、品質閘門與回饋機制，就能穩定產教材。</div>
+          <div class="term-head"><div><div class="term-title">AutoHarness 的啟發：小模型也能靠系統變強</div><div class="term-sub">AutoHarness 論文指出，小模型可透過迭代回饋自動合成 程式碼 執行框架，避免非法動作，甚至在某些任務超過更大的模型。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>論文摘要提到，Gemini-2.5-Flash 的許多失敗來自非法動作；執行框架 能把外部規則變成可執行防護。</li><li>重點不是模型本身最大，而是能否把環境規則、限制與修正流程寫成 程式碼 或 政策。</li><li>這對本地 代理 很重要：本地模型不一定最強，但如果 執行框架 設計好，仍可在特定任務上穩定輸出。</li></ul>
+          <div class="example"><strong>教學提示：</strong>內容輸出 代理 不必靠最強模型硬猜，只要有來源取得、官方資料查詢、個人教學頁 renderer、品質閘門與回饋機制，就能穩定產教材。</div>
         </article><article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">實務上可以怎麼導入</div><div class="term-sub">先從高頻流程做 Harness，不要一開始做大平台；教材產線、PR review、issue triage 都適合先做。</div></div><span class="pill">核心概念</span></div>
-          <ul><li>教材 Harness：來源理解、官方資料補充、個人教學 HTML、手機預覽、寄信確認。</li><li>工程 Harness：讀 AGENTS.md、跑測試、查 log、輸出風險與修正建議。</li><li>客戶問題 Harness：分類 issue、補上下文、比對既有案例、產出可追蹤 action items。</li></ul>
-          <div class="example"><strong>教學提示：</strong>第一版先把內容輸出 agent 做成完整 Harness：產出後由你確認，確認過的修正再回寫成下一版規則。</div>
+          <div class="term-head"><div><div class="term-title">實務上可以怎麼導入</div><div class="term-sub">先從高頻流程做 執行框架，不要一開始做大平台；教材產線、PR 審核、問題分流 都適合先做。</div></div><span class="pill">核心概念</span></div>
+          <ul><li>教材 執行框架：來源理解、官方資料補充、個人教學 HTML、手機預覽、寄信確認。</li><li>工程 執行框架：讀 AGENTS.md、跑測試、查 紀錄、輸出風險與修正建議。</li><li>客戶問題 執行框架：分類 問題、補上下文、比對既有案例、產出可追蹤 行動項目。</li></ul>
+          <div class="example"><strong>教學提示：</strong>第一版先把內容輸出 代理 做成完整 執行框架：產出後由你確認，確認過的修正再回寫成下一版規則。</div>
         </article>
       </div>
     </section>
@@ -182,15 +182,15 @@
       <div class="grid">
         <div class="card span-4">
           <h3>環境比提示更重要</h3>
-          <p>Prompt 只能描述需求；Harness 會把工具、規則、文件、log、測試與回饋變成 agent 能持續使用的環境。</p>
+          <p>提示詞 只能描述需求；執行框架 會把工具、規則、文件、紀錄、測試與回饋變成 代理 能持續使用的環境。</p>
           <span class="tag blue">內容重點</span><span class="tag">研究依據</span>
         </div><div class="card span-4">
-          <h3>Generator 與 Evaluator 分工</h3>
-          <p>一個 agent 負責產出，另一個 agent 依標準檢查結果並給具體 critique，比自我評分更容易收斂品質。</p>
+          <h3>產生器 與 評估器 分工</h3>
+          <p>一個 代理 負責產出，另一個 代理 依標準檢查結果並給具體 具體評語，比自我評分更容易收斂品質。</p>
           <span class="tag warn">內容重點</span><span class="tag">研究依據</span>
         </div><div class="card span-4">
           <h3>把規則寫成可執行防護</h3>
-          <p>AutoHarness 的啟發是：限制與規則不要只寫在說明裡，能變成 code、policy 或 quality gate 就更穩。</p>
+          <p>AutoHarness 的啟發是：限制與規則不要只寫在說明裡，能變成 程式碼、政策 或 品質關卡 就更穩。</p>
           <span class="tag ">內容重點</span><span class="tag">研究依據</span>
         </div>
       </div>
@@ -200,18 +200,18 @@
       <div class="section-title"><span>5</span><h2>實務導入方式</h2></div>
       <div class="grid">
         <div class="card span-6">
-          <h3>教材 Harness</h3>
+          <h3>教材 執行框架</h3>
           <p><strong>落地：</strong>來源理解、官方資料補充、個人教學 HTML、手機預覽、禁用字檢查、確認與寄信流程形成閉環。</p>
 
 
         </div><div class="card span-6">
-          <h3>工程 Harness</h3>
-          <p><strong>落地：</strong>讀 AGENTS.md、跑測試、查 log、開瀏覽器驗證、輸出風險與修正建議，讓 Codex 能自己觀察與修正。</p>
+          <h3>工程 執行框架</h3>
+          <p><strong>落地：</strong>讀 AGENTS.md、跑測試、查 紀錄、開瀏覽器驗證、輸出風險與修正建議，讓 Codex 能自己觀察與修正。</p>
 
 
         </div><div class="card span-6">
-          <h3>客戶問題 Harness</h3>
-          <p><strong>落地：</strong>把 issue triage、相似案例、產品資料、owner、action items 與回覆草稿串成可重複流程。</p>
+          <h3>客戶問題 執行框架</h3>
+          <p><strong>落地：</strong>把 問題分流、相似案例、產品資料、負責人、行動項目 與回覆草稿串成可重複流程。</p>
 
 
         </div>
@@ -225,7 +225,7 @@
       <div class="card span-12">
         <h3>本課重點整理</h3>
         <ul>
-          <li><strong>Harness 是什麼：</strong>Harness 不是更長的 prompt，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 agent 能穩定完成任務。</li><li><strong>為什麼不是只做 Prompt Engineering：</strong>Prompt 只能告訴模型要做什麼；Harness 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</li><li><strong>Harness 的核心組件：</strong>一個實用 Harness 通常包含 Planner、Tools、Memory、Evaluator、Quality Gate 與 Iteration Loop。</li><li><strong>OpenAI 的重點：讓 Codex 看得懂系統：</strong>OpenAI 的 Harness Engineering 文章強調 agent legibility：把文件、工具、log、metrics、測試與架構規則放到 Codex 可讀的位置。</li><li><strong>Anthropic 的重點：Generator 與 Evaluator 分工：</strong>Anthropic 的案例說明，讓同一個 agent 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</li><li><strong>AutoHarness 的啟發：小模型也能靠系統變強：</strong>AutoHarness 論文指出，小模型可透過迭代回饋自動合成 code harness，避免非法動作，甚至在某些任務超過更大的模型。</li>
+          <li><strong>執行框架 是什麼：</strong>執行框架 不是更長的 提示詞，而是包在模型外面的工作系統：它提供工具、記憶、限制、回饋與檢查，讓 代理 能穩定完成任務。</li><li><strong>為什麼不是只做 Prompt Engineering：</strong>提示詞 只能告訴模型要做什麼；執行框架 會把任務拆解、工具使用、狀態觀測與錯誤修正放進流程。</li><li><strong>執行框架 的核心組件：</strong>一個實用 執行框架 通常包含 規劃器、工具、記憶、評估器、品質關卡 與 迭代循環。</li><li><strong>OpenAI 的重點：讓 Codex 看得懂系統：</strong>OpenAI 的 執行框架工程 文章強調 代理可理解性：把文件、工具、紀錄、指標、測試與架構規則放到 Codex 可讀的位置。</li><li><strong>Anthropic 的重點：產生器 與 評估器 分工：</strong>Anthropic 的案例說明，讓同一個 代理 自己判斷自己常會太寬鬆；把生成與評分分開，回饋會更有效。</li><li><strong>AutoHarness 的啟發：小模型也能靠系統變強：</strong>AutoHarness 論文指出，小模型可透過迭代回饋自動合成 程式碼 執行框架，避免非法動作，甚至在某些任務超過更大的模型。</li>
         </ul>
         <div class="warning"><strong>注意：</strong>專有名詞、數字與版本資訊應以官方文件或使用者補充資料為準。</div>
       </div>
@@ -238,7 +238,7 @@
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Agent 系統架構與可靠性</h2>
     <ul>
       <li><a href="./agent-harness-reliable-system.html">Agent Harness：把聰明模型包成可靠系統</a></li>

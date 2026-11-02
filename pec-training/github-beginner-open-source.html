@@ -567,7 +567,7 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/dfbfc531987cdad6.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="hero">
     <div class="wrap">
@@ -577,13 +577,13 @@
       </div>
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Internal Learning Note</div>
+          <div class="eyebrow">內部學習筆記</div>
           <h1>GitHub 入門：非工程背景也能找到、判斷、下載開源工具</h1>
-          <p class="lead">把 GitHub 當成「工具與知識資源庫」來用：先看 README，再看 Release，接著檢查維護狀態與風險，最後才決定要不要下載、部署或交給 agent 處理。</p>
+          <p class="lead">把 GitHub 當成「工具與知識資源庫」來用：先看 README，再看 版本發布，接著檢查維護狀態與風險，最後才決定要不要下載、部署或交給 代理 處理。</p>
         </div>
         <div class="summary-card">
           <strong>本頁一句話</strong>
-          <p>不要一看到專案就按 Code 下載。先用專案頁的幾個固定位置判斷：這是不是成品、是否還有人維護、能不能安全用在工作流程。</p>
+          <p>不要一看到專案就按 程式碼 下載。先用專案頁的幾個固定位置判斷：這是不是成品、是否還有人維護、能不能安全用在工作流程。</p>
         </div>
       </div>
     </div>
@@ -609,15 +609,15 @@
       <div class="grid">
         <div class="card span-8">
           <h3>GitHub 不是只有工程師才看得懂</h3>
-          <p>GitHub 的底層是 Git repository，但對一般使用者來說，可以先把它理解成「專案資料夾加說明書」。裡面可能有程式碼、文件、範例、安裝包、問題討論、版本紀錄與維護狀態。</p>
+          <p>GitHub 的底層是 Git 儲存庫，但對一般使用者來說，可以先把它理解成「專案資料夾加說明書」。裡面可能有程式碼、文件、範例、安裝包、問題討論、版本紀錄與維護狀態。</p>
           <p>真正要學的是閱讀順序。先不要碰原始碼，先看專案作者有沒有把「這是什麼、怎麼安裝、怎麼使用、常見問題、授權限制」講清楚。</p>
         </div>
         <div class="card span-4">
           <h3>初學者的順序</h3>
           <ul class="checklist">
             <li>先看 README。</li>
-            <li>再看 Releases 是否有成品。</li>
-            <li>檢查 Stars、Issues、更新時間。</li>
+            <li>再看 版本發布 是否有成品。</li>
+            <li>檢查 星號收藏、問題區、更新時間。</li>
             <li>確認授權與安全風險。</li>
             <li>最後才下載或部署。</li>
           </ul>
@@ -629,17 +629,17 @@
         </div>
         <div class="card metric span-3">
           <span class="label">V</span>
-          <h3>Release</h3>
-          <p>版本與成品入口。優先找打包好的 Assets。</p>
+          <h3>發布版本</h3>
+          <p>版本與成品入口。優先找打包好的 發布檔案。</p>
         </div>
         <div class="card metric span-3">
           <span class="label">S</span>
-          <h3>Stars</h3>
+          <h3>星號收藏數</h3>
           <p>收藏與熱度線索。可參考，但不是品質保證。</p>
         </div>
         <div class="card metric span-3">
           <span class="label">I</span>
-          <h3>Issues</h3>
+          <h3>議題</h3>
           <p>問題討論區。看維護者是否回應、常見錯誤是否有解。</p>
         </div>
       </div>
@@ -651,25 +651,25 @@
         <div class="card span-7 diagram">
           <div class="repo-window" aria-label="GitHub project page diagram">
             <div class="repo-top">
-              <span>owner / project-name</span>
-              <span>Star  Fork</span>
+              <span>擁有者／專案名稱</span>
+              <span>收藏與分叉</span>
             </div>
             <div class="repo-tabs">
               <div>Code</div>
-              <div>Issues</div>
-              <div>Pull requests</div>
-              <div>Actions</div>
-              <div>Releases</div>
+              <div>議題</div>
+              <div>合併請求</div>
+              <div>自動化作業</div>
+              <div>發布版本</div>
             </div>
             <div class="repo-body">
               <div class="readme-block">
                 <strong>README.md</strong>
-                <p>用途、安裝、使用範例、截圖、FAQ、限制、授權提示。</p>
+                <p>用途、安裝、使用範例、截圖、常見問題、限制、授權提示。</p>
               </div>
               <div class="side-stack">
-                <div class="mini-box"><strong>About</strong><br>一句話介紹與官網連結</div>
-                <div class="mini-box"><strong>Releases</strong><br>版本、Assets、Source code</div>
-                <div class="mini-box"><strong>Activity</strong><br>最近更新與維護跡象</div>
+                <div class="mini-box"><strong>關於</strong><br>一句話介紹與官網連結</div>
+                <div class="mini-box"><strong>發布版本</strong><br>版本、發布檔案、原始碼</div>
+                <div class="mini-box"><strong>活動</strong><br>最近更新與維護跡象</div>
               </div>
             </div>
           </div>
@@ -683,11 +683,11 @@
               </thead>
               <tbody>
                 <tr><td>README</td><td>專案說明書</td><td>確認用途、安裝步驟、範例與限制。</td></tr>
-                <tr><td>Releases</td><td>版本發布區</td><td>找 Assets 裡的安裝檔或可執行檔。</td></tr>
-                <tr><td>Code</td><td>原始碼與下載入口</td><td>Download ZIP 通常只是源碼，不一定能直接安裝。</td></tr>
-                <tr><td>Issues</td><td>問題與討論</td><td>搜尋自己的錯誤訊息，看是否有人維護。</td></tr>
-                <tr><td>Stars</td><td>收藏與熱度</td><td>當成線索，不要當成安全背書。</td></tr>
-                <tr><td>Fork</td><td>複製到自己的 GitHub</td><td>需要備份或改造時再用。</td></tr>
+                <tr><td>發布版本</td><td>版本發布區</td><td>找 發布檔案 裡的安裝檔或可執行檔。</td></tr>
+                <tr><td>Code</td><td>原始碼與下載入口</td><td>下載 ZIP 通常只是源碼，不一定能直接安裝。</td></tr>
+                <tr><td>議題</td><td>問題與討論</td><td>搜尋自己的錯誤訊息，看是否有人維護。</td></tr>
+                <tr><td>星號收藏數</td><td>收藏與熱度</td><td>當成線索，不要當成安全背書。</td></tr>
+                <tr><td>分叉</td><td>複製到自己的 GitHub</td><td>需要備份或改造時再用。</td></tr>
               </tbody>
             </table>
           </div>
@@ -702,7 +702,7 @@
           <div class="step"><span class="num">1</span><h3>定義需求</h3><p>先寫清楚你要找工具、文件、範例、模型、模板，還是資料集。</p></div>
           <div class="step"><span class="num">2</span><h3>中英雙查</h3><p>中文查不到時，改用英文同義詞，例如語音轉文字可試 speech to text、transcription。</p></div>
           <div class="step"><span class="num">3</span><h3>加搜尋條件</h3><p>用 stars、pushed、language、topic、license、archived 等條件縮小範圍。</p></div>
-          <div class="step"><span class="num">4</span><h3>先收藏</h3><p>還沒要用的專案先 Star，後續可回到 stars page 整理。</p></div>
+          <div class="step"><span class="num">4</span><h3>先收藏</h3><p>還沒要用的專案先 加星收藏，後續可回到 收藏頁 整理。</p></div>
           <div class="step"><span class="num">5</span><h3>進入判斷</h3><p>不要因為排名高就下載，先走可靠度檢查。</p></div>
         </div>
       </div>
@@ -710,13 +710,13 @@
         <div class="card span-6">
           <h3>範例：找會議紀錄工具</h3>
           <p><span class="tag">中文</span> 會議紀錄、語音轉文字、錄音整理</p>
-          <p><span class="tag">英文</span> speech to text、audio transcription、video transcription、meeting notes</p>
-          <p><span class="tag amber">搜尋條件</span> `stars:>500 pushed:>2025-01-01 language:Python`</p>
+          <p><span class="tag">英文</span> 語音轉文字、音訊轉錄、影片轉錄、會議筆記</p>
+          <p><span class="tag amber">搜尋條件</span> `stars:&gt;500 pushed:&gt;2025-01-01 language:Python`</p>
         </div>
         <div class="card span-6">
           <h3>範例：找 Michael 教學筆記 HTML 輔助工具</h3>
           <p><span class="tag">中文</span> 文件轉 Markdown、HTML 報告、簡報產生器</p>
-          <p><span class="tag">英文</span> markdown converter、static report generator、html presentation</p>
+          <p><span class="tag">英文</span> Markdown 轉換工具、靜態報告產生器、HTML 簡報</p>
           <p><span class="tag amber">搜尋條件</span> `topic:markdown license:mit archived:false`</p>
         </div>
       </div>
@@ -727,30 +727,30 @@
       <div class="grid">
         <div class="card span-6">
           <h3>1. README 是否講清楚</h3>
-          <p>好的 README 通常會說明：這個專案解決什麼問題、適用平台、安裝步驟、使用範例、截圖、FAQ、限制、授權。若 README 只放一句話或完全沒有安裝流程，初學者先不要投入太多時間。</p>
+          <p>好的 README 通常會說明：這個專案解決什麼問題、適用平台、安裝步驟、使用範例、截圖、常見問題、限制、授權。若 README 只放一句話或完全沒有安裝流程，初學者先不要投入太多時間。</p>
         </div>
         <div class="card span-6">
-          <h3>2. Release 是否有可用成品</h3>
-          <p>Releases 裡的 Assets 可能包含安裝檔、壓縮包或二進位檔。若只有 Source code zip，通常表示你拿到的是原始碼，不等於可直接安裝的軟體。</p>
+          <h3>2. 版本發布 是否有可用成品</h3>
+          <p>版本發布 裡的 發布檔案 可能包含安裝檔、壓縮包或二進位檔。若只有 原始碼 zip，通常表示你拿到的是原始碼，不等於可直接安裝的軟體。</p>
         </div>
         <div class="card span-6">
           <h3>3. 熱度與更新時間是否合理</h3>
-          <p>Stars 多代表很多人收藏或關注，但仍要搭配最近更新時間、版本紀錄與 Issues 回覆狀況判斷。高星但多年未更新的專案，可能已經不適合新環境。</p>
+          <p>星號收藏 多代表很多人收藏或關注，但仍要搭配最近更新時間、版本紀錄與 問題區 回覆狀況判斷。高星但多年未更新的專案，可能已經不適合新環境。</p>
         </div>
         <div class="card span-6">
-          <h3>4. Issues 是否有人處理</h3>
-          <p>Issues 是最實用的風險雷達。若同一類安裝錯誤反覆出現、沒有人回覆、最新問題大量堆積，代表導入成本可能很高。</p>
+          <h3>4. 問題區 是否有人處理</h3>
+          <p>問題區 是最實用的風險雷達。若同一類安裝錯誤反覆出現、沒有人回覆、最新問題大量堆積，代表導入成本可能很高。</p>
         </div>
         <div class="card span-12">
           <div class="callout danger">
-            <strong>工作用判斷原則：</strong>沒有 README、沒有授權、沒有近期維護、要求貼 token 或執行不明 shell 指令的專案，不要直接放進 Michael AI Agent Lab 或 Hermes agent 工作流程。
+            <strong>工作用判斷原則：</strong>沒有 README、沒有授權、沒有近期維護、要求貼 代元 或執行不明 shell 指令的專案，不要直接放進 Michael AI Agent Lab 或 Hermes 代理 工作流程。
           </div>
         </div>
       </div>
     </section>
 
     <section id="download">
-      <div class="section-title"><span class="bar"></span><h2>下載決策：Release、Code、Clone、Fork 不一樣</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>下載決策：版本發布、程式碼、複製儲存庫、建立分支副本 不一樣</h2></div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -763,47 +763,47 @@
           </thead>
           <tbody>
             <tr>
-              <td><span class="tag green">Releases / Assets</span></td>
+              <td><span class="tag green">發布版本／附件</span></td>
               <td>版本發布檔，可能是安裝包、可執行檔、模型檔或壓縮包。</td>
               <td>一般使用者優先看這裡，尤其是想找現成工具時。</td>
               <td>仍要確認來源、版本、作業系統、檔案名稱與安全性。</td>
             </tr>
             <tr>
-              <td><span class="tag amber">Code / Download ZIP</span></td>
+              <td><span class="tag amber">程式碼／下載 ZIP</span></td>
               <td>目前分支的原始碼快照。</td>
-              <td>需要看源碼、交給工程師或 agent 研究時。</td>
+              <td>需要看源碼、交給工程師或 代理 研究時。</td>
               <td>不是安裝包。解壓後看到程式碼與設定檔是正常的。</td>
             </tr>
             <tr>
-              <td><span class="tag">Clone</span></td>
-              <td>用 Git 把 repository 複製到本機，可保留版本歷史。</td>
-              <td>工程師、Codex、Claude Code 或本地 agent 要修改專案時。</td>
-              <td>需要 Git 基礎；不要把公司機密 commit 到公開專案。</td>
+              <td><span class="tag">複製儲存庫</span></td>
+              <td>用 Git 把 儲存庫 複製到本機，可保留版本歷史。</td>
+              <td>工程師、Codex、Claude Code 或本地 代理 要修改專案時。</td>
+              <td>需要 Git 基礎；不要把公司機密 提交 到公開專案。</td>
             </tr>
             <tr>
-              <td><span class="tag">Fork</span></td>
+              <td><span class="tag">分叉</span></td>
               <td>在自己的 GitHub 帳號下建立一份遠端副本。</td>
               <td>要備份、改造、提交 Pull Request 或維持自己的版本時。</td>
-              <td>Fork 不是下載到電腦；公開 Fork 也可能暴露改動方向。</td>
+              <td>建立分支副本 不是下載到電腦；公開 建立分支副本 也可能暴露改動方向。</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="callout ok" style="margin-top:16px">
-        <strong>簡單判斷：</strong>想直接用工具，先找 Releases / Assets。想研究或修改，才用 Code、Clone 或 Fork。
+        <strong>簡單判斷：</strong>想直接用工具，先找 版本發布 / 發布檔案。想研究或修改，才用 程式碼、複製儲存庫 或 建立分支副本。
       </div>
     </section>
 
     <section id="practice">
-      <div class="section-title"><span class="bar"></span><h2>AI Agent 工作流的實際用法</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>AI 代理 工作流的實際用法</h2></div>
       <div class="grid">
         <div class="card span-4">
           <h3>教學檔與報告製作</h3>
           <p>找 Markdown 轉換、HTML 報告、截圖整理、簡報產生工具時，先確認工具是否有 CLI、文件是否清楚、輸出是否能離線保存。</p>
         </div>
         <div class="card span-4">
-          <h3>Hermes agent 能力補充</h3>
-          <p>看到有用的 repository，不要直接裝進核心。先建立小型 sandbox，記錄版本、用途、輸入輸出、失敗條件，再決定是否變成 skill。</p>
+          <h3>Hermes 代理 能力補充</h3>
+          <p>看到有用的 儲存庫，不要直接裝進核心。先建立小型 隔離測試，記錄版本、用途、輸入輸出、失敗條件，再決定是否變成 技能。</p>
         </div>
         <div class="card span-4">
           <h3>台股、PM、文件流程</h3>
@@ -815,11 +815,11 @@
             <table>
               <thead><tr><th>欄位</th><th>要記什麼</th><th>原因</th></tr></thead>
               <tbody>
-                <tr><td>Repository URL</td><td>完整專案連結與 owner/name。</td><td>確保後續可追溯來源。</td></tr>
-                <tr><td>版本</td><td>Release tag、commit hash 或下載日期。</td><td>避免之後專案更新造成結果不同。</td></tr>
+                <tr><td>儲存庫網址</td><td>完整專案連結與 擁有者／名稱。</td><td>確保後續可追溯來源。</td></tr>
+                <tr><td>版本</td><td>版本標籤、提交雜湊 或下載日期。</td><td>避免之後專案更新造成結果不同。</td></tr>
                 <tr><td>授權</td><td>MIT、Apache-2.0、GPL、無授權等。</td><td>判斷能否商用、修改或再散布。</td></tr>
-                <tr><td>用途</td><td>要放在哪個 agent 或哪段流程。</td><td>避免「看起來有趣」但沒有實際任務。</td></tr>
-                <tr><td>風險</td><td>是否需要 token、網路、檔案權限、瀏覽器權限。</td><td>決定是否只能 sandbox 測試。</td></tr>
+                <tr><td>用途</td><td>要放在哪個 代理 或哪段流程。</td><td>避免「看起來有趣」但沒有實際任務。</td></tr>
+                <tr><td>風險</td><td>是否需要 代元、網路、檔案權限、瀏覽器權限。</td><td>決定是否只能 隔離測試 測試。</td></tr>
               </tbody>
             </table>
           </div>
@@ -833,8 +833,8 @@
         <div class="card span-6">
           <h3>可以先做</h3>
           <ul class="checklist">
-            <li>閱讀 README、Docs、Examples、FAQ。</li>
-            <li>查看 Releases、Issues、更新時間、授權。</li>
+            <li>閱讀 README、文件、範例、常見問題。</li>
+            <li>查看 版本發布、問題區、更新時間、授權。</li>
             <li>用 AI 把安裝說明改寫成一步一步 SOP。</li>
             <li>在空資料夾或測試機先跑，不碰正式資料。</li>
             <li>保存版本、來源、設定與測試結果。</li>
@@ -843,8 +843,8 @@
         <div class="card span-6">
           <h3>不要直接做</h3>
           <ul class="checklist">
-            <li>不要把 token、cookie、公司帳密貼進公開 issue。</li>
-            <li>不要直接執行不懂的 `curl | sh` 或 install script。</li>
+            <li>不要把 代元、Cookie、公司帳密貼進公開 問題。</li>
+            <li>不要直接執行不懂的 `curl | sh` 或 安裝腳本。</li>
             <li>不要把未知二進位檔裝到主力工作機。</li>
             <li>不要把無授權專案當成可商用素材。</li>
             <li>不要用公開工具處理私有文件或未公開資料。</li>
@@ -858,15 +858,11 @@
       <div class="grid">
         <div class="card span-6">
           <h3>把 README 轉成新手 SOP</h3>
-          <div class="prompt">請閱讀以下 GitHub README，幫我整理成繁體中文 SOP。
-請分成：用途、適合場景、安裝前需求、安裝步驟、第一次使用範例、常見錯誤、不要做的事、安全風險。
-如果 README 沒寫清楚，請列出缺少的資訊，不要自行補充。</div>
+          <div class="prompt">請閱讀以下 GitHub README，幫我整理成繁體中文 SOP。 請分成：用途、適合場景、安裝前需求、安裝步驟、第一次使用範例、常見錯誤、不要做的事、安全風險。 如果 README 沒寫清楚，請列出缺少的資訊，不要自行補充。</div>
         </div>
         <div class="card span-6">
-          <h3>判斷專案能不能導入 agent</h3>
-          <div class="prompt">請幫我評估這個 GitHub 專案是否適合放進 Hermes agent 工作流。
-請檢查：README 清楚度、Release 是否有成品、最近更新時間、Issues 風險、授權、是否需要 token、是否需要雲端、是否能本地執行。
-最後給我：保留觀察 / sandbox 測試 / 可導入 / 不建議導入。</div>
+          <h3>判斷專案能不能導入 代理</h3>
+          <div class="prompt">請幫我評估這個 GitHub 專案是否適合放進 Hermes 代理 工作流。 請檢查：README 清楚度、版本發布 是否有成品、最近更新時間、問題區 風險、授權、是否需要 代元、是否需要雲端、是否能本地執行。 最後給我：保留觀察 / 隔離測試 測試 / 可導入 / 不建議導入。</div>
         </div>
       </div>
     </section>
@@ -875,32 +871,32 @@
       <div class="section-title"><span class="bar"></span><h2>官方參考來源</h2></div>
       <div class="card">
         <ul class="source-list">
-          <li><a href="https://docs.github.com/en/get-started/using-git/about-git">GitHub Docs: About Git</a></li>
-          <li><a href="https://docs.github.com/en/get-started/start-your-journey/finding-inspiration-on-github">GitHub Docs: Finding inspiration on GitHub</a></li>
-          <li><a href="https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories">GitHub Docs: Searching for repositories</a></li>
-          <li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">GitHub Docs: About README files</a></li>
-          <li><a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">GitHub Docs: Managing releases</a></li>
-          <li><a href="https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github">GitHub Docs: Downloading files from GitHub</a></li>
-          <li><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues">GitHub Docs: About issues</a></li>
-          <li><a href="https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars">GitHub Docs: Saving repositories with stars</a></li>
-          <li><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories">GitHub Docs: Archiving repositories</a></li>
+          <li><a href="https://docs.github.com/en/get-started/using-git/about-git">GitHub 文件：關於 Git</a></li>
+          <li><a href="https://docs.github.com/en/get-started/start-your-journey/finding-inspiration-on-github">GitHub 文件：在 GitHub 尋找靈感</a></li>
+          <li><a href="https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories">GitHub 文件：搜尋儲存庫</a></li>
+          <li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">GitHub 文件：關於 README 檔案</a></li>
+          <li><a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">GitHub 文件：管理發布版本</a></li>
+          <li><a href="https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github">GitHub 文件：從 GitHub 下載檔案</a></li>
+          <li><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues">GitHub 文件：關於議題</a></li>
+          <li><a href="https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars">GitHub 文件：用星號收藏儲存庫</a></li>
+          <li><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories">GitHub 文件：封存儲存庫</a></li>
         </ul>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">Michael public teaching note. Review before sharing or applying to production workflows.</div>
+    <div class="wrap">Michael 公開教學筆記，分享或套用至正式工作流程前請先審查。</div>
   </footer>
   <script src="../learning-path.js?v=20260710-learning-path"></script>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>工具選型與上手</h2>
     <ul>
       <li><a href="./codex-gemini-cli-intro.html">Codex &amp; Gemini CLI 簡介</a></li>
-      <li><a href="./github-vibe-coding-git-workflow.html">GitHub Vibe Coding 安全工作流：commit、branch、PR 與 worktree</a></li>
+      <li><a href="./github-vibe-coding-git-workflow.html">GitHub AI 輔助程式開發 安全工作流：commit、branch、PR 與 worktree</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>
   </div>

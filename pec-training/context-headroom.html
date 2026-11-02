@@ -567,22 +567,22 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/b962d603b7c3fa74.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <section class="cover" aria-label="Michael cover">
     <div class="cover-inner">
       <div class="cover-top">
         <div class="ad-logo-white" aria-label="個人品牌標記"></div>
-        <div class="cover-kicker">Course Material<br>HTML Training</div>
+        <div class="cover-kicker">課程教材<br>HTML 培訓</div>
       </div>
       <div class="cover-main">
-        <div class="label">Context Engineering</div>
-        <h1>Headroom：本地 Agent 的 Context Headroom 導入策略</h1>
-        <p class="subtitle">把 Headroom 相關研究整理成 Michael AI Agent Lab 教學筆記：它可以清理工具輸出、log、RAG 與逐字稿，但不應取代 Wiki、Obsidian 或 Summary Agent。</p>
+        <div class="label">上下文工程</div>
+        <h1>Headroom：本地 Agent 的 上下文餘裕 導入策略</h1>
+        <p class="subtitle">把 Headroom 相關研究整理成 Michael AI Agent Lab 教學筆記：它可以清理工具輸出、紀錄、RAG 與逐字稿，但不應取代 Wiki、Obsidian 或 Summary Agent。</p>
       </div>
       <div class="cover-footer">
         <span>Michael AI Agent Lab</span>
-        <span>Research-backed Course Material | 2026-06-06</span>
+        <span>有研究依據的課程教材｜2026-06-06</span>
       </div>
     </div>
   </section>
@@ -592,7 +592,7 @@
       <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div class="eyebrow">主題研究教材｜繁體中文與英文工具名</div>
       <h1>Context Headroom 不是記憶庫，是上下文清理器</h1>
-      <p class="lead">Headroom 官方把自己定位為 LLM 應用的 context optimization layer。對本地 AI Agent 系統來說，價值不在省 token 費用，而是降低長任務爆 context、工具輸出塞滿視窗、交接摘要失焦的機率。</p>
+      <p class="lead">Headroom 官方把自己定位為 LLM 應用的 上下文 optimization layer。對本地 AI 代理 系統來說，價值不在省 代元 費用，而是降低長任務爆 上下文、工具輸出塞滿視窗、交接摘要失焦的機率。</p>
       <div class="metrics">
         <div class="metric"><b>5</b><small>建議導入階段</small></div>
         <div class="metric"><b>4</b><small>優先試用場景</small></div>
@@ -620,33 +620,33 @@
       <div class="grid">
         <article class="card span-6">
           <h3>核心問題：長任務不是缺大腦，是上下文太髒</h3>
-          <p>本地 LLM 不太怕 token 成本，但長時間 coding、Wiki 整理、YouTube transcript、Excel 報表與 bot log 會把 context window 塞滿。當 agent 看太多重複輸出，就會忘記真正要做的決策。</p>
-          <div><span class="tag blue">Context Window</span><span class="tag blue">Tool Output</span><span class="tag blue">Long Task</span></div>
+          <p>本地 LLM 不太怕 代元 成本，但長時間 程式設計、Wiki 整理、YouTube 逐字稿、Excel 報表與 bot 紀錄 會把 上下文 window 塞滿。當 代理 看太多重複輸出，就會忘記真正要做的決策。</p>
+          <div><span class="tag blue">上下文視窗</span><span class="tag blue">工具輸出</span><span class="tag blue">長任務</span></div>
         </article>
         <article class="card span-6">
           <h3>Headroom 的定位：進模型前先整理輸入</h3>
-          <p>官方文件說 Headroom 會處理 tool outputs、DB results、file reads、RAG results、API responses 等內容，再把較乾淨的 prompt 送往 LLM provider。它可以用 proxy、SDK、framework integration 或 MCP tools 方式接入。</p>
-          <div><span class="tag blue">Proxy</span><span class="tag blue">SDK</span><span class="tag blue">MCP</span></div>
+          <p>官方文件說 Headroom 會處理 工具輸出、資料庫結果、檔案讀取結果、RAG 檢索結果、API 回應 等內容，再把較乾淨的 提示詞 送往 LLM provider。它可以用 代理伺服器、SDK、框架整合 或 MCP tools 方式接入。</p>
+          <div><span class="tag blue">代理層</span><span class="tag blue">SDK</span><span class="tag blue">MCP</span></div>
         </article>
         <article class="card span-6">
           <h3>最重要的判斷：不要直接裝進核心</h3>
-          <p>Hermes 的核心仍應是 Obsidian/Wiki Agent、Codex skill sync、Summary Agent 與原始資料保存。Headroom 可以做輔助層，但不應成為唯一記憶、唯一證據或唯一知識來源。</p>
-          <div><span class="tag warn">Governance</span><span class="tag warn">Memory Boundary</span></div>
+          <p>Hermes 的核心仍應是 Obsidian/Wiki Agent、Codex 技能 sync、Summary Agent 與原始資料保存。Headroom 可以做輔助層，但不應成為唯一記憶、唯一證據或唯一知識來源。</p>
+          <div><span class="tag warn">治理</span><span class="tag warn">記憶界線</span></div>
         </article>
         <article class="card span-6">
           <h3>先做自己的 Context Headroom 規則</h3>
-          <p>在安裝工具前，先定義哪些內容可以壓縮、哪些內容必須保留原文、哪些場景要先寫 Evidence Notes。這比直接接 proxy 更符合本地 agent 治理。</p>
-          <div><span class="tag">Evidence Notes</span><span class="tag">Raw Archive</span><span class="tag">Review Gate</span></div>
+          <p>在安裝工具前，先定義哪些內容可以壓縮、哪些內容必須保留原文、哪些場景要先寫 證據筆記。這比直接接 代理伺服器 更符合本地 代理 治理。</p>
+          <div><span class="tag">證據筆記</span><span class="tag">原始資料封存</span><span class="tag">審查關卡</span></div>
         </article>
         <article class="card span-6">
-          <h3>最適合試用的地方：Wiki、Codex、art transcript</h3>
-          <p>YouTube transcript、NotebookLM 輸出、build/test logs、RAG chunks 與重複工具輸出最適合先被壓成 Lesson Brief、Evidence Notes 或 Handoff Summary，再交給 agent 做下一步。</p>
-          <div><span class="tag blue">Wiki Agent</span><span class="tag blue">Codex</span><span class="tag blue">內容輸出 agent</span></div>
+          <h3>最適合試用的地方：Wiki、Codex、art 逐字稿</h3>
+          <p>YouTube 逐字稿、NotebookLM 輸出、build/test logs、RAG 片段 與重複工具輸出最適合先被壓成 課程摘要、證據筆記 或 交接摘要，再交給 代理 做下一步。</p>
+          <div><span class="tag blue">Wiki Agent</span><span class="tag blue">Codex</span><span class="tag blue">內容輸出 代理</span></div>
         </article>
         <article class="card span-6">
           <h3>安全邊界：原始資料不可消失</h3>
-          <p>壓縮結果只是給 agent 看，不是正式知識庫。`.env`、token、cookie、精確 diff、正式財務法律醫療內容、客戶敏感資料都不應被任意壓縮或交給外部服務。</p>
-          <div><span class="tag red">Secrets</span><span class="tag red">Exact Diff</span><span class="tag red">Source Retention</span></div>
+          <p>壓縮結果只是給 代理 看，不是正式知識庫。`.env`、代元、Cookie、精確 差異、正式財務法律醫療內容、客戶敏感資料都不應被任意壓縮或交給外部服務。</p>
+          <div><span class="tag red">機密資料</span><span class="tag red">精確差異</span><span class="tag red">保留來源</span></div>
         </article>
       </div>
     </section>
@@ -656,21 +656,21 @@
       <div class="concept-map">
         <div class="map-row">
           <div class="map-node">
-            <b>Raw Sources</b>
-            <small>transcript、log、Excel、email、RAG、tool output，原始資料完整保留。</small>
+            <b>原始來源</b>
+            <small>逐字稿、紀錄、Excel、email、RAG、工具輸出，原始資料完整保留。</small>
           </div>
           <div class="arrow" aria-hidden="true"></div>
           <div class="map-node">
-            <b>Context Headroom</b>
-            <small>先做壓縮、去重、摘要、異常保留與可回取索引，只給 agent 看乾淨輸入。</small>
+            <b>上下文餘裕</b>
+            <small>先做壓縮、去重、摘要、異常保留與可回取索引，只給 代理 看乾淨輸入。</small>
           </div>
           <div class="arrow" aria-hidden="true"></div>
           <div class="map-node">
-            <b>Agent Decision</b>
-            <small>Codex、Wiki Agent、內容輸出 agent 或 PM workflow agent 依任務輸出教材、報告或交接。</small>
+            <b>Agent 決策</b>
+            <small>Codex、Wiki Agent、內容輸出 代理 或 PM 工作流程 代理 依任務輸出教材、報告或交接。</small>
           </div>
         </div>
-        <div class="example"><strong>閱讀方式：</strong>Headroom 類工具應放在「Raw Sources」與「Agent Decision」之間。它不取代 raw archive，也不直接改 Wiki 正式知識。</div>
+        <div class="example"><strong>閱讀方式：</strong>Headroom 類工具應放在「原始來源」與「代理決策」之間。它不取代 原始封存，也不直接改 Wiki 正式知識。</div>
       </div>
     </section>
 
@@ -678,63 +678,63 @@
       <div class="section-title"><span>3</span><h2>核心概念與名詞解釋</h2></div>
       <div class="grid">
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Context Optimization Layer</div><div class="term-sub">模型看到資料前的整理層。</div></div><span class="pill">核心概念</span></div>
+          <div class="term-head"><div><div class="term-title">上下文最佳化層</div><div class="term-sub">模型看到資料前的整理層。</div></div><span class="pill">核心概念</span></div>
           <ul>
             <li>它的任務是降低輸入雜訊，不是永久儲存知識。</li>
-            <li>適合處理工具輸出、log、DB rows、RAG chunks、API response 與長 transcript。</li>
-            <li>對本地 LLM 的價值是穩定長任務，而不是單純省 token 成本。</li>
+            <li>適合處理工具輸出、紀錄、資料庫資料列、RAG 片段、API 回應 與長 逐字稿。</li>
+            <li>對本地 LLM 的價值是穩定長任務，而不是單純省 代元 成本。</li>
           </ul>
           <div class="example"><strong>Michael AI Agent Lab 說法：</strong>把它當成進會議前的助理摘要，不是公司的正式文件庫。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">SmartCrusher / Content Router</div><div class="term-sub">依資料型態選擇壓縮策略。</div></div><span class="pill">核心概念</span></div>
+          <div class="term-head"><div><div class="term-title">SmartCrusher／內容路由</div><div class="term-sub">依資料型態選擇壓縮策略。</div></div><span class="pill">核心概念</span></div>
           <ul>
-            <li>官方文件描述會辨識 JSON、code、logs、text、diffs、HTML，再套用不同 transform。</li>
-            <li>JSON array、structured logs、API rows 通常比短對話更值得壓縮。</li>
-            <li>壓縮時應保留 errors、anomalies、boundary 與代表性樣本。</li>
+            <li>官方文件描述會辨識 JSON、程式碼、紀錄、文字、差異、HTML，再套用不同 轉換。</li>
+            <li>JSON array、結構化紀錄、API rows 通常比短對話更值得壓縮。</li>
+            <li>壓縮時應保留 錯誤、異常、邊界 與代表性樣本。</li>
           </ul>
-          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>Excel issue list 應保留異常、風險與 owner，不需要把每列重複欄位塞給 agent。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>Excel issue list 應保留異常、風險與 負責人，不需要把每列重複欄位塞給 代理。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">CCR：Compress, Cache, Retrieve</div><div class="term-sub">壓縮後仍可回取原文。</div></div><span class="pill">核心概念</span></div>
+          <div class="term-head"><div><div class="term-title">CCR：壓縮、快取、檢索</div><div class="term-sub">壓縮後仍可回取原文。</div></div><span class="pill">核心概念</span></div>
           <ul>
-            <li>官方架構說被壓縮或丟棄的內容可存入 local compression cache。</li>
-            <li>模型需要細節時，可透過 retrieve tool 取回原始內容或篩選結果。</li>
-            <li>這個設計很適合長 transcript 與 log，但原始 raw 仍要由 Hermes 自己保存。</li>
+            <li>官方架構說被壓縮或丟棄的內容可存入 本機壓縮快取。</li>
+            <li>模型需要細節時，可透過 回取工具 取回原始內容或篩選結果。</li>
+            <li>這個設計很適合長 逐字稿 與 紀錄，但原始 raw 仍要由 Hermes 自己保存。</li>
           </ul>
           <div class="warning"><strong>注意：</strong>CCR 不是長期知識庫。TTL、儲存位置、敏感資料策略都要先確認。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Proxy、SDK、MCP Tools</div><div class="term-sub">三種接法，風險等級不同。</div></div><span class="pill">導入概念</span></div>
+          <div class="term-head"><div><div class="term-title">代理層、SDK、MCP 工具</div><div class="term-sub">三種接法，風險等級不同。</div></div><span class="pill">導入概念</span></div>
           <ul>
-            <li>Proxy 會攔截 LLM traffic，導入最方便，但治理風險最高，不能先上核心。</li>
-            <li>SDK 適合特定 pipeline，例如 Wiki raw 轉 Evidence Notes。</li>
-            <li>MCP tools 適合讓 agent 按需壓縮與回取，較符合 sandbox 測試。</li>
+            <li>代理伺服器 會攔截 LLM 傳輸內容，導入最方便，但治理風險最高，不能先上核心。</li>
+            <li>SDK 適合特定 處理管線，例如 Wiki raw 轉 證據筆記。</li>
+            <li>MCP tools 適合讓 代理 按需壓縮與回取，較符合 隔離測試 測試。</li>
           </ul>
-          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>先用 MCP 或離線 script 做試驗，不要一開始改全部 provider base URL。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>先用 MCP 或離線 腳本 做試驗，不要一開始改全部 provider 基底網址。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Cache Optimization</div><div class="term-sub">讓 provider prefix cache 更容易命中。</div></div><span class="pill">效能概念</span></div>
+          <div class="term-head"><div><div class="term-title">快取最佳化</div><div class="term-sub">讓 provider 前綴快取 更容易命中。</div></div><span class="pill">效能概念</span></div>
           <ul>
-            <li>官方架構描述會把動態日期、UUID、session token 等移到後段，保留穩定 prefix。</li>
+            <li>官方架構描述會把動態日期、UUID、session 代元 等移到後段，保留穩定 前綴。</li>
             <li>對雲端 API 有成本與延遲價值，對本地 LLM 則不是首要收益。</li>
-            <li>對本地 agent 系統，穩定系統提示與乾淨交接比 cache 折扣更重要。</li>
+            <li>對本地 代理 系統，穩定系統提示與乾淨交接比 快取 折扣更重要。</li>
           </ul>
-          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>本地 LLM 不需要為了 cache 折扣犧牲 prompt 可讀性。</div>
+          <div class="example"><strong>Michael AI Agent Lab 說法：</strong>本地 LLM 不需要為了 快取 折扣犧牲 提示詞 可讀性。</div>
         </article>
 
         <article class="card term-card span-6">
-          <div class="term-head"><div><div class="term-title">Memory Boundary</div><div class="term-sub">壓縮層不能跨過知識邊界。</div></div><span class="pill">治理概念</span></div>
+          <div class="term-head"><div><div class="term-title">記憶界線</div><div class="term-sub">壓縮層不能跨過知識邊界。</div></div><span class="pill">治理概念</span></div>
           <ul>
             <li>Wiki Agent 才能把知識變成正式長期內容。</li>
             <li>Summary Agent 才負責交接狀態與下次工作入口。</li>
-            <li>Context Headroom 只產生 agent 可讀摘要、Evidence Notes 與風險清單。</li>
+            <li>Context Headroom 只產生 代理 可讀摘要、證據筆記 與風險清單。</li>
           </ul>
-          <div class="warning"><strong>禁止：</strong>不要讓壓縮器直接刪 raw、覆蓋 Wiki、改正式知識或吞掉精確 diff。</div>
+          <div class="warning"><strong>禁止：</strong>不要讓壓縮器直接刪 raw、覆蓋 Wiki、改正式知識或吞掉精確 差異。</div>
         </article>
       </div>
     </section>
@@ -743,75 +743,75 @@
       <div class="section-title"><span>4</span><h2>適用與不適用：先分清楚，不要迷信工具</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <h3>最適合本地 AI Agent 系統的場景</h3>
+          <h3>最適合本地 AI 代理 系統的場景</h3>
           <table>
             <thead>
-              <tr><th>Agent 場景</th><th>適合壓縮的資料</th><th>輸出成什麼</th></tr>
+              <tr><th>代理 場景</th><th>適合壓縮的資料</th><th>輸出成什麼</th></tr>
             </thead>
             <tbody>
-              <tr><td>Codex / coding agent</td><td>terminal output、build log、test log、長 shell output</td><td>錯誤摘要、失敗原因、下一步、保留關鍵 stack trace</td></tr>
-              <tr><td>Wiki Agent</td><td>YouTube transcript、NotebookLM raw notes、長文章與重複整理稿</td><td>Evidence Notes、Lesson Brief、缺資料清單</td></tr>
-              <tr><td>內容輸出 agent</td><td>教學影片逐字稿、來源研究、HTML 修改紀錄</td><td>主題、章節、術語、可引用證據、審稿 checklist</td></tr>
-              <tr><td>PM workflow agent</td><td>Excel、email、critical issue report、客訴記錄</td><td>異常、風險、owner、deadline、下一步</td></tr>
-              <tr><td>每日維護報告</td><td>agent status、log、容量、模型、重複檔案清單</td><td>乾淨結論、紅黃綠狀態、需人工確認事項</td></tr>
+              <tr><td>Codex／程式代理</td><td>終端機 output、build 紀錄、test 紀錄、長 shell output</td><td>錯誤摘要、失敗原因、下一步、保留關鍵 堆疊追蹤</td></tr>
+              <tr><td>Wiki Agent</td><td>YouTube 逐字稿、NotebookLM 原始筆記、長文章與重複整理稿</td><td>證據筆記、課程摘要、缺資料清單</td></tr>
+              <tr><td>內容輸出 代理</td><td>教學影片逐字稿、來源研究、HTML 修改紀錄</td><td>主題、章節、術語、可引用證據、審稿 檢查清單</td></tr>
+              <tr><td>PM 工作流程代理</td><td>Excel、email、critical issue report、客訴記錄</td><td>異常、風險、負責人、期限、下一步</td></tr>
+              <tr><td>每日維護報告</td><td>代理 status、紀錄、容量、模型、重複檔案清單</td><td>乾淨結論、紅黃綠狀態、需人工確認事項</td></tr>
             </tbody>
           </table>
         </div>
         <div class="card span-5">
           <h3>不適合直接壓縮的內容</h3>
           <ul>
-            <li>`.env`、token、cookie、session、API key。</li>
-            <li>會被用來改程式的精確 diff、patch、SQL migration。</li>
+            <li>`.env`、權杖、Cookie、工作階段、API 金鑰。</li>
+            <li>會被用來改程式的精確 差異、修補內容、SQL 遷移。</li>
             <li>正式財務、法律、醫療與合規內容，除非保留精確來源與可回查證據。</li>
             <li>Wiki 正式知識，不應由壓縮器直接覆寫。</li>
-            <li>客戶敏感資料，尤其是會送到外部服務或 telemetry 的流程。</li>
+            <li>客戶敏感資料，尤其是會送到外部服務或 遙測 的流程。</li>
           </ul>
-          <div class="warning"><strong>治理原則：</strong>壓縮給 agent 看，原始資料仍留 raw。agent 需要引用、寄出或寫入 Wiki 時，必須回查原文。</div>
+          <div class="warning"><strong>治理原則：</strong>壓縮給 代理 看，原始資料仍留 raw。代理 需要引用、寄出或寫入 Wiki 時，必須回查原文。</div>
         </div>
       </div>
     </section>
 
     <section id="plan">
-      <div class="section-title"><span>5</span><h2>建議導入階段：先規則，再 sandbox，最後才接工具</h2></div>
+      <div class="section-title"><span>5</span><h2>建議導入階段：先規則，再 隔離測試，最後才接工具</h2></div>
       <div class="flow">
         <div class="flow-step">
           <b>階段 1</b>
           <h3>自建壓縮規則</h3>
-          <p>先定義 Context Headroom 規則：哪些可摘要、哪些必須保留原文、哪些要進 Evidence Notes。</p>
+          <p>先定義 Context Headroom 規則：哪些可摘要、哪些必須保留原文、哪些要進 證據筆記。</p>
         </div>
         <div class="flow-step">
           <b>階段 2</b>
           <h3>強化交接摘要</h3>
-          <p>讓 Summary Agent 與 handoff summary 固定輸出完成事項、決策、風險、下一步與原始資料路徑。</p>
+          <p>讓 Summary Agent 與 交接摘要 固定輸出完成事項、決策、風險、下一步與原始資料路徑。</p>
         </div>
         <div class="flow-step">
           <b>階段 3</b>
           <h3>Wiki raw 轉 Evidence</h3>
-          <p>把 transcript、NotebookLM 與 raw notes 先壓成 Evidence Notes，再由 Wiki Agent 審核吸收。</p>
+          <p>把 逐字稿、NotebookLM 與 原始筆記 先壓成 證據筆記，再由 Wiki Agent 審核吸收。</p>
         </div>
         <div class="flow-step">
           <b>階段 4</b>
-          <h3>Headroom sandbox</h3>
+          <h3>Headroom 隔離環境</h3>
           <p>在非核心資料上測試 Headroom MCP 或 SDK，觀察壓縮率、漏失、回取能力與本機資源負載。</p>
         </div>
         <div class="flow-step">
           <b>階段 5</b>
           <h3>穩定後再接入</h3>
-          <p>若效果穩定，再只接 Wiki、Codex log、art transcript 幾個管線，不接 secrets 與正式知識寫入。</p>
+          <p>若效果穩定，再只接 Wiki、Codex 紀錄、art 逐字稿 幾個管線，不接 機密 與正式知識寫入。</p>
         </div>
       </div>
       <div class="decision" style="margin-top:18px">
         <article class="card decision-main">
           <h3>本教材結論</h3>
-          <p>Headroom 值得吸收，但不要直接裝進核心。它是上下文清理器，不是大腦。本地 AI Agent 系統的核心仍是 Wiki、skill sync、Summary Agent 與 raw archive。</p>
+          <p>Headroom 值得吸收，但不要直接裝進核心。它是上下文清理器，不是大腦。本地 AI 代理 系統的核心仍是 Wiki、技能 sync、Summary Agent 與 原始封存。</p>
         </article>
         <article class="card">
           <h3>先做的實作規則</h3>
           <ul>
             <li>所有壓縮摘要都要附 raw path 或來源 URL。</li>
-            <li>寄出、寫 Wiki、改 code 前要回查原文。</li>
-            <li>tool output 超過一定長度才壓縮，短內容不要多此一舉。</li>
-            <li>保留 error、warning、owner、deadline、決策、未解問題。</li>
+            <li>寄出、寫 Wiki、改 程式碼 前要回查原文。</li>
+            <li>工具輸出 超過一定長度才壓縮，短內容不要多此一舉。</li>
+            <li>保留 錯誤、警告、負責人、期限、決策、未解問題。</li>
           </ul>
         </article>
       </div>
@@ -821,37 +821,37 @@
       <div class="section-title"><span>6</span><h2>資料來源與可信度標註</h2></div>
       <div class="grid source-list">
         <article class="card span-6">
-          <h3>官方文件：Introduction</h3>
-          <p>說明 Headroom 是 LLM applications 的 context optimization layer，會在模型看到前壓縮工具輸出、DB results、file reads、RAG results 與 API responses。文件列出 proxy、Python/TypeScript SDK、framework integration 與 MCP 等使用方式。</p>
+          <h3>官方文件：簡介</h3>
+          <p>說明 Headroom 是 LLM applications 的 上下文 optimization layer，會在模型看到前壓縮工具輸出、資料庫結果、檔案讀取結果、RAG 檢索結果 與 API 回應。文件列出 代理伺服器、Python/TypeScript SDK、框架整合 與 MCP 等使用方式。</p>
           <p><a href="https://headroom-docs.vercel.app/docs">https://headroom-docs.vercel.app/docs</a></p>
         </article>
         <article class="card span-6">
-          <h3>官方文件：Architecture</h3>
-          <p>描述三階段 pipeline：分析訊息、套用 transform、呼叫 provider。也說明 proxy、SDK、integrations 的接入差異，以及 CCR 可把被壓縮內容存入本地 cache 後回取。</p>
+          <h3>官方文件：架構</h3>
+          <p>描述三階段 處理管線：分析訊息、套用 轉換、呼叫 provider。也說明 代理伺服器、SDK、整合 的接入差異，以及 CCR 可把被壓縮內容存入本地 快取 後回取。</p>
           <p><a href="https://headroom-docs.vercel.app/docs/architecture">https://headroom-docs.vercel.app/docs/architecture</a></p>
         </article>
         <article class="card span-6">
           <h3>官方文件：MCP Tools</h3>
-          <p>說明 MCP server 暴露 headroom_compress、headroom_retrieve、headroom_stats，可供 Claude Code、Cursor、Codex 與 MCP-compatible host 使用。這是比較適合 sandbox 驗證的方向。</p>
+          <p>說明 MCP server 暴露 headroom_compress、headroom_retrieve、headroom_stats，可供 Claude Code、Cursor、Codex 與 MCP-compatible host 使用。這是比較適合 隔離測試 驗證的方向。</p>
           <p><a href="https://headroom-docs.vercel.app/docs/mcp">https://headroom-docs.vercel.app/docs/mcp</a></p>
         </article>
         <article class="card span-6">
-          <h3>官方文件：Limitations</h3>
-          <p>列出哪些內容有效、哪些內容幫助有限。文件特別提到短對話、code-only sessions、單回合請求收益較低，source code 預設多半 passthrough 以保留正確性。</p>
+          <h3>官方文件：限制</h3>
+          <p>列出哪些內容有效、哪些內容幫助有限。文件特別提到短對話、純程式工作階段、單回合請求收益較低，原始碼 預設多半 直接傳遞 以保留正確性。</p>
           <p><a href="https://headroom-docs.vercel.app/docs/limitations">https://headroom-docs.vercel.app/docs/limitations</a></p>
         </article>
         <article class="card span-6">
-          <h3>官方文件：Benchmarks</h3>
-          <p>列出官方測試與 telemetry。這些數字可作為觀察指標，但導入前仍需用自己的 transcript、log、Excel 與 coding output 做 sandbox 驗證。</p>
+          <h3>官方文件：效能評測</h3>
+          <p>列出官方測試與 遙測。這些數字可作為觀察指標，但導入前仍需用自己的 逐字稿、紀錄、Excel 與 程式設計 output 做 隔離測試 驗證。</p>
           <p><a href="https://headroom-docs.vercel.app/docs/benchmarks">https://headroom-docs.vercel.app/docs/benchmarks</a></p>
         </article>
         <article class="card span-6">
           <h3>GitHub 專案</h3>
-          <p>專案 README 將 Headroom 描述為可壓縮 tool outputs、logs、files、RAG chunks 的工具，支援 library、proxy、MCP server。搜尋時看到 latest release 為 v0.23.0，日期是 2026-06-04。</p>
+          <p>專案 README 將 Headroom 描述為可壓縮 工具輸出、紀錄、files、RAG 片段 的工具，支援 library、代理伺服器、MCP server。搜尋時看到 最新版本 為 v0.23.0，日期是 2026-06-04。</p>
           <p><a href="https://github.com/chopratejas/headroom">https://github.com/chopratejas/headroom</a></p>
         </article>
       </div>
-      <div class="warning"><strong>可信度提醒：</strong>壓縮率、準確率、延遲與成本數字多為官方文件或專案頁提供。實務導入時要用自己的資料集驗證，不應只靠官方 benchmark。</div>
+      <div class="warning"><strong>可信度提醒：</strong>壓縮率、準確率、延遲與成本數字多為官方文件或專案頁提供。實務導入時要用自己的資料集驗證，不應只靠官方 效能評測。</div>
     </section>
 
     <section id="summary">
@@ -859,25 +859,25 @@
       <div class="card span-12">
         <h3>本課重點整理</h3>
         <ul>
-          <li><strong>Headroom 有用：</strong>它能幫長任務降低上下文雜訊，特別是 tool output、log、RAG、file reads、API responses 與 transcript。</li>
-          <li><strong>對本地 LLM 的價值不是省錢：</strong>本地系統更需要穩定長任務、乾淨交接、避免 context 爆掉。</li>
-          <li><strong>不要取代記憶庫：</strong>它不是 Obsidian、Wiki Agent、Codex skill sync 或 Summary Agent 的替代品。</li>
-          <li><strong>先自建規則：</strong>先定義壓縮邊界、raw 保留、Evidence Notes、回查流程，再測 Headroom sandbox。</li>
-          <li><strong>先試三個管線：</strong>Wiki raw 轉 Evidence Notes、Codex build/log 摘要、art transcript 轉教學 brief。</li>
-          <li><strong>安全邊界要硬：</strong>不要壓縮 secrets、精確 diff、正式合規內容，不要讓它直接改 Wiki 正式知識。</li>
+          <li><strong>Headroom 有用：</strong>它能幫長任務降低上下文雜訊，特別是 工具輸出、紀錄、RAG、檔案讀取結果、API 回應 與 逐字稿。</li>
+          <li><strong>對本地 LLM 的價值不是省錢：</strong>本地系統更需要穩定長任務、乾淨交接、避免 上下文 爆掉。</li>
+          <li><strong>不要取代記憶庫：</strong>它不是 Obsidian、Wiki Agent、Codex 技能 sync 或 Summary Agent 的替代品。</li>
+          <li><strong>先自建規則：</strong>先定義壓縮邊界、raw 保留、證據筆記、回查流程，再測 Headroom 隔離測試。</li>
+          <li><strong>先試三個管線：</strong>Wiki raw 轉 證據筆記、Codex build/log 摘要、art 逐字稿 轉教學 摘要。</li>
+          <li><strong>安全邊界要硬：</strong>不要壓縮 機密、精確 差異、正式合規內容，不要讓它直接改 Wiki 正式知識。</li>
         </ul>
-        <div class="source-note"><strong>一句話：</strong>Headroom 是上下文清理器，不是大腦。它可以讓 agent 看得更清楚，但不能替代 Hermes 的知識治理與 raw archive。</div>
+        <div class="source-note"><strong>一句話：</strong>Headroom 是上下文清理器，不是大腦。它可以讓 代理 看得更清楚，但不能替代 Hermes 的知識治理與 原始封存。</div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">Michael AI Agent Lab teaching draft | Prepared for review before publishing | Source checked on 2026-06-06</div>
+    <div class="wrap">Michael AI Agent Lab 教學草稿｜發布前待審查｜來源查核日期 2026-06-06</div>
   </footer>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>知識庫、文件轉換與上下文治理</h2>
     <ul>
       <li><a href="./wiki-agent-nightly-maintenance.html">Wiki Agent 知識營運：讓知識庫每天自己變乾淨</a></li>

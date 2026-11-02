@@ -20,27 +20,27 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/9189aa13ab563290.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="hero">
     <div class="wrap">
       <div class="brand">
         <span class="lesson-brand-text">Michael AI Agent Lab</span>
-        <div class="doc-meta">Michael 教學筆記｜2026-07-08<br>Agent Requirement Interview</div>
+        <div class="doc-meta">Michael 教學筆記｜2026-07-08<br>Agent 需求訪談</div>
       </div>
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Public Learning Note</div>
+          <div class="eyebrow">公開學習筆記</div>
           <h1>AI Agent 開工前需求訪談：Grill Me 工作法</h1>
-          <p class="lead">AI 很認真亂做，通常不是因為模型太弱，而是需求還沒被問清楚。Grill Me 的價值，是讓 agent 在動手前先把受眾、限制、輸出、技術選擇與不能做的事全部釐清。</p>
+          <p class="lead">AI 很認真亂做，通常不是因為模型太弱，而是需求還沒被問清楚。Grill Me 的價值，是讓 代理 在動手前先把受眾、限制、輸出、技術選擇與不能做的事全部釐清。</p>
         </div>
         <aside class="hero-panel">
           <strong>一句話結論</strong>
-          <p>不要一開始就叫 agent 做。先讓它「拷問需求」，把模糊想法變成可執行 brief，再交給 PRD、TDD 或實作流程。</p>
+          <p>不要一開始就叫 代理 做。先讓它「拷問需求」，把模糊想法變成可執行 任務摘要，再交給 產品需求文件、TDD 或實作流程。</p>
           <div class="decision">
             <span>先問清楚<br>再開始做</span>
             <span>模糊需求<br>必定返工</span>
-            <span>訪談結果<br>轉成 brief</span>
+            <span>訪談結果<br>轉成 任務摘要</span>
           </div>
         </aside>
       </div>
@@ -48,7 +48,7 @@
   </header>
 
   <nav class="nav" aria-label="章節導覽"><div class="wrap">
-    <a href="#model">心智模型</a><a href="#questions">問題分類</a><a href="#compare">前後差異</a><a href="#practice">實務場景</a><a href="#safe">導入安全</a><a href="#prompts">提示詞</a><a href="#sources">Sources</a>
+    <a href="#model">心智模型</a><a href="#questions">問題分類</a><a href="#compare">前後差異</a><a href="#practice">實務場景</a><a href="#safe">導入安全</a><a href="#prompts">提示詞</a><a href="#sources">來源</a>
   </div></nav>
 
   <main class="wrap">
@@ -56,19 +56,19 @@
       <div class="section-title"><span class="bar"></span><h2>Grill Me 是什麼：開工前的需求檢查官</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <div class="mini-label">Workflow</div>
-          <p>Grill Me 不是魔法 prompt，也不是自動化工具。它是一種「先訪談再執行」的工作法：當需求還只是方向，agent 必須先追問你，直到任務能被清楚執行。</p>
+          <div class="mini-label">工作流程</div>
+          <p>Grill Me 不是魔法 提示詞，也不是自動化工具。它是一種「先訪談再執行」的工作法：當需求還只是方向，代理 必須先追問你，直到任務能被清楚執行。</p>
           <div class="flow">
             <div class="flow-step"><div class="step-no">1</div><h3>模糊想法</h3><p>例如：做一個側邊欄小遊戲、做一份教學檔、整理一個客戶問題。</p></div>
-            <div class="flow-step"><div class="step-no">2</div><h3>反向訪談</h3><p>agent 先問使用情境、限制、成功標準與不能做的事。</p></div>
-            <div class="flow-step"><div class="step-no">3</div><h3>需求定稿</h3><p>把回答整理成 brief、PRD 或任務規格。</p></div>
+            <div class="flow-step"><div class="step-no">2</div><h3>反向訪談</h3><p>代理 先問使用情境、限制、成功標準與不能做的事。</p></div>
+            <div class="flow-step"><div class="step-no">3</div><h3>需求定稿</h3><p>把回答整理成 任務摘要、產品需求文件 或任務規格。</p></div>
             <div class="flow-step"><div class="step-no">4</div><h3>測試設計</h3><p>用 TDD 或驗收清單定義紅燈與綠燈。</p></div>
-            <div class="flow-step"><div class="step-no">5</div><h3>開始執行</h3><p>交給 Codex、Claude Code、PM workflow agent 或內容輸出 agent。</p></div>
+            <div class="flow-step"><div class="step-no">5</div><h3>開始執行</h3><p>交給 Codex、Claude Code、PM 工作流程 代理 或內容輸出 代理。</p></div>
           </div>
         </div>
         <div class="card span-5">
-          <div class="mini-label">Diagram</div>
-          <svg class="diagram" viewBox="0 0 520 320" role="img" aria-label="模糊需求到可執行任務的流程">
+          <div class="mini-label">圖解</div>
+          <svg class="diagram" viewbox="0 0 520 320" role="img" aria-label="模糊需求到可執行任務的流程">
             <rect width="520" height="320" fill="#fff"/>
             <rect x="42" y="42" width="132" height="72" rx="8" fill="#243033"/>
             <text x="108" y="72" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">模糊需求</text>
@@ -79,11 +79,11 @@
             <text x="292" y="94" fill="#6f4045" font-size="12" text-anchor="middle">追問 / 對齊 / 補洞</text>
             <path d="M358 78 H410" stroke="#d72f38" stroke-width="4"/><path d="M410 78 l-10 -7 v14 z" fill="#d72f38"/>
             <rect x="410" y="42" width="70" height="72" rx="8" fill="#18a8bd"/>
-            <text x="445" y="72" fill="#fff" font-size="15" font-weight="800" text-anchor="middle">Brief</text>
+            <text x="445" y="72" fill="#fff" font-size="15" font-weight="800" text-anchor="middle">簡報</text>
             <text x="445" y="94" fill="#e8fbfd" font-size="12" text-anchor="middle">可執行</text>
             <rect x="96" y="174" width="328" height="74" rx="8" fill="#f2f5f5" stroke="#dfe4e5"/>
-            <text x="260" y="204" fill="#202629" font-size="18" font-weight="800" text-anchor="middle">PRD + TDD + 實作</text>
-            <text x="260" y="228" fill="#667174" font-size="13" text-anchor="middle">先定義成功，再讓 agent 做</text>
+            <text x="260" y="204" fill="#202629" font-size="18" font-weight="800" text-anchor="middle">產品需求文件 + TDD + 實作</text>
+            <text x="260" y="228" fill="#667174" font-size="13" text-anchor="middle">先定義成功，再讓 代理 做</text>
             <path d="M445 114 V174 H260" stroke="#667174" stroke-width="3" fill="none"/>
             <rect x="142" y="274" width="236" height="30" rx="15" fill="#243033"/>
             <text x="260" y="294" fill="#fff" font-size="13" font-weight="800" text-anchor="middle">少一點腦補，多一點對齊</text>
@@ -99,8 +99,8 @@
         <article class="card span-4"><div class="head"><div class="icon cyan">2</div><div><h3>使用情境</h3><p class="muted">誰在什麼環境使用。</p></div></div><p>釐清是側邊欄、桌面、網頁、手機、團隊工具或客戶場景；不同入口會影響操作設計。</p></article>
         <article class="card span-4"><div class="head"><div class="icon amber">3</div><div><h3>互動與限制</h3><p class="muted">怎麼操作、哪些不能碰。</p></div></div><p>確認鍵盤、滑鼠、觸控、通知、權限、資料保存、清除紀錄，以及安全與隱私限制。</p></article>
         <article class="card span-4"><div class="head"><div class="icon green">4</div><div><h3>成功標準</h3><p class="muted">什麼叫做完成。</p></div></div><p>用驗收條件描述成果：能否正常操作、資料是否正確、畫面是否符合使用者情境。</p></article>
-        <article class="card span-4"><div class="head"><div class="icon blue">5</div><div><h3>測試方法</h3><p class="muted">怎麼知道沒有壞。</p></div></div><p>把需求轉成紅燈/綠燈測試、手動驗收或 Playwright 檢查，避免只看 demo 感覺。</p></article>
-        <article class="card span-4"><div class="head"><div class="icon">6</div><div><h3>後續維護</h3><p class="muted">做完之後誰接手。</p></div></div><p>確認檔案位置、文件、使用說明、錯誤處理、重設方式，以及是否需要寫成 skill。</p></article>
+        <article class="card span-4"><div class="head"><div class="icon blue">5</div><div><h3>測試方法</h3><p class="muted">怎麼知道沒有壞。</p></div></div><p>把需求轉成紅燈/綠燈測試、手動驗收或 Playwright 檢查，避免只看 示範 感覺。</p></article>
+        <article class="card span-4"><div class="head"><div class="icon">6</div><div><h3>後續維護</h3><p class="muted">做完之後誰接手。</p></div></div><p>確認檔案位置、文件、使用說明、錯誤處理、重設方式，以及是否需要寫成 技能。</p></article>
       </div>
     </section>
 
@@ -108,24 +108,24 @@
       <div class="section-title"><span class="bar"></span><h2>差異：直接做 vs 先訪談</h2></div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>面向</th><th>直接叫 agent 做</th><th>先用 Grill Me 訪談</th><th>實務判斷</th></tr></thead>
+          <thead><tr><th>面向</th><th>直接叫 代理 做</th><th>先用 Grill Me 訪談</th><th>實務判斷</th></tr></thead>
           <tbody>
-            <tr><td>需求品質</td><td>agent 會自行猜測未定義細節。</td><td>未定義處會被先問出來。</td><td>客戶/內部專案應先訪談。</td></tr>
+            <tr><td>需求品質</td><td>代理 會自行猜測未定義細節。</td><td>未定義處會被先問出來。</td><td>客戶/內部專案應先訪談。</td></tr>
             <tr><td>功能完整度</td><td>可能能跑，但缺模式、紀錄、通知、重設等情境細節。</td><td>功能來自明確使用情境，而不是隨機腦補。</td><td>正式工具要有情境設計。</td></tr>
             <tr><td>返工風險</td><td>後面才發現方向錯，常要重構。</td><td>早期先對齊，降低後續大改。</td><td>越高風險越要先問。</td></tr>
-            <tr><td>測試方式</td><td>多半只看 demo 能不能跑。</td><td>可轉成 PRD 與 TDD 驗收。</td><td>Codex 實作前要有測試標準。</td></tr>
-            <tr><td>適用任務</td><td>小型一次性草稿。</td><td>專案、報告、工具、agent workflow。</td><td>Hermes 穩定流程都該採用。</td></tr>
+            <tr><td>測試方式</td><td>多半只看 示範 能不能跑。</td><td>可轉成 產品需求文件 與 TDD 驗收。</td><td>Codex 實作前要有測試標準。</td></tr>
+            <tr><td>適用任務</td><td>小型一次性草稿。</td><td>專案、報告、工具、代理 工作流程。</td><td>Hermes 穩定流程都該採用。</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <section id="practice">
-      <div class="section-title"><span class="bar"></span><h2>套到 Hermes / Agent workflow 的用法</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>套到 Hermes / 代理 工作流程 的用法</h2></div>
       <div class="grid">
         <div class="card span-6"><div class="mini-label">教材產製</div><h3>教學檔開工前</h3><p>先問讀者是誰、看完要會什麼、需要哪些圖解、哪些字眼不能出現、是否要手機預覽與分享格式。</p></div>
-        <div class="card span-6"><div class="mini-label">PM workflow</div><h3>客戶/issue 報告前</h3><p>先問異常定義、影響範圍、owner、deadline、證據、下一步，以及哪些資料不能外流。</p></div>
-        <div class="card span-6"><div class="mini-label">Codex</div><h3>改 code 前</h3><p>先問檔案範圍、預期行為、不可改動區域、測試方法、rollback 條件，避免一改就散。</p></div>
+        <div class="card span-6"><div class="mini-label">PM 工作流程</div><h3>客戶/issue 報告前</h3><p>先問異常定義、影響範圍、負責人、期限、證據、下一步，以及哪些資料不能外流。</p></div>
+        <div class="card span-6"><div class="mini-label">Codex</div><h3>改 程式碼 前</h3><p>先問檔案範圍、預期行為、不可改動區域、測試方法、回復 條件，避免一改就散。</p></div>
         <div class="card span-6"><div class="mini-label">Wiki Agent</div><h3>研究前</h3><p>先問研究問題、可信來源、時間範圍、信心等級、是否需要進 raw/inbox，而不是直接寫成正式知識。</p></div>
       </div>
     </section>
@@ -133,22 +133,22 @@
     <section id="safe">
       <div class="section-title"><span class="bar"></span><h2>安裝與導入安全</h2></div>
       <div class="grid">
-        <div class="callout span-12"><strong>不要直接叫 agent 安裝整包未審查技能</strong>第三方 skill 可能包含腳本、外部依賴或不符合 個人或團隊資料規範的流程。先讀 SKILL.md、README、license、安裝位置與會讀寫的檔案，再用 sandbox 專案測試。</div>
+        <div class="callout span-12"><strong>不要直接叫 代理 安裝整包未審查技能</strong>第三方 技能 可能包含腳本、外部依賴或不符合 個人或團隊資料規範的流程。先讀 SKILL.md、README、license、安裝位置與會讀寫的檔案，再用 隔離測試 專案測試。</div>
         <div class="card span-6">
           <div class="mini-label">建議做法</div>
           <ul>
-            <li>只先安裝單一需要的 skill，不要整包全裝進核心。</li>
-            <li>用 dummy project 測試訪談輸出與 PRD 品質。</li>
-            <li>確認 skill 不會要求 token、cookie、帳密或客戶資料。</li>
+            <li>只先安裝單一需要的 技能，不要整包全裝進核心。</li>
+            <li>用 測試專案 測試訪談輸出與 產品需求文件 品質。</li>
+            <li>確認 技能 不會要求 代元、Cookie、帳密或客戶資料。</li>
             <li>通過測試後再寫成 Hermes 自己的規則。</li>
           </ul>
         </div>
         <div class="card span-6">
           <div class="mini-label">不該做</div>
           <ul>
-            <li>不讀內容就讓 agent 自動改本機 skill 目錄。</li>
+            <li>不讀內容就讓 代理 自動改本機 技能 目錄。</li>
             <li>把研究輸出直接當 Wiki 正式知識。</li>
-            <li>讓未驗證 skill 直接處理 未公開或敏感資料。</li>
+            <li>讓未驗證 技能 直接處理 未公開或敏感資料。</li>
             <li>把 Grill Me 當成萬能保證；它只是降低模糊度，不保證成果完美。</li>
           </ul>
         </div>
@@ -160,7 +160,7 @@
       <div class="grid">
         <div class="card span-6">
           <h3>Grill Me 式需求訪談</h3>
-          <pre class="prompt">在開始執行前，請先反過來訪談我。
+          <pre class="prompt" data-language-code="">在開始執行前，請先反過來訪談我。
 請一次問一個最關鍵問題，直到你能整理出：
 - 目標
 - 使用者與場景
@@ -171,8 +171,8 @@
 在我回答完之前，不要開始實作。</pre>
         </div>
         <div class="card span-6">
-          <h3>訪談後轉 PRD</h3>
-          <pre class="prompt">請把剛剛的訪談整理成 PRD。
+          <h3>訪談後轉 產品需求文件</h3>
+          <pre class="prompt" data-language-code="">請把剛剛的訪談整理成 PRD。
 格式包含：
 1. 背景與目標
 2. 使用情境
@@ -183,8 +183,8 @@
 7. 風險與待確認問題</pre>
         </div>
         <div class="card span-6">
-          <h3>PRD 轉 TDD</h3>
-          <pre class="prompt">請根據這份 PRD 產生 TDD 計畫。
+          <h3>產品需求文件 轉 TDD</h3>
+          <pre class="prompt" data-language-code="">請根據這份 PRD 產生 TDD 計畫。
 請列出：
 - 紅燈測試
 - 綠燈標準
@@ -194,7 +194,7 @@
         </div>
         <div class="card span-6">
           <h3>Michael 教學筆記開工前</h3>
-          <pre class="prompt">請在製作 Michael 教學筆記 HTML 前先訪談我。
+          <pre class="prompt" data-language-code="">請在製作 Michael 教學筆記 HTML 前先訪談我。
 你要問清楚：
 - 讀者是誰
 - 看完要會什麼
@@ -208,21 +208,21 @@
     </section>
 
     <section id="sources">
-      <div class="section-title"><span class="bar"></span><h2>Sources</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>來源</h2></div>
       <div class="card">
-        <p class="muted">以下來源用於核對 Codex skills、Matt Pocock skill 倉庫與 Grill Me / Grill with Docs 相關工作法。第三方 skill 導入前仍需依 來源、權限與適用範圍審查。</p>
+        <p class="muted">以下來源用於核對 Codex 技能、Matt Pocock 技能 倉庫與 Grill Me / Grill with Docs 相關工作法。第三方 技能 導入前仍需依 來源、權限與適用範圍審查。</p>
         <ul class="source-list">
           <li><a href="https://github.com/mattpocock/skills">GitHub：mattpocock/skills</a></li>
-          <li><a href="https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me">GitHub：Grill Me skill</a></li>
-          <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md">GitHub：Grilling skill</a></li>
-          <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md">GitHub：Grill with Docs skill</a></li>
-          <li><a href="https://www.aihero.dev/my-grill-me-skill-has-gone-viral">AI Hero：My Grill Me Skill Went Viral</a></li>
+          <li><a href="https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me">GitHub：Grill Me 技能</a></li>
+          <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md">GitHub：Grilling 技能</a></li>
+          <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md">GitHub：Grill with Docs 技能</a></li>
+          <li><a href="https://www.aihero.dev/my-grill-me-skill-has-gone-viral">AI Hero：我的 Grill Me 技能爆紅了</a></li>
           <li><a href="https://www.aihero.dev/grill-with-docs">AI Hero：Grill with Docs</a></li>
-          <li><a href="https://developers.openai.com/codex/skills">OpenAI Developers：Codex Skills</a></li>
-          <li><a href="https://developers.openai.com/codex/use-cases/reusable-codex-skills">OpenAI Developers：Reusable Codex Skills</a></li>
-          <li><a href="https://developers.openai.com/codex/learn/best-practices">OpenAI Developers：Codex Best Practices</a></li>
+          <li><a href="https://developers.openai.com/codex/skills">OpenAI Developers：Codex 技能</a></li>
+          <li><a href="https://developers.openai.com/codex/use-cases/reusable-codex-skills">OpenAI Developers：可重用的 Codex 技能</a></li>
+          <li><a href="https://developers.openai.com/codex/learn/best-practices">OpenAI Developers：Codex 最佳實務</a></li>
         </ul>
-        <div class="footer">Prepared for Michael AI Agent learning. Ask better questions before asking agents to work.</div>
+        <div class="footer">為 Michael 的 AI Agent 學習整理。請 Agent 開工前，先問更好的問題。</div>
       </div>
     </section>
   </main>
@@ -230,10 +230,10 @@
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
-      <li><a href="./task-definition-brief.html">你不是不會寫 Prompt，是不會定義任務</a></li>
+      <li><a href="./task-definition-brief.html">你不是不會寫 提示詞，是不會定義任務</a></li>
       <li><a href="./matt-pocock-skills-codex-workflow.html">Grill Me 與 Matt Pocock Skills：官方流程與 Codex 路由</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>

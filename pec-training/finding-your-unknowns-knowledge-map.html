@@ -84,35 +84,35 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/e5b00357ff2ac720.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <section class="ad-cover" aria-label="Michael AI Agent Lab training cover">
     <div class="ad-cover-inner">
       <div class="ad-cover-top">
         <span class="lesson-brand-text">Michael AI Agent Lab</span>
-        <div class="ad-cover-kicker">Michael Agent Lab<br>July 2026</div>
+        <div class="ad-cover-kicker">Michael Agent Lab<br>2026 年 7 月</div>
       </div>
       <div class="ad-cover-main">
-        <div class="ad-cover-label">AI Agent Beginner Training</div>
+        <div class="ad-cover-label">AI Agent 初學者培訓</div>
         <h1>先畫出你的知識地圖：AI 盲點掃描入門</h1>
         <p class="ad-cover-subtitle">AI 輸出不對，常常不是模型太弱，而是我們還沒把「自己不知道的事」講清楚。這份教材把未知拆成可操作的提問、訪談、原型與範例流程。</p>
       </div>
       <div class="ad-cover-footer">
         <span>Michael AI Agent Lab</span>
-        <span>HTML Training Material</span>
+        <span>HTML 培訓教材</span>
       </div>
     </div>
   </section>
 
   <main class="wrap">
-    <div class="section-label">Learning Goal</div>
+    <div class="section-label">學習目標</div>
     <section class="section grid2">
       <article class="card">
         <span class="badge">這份教學要解決的問題</span>
         <h2>為什麼 AI 做得很快，卻不是你要的？</h2>
-        <p class="lead">當任務變長、變複雜，AI 會遇到很多沒有被說明的空白。它會用最合理的方式猜，但合理不等於符合你的工作情境。入門者最需要先練的，不是把 prompt 寫漂亮，而是先找出需求裡還沒被說出口的未知。</p>
+        <p class="lead">當任務變長、變複雜，AI 會遇到很多沒有被說明的空白。它會用最合理的方式猜，但合理不等於符合你的工作情境。入門者最需要先練的，不是把 提示詞 寫漂亮，而是先找出需求裡還沒被說出口的未知。</p>
         <div class="chips">
-          <span class="chip">AI 入門</span><span class="chip">Prompt</span><span class="chip">需求釐清</span><span class="chip">盲點掃描</span><span class="chip">知識地圖</span>
+          <span class="chip">AI 入門</span><span class="chip">提示詞</span><span class="chip">需求釐清</span><span class="chip">盲點掃描</span><span class="chip">知識地圖</span>
         </div>
       </article>
       <article class="card">
@@ -121,41 +121,41 @@
         <ul>
           <li>知道 ChatGPT、Claude、Gemini，但常覺得輸出「看起來對、實際不對」的人。</li>
           <li>要做簡報、文案、報告、教學頁、分析或小工具，但很難一次說清楚標準的人。</li>
-          <li>想學 AI Agent，不想只靠模糊指令賭結果的人。</li>
+          <li>想學 AI 代理，不想只靠模糊指令賭結果的人。</li>
           <li>已經會用 AI 的同事，也可以把這份教材當成需求釐清檢查表。</li>
         </ul>
       </article>
     </section>
 
-    <div class="section-label">Core Model</div>
+    <div class="section-label">核心模型</div>
     <section class="section map-panel">
-      <h2>地圖與地形：prompt 只是地圖，真實工作才是地形</h2>
+      <h2>地圖與地形：提示詞 只是地圖，真實工作才是地形</h2>
       <p class="lead">你給 AI 的指令、背景、文件和範例，是一張地圖；真實的專案、公司規則、資料限制、主管偏好、客戶情境，是地形。地圖沒有畫到的地方，就是 AI 必須猜的地方。</p>
       <div class="map-grid">
         <article class="map-card">
-          <b>Known Knowns</b>
+          <b>已知的已知</b>
           <h3>知道自己知道</h3>
           <p>已經能明確說出口的需求，例如要做一份兩頁簡報、對象是 PM、語言用繁體中文。</p>
         </article>
         <article class="map-card">
-          <b>Known Unknowns</b>
+          <b>已知的未知</b>
           <h3>知道自己不知道</h3>
           <p>你知道還沒決定的事，例如預算、格式、資料範圍、評估標準或交付時間。</p>
         </article>
         <article class="map-card">
-          <b>Unknown Knowns</b>
+          <b>未知的已知</b>
           <h3>不知道自己知道</h3>
           <p>你覺得理所當然、所以沒講出來的偏好，例如不要太花、要能給主管快速掃讀、不要像廣告文。</p>
         </article>
         <article class="map-card">
-          <b>Unknown Unknowns</b>
+          <b>未知的未知</b>
           <h3>不知道自己不知道</h3>
           <p>你連問題都還不知道怎麼問，例如陌生領域的術語、風險、常見錯誤或判斷好壞的方法。</p>
         </article>
       </div>
     </section>
 
-    <div class="section-label">Four Moves</div>
+    <div class="section-label">四個行動</div>
     <section class="section flow">
       <article class="step">
         <b>01</b>
@@ -179,9 +179,9 @@
       </article>
     </section>
 
-    <div class="section-label">Prompt Templates</div>
+    <div class="section-label">提示詞範本</div>
     <section class="section prompt-box">
-      <pre>盲點掃描
+      <pre data-language-code="">盲點掃描
 我要做：[任務]
 我目前知道：[已知背景]
 我不熟的地方：[陌生領域或不確定點]
@@ -209,7 +209,7 @@ AI 反問訪談
 但改成我的情境：[你的任務與限制]</pre>
     </section>
 
-    <div class="section-label">Michael AI Agent Lab Use Cases</div>
+    <div class="section-label">Michael AI Agent Lab 應用案例</div>
     <section class="section table-wrap">
       <table>
         <thead><tr><th>工作情境</th><th>先找未知</th><th>建議問法</th><th>避免的問題</th></tr></thead>
@@ -223,7 +223,7 @@ AI 反問訪談
       </table>
     </section>
 
-    <div class="section-label">Beginner Checklist</div>
+    <div class="section-label">初學者檢查清單</div>
     <section class="section grid2">
       <article class="check-card action">
         <h3>AI 動工前，先問 5 件事</h3>
@@ -238,15 +238,15 @@ AI 反問訪談
       <article class="check-card warning">
         <h3>進階補充：任務中與任務後也要找未知</h3>
         <ul>
-          <li>任務中：請 AI 保留 implementation notes，記錄它偏離原計畫的原因。</li>
-          <li>交付前：請 AI 包裝成一份 reviewer 能快速理解的說明文件。</li>
+          <li>任務中：請 AI 保留 實作紀錄，記錄它偏離原計畫的原因。</li>
+          <li>交付前：請 AI 包裝成一份 審核者 能快速理解的說明文件。</li>
           <li>交付後：請 AI 出幾題小測驗，確認你真的理解它做了什麼。</li>
-          <li>每次修正後，把可重複的規則沉澱成 prompt、SOP 或 skill。</li>
+          <li>每次修正後，把可重複的規則沉澱成 提示詞、SOP 或 技能。</li>
         </ul>
       </article>
     </section>
 
-    <div class="section-label">One Page Summary</div>
+    <div class="section-label">一頁摘要</div>
     <section class="section grid">
       <article class="card">
         <h2>一句話</h2>
@@ -258,11 +258,11 @@ AI 反問訪談
       </article>
       <article class="card">
         <h2>入門者要練的能力</h2>
-        <p>不是背 prompt，而是把模糊任務拆成背景、限制、決策、範例與驗收標準。</p>
+        <p>不是背 提示詞，而是把模糊任務拆成背景、限制、決策、範例與驗收標準。</p>
       </article>
     </section>
 
-    <div class="section-label">Sources</div>
+    <div class="section-label">來源</div>
     <section class="section source-card">
       <h2>來源與原始連結</h2>
       <p>本頁根據公開影音說明、繁體中文字幕與 Anthropic 官方文章整理成入門教材；正文已改寫為教學筆記，不作原文照錄。</p>
@@ -277,7 +277,7 @@ AI 反問訪談
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>AI Agent 入門與學習路線</h2>
     <ul>
       <li><a href="./ai-agent-terms.html">AI Agent 術語與名詞解釋</a></li>

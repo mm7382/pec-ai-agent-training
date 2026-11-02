@@ -1113,13 +1113,13 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/84f9408d0a338389.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
       <span class="brand-mark" aria-hidden="true">M</span>
       <div class="topbar-copy">
-        <span class="topbar-title">MCP、A2A、AP2 與 Production Skill</span>
+        <span class="topbar-title">MCP、A2A、AP2 與 正式環境技能</span>
         <span class="topbar-subtitle">Michael AI Agent Lab</span>
       </div>
       <span class="draft-badge">草稿待審</span>
@@ -1129,35 +1129,35 @@
   <div class="hero">
     <div class="hero-watermark" aria-hidden="true">AI AGENT LAB</div>
     <div class="hero-inner">
-      <div class="eyebrow">Michael AI Agent Lab · Engineering Notes</div>
-      <h1>從連接工具到能安全上線的 Agent Skill</h1>
+      <div class="eyebrow">Michael AI Agent Lab · 工程筆記</div>
+      <h1>從連接工具到能安全上線的 代理 技能</h1>
       <p class="hero-copy">
-        模型只是大腦。真正能工作的 Agent，還需要工具介面、協作協定、程序記憶與上線驗證。這份教學把每一層的責任、風險和使用時機拆清楚。
+        模型只是大腦。真正能工作的 代理，還需要工具介面、協作協定、程序記憶與上線驗證。這份教學把每一層的責任、風險和使用時機拆清楚。
       </p>
       <div class="hero-map" aria-label="Agent production stack">
         <div class="hero-step">
-          <span class="step-no">01 · CONNECT</span>
+          <span class="step-no">01 · 連接</span>
           <strong>MCP</strong>
-          <span>讓 Agent 使用工具、資料與外部服務。</span>
+          <span>讓 代理 使用工具、資料與外部服務。</span>
         </div>
         <div class="hero-step">
-          <span class="step-no">02 · COLLABORATE</span>
+          <span class="step-no">02 · 協作</span>
           <strong>A2A</strong>
-          <span>把任務交給另一個具自治能力的 Agent。</span>
+          <span>把任務交給另一個具自治能力的 代理。</span>
         </div>
         <div class="hero-step">
-          <span class="step-no">03 · AUTHORIZE</span>
+          <span class="step-no">03 · 授權</span>
           <strong>AP2</strong>
           <span>保留付款意圖、授權與交易證據。</span>
         </div>
         <div class="hero-step">
-          <span class="step-no">04 · REMEMBER</span>
-          <strong>Skill</strong>
+          <span class="step-no">04 · 記憶</span>
+          <strong>技能</strong>
           <span>按需載入 SOP、腳本和參考資料。</span>
         </div>
         <div class="hero-step">
-          <span class="step-no">05 · VERIFY</span>
-          <strong>Evals</strong>
+          <span class="step-no">05 · 驗證</span>
+          <strong>評估</strong>
           <span>驗證觸發、輸出、工具軌跡與迴歸。</span>
         </div>
       </div>
@@ -1168,10 +1168,10 @@
     <div class="section-nav-inner">
       <a href="#protocols">協定分工</a>
       <a href="#mcp-safety">MCP 安全</a>
-      <a href="#skill-layers">Skill 三層</a>
+      <a href="#skill-layers">技能 三層</a>
       <a href="#failures">四種失敗</a>
       <a href="#gates">四道防線</a>
-      <a href="#meta">Meta-Skill</a>
+      <a href="#meta">後設技能</a>
       <a href="#scenario">實務情境</a>
       <a href="#prompts">提示詞</a>
       <a href="#sources">來源</a>
@@ -1181,24 +1181,24 @@
   <main>
     <section class="band" id="protocols">
       <div class="section-inner">
-        <div class="section-kicker">01 · Core Distinction</div>
+        <div class="section-kicker">01 · 核心區別</div>
         <h2>先判斷你缺的是「工具、同事、授權」還是「做事方法」</h2>
         <p class="section-lead">
-          四個名詞不是互相取代，而是處理不同邊界。選錯層次，會把簡單工具呼叫做成複雜多 Agent 系統，或把高風險付款誤當一般 API 操作。
+          四個名詞不是互相取代，而是處理不同邊界。選錯層次，會把簡單工具呼叫做成複雜多 代理 系統，或把高風險付款誤當一般 API 操作。
         </p>
 
         <div class="protocol-grid">
           <article class="protocol-card mcp">
             <div class="protocol-head">
               <span class="icon-wrap">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a6 6 0 0 1-12 0V8z"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a6 6 0 0 1-12 0V8z"/></svg>
               </span>
               <div>
-                <span class="protocol-label">MODEL ↔ TOOL</span>
+                <span class="protocol-label">模型 ↔ 工具</span>
                 <h3>MCP</h3>
               </div>
             </div>
-            <p>標準化 Agent 如何發現並使用 tools、resources 與 prompts。底層 API 仍負責真正的查詢、寫入或寄送。</p>
+            <p>標準化 代理 如何發現並使用 工具、資源 與 提示詞。底層 API 仍負責真正的查詢、寫入或寄送。</p>
             <div class="decision">
               <strong>使用時機</strong>
               查信件、讀資料庫、搜尋文件、操作核准過的 App。
@@ -1208,45 +1208,45 @@
           <article class="protocol-card a2a">
             <div class="protocol-head">
               <span class="icon-wrap">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="m21 3-7 7"/><path d="M8 21H3v-5"/><path d="m3 21 7-7"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="m21 3-7 7"/><path d="M8 21H3v-5"/><path d="m3 21 7-7"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/></svg>
               </span>
               <div>
-                <span class="protocol-label">AGENT ↔ AGENT</span>
+                <span class="protocol-label">Agent ↔ Agent</span>
                 <h3>A2A</h3>
               </div>
             </div>
-            <p>標準化具自治能力的 Agent 如何公開能力、接收任務、交換訊息與產出 artifacts，適合長時間或多回合協作。</p>
+            <p>標準化具自治能力的 代理 如何公開能力、接收任務、交換訊息與產出 產物，適合長時間或多回合協作。</p>
             <div class="decision">
               <strong>使用時機</strong>
-              主 Agent 把專業分析交給法務、財務或設計 Agent。
+              主 代理 把專業分析交給法務、財務或設計 代理。
             </div>
           </article>
 
           <article class="protocol-card ap2">
             <div class="protocol-head">
               <span class="icon-wrap">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h2"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h2"/></svg>
               </span>
               <div>
-                <span class="protocol-label">AGENT ↔ PAYMENT</span>
+                <span class="protocol-label">Agent ↔ 付款</span>
                 <h3>AP2</h3>
               </div>
             </div>
-            <p>透過 typed mandates 與 receipts 記錄使用者意圖、付款授權及交易結果，讓 Agent 付款可限制、可驗證、可追溯。</p>
+            <p>透過 型別化授權憑證 與 交易收據 記錄使用者意圖、付款授權及交易結果，讓 代理 付款可限制、可驗證、可追溯。</p>
             <div class="decision">
               <strong>使用時機</strong>
-              採購、訂閱、差旅或任何會產生金流的 Agent 工作。
+              採購、訂閱、差旅或任何會產生金流的 代理 工作。
             </div>
           </article>
 
           <article class="protocol-card skill">
             <div class="protocol-head">
               <span class="icon-wrap">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>
               </span>
               <div>
-                <span class="protocol-label">AGENT ↔ PROCEDURE</span>
-                <h3>Skill</h3>
+                <span class="protocol-label">Agent ↔ 程序</span>
+                <h3>技能</h3>
               </div>
             </div>
             <p>把 SOP、判斷規則、腳本、參考資料與資產包裝成按需載入的程序記憶，避免每次重新說明。</p>
@@ -1260,7 +1260,7 @@
         <div class="correction">
           <div class="correction-copy">
             <strong>不要把 MCP 簡化成「單向、無記憶」</strong>
-            <span>MCP 的核心是工具與 context 介面；A2A 的核心是 peer agent 的任務協作。MCP server 可以有狀態，工具也可能執行長任務，真正差異在抽象層級與責任邊界。</span>
+            <span>MCP 的核心是工具與 上下文 介面；A2A 的核心是 同儕代理 的任務協作。MCP 伺服器 可以有狀態，工具也可能執行長任務，真正差異在抽象層級與責任邊界。</span>
           </div>
         </div>
 
@@ -1278,31 +1278,31 @@
             <tbody>
               <tr>
                 <td>MCP</td>
-                <td>Agent 與工具／資料</td>
-                <td>能力發現、輸入 schema、呼叫介面</td>
+                <td>代理 與工具／資料</td>
+                <td>能力發現、輸入 結構規格、呼叫介面</td>
                 <td>不取代 Gmail、ERP 或資料庫原本的 API</td>
-                <td>過度權限、惡意 server、secret 外洩</td>
+                <td>過度權限、惡意 伺服器、機密 外洩</td>
               </tr>
               <tr>
                 <td>A2A</td>
-                <td>Agent 與 Agent</td>
-                <td>能力卡、任務、訊息、artifacts、長任務協作</td>
-                <td>不保證對方 Agent 的答案正確或可信</td>
+                <td>代理 與 代理</td>
+                <td>能力卡、任務、訊息、產物、長任務協作</td>
+                <td>不保證對方 代理 的答案正確或可信</td>
                 <td>信任邊界、資料外送、責任不清</td>
               </tr>
               <tr>
                 <td>AP2</td>
-                <td>Agent 與付款體系</td>
-                <td>授權意圖、mandate、receipt、爭議證據</td>
+                <td>代理 與付款體系</td>
+                <td>授權意圖、授權憑證、交易收據、爭議證據</td>
                 <td>不取代商務協定、商品目錄或支付網路</td>
                 <td>誤購、超額、授權被冒用</td>
               </tr>
               <tr>
-                <td>Skill</td>
-                <td>Agent 與工作程序</td>
+                <td>技能</td>
+                <td>代理 與工作程序</td>
                 <td>保存可重複步驟、規則、腳本與參考資料</td>
-                <td>不自動保證 trigger、結果與工具軌跡正確</td>
-                <td>錯誤觸發、context 污染、迴歸</td>
+                <td>不自動保證 觸發、結果與工具軌跡正確</td>
+                <td>錯誤觸發、上下文 污染、迴歸</td>
               </tr>
             </tbody>
           </table>
@@ -1312,32 +1312,32 @@
 
     <section class="band" id="mcp-safety">
       <div class="section-inner">
-        <div class="section-kicker">02 · Least Privilege</div>
+        <div class="section-kicker">02 · 最小權限</div>
         <h2>MCP 不是裝完就能用：先做五道安全檢查</h2>
         <p class="section-lead">
-          MCP server 可能以你的電腦權限執行，也可能連到公司系統。連接成功只是技術檢查；真正的上線條件是來源可信、權限最小、secret 隔離、寫入可控、活動可稽核。
+          MCP 伺服器 可能以你的電腦權限執行，也可能連到公司系統。連接成功只是技術檢查；真正的上線條件是來源可信、權限最小、機密 隔離、寫入可控、活動可稽核。
         </p>
 
         <div class="safety-flow">
           <article class="safety-step">
             <span class="number">1</span>
             <h3>查來源</h3>
-            <p>優先官方版本；確認 repository、維護者、最近更新、release、已知問題與安裝內容。</p>
+            <p>優先官方版本；確認 repository、維護者、最近更新、發布版本、已知問題與安裝內容。</p>
           </article>
           <article class="safety-step">
             <span class="number">2</span>
             <h3>縮權限</h3>
-            <p>從 read-only、限定資料夾、限定帳號與限定 API scope 開始，不給整台電腦或整個信箱。</p>
+            <p>從 唯讀、限定資料夾、限定帳號與限定 API 權限範圍 開始，不給整台電腦或整個信箱。</p>
           </article>
           <article class="safety-step">
             <span class="number">3</span>
-            <h3>隔離 Secret</h3>
-            <p>API key、token 與密碼放在本機安全儲存或環境設定，不貼進聊天、Skill 或 Git。</p>
+            <h3>隔離 機密</h3>
+            <p>API key、代元 與密碼放在本機安全儲存或環境設定，不貼進聊天、技能 或 Git。</p>
           </article>
           <article class="safety-step">
             <span class="number">4</span>
             <h3>擋副作用</h3>
-            <p>寄信、刪除、付款、部署與公開發布都需要明確確認；可先提供 draft 或 dry-run。</p>
+            <p>寄信、刪除、付款、部署與公開發布都需要明確確認；可先提供 草稿 或 試跑。</p>
           </article>
           <article class="safety-step">
             <span class="number">5</span>
@@ -1365,44 +1365,44 @@
 
     <section class="band" id="skill-layers">
       <div class="section-inner">
-        <div class="section-kicker">03 · Progressive Disclosure</div>
-        <h2>Skill 的價值不是「存 Prompt」，而是只在需要時載入正確資訊</h2>
+        <div class="section-kicker">03 · 漸進揭露</div>
+        <h2>技能 的價值不是「存 提示詞」，而是只在需要時載入正確資訊</h2>
         <p class="section-lead">
-          把所有 SOP 塞進 system prompt 會持續消耗 context，也讓模型更難辨識當下真正重要的規則。Skill 以三層載入，把選擇、程序與詳細資料分開。
+          把所有 SOP 塞進 system 提示詞 會持續消耗 上下文，也讓模型更難辨識當下真正重要的規則。技能 以三層載入，把選擇、程序與詳細資料分開。
         </p>
 
         <div class="layers">
           <article class="layer">
             <div class="layer-id">L1</div>
             <div class="layer-copy">
-              <strong>Metadata：name + description</strong>
-              <span>所有 Skill 的簡短目錄。Agent 用它判斷「這次任務應不應該載入」。Description 就是 routing contract。</span>
+              <strong>中繼資料：name＋description</strong>
+              <span>所有 技能 的簡短目錄。代理 用它判斷「這次任務應不應該載入」。描述 就是 路由合約。</span>
             </div>
             <div class="layer-load">
               <b>啟動時載入</b>
-              約百 token／Skill 的設計目標
+              約百 代元／技能 的設計目標
             </div>
           </article>
           <article class="layer">
             <div class="layer-id">L2</div>
             <div class="layer-copy">
-              <strong>Instructions：SKILL.md 核心程序</strong>
-              <span>只保留必要步驟、決策、工具邊界、驗收條件和應讀取的資源。選中該 Skill 才載入。</span>
+              <strong>指引：SKILL.md 核心程序</strong>
+              <span>只保留必要步驟、決策、工具邊界、驗收條件和應讀取的資源。選中該 技能 才載入。</span>
             </div>
             <div class="layer-load">
               <b>觸發後載入</b>
-              Google ADK 範例建議低於約 5,000 tokens
+              Google ADK 範例建議低於約 5,000 代元
             </div>
           </article>
           <article class="layer">
             <div class="layer-id">L3</div>
             <div class="layer-copy">
-              <strong>Resources：references / scripts / assets</strong>
+              <strong>資源：references／scripts／assets</strong>
               <span>詳細規格、案例、模板、可執行腳本和品牌資產。只在程序明確需要時才讀取或執行。</span>
             </div>
             <div class="layer-load">
               <b>按步驟載入</b>
-              不需要就不進 context
+              不需要就不進 上下文
             </div>
           </article>
         </div>
@@ -1410,7 +1410,7 @@
         <div class="correction">
           <div class="correction-copy">
             <strong>5,000 不是跨平台硬限制</strong>
-            <span>官方範例使用 token，不是固定中文字數。Skill 大小仍要依模型、Agent harness、同時載入的工具與實際 eval 判斷；看到長檔案時，先分離參考資料，不要機械式切字數。</span>
+            <span>官方範例使用 代元，不是固定中文字數。技能 大小仍要依模型、代理 harness、同時載入的工具與實際 評估 判斷；看到長檔案時，先分離參考資料，不要機械式切字數。</span>
           </div>
         </div>
       </div>
@@ -1418,43 +1418,43 @@
 
     <section class="band" id="failures">
       <div class="section-inner">
-        <div class="section-kicker">04 · Failure Model</div>
-        <h2>Skill 能被讀取，不代表它能安全工作</h2>
+        <div class="section-kicker">04 · 失敗模型</div>
+        <h2>技能 能被讀取，不代表它能安全工作</h2>
         <p class="section-lead">
-          Production Skill 至少要分別檢查四種失敗。只看最後答案，會漏掉錯誤工具、錯誤順序、額外副作用，以及新 Skill 對舊流程造成的干擾。
+          正式環境技能 至少要分別檢查四種失敗。只看最後答案，會漏掉錯誤工具、錯誤順序、額外副作用，以及新 技能 對舊流程造成的干擾。
         </p>
 
         <div class="failure-grid">
           <article class="failure-card">
             <span class="failure-index">01</span>
-            <span class="failure-type">Trigger Failure</span>
+            <span class="failure-type">觸發失敗</span>
             <h3>該出現時沒出現，不該出現時卻搶工作</h3>
-            <p>Description 太模糊、和其他 Skill 邊界重疊，或只靠特定關鍵字，會造成 routing 錯誤。</p>
-            <div class="test-line"><strong>怎麼測：</strong>正例、反例、近鄰 Skill、同義改寫與模糊輸入。</div>
+            <p>描述 太模糊、和其他 技能 邊界重疊，或只靠特定關鍵字，會造成 路由 錯誤。</p>
+            <div class="test-line"><strong>怎麼測：</strong>正例、反例、近鄰 技能、同義改寫與模糊輸入。</div>
           </article>
 
           <article class="failure-card">
             <span class="failure-index">02</span>
-            <span class="failure-type">Token Budget Failure</span>
-            <h3>載入後 context 變吵，反而讓其他任務退化</h3>
+            <span class="failure-type">詞元預算不足</span>
+            <h3>載入後 上下文 變吵，反而讓其他任務退化</h3>
             <p>過長的指令、重複規則或不必要參考資料會增加成本，並降低模型抓住重點的能力。</p>
-            <div class="test-line"><strong>怎麼測：</strong>量測載入 token、延遲、成本及不相關任務的品質變化。</div>
+            <div class="test-line"><strong>怎麼測：</strong>量測載入 代元、延遲、成本及不相關任務的品質變化。</div>
           </article>
 
           <article class="failure-card">
             <span class="failure-index">03</span>
-            <span class="failure-type">Execution Failure</span>
-            <h3>Skill 觸發正確，但結果或執行軌跡錯誤</h3>
+            <span class="failure-type">執行失敗</span>
+            <h3>技能 觸發正確，但結果或執行軌跡錯誤</h3>
             <p>最後文件可能看起來正常，過程卻先公開、先寄出、查錯資料，或用錯工具參數。</p>
-            <div class="test-line"><strong>怎麼測：</strong>同時驗證 output、選用工具、參數、順序、重試與 side effects。</div>
+            <div class="test-line"><strong>怎麼測：</strong>同時驗證 輸出、選用工具、參數、順序、重試與 副作用。</div>
           </article>
 
           <article class="failure-card">
             <span class="failure-index">04</span>
-            <span class="failure-type">Regression</span>
-            <h3>新 Skill 自己通過，卻讓既有 Skill 選錯或變差</h3>
-            <p>新增 description、共享工具或全域規則後，原本穩定的 routing 與輸出可能被改變。</p>
-            <div class="test-line"><strong>怎麼測：</strong>把整個 Skill library、共用工具及固定回歸案例一起執行。</div>
+            <span class="failure-type">回歸問題</span>
+            <h3>新 技能 自己通過，卻讓既有 技能 選錯或變差</h3>
+            <p>新增 描述、共享工具或全域規則後，原本穩定的 路由 與輸出可能被改變。</p>
+            <div class="test-line"><strong>怎麼測：</strong>把整個 技能庫、共用工具及固定回歸案例一起執行。</div>
           </article>
         </div>
       </div>
@@ -1462,7 +1462,7 @@
 
     <section class="band" id="gates">
       <div class="section-inner">
-        <div class="section-kicker">05 · Release Gates</div>
+        <div class="section-kicker">05 · 發布關卡</div>
         <h2>四道防線把「看起來能用」變成「有證據可以上線」</h2>
         <p class="section-lead">
           每一道防線處理不同風險：先定義正確、再擴大案例、主動攻擊、最後限制真實影響。缺任何一層，都不應直接開放高權限操作。
@@ -1472,10 +1472,10 @@
           <article class="gate">
             <div class="gate-top">
               <span class="gate-no">1</span>
-              <strong>Evals as Unit Tests</strong>
+              <strong>以評估作為單元測試</strong>
             </div>
             <div class="gate-copy">
-              <p>寫 Skill 前先定義 input、預期工具／軌跡、expected output 與不能發生的副作用。</p>
+              <p>寫 技能 前先定義 輸入、預期工具／軌跡、預期輸出 與不能發生的副作用。</p>
               <span class="gate-check">攔截：方向錯、基本執行錯</span>
             </div>
           </article>
@@ -1483,7 +1483,7 @@
           <article class="gate">
             <div class="gate-top">
               <span class="gate-no">2</span>
-              <strong>Golden Dataset</strong>
+              <strong>黃金資料集</strong>
             </div>
             <div class="gate-copy">
               <p>收集去識別化的真實案例、長尾情境、標準處理方式與人類修正，持續擴充回歸資料集。</p>
@@ -1494,10 +1494,10 @@
           <article class="gate">
             <div class="gate-top">
               <span class="gate-no">3</span>
-              <strong>Red Team</strong>
+              <strong>紅隊測試</strong>
             </div>
             <div class="gate-copy">
-              <p>刻意測 prompt injection、越權、資料外洩、假連結、錯誤參數及要求跳過規定的輸入。</p>
+              <p>刻意測 提示詞 injection、越權、資料外洩、假連結、錯誤參數及要求跳過規定的輸入。</p>
               <span class="gate-check">攔截：惡意與極端輸入</span>
             </div>
           </article>
@@ -1505,7 +1505,7 @@
           <article class="gate">
             <div class="gate-top">
               <span class="gate-no">4</span>
-              <strong>Shadow + Canary</strong>
+              <strong>影子模式＋小範圍試行</strong>
             </div>
             <div class="gate-copy">
               <p>先在後台產生草稿，不觸發真實副作用；通過後只開放少量任務，監測再逐步提高。</p>
@@ -1516,19 +1516,19 @@
 
         <div class="release-ladder" aria-label="Skill release ladder">
           <div class="release-step">
-            <strong>Read-only</strong>
+            <strong>唯讀</strong>
             <span>只查詢資料，不改動來源。</span>
           </div>
           <div class="release-step">
-            <strong>Draft-only</strong>
+            <strong>僅草稿</strong>
             <span>可以產生建議、文件或信件草稿。</span>
           </div>
           <div class="release-step">
-            <strong>Canary</strong>
+            <strong>小範圍試行</strong>
             <span>少量真實任務，完整監控與可回滾。</span>
           </div>
           <div class="release-step">
-            <strong>Action-allowed</strong>
+            <strong>允許執行動作</strong>
             <span>通過政策、評估、審批與稽核才開放。</span>
           </div>
         </div>
@@ -1537,70 +1537,70 @@
 
     <section class="band" id="meta">
       <div class="section-inner">
-        <div class="section-kicker">06 · Meta-Skill</div>
-        <h2>能產生 Skill 的 Skill，只能先當草稿工廠</h2>
+        <div class="section-kicker">06 · 後設技能</div>
+        <h2>能產生 技能 的 技能，只能先當草稿工廠</h2>
         <p class="section-lead">
-          Meta-Skill 可以加速整理經驗，但也可能放大錯誤、學到偶然步驟或迎合不完整評分。沒有穩定 eval、版本控制和人工 gate，就不要讓它直接改正式 library。
+          技能生成技能 可以加速整理經驗，但也可能放大錯誤、學到偶然步驟或迎合不完整評分。沒有穩定 評估、版本控制和人工 關卡，就不要讓它直接改正式 技能庫。
         </p>
 
         <div class="meta-grid">
           <article class="meta-card">
             <span class="icon-wrap">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+              <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
             </span>
-            <h3>Authoring</h3>
-            <p>從需求、SOP 或訪談內容建立第一版 SKILL.md、references 與 eval 草稿。</p>
+            <h3>編寫</h3>
+            <p>從需求、SOP 或訪談內容建立第一版 SKILL.md、references 與 評估 草稿。</p>
           </article>
 
           <article class="meta-card">
             <span class="icon-wrap">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/></svg>
+              <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/></svg>
             </span>
-            <h3>Trace-assisted</h3>
-            <p>從已成功完成的任務軌跡辨識可重複程序，再轉成待審 Skill。</p>
+            <h3>軌跡輔助</h3>
+            <p>從已成功完成的任務軌跡辨識可重複程序，再轉成待審 技能。</p>
           </article>
 
           <article class="meta-card">
             <span class="icon-wrap">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M12 4h9"/><path d="M4 9h16"/><path d="M4 15h16"/><circle cx="7" cy="4" r="2"/><circle cx="7" cy="20" r="2"/></svg>
+              <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M12 4h9"/><path d="M4 9h16"/><path d="M4 15h16"/><circle cx="7" cy="4" r="2"/><circle cx="7" cy="20" r="2"/></svg>
             </span>
-            <h3>Improvement</h3>
-            <p>根據失敗案例、routing 錯誤與 regression 結果，提出最小修改並重新評估。</p>
+            <h3>改進</h3>
+            <p>根據失敗案例、路由 錯誤與 回歸 結果，提出最小修改並重新評估。</p>
           </article>
 
           <article class="meta-card">
             <span class="icon-wrap">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v6"/><path d="m9 5 3 3 3-3"/><rect x="4" y="12" width="6" height="6" rx="1"/><rect x="14" y="12" width="6" height="6" rx="1"/><path d="M7 12V9h10v3"/></svg>
+              <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 2v6"/><path d="m9 5 3 3 3-3"/><rect x="4" y="12" width="6" height="6" rx="1"/><rect x="14" y="12" width="6" height="6" rx="1"/><path d="M7 12V9h10v3"/></svg>
             </span>
-            <h3>Library Evolution</h3>
-            <p>從重複出現且已驗證的工作，提議新增、合併、淘汰或拆分 Skill。</p>
+            <h3>技能庫演進</h3>
+            <p>從重複出現且已驗證的工作，提議新增、合併、淘汰或拆分 技能。</p>
           </article>
         </div>
 
         <div class="lifecycle" aria-label="Meta-Skill lifecycle">
           <div class="life-step">
-            <strong>Observe</strong>
+            <strong>觀察</strong>
             <span>取得需求或去識別化成功軌跡</span>
           </div>
           <div class="life-step">
-            <strong>Draft</strong>
-            <span>產生候選 Skill 與最小變更</span>
+            <strong>草擬</strong>
+            <span>產生候選 技能 與最小變更</span>
           </div>
           <div class="life-step">
-            <strong>Eval</strong>
-            <span>跑 trigger、output、trajectory、regression</span>
+            <strong>評估</strong>
+            <span>跑 觸發、輸出、執行軌跡、回歸</span>
           </div>
           <div class="life-step human">
-            <strong>Human Review</strong>
+            <strong>人工審查</strong>
             <span>確認邊界、資料、權限與商業規則</span>
           </div>
           <div class="life-step">
-            <strong>Canary</strong>
-            <span>小範圍觀察並準備 rollback</span>
+            <strong>小範圍試行</strong>
+            <span>小範圍觀察並準備 回復</span>
           </div>
           <div class="life-step">
-            <strong>Promote</strong>
-            <span>證據通過後才進正式 library</span>
+            <strong>提升為正式版本</strong>
+            <span>證據通過後才進正式 技能庫</span>
           </div>
         </div>
       </div>
@@ -1608,37 +1608,37 @@
 
     <section class="band" id="scenario">
       <div class="section-inner">
-        <div class="section-kicker">07 · Practical Scenario</div>
+        <div class="section-kicker">07 · 實際情境</div>
         <h2>範例：每週 Critical Issue 報告要怎麼拆</h2>
         <p class="section-lead">
-          不要一看到複雜流程就堆滿所有協定。先用最少元件完成可控版本，再讓 eval 決定是否需要更多 Agent 或寫入權限。
+          不要一看到複雜流程就堆滿所有協定。先用最少元件完成可控版本，再讓 評估 決定是否需要更多 代理 或寫入權限。
         </p>
 
         <div class="scenario">
           <div class="scenario-brief">
             <strong>任務目標</strong>
-            <p>每週整理核准來源中的異常、風險、owner、deadline 與下一步，先產生內部草稿供 PM 審核。</p>
+            <p>每週整理核准來源中的異常、風險、負責人、期限 與下一步，先產生內部草稿供 PM 審核。</p>
           </div>
           <div class="scenario-flow">
             <article class="scenario-node">
-              <span class="tag">MCP / CONNECTOR</span>
+              <span class="tag">MCP／連接器</span>
               <h3>讀取來源</h3>
-              <p>只讀取核准的 Excel、郵件與 issue 資料夾；不自動修改原始資料。</p>
+              <p>只讀取核准的 Excel、郵件與 問題 資料夾；不自動修改原始資料。</p>
             </article>
             <article class="scenario-node">
-              <span class="tag">SKILL</span>
+              <span class="tag">技能</span>
               <h3>套用 SOP</h3>
               <p>定義欄位、風險分級、證據要求、缺資料標記和固定報告格式。</p>
             </article>
             <article class="scenario-node">
-              <span class="tag">A2A · OPTIONAL</span>
+              <span class="tag">A2A · 選用</span>
               <h3>專家覆核</h3>
-              <p>只有需要電性、韌體或法規專業時，才把特定項目交給對應 Agent。</p>
+              <p>只有需要電性、韌體或法規專業時，才把特定項目交給對應 代理。</p>
             </article>
             <article class="scenario-node">
-              <span class="tag">EVAL + HUMAN</span>
+              <span class="tag">評估＋人工</span>
               <h3>草稿閘門</h3>
-              <p>檢查遺漏、錯誤 owner、無來源結論與敏感資料；PM 點頭後才能發送。</p>
+              <p>檢查遺漏、錯誤 負責人、無來源結論與敏感資料；PM 點頭後才能發送。</p>
             </article>
           </div>
         </div>
@@ -1654,7 +1654,7 @@
 
     <section class="band" id="prompts">
       <div class="section-inner">
-        <div class="section-kicker">08 · Ready-to-Use Prompts</div>
+        <div class="section-kicker">08 · 可直接使用的提示詞</div>
         <h2>可以直接交給 Codex 或 Claude 的三個任務</h2>
         <p class="section-lead">
           這些提示詞把「先檢查、再變更」寫進流程。模型先交付報告或草稿，不會因為看見安裝說明就直接修改系統。
@@ -1665,10 +1665,10 @@
             <div class="prompt-head">
               <strong>安裝 MCP 前先做風險審查</strong>
               <button class="copy-btn" type="button" aria-label="複製提示詞" data-copy="prompt-1">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               </button>
             </div>
-            <pre id="prompt-1">請先審查這個 MCP，不要安裝。
+            <pre id="prompt-1" data-language-code="">請先審查這個 MCP，不要安裝。
 
 檢查：
 1. 是否為官方或可信維護者
@@ -1685,12 +1685,12 @@
 
           <article class="prompt-card">
             <div class="prompt-head">
-              <strong>把 SOP 設計成 Production Skill</strong>
+              <strong>把 SOP 設計成 正式環境技能</strong>
               <button class="copy-btn" type="button" aria-label="複製提示詞" data-copy="prompt-2">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               </button>
             </div>
-            <pre id="prompt-2">把以下 SOP 設計成一個 Skill 草稿。
+            <pre id="prompt-2" data-language-code="">把以下 SOP 設計成一個 Skill 草稿。
 
 先交付：
 1. 三個應觸發案例
@@ -1708,12 +1708,12 @@
 
           <article class="prompt-card">
             <div class="prompt-head">
-              <strong>Skill 上線前 Release Review</strong>
+              <strong>技能 上線前 發布審核</strong>
               <button class="copy-btn" type="button" aria-label="複製提示詞" data-copy="prompt-3">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               </button>
             </div>
-            <pre id="prompt-3">對這個 Skill 做上線前檢查，不要部署。
+            <pre id="prompt-3" data-language-code="">對這個 Skill 做上線前檢查，不要部署。
 
 依序驗證：
 - Trigger：正例、反例、同義改寫、近鄰 Skill
@@ -1732,10 +1732,10 @@
 
     <section class="band" id="sources">
       <div class="section-inner">
-        <div class="section-kicker">09 · Sources & Review Notes</div>
+        <div class="section-kicker">09 · 來源與審查筆記</div>
         <h2>資料來源與核對範圍</h2>
         <p class="section-lead">
-          技術定義優先採官方規格與官方工程文章；數字門檻視為起始設計目標，仍需以自己的模型、Agent harness、資料與 eval 結果決定。
+          技術定義優先採官方規格與官方工程文章；數字門檻視為起始設計目標，仍需以自己的模型、代理 harness、資料與 評估 結果決定。
         </p>
 
         <ul class="source-list">
@@ -1745,31 +1745,31 @@
           </li>
           <li>
             <strong>Google 五日課程</strong>
-            <a href="https://developers.google.com/profile/badges/events/cloud/five-day-ai-agents" target="_blank" rel="noreferrer">5-Day AI Agents: Intensive Vibe Coding Course With Google</a>
+            <a href="https://developers.google.com/profile/badges/events/cloud/five-day-ai-agents" target="_blank" rel="noreferrer">與 Google 合作的 5 天 AI Agent 密集 Vibe Coding 課程</a>
           </li>
           <li>
-            <strong>Google MCP + A2A</strong>
-            <a href="https://cloud.google.com/blog/topics/developers-practitioners/building-connected-agents-with-mcp-and-a2a" target="_blank" rel="noreferrer">Building Connected Agents with MCP and A2A</a>
+            <strong>Google MCP＋A2A</strong>
+            <a href="https://cloud.google.com/blog/topics/developers-practitioners/building-connected-agents-with-mcp-and-a2a" target="_blank" rel="noreferrer">使用 MCP 與 A2A 建構互連的 Agent</a>
           </li>
           <li>
             <strong>Google A2A</strong>
-            <a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noreferrer">How A2A is Building a World of Collaborative Agents</a>
+            <a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noreferrer">A2A 如何建構 Agent 協作的世界</a>
           </li>
           <li>
-            <strong>Google ADK Skills</strong>
-            <a href="https://developers.googleblog.com/en/developers-guide-to-building-adk-agents-with-skills/" target="_blank" rel="noreferrer">Developer’s Guide to Building ADK Agents with Skills</a>
+            <strong>Google ADK 技能</strong>
+            <a href="https://developers.googleblog.com/en/developers-guide-to-building-adk-agents-with-skills/" target="_blank" rel="noreferrer">使用技能建構 ADK Agent 的開發者指南</a>
           </li>
           <li>
-            <strong>Agent Skills Open Specification</strong>
+            <strong>Agent Skills 開放規格</strong>
             <a href="https://github.com/agentskills/agentskills" target="_blank" rel="noreferrer">agentskills/agentskills</a>
           </li>
           <li>
-            <strong>MCP Security</strong>
-            <a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" target="_blank" rel="noreferrer">MCP Security Best Practices</a>
+            <strong>MCP 安全</strong>
+            <a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" target="_blank" rel="noreferrer">MCP 安全最佳實務</a>
           </li>
           <li>
-            <strong>AP2 Specification</strong>
-            <a href="https://ap2-protocol.org/ap2/specification/" target="_blank" rel="noreferrer">Agentic Payment Protocol v0.2</a>
+            <strong>AP2 規格</strong>
+            <a href="https://ap2-protocol.org/ap2/specification/" target="_blank" rel="noreferrer">代理付款協定 v0.2</a>
           </li>
         </ul>
 
@@ -1808,7 +1808,7 @@
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Agent 系統架構與可靠性</h2>
     <ul>
       <li><a href="./claude-codex-cross-review.html">Claude + Codex 交叉審核：把 AI 寫碼變成可管控流程</a></li>

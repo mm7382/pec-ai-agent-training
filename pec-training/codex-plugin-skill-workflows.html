@@ -349,26 +349,26 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/17081889017c4eef.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="hero">
     <div class="wrap">
       <div class="brand">
         <span class="lesson-brand-text">Michael AI Agent Lab</span>
-        <div class="doc-meta">Michael 教學筆記｜2026-07-05<br>Codex Plugin / Skill Workflow</div>
+        <div class="doc-meta">Michael 教學筆記｜2026-07-05<br>Codex 外掛／技能工作流程</div>
       </div>
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Public Learning Note</div>
+          <div class="eyebrow">公開學習筆記</div>
           <h1>Codex 插件與 Skill 入門：6 種工作流的導入判斷</h1>
-          <p class="lead">把 plugin 當成「可安裝能力」，把 skill 當成「可重複流程」。重點不是裝越多越好，而是先看任務類型，再決定要用 Remotion、UI/UX、File Organizer、Deep Research、Data Analytics 或 Record & Replay。</p>
+          <p class="lead">把 外掛 當成「可安裝能力」，把 技能 當成「可重複流程」。重點不是裝越多越好，而是先看任務類型，再決定要用 Remotion、UI/UX、File Organizer、Deep Research、Data Analytics 或 Record &amp; Replay。</p>
         </div>
         <aside class="hero-panel">
           <strong>一句話結論</strong>
-          <p>先用小任務驗證，再把穩定流程寫成 skill；能碰資料、瀏覽器、檔案或表單的 plugin，一律先 sandbox 測試，不直接放進核心。</p>
+          <p>先用小任務驗證，再把穩定流程寫成 技能；能碰資料、瀏覽器、檔案或表單的 外掛，一律先 隔離測試 測試，不直接放進核心。</p>
           <div class="decision">
-            <span>任務要接外部工具<br>優先看 plugin</span>
-            <span>流程會重複執行<br>優先寫 skill</span>
+            <span>任務要接外部工具<br>優先看 外掛</span>
+            <span>流程會重複執行<br>優先寫 技能</span>
             <span>固定操作要示範<br>再考慮錄製</span>
           </div>
         </aside>
@@ -384,37 +384,37 @@
       <a href="#sop">導入 SOP</a>
       <a href="#risk">風險</a>
       <a href="#prompts">提示詞</a>
-      <a href="#sources">Sources</a>
+      <a href="#sources">來源</a>
     </div>
   </nav>
 
   <main class="wrap">
     <section id="model">
-      <div class="section-title"><span class="bar"></span><h2>先分清楚：Plugin、Skill、Record & Replay</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>先分清楚：外掛、技能、Record &amp; Replay</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <div class="mini-label">Mental Model</div>
+          <div class="mini-label">思考模型</div>
           <div class="model-map">
             <div class="model-box">
               <div class="icon">P</div>
-              <h3>Plugin：能力包</h3>
-              <p>可把工具、MCP、connector、角色型工作流一起包起來。適合需要連外部系統、資料源、瀏覽器、設計工具或分析工具的任務。</p>
+              <h3>外掛：能力包</h3>
+              <p>可把工具、MCP、連接器、角色型工作流一起包起來。適合需要連外部系統、資料源、瀏覽器、設計工具或分析工具的任務。</p>
             </div>
             <div class="model-box">
               <div class="icon">S</div>
-              <h3>Skill：流程包</h3>
+              <h3>技能：流程包</h3>
               <p>把固定做法、檔案範本、規則與腳本寫成可重複使用的工作流。適合 SOP、報告格式、檔案整理、研究流程。</p>
             </div>
             <div class="model-box">
               <div class="icon">R</div>
-              <h3>Record & Replay：示範轉流程</h3>
-              <p>把一次操作示範轉成 reusable skill。適合固定表單、固定網站流程、重複文件處理；不適合錄入密碼或敏感資料。</p>
+              <h3>Record &amp; Replay：示範轉流程</h3>
+              <p>把一次操作示範轉成 reusable 技能。適合固定表單、固定網站流程、重複文件處理；不適合錄入密碼或敏感資料。</p>
             </div>
           </div>
         </div>
         <div class="card span-5">
-          <div class="mini-label">Decision Rule</div>
-          <svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Codex 能力選擇流程圖">
+          <div class="mini-label">決策規則</div>
+          <svg class="diagram" viewbox="0 0 520 300" role="img" aria-label="Codex 能力選擇流程圖">
             <rect width="520" height="300" fill="#ffffff"/>
             <rect x="28" y="28" width="150" height="70" rx="8" fill="#243033"/>
             <text x="103" y="58" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">任務</text>
@@ -427,15 +427,15 @@
             <path d="M361 98 V135" stroke="#667174" stroke-width="3"/>
             <path d="M361 135 l-7 -10 h14 z" fill="#667174"/>
             <rect x="60" y="135" width="126" height="86" rx="8" fill="#fff4f5" stroke="#f1cdd1"/>
-            <text x="123" y="166" text-anchor="middle" fill="#b8202a" font-size="15" font-weight="700">Plugin</text>
+            <text x="123" y="166" text-anchor="middle" fill="#b8202a" font-size="15" font-weight="700">外掛</text>
             <text x="123" y="191" text-anchor="middle" fill="#5e383d" font-size="12">先看權限</text>
-            <text x="123" y="209" text-anchor="middle" fill="#5e383d" font-size="12">再 sandbox</text>
+            <text x="123" y="209" text-anchor="middle" fill="#5e383d" font-size="12">再 隔離測試</text>
             <rect x="198" y="135" width="126" height="86" rx="8" fill="#f6fbfc" stroke="#cfecef"/>
-            <text x="261" y="166" text-anchor="middle" fill="#086b80" font-size="15" font-weight="700">Skill</text>
+            <text x="261" y="166" text-anchor="middle" fill="#086b80" font-size="15" font-weight="700">技能</text>
             <text x="261" y="191" text-anchor="middle" fill="#4f666c" font-size="12">把 SOP 固化</text>
             <text x="261" y="209" text-anchor="middle" fill="#4f666c" font-size="12">可版本控管</text>
             <rect x="336" y="135" width="126" height="86" rx="8" fill="#fff9ed" stroke="#ecd49f"/>
-            <text x="399" y="166" text-anchor="middle" fill="#8a5a10" font-size="15" font-weight="700">Record</text>
+            <text x="399" y="166" text-anchor="middle" fill="#8a5a10" font-size="15" font-weight="700">錄製</text>
             <text x="399" y="191" text-anchor="middle" fill="#6f5b31" font-size="12">固定操作</text>
             <text x="399" y="209" text-anchor="middle" fill="#6f5b31" font-size="12">先避開機密</text>
             <rect x="108" y="248" width="304" height="30" rx="15" fill="#243033"/>
@@ -451,7 +451,7 @@
         <article class="card span-6">
           <div class="capability-head">
             <div class="capability-icon red" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="M8 10l3 2-3 2v-4zm7-1v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="M8 10l3 2-3 2v-4zm7-1v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <div><h3>1. Remotion：資料與流程動畫</h3><p class="muted">適合把數據排名、流程變化、產品故事做成可反覆修改的動畫。</p></div>
           </div>
@@ -466,56 +466,56 @@
         <article class="card span-6">
           <div class="capability-head">
             <div class="capability-icon cyan" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 9h10M7 13h5M14 13h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 9h10M7 13h5M14 13h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <div><h3>2. UI/UX Pro Max：教學頁與看板美化</h3><p class="muted">適合把文字整理成 HTML、dashboard、內部教學頁或可讀的工作台。</p></div>
           </div>
-          <p>這類 skill 不是替你決定內容真偽，而是協助排版、資訊層級、配色、元件模式與互動細節。對內容輸出 agent 來說，應放在「內容已整理好」之後使用。</p>
+          <p>這類 技能 不是替你決定內容真偽，而是協助排版、資訊層級、配色、元件模式與互動細節。對內容輸出 代理 來說，應放在「內容已整理好」之後使用。</p>
           <div class="do-dont">
             <div><b>適合</b>Michael 教學筆記 HTML、客戶問題整理頁、PM 報告看板。</div>
-            <div><b>注意</b>第三方 skill 要先讀 README、license、安裝腳本，不要盲裝。</div>
+            <div><b>注意</b>第三方 技能 要先讀 README、license、安裝腳本，不要盲裝。</div>
           </div>
-          <div class="tag-row"><span class="tag">HTML</span><span class="tag">報告</span><span class="tag">Dashboard</span></div>
+          <div class="tag-row"><span class="tag">HTML</span><span class="tag">報告</span><span class="tag">儀表板</span></div>
         </article>
 
         <article class="card span-6">
           <div class="capability-head">
             <div class="capability-icon amber" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h7l2 2h7v9H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 13h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M4 7h7l2 2h7v9H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 13h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <div><h3>3. File Organizer：資料夾整理與重新命名</h3><p class="muted">適合清理 Downloads、素材庫、截圖資料夾、專案暫存檔。</p></div>
           </div>
           <p>好的整理流程不應一開始就搬檔，而是先產生分類計畫、重命名規則與衝突清單。確認後再執行，且要保留回復方式。</p>
           <div class="do-dont">
             <div><b>適合</b>把圖片、PDF、報告、學習素材依主題與日期整理。</div>
-            <div><b>注意</b>公司資料、客戶資料、合約資料不可讓未審查 skill 自動搬移。</div>
+            <div><b>注意</b>公司資料、客戶資料、合約資料不可讓未審查 技能 自動搬移。</div>
           </div>
-          <div class="tag-row"><span class="tag">Dry-run</span><span class="tag">備份</span><span class="tag">命名規則</span></div>
+          <div class="tag-row"><span class="tag">試跑</span><span class="tag">備份</span><span class="tag">命名規則</span></div>
         </article>
 
         <article class="card span-6">
           <div class="capability-head">
             <div class="capability-icon green" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4M8 11h6M11 8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4M8 11h6M11 8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <div><h3>4. Deep Research：市場與技術研究</h3><p class="muted">適合市場概況、競品比較、文獻整理、採購前評估。</p></div>
           </div>
-          <p>研究型 skill 的重點不是字數，而是可追溯：每個結論要有來源，沒有證據時要明確寫「目前未找到可靠證據」。</p>
+          <p>研究型 技能 的重點不是字數，而是可追溯：每個結論要有來源，沒有證據時要明確寫「目前未找到可靠證據」。</p>
           <div class="do-dont">
             <div><b>適合</b>台股報告、AI 工具調研、產業趨勢、Hermes 能力雷達。</div>
             <div><b>注意</b>財務、法律、醫療等高風險內容要保留原始來源並再次查證。</div>
           </div>
-          <div class="tag-row"><span class="tag">Evidence</span><span class="tag">比較表</span><span class="tag">不確定性</span></div>
+          <div class="tag-row"><span class="tag">依據</span><span class="tag">比較表</span><span class="tag">不確定性</span></div>
         </article>
 
         <article class="card span-6">
           <div class="capability-head">
             <div class="capability-icon blue" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 19V9M12 19V5M19 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M5 19V9M12 19V5M19 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <div><h3>5. Data Analytics：資料分析與決策報告</h3><p class="muted">適合把 Excel、CSV、營運資料變成指標、洞察與視覺化報告。</p></div>
           </div>
-          <p>可以用來做資料清理、轉換率分析、商品分級、異常偵測、趨勢圖與行動建議。對 PM workflow 場景特別適合處理 Excel 與 issue report。</p>
+          <p>可以用來做資料清理、轉換率分析、商品分級、異常偵測、趨勢圖與行動建議。對 PM 工作流程 場景特別適合處理 Excel 與 issue report。</p>
           <div class="do-dont">
             <div><b>適合</b>GMV、轉換率、維修統計、客訴分類、專案風險摘要。</div>
             <div><b>注意</b>不能只看漂亮圖表；要附上欄位定義、計算方式、資料缺口。</div>
@@ -526,14 +526,14 @@
         <article class="card span-6">
           <div class="capability-head">
             <div class="capability-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 5h8v14H8z" stroke="currentColor" stroke-width="2"/><path d="M11 9l4 3-4 3V9z" fill="currentColor"/><path d="M4 8v8M20 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M8 5h8v14H8z" stroke="currentColor" stroke-width="2"/><path d="M11 9l4 3-4 3V9z" fill="currentColor"/><path d="M4 8v8M20 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <div><h3>6. Record & Replay：把固定操作變成 skill</h3><p class="muted">適合固定、可示範、低變動的瀏覽器或桌面流程。</p></div>
+            <div><h3>6. Record &amp; Replay：把固定操作變成 技能</h3><p class="muted">適合固定、可示範、低變動的瀏覽器或桌面流程。</p></div>
           </div>
-          <p>它的價值是讓 Codex 看一次標準操作，再把步驟、輸入、成功條件整理成可重用 skill。正式使用前一定要先用測試資料跑過。</p>
+          <p>它的價值是讓 Codex 看一次標準操作，再把步驟、輸入、成功條件整理成可重用 技能。正式使用前一定要先用測試資料跑過。</p>
           <div class="do-dont">
             <div><b>適合</b>固定表單、固定資料下載、固定命名、固定報表產出。</div>
-            <div><b>注意</b>不要錄密碼、token、cookie、客戶機密或不可外流畫面。</div>
+            <div><b>注意</b>不要錄密碼、代元、Cookie、客戶機密或不可外流畫面。</div>
           </div>
           <div class="tag-row"><span class="tag">重複任務</span><span class="tag">Mac</span><span class="tag">權限控管</span></div>
         </article>
@@ -541,7 +541,7 @@
     </section>
 
     <section id="practice">
-      <div class="section-title"><span class="bar"></span><h2>套到 Hermes / Agent workflow 的實際場景</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>套到 Hermes / 代理 工作流程 的實際場景</h2></div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -555,38 +555,38 @@
           <tbody>
             <tr>
               <td>教材產製 HTML</td>
-              <td>UI/UX skill + Michael 教學筆記規則</td>
-              <td>先讓 Wiki Agent 或 Codex 整理 evidence notes，再交給內容輸出 agent 做圖解與排版。</td>
+              <td>UI/UX 技能 + Michael 教學筆記規則</td>
+              <td>先讓 Wiki Agent 或 Codex 整理 證據筆記，再交給內容輸出 代理 做圖解與排版。</td>
               <td>手機可讀、無破圖、無外部影音措辭、有來源。</td>
             </tr>
             <tr>
-              <td>PM workflow Excel / issue report</td>
-              <td>Data Analytics</td>
-              <td>讀取欄位、定義 KPI、找異常、輸出 owner / deadline / risk / next action。</td>
+              <td>PM 工作流程：Excel／議題報告</td>
+              <td>資料分析</td>
+              <td>讀取欄位、定義 KPI、找異常、輸出 負責人 / 期限 / 風險 / 下一步行動。</td>
               <td>計算方式可追溯，不能只給漂亮圖表。</td>
             </tr>
             <tr>
               <td>Wiki Agent 研究筆記</td>
-              <td>Deep Research skill</td>
-              <td>把長資料先變成 evidence notes，再進 wiki raw/inbox，由 Wiki Agent 決定是否升級為正式知識。</td>
+              <td>Deep Research 技能</td>
+              <td>把長資料先變成 證據筆記，再進 wiki raw/inbox，由 Wiki Agent 決定是否升級為正式知識。</td>
               <td>來源、日期、信心等級、不確定性都要保留。</td>
             </tr>
             <tr>
               <td>素材與下載資料夾</td>
-              <td>File Organizer</td>
+              <td>檔案整理工具</td>
               <td>先產生整理計畫，不直接移動；確認分類與命名規則後再執行。</td>
-              <td>有 dry-run、有備份、有回復清單。</td>
+              <td>有 試跑、有備份、有回復清單。</td>
             </tr>
             <tr>
               <td>固定維護報告</td>
-              <td>Skill</td>
+              <td>技能</td>
               <td>把每日檢查、容量、模型、重複檔、服務狀態整理成固定模板。</td>
-              <td>重點在異常與下一步，不要塞滿 log。</td>
+              <td>重點在異常與下一步，不要塞滿 紀錄。</td>
             </tr>
             <tr>
               <td>固定表單或跨頁流程</td>
-              <td>Record & Replay</td>
-              <td>先用測試帳號與 dummy data 示範，錄完後審查生成 skill，再跑正式資料。</td>
+              <td>錄製與重播</td>
+              <td>先用測試帳號與 測試資料 示範，錄完後審查生成 技能，再跑正式資料。</td>
               <td>權限最小化，敏感欄位不錄入。</td>
             </tr>
           </tbody>
@@ -605,12 +605,12 @@
         <div class="flow-step">
           <div class="step-no">2</div>
           <h3>查來源與權限</h3>
-          <p>看官方文件、GitHub、README、license、安裝腳本、需要的 connector 或電腦控制權限。</p>
+          <p>看官方文件、GitHub、README、license、安裝腳本、需要的 連接器 或電腦控制權限。</p>
         </div>
         <div class="flow-step">
           <div class="step-no">3</div>
           <h3>用測試資料跑</h3>
-          <p>先用 sample file、dummy folder、假表單資料測試。不要一開始就接 正式資料。</p>
+          <p>先用 範例檔案、測試資料夾、假表單資料測試。不要一開始就接 正式資料。</p>
         </div>
         <div class="flow-step">
           <div class="step-no">4</div>
@@ -620,7 +620,7 @@
         <div class="flow-step">
           <div class="step-no">5</div>
           <h3>再寫成 Hermes 規則</h3>
-          <p>穩定後才放進 Codex skill sync 或 Wiki Agent。只吸收流程，不吸收 token、raw chat、暫存資料。</p>
+          <p>穩定後才放進 Codex 技能 sync 或 Wiki Agent。只吸收流程，不吸收 代元、原始對話、暫存資料。</p>
         </div>
       </div>
     </section>
@@ -629,28 +629,28 @@
       <div class="section-title"><span class="bar"></span><h2>風險與安全邊界</h2></div>
       <div class="grid">
         <div class="card span-6">
-          <div class="mini-label">Do</div>
+          <div class="mini-label">應該做</div>
           <ul>
-            <li>先用 sandbox 專案測試 plugin / skill。</li>
+            <li>先用 隔離測試 專案測試 外掛 / 技能。</li>
             <li>把來源、日期、版本與安裝方式記錄下來。</li>
             <li>要求 Codex 先列出會讀寫哪些檔案、會連哪些工具。</li>
             <li>對資料分析報告要求欄位定義、公式、資料缺口。</li>
-            <li>對 Record & Replay 只錄固定步驟，不錄機密輸入。</li>
+            <li>對 Record &amp; Replay 只錄固定步驟，不錄機密輸入。</li>
           </ul>
         </div>
         <div class="card span-6">
-          <div class="mini-label">Don't</div>
+          <div class="mini-label">避免做法</div>
           <ul>
-            <li>不要把未審查第三方 plugin 放進 Hermes 核心。</li>
+            <li>不要把未審查第三方 外掛 放進 Hermes 核心。</li>
             <li>不要讓整理工具直接搬移公司正式資料夾。</li>
-            <li>不要把 `.env`、token、cookie、密碼、客戶資料放進 skill。</li>
-            <li>不要把研究型 skill 的輸出直接當 Wiki 正式知識。</li>
+            <li>不要把 `.env`、代元、Cookie、密碼、客戶資料放進 技能。</li>
+            <li>不要把研究型 技能 的輸出直接當 Wiki 正式知識。</li>
             <li>不要用漂亮看板取代來源查證與人工審核。</li>
           </ul>
         </div>
         <div class="callout span-12">
           <strong>Michael 的建議導入順序</strong>
-          先把 UI/UX、Data Analytics、Deep Research 當成「任務輔助」；File Organizer 與 Record & Replay 因為會碰檔案與電腦操作，放在第二階段，通過 dry-run 與權限檢查後再導入。
+          先把 UI/UX、Data Analytics、Deep Research 當成「任務輔助」；File Organizer 與 Record &amp; Replay 因為會碰檔案與電腦操作，放在第二階段，通過 試跑 與權限檢查後再導入。
         </div>
       </div>
     </section>
@@ -659,19 +659,19 @@
       <div class="section-title"><span class="bar"></span><h2>可直接複製的提示詞</h2></div>
       <div class="grid">
         <div class="card span-6">
-          <h3>判斷要不要用 plugin / skill</h3>
-          <pre class="prompt">請先判斷這個任務適合：
+          <h3>判斷要不要用 外掛 / 技能</h3>
+          <pre class="prompt" data-language-code="">請先判斷這個任務適合：
 1. 一般 Codex 對話
 2. plugin
 3. skill
-4. Record & Replay
+4. Record &amp; Replay
 
 請列出理由、需要的權限、可能風險、驗收方式。
 在我確認前，不要安裝、不要搬檔、不要連接正式資料。</pre>
         </div>
         <div class="card span-6">
           <h3>資料分析報告</h3>
-          <pre class="prompt">請用 Data Analytics 思路分析這份資料。
+          <pre class="prompt" data-language-code="">請用 Data Analytics 思路分析這份資料。
 先說明欄位定義與資料缺口，再整理：
 - 主要 KPI
 - 異常或風險
@@ -682,7 +682,7 @@
         </div>
         <div class="card span-6">
           <h3>檔案整理</h3>
-          <pre class="prompt">請先掃描這個資料夾並提出整理計畫。
+          <pre class="prompt" data-language-code="">請先掃描這個資料夾並提出整理計畫。
 只輸出 dry-run，不要直接移動或改名。
 請列出：
 - 建議分類
@@ -692,8 +692,8 @@
 - 執行後可回復方式</pre>
         </div>
         <div class="card span-6">
-          <h3>把流程寫成 skill</h3>
-          <pre class="prompt">請把這次已驗證可用的流程整理成 skill 草案。
+          <h3>把流程寫成 技能</h3>
+          <pre class="prompt" data-language-code="">請把這次已驗證可用的流程整理成 skill 草案。
 只保留穩定 SOP、輸入輸出、限制、驗收方式。
 不要寫入 token、cookie、個人信箱密碼、暫存路徑或原始聊天內容。</pre>
         </div>
@@ -701,22 +701,22 @@
     </section>
 
     <section id="sources">
-      <div class="section-title"><span class="bar"></span><h2>Sources</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>來源</h2></div>
       <div class="card">
-        <p class="muted">以下來源用來核對 Codex plugin / skill / Record & Replay 與相關 GitHub 專案定位。第三方專案導入前仍需檢查最新 README、license、安裝腳本與權限。</p>
+        <p class="muted">以下來源用來核對 Codex 外掛 / 技能 / Record &amp; Replay 與相關 GitHub 專案定位。第三方專案導入前仍需檢查最新 README、license、安裝腳本與權限。</p>
         <ul class="source-list">
-          <li><a href="https://developers.openai.com/codex/plugins">OpenAI Developers：Codex Plugins</a></li>
-          <li><a href="https://developers.openai.com/codex/skills">OpenAI Developers：Codex Skills</a></li>
-          <li><a href="https://developers.openai.com/codex/record-and-replay">OpenAI Developers：Record & Replay</a></li>
-          <li><a href="https://developers.openai.com/codex/use-cases/reusable-codex-skills">OpenAI Developers：Reusable Codex Skills</a></li>
-          <li><a href="https://developers.openai.com/codex/use-cases/datasets-and-reports">OpenAI Developers：Analyze datasets and ship reports</a></li>
+          <li><a href="https://developers.openai.com/codex/plugins">OpenAI Developers：Codex 外掛</a></li>
+          <li><a href="https://developers.openai.com/codex/skills">OpenAI Developers：Codex 技能</a></li>
+          <li><a href="https://developers.openai.com/codex/record-and-replay">OpenAI Developers：錄製與重播</a></li>
+          <li><a href="https://developers.openai.com/codex/use-cases/reusable-codex-skills">OpenAI Developers：可重用的 Codex 技能</a></li>
+          <li><a href="https://developers.openai.com/codex/use-cases/datasets-and-reports">OpenAI Developers：分析資料集並交付報告</a></li>
           <li><a href="https://github.com/remotion-dev/codex-plugin">GitHub：remotion-dev/codex-plugin</a>、<a href="https://github.com/remotion-dev/remotion">remotion-dev/remotion</a></li>
           <li><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">GitHub：nextlevelbuilder/ui-ux-pro-max-skill</a></li>
-          <li><a href="https://github.com/ComposioHQ/awesome-codex-skills/blob/master/file-organizer/SKILL.md">GitHub：Composio File Organizer skill</a></li>
+          <li><a href="https://github.com/ComposioHQ/awesome-codex-skills/blob/master/file-organizer/SKILL.md">GitHub：Composio 檔案整理技能</a></li>
           <li><a href="https://github.com/Weizhena/Deep-Research-skills">GitHub：Weizhena/Deep-Research-skills</a></li>
           <li><a href="https://github.com/openai/role-specific-plugins">GitHub：openai/role-specific-plugins</a></li>
         </ul>
-        <div class="footer">Prepared for Michael AI Agent learning. Keep private data local. Validate every external plugin or skill before connecting it to production workflows.</div>
+        <div class="footer">為 Michael 的 AI Agent 學習整理。私密資料留在本機；外部外掛或技能接入正式工作流程前，逐一驗證。</div>
       </div>
     </section>
   </main>
@@ -724,7 +724,7 @@
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Skill、蒸餾與能力沉澱</h2>
     <ul>
       <li><a href="./claude-skill-engineering.html">Claude Skill 觸發率與 Skill Engineering</a></li>

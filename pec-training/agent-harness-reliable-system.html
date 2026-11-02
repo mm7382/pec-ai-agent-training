@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agent Harness 十二大模組教學</title>
   <meta name="description" content="理解模型外圍的上下文、工具、記憶、驗證、觀測、安全與錯誤恢復，讓 agent 不只會 demo。">
 
@@ -660,23 +660,23 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/59c47fe320577176.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
 
 <section class="ad-cover" aria-label="Michael teaching cover">
   <div class="ad-cover-inner">
     <div class="ad-cover-top">
       <div class="ad-logo-white" aria-label="個人品牌標記"></div>
-      <div class="ad-cover-kicker">Michael Agent Lab<br/>April 2026</div>
+      <div class="ad-cover-kicker">Michael Agent Lab<br/>2026 年 4 月</div>
     </div>
     <div class="ad-cover-main">
-      <div class="ad-cover-label">Engineering AI Training</div>
+      <div class="ad-cover-label">工程 AI 培訓</div>
       <h1>Agent Harness：把聰明模型包成可靠系統</h1>
-      <p class="ad-cover-subtitle">AI Agent 架構入門｜把聰明模型包成可靠系統</p>
+      <p class="ad-cover-subtitle">AI 代理 架構入門｜把聰明模型包成可靠系統</p>
     </div>
     <div class="ad-cover-footer">
       <span>Michael AI Agent Lab</span>
-      <span>HTML Training Material</span>
+      <span>HTML 培訓教材</span>
     </div>
   </div>
 </section>
@@ -698,11 +698,10 @@
     <section class="hero">
       <div class="ad-logo-full" aria-label="個人品牌標記"></div>
       <div>
-        <div class="eyebrow">工程師教學版｜AI Agent 架構入門</div>
+        <div class="eyebrow">工程師教學版｜AI 代理 架構入門</div>
         <h1>Agent Harness：把聰明模型包成可靠系統</h1>
         <p class="lead">
-          這份教學把影片「Agent Harness 十二大模組完全解析」整理成可教、可討論、可落地的 HTML 課程。
-          重點不是換更大的模型，而是設計模型外圍的執行環境：上下文、工具、記憶、驗證、觀測、安全與錯誤恢復。
+          這份教學把影片「Agent Harness 十二大模組完全解析」整理成可教、可討論、可落地的 HTML 課程。 重點不是換更大的模型，而是設計模型外圍的執行環境：上下文、工具、記憶、驗證、觀測、安全與錯誤恢復。
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#modules">開始看十二大模組</a>
@@ -723,7 +722,7 @@
       <div class="section-head">
         <div>
           <span class="pill">01｜核心觀念</span>
-          <h2>Harness 不是 Prompt，而是 Agent 的「作業系統」</h2>
+          <h2>Harness 不是 提示詞，而是 代理 的「作業系統」</h2>
         </div>
         <p class="section-note">裸 LLM 像一顆聰明 CPU，但缺少記憶體管理、設備驅動、權限邊界、錯誤恢復與驗證機制。</p>
       </div>
@@ -734,14 +733,14 @@
           <p>LLM 判斷下一步、產生文字、選擇工具，但它本身不保證長任務穩定，也不天然知道什麼時候該停止。</p>
         </article>
         <article class="card">
-          <span class="pill orange">Harness</span>
+          <span class="pill orange">執行框架</span>
           <h3>負責工程化與控制</h3>
           <p>包含上下文管理、工具註冊、狀態保存、錯誤處理、護欄、安全權限、觀測與驗證。</p>
         </article>
         <article class="card">
           <span class="pill red">生產級差異</span>
           <h3>可追蹤、可恢復、可驗證</h3>
-          <p>企業要的不是一次 Demo 成功，而是多次執行後仍能保持一致、可除錯、可審核、可回復。</p>
+          <p>企業要的不是一次 示範 成功，而是多次執行後仍能保持一致、可除錯、可審核、可回復。</p>
         </article>
       </div>
     </section>
@@ -752,39 +751,39 @@
           <span class="pill">02｜全貌流程</span>
           <h2>Agent Harness 執行循環</h2>
         </div>
-        <p class="section-note">一個穩定 Agent 通常不是「問模型一次就結束」，而是 Observe → Think → Act → Verify → Recover 的閉環。</p>
+        <p class="section-note">一個穩定 代理 通常不是「問模型一次就結束」，而是 Observe → Think → Act → Verify → Recover 的閉環。</p>
       </div>
       <div class="card flow">
-        <svg viewBox="0 0 1180 360" role="img" aria-label="Agent Harness Flow">
+        <svg viewbox="0 0 1180 360" role="img" aria-label="Agent Harness Flow">
           <defs>
-            <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-              <path d="M0,0 L0,6 L9,3 z" fill="#2563eb" />
+            <marker id="arrow" markerwidth="10" markerheight="10" refx="8" refy="3" orient="auto" markerunits="strokeWidth">
+              <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
             </marker>
             <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
+              <fedropshadow dx="0" dy="8" stddeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
             </filter>
           </defs>
           <rect x="20" y="32" width="1140" height="294" rx="28" fill="#f8fbff" stroke="#d9e0ea"/>
-          <text x="54" y="72" font-size="22" font-weight="800" fill="#18202f">Production Agent Harness</text>
+          <text x="54" y="72" font-size="22" font-weight="800" fill="#18202f">正式環境 Agent 執行框架</text>
           <g filter="url(#shadow)">
             <rect x="70" y="125" width="150" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
-            <text x="145" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">Observe</text>
+            <text x="145" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">觀察</text>
             <text x="145" y="181" text-anchor="middle" font-size="13" fill="#667085">讀取需求/環境</text>
 
             <rect x="280" y="125" width="150" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
-            <text x="355" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">Context</text>
+            <text x="355" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">背景 上下文</text>
             <text x="355" y="181" text-anchor="middle" font-size="13" fill="#667085">整理有效資訊</text>
 
             <rect x="490" y="125" width="150" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
-            <text x="565" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">Think</text>
+            <text x="565" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">思考</text>
             <text x="565" y="181" text-anchor="middle" font-size="13" fill="#667085">規劃下一步</text>
 
             <rect x="700" y="125" width="150" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
-            <text x="775" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">Act</text>
+            <text x="775" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">行動</text>
             <text x="775" y="181" text-anchor="middle" font-size="13" fill="#667085">呼叫工具/API</text>
 
             <rect x="910" y="125" width="150" height="72" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
-            <text x="985" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">Verify</text>
+            <text x="985" y="155" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">驗證</text>
             <text x="985" y="181" text-anchor="middle" font-size="13" fill="#667085">測試/審核/比對</text>
           </g>
           <path d="M220 161 H275" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
@@ -794,11 +793,11 @@
           <path d="M985 205 C985 285 145 285 145 205" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
 
           <rect x="120" y="235" width="210" height="44" rx="14" fill="#dff7f2"/>
-          <text x="225" y="263" text-anchor="middle" font-size="14" font-weight="800" fill="#0f766e">Memory / Checkpoint</text>
+          <text x="225" y="263" text-anchor="middle" font-size="14" font-weight="800" fill="#0f766e">記憶／檢查點</text>
           <rect x="420" y="235" width="210" height="44" rx="14" fill="#fff1d6"/>
-          <text x="525" y="263" text-anchor="middle" font-size="14" font-weight="800" fill="#b45309">Guardrail / Security</text>
+          <text x="525" y="263" text-anchor="middle" font-size="14" font-weight="800" fill="#b45309">防護規則／安全</text>
           <rect x="720" y="235" width="210" height="44" rx="14" fill="#eaf1ff"/>
-          <text x="825" y="263" text-anchor="middle" font-size="14" font-weight="800" fill="#1d4ed8">Observability / Logs</text>
+          <text x="825" y="263" text-anchor="middle" font-size="14" font-weight="800" fill="#1d4ed8">可觀測性／紀錄</text>
         </svg>
       </div>
     </section>
@@ -807,23 +806,23 @@
       <div class="section-head">
         <div>
           <span class="pill">03｜十二大模組</span>
-          <h2>把 Agent 拆成工程可控的零件</h2>
+          <h2>把 代理 拆成工程可控的零件</h2>
         </div>
         <p class="section-note">以下整理成工程師教學版本：每個模組都對應一個真實問題，不只是名詞。</p>
       </div>
       <div class="grid-4">
-        <article class="card module-card"><div class="module-no">1</div><h3>初始化 Initialization</h3><p>載入設定、模型、工具、權限、專案規則，避免每次啟動狀態不一致。</p></article>
-        <article class="card module-card"><div class="module-no">2</div><h3>執行循環 Orchestration</h3><p>控制 Agent 如何觀察、思考、行動、回收結果，避免無限迴圈。</p></article>
-        <article class="card module-card"><div class="module-no">3</div><h3>上下文管理 Context</h3><p>決定哪些資訊要進模型，哪些要摘要、屏蔽或延後載入。</p></article>
-        <article class="card module-card"><div class="module-no">4</div><h3>工具註冊 Tool Registry</h3><p>把 API、檔案、資料庫、瀏覽器操作包成清楚 schema，讓模型安全呼叫。</p></article>
-        <article class="card module-card"><div class="module-no">5</div><h3>記憶 Memory</h3><p>區分短期任務記憶、長期知識、使用者偏好與可重用工作流程。</p></article>
-        <article class="card module-card"><div class="module-no">6</div><h3>計畫 Planning</h3><p>把大任務拆解成步驟，並在中途依觀察結果調整。</p></article>
-        <article class="card module-card"><div class="module-no">7</div><h3>狀態與檢查點 State</h3><p>保存進度，失敗後可從中間恢復，不必整個任務重跑。</p></article>
-        <article class="card module-card"><div class="module-no">8</div><h3>錯誤處理 Recovery</h3><p>分辨暫時錯誤、邏輯錯誤、權限錯誤，採取重試、修正或人工介入。</p></article>
-        <article class="card module-card"><div class="module-no">9</div><h3>安全護欄 Guardrails</h3><p>限制輸入、輸出與工具權限，避免越權、洩密或破壞性操作。</p></article>
-        <article class="card module-card"><div class="module-no">10</div><h3>驗證 Evaluation</h3><p>用規則、測試、比對、審核來確認結果，不讓 Agent 自己說成功就算成功。</p></article>
-        <article class="card module-card"><div class="module-no">11</div><h3>可觀測性 Observability</h3><p>記錄每一步輸入、輸出、工具調用、錯誤與 token 成本，方便除錯。</p></article>
-        <article class="card module-card"><div class="module-no">12</div><h3>多 Agent 協作 Delegation</h3><p>把研究、撰寫、測試、審核拆給不同子 Agent，並控制它們的邊界。</p></article>
+        <article class="card module-card"><div class="module-no">1</div><h3>初始化 初始化</h3><p>載入設定、模型、工具、權限、專案規則，避免每次啟動狀態不一致。</p></article>
+        <article class="card module-card"><div class="module-no">2</div><h3>執行循環 執行協調</h3><p>控制 代理 如何觀察、思考、行動、回收結果，避免無限迴圈。</p></article>
+        <article class="card module-card"><div class="module-no">3</div><h3>上下文管理 上下文</h3><p>決定哪些資訊要進模型，哪些要摘要、屏蔽或延後載入。</p></article>
+        <article class="card module-card"><div class="module-no">4</div><h3>工具註冊 工具註冊</h3><p>把 API、檔案、資料庫、瀏覽器操作包成清楚 schema，讓模型安全呼叫。</p></article>
+        <article class="card module-card"><div class="module-no">5</div><h3>記憶 記憶</h3><p>區分短期任務記憶、長期知識、使用者偏好與可重用工作流程。</p></article>
+        <article class="card module-card"><div class="module-no">6</div><h3>計畫 規劃</h3><p>把大任務拆解成步驟，並在中途依觀察結果調整。</p></article>
+        <article class="card module-card"><div class="module-no">7</div><h3>狀態與檢查點 狀態</h3><p>保存進度，失敗後可從中間恢復，不必整個任務重跑。</p></article>
+        <article class="card module-card"><div class="module-no">8</div><h3>錯誤處理 恢復</h3><p>分辨暫時錯誤、邏輯錯誤、權限錯誤，採取重試、修正或人工介入。</p></article>
+        <article class="card module-card"><div class="module-no">9</div><h3>安全護欄 安全護欄</h3><p>限制輸入、輸出與工具權限，避免越權、洩密或破壞性操作。</p></article>
+        <article class="card module-card"><div class="module-no">10</div><h3>驗證 評估</h3><p>用規則、測試、比對、審核來確認結果，不讓 代理 自己說成功就算成功。</p></article>
+        <article class="card module-card"><div class="module-no">11</div><h3>可觀測性 可觀測性</h3><p>記錄每一步輸入、輸出、工具調用、錯誤與 代元 成本，方便除錯。</p></article>
+        <article class="card module-card"><div class="module-no">12</div><h3>多 代理 協作 任務分派</h3><p>把研究、撰寫、測試、審核拆給不同子 代理，並控制它們的邊界。</p></article>
       </div>
     </section>
 
@@ -836,9 +835,9 @@
         <p class="section-note">這些不是理論題，而是會直接影響成本、維護性、安全性與成功率的設計決策。</p>
       </div>
       <div class="grid-2">
-        <article class="card decision"><h3>1. 單 Agent 還是多 Agent？</h3><p>任務簡單可用單 Agent；跨領域、多審核、多流程，適合拆成多 Agent。</p></article>
+        <article class="card decision"><h3>1. 單 代理 還是多 代理？</h3><p>任務簡單可用單 代理；跨領域、多審核、多流程，適合拆成多 代理。</p></article>
         <article class="card decision"><h3>2. 工具權限要開多大？</h3><p>越方便越危險。企業場景建議採最小權限與可審核工具。</p></article>
-        <article class="card decision"><h3>3. Context 要一次塞滿還是動態檢索？</h3><p>一次塞滿容易上下文腐爛；動態檢索比較穩，但需要更好的索引與摘要策略。</p></article>
+        <article class="card decision"><h3>3. 上下文 要一次塞滿還是動態檢索？</h3><p>一次塞滿容易上下文腐爛；動態檢索比較穩，但需要更好的索引與摘要策略。</p></article>
         <article class="card decision"><h3>4. 記憶要存在本地、雲端還是混合？</h3><p>本地安全但協作較弱；雲端方便但要處理資安與資料邊界。</p></article>
         <article class="card decision"><h3>5. 驗證由規則、AI Judge 還是人審？</h3><p>高風險流程不能只靠 AI Judge。規則測試與人審仍是最後保險。</p></article>
         <article class="card decision"><h3>6. 失敗要自動重試還是停下來？</h3><p>暫時性錯誤可重試；資料破壞、權限不足、規格衝突應停下通知人。</p></article>
@@ -853,7 +852,7 @@
           <span class="pill">05｜實際案例</span>
           <h2>把概念放到你的 PM Excel Agent</h2>
         </div>
-        <p class="section-note">以下用「Excel 掃描 Critical Issues → 通知 / HTML / Mail 報告」當例子，讓工程師更容易連到實務。</p>
+        <p class="section-note">以下用「Excel 掃描 Critical Issues → 通知 / HTML / 電子郵件 報告」當例子，讓工程師更容易連到實務。</p>
       </div>
       <div class="card">
         <table>
@@ -861,12 +860,12 @@
             <tr><th>Harness 模組</th><th>在 PM Agent 中的落地方式</th><th>沒有做會發生什麼事</th></tr>
           </thead>
           <tbody>
-            <tr><td>初始化</td><td>啟動時檢查 .env、通知服務 token、SMTP、資料夾路徑、output 目錄。</td><td>機器人看起來有執行，但按鈕沒有反應或寄信失敗。</td></tr>
+            <tr><td>初始化</td><td>啟動時檢查 .env、通知服務 代元、SMTP、資料夾路徑、output 目錄。</td><td>機器人看起來有執行，但按鈕沒有反應或寄信失敗。</td></tr>
             <tr><td>工具註冊</td><td>把 Excel Scanner、HTML Report、Mail Sender、Notification Reply 分成清楚函式。</td><td>程式碼混在一起，修一個功能壞三個功能。</td></tr>
             <tr><td>上下文管理</td><td>只抽取 Critical xxx open、紅藍字、分類關鍵字與 Project Name，不把整份 Excel 全塞進報告。</td><td>輸出過長、通知訊息爆字數、分類不準。</td></tr>
-            <tr><td>驗證</td><td>確認搜尋欄位、字色、分類、Project Name 對應正確，再產生 HTML。</td><td>Agent 說成功，但結果其實漏掉或重複。</td></tr>
-            <tr><td>錯誤恢復</td><td>檔案讀不到、Excel 格式異常、SMTP 失敗時，回傳清楚錯誤與 fallback HTML。</td><td>只看到 SyntaxError 或卡住，不知道問題在哪。</td></tr>
-            <tr><td>可觀測性</td><td>記錄掃描了幾個檔案、幾張 sheet、命中幾筆、寄信 messageId。</td><td>無法判斷 Agent 到底有沒有真的工作。</td></tr>
+            <tr><td>驗證</td><td>確認搜尋欄位、字色、分類、Project Name 對應正確，再產生 HTML。</td><td>代理 說成功，但結果其實漏掉或重複。</td></tr>
+            <tr><td>錯誤恢復</td><td>檔案讀不到、Excel 格式異常、SMTP 失敗時，回傳清楚錯誤與 備援 HTML。</td><td>只看到 SyntaxError 或卡住，不知道問題在哪。</td></tr>
+            <tr><td>可觀測性</td><td>記錄掃描了幾個檔案、幾張 sheet、命中幾筆、寄信 messageId。</td><td>無法判斷 代理 到底有沒有真的工作。</td></tr>
           </tbody>
         </table>
       </div>
@@ -878,25 +877,25 @@
           <span class="pill">06｜30 分鐘工作坊</span>
           <h2>教學流程建議</h2>
         </div>
-        <p class="section-note">適合 SIE / ME / RF / Thermal / PM 一起上課，用共同案例理解 Agent 不是聊天機器人，而是工程系統。</p>
+        <p class="section-note">適合 SIE / ME / RF / Thermal / PM 一起上課，用共同案例理解 代理 不是聊天機器人，而是工程系統。</p>
       </div>
       <div class="grid-2">
         <div class="card timeline">
-          <div class="step"><strong>0–5 分鐘｜破題</strong>問大家：為什麼 AI Demo 很漂亮，但真正放到流程裡常常失敗？</div>
+          <div class="step"><strong>0–5 分鐘｜破題</strong>問大家：為什麼 AI 示範 很漂亮，但真正放到流程裡常常失敗？</div>
           <div class="step"><strong>5–12 分鐘｜解釋 Harness</strong>用「CPU + 作業系統」比喻說明模型與 Harness 的分工。</div>
-          <div class="step"><strong>12–20 分鐘｜十二模組導覽</strong>挑 Context、Tool、Memory、Verification、Recovery 五個最關鍵模組深入講。</div>
-          <div class="step"><strong>20–27 分鐘｜套用 PM Agent</strong>請學員討論：我們的 Excel Agent 現在哪些模組最弱？</div>
+          <div class="step"><strong>12–20 分鐘｜十二模組導覽</strong>挑 上下文、Tool、記憶、驗證、恢復 五個最關鍵模組深入講。</div>
+          <div class="step"><strong>20–27 分鐘｜套用 PM Agent</strong>請學員討論：我們的 Excel 代理 現在哪些模組最弱？</div>
           <div class="step"><strong>27–30 分鐘｜收斂</strong>每組提出一個可以下週開始改善的 Harness 設計。</div>
         </div>
         <div class="card checklist">
-          <h3>生產級 Agent 上線前檢查</h3>
-          <label><input type="checkbox" /> 是否有清楚定義 Agent 可以做什麼、不能做什麼？</label>
-          <label><input type="checkbox" /> 是否每個工具都有輸入/輸出 schema 與權限限制？</label>
-          <label><input type="checkbox" /> 是否有錯誤分類與恢復策略？</label>
-          <label><input type="checkbox" /> 是否有 checkpoint 或可重新執行的機制？</label>
-          <label><input type="checkbox" /> 是否有驗證，不只依賴模型自我判斷？</label>
-          <label><input type="checkbox" /> 是否有 log 可以追蹤每一步？</label>
-          <label><input type="checkbox" /> 是否有人工介入點，避免高風險自動執行？</label>
+          <h3>生產級 代理 上線前檢查</h3>
+          <label><input type="checkbox"/> 是否有清楚定義 代理 可以做什麼、不能做什麼？</label>
+          <label><input type="checkbox"/> 是否每個工具都有輸入/輸出 schema 與權限限制？</label>
+          <label><input type="checkbox"/> 是否有錯誤分類與恢復策略？</label>
+          <label><input type="checkbox"/> 是否有 檢查點 或可重新執行的機制？</label>
+          <label><input type="checkbox"/> 是否有驗證，不只依賴模型自我判斷？</label>
+          <label><input type="checkbox"/> 是否有 紀錄 可以追蹤每一步？</label>
+          <label><input type="checkbox"/> 是否有人工介入點，避免高風險自動執行？</label>
         </div>
       </div>
     </section>
@@ -913,15 +912,15 @@
         <p>模型越強，能做的事越多，反而更需要邊界、驗證與觀測。企業流程中，成功率、可追蹤性與安全性通常比單次回答漂亮更重要。</p>
       </details>
       <details>
-        <summary>誤區二：Prompt 寫好就等於 Agent 寫好</summary>
-        <p>Prompt 只是 Harness 的一小部分。真正的 Agent 還需要工具、狀態、錯誤處理、資料檢索、權限與測試。</p>
+        <summary>誤區二：提示詞 寫好就等於 代理 寫好</summary>
+        <p>提示詞 只是 Harness 的一小部分。真正的 代理 還需要工具、狀態、錯誤處理、資料檢索、權限與測試。</p>
       </details>
       <details>
-        <summary>誤區三：Agent 自己檢查自己就夠了</summary>
-        <p>高風險任務要讓 Agent 對照原始規格、測試案例、資料庫結果或人工審核，而不是只讓它說「我覺得 OK」。</p>
+        <summary>誤區三：代理 自己檢查自己就夠了</summary>
+        <p>高風險任務要讓 代理 對照原始規格、測試案例、資料庫結果或人工審核，而不是只讓它說「我覺得 OK」。</p>
       </details>
       <details>
-        <summary>誤區四：把全部資料塞進 Context 最安全</summary>
+        <summary>誤區四：把全部資料塞進 上下文 最安全</summary>
         <p>資料越多不一定越好。太多雜訊會讓模型忽略中間資訊，也會增加成本與錯誤率。</p>
       </details>
     </section>
@@ -938,19 +937,19 @@
         <div class="card quiz-card" data-answer="b">
           <h3>1. Harness 最接近哪一種角色？</h3>
           <button data-choice="a">A. 更大的模型參數</button>
-          <button data-choice="b">B. Agent 外圍的工程控制層</button>
-          <button data-choice="c">C. 單純把 prompt 寫長</button>
+          <button data-choice="b">B. 代理 外圍的工程控制層</button>
+          <button data-choice="c">C. 單純把 提示詞 寫長</button>
           <div class="answer"></div>
         </div>
         <div class="card quiz-card" data-answer="c">
-          <h3>2. 企業 Agent 最不能缺少什麼？</h3>
+          <h3>2. 企業 代理 最不能缺少什麼？</h3>
           <button data-choice="a">A. 更漂亮的 UI</button>
           <button data-choice="b">B. 更多形容詞</button>
-          <button data-choice="c">C. 驗證、log、權限與錯誤恢復</button>
+          <button data-choice="c">C. 驗證、紀錄、權限與錯誤恢復</button>
           <div class="answer"></div>
         </div>
         <div class="card quiz-card" data-answer="a">
-          <h3>3. Context 管理的目標是？</h3>
+          <h3>3. 上下文 管理的目標是？</h3>
           <button data-choice="a">A. 讓模型只看到高信噪比資訊</button>
           <button data-choice="b">B. 把所有資料一次塞進去</button>
           <button data-choice="c">C. 完全不保存歷史</button>
@@ -967,8 +966,8 @@
         </div>
       </div>
       <div class="card">
-        <h3 style="font-size: 28px; margin-top: 0;">Agent 的真正競爭力，不只在模型，而在模型外圍那套可控、可追蹤、可驗證的工程系統。</h3>
-        <p class="print-note">列印版備註：建議搭配實際專案流程圖與現有 Agent log 做課堂討論。</p>
+        <h3 style="font-size: 28px; margin-top: 0;">代理 的真正競爭力，不只在模型，而在模型外圍那套可控、可追蹤、可驗證的工程系統。</h3>
+        <p class="print-note">列印版備註：建議搭配實際專案流程圖與現有 代理 紀錄 做課堂討論。</p>
       </div>
     </section>
   </main>
@@ -977,9 +976,9 @@
     <strong>資料來源與延伸閱讀</strong>
     <ul class="source-list">
       <li>影片：Agent Harness十二大模块完全解析｜Harness工程｜影响模型性能｜Anthropic｜OpenAI｜LangGraph｜七大架构抉择</li>
-      <li>Martin Fowler：Harness engineering for coding agent users</li>
-      <li>LangChain：Improving Deep Agents with harness engineering</li>
-      <li>Hu Wei：Architectural Design Decisions in AI Agent Harnesses</li>
+      <li>Martin Fowler：給程式代理使用者的執行框架工程</li>
+      <li>LangChain：以執行框架工程改善 Deep Agents</li>
+      <li>Hu Wei：AI Agent 執行框架的架構設計決策</li>
     </ul>
     <p>本 HTML 為教學整理版，已轉為繁體中文與工程師教學語境。</p>
   </footer>
@@ -1007,7 +1006,7 @@
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Agent 系統架構與可靠性</h2>
     <ul>
       <li><a href="./claude-code-hooks-practice.html">Claude Code Hooks：讓規則真的發生</a></li>

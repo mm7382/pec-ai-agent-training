@@ -19,19 +19,19 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/a8142becaee0ef1c.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="hero">
     <div class="wrap">
       <div class="brand">
         <span class="lesson-brand-text">Michael AI Agent Lab</span>
-        <div class="doc-meta">Michael 教學筆記｜2026-07-08<br>Brainstorming Skill Online Research</div>
+        <div class="doc-meta">Michael 教學筆記｜2026-07-08<br>腦力激盪技能的網路研究</div>
       </div>
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Public Learning Note</div>
-          <h1><span class="line">Brainstorming Skill</span><span class="line zh">先設計再開工</span></h1>
-          <p class="lead">這份教學先查 GitHub 與 AI 工程教學資料，再整理成 實務上可使用的工作法：讓 agent 在寫 code、做教學頁、拆任務之前，先把模糊想法變成可核准的設計。</p>
+          <div class="eyebrow">公開學習筆記</div>
+          <h1><span class="line">腦力激盪技能</span><span class="line zh">先設計再開工</span></h1>
+          <p class="lead">這份教學先查 GitHub 與 AI 工程教學資料，再整理成 實務上可使用的工作法：讓 代理 在寫 程式碼、做教學頁、拆任務之前，先把模糊想法變成可核准的設計。</p>
         </div>
         <aside class="hero-panel">
           <strong>一句話結論</strong>
@@ -42,37 +42,37 @@
     </div>
   </header>
   <nav class="nav" aria-label="章節導覽"><div class="wrap">
-    <a href="#research">網路查證</a><a href="#model">心智模型</a><a href="#flow">SOP 流程</a><a href="#compare">關係比較</a><a href="#practice">Hermes 場景</a><a href="#install">要不要安裝</a><a href="#prompts">提示詞</a><a href="#sources">Sources</a>
+    <a href="#research">網路查證</a><a href="#model">心智模型</a><a href="#flow">SOP 流程</a><a href="#compare">關係比較</a><a href="#practice">Hermes 場景</a><a href="#install">要不要安裝</a><a href="#prompts">提示詞</a><a href="#sources">來源</a>
   </div></nav>
   <main class="wrap">
     <section id="research">
       <div class="section-title"><span class="bar"></span><h2>先看網路怎麼解釋</h2></div>
       <div class="grid">
         <div class="card span-6">
-          <div class="label">Primary Source</div>
+          <div class="label">第一手來源</div>
           <h3>GitHub Superpowers 的定義</h3>
-          <p>Superpowers 把 Brainstorming 放在基本工作流第一步。官方 repo 說它會在寫 code 前啟動，用問題釐清粗略想法、探索替代方案、分段展示設計，最後保存設計文件。</p>
-          <p class="small">重點：它是整套 agentic engineering workflow 的入口，不是單獨的聊天技巧。</p>
-          <div class="tag-row"><span class="tag">Before writing code</span><span class="tag">Design approval</span><span class="tag">Save design doc</span></div>
+          <p>Superpowers 把 設計討論 放在基本工作流第一步。官方 儲存庫 說它會在寫 程式碼 前啟動，用問題釐清粗略想法、探索替代方案、分段展示設計，最後保存設計文件。</p>
+          <p class="small">重點：它是整套 agentic engineering 工作流程 的入口，不是單獨的聊天技巧。</p>
+          <div class="tag-row"><span class="tag">寫程式之前</span><span class="tag">設計核准</span><span class="tag">儲存設計文件</span></div>
         </div>
         <div class="card span-6">
-          <div class="label">Skill.md Rule</div>
+          <div class="label">Skill.md 規則</div>
           <h3>Brainstorming Skill 的硬規則</h3>
-          <p>Brainstorming Skill 本文要求：先理解專案上下文、一次問一個問題、提出 2-3 種方案與 trade-off、分段讓使用者核准；未取得設計核准前，不寫 code、不 scaffold、不做任何實作。</p>
+          <p>Brainstorming Skill 本文要求：先理解專案上下文、一次問一個問題、提出 2-3 種方案與 取捨、分段讓使用者核准；未取得設計核准前，不寫 程式碼、不 建立骨架、不做任何實作。</p>
           <p class="small">重點：它把「先想清楚」變成可執行的流程閘門。</p>
-          <div class="tag-row"><span class="tag">One question at a time</span><span class="tag">2-3 approaches</span><span class="tag">No implementation yet</span></div>
+          <div class="tag-row"><span class="tag">一次一題</span><span class="tag">2–3 種做法</span><span class="tag">尚未開始實作</span></div>
         </div>
         <div class="card span-4">
-          <div class="head"><div class="icon cyan">O</div><div><h3>OpenAI Skills 文件</h3><p class="muted">技能是可重複工作流。</p></div></div>
-          <p>OpenAI 文件把 skill 定義成包裝 instructions、resources、optional scripts 的工作流格式。這表示 Brainstorming 這類流程適合被沉澱成 skill，而不是每次貼長 prompt。</p>
+          <div class="head"><div class="icon cyan">O</div><div><h3>OpenAI 技能 文件</h3><p class="muted">技能是可重複工作流。</p></div></div>
+          <p>OpenAI 文件把 技能 定義成包裝 指引、素材、optional 腳本 的工作流格式。這表示 設計討論 這類流程適合被沉澱成 技能，而不是每次貼長 提示詞。</p>
         </div>
         <div class="card span-4">
-          <div class="head"><div class="icon amber">A</div><div><h3>Addy Osmani 工作法</h3><p class="muted">specs before code。</p></div></div>
-          <p>AI coding workflow 的常見建議是先用 AI brainstorm 出 detailed specification，再拆 step-by-step plan，最後才進 code。這跟 Brainstorming -> Writing Plans 的方向一致。</p>
+          <div class="head"><div class="icon amber">A</div><div><h3>Addy Osmani 工作法</h3><p class="muted">先有規格，再寫程式。</p></div></div>
+          <p>AI coding 工作流程 的常見建議是先用 AI brainstorm 出 detailed specification，再拆 step-by-step plan，最後才進 程式碼。這跟 設計討論 -&gt; Writing Plans 的方向一致。</p>
         </div>
         <div class="card span-4">
-          <div class="head"><div class="icon green">M</div><div><h3>Matt Pocock skills</h3><p class="muted">先解決人機誤會。</p></div></div>
-          <p>Matt Pocock 的 skills repo 把「agent 沒做出我要的」歸因於 misalignment，解法是先讓 agent 深入提問。這可視為 Brainstorming 前半段的需求對齊能力。</p>
+          <div class="head"><div class="icon green">M</div><div><h3>Matt Pocock 技能</h3><p class="muted">先解決人機誤會。</p></div></div>
+          <p>Matt Pocock 的 技能 儲存庫 把「代理 沒做出我要的」歸因於 misalignment，解法是先讓 代理 深入提問。這可視為 設計討論 前半段的需求對齊能力。</p>
         </div>
       </div>
     </section>
@@ -81,28 +81,28 @@
       <div class="section-title"><span class="bar"></span><h2>心智模型：不是發想，是設計閘門</h2></div>
       <div class="grid">
         <div class="card span-7">
-          <p class="quote">「想法」不能直接交給 agent 寫；要先變成「設計」。</p>
-          <p>對人類來說，很多背景知識在腦中；但 agent 看到的是目前 context。如果一開始只給一句模糊需求，它會自己補齊缺口。Brainstorming Skill 的價值，是讓 agent 先暴露假設、問清楚限制、提出路線選擇，等你核准後才往下做。</p>
+          <p class="quote">「想法」不能直接交給 代理 寫；要先變成「設計」。</p>
+          <p>對人類來說，很多背景知識在腦中；但 代理 看到的是目前 上下文。如果一開始只給一句模糊需求，它會自己補齊缺口。Brainstorming Skill 的價值，是讓 代理 先暴露假設、問清楚限制、提出路線選擇，等你核准後才往下做。</p>
           <p>它最適合處理這種狀況：你大概知道要做什麼，但還沒決定邊界、架構、輸出形式、驗收標準，或不知道哪種做法風險最小。</p>
-          <div class="callout"><strong>Michael AI Agent Lab 版翻譯</strong>把 Brainstorming 當作「開工前設計審查」。它不是要求每個小任務寫長文件，而是要求每個任務至少有一個可核准的 short design。</div>
+          <div class="callout"><strong>Michael AI Agent Lab 版翻譯</strong>把 設計討論 當作「開工前設計審查」。它不是要求每個小任務寫長文件，而是要求每個任務至少有一個可核准的 簡短設計。</div>
         </div>
         <div class="card span-5">
-          <div class="label">Visual Model</div>
-          <svg class="diagram" viewBox="0 0 560 350" role="img" aria-label="Brainstorming Skill 心智模型">
+          <div class="label">視覺模型</div>
+          <svg class="diagram" viewbox="0 0 560 350" role="img" aria-label="Brainstorming Skill 心智模型">
             <rect width="560" height="350" fill="#fff"/>
             <rect x="34" y="44" width="130" height="70" rx="8" fill="#243033"/>
             <text x="99" y="75" text-anchor="middle" fill="#fff" font-size="17" font-weight="800">模糊想法</text>
             <text x="99" y="97" text-anchor="middle" fill="#d7e0e2" font-size="12">我要做一個...</text>
             <path d="M164 79 H214" stroke="#d72f38" stroke-width="4"/><path d="M214 79 l-10 -7 v14 z" fill="#d72f38"/>
             <rect x="214" y="44" width="132" height="70" rx="8" fill="#fff4f5" stroke="#f1cdd1"/>
-            <text x="280" y="75" text-anchor="middle" fill="#b8202a" font-size="17" font-weight="800">Brainstorm</text>
+            <text x="280" y="75" text-anchor="middle" fill="#b8202a" font-size="17" font-weight="800">腦力激盪</text>
             <text x="280" y="97" text-anchor="middle" fill="#6f4045" font-size="12">問題 + 方案比較</text>
             <path d="M346 79 H396" stroke="#d72f38" stroke-width="4"/><path d="M396 79 l-10 -7 v14 z" fill="#d72f38"/>
             <rect x="396" y="44" width="130" height="70" rx="8" fill="#18a8bd"/>
             <text x="461" y="75" text-anchor="middle" fill="#fff" font-size="17" font-weight="800">核准設計</text>
             <text x="461" y="97" text-anchor="middle" fill="#e8fbfd" font-size="12">可執行規格</text>
             <rect x="72" y="178" width="416" height="88" rx="8" fill="#f2f5f5" stroke="#dfe4e5"/>
-            <text x="280" y="211" text-anchor="middle" fill="#202629" font-size="20" font-weight="900">Spec -> Plan -> Build -> Review</text>
+            <text x="280" y="211" text-anchor="middle" fill="#202629" font-size="20" font-weight="900">規格 → 計畫 → 建置 → 審查</text>
             <text x="280" y="239" text-anchor="middle" fill="#637074" font-size="13">後續工作只依核准後的設計執行</text>
             <path d="M461 114 V178 H280" stroke="#637074" stroke-width="3" fill="none"/>
             <rect x="154" y="296" width="252" height="32" rx="16" fill="#243033"/>
@@ -117,10 +117,10 @@
       <div class="flow">
         <div class="flow-step"><div class="step-no">1</div><h3>探索上下文</h3><p>先看現有文件、檔案、近期變更、專案慣例。若工作太大，先拆成子題。</p></div>
         <div class="flow-step"><div class="step-no">2</div><h3>一次一題</h3><p>只問一個問題。優先問目的、限制、成功標準、不可做事項。</p></div>
-        <div class="flow-step"><div class="step-no">3</div><h3>提出 2-3 方案</h3><p>每個方案要有 trade-off。agent 要給推薦方案與理由。</p></div>
+        <div class="flow-step"><div class="step-no">3</div><h3>提出 2-3 方案</h3><p>每個方案要有 取捨。代理 要給推薦方案與理由。</p></div>
         <div class="flow-step"><div class="step-no">4</div><h3>分段核准</h3><p>架構、資料流、UI、錯誤處理、測試分段給你看，不一次塞滿。</p></div>
-        <div class="flow-step"><div class="step-no">5</div><h3>寫設計文件</h3><p>把核准內容寫成 spec，檢查 TODO、矛盾、模糊、scope 過大。</p></div>
-        <div class="flow-step"><div class="step-no">6</div><h3>轉實作計畫</h3><p>你 review 後，才進 Writing Plans、TDD、subagent 或 Codex 實作。</p></div>
+        <div class="flow-step"><div class="step-no">5</div><h3>寫設計文件</h3><p>把核准內容寫成 規格，檢查 TODO、矛盾、模糊、範圍 過大。</p></div>
+        <div class="flow-step"><div class="step-no">6</div><h3>轉實作計畫</h3><p>你 審核 後，才進 Writing Plans、TDD、subagent 或 Codex 實作。</p></div>
       </div>
     </section>
 
@@ -131,45 +131,45 @@
           <thead><tr><th>工作法</th><th>主要用途</th><th>輸入</th><th>輸出</th><th>何時用</th></tr></thead>
           <tbody>
             <tr><td>Grill Me</td><td>需求訪談，把人腦裡的資訊問出來。</td><td>模糊想法、任務方向。</td><td>需求、限制、名詞、成功標準。</td><td>你還不知道要怎麼描述需求時。</td></tr>
-            <tr><td>Brainstorming Skill</td><td>把需求變成設計，並拿到核准。</td><td>已釐清的需求或初步方向。</td><td>方案比較、推薦路線、設計文件。</td><td>要做功能、教學頁、agent workflow 前。</td></tr>
-            <tr><td>PRD / Spec</td><td>把設計固定成可追蹤的合約。</td><td>核准後的設計。</td><td>需求、資料流、邊界、測試、驗收。</td><td>多人協作或長期維護時。</td></tr>
-            <tr><td>Writing Plans</td><td>把 spec 拆成小任務。</td><td>已 review 的 spec。</td><td>檔案路徑、步驟、驗證命令。</td><td>準備讓 Codex 或 subagent 開工時。</td></tr>
-            <tr><td>TDD / Review</td><td>確保實作可驗證。</td><td>實作任務。</td><td>測試結果、review findings、修正。</td><td>任何會改 code 或流程的地方。</td></tr>
+            <tr><td>腦力激盪技能</td><td>把需求變成設計，並拿到核准。</td><td>已釐清的需求或初步方向。</td><td>方案比較、推薦路線、設計文件。</td><td>要做功能、教學頁、代理 工作流程 前。</td></tr>
+            <tr><td>PRD／規格</td><td>把設計固定成可追蹤的合約。</td><td>核准後的設計。</td><td>需求、資料流、邊界、測試、驗收。</td><td>多人協作或長期維護時。</td></tr>
+            <tr><td>撰寫計畫</td><td>把 規格 拆成小任務。</td><td>已 審核 的 規格。</td><td>檔案路徑、步驟、驗證命令。</td><td>準備讓 Codex 或 subagent 開工時。</td></tr>
+            <tr><td>TDD／審查</td><td>確保實作可驗證。</td><td>實作任務。</td><td>測試結果、審核 findings、修正。</td><td>任何會改 程式碼 或流程的地方。</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <section id="practice">
-      <div class="section-title"><span class="bar"></span><h2>套用到 AI Agent 工作流</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>套用到 AI 代理 工作流</h2></div>
       <div class="grid">
-        <article class="card span-6"><div class="head"><div class="icon red">ART</div><div><h3>教材產製 HTML</h3><p class="muted">避免做完才發現不是你要的。</p></div></div><p>開工前先定義讀者、主線、章節、圖解、手機驗收、禁止字眼。你核准設計後，再產生 HTML。</p></article>
-        <article class="card span-6"><div class="head"><div class="icon cyan">CODE</div><div><h3>Codex 改功能</h3><p class="muted">避免 agent 自己選路線。</p></div></div><p>改 code 前先讀 codebase，提出保守修補、局部重構、抽象化三種方案與風險。小任務也要有 short design。</p></article>
-        <article class="card span-6"><div class="head"><div class="icon amber">PM</div><div><h3>PM workflow 報告</h3><p class="muted">避免只有摘要，沒有決策。</p></div></div><p>先確認讀者、決策、風險、owner、deadline、下一步，再做報告。這會讓輸出更像 PM brief，不是資料堆疊。</p></article>
-        <article class="card span-6"><div class="head"><div class="icon green">WIKI</div><div><h3>Wiki Agent 研究</h3><p class="muted">避免未驗證知識進正式庫。</p></div></div><p>研究前先定義來源標準、信心等級、時間範圍與 raw/inbox 路徑。正式知識要有來源，不要靠聊天印象。</p></article>
+        <article class="card span-6"><div class="head"><div class="icon red">美術</div><div><h3>教材產製 HTML</h3><p class="muted">避免做完才發現不是你要的。</p></div></div><p>開工前先定義讀者、主線、章節、圖解、手機驗收、禁止字眼。你核准設計後，再產生 HTML。</p></article>
+        <article class="card span-6"><div class="head"><div class="icon cyan">程式</div><div><h3>Codex 改功能</h3><p class="muted">避免 代理 自己選路線。</p></div></div><p>改 程式碼 前先讀 codebase，提出保守修補、局部重構、抽象化三種方案與風險。小任務也要有 簡短設計。</p></article>
+        <article class="card span-6"><div class="head"><div class="icon amber">PM</div><div><h3>PM 工作流程 報告</h3><p class="muted">避免只有摘要，沒有決策。</p></div></div><p>先確認讀者、決策、風險、負責人、deadline、下一步，再做報告。這會讓輸出更像 PM brief，不是資料堆疊。</p></article>
+        <article class="card span-6"><div class="head"><div class="icon green">Wiki</div><div><h3>Wiki Agent 研究</h3><p class="muted">避免未驗證知識進正式庫。</p></div></div><p>研究前先定義來源標準、信心等級、時間範圍與 raw/inbox 路徑。正式知識要有來源，不要靠聊天印象。</p></article>
       </div>
     </section>
 
     <section id="install">
       <div class="section-title"><span class="bar"></span><h2>要不要安裝 Superpowers？</h2></div>
       <div class="grid">
-        <div class="callout span-12"><strong>建議：先吸收 Brainstorming 規則，不急著全裝進 Hermes 核心。</strong>Superpowers 是一整套 agentic engineering workflow。對 Hermes 來說，最有價值的是「先設計、再計畫、再執行」這個工作順序；外部整包 plugin 要等 sandbox 測過、確認不會覆蓋本機規則後再考慮。</div>
+        <div class="callout span-12"><strong>建議：先吸收 設計討論 規則，不急著全裝進 Hermes 核心。</strong>Superpowers 是一整套 agentic engineering 工作流程。對 Hermes 來說，最有價值的是「先設計、再計畫、再執行」這個工作順序；外部整包 plugin 要等 隔離環境 測過、確認不會覆蓋本機規則後再考慮。</div>
         <div class="card span-6">
           <div class="label">可以先做</div>
           <ul>
-            <li>把 Context -> Questions -> Options -> Design -> Approval -> Plan 寫進 Codex skill sync。</li>
-            <li>高風險任務要求完整 spec；小任務用 short design。</li>
-            <li>讓教材產製 agent 每次製作教學 HTML 前先列設計 brief。</li>
-            <li>讓 Codex 改 code 前固定提出 2-3 方案。</li>
+            <li>把 上下文 -&gt; Questions -&gt; Options -&gt; Design -&gt; Approval -&gt; Plan 寫進 Codex 技能 sync。</li>
+            <li>高風險任務要求完整 規格；小任務用 簡短設計。</li>
+            <li>讓教材產製 代理 每次製作教學 HTML 前先列設計 brief。</li>
+            <li>讓 Codex 改 程式碼 前固定提出 2-3 方案。</li>
           </ul>
         </div>
         <div class="card span-6">
           <div class="label">先不要做</div>
           <ul>
-            <li>不要把 raw chat、token、cookie、客戶機密寫入 skill。</li>
-            <li>不要讓外部 workflow 覆蓋 Hermes 現有安全規則。</li>
-            <li>不要每個小修改都要求長篇 design doc。</li>
-            <li>不要把 Brainstorming 當作拖延實作的藉口。</li>
+            <li>不要把 raw chat、代元、cookie、客戶機密寫入 技能。</li>
+            <li>不要讓外部 工作流程 覆蓋 Hermes 現有安全規則。</li>
+            <li>不要每個小修改都要求長篇 設計文件。</li>
+            <li>不要把 設計討論 當作拖延實作的藉口。</li>
           </ul>
         </div>
       </div>
@@ -178,7 +178,7 @@
     <section id="prompts">
       <div class="section-title"><span class="bar"></span><h2>可直接複製的提示詞</h2></div>
       <div class="grid">
-        <div class="card span-6"><h3>通用版</h3><pre class="prompt">請先用 Brainstorming 流程，不要直接實作。
+        <div class="card span-6"><h3>通用版</h3><pre class="prompt" data-language-code="">請先用 Brainstorming 流程，不要直接實作。
 請先完成：
 1. 探索目前上下文
 2. 一次問我一個釐清問題
@@ -186,7 +186,7 @@
 4. 推薦一個方案並說明理由
 5. 分段給我確認設計
 我核准前，不要寫 code、不要改檔案。</pre></div>
-        <div class="card span-6"><h3>Michael 教學筆記 HTML 版</h3><pre class="prompt">請先設計這份 Michael 教學筆記，不要直接產 HTML。
+        <div class="card span-6"><h3>Michael 教學筆記 HTML 版</h3><pre class="prompt" data-language-code="">請先設計這份 Michael 教學筆記，不要直接產 HTML。
 請提出：
 - 讀者與目的
 - 核心主線
@@ -196,7 +196,7 @@
 - 來源與信心等級
 - 不能出現的字眼
 我核准設計後，再做 HTML。</pre></div>
-        <div class="card span-6"><h3>Codex 改功能版</h3><pre class="prompt">請先探索 codebase，提出 2-3 種修改方案。
+        <div class="card span-6"><h3>Codex 改功能版</h3><pre class="prompt" data-language-code="">請先探索 codebase，提出 2-3 種修改方案。
 每個方案請列：
 - 會改哪些檔案
 - 風險
@@ -204,7 +204,7 @@
 - rollback 方式
 - 是否需要重構
 等我選定方案後，再寫 implementation plan。</pre></div>
-        <div class="card span-6"><h3>設計自檢版</h3><pre class="prompt">請自我檢查這份設計：
+        <div class="card span-6"><h3>設計自檢版</h3><pre class="prompt" data-language-code="">請自我檢查這份設計：
 - 是否有 TODO 或 TBD
 - 是否有矛盾
 - scope 是否太大
@@ -215,32 +215,32 @@
     </section>
 
     <section id="sources">
-      <div class="section-title"><span class="bar"></span><h2>Sources</h2></div>
+      <div class="section-title"><span class="bar"></span><h2>來源</h2></div>
       <div class="card">
-        <p class="muted">這份教學以 GitHub 官方 skill 內容為主，外部文章只用來補充工作法與導入判斷。</p>
+        <p class="muted">這份教學以 GitHub 官方 技能 內容為主，外部文章只用來補充工作法與導入判斷。</p>
         <ul class="source-list">
           <li><a href="https://github.com/obra/superpowers">GitHub：obra/superpowers</a></li>
-          <li><a href="https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md">GitHub：Brainstorming Skill.md</a></li>
-          <li><a href="https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/brainstorming/SKILL.md">GitHub Raw：Brainstorming Skill.md</a></li>
-          <li><a href="https://www.claudepluginhub.com/skills/obra-superpowers-2/brainstorming">Claude Plugin Hub：Brainstorming skill mirror</a></li>
-          <li><a href="https://addyosmani.com/blog/ai-coding-workflow/">Addy Osmani：My LLM coding workflow going into 2026</a></li>
-          <li><a href="https://levelup.gitconnected.com/brainstorm-spec-plan-ship-the-ai-workflow-that-actually-works-84808445a3d0">Level Up Coding：Brainstorm -> Spec -> Plan -> Ship</a></li>
+          <li><a href="https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md">GitHub：腦力激盪 Skill.md</a></li>
+          <li><a href="https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/brainstorming/SKILL.md">GitHub 原始檔：腦力激盪 Skill.md</a></li>
+          <li><a href="https://www.claudepluginhub.com/skills/obra-superpowers-2/brainstorming">Claude Plugin Hub：腦力激盪技能鏡像</a></li>
+          <li><a href="https://addyosmani.com/blog/ai-coding-workflow/">Addy Osmani：我邁入 2026 年的大型語言模型程式工作流程</a></li>
+          <li><a href="https://levelup.gitconnected.com/brainstorm-spec-plan-ship-the-ai-workflow-that-actually-works-84808445a3d0">Level Up Coding：腦力激盪 → 規格 → 計畫 → 發布</a></li>
           <li><a href="https://github.com/mattpocock/skills">GitHub：mattpocock/skills</a></li>
-          <li><a href="https://developers.openai.com/codex/skills">OpenAI Developers：Agent Skills</a></li>
-          <li><a href="https://developers.openai.com/codex/use-cases/reusable-codex-skills">OpenAI Developers：Save workflows as skills</a></li>
+          <li><a href="https://developers.openai.com/codex/skills">OpenAI Developers：Agent 技能</a></li>
+          <li><a href="https://developers.openai.com/codex/use-cases/reusable-codex-skills">OpenAI Developers：將工作流程儲存為技能</a></li>
         </ul>
-        <div class="footer">Prepared for Michael AI Agent learning. Think with the agent first; let it build only after design is clear.</div>
+        <div class="footer">為 Michael 的 AI Agent 學習整理。先和 Agent 一起思考，設計清楚後才讓它建置。</div>
       </div>
     </section>
   </main>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
       <li><a href="./matt-pocock-skills-codex-workflow.html">Grill Me 與 Matt Pocock Skills：官方流程與 Codex 路由</a></li>
-      <li><a href="./voice-input-agent-context.html">語音輸入 x AI Agent：Context 轉換工作法</a></li>
+      <li><a href="./voice-input-agent-context.html">語音輸入 x AI Agent：上下文 轉換工作法</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>
   </div>

@@ -503,7 +503,7 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/e1430079a8115e89.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
@@ -516,7 +516,7 @@
         <a href="#maintain">定期健檢</a>
         <a href="#sources">來源</a>
       </nav>
-      <div class="draft">Teaching note</div>
+      <div class="draft">教學筆記</div>
     </div>
   </header>
 
@@ -524,9 +524,9 @@
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">AI Coding Agent / Instruction Design</p>
+          <p class="eyebrow">AI 程式代理／指令設計</p>
           <h1 id="page-title">把 AI 協作規則，寫在對的位置。</h1>
-          <p class="hero-lead"><code>CLAUDE.md</code> 與 <code>AGENTS.md</code> 不是專案百科。真正值得留下的，是 AI 無法自行推得、每次工作都必須知道的規則。</p>
+          <p class="hero-lead"><code data-language-code="">CLAUDE.md</code> 與 <code data-language-code="">AGENTS.md</code> 不是專案百科。真正值得留下的，是 AI 無法自行推得、每次工作都必須知道的規則。</p>
           <div class="hero-note">規則越短，重要訊號越清楚。</div>
         </div>
         <figure class="hero-visual">
@@ -551,40 +551,40 @@
 
     <aside class="lesson-summary" aria-label="本篇重點">
       <div class="summary-grid">
-        <div class="summary-item"><b>Scope</b><span>個人、專案與子資料夾規則各有適用範圍。</span></div>
-        <div class="summary-item"><b>Signal</b><span>移除 AI 自己找得到的資訊，保留隱性知識。</span></div>
-        <div class="summary-item"><b>Enforcement</b><span>長流程交給 Skill，硬性安全交給 Hook 或 CI。</span></div>
+        <div class="summary-item"><b>範圍</b><span>個人、專案與子資料夾規則各有適用範圍。</span></div>
+        <div class="summary-item"><b>訊號</b><span>移除 AI 自己找得到的資訊，保留隱性知識。</span></div>
+        <div class="summary-item"><b>強制執行</b><span>長流程交給 技能，硬性安全交給 Hook 或 CI。</span></div>
       </div>
     </aside>
 
     <main>
       <section id="scope">
         <div class="section-head">
-          <div class="section-no">01 / Scope</div>
+          <div class="section-no">01／範圍</div>
           <div>
             <h2>同一條規則，不一定要讓所有任務都看到</h2>
-            <p class="section-intro"><code>CLAUDE.md</code> 與 <code>AGENTS.md</code> 目的相近，但載入與優先順序依工具而異。共通原則是：規則越接近實際工作的目錄，作用範圍越精準。</p>
+            <p class="section-intro"><code data-language-code="">CLAUDE.md</code> 與 <code data-language-code="">AGENTS.md</code> 目的相近，但載入與優先順序依工具而異。共通原則是：規則越接近實際工作的目錄，作用範圍越精準。</p>
           </div>
         </div>
 
         <div class="scope-map">
           <article class="scope">
             <span class="scope-mark">U</span>
-            <span class="scope-code">USER</span>
+            <span class="scope-code">使用者</span>
             <h3>個人長期偏好</h3>
             <p>語言、回覆格式、個人工作習慣。只放你跨專案都會使用的規則。</p>
           </article>
           <article class="scope">
             <span class="scope-mark">P</span>
-            <span class="scope-code">PROJECT</span>
+            <span class="scope-code">專案</span>
             <h3>專案共同規則</h3>
             <p>測試指令、商業邏輯、完成標準，以及整個團隊都必須知道的連動關係。</p>
           </article>
           <article class="scope">
             <span class="scope-mark">N</span>
-            <span class="scope-code">NESTED</span>
+            <span class="scope-code">巢狀</span>
             <h3>資料夾專屬規則</h3>
-            <p>例如前端視覺驗收或資料層 migration 規則，只在相關目錄工作時加入。</p>
+            <p>例如前端視覺驗收或資料層 遷移 規則，只在相關目錄工作時加入。</p>
           </article>
         </div>
         <p class="fine-print">提醒：Claude Code 與 Codex 的檔名、搜尋路徑與優先順序不同，導入前應以各自官方文件為準。</p>
@@ -592,10 +592,10 @@
 
       <section id="edit">
         <div class="section-head">
-          <div class="section-no">02 / Edit</div>
+          <div class="section-no">02／編輯</div>
           <div>
             <h2>先做減法，再做加法</h2>
-            <p class="section-intro"><code>/init</code> 可以產生起始版本，但它不是完成品。自動生成後，應逐條判斷是否真的值得每次都送進 agent 的工作脈絡。</p>
+            <p class="section-intro"><code data-language-code="">/init</code> 可以產生起始版本，但它不是完成品。自動生成後，應逐條判斷是否真的值得每次都送進 代理 的工作脈絡。</p>
           </div>
         </div>
 
@@ -603,7 +603,7 @@
           <article class="editorial-panel">
             <h3>刪除前，問三題</h3>
             <ol class="question-list">
-              <li>Agent 能從程式碼、README 或既有文件自行找到嗎？</li>
+              <li>代理 能從程式碼、README 或既有文件自行找到嗎？</li>
               <li>這條規則和多數工作都有關，還是只屬於一個資料夾或單次任務？</li>
               <li>三個月後它仍然會是正確的嗎？</li>
             </ol>
@@ -623,7 +623,7 @@
 
       <section id="route">
         <div class="section-head">
-          <div class="section-no">03 / Route</div>
+          <div class="section-no">03／路由</div>
           <div>
             <h2>別把所有知識都塞進同一份檔案</h2>
             <p class="section-intro">判斷資訊放哪裡，比文字寫得多漂亮更重要。以下四條路徑，可以避免指令檔變成又長、又難維護的規則倉庫。</p>
@@ -633,22 +633,22 @@
         <div class="route-board" role="list" aria-label="資訊分流判斷">
           <div class="route" role="listitem">
             <div class="route-label">AI 自己找得到</div><div class="route-arrow">→</div>
-            <div class="route-target">Code / Docs</div>
-            <div class="route-reason">讓 agent 需要時再讀，不必每次載入。</div>
+            <div class="route-target">程式／文件</div>
+            <div class="route-reason">讓 代理 需要時再讀，不必每次載入。</div>
           </div>
           <div class="route" role="listitem">
             <div class="route-label">短、長期、不可推得</div><div class="route-arrow">→</div>
-            <div class="route-target">CLAUDE.md / AGENTS.md</div>
+            <div class="route-target">CLAUDE.md／AGENTS.md</div>
             <div class="route-reason">專案不成文規則、連動關係、測試與完成標準。</div>
           </div>
           <div class="route" role="listitem">
             <div class="route-label">長而有條件的流程</div><div class="route-arrow">→</div>
-            <div class="route-target">Skill / Runbook</div>
+            <div class="route-target">技能／操作手冊</div>
             <div class="route-reason">只有任務符合時才載入完整步驟。</div>
           </div>
           <div class="route" role="listitem">
             <div class="route-label">絕對不能違反</div><div class="route-arrow">→</div>
-            <div class="route-target">Hook / Pre-commit / CI</div>
+            <div class="route-target">掛鉤／提交前檢查／CI</div>
             <div class="route-reason">用程式化檢查阻擋錯誤，不只依賴文字提醒。</div>
           </div>
         </div>
@@ -656,7 +656,7 @@
 
       <section id="build">
         <div class="section-head">
-          <div class="section-no">04 / Build</div>
+          <div class="section-no">04／建置</div>
           <div>
             <h2>建立第一版：五步就夠</h2>
             <p class="section-intro">第一版的目標不是完整，而是建立一個短、可信、能被驗證的起點。</p>
@@ -664,20 +664,20 @@
         </div>
 
         <div class="workflow">
-          <article class="step"><span class="step-no">01</span><h3>產生起點</h3><p>Claude Code 可用 <code>/init</code> 掃描專案並產生起始內容。</p></article>
-          <article class="step"><span class="step-no">02</span><h3>移除常識</h3><p>刪掉檔案樹、套件列表與其他 agent 能自行發現的資訊。</p></article>
-          <article class="step"><span class="step-no">03</span><h3>縮小範圍</h3><p>資料夾專屬規則移到更靠近實際工作的 nested file。</p></article>
-          <article class="step"><span class="step-no">04</span><h3>分流流程</h3><p>長流程移至 Skill；安全底線移至 Hook、pre-commit 或 CI。</p></article>
-          <article class="step"><span class="step-no">05</span><h3>跑一次驗證</h3><p>交給 agent 做真實小任務，檢查規則是否有幫助或衝突。</p></article>
+          <article class="step"><span class="step-no">01</span><h3>產生起點</h3><p>Claude Code 可用 <code data-language-code="">/init</code> 掃描專案並產生起始內容。</p></article>
+          <article class="step"><span class="step-no">02</span><h3>移除常識</h3><p>刪掉檔案樹、套件列表與其他 代理 能自行發現的資訊。</p></article>
+          <article class="step"><span class="step-no">03</span><h3>縮小範圍</h3><p>資料夾專屬規則移到更靠近實際工作的 子目錄規則檔。</p></article>
+          <article class="step"><span class="step-no">04</span><h3>分流流程</h3><p>長流程移至 技能；安全底線移至 Hook、pre-commit 或 CI。</p></article>
+          <article class="step"><span class="step-no">05</span><h3>跑一次驗證</h3><p>交給 代理 做真實小任務，檢查規則是否有幫助或衝突。</p></article>
         </div>
       </section>
 
       <section id="example">
         <div class="section-head">
-          <div class="section-no">05 / Example</div>
+          <div class="section-no">05／範例</div>
           <div>
             <h2>好的指令檔，看起來通常很短</h2>
-            <p class="section-intro">以下範例刻意只保留 agent 不容易從程式碼自行理解的規則與驗收條件。</p>
+            <p class="section-intro">以下範例刻意只保留 代理 不容易從程式碼自行理解的規則與驗收條件。</p>
           </div>
         </div>
 
@@ -685,9 +685,9 @@
           <div class="example-note">
             <h3>五行規則，勝過五頁背景</h3>
             <p>每一行都應回答一個實務問題：什麼不能錯、哪些地方會連動、完成前要做什麼，以及長流程去哪裡找。</p>
-            <p>若同時使用 Claude Code 與 Codex，可選一份共同規則作為 single source of truth，再依工具支援的方式匯入或引用，避免兩份檔案逐漸分歧。</p>
+            <p>若同時使用 Claude Code 與 Codex，可選一份共同規則作為 唯一可信來源，再依工具支援的方式匯入或引用，避免兩份檔案逐漸分歧。</p>
           </div>
-          <pre class="code-block"><span class="comment"># Project instructions</span>
+          <pre class="code-block" data-language-code=""><span class="comment"># Project instructions</span>
 - Run `npm test` before reporting completion.
 - Prices shown to users include tax.
 - Update checkout copy and receipt templates together.
@@ -698,7 +698,7 @@
 
       <section id="maintain">
         <div class="section-head">
-          <div class="section-no">06 / Maintain</div>
+          <div class="section-no">06／維護</div>
           <div>
             <h2>把規則當成會變動的產品</h2>
             <p class="section-intro">新增規則只是維護的一半；另一半是刪除已經被工具、程式碼或流程取代的舊規則。</p>
@@ -708,14 +708,14 @@
         <div class="maintenance">
           <div class="cycle" aria-label="指令檔維護循環">
             <article class="cycle-item"><b>01</b><h3>觀察重複失誤</h3><p>只記錄反覆出現、真正造成成本的問題。</p></article>
-            <article class="cycle-item"><b>02</b><h3>判斷正確層級</h3><p>Project、nested、Skill 還是程式化檢查？</p></article>
+            <article class="cycle-item"><b>02</b><h3>判斷正確層級</h3><p>專案、子目錄、技能 還是程式化檢查？</p></article>
             <article class="cycle-item"><b>03</b><h3>用任務驗證</h3><p>確認新規則真的改變行為，且沒有製造衝突。</p></article>
             <article class="cycle-item"><b>04</b><h3>定期修剪</h3><p>模型、架構或流程改變時，移除過時內容。</p></article>
           </div>
           <aside class="prompt-box">
             <div>
               <h3>可直接使用的健檢提示詞</h3>
-              <pre>請檢查目前的 CLAUDE.md / AGENTS.md，
+              <pre data-language-code="">請檢查目前的 CLAUDE.md / AGENTS.md，
 並逐條分類為：
 
 1. 保留：AI 無法自行推得，且長期有效
@@ -732,25 +732,25 @@
 
       <section id="corrections">
         <div class="section-head">
-          <div class="section-no">07 / Verify</div>
+          <div class="section-no">07／驗證</div>
           <div>
             <h2>三個容易被舊資訊誤導的地方</h2>
-            <p class="section-intro">AI coding 工具更新很快。教材保留影片的核心方法，但版本相關細節以官方文件為準。</p>
+            <p class="section-intro">AI 程式設計 工具更新很快。教材保留影片的核心方法，但版本相關細節以官方文件為準。</p>
           </div>
         </div>
 
         <div class="correction-list">
           <div class="correction">
             <b>不是完全同一套規則</b>
-            <p><code>CLAUDE.md</code> 與 <code>AGENTS.md</code> 用途相近，但搜尋路徑、載入順序與覆寫方式不同。不能只改檔名就假設行為完全一致。</p>
+            <p><code data-language-code="">CLAUDE.md</code> 與 <code data-language-code="">AGENTS.md</code> 用途相近，但搜尋路徑、載入順序與覆寫方式不同。不能只改檔名就假設行為完全一致。</p>
           </div>
           <div class="correction">
-            <b>私人偏好改用 imports</b>
-            <p>Anthropic 官方文件已將 <code>CLAUDE.local.md</code> 標示為 deprecated；目前建議使用 <code>@path/to/file</code> 匯入不提交到版本控制的個人檔案。</p>
+            <b>私人偏好改用 匯入</b>
+            <p>Anthropic 官方文件已將 <code data-language-code="">CLAUDE.local.md</code> 標示為 已淘汰；目前建議使用 <code data-language-code="">@path/to/file</code> 匯入不提交到版本控制的個人檔案。</p>
           </div>
           <div class="correction">
             <b>功能指令先查現行文件</b>
-            <p>Slash commands、模型名稱與內建分析功能會隨版本變動。採用前先查官方文件，不把影片中的版本名稱寫成長期規則。</p>
+            <p>斜線指令、模型名稱與內建分析功能會隨版本變動。採用前先查官方文件，不把影片中的版本名稱寫成長期規則。</p>
           </div>
         </div>
       </section>
@@ -759,20 +759,20 @@
         <h2>來源與延伸閱讀</h2>
         <ul class="source-list">
           <li>
-            <span class="source-type">Video</span>
+            <span class="source-type">影片</span>
             <a href="https://www.youtube.com/watch?v=wj7mHCviMvs" target="_blank" rel="noreferrer">Gary Chen：15 分鐘學完 CLAUDE.md，從入門到精通</a>
           </li>
           <li>
             <span class="source-type">Anthropic</span>
-            <a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noreferrer">How Claude remembers your project</a>
+            <a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noreferrer">Claude 如何記住你的專案</a>
           </li>
           <li>
             <span class="source-type">OpenAI</span>
-            <a href="https://openai.com/index/introducing-codex/" target="_blank" rel="noreferrer">Introducing Codex：AGENTS.md guidance</a>
+            <a href="https://openai.com/index/introducing-codex/" target="_blank" rel="noreferrer">介紹 Codex：AGENTS.md 指南</a>
           </li>
           <li>
             <span class="source-type">OpenAI</span>
-            <a href="https://openai.com/index/unrolling-the-codex-agent-loop/" target="_blank" rel="noreferrer">Unrolling the Codex agent loop：instruction aggregation and scope</a>
+            <a href="https://openai.com/index/unrolling-the-codex-agent-loop/" target="_blank" rel="noreferrer">展開 Codex 代理迴圈：指令彙整與範圍</a>
           </li>
         </ul>
       </section>
@@ -780,18 +780,18 @@
   </div>
 
   <footer>
-    <div class="wrap">Michael Agent Lab · Public teaching note · 2026-08-04</div>
+    <div class="wrap">Michael Agent Lab · 公開教學筆記 · 2026-08-04</div>
   </footer>
   <script src="../tutorial-gate.js?v=20260804-analytics"></script>
   <script src="../feedback-widget.js?v=20260804-analytics"></script>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
-      <li><a href="./voice-input-agent-context.html">語音輸入 x AI Agent：Context 轉換工作法</a></li>
-      <li><a href="./human-sop-agentic-workflow.html">把 SOP 拆成 Agent 真能執行的 Workflow</a></li>
+      <li><a href="./voice-input-agent-context.html">語音輸入 x AI Agent：上下文 轉換工作法</a></li>
+      <li><a href="./human-sop-agentic-workflow.html">把 SOP 拆成 Agent 真能執行的 工作流程</a></li>
       <li><a href="../tutorial-library.html">返回所有分類教材</a></li>
     </ul>
   </div>

@@ -370,31 +370,31 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/e2309cf3da6a8b54.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <main class="page">
     <header class="topbar">
       <div class="brand">
         <span class="lesson-brand-text">Michael AI Agent Lab</span>
         <div class="brand-text">
-          <strong>Michael AI Agent Lab AI Agent Training</strong>
-          <small>Brownfield AI 改 Code 安全流程</small>
+          <strong>Michael AI Agent Lab：AI Agent 培訓</strong>
+          <small>既有專案 AI 改 程式碼 安全流程</small>
         </div>
       </div>
-      <div class="draft-pill">Training Library</div>
+      <div class="draft-pill">培訓資料庫</div>
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-card">
-        <p class="kicker">Engineering Workflow</p>
+        <p class="kicker">工程工作流程</p>
         <h1 id="hero-title">先看懂，<br>再動手。</h1>
         <p class="hero-lead">
-          舊專案不是空地。讓 AI 進來改 code 前，先定位畫面、追清楚資料流、寫出不能踩的邊界，再用小步 review 與回歸驗證把風險壓住。
+          舊專案不是空地。讓 AI 進來改 程式碼 前，先定位畫面、追清楚資料流、寫出不能踩的邊界，再用小步 審核 與回歸驗證把風險壓住。
         </p>
         <div class="hero-signal">
-          <span class="signal">Brownfield 專案</span>
-          <span class="signal">AI Coding Guardrails</span>
-          <span class="signal">Regression Check</span>
+          <span class="signal">既有專案 專案</span>
+          <span class="signal">AI 程式開發防護規則</span>
+          <span class="signal">回歸檢查</span>
         </div>
       </div>
 
@@ -407,7 +407,7 @@
           <article class="step">
             <div class="step-num">1</div>
             <h3>定位畫面</h3>
-            <p>找出 UI 區塊對應的檔案、子元件與共用元件，不先改 code。</p>
+            <p>找出 UI 區塊對應的檔案、子元件與共用元件，不先改 程式碼。</p>
           </article>
           <article class="step">
             <div class="step-num">2</div>
@@ -421,13 +421,13 @@
           </article>
           <article class="step">
             <div class="step-num">4</div>
-            <h3>小步 review</h3>
+            <h3>小步 審核</h3>
             <p>先設計，再局部改動，每一步都檢查是否偏離原本架構。</p>
           </article>
           <article class="step">
             <div class="step-num">5</div>
             <h3>回歸驗證</h3>
-            <p>跑測試、看 log、檢查共用 hook 的其他頁面是否仍正常。</p>
+            <p>跑測試、看 紀錄、檢查共用 hook 的其他頁面是否仍正常。</p>
           </article>
         </div>
       </aside>
@@ -442,18 +442,18 @@
         <article class="section-card">
           <div class="icon-row">
             <span class="icon green" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 16V9m4 7V6m4 10v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 16V9m4 7V6m4 10v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
-            <h3>Greenfield：從零開始</h3>
+            <h3>全新開發：從零開始</h3>
           </div>
-          <p>適合快速建立雛形。規則少、相依少，AI 可以主導架構和檔案安排。風險在於初期太快，後面若沒有治理，很快就會變成難維護的 Brownfield。</p>
+          <p>適合快速建立雛形。規則少、相依少，AI 可以主導架構和檔案安排。風險在於初期太快，後面若沒有治理，很快就會變成難維護的 既有專案。</p>
         </article>
         <article class="section-card">
           <div class="icon-row">
             <span class="icon yellow" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 20V8l7-4 7 4v12M9 20v-6h6v6M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M5 20V8l7-4 7 4v12M9 20v-6h6v6M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <h3>Brownfield：接手既有系統</h3>
+            <h3>既有專案：接手既有系統</h3>
           </div>
           <p>適合用探索式流程處理。重點不是讓 AI 立刻寫，而是先讓它看懂既有元件、資料來源、共用 hook、錯誤處理與測試方式。</p>
         </article>
@@ -470,14 +470,14 @@
           <div class="split-label">AI 輔助開發</div>
           <div class="split-content">
             <strong>你手動找檔案，AI 幫你讀得更快。</strong>
-            適合網頁版 AI、初次接觸 codebase、或還不放心讓 agent 自己改檔案的情境。你負責打開 DevTools、全域搜尋、貼相關檔案，AI 負責整理結構與風險。
+            適合網頁版 AI、初次接觸 codebase、或還不放心讓 代理 自己改檔案的情境。你負責打開 DevTools、全域搜尋、貼相關檔案，AI 負責整理結構與風險。
           </div>
         </div>
         <div class="split-row">
-          <div class="split-label">指揮式 Agent</div>
+          <div class="split-label">指揮式 代理</div>
           <div class="split-content">
-            <strong>Agent 讀整個專案，先回報地圖。</strong>
-            適合 Claude Code、Cursor、Codex 這類可讀 repo 的工具。先要求它定位、追 data flow、列共用相依，再把探勘結果輸出成架構導覽圖。
+            <strong>代理 讀整個專案，先回報地圖。</strong>
+            適合 Claude Code、Cursor、Codex 這類可讀 儲存庫 的工具。先要求它定位、追 資料流、列共用相依，再把探勘結果輸出成架構導覽圖。
           </div>
         </div>
       </div>
@@ -486,7 +486,7 @@
     <section class="section">
       <div class="section-head">
         <h2>Michael AI Agent Lab 操作 SOP</h2>
-        <p>這份流程可以直接套到既有團隊工具、教材網站、dashboard、或任何已經有人使用的系統維護任務。</p>
+        <p>這份流程可以直接套到既有團隊工具、教材網站、儀表板、或任何已經有人使用的系統維護任務。</p>
       </div>
       <div class="timeline">
         <article class="gate">
@@ -500,21 +500,21 @@
           <div class="gate-badge">02</div>
           <div>
             <h3>追資料流：知道資料從哪裡來、往哪裡去</h3>
-            <p>檢查 <code>package.json</code>、hooks、store、API client、mutate/dispatch/setState、logger。特別要求 AI 標出被共用的 hook 或型別，因為這些通常是改 A 壞 B 的來源。</p>
+            <p>檢查 <code data-language-code="">package.json</code>、hooks、store、API client、mutate/dispatch/setState、logger。特別要求 AI 標出被共用的 hook 或型別，因為這些通常是改 A 壞 B 的來源。</p>
           </div>
         </article>
         <article class="gate">
           <div class="gate-badge">03</div>
           <div>
-            <h3>寫 Guardrails：需求不是一句話，而是一組施工規則</h3>
-            <p>需求要寫清楚既有 pattern、可重用元件、禁動檔案、權限/routing/共用 hook 的邊界、測試要求。Brownfield 裡的 clean code 不是炫技，而是跟既有專案一致。</p>
+            <h3>寫 安全護欄：需求不是一句話，而是一組施工規則</h3>
+            <p>需求要寫清楚既有 pattern、可重用元件、禁動檔案、權限/routing/共用 hook 的邊界、測試要求。既有專案 裡的 clean 程式碼 不是炫技，而是跟既有專案一致。</p>
           </div>
         </article>
         <article class="gate">
           <div class="gate-badge">04</div>
           <div>
-            <h3>小步 Review：先規劃，再一塊一塊改</h3>
-            <p>先看元件結構和資料流規劃，再改 hook，再改 UI，再補互動。每一步 review 的重點是：有沒有偏離原本寫法、有沒有偷偷動共用檔、有沒有重做既有元件、有沒有漏 loading/error。</p>
+            <h3>小步 審核：先規劃，再一塊一塊改</h3>
+            <p>先看元件結構和資料流規劃，再改 hook，再改 UI，再補互動。每一步 審核 的重點是：有沒有偏離原本寫法、有沒有偷偷動共用檔、有沒有重做既有元件、有沒有漏 載入與錯誤狀態。</p>
           </div>
         </article>
         <article class="gate">
@@ -543,30 +543,30 @@
         </div>
         <div class="decision">
           <strong>它知道不能動哪裡嗎？</strong>
-          <span>禁動區要寫進 prompt，不要靠默契。</span>
+          <span>禁動區要寫進 提示詞，不要靠默契。</span>
         </div>
         <div class="decision">
           <strong>它有辦法驗證嗎？</strong>
-          <span>測試、build、截圖、log 都是可讀證據。</span>
+          <span>測試、建置、截圖、紀錄 都是可讀證據。</span>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <h2>可複製 Prompt</h2>
-        <p>把下面幾段當成 Brownfield 任務的起手式。重點是先限制 AI 的動作，再要求它產出可檢查的證據。</p>
+        <h2>可複製 提示詞</h2>
+        <p>把下面幾段當成 既有專案 任務的起手式。重點是先限制 AI 的動作，再要求它產出可檢查的證據。</p>
       </div>
       <div class="grid-2">
         <article class="prompt-card">
-          <h3>1. 探索畫面，不改 code</h3>
-          <pre>請先找出「[畫面區塊/功能名稱]」是由哪些檔案渲染的。
+          <h3>1. 探索畫面，不改 程式碼</h3>
+          <pre data-language-code="">請先找出「[畫面區塊/功能名稱]」是由哪些檔案渲染的。
 請列出父元件、子元件、共用元件，以及可能影響其他頁面的元件。
 這個階段只做分析，不要修改任何 code。</pre>
         </article>
         <article class="prompt-card">
-          <h3>2. 梳理 data flow</h3>
-          <pre>請梳理這個功能的 data flow：
+          <h3>2. 梳理 資料流</h3>
+          <pre data-language-code="">請梳理這個功能的 data flow：
 1. 資料從哪個 API 或資料源進來
 2. 使用哪套狀態管理或 fetching pattern
 3. 使用者操作後資料如何回到 server
@@ -575,7 +575,7 @@
         </article>
         <article class="prompt-card">
           <h3>3. 帶規則的需求</h3>
-          <pre>請在既有功能上新增 [需求]。
+          <pre data-language-code="">請在既有功能上新增 [需求]。
 動手前先讀相關 hook、共用元件、型別定義與測試。
 要求：
 - 沿用專案既有 pattern
@@ -585,8 +585,8 @@
 - 每一步完成後回報 diff 與驗證結果</pre>
         </article>
         <article class="prompt-card">
-          <h3>4. Review 與回歸檢查</h3>
-          <pre>請用資深工程師角度 review 這次改動：
+          <h3>4. 審核 與回歸檢查</h3>
+          <pre data-language-code="">請用資深工程師角度 review 這次改動：
 1. 有沒有偏離專案既有命名、資料夾結構或 fetching pattern
 2. 有沒有偷偷改到共用檔案
 3. 有沒有漏 loading / error / empty 狀態
@@ -599,13 +599,13 @@
     <section class="section">
       <div class="section-head">
         <h2>風險控制</h2>
-        <p>這些是舊專案最常出事的位置。教材、內部 dashboard、工具網站都適用。</p>
+        <p>這些是舊專案最常出事的位置。教材、內部 儀表板、工具網站都適用。</p>
       </div>
       <div class="grid-3">
         <article class="note-card section-card">
           <div class="icon-row">
             <span class="icon red" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8v5m0 4h.01M10.3 4.4 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.4a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M12 8v5m0 4h.01M10.3 4.4 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.4a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <h3>共用 Hook</h3>
           </div>
@@ -614,7 +614,7 @@
         <article class="note-card section-card">
           <div class="icon-row">
             <span class="icon orange" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 7v13m10-13v13M9 7V4h6v3M10 12h4m-4 4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M4 7h16M7 7v13m10-13v13M9 7V4h6v3M10 12h4m-4 4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <h3>重複造輪子</h3>
           </div>
@@ -623,7 +623,7 @@
         <article class="note-card section-card">
           <div class="icon-row">
             <span class="icon purple" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 11h8M8 15h5M6 3h12a2 2 0 0 1 2 2v14l-4-3H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none"><path d="M8 11h8M8 15h5M6 3h12a2 2 0 0 1 2 2v14l-4-3H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <h3>錯誤紀錄</h3>
           </div>
@@ -635,19 +635,19 @@
     <section class="sources" aria-labelledby="sources-title">
       <h2 id="sources-title">來源與審稿依據</h2>
       <ul>
-        <li>Gary Chen：<a href="https://www.youtube.com/watch?v=CMs8YMU6_RM">AI 改 code 一直改 A 壞 B？你缺的是這五個步驟</a>，2026/07/18。</li>
-        <li>Anthropic Claude Code Docs：<a href="https://code.claude.com/docs/en/best-practices">Best practices for Claude Code</a>，用於探索、計畫、驗證與 context 管理概念。</li>
-        <li>Visual Studio Code Docs：<a href="https://code.visualstudio.com/docs/agents/best-practices">AI agents best practices</a>，用於 agent 工作流、context 與測試參考。</li>
-        <li>OpenAI Docs：<a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">AGENTS.md</a>，用於專案規則與 agent instruction 概念。</li>
-        <li>Martin Fowler / Thoughtworks：<a href="https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html">Context Engineering for Coding Agents</a>，用於 context、rules、guardrails 的整理。</li>
-        <li>GitHub Docs：<a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review">Using GitHub Copilot code review</a>，用於 AI 初審與人類終審的界線。</li>
+        <li>Gary Chen：<a href="https://www.youtube.com/watch?v=CMs8YMU6_RM">AI 改 程式碼 一直改 A 壞 B？你缺的是這五個步驟</a>，2026/07/18。</li>
+        <li>Anthropic Claude Code 文件：<a href="https://code.claude.com/docs/en/best-practices">Claude Code 最佳實務</a>，用於探索、計畫、驗證與 上下文 管理概念。</li>
+        <li>Visual Studio Code 文件：<a href="https://code.visualstudio.com/docs/agents/best-practices">AI Agent 最佳實務</a>，用於 代理 工作流、上下文 與測試參考。</li>
+        <li>OpenAI 文件：<a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">AGENTS.md</a>，用於專案規則與 代理 instruction 概念。</li>
+        <li>Martin Fowler／Thoughtworks：<a href="https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html">程式代理的上下文工程</a>，用於 上下文、rules、guardrails 的整理。</li>
+        <li>GitHub 文件：<a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review">使用 GitHub Copilot 審查程式碼</a>，用於 AI 初審與人類終審的界線。</li>
       </ul>
     </section>
   </main>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Agent 系統架構與可靠性</h2>
     <ul>
       <li><a href="./claude-code-loop-engineering.html">Claude Code Loop 設計：觸發、驗證與停止條件</a></li>

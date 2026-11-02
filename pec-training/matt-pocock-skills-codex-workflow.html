@@ -964,28 +964,28 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/713d68604d8a06c0.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body class="matt-workflow-page">
   <header class="topbar">
     <div class="topbar-inner">
       <span class="lesson-brand-text">Michael AI Agent Lab</span>
       <div class="topbar-title">
-        Grill Me 與 Matt Pocock Skills
+        Grill Me 與 Matt Pocock 技能
         <span class="topbar-subtitle">Michael AI Agent Lab · 2026-07-23</span>
       </div>
-      <span class="draft-badge">APPROVED LESSON</span>
+      <span class="draft-badge">已核准課程</span>
     </div>
   </header>
 
   <div class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Agent Decision Control</p>
-      <h1>Grill Me：先把決策問清楚，再讓 Agent 動手</h1>
+      <p class="eyebrow">Agent 決策控制</p>
+      <h1>Grill Me：先把決策問清楚，再讓 代理 動手</h1>
       <p class="hero-copy">真正有價值的不是「AI 問很多問題」，而是把事實查證、選項建議、決策依賴與人類確認，組成一個不會偷跑的開工閘門。</p>
       <div class="hero-verdict">
         <div class="hero-verdict-text">
           <strong>這頁的重點</strong>
-          <span>先釐清會影響成果的關鍵決策，再讓 Agent 執行。從模糊需求到可交付成果，保留人來確認的重要關卡。</span>
+          <span>先釐清會影響成果的關鍵決策，再讓 代理 執行。從模糊需求到可交付成果，保留人來確認的重要關卡。</span>
         </div>
       </div>
     </div>
@@ -997,107 +997,107 @@
       <a href="#rules">五項規則</a>
       <a href="#scenario">實際對話</a>
       <a href="#workflow">完整工作流</a>
-      <a href="#portfolio">Skill Portfolio</a>
+      <a href="#portfolio">技能組合</a>
       <a href="#architecture">架構思維</a>
       <a href="#audit">本機稽核</a>
       <a href="#difference">差異結論</a>
       <a href="#prompts">提示詞</a>
-      <a href="#sources">Sources</a>
+      <a href="#sources">來源</a>
     </div>
   </nav>
 
   <main>
     <section id="structure">
-      <p class="section-kicker">01 · Current Architecture</p>
+      <p class="section-kicker">01 · 目前架構</p>
       <h2>現行版不是「五行魔法」，而是三層可組合結構</h2>
-      <p class="section-lead">Matt 把手動入口、可重用訪談行為、codebase 文件化拆開。這正是小型 skill 的價值：每一層只負責一件事，行為只有一個真實來源。</p>
+      <p class="section-lead">Matt 把手動入口、可重用訪談行為、程式庫 文件化拆開。這正是小型 技能 的價值：每一層只負責一件事，行為只有一個真實來源。</p>
 
       <div class="architecture" aria-label="Grill Me skill 結構">
         <article class="architecture-node">
           <div class="icon-box tone-amber">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           </div>
           <strong>grill-me</strong>
           <p>給人手動呼叫的入口。現行內容只負責啟動共用訪談迴圈。</p>
-          <code>disable-model-invocation: true</code>
+          <code data-language-code="">disable-model-invocation: true</code>
         </article>
         <div class="arrow" aria-hidden="true">
-          <svg viewBox="0 0 40 40"><path d="M7 20h25M24 12l8 8-8 8"/></svg>
+          <svg viewbox="0 0 40 40"><path d="M7 20h25M24 12l8 8-8 8"/></svg>
         </div>
         <article class="architecture-node">
           <div class="icon-box tone-cyan">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10M7 12h7M5 19l2.5-3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7a3 3 0 0 0 2 2.8z"/></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7 8h10M7 12h7M5 19l2.5-3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v7a3 3 0 0 0 2 2.8z"/></svg>
           </div>
           <strong>grilling</strong>
-          <p>真正的行為核心：逐題追問、附建議、先查事實、等人類確認。其他 skill 也可以重用。</p>
-          <code>model-invoked primitive</code>
+          <p>真正的行為核心：逐題追問、附建議、先查事實、等人類確認。其他 技能 也可以重用。</p>
+          <code data-language-code="">model-invoked primitive</code>
         </article>
         <div class="arrow" aria-hidden="true">
-          <svg viewBox="0 0 40 40"><path d="M7 20h25M24 12l8 8-8 8"/></svg>
+          <svg viewbox="0 0 40 40"><path d="M7 20h25M24 12l8 8-8 8"/></svg>
         </div>
         <article class="architecture-node">
           <div class="icon-box tone-green">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>
           </div>
           <strong>grill-with-docs</strong>
           <p>Codebase 專用入口：執行 grilling，同時用 domain-modeling 維護術語與重要決策。</p>
-          <code>grilling + domain-modeling</code>
+          <code data-language-code="">grilling + domain-modeling</code>
         </article>
       </div>
 
       <div class="branch-note">
-        <strong>版本修正：</strong>「打開 grill-me 會看到完整五行指令」已不是 2026-07-23 live GitHub 的真實結構。現在 wrapper 只有一行，完整規則移到 `grilling`，這是為了 single source of truth 與重用。
+        <strong>版本修正：</strong>「打開 grill-me 會看到完整五行指令」已不是 2026-07-23 GitHub 即時版本 的真實結構。現在 包裝入口 只有一行，完整規則移到 `grilling`，這是為了 唯一可信來源 與重用。
       </div>
     </section>
 
     <section id="rules">
-      <p class="section-kicker">02 · Operating Rules</p>
+      <p class="section-kicker">02 · 運作規則</p>
       <h2>五項規則少一項，就不算真的 Grill Me</h2>
-      <p class="section-lead">判斷 agent 有沒有照做，不是看它問了幾題，而是看問題的順序、資訊來源、建議品質與停止條件。</p>
+      <p class="section-lead">判斷 代理 有沒有照做，不是看它問了幾題，而是看問題的順序、資訊來源、建議品質與停止條件。</p>
 
       <div class="grid-5">
         <article class="card rule-card">
-          <span class="rule-number">RULE 01</span>
+          <span class="rule-number">規則 01</span>
           <h3>一次只問一題</h3>
           <p>每次處理最重要的未決項目，等回答後才走下一個分支。</p>
           <p class="small">檢查點：不能一次丟十題問卷。</p>
         </article>
         <article class="card rule-card">
-          <span class="rule-number">RULE 02</span>
+          <span class="rule-number">規則 02</span>
           <h3>沿決策樹往下</h3>
           <p>先解上游選擇，再問受它影響的下游問題，避免順序顛倒。</p>
           <p class="small">檢查點：每題應能說明為何現在要問。</p>
         </article>
         <article class="card rule-card">
-          <span class="rule-number">RULE 03</span>
+          <span class="rule-number">規則 03</span>
           <h3>每題附建議答案</h3>
-          <p>Agent 不只把思考工作丟回來，還要提供推薦選項、理由與取捨。</p>
-          <p class="small">檢查點：有 recommendation，不是空泛追問。</p>
+          <p>代理 不只把思考工作丟回來，還要提供推薦選項、理由與取捨。</p>
+          <p class="small">檢查點：有 建議，不是空泛追問。</p>
         </article>
         <article class="card rule-card">
-          <span class="rule-number">RULE 04</span>
+          <span class="rule-number">規則 04</span>
           <h3>事實自己查</h3>
-          <p>檔案位置、現有行為、API、程式流程等可查事實，由 agent 探索環境取得。</p>
-          <p class="small">檢查點：只把真正需要人類拍板的 decision 問你。</p>
+          <p>檔案位置、現有行為、API、程式流程等可查事實，由 代理 探索環境取得。</p>
+          <p class="small">檢查點：只把真正需要人類拍板的 決策 問你。</p>
         </article>
         <article class="card rule-card">
-          <span class="rule-number">RULE 05</span>
+          <span class="rule-number">規則 05</span>
           <h3>確認前不動工</h3>
-          <p>達成 shared understanding 並由人類確認前，不寫 code、不改設定、不開始實作。</p>
-          <p class="small">檢查點：有明確 approval gate。</p>
+          <p>達成 共同理解 並由人類確認前，不寫 程式碼、不改設定、不開始實作。</p>
+          <p class="small">檢查點：有明確 核准關卡。</p>
         </article>
       </div>
     </section>
 
     <section id="scenario">
-      <p class="section-kicker">03 · AI Agent Workflow Example</p>
+      <p class="section-kicker">03 · AI Agent 工作流程範例</p>
       <h2>同一句需求，直接做與先釐清的結果差很多</h2>
-      <p class="section-lead">以下以「讓內容輸出 agent 自動交付最新教學檔」為例。真正重要的不是多問，而是先抓出會改變安全性與使用方式的上游決策。</p>
+      <p class="section-lead">以下以「讓內容輸出 代理 自動交付最新教學檔」為例。真正重要的不是多問，而是先抓出會改變安全性與使用方式的上游決策。</p>
 
       <div class="decision-example">
         <article class="request-box">
           <span class="request-label">
-            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H7l-3 3zM8 9h8M8 12h5"/></svg>
+            <svg class="inline-icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H7l-3 3zM8 9h8M8 12h5"/></svg>
             模糊需求
           </span>
           <p class="request-text">「多加一個按鈕，把最後一個檔案寄到我信箱。」</p>
@@ -1112,7 +1112,7 @@
 
         <article class="conversation-box">
           <span class="chat-label">
-            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v2l-2 3h5v4h8v-4h5l-2-3v-2a7 7 0 0 0-7-7zM9 19h6"/></svg>
+            <svg class="inline-icon" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v2l-2 3h5v4h8v-4h5l-2-3v-2a7 7 0 0 0-7-7zM9 19h6"/></svg>
             一題一題收斂
           </span>
           <div class="chat-row">
@@ -1121,7 +1121,7 @@
           </div>
           <div class="chat-row user">
             <div class="chat-speaker">Michael</div>
-            <p>就用 latest export。</p>
+            <p>就用 最新匯出版本。</p>
           </div>
           <div class="chat-row">
             <div class="chat-speaker">Agent</div>
@@ -1132,9 +1132,9 @@
     </section>
 
     <section id="workflow">
-      <p class="section-kicker">04 · Idea To Delivery</p>
+      <p class="section-kicker">04 · 從想法到交付</p>
       <h2>Grill Me 只是入口，後面要接可驗證的工程流程</h2>
-      <p class="section-lead">每個 skill 只完成一個明確工作。需求已經清楚時可以從中間開始，不需要為了遵守形式把整條線重跑。</p>
+      <p class="section-lead">每個 技能 只完成一個明確工作。需求已經清楚時可以從中間開始，不需要為了遵守形式把整條線重跑。</p>
 
       <div class="flow">
         <article class="flow-step">
@@ -1150,7 +1150,7 @@
         <article class="flow-step">
           <span class="step-index">03</span>
           <strong>to-tickets</strong>
-          <p>拆成可獨立驗證的 tracer-bullet tickets，標出 blocking edges。</p>
+          <p>拆成可獨立驗證的 可貫通流程的驗收票，標出 阻擋相依關係。</p>
         </article>
         <article class="flow-step">
           <span class="step-index">04</span>
@@ -1160,30 +1160,30 @@
         <article class="flow-step">
           <span class="step-index">05</span>
           <strong>TDD</strong>
-          <p>在預先同意的 seam 上，一次完成一個 red → green 垂直切片。</p>
+          <p>在預先同意的 模組邊界 上，一次完成一個 red → green 垂直切片。</p>
         </article>
         <article class="flow-step">
           <span class="step-index">06</span>
           <strong>code-review</strong>
-          <p>分開檢查 Standards 與 Spec，避免「寫得漂亮但做錯需求」。</p>
+          <p>分開檢查 工程標準 與 需求規格，避免「寫得漂亮但做錯需求」。</p>
         </article>
       </div>
 
       <div class="branch-note">
-        <strong>正確分流：</strong>沒有 codebase 的一般想法用 `grill-me`；已經在專案裡做功能、架構或領域設計，使用 `grill-with-docs`。後者會把 canonical terms 寫入 `CONTEXT.md`，只有難以逆轉、令人意外且存在真實取捨的決策才值得 ADR。
+        <strong>正確分流：</strong>沒有 程式庫 的一般想法用 `grill-me`；已經在專案裡做功能、架構或領域設計，使用 `grill-with-docs`。後者會把 標準術語 寫入 `CONTEXT.md`，只有難以逆轉、令人意外且存在真實取捨的決策才值得 ADR。
       </div>
     </section>
 
     <section id="portfolio">
-      <p class="section-kicker">05 · Current Skill Portfolio</p>
-      <h2>不是所有 skill 都自動跑：Matt 刻意分成「流程入口」與「工程紀律」</h2>
-      <p class="section-lead">這是前一版最需要說清楚的地方。官方 `main` 以 `disable-model-invocation` 區分誰能啟動：手動入口控制階段，自動 skill 只在任務符合時提供可重用紀律。全部一起觸發反而會增加 random 行為。</p>
+      <p class="section-kicker">05 · 目前技能組合</p>
+      <h2>不是所有 技能 都自動跑：Matt 刻意分成「流程入口」與「工程紀律」</h2>
+      <p class="section-lead">這是前一版最需要說清楚的地方。官方 `main` 以 `disable-model-invocation` 區分誰能啟動：手動入口控制階段，自動 技能 只在任務符合時提供可重用紀律。全部一起觸發反而會增加 隨機 行為。</p>
 
       <div class="grid-3">
         <article class="card">
           <span class="status warn">手動入口</span>
           <h3>grill-with-docs</h3>
-          <p>你口述的「grow with stacks」最可能是這個。用於已有 codebase 的需求釐清，同時維護 `CONTEXT.md` 與必要 ADR。</p>
+          <p>你口述的「grow with stacks」最可能是這個。用於已有 程式庫 的需求釐清，同時維護 `CONTEXT.md` 與必要 ADR。</p>
         </article>
         <article class="card">
           <span class="status warn">手動入口</span>
@@ -1193,7 +1193,7 @@
         <article class="card">
           <span class="status warn">手動入口</span>
           <h3>to-tickets</h3>
-          <p>你說的「to check it」正確名稱是 `to-tickets`。它把 spec 拆成可獨立驗證的 tracer-bullet tickets，並標示 blocking edges。</p>
+          <p>你說的「to check it」正確名稱是 `to-tickets`。它把 spec 拆成可獨立驗證的 可貫通流程的驗收票，並標示 阻擋相依關係。</p>
         </article>
         <article class="card">
           <span class="status warn">手動入口</span>
@@ -1208,7 +1208,7 @@
         <article class="card">
           <span class="status pass">可自動採用</span>
           <h3>code-review</h3>
-          <p>從固定基準點比較 diff，分開檢查 Standards 與 Spec，避免程式碼品質掩蓋需求偏差。</p>
+          <p>從固定基準點比較 diff，分開檢查 工程標準 與 需求規格，避免程式碼品質掩蓋需求偏差。</p>
         </article>
         <article class="card">
           <span class="status pass">可自動採用</span>
@@ -1223,26 +1223,26 @@
         <article class="card">
           <span class="status warn">手動入口</span>
           <h3>wayfinder</h3>
-          <p>只給超過單一 context window 的大型模糊工作。它解決 decision tickets，不產生功能；路線清楚後才接 to-spec。</p>
+          <p>只給超過單一 上下文 window 的大型模糊工作。它解決 決策 tickets，不產生功能；路線清楚後才接 to-spec。</p>
         </article>
       </div>
 
       <div class="branch-note">
-        <strong>本機狀態：</strong>官方 README 現列的 22 個工程與生產力核心 skill 已全部存在於 Codex。`to-tickets` 唯一多出的舊句子也已移除，現在與官方 commit `ed37663` 完全一致；不需要重裝整套或改動 upstream frontmatter。
+        <strong>本機狀態：</strong>官方 README 現列的 22 個工程與生產力核心 技能 已全部存在於 Codex。`to-tickets` 唯一多出的舊句子也已移除，現在與官方 commit `ed37663` 完全一致；不需要重裝整套或改動 上游原版 前置中繼資料。
       </div>
     </section>
 
     <section id="architecture">
-      <p class="section-kicker">06 · Deep Module Thinking</p>
+      <p class="section-kicker">06 · 深層模組思維</p>
       <h2>好架構不是檔案越多，而是介面越小、內部能力越深</h2>
-      <p class="section-lead">AI 維護 codebase 時，最怕為了理解一個行為在許多薄檔案間跳轉。深模組把複雜性藏在小介面後面，讓修改、測試與知識集中在同一個地方。</p>
+      <p class="section-lead">AI 維護 程式庫 時，最怕為了理解一個行為在許多薄檔案間跳轉。深模組把複雜性藏在小介面後面，讓修改、測試與知識集中在同一個地方。</p>
 
       <div class="deep-visual">
         <article class="module-card">
           <div class="icon-box tone-amber">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v5H4zM4 14h5v5H4zM11 14h9v5h-9z"/></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v5H4zM4 14h5v5H4zM11 14h9v5h-9z"/></svg>
           </div>
-          <h3>Shallow module</h3>
+          <h3>淺層模組</h3>
           <p>介面接近實作一樣複雜，呼叫者必須知道太多細節。</p>
           <div class="module-diagram" aria-label="淺模組示意">
             <div class="shallow-interface">大型介面：很多方法、參數與順序規則</div>
@@ -1251,48 +1251,48 @@
         </article>
         <article class="module-card">
           <div class="icon-box tone-green">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v4H7zM4 12h16v8H4zM8 16h8"/></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v4H7zM4 12h16v8H4zM8 16h8"/></svg>
           </div>
-          <h3>Deep module</h3>
+          <h3>深層模組</h3>
           <p>用小介面提供大量行為，複雜性、測試與修正集中在模組內。</p>
           <div class="module-diagram" aria-label="深模組示意">
             <div class="deep-interface">小介面：少量清楚操作</div>
-            <div class="deep-body">深實作：規則、錯誤處理、資料轉換與依賴細節都藏在裡面<br><strong>Leverage + Locality</strong></div>
+            <div class="deep-body">深實作：規則、錯誤處理、資料轉換與依賴細節都藏在裡面<br><strong>效益放大＋局部性</strong></div>
           </div>
         </article>
       </div>
 
       <div class="grid-3" style="margin-top:16px">
         <article class="card">
-          <h3>Deletion test</h3>
-          <p>想像刪掉這個模組。如果複雜性散回許多 caller，它有隱藏真正複雜度；如果程式反而更簡單，它可能只是 middle man。</p>
+          <h3>刪除測試</h3>
+          <p>想像刪掉這個模組。如果複雜性散回許多 呼叫端，它有隱藏真正複雜度；如果程式反而更簡單，它可能只是 中間轉接層。</p>
         </article>
         <article class="card">
-          <h3>Interface = test surface</h3>
-          <p>Caller 與測試應跨越同一個 seam。需要繞過介面才能測試，通常代表模組形狀不對。</p>
+          <h3>介面＝測試範圍</h3>
+          <p>呼叫端 與測試應跨越同一個 模組邊界。需要繞過介面才能測試，通常代表模組形狀不對。</p>
         </article>
         <article class="card">
-          <h3>One adapter is hypothetical</h3>
-          <p>只有一個 adapter 時，不要急著建立抽象 seam；真的有兩個變體，這條 seam 才有實際價值。</p>
+          <h3>單一轉接器仍屬假設</h3>
+          <p>只有一個 轉接器 時，不要急著建立抽象 模組邊界；真的有兩個變體，這條 模組邊界 才有實際價值。</p>
         </article>
       </div>
     </section>
 
     <section id="audit">
-      <p class="section-kicker">07 · Local Conformance Audit</p>
+      <p class="section-kicker">07 · 本機符合性稽核</p>
       <h2>你的本機核心邏輯有對齊，但「會不會真的觸發」是另一件事</h2>
-      <p class="section-lead">我把 active Codex skill 與 live GitHub 原始檔逐檔比較，也檢查全域 routing 規則與現有 invocation log。結果不能只用一個「有裝」或「沒裝」回答。</p>
+      <p class="section-lead">我把 啟用中 Codex 技能 與 GitHub 即時版本 原始檔逐檔比較，也檢查全域 路由 規則與現有 啟動紀錄。結果不能只用一個「有裝」或「沒裝」回答。</p>
 
       <div class="audit-summary">
         <div class="score">
           <div>
             <strong>22 / 22</strong>
-            <span>official core portfolio installed</span>
+            <span>官方核心技能組合已安裝</span>
           </div>
         </div>
         <div class="audit-message">
           <h3>檔案與路由已對齊，操作證據仍需補強</h3>
-          <p>官方 README 現列的 22 個核心 skill 都已安裝；重點工程 skill 與 commit `ed37663` 相同。全域 Codex 規則已加入繁體中文與自然語句分流；但 invocation log 尚未證明每一種口述方式都曾成功觸發，因此還需要固定 smoke test。</p>
+          <p>官方 README 現列的 22 個核心 技能 都已安裝；重點工程 技能 與 commit `ed37663` 相同。全域 Codex 規則已加入繁體中文與自然語句分流；但 啟動紀錄 尚未證明每一種口述方式都曾成功觸發，因此還需要固定 基本運作測試。</p>
         </div>
       </div>
 
@@ -1308,51 +1308,51 @@
           </thead>
           <tbody>
             <tr>
-              <td>Active `grill-me` wrapper</td>
+              <td>使用中的 `grill-me` 包裝層</td>
               <td>手動入口，轉呼叫 `/grilling`。</td>
-              <td>逐字 MATCH。</td>
+              <td>逐字 一致。</td>
               <td><span class="status pass">符合</span></td>
             </tr>
             <tr>
-              <td>Active `grilling` primitive</td>
+              <td>使用中的 `grilling` 基本能力</td>
               <td>一次一題、建議答案、查事實、確認前不動工。</td>
-              <td>逐字 MATCH。</td>
+              <td>逐字 一致。</td>
               <td><span class="status pass">符合</span></td>
             </tr>
             <tr>
-              <td>Active `grill-with-docs`</td>
+              <td>使用中的 `grill-with-docs`</td>
               <td>`grilling + domain-modeling`。</td>
-              <td>逐字 MATCH。</td>
+              <td>逐字 一致。</td>
               <td><span class="status pass">符合</span></td>
             </tr>
             <tr>
-              <td>Codex global routing</td>
-              <td>Codebase 用 docs 版；一般想法用 grill-me；實作有 gate。</td>
-              <td>比 upstream 多一層 Michael 專用治理。</td>
+              <td>Codex 全域路由</td>
+              <td>Codebase 用 docs 版；一般想法用 grill-me；實作有 關卡。</td>
+              <td>比 上游原版 多一層 Michael 專用治理。</td>
               <td><span class="status pass">合理</span></td>
             </tr>
             <tr>
               <td>自然語句自動觸發</td>
-              <td>Wrapper 設為 `disable-model-invocation: true`。</td>
-              <td>這是 Matt 的設計：wrapper 要人手動叫；共用 primitive 才可由模型使用。</td>
+              <td>包裝入口 設為 `disable-model-invocation: true`。</td>
+              <td>這是 Matt 的設計：包裝入口 要人手動叫；共用 基礎流程 才可由模型使用。</td>
               <td><span class="status warn">未保證</span></td>
             </tr>
             <tr>
               <td>繁體中文穩定度</td>
-              <td>Skill 本體沒有同語言規則。</td>
-              <td>Upstream 也沒有；應由 local overlay 補。</td>
+              <td>技能 本體沒有同語言規則。</td>
+              <td>上游原版 也沒有；應由 本機補充層 補。</td>
               <td><span class="status warn">需補強</span></td>
             </tr>
             <tr>
-              <td>Invocation evidence</td>
-              <td>目前 log 只有相關教學檔交付，沒有直接 grill 執行紀錄。</td>
-              <td>Upstream 不負責 Michael 的本機可觀測性。</td>
+              <td>呼叫證據</td>
+              <td>目前 紀錄 只有相關教學檔交付，沒有直接 grill 執行紀錄。</td>
+              <td>上游原版 不負責 Michael 的本機可觀測性。</td>
               <td><span class="status warn">無法證明</span></td>
             </tr>
             <tr>
-              <td>Hermes repository clone</td>
-              <td>停在 2026-05-20，兩個核心檔案與 live GitHub 不同。</td>
-              <td>可能在 sync 時覆蓋 active 新版。</td>
+              <td>Hermes 儲存庫副本</td>
+              <td>停在 2026-05-20，兩個核心檔案與 GitHub 即時版本 不同。</td>
+              <td>可能在 同步 時覆蓋 啟用中 新版。</td>
               <td><span class="status risk">同步風險</span></td>
             </tr>
           </tbody>
@@ -1361,27 +1361,27 @@
     </section>
 
     <section id="difference">
-      <p class="section-kicker">08 · Differences And Decision</p>
-      <h2>真正的差異不在 prompt，而在觸發、語言與治理</h2>
-      <p class="section-lead">不需要再安裝一份 Matt skills。現在應把力氣放在「正確階段才啟動、能否證明啟動、同步時不覆蓋本機治理規則」三件事。</p>
+      <p class="section-kicker">08 · 差異與決策</p>
+      <h2>真正的差異不在 提示詞，而在觸發、語言與治理</h2>
+      <p class="section-lead">不需要再安裝一份 Matt 技能。現在應把力氣放在「正確階段才啟動、能否證明啟動、同步時不覆蓋本機治理規則」三件事。</p>
 
       <div class="difference-grid">
         <article class="difference-card">
-          <span class="label">UPSTREAM</span>
+          <span class="label">上游</span>
           <h3>小型、可組合</h3>
-          <p>手動 wrapper 與模型可重用 primitive 分離。使用者記得何時叫 wrapper；skill 本體保持最小。</p>
-          <p><strong class="tone-green">優點：</strong>少 context load、單一真實來源、容易組合。</p>
+          <p>手動 包裝入口 與模型可重用 基礎流程 分離。使用者記得何時叫 包裝入口；技能 本體保持最小。</p>
+          <p><strong class="tone-green">優點：</strong>少 上下文負載、單一真實來源、容易組合。</p>
         </article>
         <article class="difference-card">
-          <span class="label">MICHAEL LOCAL</span>
+          <span class="label">MICHAEL 本機</span>
           <h3>增加治理分流</h3>
-          <p>全域 `AGENTS.md` 已讓 codebase 與非 codebase 任務走不同入口，並加入常用中文口述別名與 implementation gate。</p>
-          <p><strong class="tone-cyan">優點：</strong>符合 Michael 不希望 agent 亂做的使用習慣。</p>
+          <p>全域 `AGENTS.md` 已讓 程式庫 與非 程式庫 任務走不同入口，並加入常用中文口述別名與 實作關卡。</p>
+          <p><strong class="tone-cyan">優點：</strong>符合 Michael 不希望 代理 亂做的使用習慣。</p>
         </article>
         <article class="difference-card">
-          <span class="label">GAP</span>
+          <span class="label">差距</span>
           <h3>缺少可觀測閉環</h3>
-          <p>仍缺直接 invocation log 與固定 smoke test；舊 clone 也可能成為錯誤同步來源。</p>
+          <p>仍缺直接 啟動紀錄 與固定 基本運作測試；舊 儲存庫副本 也可能成為錯誤同步來源。</p>
           <p><strong class="tone-red">風險：</strong>看起來有能力，實際何時觸發卻無法證明。</p>
         </article>
       </div>
@@ -1391,35 +1391,35 @@
         <article class="roadmap-item">
           <div>
             <strong>先鎖定同步來源</strong>
-            <p>active Codex skills 先維持 live GitHub 版；舊 Hermes clone 不得反向覆蓋，更新前先產生 diff 報告。</p>
+            <p>啟用中 Codex 技能 先維持 GitHub 即時版本 版；舊 Hermes 儲存庫副本 不得反向覆蓋，更新前先產生 diff 報告。</p>
           </div>
           <span class="priority now">先做</span>
         </article>
         <article class="roadmap-item">
           <div>
-            <strong>補 invocation log 與 smoke test</strong>
-            <p>固定測四件事：一次一題、每題建議、可查事實不問人、確認前不實作。通過才算 healthy。</p>
+            <strong>補 啟動紀錄 與 基本運作測試</strong>
+            <p>固定測四件事：一次一題、每題建議、可查事實不問人、確認前不實作。通過才算 健康。</p>
           </div>
           <span class="priority now">先做</span>
         </article>
         <article class="roadmap-item">
           <div>
-            <strong>local overlay 補繁體中文</strong>
-            <p>已在全域 Codex 規則加入「問題、建議與文件跟隨使用者語言；Michael 預設繁體中文」，不改 upstream skill。</p>
+            <strong>本機補充層 補繁體中文</strong>
+            <p>已在全域 Codex 規則加入「問題、建議與文件跟隨使用者語言；Michael 預設繁體中文」，不改 上游原版 技能。</p>
           </div>
           <span class="priority later">完成</span>
         </article>
         <article class="roadmap-item">
           <div>
             <strong>建立自然語句路由</strong>
-            <p>已加入 Grill Me、to tickets、code review、除錯、架構健檢與 wayfinder 的繁體中文路由；仍保留官方手動／自動邊界。</p>
+            <p>已加入 Grill Me、to tickets、程式碼 審核、除錯、架構健檢與 wayfinder 的繁體中文路由；仍保留官方手動／自動邊界。</p>
           </div>
           <span class="priority later">完成</span>
         </article>
         <article class="roadmap-item">
           <div>
             <strong>保留目前小型架構</strong>
-            <p>不要把 spec、tickets、TDD、review 全塞回 grill-me。各 skill 做完自己的工作就停止，避免重新變成大框架。</p>
+            <p>不要把 spec、tickets、TDD、審核 全塞回 grill-me。各 技能 做完自己的工作就停止，避免重新變成大框架。</p>
           </div>
           <span class="priority later">持續</span>
         </article>
@@ -1427,19 +1427,19 @@
     </section>
 
     <section id="prompts">
-      <p class="section-kicker">09 · Ready To Use</p>
+      <p class="section-kicker">09 · 可直接使用</p>
       <h2>三種情境，使用三種入口</h2>
-      <p class="section-lead">不需要背完整 skill catalog。先判斷有沒有 codebase、是否需要留下術語與決策，再選入口。</p>
+      <p class="section-lead">不需要背完整 技能 catalog。先判斷有沒有 程式庫、是否需要留下術語與決策，再選入口。</p>
 
       <div class="prompt-grid">
         <article class="prompt-card">
           <div class="prompt-head">
             <strong>一般想法 / 非程式任務</strong>
             <button class="copy-btn" type="button" data-copy="prompt-1" aria-label="複製一般想法提示詞" title="複製">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
+              <svg viewbox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
             </button>
           </div>
-          <pre id="prompt-1">/grill-me
+          <pre id="prompt-1" data-language-code="">/grill-me
 
 請使用繁體中文。一次只問一個最重要的決策問題；每題附上你的建議答案與取捨。可從現有資料查到的事實請先查，不要問我。直到我明確確認 shared understanding 前，不要開始執行。</pre>
         </article>
@@ -1448,22 +1448,22 @@
           <div class="prompt-head">
             <strong>Codebase / 架構 / 領域設計</strong>
             <button class="copy-btn" type="button" data-copy="prompt-2" aria-label="複製 codebase 提示詞" title="複製">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
+              <svg viewbox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
             </button>
           </div>
-          <pre id="prompt-2">/grill-with-docs
+          <pre id="prompt-2" data-language-code="">/grill-with-docs
 
 請先讀取現有 CONTEXT.md、ADR 與程式碼，再用繁體中文逐題訪談。每題提供建議答案。確認的新術語即時更新 glossary；只有難以逆轉、令人意外且存在真實取捨的決策才提議 ADR。未經我確認，不要實作。</pre>
         </article>
 
         <article class="prompt-card">
           <div class="prompt-head">
-            <strong>檢查 agent 是否真的照規則</strong>
+            <strong>檢查 代理 是否真的照規則</strong>
             <button class="copy-btn" type="button" data-copy="prompt-3" aria-label="複製稽核提示詞" title="複製">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
+              <svg viewbox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
             </button>
           </div>
-          <pre id="prompt-3">請只做 Grill Me smoke test，不實作需求。
+          <pre id="prompt-3" data-language-code="">請只做 Grill Me smoke test，不實作需求。
 
 輸出並記錄：
 1. 是否一次只問一題
@@ -1478,38 +1478,38 @@
     </section>
 
     <section id="sources">
-      <p class="section-kicker">10 · Sources / Publication Notes</p>
+      <p class="section-kicker">10 · 來源／發布筆記</p>
       <h2>查證來源</h2>
-      <p class="section-lead">技術結論以 Matt Pocock live GitHub 原始檔為準；不採用不穩定的星數與下載數作為能力證據。</p>
+      <p class="section-lead">技術結論以 Matt Pocock GitHub 即時版本 原始檔為準；不採用不穩定的星數與下載數作為能力證據。</p>
 
       <ul class="source-list">
-        <li><a href="https://youtu.be/aR97E7aKEgg?si=dClhsSiMXtMgv_Zh" target="_blank" rel="noreferrer">Gary Chen：Matt Pocock Skills 全拆解</a></li>
+        <li><a href="https://youtu.be/aR97E7aKEgg?si=dClhsSiMXtMgv_Zh" target="_blank" rel="noreferrer">Gary Chen：Matt Pocock 技能 全拆解</a></li>
         <li><a href="https://github.com/mattpocock/skills" target="_blank" rel="noreferrer">GitHub：mattpocock/skills</a></li>
         <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md" target="_blank" rel="noreferrer">ask-matt / 現行官方流程路由</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md" target="_blank" rel="noreferrer">grill-me / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md" target="_blank" rel="noreferrer">grilling / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md" target="_blank" rel="noreferrer">grill-with-docs / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md" target="_blank" rel="noreferrer">domain-modeling / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md" target="_blank" rel="noreferrer">writing-great-skills / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/codebase-design/SKILL.md" target="_blank" rel="noreferrer">codebase-design / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md" target="_blank" rel="noreferrer">to-spec / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md" target="_blank" rel="noreferrer">to-tickets / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/tdd/SKILL.md" target="_blank" rel="noreferrer">tdd / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/code-review/SKILL.md" target="_blank" rel="noreferrer">code-review / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/diagnosing-bugs/SKILL.md" target="_blank" rel="noreferrer">diagnosing-bugs / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/implement/SKILL.md" target="_blank" rel="noreferrer">implement / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/SKILL.md" target="_blank" rel="noreferrer">improve-codebase-architecture / SKILL.md</a></li>
-        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/wayfinder/SKILL.md" target="_blank" rel="noreferrer">wayfinder / SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md" target="_blank" rel="noreferrer">grill-me／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md" target="_blank" rel="noreferrer">grilling／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md" target="_blank" rel="noreferrer">grill-with-docs／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md" target="_blank" rel="noreferrer">domain-modeling／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md" target="_blank" rel="noreferrer">writing-great-skills／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/codebase-design/SKILL.md" target="_blank" rel="noreferrer">codebase-design／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md" target="_blank" rel="noreferrer">to-spec／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md" target="_blank" rel="noreferrer">to-tickets／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/tdd/SKILL.md" target="_blank" rel="noreferrer">tdd／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/code-review/SKILL.md" target="_blank" rel="noreferrer">code-review／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/diagnosing-bugs/SKILL.md" target="_blank" rel="noreferrer">diagnosing-bugs／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/implement/SKILL.md" target="_blank" rel="noreferrer">implement／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/SKILL.md" target="_blank" rel="noreferrer">improve-codebase-architecture／SKILL.md</a></li>
+        <li><a href="https://github.com/mattpocock/skills/blob/main/skills/engineering/wayfinder/SKILL.md" target="_blank" rel="noreferrer">wayfinder／SKILL.md</a></li>
       </ul>
 
       <div class="review-note">
-        <strong>版本說明：</strong>本教材已由 Michael 確認，並以 Matt Pocock GitHub `main` 的 2026-07-21 commit `ed37663` 作為 skill 結構與觸發規則的核對基準。
+        <strong>版本說明：</strong>本教材已由 Michael 確認，並以 Matt Pocock GitHub `main` 的 2026-07-21 commit `ed37663` 作為 技能 結構與觸發規則的核對基準。
       </div>
     </section>
   </main>
 
   <footer>
-    Michael AI Agent Lab · Grill Me / Matt Pocock Skills · Source-grounded lesson
+    Michael AI Agent Lab · Grill Me／Matt Pocock 技能 · 有來源依據的課程
   </footer>
 
   <script>
@@ -1534,8 +1534,8 @@
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
-    <h2>任務交辦、Prompt 與需求釐清</h2>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
+    <h2>任務交辦、提示詞 與需求釐清</h2>
     <ul>
       <li><a href="./grill-me-requirement-interview.html">AI Agent 開工前需求訪談：Grill Me 工作法</a></li>
       <li><a href="./brainstorming-skill-design-first.html">Brainstorming Skill：先設計再開工</a></li>

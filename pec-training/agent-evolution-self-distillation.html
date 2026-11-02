@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Michael AI Agent Lab Agent 進化教學：自我蒸餾、Skill 化與定期自動化</title>
   <meta name="description" content="把日常使用經驗先蒸餾成文件，再把重複流程變成 skill，最後用安全自動化定期整理。">
   <style>
@@ -413,52 +413,52 @@
   <script src="../tutorial-gate.js?v=20260729-nav-cleanup"></script>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-</head>
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/0670c35f065fc520.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script></head>
 <body>
   <header class="cover">
     <div class="brand">
       <div class="ad-logo-white" aria-label="個人品牌標記"></div>
-      <span>Public Learning Note Material<br/>Agent Evolution Playbook</span>
+      <span>公開學習筆記教材<br/>Agent 演進實戰手冊</span>
     </div>
     <div>
       <div class="cover-meta">
         <span class="tag">自我蒸餾</span>
-        <span class="tag">Skill 化</span>
+        <span class="tag">技能化</span>
         <span class="tag">定期自動化</span>
-        <span class="tag">Agent Governance</span>
+        <span class="tag">Agent 治理</span>
       </div>
       <h1>如何讓自己的 Agent 越用越懂你</h1>
-      <p>這份教材教你把日常使用經驗變成可維護的能力：先蒸餾經驗，再把重複流程變成 skill，最後用安全的自動化定期執行。</p>
+      <p>這份教材教你把日常使用經驗變成可維護的能力：先蒸餾經驗，再把重複流程變成 技能，最後用安全的自動化定期執行。</p>
     </div>
   </header>
 
   <main class="wrap">
     <section class="lesson-header" aria-label="Michael AI Agent Lab lesson header">
       <div class="ad-logo-full" aria-label="個人品牌標記"></div>
-      <p class="eyebrow">Michael AI Agent Lab 教學筆記｜Agent Evolution</p>
-      <h2>自我蒸餾、Skill 化與定期自動化</h2>
-      <p class="lead">給工程師、PM 與團隊主管的導入教學：把日常 agent 使用經驗沉澱成可重複、可審核、可改善的工作能力。</p>
+      <p class="eyebrow">Michael AI Agent Lab 教學筆記｜代理進化</p>
+      <h2>自我蒸餾、技能 化與定期自動化</h2>
+      <p class="lead">給工程師、PM 與團隊主管的導入教學：把日常 代理 使用經驗沉澱成可重複、可審核、可改善的工作能力。</p>
     </section>
 
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Learning Goal</p>
+          <p class="eyebrow">學習目標</p>
           <h2>這堂課要解決什麼問題</h2>
         </div>
-        <span class="badge">For engineers / PM / team leads</span>
+        <span class="badge">適合工程師／PM／團隊主管</span>
       </div>
       <div class="hero-point">
         <div class="score">
           <b>3</b>
           <span>個核心能力</span>
-          <p>自我蒸餾、流程 skill 化、定期自動化，是讓 agent 從「會回答」進化成「會累積經驗」的基礎。</p>
+          <p>自我蒸餾、流程 技能 化、定期自動化，是讓 代理 從「會回答」進化成「會累積經驗」的基礎。</p>
         </div>
         <div>
-          <p>很多 agent 一開始看起來很聰明，但每次都要重新解釋背景、重新提醒格式、重新修正錯誤。真正能長期使用的 agent，需要把使用者修正、成功流程、失敗教訓與固定任務沉澱下來。</p>
+          <p>很多 代理 一開始看起來很聰明，但每次都要重新解釋背景、重新提醒格式、重新修正錯誤。真正能長期使用的 代理，需要把使用者修正、成功流程、失敗教訓與固定任務沉澱下來。</p>
           <div class="callout">
             <strong>核心觀念</strong>
-            <p>Agent 不是越裝越強，而是越能把工作經驗變成可重用的流程、知識與檢查標準，才會越用越穩。</p>
+            <p>代理 不是越裝越強，而是越能把工作經驗變成可重用的流程、知識與檢查標準，才會越用越穩。</p>
           </div>
         </div>
       </div>
@@ -467,22 +467,22 @@
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Main Framework</p>
-          <h2>Agent 進化的三層架構</h2>
+          <p class="eyebrow">主要架構</p>
+          <h2>代理 進化的三層架構</h2>
         </div>
       </div>
       <div class="grid3">
         <article class="card red">
           <strong>1. 自我蒸餾</strong>
-          <span>把每天的互動、修正、偏好、失敗經驗整理成文件。這是 agent 的學習原料。</span>
+          <span>把每天的互動、修正、偏好、失敗經驗整理成文件。這是 代理 的學習原料。</span>
         </article>
         <article class="card cyan">
-          <strong>2. 重複流程變成 Skill</strong>
-          <span>把固定工作方法寫成可重用的 SKILL.md 或流程規範，讓 agent 下次不用重新摸索。</span>
+          <strong>2. 重複流程變成 技能</strong>
+          <span>把固定工作方法寫成可重用的 SKILL.md 或流程規範，讓 代理 下次不用重新摸索。</span>
         </article>
         <article class="card green">
           <strong>3. 自動化定期執行</strong>
-          <span>把固定整理、週報、知識更新、候選 skill review 做成排程，但保留人工核准。</span>
+          <span>把固定整理、週報、知識更新、候選 技能 審核 做成排程，但保留人工核准。</span>
         </article>
       </div>
     </section>
@@ -490,7 +490,7 @@
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Operating Flow</p>
+          <p class="eyebrow">操作流程</p>
           <h2>標準導入流程</h2>
         </div>
       </div>
@@ -503,12 +503,12 @@
         <div class="step">
           <i class="num">02</i>
           <strong>每日蒸餾</strong>
-          <span>把紀錄整理成偏好、流程、風險、候選 skill 四類。</span>
+          <span>把紀錄整理成偏好、流程、風險、候選 技能 四類。</span>
         </div>
         <div class="step">
           <i class="num">03</i>
           <strong>產出草稿</strong>
-          <span>先產生 skill 草稿或流程文件，不直接啟用。</span>
+          <span>先產生 技能 草稿或流程文件，不直接啟用。</span>
         </div>
         <div class="step">
           <i class="num">04</i>
@@ -518,7 +518,7 @@
         <div class="step">
           <i class="num">05</i>
           <strong>啟用能力</strong>
-          <span>核准後才安裝 skill、更新 agent 設定或加入自動化。</span>
+          <span>核准後才安裝 技能、更新 代理 設定或加入自動化。</span>
         </div>
         <div class="step">
           <i class="num">06</i>
@@ -531,18 +531,18 @@
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Examples</p>
-          <h2>哪些流程適合變成 Skill</h2>
+          <p class="eyebrow">範例</p>
+          <h2>哪些流程適合變成 技能</h2>
         </div>
       </div>
       <div class="grid4">
         <article class="card">
           <strong>報告格式</strong>
-          <span>週報、issue summary、測試摘要、HTML 教材輸出格式固定時。</span>
+          <span>週報、問題摘要、測試摘要、HTML 教材輸出格式固定時。</span>
         </article>
         <article class="card">
           <strong>資料整理</strong>
-          <span>每次都要讀 Excel、log、會議紀錄、wiki 頁，再整理成相同結構時。</span>
+          <span>每次都要讀 Excel、紀錄、會議紀錄、wiki 頁，再整理成相同結構時。</span>
         </article>
         <article class="card">
           <strong>品質檢查</strong>
@@ -558,7 +558,7 @@
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Implementation Plan</p>
+          <p class="eyebrow">實作計畫</p>
           <h2>建議四週落地計畫</h2>
         </div>
       </div>
@@ -573,22 +573,22 @@
         <div class="row">
           <div class="time">第 2 週</div>
           <div>
-            <h3>整理候選 Skill</h3>
-            <p>從蒸餾日報中挑出高頻流程，寫成 skill 草稿。每份草稿都要包含觸發條件、步驟、輸出格式與禁用事項。</p>
+            <h3>整理候選 技能</h3>
+            <p>從蒸餾日報中挑出高頻流程，寫成 技能 草稿。每份草稿都要包含觸發條件、步驟、輸出格式與禁用事項。</p>
           </div>
         </div>
         <div class="row">
           <div class="time">第 3 週</div>
           <div>
             <h3>建立核准機制</h3>
-            <p>不要讓 agent 自動改自己的能力。新增、刪除、修改 skill 前，必須有人確認用途與風險。</p>
+            <p>不要讓 代理 自動改自己的能力。新增、刪除、修改 技能 前，必須有人確認用途與風險。</p>
           </div>
         </div>
         <div class="row">
           <div class="time">第 4 週</div>
           <div>
             <h3>接入定期自動化</h3>
-            <p>把日報、週報、skill review、知識庫更新做成排程。排程只負責產生提案，不直接做高風險變更。</p>
+            <p>把日報、週報、技能 審核、知識庫更新做成排程。排程只負責產生提案，不直接做高風險變更。</p>
           </div>
         </div>
       </div>
@@ -597,7 +597,7 @@
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Governance</p>
+          <p class="eyebrow">治理</p>
           <h2>安全治理：自動化不等於自動亂改</h2>
         </div>
       </div>
@@ -606,7 +606,7 @@
           <h3>可以自動做</h3>
           <ul>
             <li>整理每日使用紀錄。</li>
-            <li>產生候選 skill 草稿。</li>
+            <li>產生候選 技能 草稿。</li>
             <li>產生週報與知識更新提案。</li>
             <li>標記重複流程與常見錯誤。</li>
           </ul>
@@ -614,30 +614,30 @@
         <div class="lane">
           <h3>需要人工核准</h3>
           <ul>
-            <li>安裝外部工具或 skill。</li>
+            <li>安裝外部工具或 技能。</li>
             <li>刪除或停用既有流程。</li>
-            <li>修改 agent 權限、token、排程或本機服務。</li>
+            <li>修改 代理 權限、代元、排程或本機服務。</li>
             <li>把未審核內容寫入正式知識庫。</li>
           </ul>
         </div>
       </div>
       <div class="warning">
         <strong>常見誤解</strong>
-        <p>Agent 進化不是讓系統自己決定一切，而是把「可自動整理」與「必須人工核准」分清楚。這樣才能提升效率，又不犧牲安全與可追溯性。</p>
+        <p>代理 進化不是讓系統自己決定一切，而是把「可自動整理」與「必須人工核准」分清楚。這樣才能提升效率，又不犧牲安全與可追溯性。</p>
       </div>
     </section>
 
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Template</p>
-          <h2>一份好 Skill 草稿應該包含什麼</h2>
+          <p class="eyebrow">範本</p>
+          <h2>一份好 技能 草稿應該包含什麼</h2>
         </div>
       </div>
       <div class="grid3">
         <article class="card yellow">
           <strong>使用時機</strong>
-          <span>清楚描述何時該用、何時不該用，避免 agent 每件事都亂套同一個流程。</span>
+          <span>清楚描述何時該用、何時不該用，避免 代理 每件事都亂套同一個流程。</span>
         </article>
         <article class="card purple">
           <strong>標準步驟</strong>
@@ -653,38 +653,38 @@
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Quality Gate</p>
+          <p class="eyebrow">品質關卡</p>
           <h2>導入驗收清單</h2>
         </div>
       </div>
       <ul class="checklist">
         <li><b>是否真的減少重複說明：</b>導入後，同類任務是否不用再重講格式與步驟。</li>
-        <li><b>是否可追溯：</b>每個新 skill 都能追到來源任務、修正紀錄或失敗教訓。</li>
-        <li><b>是否有人工核准：</b>高風險動作不由 agent 自行決定。</li>
+        <li><b>是否可追溯：</b>每個新 技能 都能追到來源任務、修正紀錄或失敗教訓。</li>
+        <li><b>是否有人工核准：</b>高風險動作不由 代理 自行決定。</li>
         <li><b>是否能回滾：</b>每次能力變更都知道改了哪個檔案、影響哪些流程。</li>
-        <li><b>是否保護敏感資料：</b>蒸餾內容不得包含 token、API key、cookie、session 或個人憑證。</li>
-        <li><b>是否持續評估：</b>每週檢查哪些 skill 有用、哪些重複、哪些應停用。</li>
+        <li><b>是否保護敏感資料：</b>蒸餾內容不得包含 代元、API key、cookie、session 或個人憑證。</li>
+        <li><b>是否持續評估：</b>每週檢查哪些 技能 有用、哪些重複、哪些應停用。</li>
       </ul>
     </section>
 
     <section>
       <div class="section-title">
         <div>
-          <p class="eyebrow">Final Takeaway</p>
+          <p class="eyebrow">最後重點</p>
           <h2>帶回工作的做法</h2>
         </div>
       </div>
       <div class="okbox">
         <h3>先做小型試點，再擴大成制度</h3>
-        <p>先挑一個固定流程，例如週報整理、HTML 教材輸出或 issue summary。連續一週做自我蒸餾，第二週產生 skill 草稿，第三週人工核准啟用，第四週再接自動化。這樣最穩，也最容易驗收。</p>
+        <p>先挑一個固定流程，例如週報整理、HTML 教材輸出或 問題摘要。連續一週做自我蒸餾，第二週產生 技能 草稿，第三週人工核准啟用，第四週再接自動化。這樣最穩，也最容易驗收。</p>
       </div>
-      <p class="source">參考主題：Codex 自我蒸餾、Skill / Agent / 自動化玩法。來源連結：<a href="https://youtu.be/zMJG9s7T7L8?si=94aERPqzVZgIlCG0">YouTube</a>。本教材改寫為一般企業教學版本。</p>
+      <p class="source">參考主題：Codex 自我蒸餾、技能 / 代理 / 自動化玩法。來源連結：<a href="https://youtu.be/zMJG9s7T7L8?si=94aERPqzVZgIlCG0">YouTube</a>。本教材改寫為一般企業教學版本。</p>
     </section>
   </main>
 <!-- mal-related:start -->
 <nav class="mal-related" aria-label="同主題教材">
   <div class="mal-related-inner">
-    <p class="mal-related-label">接著讀 <span lang="en">/ Keep learning</span></p>
+    <p class="mal-related-label">接著讀 <span lang="en" data-language-secondary="">/ Keep learning</span></p>
     <h2>Skill、蒸餾與能力沉澱</h2>
     <ul>
       <li><a href="./skillopt-trainable-skill.html">SkillOpt：把提示詞工程變成可訓練的 Skill 系統</a></li>
