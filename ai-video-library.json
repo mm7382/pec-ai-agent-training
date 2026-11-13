@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T07:38:31.077Z",
+  "generatedAt": "2026-11-13T07:09:38.131Z",
   "title": "YouTube AI 影片精選",
   "description": "依公開 YouTube 搜尋 metadata 整理近期 AI Agent、AI Coding、MCP、Local LLM、自動化與 Low-code / No-code 影片。",
   "selectionMethod": "以 yt-dlp 擷取 YouTube 公開搜尋候選結果；依觀看數、近期性、頻道驗證狀態與 AI Agent / Skill / Low-code 主題關聯度排序。這不是 YouTube 官方 Trending API。",
@@ -19,38 +19,6 @@
   ],
   "items": [
     {
-      "id": "-QFHIoCo-Ko",
-      "title": "Full Walkthrough: Workflow for AI Coding — Matt Pocock",
-      "channel": "AI Engineer and Matt Pocock",
-      "url": "https://www.youtube.com/watch?v=-QFHIoCo-Ko",
-      "thumbnail": "https://i.ytimg.com/vi/-QFHIoCo-Ko/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "1:36:30",
-      "viewCount": 2037462,
-      "category": "AI Coding / Claude Code / Codex",
-      "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 2,037,462。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "A hands-on workshop covering the full lifecycle of AI-assisted development, from turning ambiguous requirements into ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "bcM9dP_uXJU",
       "title": "How to Build an AI Agent with Claude Code (Claude AI Agent Tutorial)",
       "channel": "AI Master",
@@ -58,14 +26,14 @@
       "thumbnail": "https://i.ytimg.com/vi/bcM9dP_uXJU/hqdefault.jpg",
       "publishedAt": "",
       "duration": "22:08",
-      "viewCount": 984560,
+      "viewCount": 994616,
       "category": "MCP / Agent 工具協議",
       "language": "英文",
       "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 984,560。"
+        "公開觀看數約 994,616。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -90,14 +58,14 @@
       "thumbnail": "https://i.ytimg.com/vi/rCkYVxOX-dI/hqdefault.jpg",
       "publishedAt": "",
       "duration": "21:14",
-      "viewCount": 733501,
+      "viewCount": 747661,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 733,501。"
+        "公開觀看數約 747,661。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -122,14 +90,14 @@
       "thumbnail": "https://i.ytimg.com/vi/TL8V41Ea6oM/hqdefault.jpg",
       "publishedAt": "",
       "duration": "20:47",
-      "viewCount": 2541325,
+      "viewCount": 2551099,
       "category": "AI Agent 趨勢 / 比較",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 2,541,325。"
+        "公開觀看數約 2,551,099。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -147,28 +115,28 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "UngVdAsQEiU",
-      "title": "The Best Local Agentic Coding Workflow (Complete Guide)",
-      "channel": "Web Dev Simplified and Kyle Cook from Web Dev Simplified",
-      "url": "https://www.youtube.com/watch?v=UngVdAsQEiU",
-      "thumbnail": "https://i.ytimg.com/vi/UngVdAsQEiU/hqdefault.jpg",
+      "id": "rPGJhrunbxo",
+      "title": "Every Size Local AI In 24 Minutes",
+      "channel": "Tina Huang",
+      "url": "https://www.youtube.com/watch?v=rPGJhrunbxo",
+      "thumbnail": "https://i.ytimg.com/vi/rPGJhrunbxo/hqdefault.jpg",
       "publishedAt": "",
-      "duration": "44:57",
-      "viewCount": 1209045,
+      "duration": "24:23",
+      "viewCount": 2221432,
       "category": "Local LLM / 本機 Agent",
       "language": "英文",
       "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 1,209,045。"
+        "公開觀看數約 2,221,432。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
         "需要用影片快速建立工具雷達的人"
       ],
       "detail": [
-        "Setting up a local AI model can be intimidating, which is why I created this video. In this video I will show you everything you need ...",
+        "Claim your free $5 on Crusoe Intelligence Foundry today ...",
         "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
       ],
       "tags": [
@@ -186,14 +154,14 @@
       "thumbnail": "https://i.ytimg.com/vi/Iz3ul6hSeTs/hqdefault.jpg",
       "publishedAt": "",
       "duration": "9:27",
-      "viewCount": 564054,
+      "viewCount": 567079,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 564,054。"
+        "公開觀看數約 567,079。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -211,38 +179,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "EsTrWCV0Ph4",
-      "title": "AI Agents Full Course 2026: Master Agentic AI (2 Hours)",
-      "channel": "Nick Saraev",
-      "url": "https://www.youtube.com/watch?v=EsTrWCV0Ph4",
-      "thumbnail": "https://i.ytimg.com/vi/EsTrWCV0Ph4/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "2:13:15",
-      "viewCount": 1065265,
-      "category": "MCP / Agent 工具協議",
-      "language": "英文",
-      "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 1,065,265。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Join Maker School & get customer #1 guaranteed: https://skool.com/makerschool/about Check out my SaaS, Clairvo (we 2x ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "F8jidmEkIeM",
       "title": "Claude Code: Build Your First AI Agent in 20 Minutes (100% No Coding)",
       "channel": "Grace Leung",
@@ -250,14 +186,14 @@
       "thumbnail": "https://i.ytimg.com/vi/F8jidmEkIeM/hqdefault.jpg",
       "publishedAt": "",
       "duration": "20:01",
-      "viewCount": 289802,
+      "viewCount": 297557,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 289,802。"
+        "公開觀看數約 297,557。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -282,14 +218,14 @@
       "thumbnail": "https://i.ytimg.com/vi/M-NTwkM3VwM/hqdefault.jpg",
       "publishedAt": "",
       "duration": "26:00",
-      "viewCount": 860511,
+      "viewCount": 863638,
       "category": "Local LLM / 本機 Agent",
       "language": "英文",
       "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 860,511。"
+        "公開觀看數約 863,638。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -314,14 +250,14 @@
       "thumbnail": "https://i.ytimg.com/vi/5p-sq8v3OXw/hqdefault.jpg",
       "publishedAt": "",
       "duration": "2:24:11",
-      "viewCount": 1565318,
+      "viewCount": 1576195,
       "category": "AI Agent 趨勢 / 比較",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 1,565,318。"
+        "公開觀看數約 1,576,195。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -339,38 +275,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "7zZy1QTvokM",
-      "title": "Stop Prompting Claude. Use Karpathy's Method Instead.",
-      "channel": "Austin Marchese",
-      "url": "https://www.youtube.com/watch?v=7zZy1QTvokM",
-      "thumbnail": "https://i.ytimg.com/vi/7zZy1QTvokM/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "13:19",
-      "viewCount": 1322180,
-      "category": "AI Coding / Claude Code / Codex",
-      "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 1,322,180。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Get my free 5-day AI playbook (what I used to build a $25M+ startup): https://www.austinsnewsletter.com/spec In this video, I break ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "YAsxyoTWFDA",
       "title": "I Have Spent 1000+ Hours With Claude Code. This Is What I Learned",
       "channel": "The Coding Sloth",
@@ -378,14 +282,14 @@
       "thumbnail": "https://i.ytimg.com/vi/YAsxyoTWFDA/hqdefault.jpg",
       "publishedAt": "",
       "duration": "22:31",
-      "viewCount": 1172353,
+      "viewCount": 1184887,
       "category": "AI Coding / Claude Code / Codex",
       "language": "英文",
       "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 1,172,353。"
+        "公開觀看數約 1,184,887。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -403,38 +307,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "ibFJ--CH3cQ",
-      "title": "You’re Not Behind (Yet): How to Build AI Agents in 2026 (no coding)",
-      "channel": "Futurepedia",
-      "url": "https://www.youtube.com/watch?v=ibFJ--CH3cQ",
-      "thumbnail": "https://i.ytimg.com/vi/ibFJ--CH3cQ/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "26:05",
-      "viewCount": 306277,
-      "category": "Low-code / No-code 工具",
-      "language": "英文",
-      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：Low-code / No-code 工具。",
-        "公開觀看數約 306,277。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Free AI Agents Playbook:* https://clickhubspot.com/f865c2 More from Futurepedia: Join the fastest-growing AI education ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "Low-code",
-        "No-code",
-        "AI 工具"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "edIHPoWgIKU",
       "title": "Local AI Explained: How to Run AI Models on Your Computer",
       "channel": "Tech With Tim",
@@ -442,14 +314,14 @@
       "thumbnail": "https://i.ytimg.com/vi/edIHPoWgIKU/hqdefault.jpg",
       "publishedAt": "",
       "duration": "24:27",
-      "viewCount": 1093423,
+      "viewCount": 1105670,
       "category": "Local LLM / 本機 Agent",
       "language": "英文",
       "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 1,093,423。"
+        "公開觀看數約 1,105,670。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -467,6 +339,102 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "ibFJ--CH3cQ",
+      "title": "You’re Not Behind (Yet): How to Build AI Agents in 2026 (no coding)",
+      "channel": "Futurepedia",
+      "url": "https://www.youtube.com/watch?v=ibFJ--CH3cQ",
+      "thumbnail": "https://i.ytimg.com/vi/ibFJ--CH3cQ/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "26:05",
+      "viewCount": 306517,
+      "category": "Low-code / No-code 工具",
+      "language": "英文",
+      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：Low-code / No-code 工具。",
+        "公開觀看數約 306,517。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Free AI Agents Playbook:* https://clickhubspot.com/f865c2 More from Futurepedia: Join the fastest-growing AI education ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "Low-code",
+        "No-code",
+        "AI 工具"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "EsTrWCV0Ph4",
+      "title": "AI Agents Full Course 2026: Master Agentic AI (2 Hours)",
+      "channel": "Nick Saraev",
+      "url": "https://www.youtube.com/watch?v=EsTrWCV0Ph4",
+      "thumbnail": "https://i.ytimg.com/vi/EsTrWCV0Ph4/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "2:13:15",
+      "viewCount": 1071388,
+      "category": "AI Agent 趨勢 / 比較",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Agent 趨勢 / 比較。",
+        "公開觀看數約 1,071,388。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Join Maker School & get customer #1 guaranteed: https://skool.com/makerschool/about Check out my SaaS, Clairvo (we 2x ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "GuaKeDS6UKU",
+      "title": "n8n Quick Start Tutorial: Build Your First AI Agent [2026]",
+      "channel": "n8n and Flowgrammer",
+      "url": "https://www.youtube.com/watch?v=GuaKeDS6UKU",
+      "thumbnail": "https://i.ytimg.com/vi/GuaKeDS6UKU/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "20:51",
+      "viewCount": 559981,
+      "category": "自動化工作流",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：自動化工作流。",
+        "公開觀看數約 559,981。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Download workflow templates for this tutorial: #1: Ingest Template: ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "xFPiU5sit7g",
       "title": "Codex 新手教學，非技術人員也能上手的 AI Agent 新手指南",
       "channel": "Gary Chen",
@@ -474,14 +442,14 @@
       "thumbnail": "https://i.ytimg.com/vi/xFPiU5sit7g/hqdefault.jpg",
       "publishedAt": "",
       "duration": "17:57",
-      "viewCount": 542767,
+      "viewCount": 544776,
       "category": "中文 AI 教學",
       "language": "中文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：中文 AI 教學。",
-        "公開觀看數約 542,767。"
+        "公開觀看數約 544,776。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -499,6 +467,38 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "UtXzdmpysmU",
+      "title": "Build AI Agents with n8n | Complete Beginner’s Automation Course 2026",
+      "channel": "JavaScript Mastery",
+      "url": "https://www.youtube.com/watch?v=UtXzdmpysmU",
+      "thumbnail": "https://i.ytimg.com/vi/UtXzdmpysmU/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "1:36:52",
+      "viewCount": 254495,
+      "category": "自動化工作流",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：自動化工作流。",
+        "公開觀看數約 254,495。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Learn how to build smart AI workflows with N8N: automate tasks, connect apps, and deploy AI agents. Hostinger: ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "tfeCwDT-5m0",
       "title": "Codex保姆級完整教學：從入門到進階，自動生成內容、網頁、影片和App，快速學會指揮你的超級AI Agent #chatgpt #codex",
       "channel": "學長Ethan",
@@ -506,14 +506,14 @@
       "thumbnail": "https://i.ytimg.com/vi/tfeCwDT-5m0/hqdefault.jpg",
       "publishedAt": "",
       "duration": "29:55",
-      "viewCount": 406979,
+      "viewCount": 408151,
       "category": "中文 AI 教學",
       "language": "中文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：中文 AI 教學。",
-        "公開觀看數約 406,979。"
+        "公開觀看數約 408,151。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -538,14 +538,14 @@
       "thumbnail": "https://i.ytimg.com/vi/tzrwxLNHtRY/hqdefault.jpg",
       "publishedAt": "",
       "duration": "15:04",
-      "viewCount": 648974,
+      "viewCount": 650259,
       "category": "MCP / Agent 工具協議",
       "language": "英文",
       "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 648,974。"
+        "公開觀看數約 650,259。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -570,14 +570,14 @@
       "thumbnail": "https://i.ytimg.com/vi/knOhSmOkqMM/hqdefault.jpg",
       "publishedAt": "",
       "duration": "10:28",
-      "viewCount": 175447,
+      "viewCount": 178002,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 175,447。"
+        "公開觀看數約 178,002。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -602,14 +602,14 @@
       "thumbnail": "https://i.ytimg.com/vi/yFvl2x8_9gI/hqdefault.jpg",
       "publishedAt": "",
       "duration": "15:24",
-      "viewCount": 569553,
+      "viewCount": 573370,
       "category": "AI Coding / Claude Code / Codex",
       "language": "英文",
       "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 569,553。"
+        "公開觀看數約 573,370。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -634,14 +634,14 @@
       "thumbnail": "https://i.ytimg.com/vi/X4FVEEegCbk/hqdefault.jpg",
       "publishedAt": "",
       "duration": "9:11",
-      "viewCount": 290131,
+      "viewCount": 293455,
       "category": "MCP / Agent 工具協議",
       "language": "英文",
       "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 290,131。"
+        "公開觀看數約 293,455。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -666,14 +666,14 @@
       "thumbnail": "https://i.ytimg.com/vi/aPSbZbOzB4s/hqdefault.jpg",
       "publishedAt": "",
       "duration": "21:33",
-      "viewCount": 515251,
+      "viewCount": 518884,
       "category": "AI Agent 趨勢 / 比較",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 515,251。"
+        "公開觀看數約 518,884。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -691,102 +691,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "J9NQTYUP6k0",
-      "title": "How the Top 1% Use Claude Code Differently",
-      "channel": "Simon Scrapes",
-      "url": "https://www.youtube.com/watch?v=J9NQTYUP6k0",
-      "thumbnail": "https://i.ytimg.com/vi/J9NQTYUP6k0/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "18:09",
-      "viewCount": 493956,
-      "category": "AI Coding / Claude Code / Codex",
-      "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 493,956。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Join the Agentic Academy: https://skool.com/scrapes Get customers from ChatGPT: https://dub.sh/rankspot-yt Don't miss the ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
-      "id": "e3OV3LnrS7o",
-      "title": "Master 80% of n8n in 36 Minutes",
-      "channel": "Futurepedia and AI Agent Lab",
-      "url": "https://www.youtube.com/watch?v=e3OV3LnrS7o",
-      "thumbnail": "https://i.ytimg.com/vi/e3OV3LnrS7o/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "36:23",
-      "viewCount": 850318,
-      "category": "自動化工作流",
-      "language": "英文",
-      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：自動化工作流。",
-        "公開觀看數約 850,318。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Self host n8n with Hostinger - http://hostinger.com/futurepedian8n Use the promo code FUTUREPEDIA *Free AI Agents Cheat ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
-      "id": "9_Dw9qcjLgA",
-      "title": "The EASIEST Way to Build a Copilot Agent (NEW Agent Builder Tutorial)",
-      "channel": "Collaboration Simplified",
-      "url": "https://www.youtube.com/watch?v=9_Dw9qcjLgA",
-      "thumbnail": "https://i.ytimg.com/vi/9_Dw9qcjLgA/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "14:30",
-      "viewCount": 229910,
-      "category": "Low-code / No-code 工具",
-      "language": "英文",
-      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：Low-code / No-code 工具。",
-        "公開觀看數約 229,910。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Join Shervin Shaffie, Copilot Principal Engineer at Microsoft, in this simple tutorial on how to build powerful Microsoft 365 Copilot ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "Low-code",
-        "No-code",
-        "AI 工具"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "cGuyrANVi4A",
       "title": "How Model Context Protocol (MCP) actually works",
       "channel": "Google Cloud Tech and Smitha Kolan - Machine Learning Engineer",
@@ -794,14 +698,14 @@
       "thumbnail": "https://i.ytimg.com/vi/cGuyrANVi4A/hqdefault.jpg",
       "publishedAt": "",
       "duration": "7:58",
-      "viewCount": 435468,
+      "viewCount": 437470,
       "category": "MCP / Agent 工具協議",
       "language": "英文",
       "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 435,468。"
+        "公開觀看數約 437,470。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -819,28 +723,60 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "xo7dE80ktu4",
-      "title": "Claude Code for Beginners (Part 1) | Detailed Configuration Tutorial for Non-Engineers to Build A...",
-      "channel": "柚智夫妻 X 雷蒙三十",
-      "url": "https://www.youtube.com/watch?v=xo7dE80ktu4",
-      "thumbnail": "https://i.ytimg.com/vi/xo7dE80ktu4/hqdefault.jpg",
+      "id": "9_Dw9qcjLgA",
+      "title": "The EASIEST Way to Build a Copilot Agent (NEW Agent Builder Tutorial)",
+      "channel": "Collaboration Simplified",
+      "url": "https://www.youtube.com/watch?v=9_Dw9qcjLgA",
+      "thumbnail": "https://i.ytimg.com/vi/9_Dw9qcjLgA/hqdefault.jpg",
       "publishedAt": "",
-      "duration": "35:08",
-      "viewCount": 802411,
-      "category": "中文 AI 教學",
-      "language": "中文",
-      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "duration": "14:30",
+      "viewCount": 230588,
+      "category": "Low-code / No-code 工具",
+      "language": "英文",
+      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：中文 AI 教學。",
-        "公開觀看數約 802,411。"
+        "分類：Low-code / No-code 工具。",
+        "公開觀看數約 230,588。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
         "需要用影片快速建立工具雷達的人"
       ],
       "detail": [
-        "Claude Code is more than just programming; it's a real AI assistant that can do the work for you. Scared about code? Don't ...",
+        "Join Shervin Shaffie, Copilot Principal Engineer at Microsoft, in this simple tutorial on how to build powerful Microsoft 365 Copilot ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "Low-code",
+        "No-code",
+        "AI 工具"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "05aY2LRIC3s",
+      "title": "CLAUDE CODE FULL COURSE 12 HOURS: Build Real AI Projects (2026)",
+      "channel": "Mayank Aggarwal",
+      "url": "https://www.youtube.com/watch?v=05aY2LRIC3s",
+      "thumbnail": "https://i.ytimg.com/vi/05aY2LRIC3s/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "13:53:47",
+      "viewCount": 424726,
+      "category": "AI Coding / Claude Code / Codex",
+      "language": "英文",
+      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Coding / Claude Code / Codex。",
+        "公開觀看數約 424,726。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "https://claude-code-with-mayank.netlify.app Check out Resources ...",
         "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
       ],
       "tags": [
@@ -858,14 +794,14 @@
       "thumbnail": "https://i.ytimg.com/vi/KW4TD4BL-Iw/hqdefault.jpg",
       "publishedAt": "",
       "duration": "3:23",
-      "viewCount": 409136,
+      "viewCount": 410307,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 409,136。"
+        "公開觀看數約 410,307。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -890,14 +826,14 @@
       "thumbnail": "https://i.ytimg.com/vi/aXM56qJQT7Y/hqdefault.jpg",
       "publishedAt": "",
       "duration": "17:47",
-      "viewCount": 406012,
+      "viewCount": 408618,
       "category": "AI Coding / Claude Code / Codex",
       "language": "英文",
       "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 406,012。"
+        "公開觀看數約 408,618。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -915,70 +851,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "HIRDzMtuWFk",
-      "title": "Anthropic Engineer Explains: What to Build Instead of AI Agents",
-      "channel": "Nate Herk | AI Automation",
-      "url": "https://www.youtube.com/watch?v=HIRDzMtuWFk",
-      "thumbnail": "https://i.ytimg.com/vi/HIRDzMtuWFk/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "9:48",
-      "viewCount": 398608,
-      "category": "AI Agent 趨勢 / 比較",
-      "language": "英文",
-      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 398,608。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "My playbook for growing a $1M AI agency: https://app.aiautomationsociety.ai/opaa-ads-optin My FREE resources: ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
-      "id": "GE0pFiFJTKo",
-      "title": "Agent 的概念、原理与构建模式 —— 从零打造一个简化版的 Claude Code",
-      "channel": "马克的技术工作坊",
-      "url": "https://www.youtube.com/watch?v=GE0pFiFJTKo",
-      "thumbnail": "https://i.ytimg.com/vi/GE0pFiFJTKo/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "28:07",
-      "viewCount": 383457,
-      "category": "中文 AI 教學",
-      "language": "中文",
-      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：中文 AI 教學。",
-        "公開觀看數約 383,457。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Agent 的概念、原理与构建模式—— 从零打造一个简化版的Claude Code 我们将以ReAct 和Plan-And-Execute 这两种模式为例， ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "xl7Y49yLPDs",
       "title": "n8n Tutorial for Beginners in 2026: How to Build AI Agents",
       "channel": "Youri van Hofwegen",
@@ -986,14 +858,14 @@
       "thumbnail": "https://i.ytimg.com/vi/xl7Y49yLPDs/hqdefault.jpg",
       "publishedAt": "",
       "duration": "17:32",
-      "viewCount": 53503,
+      "viewCount": 54114,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 53,503。"
+        "公開觀看數約 54,114。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1018,14 +890,14 @@
       "thumbnail": "https://i.ytimg.com/vi/7_PeuTsx7UM/hqdefault.jpg",
       "publishedAt": "",
       "duration": "12:03:47",
-      "viewCount": 360633,
+      "viewCount": 361780,
       "category": "自動化工作流",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：自動化工作流。",
-        "公開觀看數約 360,633。"
+        "公開觀看數約 361,780。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1043,28 +915,28 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "ByWCsa8DbF8",
-      "title": "Build a Local AI Agent in 10 Minutes using Python",
+      "id": "GAyNvq6Ayps",
+      "title": "Running LLMs Locally Just Got Way Better - Ollama + MCP",
       "channel": "Tech With Tim",
-      "url": "https://www.youtube.com/watch?v=ByWCsa8DbF8",
-      "thumbnail": "https://i.ytimg.com/vi/ByWCsa8DbF8/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=GAyNvq6Ayps",
+      "thumbnail": "https://i.ytimg.com/vi/GAyNvq6Ayps/hqdefault.jpg",
       "publishedAt": "",
-      "duration": "8:08",
-      "viewCount": 186474,
+      "duration": "21:52",
+      "viewCount": 189290,
       "category": "Local LLM / 本機 Agent",
       "language": "英文",
       "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 186,474。"
+        "公開觀看數約 189,290。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
         "需要用影片快速建立工具雷達的人"
       ],
       "detail": [
-        "All code in this video is available here: https://www.aiagentbuilders.co/yt-resources/local-python-agent Want to LEARN how to ...",
+        "Use the Zapier MCP server to connect to over 8000 applications/tools: https://bit.ly/4vn0jrC If you want to run a local model that is ...",
         "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
       ],
       "tags": [
@@ -1082,14 +954,14 @@
       "thumbnail": "https://i.ytimg.com/vi/u2QqWkMv3Lg/hqdefault.jpg",
       "publishedAt": "",
       "duration": "2:13:40",
-      "viewCount": 352679,
+      "viewCount": 358173,
       "category": "AI Coding / Claude Code / Codex",
       "language": "英文",
       "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 352,679。"
+        "公開觀看數約 358,173。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1107,102 +979,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "JMYspR42HFM",
-      "title": "Claude Code vs Codex vs Cursor (an honest comparison)",
-      "channel": "Theo - t3․gg",
-      "url": "https://www.youtube.com/watch?v=JMYspR42HFM",
-      "thumbnail": "https://i.ytimg.com/vi/JMYspR42HFM/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "37:57",
-      "viewCount": 179392,
-      "category": "AI Coding / Claude Code / Codex",
-      "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 179,392。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "The three main coding agents right now are Claude Code, Codex, and Cursor. Which one should you use? Thank you ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
-      "id": "HdI_aYzgJIg",
-      "title": "Personal Agents, Clearly Explained",
-      "channel": "Jeff Su",
-      "url": "https://www.youtube.com/watch?v=HdI_aYzgJIg",
-      "thumbnail": "https://i.ytimg.com/vi/HdI_aYzgJIg/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "15:21",
-      "viewCount": 333517,
-      "category": "AI Agent 趨勢 / 比較",
-      "language": "英文",
-      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 333,517。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Join my free AI Essentials newsletter ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
-      "id": "fwdzsY9KWKk",
-      "title": "15分鐘學會AI Agent｜完整講解",
-      "channel": "李厂长来了",
-      "url": "https://www.youtube.com/watch?v=fwdzsY9KWKk",
-      "thumbnail": "https://i.ytimg.com/vi/fwdzsY9KWKk/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "14:57",
-      "viewCount": 310281,
-      "category": "中文 AI 教學",
-      "language": "中文",
-      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：中文 AI 教學。",
-        "公開觀看數約 310,281。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Filmora，一站式AI 內容創作工具，從AI 影片生成到剪輯一次完成。 https://filmora.go.link/j9Kcv ※ 支援Veo、Seedance、GPT ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "wqNMoe_fq3U",
       "title": "Claude Code: Build Your First AI Agent in 30 Minutes (Zero Code)",
       "channel": "AI Foundations",
@@ -1210,14 +986,14 @@
       "thumbnail": "https://i.ytimg.com/vi/wqNMoe_fq3U/hqdefault.jpg",
       "publishedAt": "",
       "duration": "30:01",
-      "viewCount": 41776,
+      "viewCount": 50449,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 41,776。"
+        "公開觀看數約 50,449。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1235,6 +1011,102 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "HdI_aYzgJIg",
+      "title": "Personal Agents, Clearly Explained",
+      "channel": "Jeff Su",
+      "url": "https://www.youtube.com/watch?v=HdI_aYzgJIg",
+      "thumbnail": "https://i.ytimg.com/vi/HdI_aYzgJIg/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "15:21",
+      "viewCount": 336107,
+      "category": "AI Agent 趨勢 / 比較",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Agent 趨勢 / 比較。",
+        "公開觀看數約 336,107。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Join my free AI Essentials newsletter ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "TAKDIvvUdc4",
+      "title": "Complete Claude Code Course In 2 Hours For Developers",
+      "channel": "Krish Naik",
+      "url": "https://www.youtube.com/watch?v=TAKDIvvUdc4",
+      "thumbnail": "https://i.ytimg.com/vi/TAKDIvvUdc4/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "1:58:35",
+      "viewCount": 335208,
+      "category": "AI Coding / Claude Code / Codex",
+      "language": "英文",
+      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Coding / Claude Code / Codex。",
+        "公開觀看數約 335,208。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Claude Code is an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "fwdzsY9KWKk",
+      "title": "15分鐘學會AI Agent｜完整講解",
+      "channel": "李厂长来了",
+      "url": "https://www.youtube.com/watch?v=fwdzsY9KWKk",
+      "thumbnail": "https://i.ytimg.com/vi/fwdzsY9KWKk/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "14:57",
+      "viewCount": 311618,
+      "category": "中文 AI 教學",
+      "language": "中文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：中文 AI 教學。",
+        "公開觀看數約 311,618。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Filmora，一站式AI 內容創作工具，從AI 影片生成到剪輯一次完成。 https://filmora.go.link/j9Kcv ※ 支援Veo、Seedance、GPT ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "ZeJXI2MAhj0",
       "title": "Stop Learning n8n in 2026...Learn THIS Instead",
       "channel": "Nate Herk | AI Automation",
@@ -1242,14 +1114,14 @@
       "thumbnail": "https://i.ytimg.com/vi/ZeJXI2MAhj0/hqdefault.jpg",
       "publishedAt": "",
       "duration": "18:38",
-      "viewCount": 526878,
+      "viewCount": 527717,
       "category": "自動化工作流",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：自動化工作流。",
-        "公開觀看數約 526,878。"
+        "公開觀看數約 527,717。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1267,38 +1139,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "3TwbE7gv6qo",
-      "title": "Learn 99% Of Claude Code in One Video",
-      "channel": "Tech With Tim",
-      "url": "https://www.youtube.com/watch?v=3TwbE7gv6qo",
-      "thumbnail": "https://i.ytimg.com/vi/3TwbE7gv6qo/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "48:21",
-      "viewCount": 272865,
-      "category": "AI Coding / Claude Code / Codex",
-      "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 272,865。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Get started with Claude Code: https://clau.de/TechWithTim Most people install Claude Code, type a prompt, and never touch the ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "9-6LtfjYmpg",
       "title": "AI Agents: No Code vs Code Frameworks - Which one is right for you?",
       "channel": "codebasics",
@@ -1306,14 +1146,14 @@
       "thumbnail": "https://i.ytimg.com/vi/9-6LtfjYmpg/hqdefault.jpg",
       "publishedAt": "",
       "duration": "4:30",
-      "viewCount": 75205,
+      "viewCount": 75375,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 75,205。"
+        "公開觀看數約 75,375。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1331,38 +1171,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "goU9VIXA8II",
-      "title": "MCP vs Skills: Which Is Right for Your AI Agent and LLMs?",
-      "channel": "IBM Technology",
-      "url": "https://www.youtube.com/watch?v=goU9VIXA8II",
-      "thumbnail": "https://i.ytimg.com/vi/goU9VIXA8II/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "8:03",
-      "viewCount": 139261,
-      "category": "MCP / Agent 工具協議",
-      "language": "英文",
-      "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 139,261。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Learn more about AI Agents here → https://ibm.biz/~TjxCNJCU3 Choosing how to extend an AI agent isn't always obvious. Cedric ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "4M-kUY0u2bk",
       "title": "The SIMPLEST Way to Build an App with AI in 2026",
       "channel": "Mikey No Code",
@@ -1370,14 +1178,14 @@
       "thumbnail": "https://i.ytimg.com/vi/4M-kUY0u2bk/hqdefault.jpg",
       "publishedAt": "",
       "duration": "15:08",
-      "viewCount": 239983,
+      "viewCount": 241796,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 239,983。"
+        "公開觀看數約 241,796。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1395,38 +1203,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "qVajpj_1eDQ",
-      "title": "Stop Vibe Coding (Do This Instead)",
-      "channel": "Luuk Alleman",
-      "url": "https://www.youtube.com/watch?v=qVajpj_1eDQ",
-      "thumbnail": "https://i.ytimg.com/vi/qVajpj_1eDQ/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "5:12",
-      "viewCount": 239924,
-      "category": "Low-code / No-code 工具",
-      "language": "英文",
-      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：Low-code / No-code 工具。",
-        "公開觀看數約 239,924。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Get the full BuildLoop course (Lovable + Claude, 30-day sprint): https://build-loop.ai/buildloop.",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "Low-code",
-        "No-code",
-        "AI 工具"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "wBnnA8aIxUs",
       "title": "How to build an AI Agent and MCP Server (step-by-step)",
       "channel": "Google Cloud Tech and Smitha Kolan - Machine Learning Engineer",
@@ -1434,14 +1210,14 @@
       "thumbnail": "https://i.ytimg.com/vi/wBnnA8aIxUs/hqdefault.jpg",
       "publishedAt": "",
       "duration": "7:54",
-      "viewCount": 126491,
+      "viewCount": 126953,
       "category": "MCP / Agent 工具協議",
       "language": "英文",
       "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 126,491。"
+        "公開觀看數約 126,953。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1459,34 +1235,34 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "tTw1z10yMCI",
-      "title": "MCP Servers Explained in 5 Minutes (for beginners)",
-      "channel": "corbin",
-      "url": "https://www.youtube.com/watch?v=tTw1z10yMCI",
-      "thumbnail": "https://i.ytimg.com/vi/tTw1z10yMCI/hqdefault.jpg",
+      "id": "qVajpj_1eDQ",
+      "title": "Stop Vibe Coding (Do This Instead)",
+      "channel": "Luuk Alleman",
+      "url": "https://www.youtube.com/watch?v=qVajpj_1eDQ",
+      "thumbnail": "https://i.ytimg.com/vi/qVajpj_1eDQ/hqdefault.jpg",
       "publishedAt": "",
-      "duration": "5:32",
-      "viewCount": 236952,
-      "category": "MCP / Agent 工具協議",
+      "duration": "5:12",
+      "viewCount": 240386,
+      "category": "Low-code / No-code 工具",
       "language": "英文",
-      "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
+      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：MCP / Agent 工具協議。",
-        "公開觀看數約 236,952。"
+        "分類：Low-code / No-code 工具。",
+        "公開觀看數約 240,386。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
         "需要用影片快速建立工具雷達的人"
       ],
       "detail": [
-        "read more on this topic https://boostmyagent.com/blog/mcp-explained ━━━━━━━━━━━━━━━━━━━━ Boost OS ...",
+        "Get the full BuildLoop course (Lovable + Claude, 30-day sprint): https://build-loop.ai/buildloop.",
         "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
       ],
       "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
+        "Low-code",
+        "No-code",
+        "AI 工具"
       ],
       "sourceType": "YouTube"
     },
@@ -1498,14 +1274,14 @@
       "thumbnail": "https://i.ytimg.com/vi/TKnaDGpN7Ns/hqdefault.jpg",
       "publishedAt": "",
       "duration": "11:52",
-      "viewCount": 113949,
+      "viewCount": 114213,
       "category": "自動化工作流",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：自動化工作流。",
-        "公開觀看數約 113,949。"
+        "公開觀看數約 114,213。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1523,38 +1299,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "WCrnS09vpfo",
-      "title": "I Made Codex and Claude Code Build the Same App. One Clearly Won.",
-      "channel": "Nate Herk | AI Automation",
-      "url": "https://www.youtube.com/watch?v=WCrnS09vpfo",
-      "thumbnail": "https://i.ytimg.com/vi/WCrnS09vpfo/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "21:14",
-      "viewCount": 205155,
-      "category": "AI Coding / Claude Code / Codex",
-      "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 205,155。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "My playbook for growing a $1M AI agency: https://app.aiautomationsociety.ai/opaa-ads-optin My FREE resources: ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "sbuwHi1Sz6k",
       "title": "Codex vs Claude - an Honest Comparison",
       "channel": "Tech With Tim",
@@ -1562,14 +1306,14 @@
       "thumbnail": "https://i.ytimg.com/vi/sbuwHi1Sz6k/hqdefault.jpg",
       "publishedAt": "",
       "duration": "22:56",
-      "viewCount": 200152,
+      "viewCount": 200955,
       "category": "AI Coding / Claude Code / Codex",
       "language": "英文",
       "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 200,152。"
+        "公開觀看數約 200,955。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1587,38 +1331,6 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "aUVC9BwoLPg",
-      "title": "Build Your First Local AI Agent? 🧠 Hermes Agent Setup (Free & Private)",
-      "channel": "Wanderloots",
-      "url": "https://www.youtube.com/watch?v=aUVC9BwoLPg",
-      "thumbnail": "https://i.ytimg.com/vi/aUVC9BwoLPg/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "20:17",
-      "viewCount": 105229,
-      "category": "Local LLM / 本機 Agent",
-      "language": "英文",
-      "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 105,229。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "Local AI agents are both free & private... but how can we set them up easily? Hermes just updated their onboarding workflow, ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
       "id": "HhZcnM9tR7s",
       "title": "Pi 大道至简，超越Codex和Claude Code的极简Agent，保姆级全攻略， 一期视频精通",
       "channel": "技术爬爬虾  TechShrimp",
@@ -1626,14 +1338,14 @@
       "thumbnail": "https://i.ytimg.com/vi/HhZcnM9tR7s/hqdefault.jpg",
       "publishedAt": "",
       "duration": "44:38",
-      "viewCount": 103895,
+      "viewCount": 104096,
       "category": "中文 AI 教學",
       "language": "中文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：中文 AI 教學。",
-        "公開觀看數約 103,895。"
+        "公開觀看數約 104,096。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1658,14 +1370,14 @@
       "thumbnail": "https://i.ytimg.com/vi/UyoVmQLekBc/hqdefault.jpg",
       "publishedAt": "",
       "duration": "18:02",
-      "viewCount": 52786,
+      "viewCount": 52825,
       "category": "Low-code / No-code 工具",
       "language": "英文",
       "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Low-code / No-code 工具。",
-        "公開觀看數約 52,786。"
+        "公開觀看數約 52,825。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1683,60 +1395,28 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "Fqeo8q8-nJg",
-      "title": "How I'd Learn n8n if I had to Start Over in 2026",
-      "channel": "Nate Herk | AI Automation",
-      "url": "https://www.youtube.com/watch?v=Fqeo8q8-nJg",
-      "thumbnail": "https://i.ytimg.com/vi/Fqeo8q8-nJg/hqdefault.jpg",
+      "id": "YY-egxTQirA",
+      "title": "n8n Full Course – Architect Scalable AI Automations from Scratch",
+      "channel": "freeCodeCamp.org and Rahul Joshi | Business Automation Expert",
+      "url": "https://www.youtube.com/watch?v=YY-egxTQirA",
+      "thumbnail": "https://i.ytimg.com/vi/YY-egxTQirA/hqdefault.jpg",
       "publishedAt": "",
-      "duration": "14:18",
-      "viewCount": 345978,
+      "duration": "43:06",
+      "viewCount": 175463,
       "category": "自動化工作流",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：自動化工作流。",
-        "公開觀看數約 345,978。"
+        "公開觀看數約 175,463。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
         "需要用影片快速建立工具雷達的人"
       ],
       "detail": [
-        "My FREE AI OS Course: ...",
-        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
-      ],
-      "tags": [
-        "AI Agent",
-        "AI 工具",
-        "2026"
-      ],
-      "sourceType": "YouTube"
-    },
-    {
-      "id": "KlEU3tv5g7Q",
-      "title": "LM Studio Bionic: Local Agentic AI Experiments",
-      "channel": "ExplainingComputers",
-      "url": "https://www.youtube.com/watch?v=KlEU3tv5g7Q",
-      "thumbnail": "https://i.ytimg.com/vi/KlEU3tv5g7Q/hqdefault.jpg",
-      "publishedAt": "",
-      "duration": "24:20",
-      "viewCount": 181532,
-      "category": "Local LLM / 本機 Agent",
-      "language": "英文",
-      "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
-      "highlights": [
-        "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 181,532。"
-      ],
-      "audience": [
-        "想追 AI Agent / AI 工具趨勢的使用者",
-        "需要用影片快速建立工具雷達的人"
-      ],
-      "detail": [
-        "LM Studio Bionic installed and tested on modest PC hardware, and then used to run local AI models for agentic web access and ...",
+        "Master n8n and build production-ready automation systems, covering everything from core fundamentals and API orchestration to ...",
         "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
       ],
       "tags": [
@@ -1754,14 +1434,14 @@
       "thumbnail": "https://i.ytimg.com/vi/ofC4OeNjDx8/hqdefault.jpg",
       "publishedAt": "",
       "duration": "6:49",
-      "viewCount": 313499,
+      "viewCount": 314056,
       "category": "自動化工作流",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：自動化工作流。",
-        "公開觀看數約 313,499。"
+        "公開觀看數約 314,056。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1779,6 +1459,70 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "QR900a3SUvs",
+      "title": "Before You Spend Thousands on Local AI, Watch This",
+      "channel": "Manolo Remiddi",
+      "url": "https://www.youtube.com/watch?v=QR900a3SUvs",
+      "thumbnail": "https://i.ytimg.com/vi/QR900a3SUvs/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "23:10",
+      "viewCount": 165467,
+      "category": "Local LLM / 本機 Agent",
+      "language": "英文",
+      "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：Local LLM / 本機 Agent。",
+        "公開觀看數約 165,467。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Thanks to Micro Center for sponsoring this video! Explore their AI hardware, check out the Austin store offer, and catch up on the ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "to4Me479A2s",
+      "title": "Grok Bot + Claude Code, Why is Everyone Switching to This?",
+      "channel": "Rob Shocks - Switch Dimension",
+      "url": "https://www.youtube.com/watch?v=to4Me479A2s",
+      "thumbnail": "https://i.ytimg.com/vi/to4Me479A2s/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "16:04",
+      "viewCount": 161289,
+      "category": "AI Coding / Claude Code / Codex",
+      "language": "英文",
+      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Coding / Claude Code / Codex。",
+        "公開觀看數約 161,289。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Want Agents & Apps in Realtime? check out Neon - https://neon.plug.dev/cE8b3mL Grok Bot works best as the manager of your ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "XGuQLDIrTWw",
       "title": "I Tried Coding with Local AI Models for 7 Days",
       "channel": "Adrian Twarog",
@@ -1786,14 +1530,14 @@
       "thumbnail": "https://i.ytimg.com/vi/XGuQLDIrTWw/hqdefault.jpg",
       "publishedAt": "",
       "duration": "13:24",
-      "viewCount": 144316,
+      "viewCount": 146099,
       "category": "Local LLM / 本機 Agent",
       "language": "英文",
       "summary": "聚焦本機模型或可自架 Agent，適合評估資料留在本機、成本與部署限制。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：Local LLM / 本機 Agent。",
-        "公開觀看數約 144,316。"
+        "公開觀看數約 146,099。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1811,6 +1555,38 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "21SVXuwK50g",
+      "title": "Build your own AI Agent in Copilot Agent Builder (October 2026 UPDATE)",
+      "channel": "Lisa Crosbie",
+      "url": "https://www.youtube.com/watch?v=21SVXuwK50g",
+      "thumbnail": "https://i.ytimg.com/vi/21SVXuwK50g/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "27:55",
+      "viewCount": 39490,
+      "category": "Low-code / No-code 工具",
+      "language": "英文",
+      "summary": "聚焦低程式碼／無程式碼 AI 工具，適合想快速做出自動化、AI app 或 agent prototype 的使用者。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：Low-code / No-code 工具。",
+        "公開觀看數約 39,490。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Welcome to my beginner tutorial (October 2026 update with all the new capabilities) on how to build agents for your everyday ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "Low-code",
+        "No-code",
+        "AI 工具"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "4TvH-OZhwxI",
       "title": "AI Agents Explained: How to Create and Use AI Agents in 2026",
       "channel": "AI Master",
@@ -1818,14 +1594,14 @@
       "thumbnail": "https://i.ytimg.com/vi/4TvH-OZhwxI/hqdefault.jpg",
       "publishedAt": "",
       "duration": "24:28",
-      "viewCount": 141029,
+      "viewCount": 141243,
       "category": "AI Agent 趨勢 / 比較",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 141,029。"
+        "公開觀看數約 141,243。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1843,6 +1619,38 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "GRhg_ZZswmQ",
+      "title": "How to Train an AI Agent? Dual-Memory Systems with Claude Code and Codex, Conversation Management...",
+      "channel": "柚智夫妻 X 雷蒙三十",
+      "url": "https://www.youtube.com/watch?v=GRhg_ZZswmQ",
+      "thumbnail": "https://i.ytimg.com/vi/GRhg_ZZswmQ/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "14:41",
+      "viewCount": 38201,
+      "category": "中文 AI 教學",
+      "language": "中文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：中文 AI 教學。",
+        "公開觀看數約 38,201。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "What if you spend two or three years developing a super-intelligent AI assistant that understands you perfectly, only to have ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "KJybu1Y2tyY",
       "title": "我的 AI 编程全流程：如何使用 AI 稳定交付一个高质量的产品",
       "channel": "马克的技术工作坊",
@@ -1850,14 +1658,14 @@
       "thumbnail": "https://i.ytimg.com/vi/KJybu1Y2tyY/hqdefault.jpg",
       "publishedAt": "",
       "duration": "24:55",
-      "viewCount": 487671,
+      "viewCount": 489799,
       "category": "中文 AI 教學",
       "language": "中文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：中文 AI 教學。",
-        "公開觀看數約 487,671。"
+        "公開觀看數約 489,799。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1875,6 +1683,166 @@
       "sourceType": "YouTube"
     },
     {
+      "id": "_vLi76x43b0",
+      "title": "Top 7 AI Agent Tools That Actually Work",
+      "channel": "Futurepedia",
+      "url": "https://www.youtube.com/watch?v=_vLi76x43b0",
+      "thumbnail": "https://i.ytimg.com/vi/_vLi76x43b0/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "21:36",
+      "viewCount": 128406,
+      "category": "AI Agent 趨勢 / 比較",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Agent 趨勢 / 比較。",
+        "公開觀看數約 128,406。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Set up OpenClaw with Hostinger VPS - http://hostinger.com/futurepediaopenclaw Use the code FUTUREPEDIA for 10% off ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "He8tUwLzLnU",
+      "title": "MCP Servers Explained & Built",
+      "channel": "Tech With Tim",
+      "url": "https://www.youtube.com/watch?v=He8tUwLzLnU",
+      "thumbnail": "https://i.ytimg.com/vi/He8tUwLzLnU/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "30:14",
+      "viewCount": 127142,
+      "category": "MCP / Agent 工具協議",
+      "language": "英文",
+      "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：MCP / Agent 工具協議。",
+        "公開觀看數約 127,142。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Secure your MCP server using Descope for free: https://descope.plug.dev/W4lLipY MCP servers are quickly becoming one of the ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "_C57BxSXRbU",
+      "title": "The Best AI Tools for Developers in 2026 (That I Actually Use)",
+      "channel": "Tech With Tim",
+      "url": "https://www.youtube.com/watch?v=_C57BxSXRbU",
+      "thumbnail": "https://i.ytimg.com/vi/_C57BxSXRbU/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "15:31",
+      "viewCount": 108272,
+      "category": "AI Agent 趨勢 / 比較",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Agent 趨勢 / 比較。",
+        "公開觀看數約 108,272。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Create a free Supabase account to use as the backend for your app: https://supabase.link/dy3LNc4 Every day I get asked the ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "qfXxWLxNGuM",
+      "title": "How to Set Up AI Agents in 2026 (Use this FREE AI Tool)",
+      "channel": "Youri van Hofwegen",
+      "url": "https://www.youtube.com/watch?v=qfXxWLxNGuM",
+      "thumbnail": "https://i.ytimg.com/vi/qfXxWLxNGuM/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "12:57",
+      "viewCount": 103889,
+      "category": "AI Agent 趨勢 / 比較",
+      "language": "英文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：AI Agent 趨勢 / 比較。",
+        "公開觀看數約 103,889。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Host Your AI Agent with Hostinger https://www.hostg.xyz/SHJvp Use This FREE AI Tool to Setup Your Agent ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "HSDyr8bmuOI",
+      "title": "Claude Cowork vs Codex: 誰才是更好的AI工作助手？",
+      "channel": "李厂长来了",
+      "url": "https://www.youtube.com/watch?v=HSDyr8bmuOI",
+      "thumbnail": "https://i.ytimg.com/vi/HSDyr8bmuOI/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "16:46",
+      "viewCount": 94244,
+      "category": "中文 AI 教學",
+      "language": "中文",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：中文 AI 教學。",
+        "公開觀看數約 94,244。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "Filmora，一站式AI 內容創作工具，從AI 影片生成到剪輯一次完成。 https://filmora.go.link/j9Kcv * 支援Veo、Seedance、GPT Image ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
       "id": "2GOfWK5M3fg",
       "title": "Best FREE AI Agent Tools That Actually Work in 2026 (I Tried All)",
       "channel": "Mikey No Code",
@@ -1882,14 +1850,14 @@
       "thumbnail": "https://i.ytimg.com/vi/2GOfWK5M3fg/hqdefault.jpg",
       "publishedAt": "",
       "duration": "20:44",
-      "viewCount": 92837,
+      "viewCount": 93138,
       "category": "AI Agent 趨勢 / 比較",
       "language": "英文",
       "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
         "分類：AI Agent 趨勢 / 比較。",
-        "公開觀看數約 92,837。"
+        "公開觀看數約 93,138。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
@@ -1907,28 +1875,60 @@
       "sourceType": "YouTube"
     },
     {
-      "id": "XOCVdPIhAHg",
-      "title": "Cursor just crushed Claude Code",
+      "id": "84-sHkG4AQU",
+      "title": "Top 7 AI Agent Tools That Actually Work",
       "channel": "Tech With Tim",
-      "url": "https://www.youtube.com/watch?v=XOCVdPIhAHg",
-      "thumbnail": "https://i.ytimg.com/vi/XOCVdPIhAHg/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=84-sHkG4AQU",
+      "thumbnail": "https://i.ytimg.com/vi/84-sHkG4AQU/hqdefault.jpg",
       "publishedAt": "",
-      "duration": "19:45",
-      "viewCount": 44308,
-      "category": "AI Coding / Claude Code / Codex",
+      "duration": "19:33",
+      "viewCount": 89253,
+      "category": "AI Agent 趨勢 / 比較",
       "language": "英文",
-      "summary": "聚焦 AI coding agent 與開發工作流，適合比較 Claude Code、Codex、Cursor 類工具的實作方式。",
+      "summary": "近期 AI Agent / AI 工具影片候選，適合先看主題方向，再決定是否深入原始內容。",
       "highlights": [
         "依近期性、觀看數與主題關聯度納入候選。",
-        "分類：AI Coding / Claude Code / Codex。",
-        "公開觀看數約 44,308。"
+        "分類：AI Agent 趨勢 / 比較。",
+        "公開觀看數約 89,253。"
       ],
       "audience": [
         "想追 AI Agent / AI 工具趨勢的使用者",
         "需要用影片快速建立工具雷達的人"
       ],
       "detail": [
-        "Deploy your site using here.now completely for free, copy the prompt for your agent here! https://here.now/r/twt I accidentally ...",
+        "Get started with Browser Use and get $30 in FREE credits! https://link.browser-use.com/tim Want to LEARN how to build useful AI ...",
+        "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
+      ],
+      "tags": [
+        "AI Agent",
+        "AI 工具",
+        "2026"
+      ],
+      "sourceType": "YouTube"
+    },
+    {
+      "id": "5SP8PnKqQ98",
+      "title": "n8n Full Course 2026 | AI Agents, MCP, RAG & Automations",
+      "channel": "Sangam Mukherjee",
+      "url": "https://www.youtube.com/watch?v=5SP8PnKqQ98",
+      "thumbnail": "https://i.ytimg.com/vi/5SP8PnKqQ98/hqdefault.jpg",
+      "publishedAt": "",
+      "duration": "3:47:03",
+      "viewCount": 12185,
+      "category": "MCP / Agent 工具協議",
+      "language": "英文",
+      "summary": "聚焦 MCP 與工具協議，適合理解 agent 如何連接外部工具、資料與服務。",
+      "highlights": [
+        "依近期性、觀看數與主題關聯度納入候選。",
+        "分類：MCP / Agent 工具協議。",
+        "公開觀看數約 12,185。"
+      ],
+      "audience": [
+        "想追 AI Agent / AI 工具趨勢的使用者",
+        "需要用影片快速建立工具雷達的人"
+      ],
+      "detail": [
+        "CHECKOUT N8N ▭▭⭐ https://plug.dev.plug.dev/cy6JqFR ⭐▭▭▭▭▭▭ Key Features: ▭▭▭▭▭▭⭐ Build a ...",
         "建議閱讀方式：先確認影片是否示範真實流程，再檢查工具限制、成本、資料安全與是否適合放進自己的工作流。"
       ],
       "tags": [
