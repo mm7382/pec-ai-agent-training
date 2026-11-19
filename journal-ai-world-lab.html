@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 自主世界：五個角色的七天，與亞當、夏娃的新開局 - Journal</title><meta name="description" content="記錄 AIWorldLab 的純文字模擬：從固定回合、五個角色的七日實驗，到用身體需求與事件推動的兩人世界。">
+<link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/journal-ai-world-lab.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./journal-article.css?v=20260813-bilingual-2">
+<script src="./site-config.js"></script><script defer src="/assets/site-analytics.js?v=20261030"></script></head>
+<body class="journal-article-page"><main class="journal-article-shell">
+<a class="journal-back" href="./journal.html">&larr; 回到學習日誌</a>
+<header class="journal-article-header"><div class="journal-article-meta"><span>工具實驗</span><time datetime="2026-11-19">2026.11.19</time></div><h1>AI 自主世界：五個角色的七天，與亞當、夏娃的新開局</h1><p class="journal-article-lede">記錄 AIWorldLab 的純文字模擬：從固定回合、五個角色的七日實驗，到用身體需求與事件推動的兩人世界。</p></header>
+<article class="journal-article-body"><h2>我想觀察的，不只是 AI 會不會聊天</h2>
+<p>我想讓角色在沒有真人中途指揮的情況下，自己找食物、走動、說話，甚至一起蓋房子。第一步先不做動畫：文字記錄能讓我分清楚，角色是在描述一件事，還是真的做了那件事。角色提出行動，程式才依當下位置與資源判定結果。</p>
+<figure><img src="./journal-ai-world-lab-prototype.png" alt="AI 自主世界的早期五人原型介面，顯示地圖、角色和已保存回合" loading="lazy"><figcaption>AIWorldLab 早期五人世界的實際介面，顯示兩個保存回合。這不是最新兩人文字實驗，也不是即時上線畫面。</figcaption></figure>
+<h2>早期三天：有動作，但還看不出互動</h2>
+<p>最早用同一個模型請求替五個角色產生決策，三天共 6 次請求、結算了 43 個行動。有時一步無效，後面的對話也沒送出去。改成每個角色各自取得觀察、各自決定後，一天只給一次決策，訊息雖然送到了，實驗中仍沒有觀察到回覆。我不能把沒有回覆直接解讀成角色不願意互動。</p>
+<h2>五個角色，七個遊戲日</h2>
+<p>澄注意安全、禾傾向與人合作、嵐愛探索、朔關注資源與建造、晴常往水邊觀察。這一輪把決策增加到每天兩個時段，角色輪流先行，資源、記憶與勞動成果跨時段保留。程式給失敗行動留下原因，讓不相關的對話仍能繼續；食物提議則必須有人正式接受，才會轉移庫存。</p>
+<figure><svg viewBox="0 0 720 270" role="img" aria-labelledby="runTitle runDesc" width="720" height="270" style="max-width:100%;height:auto;display:block"><title id="runTitle">五人七日實驗結果圖</title><desc id="runDesc">70 次獨立模型請求，92 個行動成功，24 個失敗，11 個相依行動跳過。</desc><rect width="720" height="270" rx="20" fill="#11283a"/><g fill="#f2f8fc" font-family="system-ui,sans-serif" font-size="25"><text x="38" y="53">五人世界｜七個遊戲日</text><text x="38" y="109">92 成功</text><text x="38" y="169">24 失敗</text><text x="38" y="229">11 跳過</text></g><rect x="190" y="83" width="462" height="32" rx="8" fill="#42d8b1"/><rect x="190" y="143" width="121" height="32" rx="8" fill="#ffa977"/><rect x="190" y="203" width="55" height="32" rx="8" fill="#96b2c8"/></svg><figcaption>依五人七日實驗的行動結算數據繪製。模型請求與行動數不是同一件事，一次決策可以提出多個行動。</figcaption></figure>
+<p>七天共 70 次獨立模型請求，五人都活著。第 3 天，禾邀請澄一起採集；澄在當天下午收到訊息，回覆願意，但先看安全。禾之後實際採到一份食物，朔也用三份採到的木材蓋出一間共用屋。另一件事更值得記下：角色口頭回應了食物提議，卻沒有正式接受，提議過期，庫存沒有轉移。這一輪沒有成功交易。</p>
+<p>這一輪的紀錄是 1,522,650 個輸入 token（含 645,760 個快取輸入）、8,702 個輸出 token。這是該次模型使用量，不換算成訂閱百分比，也不拿不同規則的跑法作直接成本比較。</p>
+<h2>兩人世界：讓事件決定何時再想</h2>
+<p>固定時段適合做對照，但不適合當角色的日常。我改以收到訊息、目前計畫結束，或身體需求達到門檻來安排下一次決策。亞當與夏娃是兩個各自觀察與決策的成人角色；新開局移除預設個性標籤，保留基本生活常識。食物、水與身體需求是世界規則的簡化設定，不是生理或醫學模型。</p>
+<p>較早的兩人版本留下 110 份模型結果、195 筆事件；那輪夏娃死亡，亞當最後的健康數值為 43。那是舊身體需求規則下的結果，不能混進新的開局。改版之後我把兩次記錄分開保存。</p>
+<h2>新開局的文字紀錄</h2>
+<figure><svg viewBox="0 0 720 334" role="img" aria-labelledby="logTitle logDesc" width="720" height="334" style="max-width:100%;height:auto;display:block"><title id="logTitle">亞當與夏娃的新開局事件時間圖</title><desc id="logDesc">第零分鐘夏娃自我介紹，第五分鐘亞當提議一起安排資源，第十分鐘夏娃採到食物，第六十五分鐘亞當移動失敗。</desc><rect width="720" height="334" rx="20" fill="#11283a"/><g font-family="system-ui,sans-serif" font-size="24" fill="#f2f8fc"><text x="38" y="53">新開局｜實際記錄的事件</text><text x="101" y="115">00 分｜夏娃自我介紹</text><text x="101" y="172">05 分｜亞當提議一起安排資源</text><text x="101" y="229">10 分｜夏娃採到食物</text><text x="101" y="286">65 分｜亞當移動失敗：位置已有人</text></g><path d="M61 105V277" stroke="#7798ae" stroke-width="3" /><g fill="#42d8b1"><circle cx="61" cy="106" r="8"/><circle cx="61" cy="163" r="8"/><circle cx="61" cy="220" r="8"/></g><circle cx="61" cy="277" r="8" fill="#ffa977"/></svg><figcaption>按已結算的遊戲事件繪製，非介面截圖。分鐘為遊戲時間，非現實經過時間。</figcaption></figure>
+<blockquote><p><strong>第 0 分鐘，夏娃：</strong>你好，我是夏娃。</p><p><strong>第 5 分鐘，亞當：</strong>你好，夏娃。附近有食物和木材，我們可以一起想想怎麼安排。</p><p><strong>第 30 分鐘，夏娃：</strong>我先收集一些食物，等一下再和你商量安排。</p></blockquote>
+<p>截至 11 月 19 日 16:41（台北時間），已核對 8 次 Luna 模型回覆的原始紀錄。此處只摘錄當時已結算的片段。</p>
+<p>對話之外，第 10 分鐘確實結算了採集；第 65 分鐘也留下失敗記錄，因為亞當想前往的格子已被占用。這些片段證明角色能對話、採集，且會被世界條件限制，但一個合作提議不等於已完成共同分工。這是新開局的截點，不是整輪結局。</p>
+<h2>接下來要驗證的事</h2>
+<p>新版仍限制每次最多兩個行動提案，交換功能也尚未開放。我想用相同開局重跑幾次，看看角色遇到資源不足或路被占用時，會不會調整計畫、尋求幫助，甚至形成持續分工。先用文字和實際狀態回答這些問題，再決定哪些片段值得做成網頁回放。這篇是開發紀錄，不是即時世界，也不是對人類社會的推論。</p></article>
+<nav class="journal-related" aria-label="相關開發紀錄"><h2>另一個專案</h2><ul><li><a href="./journal-future-world-skybridge.html">未來世界空橋：畫面能前進之後，為什麼先暫停</a></li></ul></nav>
+</main><script src="./tutorial-gate.js?v=20260813-journal"></script></body></html>
