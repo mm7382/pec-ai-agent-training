@@ -3,6 +3,7 @@
 <body class="journal-article-page"><main class="journal-article-shell"><a class="journal-back" href="./journal.html">&larr; 回到學習日誌</a>
 <header class="journal-article-header"><div class="journal-article-meta"><span>工具實驗</span><time datetime="2026-11-19">2026.11.19</time></div><h1>古裝留影：多版迭代，走到 Gemini 串接</h1><p class="journal-article-lede">從照片與造型選擇，到 Gemini 串接，記下古裝 App 的進展，以及完整生成流程的驗證邊界。</p></header>
 <article class="journal-article-body"><h2>我想做的古裝照片</h2><p>古裝留影的出發點，是讓使用者用自己的照片製作古裝造型與場景。我在意服裝和畫面的質感，也希望成品保留本人的五官與神韻。</p>
+<figure style="margin:1.75rem 0"><img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/70537/114299/main-image" alt="大都會藝術博物館收藏的清代雍正時期龍袍，絲織衣面可見龍紋" width="686" height="540" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="display:block;width:100%;max-width:686px;height:auto;margin-inline:auto;border-radius:.65rem"><figcaption style="margin-top:.6rem;font-size:.9rem;line-height:1.6">服飾實物對照：清代雍正時期龍袍。<a href="https://www.metmuseum.org/art/collection/search/70537">大都會藝術博物館館藏照片</a>，公眾領域；不是 App 生成的成果。</figcaption></figure>
 <h2>多次改版後接上 Gemini</h2><p>這個作品經過多個版本調整，後來已串接 Gemini。照片輸入、造型選擇、送出生成與取回結果，是需要逐步接起來的操作。串接是進展，但不能只看某一步有反應，就把整個 App 算成完成。</p>
 <h2>實際卡住的地方</h2><p>早期測試遇過無法確認照片上傳入口的情況，辨識條件與等待時間都是排查方向。後續也出現生成未自動執行、圖片未回到 App 的問題。這些紀錄讓我看見，外部頁面的狀態與等待過程，會直接影響使用者能不能完成操作。</p>
 <h2>這篇記錄的範圍</h2><p>這篇記錄的是多版迭代與 Gemini 串接。本文沒有驗證完整自動產圖、結果回傳及後續下載交付，因此不以這些早期紀錄判定目前整條流程是否已完成。</p>
