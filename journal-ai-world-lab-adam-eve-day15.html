@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 自主世界日記：下雨之後，亞當和夏娃怎麼活下去？ - Journal</title>
+<meta name="description" content="從一次人工降雨，到亞當找不到水、夏娃獨自生活到第 15 天。我想知道：AI 說了要合作，接下來真的會做什麼？">
+<link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/journal-ai-world-lab-adam-eve-day15.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./journal-article.css?v=20260813-bilingual-2">
+<script src="./site-config.js"></script><script defer src="/assets/site-analytics.js?v=20261030"></script>
+<style>
+.world-timeline{list-style:none;margin:0;padding:1.1rem 1.25rem;border:1px solid #3f596b;border-radius:1rem;background:#132b3c;color:#f3f9fd}
+.world-timeline li{display:grid;grid-template-columns:minmax(8rem,1fr) 2fr;gap:.4rem 1.1rem;padding:.65rem 0;line-height:1.5}
+.world-timeline li+li{border-top:1px solid #3f596b}
+.world-timeline strong{color:#9ceccc;font-weight:700}
+@media(max-width:520px){.world-timeline li{grid-template-columns:1fr;gap:.15rem}}
+</style>
+</head>
+<body class="journal-article-page"><main class="journal-article-shell">
+<a class="journal-back" href="./journal.html">&larr; 回到學習日誌</a>
+<header class="journal-article-header"><div class="journal-article-meta"><span>工具實驗</span><time datetime="2026-11-20">2026.11.20</time></div><h1>AI 自主世界日記：下雨之後，亞當和夏娃怎麼活下去？</h1><p class="journal-article-lede">從一次人工降雨，到亞當找不到水、夏娃獨自生活到第 15 天。我想知道：AI 說了要合作，接下來真的會做什麼？</p></header>
+<article class="journal-article-body">
+<p>這次我先把畫面拿掉，只看亞當和夏娃的對話和行動。兩個角色剛見面時，附近有食物和木材，很自然就談到要一起採集。水就沒那麼容易了。他們看得到的地方有限；有時候走到一半，想去的格子被占住；有時候說了話，對方太遠，根本沒收到。</p>
+<h2>我加了一場雨，看他們會怎麼做</h2>
+<p>我先手動讓世界下毛毛雨，再加大雨勢，最後放晴。我只改天氣，沒有指揮兩人去哪裡。他們先後接雨水喝，雨大時都選擇休息，並沒有移到遮蔽處。放晴後，水又成了問題。夏娃想喝水，但她當下不在水邊，這個動作沒有成功。</p>
+<figure aria-labelledby="timeline-caption">
+<ol class="world-timeline">
+<li><strong>第 4 天 22:25</strong><span>兩人都願意一起找水，移動時又遇到格子被占用。</span></li>
+<li><strong>第 5 天 11:40</strong><span>夏娃找到水邊，成功喝水。當天下午，亞當還沒收到消息。</span></li>
+<li><strong>第 6 天 18:40</strong><span>亞當一直沒能再喝到水，健康降到零。</span></li>
+<li><strong>第 11 天 19:10</strong><span>紀錄顯示夏娃已從疾病中恢復，但她仍非常口渴，身上沒有食物。</span></li>
+<li><strong>第 14 天 13:40</strong><span>夏娃離開水邊後找到食物，接連採集並吃了四份。</span></li>
+<li><strong>第 15 天 21:40</strong><span>最後一則旁白：夏娃留在水邊，繼續喝水和休息。</span></li>
+</ol>
+<figcaption id="timeline-caption">依這次實驗的文字旁白整理。以上都是世界內時間，不是實際經過了 15 天。</figcaption>
+</figure>
+<h2>答應一起找水，消息卻沒傳到</h2>
+<blockquote><p><strong>亞當：</strong>「我非常口渴，能不能一起找水？」</p><p><strong>夏娃：</strong>「我願意一起找水。你能帶路嗎？」</p></blockquote>
+<p>這是我最想留的一段。兩人確實有意合作，也開始移動，但夏娃找到水時，亞當沒有收到消息。後來夏娃的口渴緩解，紀錄卻顯示她生病了；亞當則因長時間沒能再喝到水，在第 6 天死亡。這是我設定的遊戲規則判出來的結果。單看這份紀錄，我也不能確定夏娃生病的原因。</p>
+<h2>剩下一個人之後，世界還在走</h2>
+<p>夏娃後來恢復了，也有幾次離開水邊找到食物。但從第 12 天起，有很長一段時間她都在喝水和休息。第 14 天好不容易補到食物，第 15 天又回到水邊附近，最後我決定先暫停。她這段獨居期間沒有新的對話；看著紀錄，我反而想問：她有沒有記住上次在哪裡找到食物？現在繼續喝水，真的是她最需要做的事嗎？</p>
+<h2>這次實驗讓我想改什麼</h2>
+<p>中途有一段很久沒有新訊息，我還以為當機了。後來我要求定時加旁白，寫清楚世界現在幾點、角色做成了什麼，還是正在等模型回覆。連線檢查逾時時，也單獨標明保存和暫停。這樣即使畫面上沒有人說話，我也能分辨是角色在生活，還是模擬暫時沒有往前。</p>
+<p>如果要再跑一次，我會先看兩件事：角色找過的地方能不能記住，以及找到資源之後，消息有沒有真的傳到對方手上。多給幾次思考機會固然有用，但如果每次拿到的是差不多的資訊，就可能只是多喝幾次水。我想觀察的是他們怎麼在失敗之後換個做法，這比讓他們一直有話說更值得看。</p>
+</article>
+<nav class="journal-related" aria-label="相關開發紀錄"><h2>上一篇實驗紀錄</h2><ul><li><a href="./journal-ai-world-lab.html">AI 自主世界：五個角色的七天，與亞當、夏娃的新開局</a></li></ul></nav>
+</main><script src="./tutorial-gate.js?v=20260813-journal"></script></body></html>
