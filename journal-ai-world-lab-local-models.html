@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？ - Journal</title><meta name="description" content="我試了 gpt-oss 20B、千問 8B 和 9B。原本只想省下 API 費用，最後發現更難的是：模型成功回覆之後，角色能不能長時間做出有進展的決定？">
+<link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/journal-ai-world-lab-local-models.html">
+<meta property="og:type" content="article"><meta property="og:title" content="AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？"><meta property="og:description" content="我試了 gpt-oss 20B、千問 8B 和 9B。原本只想省下 API 費用，最後發現更難的是：模型成功回覆之後，角色能不能長時間做出有進展的決定？">
+<meta property="og:image" content="https://mm7382.github.io/pec-ai-agent-training/assets/journal/ai-world-local-mac.webp">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./journal-article.css?v=20260813-bilingual-2"><link rel="stylesheet" href="./journal-ai-world-photo.css?v=1">
+<script src="./site-config.js"></script><script defer src="/assets/site-analytics.js?v=20261030"></script>
+</head><body class="journal-article-page"><main class="journal-article-shell">
+<a class="journal-back" href="./journal.html">&larr; 回到學習日誌</a>
+<header class="journal-article-header"><div class="journal-article-meta"><span>工具實驗</span><time datetime="2026-11-20">2026.11.20</time></div><h1>AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？</h1><p class="journal-article-lede">我試了 gpt-oss 20B、千問 8B 和 9B。原本只想省下 API 費用，最後發現更難的是：模型成功回覆之後，角色能不能長時間做出有進展的決定？</p></header>
+<figure class="world-photo world-photo--hero"><picture><source media="(max-width: 760px)" srcset="./assets/journal/ai-world-local-mac-mobile.webp"><img src="./assets/journal/ai-world-local-mac.webp" alt="夕光下的銀色小型桌機與外接固態硬碟" width="1440" height="811" decoding="async" fetchpriority="high"></picture><figcaption><strong>AI 生成示意</strong> 本地推論的桌面情境，不是實機照片或效能截圖。</figcaption></figure>
+<article class="journal-article-body">
+<h2>我只跑文字，Mac 還是慢了下來</h2>
+<p>我想把 AI 自主世界放在自己的 Mac mini 上跑，看看角色能不能一直生活下去，又不用每次決策都付雲端 API 費用。我手邊是搭載 M4、16 GB 統一記憶體的 Mac mini，模型用 Ollama 跑。當時沒有生成圖片，也沒有跑 3D，光是文字推論就讓我遇到明顯的卡頓。</p>
+<p>最吃力的是 <code>gpt-oss:20b</code>。那次電腦慢到很難操作，監看工具顯示可用記憶體一度只剩約 3–15%。我停掉測試並移除這次用的模型後，讀值回到約 76–79%。這不是控制變因的效能測試，但已經足夠讓我停止用 20B 在這台工作機上跑世界。外接 SSD 可以存模型檔，也能省內建硬碟空間，卻不會多出記憶體給模型和其他程式一起用。</p>
+<h2>換成千問 9B、8B，差別在哪？</h2>
+<p><strong>Qwen3.5 9B：</strong>我把 4-bit 量化版放在外接 SSD，模型檔約 6.55 GB。它完成了一個情境，也成功採集資源，但沒有成功送出對話。記憶體保護接著停止了測試，剩下兩個情境沒跑。光憑這次，無法判斷 9B 比 8B 好或差，也不是 9B 完全跑不動。</p>
+<p><strong>Qwen3 8B：</strong>我加了一層控制程式（Harness），負責分開兩個角色的觀察與狀態、檢查動作是否有效，並在記憶體空間不夠時先停下來。角色說「我去採集」不會直接增加食物，程式要確認所在位置符合條件，才會結算。我也另外試開模型的思考模式，但那次在載入階段觸發記憶體保護，沒有取得回覆，不能拿來判斷開啟後的品質。更小的 1.7B 只做了短測，發現它會沿用另一個角色的話、把地點說錯，沒有拿它取代 8B。</p>
+<h2>跑了 406 次決策，為什麼我還是按暫停？</h2>
+<p>8B 加 Harness 做了一輪跨夜測試，中間曾停下，再從存檔接續。這一輪關閉額外思考模式，跑了約 39 小時的世界時間。兩個角色確實說了話，也有幾次真的一起採集。</p>
+<ul class="world-metrics" aria-label="8B 跨夜實驗紀錄">
+<li><strong>406</strong><span>次已結算決策，也送達了 406 句話</span></li>
+<li><strong>55</strong><span>種逐字不同的句子，其餘 351 句逐字重複</span></li>
+<li><strong>5</strong><span>次完成共同採集，沒有成功移動、喝水或建造</span></li>
+</ul>
+<p>我原本期待亞當和夏娃會一邊聊、一邊換做法，結果多半停在重複邀請採集。回頭看，控制程式也有責任：有些邀請明明找不到可採集的位置，卻還是被允許。另一個短測裡，8B 有產出兩段回覆，但其中一段被我的驗證規則擋住。這幾種問題要分開看，不能看到角色沒動，就全怪模型不夠聰明。</p>
+<h2>我最後怎麼判斷</h2>
+<p>在這台 16 GB Mac mini 上，8B 可以回覆，也能推動部分動作。以目前的設定，我不會讓它獨立負責長時間運作的世界。第一關是電腦在模型運作時還能正常使用；第二關是角色遇到失敗會換個辦法，讓世界往前走。這次兩關沒有一起通過，所以我先停了本地測試。這是對這套組合的判斷，不代表其他本地模型或硬體都不可行。</p>
+<p>這輪本地測試是一個獨立存檔，不是<a href="./journal-ai-world-lab-adam-eve-day15.html">亞當與夏娃走到第 15 天</a>的那次實驗。</p>
+</article>
+<nav class="journal-related" aria-label="相關開發紀錄"><h2>同系列紀錄</h2><ul><li><a href="./journal-ai-world-lab-adam-eve-day15.html">AI 自主世界日記：下雨之後，亞當和夏娃怎麼活下去？</a></li><li><a href="./journal-ai-world-lab.html">AI 自主世界：五個角色的七天，與亞當、夏娃的新開局</a></li></ul></nav>
+</main><script src="./tutorial-gate.js?v=20260813-journal"></script></body></html>
