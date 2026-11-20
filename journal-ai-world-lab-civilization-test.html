@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 自主世界日記：說好一起蓋屋，然後呢？ - Journal</title>
+<meta name="description" content="兩個角色，三次不同的開局。我想看看，亞當和夏娃能不能把一句「一起搭個遮蔽處」，變成真的做得到的事。">
+<link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/journal-ai-world-lab-civilization-test.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./journal-article.css?v=20260813-bilingual-2">
+<link rel="stylesheet" href="./journal-ai-world-photo.css?v=2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 自主世界日記：說好一起蓋屋，然後呢？">
+<meta property="og:image" content="https://mm7382.github.io/pec-ai-agent-training/assets/journal/ai-world-nov20-civilization-test.webp">
+<script src="./site-config.js"></script><script defer src="/assets/site-analytics.js?v=20261030"></script>
+<style>
+.world-test-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
+.world-test-shots .world-photo{margin:0}
+.world-test-shots img,.world-snapshot img{display:block;width:100%;height:auto}
+.world-snapshot figcaption{line-height:1.6}
+@media(max-width:700px){.world-test-shots{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="journal-article-page"><main class="journal-article-shell">
+<a class="journal-back" href="./journal.html">&larr; 回到學習日誌</a>
+<header class="journal-article-header">
+<div class="journal-article-meta"><span>工具實驗</span><time datetime="2026-11-20">2026.11.20</time></div>
+<h1>AI 自主世界日記：說好一起蓋屋，然後呢？</h1>
+<p class="journal-article-lede">兩個角色，三次不同的開局。我想看看，亞當和夏娃能不能把一句「一起搭個遮蔽處」，變成真的做得到的事。</p>
+</header>
+<figure class="world-photo world-photo--hero world-snapshot">
+<img src="./assets/journal/ai-world-nov20-civilization-test.webp" alt="文明起源測試世界的觀察介面，地圖上有一座共用遮蔽處、亞當、夏娃和動物，側邊是採集與建造紀錄" width="1440" height="1000" decoding="async" fetchpriority="high">
+<figcaption>「文明起源測試世界」第 1 天 13:08。這是用當天存檔在專案觀察介面重現的畫面，不是另外畫的示意圖，也不是直播。</figcaption>
+</figure>
+<article class="journal-article-body">
+<p>上次做到第 15 天，夏娃好幾天都在水邊喝水、休息。我本來想看他們能不能慢慢發展出自己的生活，結果光是走到水邊，就已經很難。今天我把測試拆成不同的世界來看：先確認他們能不能採木、搭棚，再看看地圖變大、資源變多之後，他們是不是就比較容易活下來。</p>
+<h2>有了兩間屋子，還有下一天要過</h2>
+<p>在「新芽世界」，夏娃先搭起自己的住處，亞當後來也蓋了一間。我終於能在地圖上看到他們做過的事留下痕跡。但換到另一輪「大世界測試」，兩人同樣蓋過住處，最後卻都沒活下來。亞當甚至在離世前一筆紀錄裡成功喝了水。紀錄只顯示健康耗盡，還不能單憑最後一個動作判定死因。我想回頭查的是：他什麼時候就該改變計畫？他當時知道附近哪裡有水嗎？</p>
+<div class="world-test-shots">
+<figure class="world-photo world-snapshot"><img src="./assets/journal/ai-world-nov20-sprout.webp" alt="新芽世界的地圖上，亞當和夏娃站在兩座木造住處旁" loading="lazy" decoding="async"><figcaption>「新芽世界」測試截圖：兩座住處已出現在地圖上。</figcaption></figure>
+<figure class="world-photo world-snapshot"><img src="./assets/journal/ai-world-nov20-expanded.webp" alt="大世界測試的回顧畫面，世界已終結，側欄保留亞當最後的移動與飲水紀錄" loading="lazy" decoding="async"><figcaption>「大世界測試」回顧截圖：第 5 天，世界已終結。這不是上圖那一輪。</figcaption></figure>
+</div>
+<h2>新開局最好看的一幕，是亞當承認他走不過去</h2>
+<p>在新開的「文明起源測試世界」，夏娃開口邀亞當一起採木。亞當想走到她旁邊，卻被已有人站著的格子卡住。過了一會兒，他告訴夏娃自己沒能走過去，提議兩人分頭採集、再找地方安頓。後來亞當換路走到另一處，在 13:08 採到野果。夏娃第一次搭棚沒成功，又去補採木材，到 12:38 終於搭成一個兩人都能用的遮蔽處。我把這段留下來，因為終於看得到一個小小的因果：他遇到問題，有把問題說出來，也換了一種做法。這輪是用 Codex 的 GPT-6 Luna 做角色決策；採到什麼、搭建有沒有成功，則由模擬規則判定。</p>
+<blockquote><p>「我剛才沒能走到你身邊。附近有不少木材和食物，我們可以分頭採集，再找地方安頓。」<br><small>亞當，第 1 天；取自這輪測試的對話紀錄</small></p></blockquote>
+<h2>我想先做出一個會影響選擇的環境</h2>
+<p>今天改畫面時，我希望河和樹看起來更自然，動物是成群移動的，資源數量要點了才看得到。季節、日夜和溫度也想用比較接近台灣的方式來設定。重點是這些變化要能影響角色的選擇：覺得冷了，有沒有地方避風？找到食物，會不會記住位置？如果兩人都累了，誰先休息、誰繼續找水？</p>
+<p>長遠來看，我還是想看他們有沒有機會從採集走到農牧，甚至發展出自己的技術。今天的新世界還在第一天，有了一座共用的遮蔽處，還沒看到農牧或長期分工。我反而想先把這個問題做好：角色想做一件事、真的去做、發現做不到，再想別的辦法。等這些小事接得起來，我才會相信後面的變化是從世界裡長出來的。</p>
+</article>
+<nav class="journal-related" aria-label="相關開發紀錄"><h2>同系列紀錄</h2><ul>
+<li><a href="./journal-ai-world-lab-adam-eve-day15.html">AI 自主世界日記：下雨之後，亞當和夏娃怎麼活下去？</a></li>
+<li><a href="./journal-ai-world-lab-local-models.html">AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？</a></li>
+<li><a href="./journal-ai-world-lab.html">AI 自主世界：五個角色的七天，與亞當、夏娃的新開局</a></li>
+</ul></nav>
+</main><script src="./tutorial-gate.js?v=20260813-journal"></script></body></html>
