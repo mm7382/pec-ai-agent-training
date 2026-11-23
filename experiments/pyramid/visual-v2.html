@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>埃及金字塔｜近地視角研發版</title><link rel="stylesheet" href="visual-v2.css">
+<script defer src="replay-terra-casing.js"></script><script defer src="v2-state.js"></script><script defer src="visual-v2.js"></script></head>
+<body><main>
+<div class="kicker">AI 自主世界　／　建築實驗 01</div>
+<h1>埃及金字塔</h1><p>公開施工回放・非即時。模型提出計畫，模擬引擎執行逐石施工；這是研發中的模擬，並非歷史復原。</p>
+<section class="film" aria-label="金字塔真實模擬回放"><canvas id="v2-scene" width="1440" height="810" aria-label="金字塔施工場景"></canvas>
+<div class="controls"><button id="v2-play">播放</button><input type="range" id="v2-time" step=".01" aria-label="回放時間"><output id="v2-clock">0:00</output><select id="v2-speed" aria-label="速度"><option value="1">1×</option><option value="4">4×</option><option value="16" selected>16×</option><option value="64">64×</option></select></div>
+</section><div class="stops"><button id="v2-start">回到開工</button><button id="v2-small">小塔完工</button><button id="v2-casing">外覆施工</button><button id="v2-finish">雙塔完工</button><output id="v2-count">0 / 216</output></div>
+<p id="v2-status" role="status">尚未播放。開啟回放不會重新執行模型。</p>
+</main></body></html>

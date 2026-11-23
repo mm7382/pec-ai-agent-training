@@ -1,0 +1,11 @@
+:root{color-scheme:dark;background:#19130e;color:#f8ebce;font:15px/1.5 system-ui,-apple-system,"PingFang TC",sans-serif}
+*{box-sizing:border-box}main{max-width:1400px;margin:0 auto;padding:clamp(12px,3vw,32px)}
+.kicker{font-size:.78rem;letter-spacing:.12em;color:#d4a971}
+h1{font-size:clamp(2rem,4vw,3.4rem);margin:.1em 0;font-family:Georgia,serif}
+p{color:#d5bf9d}.film{border:1px solid #634c35;border-radius:11px;background:#281c12;overflow:hidden}
+canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#a28462}
+.controls{display:grid;grid-template-columns:auto minmax(55px,1fr) auto auto;align-items:center;gap:9px;padding:8px}
+button,select{background:#39271a;border:1px solid #806045;padding:.42em .68em;border-radius:6px;color:inherit;min-height:42px;font:inherit;white-space:nowrap}
+:focus-visible{outline:2px solid #f9c488;outline-offset:2px}button:hover{background:#582f17}input{min-width:0;width:100%;accent-color:#e8b976}
+.stops{display:flex;gap:7px;margin-top:10px;align-items:center;flex-wrap:wrap}.stops output{font-variant-numeric:tabular-nums;margin-left:auto}
+@media(max-width:540px){button,select{font-size:.8rem}.stops output{flex:1 0 auto;text-align:right}}
