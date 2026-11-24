@@ -23,3 +23,134 @@ html.sunlit body:not(.cinema){background-color:#f7f1e7}
 .sunlit :is(.ad-cover,.about-hero-media,.services-hero,.gods-hero,.local-hero,.openclaw-hero,.resource-hero){border-bottom:3px solid #b68c50}
 .sunlit body:not(.cinema) :focus-visible,.cinema :focus-visible{outline:3px solid #b67626;outline-offset:3px}
 @media(prefers-reduced-motion:no-preference){.sunlit body:not(.cinema) h1{animation:enter .65s ease-out both}}
+
+/* Shared page design, with enough specificity to survive the legacy page layers. */
+html.sunlit {
+  color-scheme: light;
+  --editorial-paper: #f6efdf;
+  --editorial-surface: #fffaf0;
+  --editorial-ink: #2d251b;
+  --editorial-muted: #6c5c47;
+  --editorial-line: #d8c6a7;
+  --editorial-accent: #8c5a24;
+  --editorial-olive: #806037;
+  --depth-ink: #2d251b;
+  --depth-muted: #6c5c47;
+  --depth-green: #8c5a24;
+  --depth-line: #d8c6a7;
+}
+html.sunlit body:not(.cinema) {
+  --bg: #f6efdf;
+  --surface: #fffaf0;
+  --surface-2: #f0e4ce;
+  --ink: #2d251b;
+  --text: #2d251b;
+  --muted: #6c5c47;
+  --line: #d8c6a7;
+  --accent: #8c5a24;
+  --journal-paper: #f6efdf;
+  --journal-surface: #fffaf0;
+  --journal-bronze: #8c5a24;
+  --about-bg: #f6efdf;
+  --about-surface: #fffaf0;
+  --about-bronze: #8c5a24;
+  --home-paper: #f6efdf;
+  --home-accent: #8c5a24;
+  --editorial-paper: #f6efdf;
+  --editorial-surface: #fffaf0;
+  --editorial-accent: #8c5a24;
+  --editorial-line: #d8c6a7;
+  background: #f6efdf !important;
+  color: #2d251b;
+}
+html.sunlit body :is(.training-site-nav, .topbar, .editorial-topbar, .privacy-nav) {
+  background: #151512 !important;
+  color: #f6efdf !important;
+  border-bottom: 1px solid #97703d;
+  box-shadow: none;
+}
+html.sunlit body :is(.training-site-nav, .topbar, .editorial-topbar, .privacy-nav)
+  :is(a, summary, strong, small) {
+  color: #f6efdf !important;
+}
+html.sunlit body .training-site-brand {
+  font-family: Georgia, "Songti TC", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+html.sunlit body .training-explore-panel {
+  background: #242017;
+  border-color: #97703d;
+}
+html.sunlit body .training-explore-panel a:hover {
+  background: #3a3021;
+}
+html.sunlit body:not(.cinema) :is(
+  .journal-masthead, .journal-article-header, .about-hero, .services-hero,
+  .catalog-hero, .field-hero, .daily-masthead, .rank-masthead,
+  .local-hero, .openclaw-hero, .resource-hero, .gods-hero, .ad-cover
+) {
+  background: linear-gradient(90deg, #19160ff5, #251d13dc 55%, #251d1355),
+    url("assets/sunlit-workbench.webp") center / cover !important;
+  color: #f6efdf !important;
+  padding: clamp(26px, 4vw, 60px) !important;
+  border: 0;
+  border-bottom: 3px solid #b68c50;
+  min-height: 260px;
+  gap: 28px;
+}
+html.sunlit body:not(.cinema) :is(
+  .journal-masthead, .journal-article-header, .about-hero, .services-hero,
+  .catalog-hero, .field-hero, .daily-masthead, .rank-masthead,
+  .local-hero, .openclaw-hero, .resource-hero, .gods-hero, .ad-cover
+) :is(h1, h2, p, a, time, .journal-article-meta, .journal-intro, .about-lede) {
+  color: #f6efdf !important;
+}
+html.sunlit body:not(.cinema) :is(
+  .local-hero, .openclaw-hero, .resource-hero, .gods-hero, .catalog-hero
+) :is(.local-panel, .openclaw-panel, .resource-panel, .gods-panel, .catalog-panel) {
+  background: transparent !important;
+}
+html.sunlit body .about-intro { padding: 16px 0; }
+html.sunlit body .about-intro h1 { white-space: normal; line-height: 1.25; }
+html.sunlit body :is(.about-hero-media, .editorial-page-photo) {
+  box-shadow: none;
+  border: 1px solid #b68c50;
+  overflow: hidden;
+}
+html.sunlit body.home-page .summary-visual {
+  min-height: 210px;
+  background: linear-gradient(90deg, #19160fc9, #251d1333),
+    url("assets/sunlit-workbench.webp") center / cover;
+}
+html.sunlit body.home-page .summary-visual span { color: #f6efdf; }
+html.sunlit body:not(.cinema) :is(
+  .journal-article-body, .article-main, .detail-main, .agent-main, .case-main,
+  .resource-detail-main, .god-detail-main, .about-content-grid,
+  .catalog-item, .local-card, .resource-card, .openclaw-card, .gods-card,
+  .feature-entry-card, .tutorial-card
+) {
+  background-color: #fffaf0 !important;
+  border-color: #d8c6a7 !important;
+  box-shadow: none;
+}
+html.sunlit body .journal-note:hover { background: #eddfc5; }
+html.sunlit body .journal-note { border-color: #d8c6a7; }
+html.sunlit body:not(.cinema) :is(input, select, textarea) {
+  background: #fffaf0;
+  color: #2d251b;
+  border-color: #bfa47b;
+}
+@media(max-width:700px) {
+  html.sunlit body:not(.cinema) :is(
+    .journal-masthead, .journal-article-header, .about-hero, .services-hero,
+    .catalog-hero, .field-hero, .daily-masthead, .rank-masthead,
+    .local-hero, .openclaw-hero, .resource-hero, .gods-hero, .ad-cover
+  ) { min-height: 220px; background-position: 65% center !important; }
+  html.sunlit body .training-primary-links > a:first-child {
+    display: block;
+    white-space: nowrap;
+  }
+  html.sunlit body .training-primary-links { gap: 12px; }
+  html.sunlit body .training-site-brand { font-size: 1rem; }
+}

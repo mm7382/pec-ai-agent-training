@@ -16,7 +16,7 @@
   }
 
   function homePath() {
-    return `${rootPrefix()}index.html`;
+    return `${rootPrefix()}index.html?v=20261124b`;
   }
 
   function addSiteNav() {
@@ -31,6 +31,12 @@
     depthStylesheet.rel = "stylesheet";
     depthStylesheet.href = `${prefix}natural-depth.css?v=20260910`;
     document.head.append(depthStylesheet);
+
+    // Keep the shared theme after the legacy styles loaded by this navigation.
+    if (document.documentElement.classList.contains("sunlit")) {
+      const theme = document.querySelector('link[href*="sunlit.css"]');
+      if (theme) document.head.append(theme);
+    }
 
     const links = [
       ["GitHub 熱門 Skill", `${prefix}github-skills.html`],
