@@ -11,23 +11,24 @@
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
 <style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/site-languages.js?v=20261121-home"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
   <style>
-    #site-tour{box-sizing:border-box;margin:clamp(1.2rem,3vw,2.5rem) auto;width:min(64rem,calc(100% - 2rem));padding:clamp(1rem,4vw,2rem);border:1px solid #ddd3c6;border-radius:1.25rem;background:#f8f4ec;color:#2c342b;scroll-margin-top:5rem}
-    #site-tour .tour-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-    #site-tour .tour-kicker{font-size:.8rem;font-weight:700;color:#625344;letter-spacing:.06em;margin:0 0 .24rem}
-    #site-tour h2{margin:0;font:700 clamp(1.2rem,3vw,1.9rem)/1.25 system-ui,sans-serif}
-    #site-tour .tour-note{margin:.4rem 0 0;color:#4d594d;line-height:1.5}
-    #site-tour .tour-actions{display:flex;align-items:center;gap:.6rem 1rem;flex-wrap:wrap}
-    #site-tour button{min-height:44px;padding:.65rem 1rem;border:1px solid transparent;border-radius:99px;background:#314336;color:#fff;font:700 .95rem/1.1 system-ui,sans-serif;cursor:pointer}
-    #site-tour button:hover{background:#203225}
-    #site-tour a{color:#314336;text-decoration:underline;text-underline-offset:.18em;font-size:.9rem}
-    #site-tour :is(button,a):focus-visible{outline:2px solid #314336;outline-offset:4px}
-    #site-tour .tour-video{display:block;width:100%;height:auto;aspect-ratio:16/9;margin-top:1rem;background:#202720;border-radius:.9rem;object-fit:contain}
-    #site-tour .tour-actions{margin-top:.75rem}
+    #site-tour{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);grid-template-areas:"copy video" "actions video" "error video";align-items:center;column-gap:clamp(1.2rem,5vw,5rem);width:min(80rem,88vw);margin:clamp(2rem,5vw,5rem) auto 0;padding:0 0 clamp(1.3rem,3vw,2.5rem);border-bottom:1px solid rgb(230 183 119 / .28);color:var(--paper,#f6efdf);scroll-margin-top:3rem}
+    #site-tour .tour-row{grid-area:copy;align-self:end}
+    #site-tour .tour-kicker{font-size:.77rem;font-weight:600;color:var(--gold,#e6b777);letter-spacing:.1em;margin:0 0 .55rem}
+    #site-tour h2{margin:0;line-height:1.17;font-size:clamp(1.85rem,3.7vw,3.6rem);font-weight:500;text-wrap:balance}
+    #site-tour .tour-note{max-width:31ch;margin:.75rem 0 0;color:#d9ceb9;line-height:1.66}
+    #site-tour .tour-actions{grid-area:actions;align-self:start;display:flex;align-items:center;gap:.35rem 1rem;flex-wrap:wrap;margin-top:.85rem}
+    #site-tour button{min-height:44px;padding:.35rem .75rem;border:1px solid rgb(230 183 119 / .65);border-radius:3px;background:transparent;color:var(--paper,#f6efdf);font:600 .88rem/1.2 system-ui,sans-serif;cursor:pointer}
+    #site-tour button:hover{background:#342b1f}
+    #site-tour a{display:inline-flex;align-items:center;min-height:44px;color:#d9ceb9;font-size:.82rem;text-decoration:none}
+    #site-tour a:hover{text-decoration:underline;text-underline-offset:.22em}
+    #site-tour .tour-video{grid-area:video;justify-self:end;display:block;width:min(100%,40rem);height:auto;aspect-ratio:16/9;border-radius:4px;background:#141410;object-fit:contain}
+    #site-tour [data-video-error]{grid-area:error}
     #site-tour button [data-on],#site-tour button[aria-pressed="true"] [data-off]{display:none!important}
     #site-tour button[aria-pressed="true"] [data-on]{display:inline!important}
     #site-tour [hidden]{display:none!important}
     #site-tour [lang="en"],html[data-site-language="en"] #site-tour [lang="zh-Hant"]{display:none!important}
     html[data-site-language="en"] #site-tour [lang="en"]{display:inline!important}
+    @media(max-width:42rem){#site-tour{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "video" "actions" "error";row-gap:.9rem}#site-tour .tour-video{justify-self:start;width:100%}#site-tour .tour-actions{margin-top:0}}
   </style>
 
 </head>
@@ -35,18 +36,18 @@
 <main><section class="lamp"><div class="covercopy"><h1>把工程方法用在 AI Agent 導入。</h1><p>Michael Chuang</p><a class="enter" href="#work">探索作品 ↓</a></div></section>
     <section id="site-tour" aria-labelledby="site-tour-title">
       <div class="tour-row"><div>
-        <p class="tour-kicker"><span lang="zh-Hant">第一次來？ · 8 秒</span><span lang="en">NEW HERE? · 8 SECONDS</span></p>
-        <h2 id="site-tour-title"><span lang="zh-Hant">跟 Lucy 逛 Michael Agent Lab</span><span lang="en">Tour Michael Agent Lab with Lucy</span></h2>
-        <p class="tour-note"><span lang="zh-Hant">Lucy 是本站的 AI 助理，帶你認識這裡的作品和實驗。</span><span lang="en">Lucy, the site's AI assistant, welcomes you to Michael's projects and experiments.</span></p>
+        <p class="tour-kicker"><span lang="zh-Hant">網站導覽 · 15 秒</span><span lang="en">SITE TOUR · 15 SECONDS</span></p>
+        <h2 id="site-tour-title"><span lang="zh-Hant">跟 Lucy 逛逛網站</span><span lang="en">Look around with Lucy</span></h2>
+        <p class="tour-note"><span lang="zh-Hant">從 AI 實驗到實作教材，一起看看點子怎麼變成作品。</span><span lang="en">From AI experiments to practical guides, see how ideas turn into projects.</span></p>
       </div></div>
       <div class="tour-actions">
         <button type="button" aria-pressed="false" aria-controls="site-tour-video" hidden>
           <span data-off><span aria-hidden="true">♪ </span><span lang="zh-Hant">開啟聲音</span><span lang="en">Turn on sound</span></span>
           <span data-on><span lang="zh-Hant">關閉聲音</span><span lang="en">Mute</span></span>
         </button>
-        <a href="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-website-welcome.mp4" target="_blank" rel="noopener noreferrer"><span lang="zh-Hant">下載影片</span><span lang="en">Download the video</span><span aria-hidden="true"> ↗</span></a>
+        <a href="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-studio-website-tour.mp4" target="_blank" rel="noopener noreferrer"><span lang="zh-Hant">下載影片</span><span lang="en">Download the video</span><span aria-hidden="true"> ↗</span></a>
       </div>
-      <video id="site-tour-video" class="tour-video" controls muted playsinline preload="metadata" aria-labelledby="site-tour-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-website-welcome.mp4"></video>
+      <video id="site-tour-video" class="tour-video" controls muted playsinline preload="metadata" aria-labelledby="site-tour-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-studio-website-tour.mp4"></video>
       <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，可先用上方連結下載。</span><span lang="en">The video could not play. You can download it above.</span></p>
     </section>
     <script>
