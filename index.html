@@ -21,9 +21,10 @@
     #site-tour button:hover{background:#203225}
     #site-tour a{color:#314336;text-decoration:underline;text-underline-offset:.18em;font-size:.9rem}
     #site-tour :is(button,a):focus-visible{outline:2px solid #314336;outline-offset:4px}
-    #site-tour button [data-close],#site-tour button[aria-expanded="true"] [data-open]{display:none!important}
-    #site-tour button[aria-expanded="true"] [data-close]{display:inline!important}
-    #site-tour iframe{display:block;width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:.9rem;background:#17241d;margin-top:1rem}
+    #site-tour .tour-video{display:block;width:100%;height:auto;aspect-ratio:16/9;margin-top:1rem;background:#202720;border-radius:.9rem;object-fit:contain}
+    #site-tour .tour-actions{margin-top:.75rem}
+    #site-tour button [data-on],#site-tour button[aria-pressed="true"] [data-off]{display:none!important}
+    #site-tour button[aria-pressed="true"] [data-on]{display:inline!important}
     #site-tour [hidden]{display:none!important}
     #site-tour [lang="en"],html[data-site-language="en"] #site-tour [lang="zh-Hant"]{display:none!important}
     html[data-site-language="en"] #site-tour [lang="en"]{display:inline!important}
@@ -33,37 +34,49 @@
 <body class="cinema"><header class="malnav"><a class="wordmark" href="index.html?v=20261124b">Michael Agent Lab</a><nav><a href="journal.html">學習日誌</a><a href="./tutorial-library.html">實作教材</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header>
 <main><section class="lamp"><div class="covercopy"><h1>把工程方法用在 AI Agent 導入。</h1><p>Michael Chuang</p><a class="enter" href="#work">探索作品 ↓</a></div></section>
     <section id="site-tour" aria-labelledby="site-tour-title">
-      <div class="tour-row">
-        <div>
-          <p class="tour-kicker"><span lang="zh-Hant">第一次來？ · 28 秒</span><span lang="en">NEW HERE? · 28 SECONDS</span></p>
-          <h2 id="site-tour-title"><span lang="zh-Hant">跟 Lucy 逛 Michael Agent Lab</span><span lang="en">Tour Michael Agent Lab with Lucy</span></h2>
-          <p class="tour-note"><span lang="zh-Hant">從實作教材、作品集到 AI 自主世界，先看看這裡有什麼。</span><span lang="en">Get a quick look at the tutorials, projects, and autonomous AI worlds.</span></p>
-        </div>
-        <div class="tour-actions">
-          <button type="button" aria-controls="site-tour-player" aria-expanded="false"><span data-open><span aria-hidden="true">▶ </span><span lang="zh-Hant">播放網站導覽</span><span lang="en">Play the site tour</span></span><span data-close><span lang="zh-Hant">收起導覽</span><span lang="en">Close the tour</span></span></button>
-          <a href="https://youtu.be/z80fngGPls8" target="_blank" rel="noopener noreferrer"><span lang="zh-Hant">在 YouTube 觀看</span><span lang="en">Watch on YouTube</span><span aria-hidden="true"> ↗</span></a>
-        </div>
+      <div class="tour-row"><div>
+        <p class="tour-kicker"><span lang="zh-Hant">第一次來？ · 8 秒</span><span lang="en">NEW HERE? · 8 SECONDS</span></p>
+        <h2 id="site-tour-title"><span lang="zh-Hant">跟 Lucy 逛 Michael Agent Lab</span><span lang="en">Tour Michael Agent Lab with Lucy</span></h2>
+        <p class="tour-note"><span lang="zh-Hant">Lucy 是本站的 AI 助理，帶你認識這裡的作品和實驗。</span><span lang="en">Lucy, the site's AI assistant, welcomes you to Michael's projects and experiments.</span></p>
+      </div></div>
+      <div class="tour-actions">
+        <button type="button" aria-pressed="false" aria-controls="site-tour-video" hidden>
+          <span data-off><span aria-hidden="true">♪ </span><span lang="zh-Hant">開啟聲音</span><span lang="en">Turn on sound</span></span>
+          <span data-on><span lang="zh-Hant">關閉聲音</span><span lang="en">Mute</span></span>
+        </button>
+        <a href="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-website-welcome.mp4" target="_blank" rel="noopener noreferrer"><span lang="zh-Hant">下載影片</span><span lang="en">Download the video</span><span aria-hidden="true"> ↗</span></a>
       </div>
-      <div id="site-tour-player" hidden></div>
+      <video id="site-tour-video" class="tour-video" controls muted playsinline preload="metadata" aria-labelledby="site-tour-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-website-welcome.mp4"></video>
+      <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，可先用上方連結下載。</span><span lang="en">The video could not play. You can download it above.</span></p>
     </section>
     <script>
-      (()=>{
+      (() => {
         const section=document.getElementById('site-tour');
         const button=section.querySelector('button');
-        const box=document.getElementById('site-tour-player');
+        const video=document.getElementById('site-tour-video');
+        const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+        let manual=false;
+        button.hidden=false;
+        const sync=()=>button.setAttribute('aria-pressed',String(!video.muted&&video.volume>0));
+        const play=()=>video.play().catch(()=>{});
         button.addEventListener('click',()=>{
-          const open=box.hidden;
-          button.setAttribute('aria-expanded',String(open));
-          box.hidden=!open;
-          if(!open){box.replaceChildren();return;}
-          const iframe=document.createElement('iframe');
-          iframe.title='Michael Agent Lab 網站導覽 | Site tour';
-          iframe.src='https://www.youtube-nocookie.com/embed/z80fngGPls8?autoplay=1&playsinline=1';
-          iframe.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-          iframe.allowFullscreen=true;
-          iframe.referrerPolicy='strict-origin-when-cross-origin';
-          box.append(iframe);
+          manual=true;
+          if(!video.muted&&video.volume>0){video.muted=true;sync();return;}
+          video.muted=false;
+          if(video.volume===0)video.volume=1;
+          video.currentTime=0;
+          sync();play();
         });
+        video.addEventListener('volumechange',sync);
+        ['pointerdown','keydown'].forEach(type=>video.addEventListener(type,()=>{manual=true}));
+        const showError=()=>{button.hidden=true;section.querySelector('[data-video-error]').hidden=false};
+        video.addEventListener('error',showError);
+        if(video.error)showError();
+        if('IntersectionObserver' in window)new IntersectionObserver(entries=>{
+          if(manual||!video.muted)return;
+          if(entries.some(entry=>entry.isIntersecting)){if(!reduced.matches&&!video.ended)play()}
+          else if(!video.paused)video.pause();
+        },{threshold:.25}).observe(video);
       })();
     </script>
 
