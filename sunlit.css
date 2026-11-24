@@ -1,0 +1,25 @@
+:root{--paper:#f6efdf;--gold:#e6b777;--black:#151512}
+body{margin:0}
+.malnav,.end{background:#141410;color:#f6efdf;padding:18px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.malnav a{color:inherit;text-decoration:none}.wordmark,.cinema h1,.cinema h2,.projects span{font-family:Georgia,"Songti TC",serif}.wordmark{font-size:1.45rem}.malnav nav{display:flex;gap:1.4rem;flex-wrap:wrap}.malnav nav a{font:15px system-ui}
+.cinema{background:var(--black);color:var(--paper);font-family:system-ui}
+.cinema *{box-sizing:border-box}
+.lamp{min-height:78svh;background:linear-gradient(90deg,#15130ed9 0%,#211c1388 38%,transparent 72%),url("assets/sunlit-workbench.webp") center/cover;display:grid;align-items:center;padding:6vw}
+.covercopy h1{font-size:clamp(38px,6.3vw,100px);line-height:1.13;letter-spacing:-.045em;margin:0}.covercopy p{font:italic 1.6rem Georgia;color:var(--gold)}.enter{display:inline-block;border:1px solid #efce9b;padding:.65rem 1.4rem;color:var(--paper);text-decoration:none}
+.spread,.directory{padding:clamp(38px,6vw,92px) 6vw}.cinema h2{font-size:clamp(2rem,4vw,4rem);margin:0 0 .55em}.projects{display:grid;grid-template-columns:1.45fr 1fr;gap:2vw}.projects a{position:relative;overflow:hidden;color:white}.projects img{display:block;width:100%;height:clamp(250px,32vw,530px);object-fit:cover}.projects span{position:absolute;inset:auto 0 0;padding:3rem 1.4rem 1rem;background:linear-gradient(transparent,#111e);font-size:clamp(1.35rem,2vw,2.15rem)}
+.directory{background:var(--paper);color:#2b241c}.directory div{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:0 2.4rem}.directory a{padding:14px 0;border-bottom:1px solid #b4a58e;text-decoration:none;color:inherit}.end{font-family:Georgia}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.covercopy,.film-inner h1{animation:enter .8s ease-out both}.projects img{transition:transform .65s}.projects a:is(:hover,:focus-visible) img{transform:scale(1.045)}@keyframes enter{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:none}}@supports(animation-timeline:view()){.spread h2,.projects a,.directory h2{animation:enter both;animation-timeline:view();animation-range:entry 0% entry 65%}}}
+@media(max-width:680px){.projects{grid-template-columns:1fr}.malnav{gap:10px}.malnav nav{gap:.8rem}.lamp{background-position:63% center;align-items:end;padding-bottom:11vw}.covercopy h1{font-size:clamp(35px,7.8vw,52px)}}
+
+.covercopy{max-width:11em;font-size:clamp(38px,6.3vw,100px)}
+.covercopy h1{max-width:8em;text-wrap:balance}
+.covercopy .enter{font:600 1rem/1.4 system-ui}
+.end nav{display:flex;gap:1rem;flex-wrap:wrap}
+.end a{color:#efe1cf}
+html.sunlit body:not(.cinema){background-color:#f7f1e7}
+.sunlit body:not(.cinema) :is(h1,h2){font-family:Georgia,"Songti TC","PMingLiU",serif;letter-spacing:-.025em}
+.sunlit :is(.journal-article-header,.catalog-hero,.field-hero,.daily-masthead,.rank-masthead,.journal-masthead){border-block-start:3px solid #ab7436;background-color:#f5ecdc}
+.sunlit :is(.article-main,.journal-article-body,.catalog-item,.resource-panel,.local-panel){border-color:#d1bd9f}
+.sunlit :is(.ad-cover,.about-hero-media,.services-hero,.gods-hero,.local-hero,.openclaw-hero,.resource-hero){border-bottom:3px solid #b68c50}
+.sunlit body:not(.cinema) :focus-visible,.cinema :focus-visible{outline:3px solid #b67626;outline-offset:3px}
+@media(prefers-reduced-motion:no-preference){.sunlit body:not(.cinema) h1{animation:enter .65s ease-out both}}
