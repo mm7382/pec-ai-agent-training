@@ -13,7 +13,17 @@
   <link rel="stylesheet" href="./yijian-feature.css?v=20261023-astrology">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/site-languages.js?v=20261121-home"></script></head>
+<style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/site-languages.js?v=20261121-home"></script><style>
+    .lucy-intro{box-sizing:border-box;width:min(100%,68rem);margin:2rem auto;padding:clamp(1rem,3vw,2rem);border:1px solid #d9cabb;border-radius:1.25rem;background:#f8f2eb;color:#39291f;scroll-margin-top:5rem}
+    .lucy-intro h2{margin:0 0 .45rem;font:inherit;font-size:clamp(1.4rem,3vw,2rem);font-weight:700}
+    .lucy-intro p{margin:0 0 .85rem}.lucy-intro summary{width:fit-content;cursor:pointer;font-weight:700;color:#5e3522;padding:.5rem 0}
+    .lucy-intro summary:focus-visible,.lucy-intro a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+    .lucy-intro iframe{display:block;width:min(100%,320px);aspect-ratio:9/16;margin:.65rem 0;border:0;border-radius:.75rem;background:#211a15}
+    .lucy-intro a{color:#5e3522}.lucy-intro .lucy-fallback{margin:.6rem 0 0}
+    html[data-site-language="en"] .lucy-intro [lang="zh-Hant"]{display:none!important}
+    html[data-site-language="en"] .lucy-intro [data-language-secondary]{display:inline!important}
+  </style>
+</head>
 <body class="personal-home-page">
   <main class="app-shell">
     <header class="topbar" aria-label="網站導覽">
@@ -60,6 +70,33 @@
       </nav>
     </section>
 
+
+    <section id="lucy-intro" class="lucy-intro" aria-labelledby="lucy-intro-title">
+      <h2 id="lucy-intro-title"><span lang="zh-Hant">認識 Lucy</span><span lang="en" data-language-secondary>Meet Lucy</span></h2>
+      <p><span lang="zh-Hant">Michael Agent Lab 的 AI 助理，8 秒自我介紹。</span><span lang="en" data-language-secondary>Meet Michael Agent Lab’s AI assistant in 8 seconds.</span></p>
+      <details class="lucy-intro-player">
+        <summary><span lang="zh-Hant">播放 Lucy 的自我介紹</span><span lang="en" data-language-secondary>Play Lucy’s introduction</span> <span aria-hidden="true">▶</span></summary>
+        <div class="lucy-intro-frame"></div>
+        <p class="lucy-fallback"><a href="https://www.youtube.com/shorts/Wck6Ozwu1r4" target="_blank" rel="noopener noreferrer"><span lang="zh-Hant">在 YouTube 觀看</span><span lang="en" data-language-secondary>Watch on YouTube</span> ↗</a></p>
+      </details>
+    </section>
+    <script>
+      (() => {
+        const player = document.querySelector('.lucy-intro-player');
+        player.addEventListener('toggle', () => {
+          const frame = player.querySelector('.lucy-intro-frame');
+          if (!player.open) { frame.replaceChildren(); return; }
+          if (frame.firstChild) return;
+          const video = document.createElement('iframe');
+          video.title = 'Lucy 自我介紹 | Meet Lucy';
+          video.src = 'https://www.youtube-nocookie.com/embed/Wck6Ozwu1r4?playsinline=1';
+          video.allow = 'encrypted-media; picture-in-picture; fullscreen';
+          video.allowFullscreen = true;
+          video.referrerPolicy = 'strict-origin-when-cross-origin';
+          frame.append(video);
+        });
+      })();
+    </script>
 
   </main>
 
