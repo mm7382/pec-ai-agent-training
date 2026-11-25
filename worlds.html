@@ -1,2 +1,137 @@
 <!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 自主世界｜Michael Agent Lab</title><link rel="stylesheet" href="campaign.css"><link rel="icon" href="favicon.svg"><script defer src="assets/site-languages.js?v=20261125"></script><script defer src="/assets/site-analytics.js?v=20261030"></script></head><body class="lab-page"><header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a aria-current="page" href="worlds.html">AI 世界</a><a href="index.html">首頁</a><a href="works.html">作品</a><a href="learning.html">學習資源</a><a href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header><main><nav class="lab-crumb" aria-label="所在位置"><a href="index.html">首頁</a> <span aria-hidden="true">›</span> <a href="works.html">作品總覽</a> <span aria-hidden="true">›</span> <span aria-current="page">AI 自主世界</span></nav><section class="lab-gallery"><h1>AI 自主世界</h1><p>選一個世界，觀察居民如何生活、討論與建造。</p><div class="lab-posters"><a href="https://mm7382.github.io/ai-world/atlantis/"><img src="assets/campaign/atlantis.webp" alt=""><span>雅特蘭提斯 ↗</span></a><a href="https://mm7382.github.io/ai-world/egypt/"><img src="assets/campaign/egypt.webp" alt=""><span>古埃及 ↗</span></a><a href="https://mm7382.github.io/ai-world/"><img src="assets/campaign/eden.webp" alt=""><span>伊甸園 ↗</span></a></div><p class="lab-history"><a href="https://mm7382.github.io/ai-world/atlantis/#settlement-record">雅特蘭提斯聚落紀錄</a> · <a href="https://mm7382.github.io/ai-world/egypt/#history">古埃及居民決策紀錄</a> · <a href="https://mm7382.github.io/ai-world/#history">歷史紀錄</a></p></section></main></body></html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 自主世界｜Michael Agent Lab</title>
+  <link rel="stylesheet" href="campaign.css">
+  <link rel="icon" href="favicon.svg">
+  <style>
+    .world-intro { padding: clamp(1.6rem, 3vw, 3rem) 4vw; }
+    .world-intro h1, .world-scene h2 {
+      margin: 0;
+      font: 500 clamp(2rem, 4.3vw, 4.6rem)/1.12 Georgia, 'Songti TC', serif;
+    }
+    .world-intro p { margin: .65rem 0 0; }
+    .world-showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+    .world-scene {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: end;
+      min-height: clamp(290px, 29vw, 540px);
+      color: #fff9eb;
+      background: #283332;
+    }
+    .world-scene-featured { grid-column: 1 / -1; align-items: center; min-height: clamp(370px, 35vw, 660px); }
+    .world-scene img, .world-scene::before { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .world-scene img { z-index: -2; object-fit: cover; }
+    .world-scene::before {
+      content: "";
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(20,17,13,.88), rgba(20,17,13,.62) 27%, transparent 70%);
+    }
+    .world-scene-featured::before {
+      background: linear-gradient(90deg, rgba(10,24,29,.92), rgba(10,24,29,.72) 25%, transparent 78%);
+    }
+    .world-scene-copy { padding: clamp(1.4rem, 4vw, 4rem); }
+    .world-scene h2 { font-size: clamp(1.85rem, 3.2vw, 3.4rem); }
+    .world-scene-featured h2 { font-size: clamp(2.45rem, 5.2vw, 5.8rem); }
+    .world-scene h2::before { display: block; width: 2.5rem; height: 2px; margin-bottom: .85rem; background: #f69670; content: ""; }
+    .world-scene-actions { display: flex; flex-wrap: wrap; gap: .65rem 1rem; margin-top: 1rem; }
+    .world-scene-actions a {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      padding: .15rem .85rem;
+      border: 1px solid #fff9eb;
+      border-radius: 4px;
+      color: inherit;
+      font-size: .94rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: rgba(27,22,17,.64);
+    }
+    .world-scene-actions a:first-child { border-color: #a54229; background: #8e301d; }
+    .world-scene-actions a:hover { text-decoration: underline; text-underline-offset: .2em; }
+    .world-scene-actions a:focus-visible { outline: 3px solid #fff9eb; outline-offset: 4px; }
+    @media (max-width: 720px) {
+      .world-showcase { grid-template-columns: minmax(0, 1fr); }
+      .world-scene-featured { align-items: end; }
+      .world-scene-featured::before {
+        background: linear-gradient(0deg, rgba(10,24,29,.94), rgba(10,24,29,.65) 32%, transparent 75%);
+      }
+      .world-scene-featured img { object-position: 60% center; }
+    }
+  </style>
+  <script>
+    window.SitePageTranslations = {
+      dictionary: {
+        'AI 自主世界｜Michael Agent Lab': { zh: 'AI 自主世界｜Michael Agent Lab', en: 'Autonomous AI Worlds | Michael Agent Lab' },
+        '選一個世界，觀察居民如何生活、討論與建造。': { zh: '選一個世界，觀察居民如何生活、討論與建造。', en: 'Choose a world and see how its residents live, make decisions and build.' },
+        '雅特蘭提斯': { zh: '雅特蘭提斯', en: 'Atlantis' },
+        '古埃及': { zh: '古埃及', en: 'Ancient Egypt' },
+        '伊甸園': { zh: '伊甸園', en: 'Eden' },
+        '進入世界': { zh: '進入世界', en: 'Enter world' },
+        '聚落紀錄': { zh: '聚落紀錄', en: 'Settlement log' },
+        '居民決策紀錄': { zh: '居民決策紀錄', en: 'Resident decision log' },
+        '歷史紀錄': { zh: '歷史紀錄', en: 'History log' }
+      }
+    };
+  </script>
+  <script defer src="assets/site-languages.js?v=20261125"></script>
+  <script defer src="/assets/site-analytics.js?v=20261030"></script>
+</head>
+<body class="lab-page">
+  <header class="lab-header">
+    <a href="index.html" class="lab-brand">Michael Agent Lab</a>
+    <nav aria-label="主要分頁">
+      <a aria-current="page" href="worlds.html">AI 世界</a>
+      <a href="index.html">首頁</a>
+      <a href="works.html">作品</a>
+      <a href="learning.html">學習資源</a>
+      <a href="journal.html">學習日誌</a>
+      <a href="about.html">關於本站</a>
+      <a href="services.html">合作服務</a>
+    </nav>
+  </header>
+  <main>
+    <div class="world-intro">
+      <h1>AI 自主世界</h1>
+      <p>選一個世界，觀察居民如何生活、討論與建造。</p>
+    </div>
+    <div class="world-showcase">
+      <section class="world-scene world-scene-featured" aria-labelledby="atlantis-title">
+        <img src="assets/campaign/harbor.webp" width="1110" height="720" alt="" fetchpriority="high">
+        <div class="world-scene-copy">
+          <h2 id="atlantis-title">雅特蘭提斯</h2>
+          <div class="world-scene-actions">
+            <a href="https://mm7382.github.io/ai-world/atlantis/">進入世界</a>
+            <a href="https://mm7382.github.io/ai-world/atlantis/#settlement-record">聚落紀錄</a>
+          </div>
+        </div>
+      </section>
+      <section class="world-scene" aria-labelledby="egypt-title">
+        <img src="assets/campaign/egypt.webp" width="565" height="420" alt="" loading="lazy" decoding="async">
+        <div class="world-scene-copy">
+          <h2 id="egypt-title">古埃及</h2>
+          <div class="world-scene-actions">
+            <a href="https://mm7382.github.io/ai-world/egypt/">進入世界</a>
+            <a href="https://mm7382.github.io/ai-world/egypt/#history">居民決策紀錄</a>
+          </div>
+        </div>
+      </section>
+      <section class="world-scene" aria-labelledby="eden-title">
+        <img src="assets/campaign/eden.webp" width="565" height="420" alt="" loading="lazy" decoding="async">
+        <div class="world-scene-copy">
+          <h2 id="eden-title">伊甸園</h2>
+          <div class="world-scene-actions">
+            <a href="https://mm7382.github.io/ai-world/">進入世界</a>
+            <a href="https://mm7382.github.io/ai-world/#history">歷史紀錄</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
