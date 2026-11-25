@@ -1,0 +1,85 @@
+.app-exhibit {
+  max-width: 92rem;
+  margin: auto;
+  padding: clamp(1.5rem, 4vw, 4.5rem);
+}
+
+.app-exhibit-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  margin-block-start: 1.25rem;
+}
+
+.app-exhibit-back {
+  color: #e8c38e;
+  text-underline-offset: .25em;
+}
+
+.app-exhibit h1,
+.app-exhibit h2 {
+  margin: 0;
+  font-family: Georgia, 'Songti TC', serif;
+  font-weight: 500;
+  line-height: 1.16;
+}
+
+.app-exhibit h1 { font-size: clamp(2.3rem, 5vw, 5rem); }
+.app-exhibit h2 { font-size: clamp(1.3rem, 2.3vw, 2rem); }
+.app-exhibit p { max-width: 42ch; color: #e0d6c8; }
+.app-exhibit .app-lead { font-size: clamp(1rem, 1.65vw, 1.32rem); }
+
+.app-exhibit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-block: 1.2rem 1.9rem;
+}
+
+.app-exhibit-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .85em;
+  color: #ffebc5;
+  border: 1px solid #a58554;
+  border-radius: .35rem;
+  text-decoration: none;
+}
+
+.app-exhibit-actions a:first-child {
+  background: #e6c991;
+  color: #190f09;
+}
+
+.app-exhibit-actions a:hover { text-decoration: underline; }
+
+.app-exhibit :is(a, button):focus-visible {
+  outline: 2px solid #fff0b8;
+  outline-offset: 3px;
+}
+
+.app-exhibit-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  gap: clamp(.5rem, 1.5vw, 1.25rem);
+  margin: 0;
+  padding: clamp(1rem, 4vw, 3.5rem);
+  border: 1px solid #9b7849;
+  background: radial-gradient(ellipse at top, #a27d3b42, transparent 70%), #151c28 url('assets/campaign/cabinet-app.webp') center / cover;
+  box-shadow: 0 1rem 2.6rem #03060966;
+}
+
+.app-exhibit-showcase img {
+  display: block;
+  width: min(100%, 16rem);
+  height: auto;
+  border-radius: .6rem;
+  box-shadow: 0 .45rem 1.2rem #08090bba;
+}
+
+@media (max-width: 720px) {
+  .app-exhibit-inner { grid-template-columns: minmax(0, 1fr); }
+}

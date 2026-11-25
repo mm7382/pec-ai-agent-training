@@ -8,22 +8,16 @@
   <link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/works.html">
   <link rel="icon" href="favicon.svg">
   <link rel="stylesheet" href="campaign.css">
-  <link rel="stylesheet" href="works-arcade.css">
+  <link rel="stylesheet" href="works-arcade.css?v=20261125b">
   <script>
     window.SitePageTranslations = { dictionary: {
       '作品總覽｜Michael Agent Lab': { zh: '作品總覽｜Michael Agent Lab', en: 'Works | Michael Agent Lab' },
       '作品總覽': { zh: '作品總覽', en: 'Works' },
-      '易見・紫微': { zh: '易見・紫微', en: 'YiJian & Zi Wei' },
-      '易見網頁版': { zh: '易見網頁版', en: 'YiJian on the web' },
-      '易見學習首頁': { zh: '易見學習首頁', en: 'YiJian learning home' },
-      '易見 2027 年度易經指南': { zh: '易見 2027 年度易經指南', en: 'YiJian 2027 annual guide' },
-      '2027 運勢': { zh: '2027 運勢', en: '2027 outlook' },
-      '探索紫微': { zh: '探索紫微', en: 'Explore Zi Wei' },
-      '進入世界': { zh: '進入世界', en: 'Enter the worlds' },
+      '易見・2027 年度指南': { zh: '易見・2027 年度指南', en: 'YiJian · 2027 guide' },
+      '時來・紫微': { zh: '時來・紫微', en: 'Shilai · Zi Wei' },
       '未來世界': { zh: '未來世界', en: 'Future World' },
       '開發中': { zh: '開發中', en: 'In development' },
-      '古裝留影': { zh: '古裝留影', en: 'Costume Portraits' },
-      '查看作品': { zh: '查看作品', en: 'View project' }
+      '古裝留影': { zh: '古裝留影', en: 'Costume Portraits' }
     } };
   </script>
   <script defer src="assets/site-languages.js?v=20261125"></script>
@@ -44,39 +38,27 @@
   </header>
   <main class="arcade">
     <h1>作品總覽</h1>
-    <section class="exhibit exhibit-app" aria-labelledby="arcade-app">
+    <section class="exhibit exhibit-app" aria-label="易見與時來紫微">
       <div class="arcade-screens">
-        <img src="assets/campaign/yijian-home-real.webp" width="276" height="600" alt="易見學習首頁">
-        <img src="assets/campaign/yijian-annual-real.webp" width="276" height="600" alt="易見 2027 年度易經指南">
-      </div>
-      <div class="exhibit-copy">
-        <h2 id="arcade-app">易見・紫微</h2>
-        <div class="exhibit-actions">
-          <a href="https://apps.apple.com/tw/app/id6816324095">2027 運勢</a>
-          <a href="https://mm7382.github.io/ziwei-web/">探索紫微</a>
-          <a href="https://mm7382.github.io/yijian-web/">易見網頁版</a>
-        </div>
+        <a href="yijian-app.html">
+          <img src="assets/campaign/yijian-annual-real.webp" width="276" height="600" alt="">
+          <span class="exhibit-name">易見・2027 年度指南</span>
+        </a>
+        <a href="ziwei-app.html">
+          <img src="assets/campaign/ziwei-chart-real.webp" width="520" height="1130" alt="">
+          <span class="exhibit-name">時來・紫微</span>
+        </a>
       </div>
     </section>
-    <section class="exhibit exhibit-world" aria-labelledby="arcade-world">
-      <div class="exhibit-copy">
-        <h2 id="arcade-world">AI 自主世界</h2>
-        <div class="exhibit-actions"><a href="worlds.html">進入世界</a></div>
-      </div>
-    </section>
-    <section class="exhibit exhibit-future" aria-labelledby="arcade-future">
-      <div class="exhibit-copy">
-        <h2 id="arcade-future">未來世界</h2>
-        <span class="exhibit-status">開發中</span>
-        <div class="exhibit-actions"><a href="https://mm7382.github.io/future-world/">查看作品</a></div>
-      </div>
-    </section>
-    <section class="exhibit exhibit-costume" aria-labelledby="arcade-costume">
-      <div class="exhibit-copy">
-        <h2 id="arcade-costume">古裝留影</h2>
-        <div class="exhibit-actions"><a href="costume.html">查看作品</a></div>
-      </div>
-    </section>
+    <a class="exhibit exhibit-world" href="worlds.html">
+      <span class="exhibit-name">AI 自主世界</span>
+    </a>
+    <a class="exhibit exhibit-future" href="https://mm7382.github.io/future-world/">
+      <span class="exhibit-name"><span>未來世界</span> <small>開發中</small></span>
+    </a>
+    <a class="exhibit exhibit-costume" href="costume.html">
+      <span class="exhibit-name">古裝留影</span>
+    </a>
   </main>
 </body>
 </html>
