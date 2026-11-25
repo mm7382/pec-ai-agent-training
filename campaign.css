@@ -1,0 +1,82 @@
+/* Shared navigation and campaign pages */
+:root { --lab-ink: #241f1a; --lab-paper: #faf7f1; --lab-red: #97351e; --lab-rule: #d2c6b6; }
+.lab-page { margin: 0; background: var(--lab-paper); color: var(--lab-ink); font: 17px/1.65 system-ui,sans-serif; }
+.lab-header, .lab-crumb, .lab-worlds { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; background: var(--lab-paper); color: var(--lab-ink); }
+.lab-header { justify-content: space-between; padding: 1rem 4vw; border-bottom: 1px solid var(--lab-rule); }
+.lab-header nav { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; }
+.lab-header a, .lab-crumb a, .lab-posters a, .lab-worlds a { color: inherit; text-decoration: none; }
+.lab-header .lab-brand { font: 600 clamp(1.2rem,2vw,1.6rem) Georgia,serif; }
+.lab-header nav a { font: 500 .96rem/1.8 system-ui,sans-serif; }
+.lab-header a[aria-current], .lab-header a:hover, .lab-crumb a:hover { color: var(--lab-red); text-decoration: underline; text-underline-offset: .35em; }
+.lab-crumb { padding: .7rem 4vw; font: .9rem/1.5 system-ui,sans-serif; border-bottom: 1px solid var(--lab-rule); }
+.lab-crumb a { text-decoration: underline; text-underline-offset: .2em; }
+.lab-harbor { box-sizing: border-box; display: grid; align-items: center; min-height: clamp(440px,67svh,780px); padding: 6vw; background: linear-gradient(90deg,#f7eddd 0%,#f7eddef2 22%,#f5ead2ac 42%,transparent 62%), url('assets/campaign/harbor.webp') center 51%/cover; color: var(--lab-ink); }
+.lab-harbor h1,.lab-split h1,.lab-gallery h1,.lab-gallery h2 { font: 500 clamp(2.5rem,5.2vw,5.8rem)/1.16 Georgia,'Songti TC',serif; margin: 0 0 .4em; }
+.lab-harbor h1 { color: #772c20; }
+.lab-harbor p,.lab-split p { font: 1.12rem/1.8 system-ui,sans-serif; max-width: 27em; margin: .5rem 0 1.6rem; }
+.lab-link { display: inline-block; color: var(--lab-red); font: 600 1rem/1.8 system-ui,sans-serif; text-decoration: underline; text-underline-offset: .35em; margin-right: 1.3rem; }
+.lab-worlds { justify-content: space-evenly; padding: 1.2rem 4vw; border-bottom: 1px solid var(--lab-rule); }
+.lab-gallery { padding: clamp(2rem,5vw,5rem) 4vw; color: var(--lab-ink); background: var(--lab-paper); }
+.lab-posters { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(.8rem,2vw,2rem); }
+.lab-posters img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.lab-posters span { display: block; padding: .6em 0; border-bottom: 1px solid var(--lab-rule); font: 500 clamp(1.35rem,2.2vw,2.5rem)/1.4 Georgia,'Songti TC',serif; }
+.lab-posters a:hover span { color: var(--lab-red); }
+.lab-split { display: grid; grid-template-columns: minmax(0,42fr) minmax(0,58fr); background: var(--lab-paper); color: var(--lab-ink); align-items: stretch; }
+.lab-split > div { align-self: center; padding: clamp(1.5rem,4vw,5rem); }
+.lab-split > img { width: 100%; height: 100%; max-height: 72svh; object-fit: cover; }
+.lab-film { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; padding: .6rem; }
+.lab-film img,.lab-process img { width: 100%; height: auto; display: block; }
+.lab-tasks { display: grid; margin: 1.5rem 0; }
+.lab-tasks a { padding: .5rem 0; border-bottom: 1px solid var(--lab-rule); text-decoration: none; }
+.lab-process { display: grid; grid-template-columns: 2fr 3fr; align-items: start; gap: 2rem; }
+.lab-process figure { margin: 1.5rem 0; }
+.lab-process figcaption { padding: .7rem 0; font-size: .85rem; }
+html.sunlit .journal-note:has(.lab-thumb) { display: grid; grid-template-columns: clamp(80px,16vw,190px) minmax(90px, .4fr) 2fr auto; align-items: center; gap: 1rem; }
+.lab-thumb { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+body:has(.lab-header) .topbar { display: none; }
+@media(max-width:720px) {
+  .lab-header { gap: .4rem; }
+  .lab-header nav { gap: .25rem .85rem; }
+  .lab-harbor { min-height: 62svh; align-items: end; background-position: 62% center; background-image: linear-gradient(0deg,#f7edde 1%,#f7eddee0 24%,transparent 65%),url('assets/campaign/harbor.webp'); }
+  .lab-worlds { gap: .45rem 1rem; justify-content: flex-start; }
+  .lab-worlds strong { width: 100%; }
+  .lab-worlds a { margin: 0; }
+  .lab-posters,.lab-split,.lab-process { grid-template-columns: 1fr; }
+  .lab-posters img { aspect-ratio: 4/3; }
+  .lab-split > img { max-height: 55svh; }
+  html.sunlit .journal-note:has(.lab-thumb) { grid-template-columns: 84px 1fr; }
+  .journal-note .lab-thumb { grid-row: span 2; }
+  .journal-note:has(.lab-thumb) .journal-note-arrow { display:none; }
+}
+
+.lab-header .site-language-bar,
+.training-site-nav .site-language-bar {
+  display: inline-flex;
+  gap: 2px;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: inherit;
+  background: transparent;
+}
+:is(.lab-header, .training-site-nav) .site-language-bar button {
+  min-width: 38px;
+  min-height: 32px;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+.lab-header .site-language-bar button[aria-pressed=true] {
+  background: var(--lab-ink);
+  color: var(--lab-paper);
+}
+@media (max-width: 1050px) {
+  .lab-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .lab-header .site-language-bar { grid-column: 2; grid-row: 1; }
+  .lab-header nav[aria-label]:first-of-type { grid-column: 1 / -1; grid-row: 2; }
+}

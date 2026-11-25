@@ -96,9 +96,37 @@
     const about = document.createElement("a");
     about.href = `${prefix}about.html`;
     about.textContent = "About";
-    primary.append(home, learning, journal, explore, about);
+    const works = document.createElement("a");
+    works.href = prefix + "works.html";
+    works.textContent = "作品";
+    const worlds = document.createElement("a");
+    worlds.href = prefix + "worlds.html";
+    worlds.textContent = "AI 世界";
+    primary.append(home, worlds, works, learning, journal, explore, about);
 
     nav.append(brand, primary);
+
+    // Older lessons load the shared domain translator. Use its language state
+    // and change handler for the compact controls inside the lesson header.
+    if (document.querySelector('script[src^="/assets/site-languages.js"]')) {
+      const languages = document.createElement("nav");
+      languages.className = "lesson-languages";
+      languages.dataset.languageControl = "";
+      languages.setAttribute("aria-label", "Language");
+      for (const [label, code] of [["繁中", "zh-Hant"], ["EN", "en"]]) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.lang = code;
+        button.textContent = label;
+        const sync = () => button.setAttribute("aria-pressed",
+          String((window.SiteLanguage?.language || "zh-Hant") === code));
+        button.addEventListener("click", () => window.SiteLanguage?.set(code));
+        document.addEventListener("site-language-change", sync);
+        sync();
+        languages.append(button);
+      }
+      nav.append(languages);
+    }
 
     const mountNav = () => {
       if (document.querySelector(".training-site-nav")) return;
@@ -106,7 +134,7 @@
       if (prefix === "../") {
         document.body.classList.add("lesson-editorial-page");
       }
-      document.body.prepend(nav);
+      if (!document.querySelector(".lab-header")) document.body.prepend(nav);
     };
 
     if (document.body) {

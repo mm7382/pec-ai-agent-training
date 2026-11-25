@@ -154,3 +154,25 @@ html.sunlit body:not(.cinema) :is(input, select, textarea) {
   html.sunlit body .training-primary-links { gap: 12px; }
   html.sunlit body .training-site-brand { font-size: 1rem; }
 }
+
+html.sunlit .training-site-nav :is(.site-language-bar, .lesson-languages) {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+  background: transparent;
+  color: inherit;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+}
+html.sunlit .training-site-nav :is(.site-language-bar, .lesson-languages) button {
+  border-radius: 5px;
+  min-width: 38px;
+  min-height: 32px;
+  padding: 3px 7px;
+}
+
+body:has(.training-site-nav .lesson-languages) > .site-language-bar { display: none; }
+.training-site-nav .lesson-languages { display: flex; }
+.training-site-nav .lesson-languages button { color: inherit; background: transparent; border: 0; cursor: pointer; }
+.training-site-nav .lesson-languages button[aria-pressed=true] { background: #fff; color: #26342b; }
