@@ -102,7 +102,10 @@
     const worlds = document.createElement("a");
     worlds.href = prefix + "worlds.html";
     worlds.textContent = "AI 世界";
-    primary.append(home, worlds, works, learning, journal, explore, about);
+    const services = document.createElement("a");
+    services.href = `${prefix}services.html`;
+    services.textContent = "合作服務";
+    primary.append(home, worlds, works, learning, journal, about, services, explore);
 
     nav.append(brand, primary);
 
