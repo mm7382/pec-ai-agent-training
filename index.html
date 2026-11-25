@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Michael Agent Lab｜AI 自主世界與實作作品</title>
-  <meta name="description" content="Michael Agent Lab 分享 AI Agent 工具選型、任務設計與成果驗收的實作教材，並提供 AI Agent 導入與工作流程設計服務。">
+  <title>Michael Agent Lab｜2027 運勢與 AI 自主世界</title>
+  <meta name="description" content="探索易見與紫微 App、2027 年度運勢、AI 自主世界與開發中的未來世界。">
   <link rel="canonical" href="https://mm7382.github.io/pec-ai-agent-training/">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<style>[data-language-secondary]{display:none!important}</style><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
+<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={dictionary:{"易見・紫微 App": {"zh": "易見・紫微 App", "en": "YiJian & Zi Wei Apps"}, "易見・2027 運勢 ↗": {"zh": "易見・2027 運勢 ↗", "en": "YiJian · 2027 outlook ↗"}, "探索紫微 ↗": {"zh": "探索紫微 ↗", "en": "Explore Zi Wei ↗"}, "進入世界 ↗": {"zh": "進入世界 ↗", "en": "Enter the worlds ↗"}, "未來世界": {"zh": "未來世界", "en": "Future World"}, "開發中 ↗": {"zh": "開發中 ↗", "en": "In development ↗"}, "易見學習首頁": {"zh": "易見學習首頁", "en": "YiJian learning home"}, "易見 2027 年度易經指南": {"zh": "易見 2027 年度易經指南", "en": "YiJian 2027 annual guide"}}};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
   <style>
     #site-tour{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);grid-template-areas:"copy video" "actions video" "error video";align-items:center;column-gap:clamp(1.2rem,5vw,5rem);width:min(80rem,88vw);margin:clamp(2rem,5vw,5rem) auto 0;padding:0 0 clamp(1.3rem,3vw,2.5rem);border-bottom:1px solid rgb(230 183 119 / .28);color:var(--paper,#f6efdf);scroll-margin-top:3rem}
     #site-tour .tour-row{grid-area:copy;align-self:end}
@@ -31,10 +31,44 @@
     @media(max-width:42rem){#site-tour{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "video" "actions" "error";row-gap:.9rem}#site-tour .tour-video{justify-self:start;width:100%}#site-tour .tour-actions{margin-top:0}}
   </style>
 
-<link rel="stylesheet" href="campaign.css"></head>
+<link rel="stylesheet" href="campaign.css"><style>
+    .cinema .lab-header { background:#0c141f; color:#f6e9d5; border-color:#755b38; }
+    .cinema .lab-header a[aria-current],.cinema .lab-header a:hover { color:#ecc989; }
+    .cinema .lab-header .site-language-bar button[aria-pressed=true] { background:#ead5ac;color:#0c141f; }
+    .cabinet { display:grid; grid-template-columns:1fr 1fr; background:#0a1421; color:#fff3dc; }
+    .cabinet-app,.cabinet-world,.cabinet-drawer { box-sizing:border-box; background-size:cover; background-position:center; }
+    .cabinet-app,.cabinet-world { min-height:clamp(390px,43vw,730px); text-align:center; }
+    .cabinet-app { display:flex; flex-direction:column; justify-content:flex-end; align-items:center; padding:4% 4% 5%; background-image:url('assets/campaign/cabinet-app.webp'); }
+    .cabinet-world { padding:clamp(28px,6vw,96px) 15px; background-image:url('assets/campaign/cabinet-world.webp'); }
+    .cabinet-caption { text-shadow:0 2px 9px #060a12,0 0 22px #050912; }
+    .cabinet-caption :is(h1,h2),.cabinet-drawer span { font:500 clamp(28px,3.5vw,64px)/1.15 Georgia,'Songti TC',serif; margin:0 0 .3em; }
+    .cabinet-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:.4rem; }
+    .cabinet-caption a { display:inline-flex; align-items:center; min-height:42px; padding:0 .95em; background:#101821ed; color:#ffecc9; border:1px solid #bba373; border-radius:2rem; text-decoration:none; }
+    .cabinet-caption a:hover,.cabinet-drawer:hover span { text-decoration:underline; text-underline-offset:.25em; }
+    .cabinet-screens { display:flex; justify-content:center; gap:.65rem; margin-top:1.2rem; }
+    .cabinet-screens img { height:clamp(160px,15.5vw,290px); width:auto; border:2px solid #b79a62; border-radius:5px; box-shadow:0 6px 14px #030810; }
+    .cabinet-drawer { grid-column:1/-1; min-height:clamp(135px,15vw,260px); display:flex; gap:1rem; align-items:center; padding:2rem 8vw; color:#fff3dc; text-decoration:none; background-image:linear-gradient(90deg,#09111ce8,transparent 58%),url('assets/campaign/cabinet-drawer.webp'); }
+    .cabinet-drawer span { margin:0; }.cabinet-drawer small { font:500 1rem system-ui; }
+    @media(max-width:680px) { .cabinet {grid-template-columns:1fr;} .cabinet-app {min-height:350px;padding-bottom:20px;} .cabinet-world {min-height:270px;padding-top:23px;} .cabinet-drawer {min-height:120px;} }
+</style></head>
 <body class="cinema"><header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a href="worlds.html">AI 世界</a><a aria-current="page" href="index.html">首頁</a><a href="works.html">作品</a><a href="learning.html">學習資源</a><a href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header>
-<main><section class="lab-harbor"><div><h1>AI 自主世界</h1><p>觀察居民如何生活、討論與建造。</p><a class="lab-link" href="https://mm7382.github.io/ai-world/atlantis/">進入雅特蘭提斯 →</a></div></section><nav class="lab-worlds" aria-label="選擇世界"><strong>選擇世界</strong><a class="lab-link" href="https://mm7382.github.io/ai-world/atlantis/">雅特蘭提斯 →</a><a class="lab-link" href="https://mm7382.github.io/ai-world/egypt/">古埃及 →</a><a class="lab-link" href="https://mm7382.github.io/ai-world/">伊甸園 →</a></nav>
-    <section class="lab-gallery"><h2>作品總覽</h2><div class="lab-posters"><a href="worlds.html"><img src="assets/campaign/atlantis.webp" alt=""><span>AI 自主世界 ↗</span></a><a href="costume.html"><img src="assets/campaign/costume.webp" alt=""><span>古裝留影 ↗</span></a><a href="https://mm7382.github.io/yijian-web/"><img src="assets/campaign/yijian.webp" alt=""><span>易見 ↗</span></a></div></section>
+<main>
+  <div class="cabinet">
+    <section class="cabinet-app">
+      <div class="cabinet-caption"><h2>易見・紫微 App</h2>
+        <div class="cabinet-actions"><a href="https://apps.apple.com/tw/app/id6816324095">易見・2027 運勢 ↗</a><a href="https://mm7382.github.io/ziwei-web/">探索紫微 ↗</a></div>
+      </div>
+      <div class="cabinet-screens">
+        <img src="assets/campaign/yijian-home-real.webp" alt="易見學習首頁">
+        <img src="assets/campaign/yijian-annual-real.webp" alt="易見 2027 年度易經指南">
+      </div>
+    </section>
+    <section class="cabinet-world"><div class="cabinet-caption">
+      <h1>AI 自主世界</h1><a href="worlds.html">進入世界 ↗</a>
+    </div></section>
+    <a class="cabinet-drawer" href="https://mm7382.github.io/future-world/"><span>未來世界</span><small>開發中 ↗</small></a>
+  </div>
+    <section class="lab-gallery"><h2>作品總覽</h2><div class="lab-posters"><a href="worlds.html"><img src="assets/campaign/atlantis.webp" alt=""><span>AI 自主世界 ↗</span></a><a href="costume.html"><img src="assets/campaign/costume.webp" alt=""><span>古裝留影 ↗</span></a><a href="https://mm7382.github.io/yijian-web/"><img style="object-fit:contain;background:#101923" src="assets/campaign/yijian-home-real.webp" alt=""><span>易見 ↗</span></a></div></section>
     <section id="site-tour" aria-labelledby="site-tour-title">
       <div class="tour-row"><div>
         <p class="tour-kicker"><span lang="zh-Hant">網站導覽 · 8 秒</span><span lang="en">SITE TOUR · 8 SECONDS</span></p>
