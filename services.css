@@ -30,24 +30,31 @@
   line-height: 1.85;
 }
 
-.services-contact {
+.services-page .services-hero-copy > .services-contact {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   margin-top: 14px;
   padding: 13px 22px;
-  border: 1px solid var(--home-line);
+  border: 1px solid #263b32;
   border-radius: 999px;
-  background: #fffefd;
-  color: var(--home-ink);
+  background: #263b32;
+  color: #fff4df;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.services-contact:hover,
-.services-contact:focus-visible {
-  border-color: var(--home-accent);
-  color: var(--home-accent);
+.services-page .services-hero-copy > .services-contact:hover,
+.services-page .services-hero-copy > .services-contact:focus-visible {
+  background: #192c24;
+  color: #fff4df;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.services-page .services-hero-copy > .services-contact:focus-visible {
+  outline: 2px solid #fff4df;
+  outline-offset: 3px;
 }
 
 .services-start {
