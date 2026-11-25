@@ -9,26 +9,28 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={dictionary:{"易見・紫微 App": {"zh": "易見・紫微 App", "en": "YiJian & Zi Wei Apps"}, "易見・2027 運勢 ↗": {"zh": "易見・2027 運勢 ↗", "en": "YiJian · 2027 outlook ↗"}, "探索紫微 ↗": {"zh": "探索紫微 ↗", "en": "Explore Zi Wei ↗"}, "進入世界 ↗": {"zh": "進入世界 ↗", "en": "Enter the worlds ↗"}, "未來世界": {"zh": "未來世界", "en": "Future World"}, "開發中 ↗": {"zh": "開發中 ↗", "en": "In development ↗"}, "易見學習首頁": {"zh": "易見學習首頁", "en": "YiJian learning home"}, "易見 2027 年度易經指南": {"zh": "易見 2027 年度易經指南", "en": "YiJian 2027 annual guide"}}};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
+<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={dictionary:{"更多資源":{"zh":"更多資源","en":"More resources"},"易見・紫微 App": {"zh": "易見・紫微 App", "en": "YiJian & Zi Wei Apps"}, "易見・2027 運勢 ↗": {"zh": "易見・2027 運勢 ↗", "en": "YiJian · 2027 outlook ↗"}, "探索紫微 ↗": {"zh": "探索紫微 ↗", "en": "Explore Zi Wei ↗"}, "進入世界 ↗": {"zh": "進入世界 ↗", "en": "Enter the worlds ↗"}, "未來世界": {"zh": "未來世界", "en": "Future World"}, "開發中 ↗": {"zh": "開發中 ↗", "en": "In development ↗"}, "易見學習首頁": {"zh": "易見學習首頁", "en": "YiJian learning home"}, "易見 2027 年度易經指南": {"zh": "易見 2027 年度易經指南", "en": "YiJian 2027 annual guide"}}};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
   <style>
-    #site-tour{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);grid-template-areas:"copy video" "actions video" "error video";align-items:center;column-gap:clamp(1.2rem,5vw,5rem);width:min(80rem,88vw);margin:clamp(2rem,5vw,5rem) auto 0;padding:0 0 clamp(1.3rem,3vw,2.5rem);border-bottom:1px solid rgb(230 183 119 / .28);color:var(--paper,#f6efdf);scroll-margin-top:3rem}
-    #site-tour .tour-row{grid-area:copy;align-self:end}
-    #site-tour .tour-kicker{font-size:.77rem;font-weight:600;color:var(--gold,#e6b777);letter-spacing:.1em;margin:0 0 .55rem}
-    #site-tour h2{margin:0;line-height:1.17;font-size:clamp(1.85rem,3.7vw,3.6rem);font-weight:500;text-wrap:balance}
-    #site-tour .tour-note{max-width:31ch;margin:.75rem 0 0;color:#d9ceb9;line-height:1.66}
-    #site-tour .tour-actions{grid-area:actions;align-self:start;display:flex;align-items:center;gap:.35rem 1rem;flex-wrap:wrap;margin-top:.85rem}
-    #site-tour button{min-height:44px;padding:.35rem .75rem;border:1px solid rgb(230 183 119 / .65);border-radius:3px;background:transparent;color:var(--paper,#f6efdf);font:600 .88rem/1.2 system-ui,sans-serif;cursor:pointer}
-    #site-tour button:hover{background:#342b1f}
-    #site-tour a{display:inline-flex;align-items:center;min-height:44px;color:#d9ceb9;font-size:.82rem;text-decoration:none}
-    #site-tour a:hover{text-decoration:underline;text-underline-offset:.22em}
-    #site-tour .tour-video{grid-area:video;justify-self:end;display:block;width:min(100%,40rem);height:auto;aspect-ratio:16/9;border-radius:4px;background:#141410;object-fit:contain}
-    #site-tour [data-video-error]{grid-area:error}
+    .cabinet-shelf {grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1fr) clamp(220px,23vw,320px);border-top:2px solid #8a704b}
+    .cabinet .cabinet-shelf .cabinet-drawer {grid-column:auto;min-height:0}
+    #site-tour {margin:0;padding:7px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 4px;background:linear-gradient(155deg,#203044,#09101a 75%);border:1px solid #947848;color:#fff0d3}
+    #site-tour .tour-video {order:-1;grid-column:1/-1;display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#09101a}
+    #site-tour h2 {margin:0;font:500 1rem Georgia,serif}
+    #site-tour button {min-height:40px;border:0;background:transparent;color:inherit;cursor:pointer}
+    #site-tour [data-video-error] {grid-column:1/-1}
+    .home-footer {padding:.4rem 4vw;background:#0b131e;color:#ded1b8;font:.8rem system-ui}
+    .home-footer summary {cursor:pointer;width:max-content;padding:.4rem 0}
+    .home-footer nav {display:flex;flex-wrap:wrap;gap:1rem;padding:.5rem 0}.home-footer a {color:inherit}
     #site-tour button [data-on],#site-tour button[aria-pressed="true"] [data-off]{display:none!important}
     #site-tour button[aria-pressed="true"] [data-on]{display:inline!important}
     #site-tour [hidden]{display:none!important}
     #site-tour [lang="en"],html[data-site-language="en"] #site-tour [lang="zh-Hant"]{display:none!important}
     html[data-site-language="en"] #site-tour [lang="en"]{display:inline!important}
-    @media(max-width:42rem){#site-tour{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "video" "actions" "error";row-gap:.9rem}#site-tour .tour-video{justify-self:start;width:100%}#site-tour .tour-actions{margin-top:0}}
+    @media(max-width:680px){
+      .cabinet-shelf {grid-template-columns:minmax(0,1fr) minmax(148px,45%)}
+      .cabinet .cabinet-shelf .cabinet-drawer {padding:.8rem;flex-direction:column;align-items:flex-start;justify-content:center;gap:.2rem}
+      #site-tour {padding:4px;grid-template-columns:1fr} #site-tour h2 {font-size:.88rem}
+    }
   </style>
 
 <link rel="stylesheet" href="campaign.css"><style>
@@ -37,7 +39,7 @@
     .cinema .lab-header .site-language-bar button[aria-pressed=true] { background:#ead5ac;color:#0c141f; }
     .cabinet { display:grid; grid-template-columns:1fr 1fr; background:#0a1421; color:#fff3dc; }
     .cabinet-app,.cabinet-world,.cabinet-drawer { box-sizing:border-box; background-size:cover; background-position:center; }
-    .cabinet-app,.cabinet-world { min-height:clamp(390px,43vw,730px); text-align:center; }
+    .cabinet-app,.cabinet-world { min-height:clamp(320px,32vw,510px); text-align:center; }
     .cabinet-app { display:flex; flex-direction:column; justify-content:flex-end; align-items:center; padding:4% 4% 5%; background-image:url('assets/campaign/cabinet-app.webp'); }
     .cabinet-world { padding:clamp(28px,6vw,96px) 15px; background-image:url('assets/campaign/cabinet-world.webp'); }
     .cabinet-caption { text-shadow:0 2px 9px #060a12,0 0 22px #050912; }
@@ -46,7 +48,7 @@
     .cabinet-caption a { display:inline-flex; align-items:center; min-height:42px; padding:0 .95em; background:#101821ed; color:#ffecc9; border:1px solid #bba373; border-radius:2rem; text-decoration:none; }
     .cabinet-caption a:hover,.cabinet-drawer:hover span { text-decoration:underline; text-underline-offset:.25em; }
     .cabinet-screens { display:flex; justify-content:center; gap:.65rem; margin-top:1.2rem; }
-    .cabinet-screens img { height:clamp(160px,15.5vw,290px); width:auto; border:2px solid #b79a62; border-radius:5px; box-shadow:0 6px 14px #030810; }
+    .cabinet-screens img { height:clamp(138px,12vw,210px); width:auto; border:2px solid #b79a62; border-radius:5px; box-shadow:0 6px 14px #030810; }
     .cabinet-drawer { grid-column:1/-1; min-height:clamp(135px,15vw,260px); display:flex; gap:1rem; align-items:center; padding:2rem 8vw; color:#fff3dc; text-decoration:none; background-image:linear-gradient(90deg,#09111ce8,transparent 58%),url('assets/campaign/cabinet-drawer.webp'); }
     .cabinet-drawer span { margin:0; }.cabinet-drawer small { font:500 1rem system-ui; }
     @media(max-width:680px) { .cabinet {grid-template-columns:1fr;} .cabinet-app {min-height:350px;padding-bottom:20px;} .cabinet-world {min-height:270px;padding-top:23px;} .cabinet-drawer {min-height:120px;} }
@@ -66,15 +68,10 @@
     <section class="cabinet-world"><div class="cabinet-caption">
       <h1>AI 自主世界</h1><a href="worlds.html">進入世界 ↗</a>
     </div></section>
+    <div class="cabinet-shelf">
     <a class="cabinet-drawer" href="https://mm7382.github.io/future-world/"><span>未來世界</span><small>開發中 ↗</small></a>
-  </div>
-    <section class="lab-gallery"><h2>作品總覽</h2><div class="lab-posters"><a href="worlds.html"><img src="assets/campaign/atlantis.webp" alt=""><span>AI 自主世界 ↗</span></a><a href="costume.html"><img src="assets/campaign/costume.webp" alt=""><span>古裝留影 ↗</span></a><a href="https://mm7382.github.io/yijian-web/"><img style="object-fit:contain;background:#101923" src="assets/campaign/yijian-home-real.webp" alt=""><span>易見 ↗</span></a></div></section>
     <section id="site-tour" aria-labelledby="site-tour-title">
-      <div class="tour-row"><div>
-        <p class="tour-kicker"><span lang="zh-Hant">網站導覽 · 8 秒</span><span lang="en">SITE TOUR · 8 SECONDS</span></p>
-        <h2 id="site-tour-title"><span lang="zh-Hant">跟 Lucy 逛逛網站</span><span lang="en">Look around with Lucy</span></h2>
-        <p class="tour-note"><span lang="zh-Hant">從 AI 實驗到實作教材，一起看看點子怎麼變成作品。</span><span lang="en">From AI experiments to practical guides, see how ideas turn into projects.</span></p>
-      </div></div>
+      <h2 id="site-tour-title"><span lang="zh-Hant">Lucy 導覽</span><span lang="en">Lucy’s tour</span></h2>
       <div class="tour-actions">
         <button type="button" aria-pressed="false" aria-controls="site-tour-video" hidden>
           <span data-off><span aria-hidden="true">♪ </span><span lang="zh-Hant">開啟聲音</span><span lang="en">Turn on sound</span></span>
@@ -85,6 +82,8 @@
       <video id="site-tour-video" class="tour-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="site-tour-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-google-flow-site-opening.mp4"></video>
       <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，請重新整理再試一次。</span><span lang="en">The video could not play. Please refresh and try again.</span></p>
     </section>
+    </div>
+  </div>
     <script>
       (() => {
         const section=document.getElementById('site-tour');
@@ -116,22 +115,5 @@
       })();
     </script>
 
-<section id="work" class="spread"><h2>實作現場</h2><div class="projects"><a href="journal-future-world-skybridge.html"><img src="journal-future-world-skybridge-prototype.png" alt="未來世界空橋原型"><span>未來世界・空橋 ↗</span></a><a href="journal-ai-schematic-review.html"><img src="assets/journal/ai-schematic-review.webp" alt="AI 輔助電路圖審查"><span>AI 輔助電路圖審查 ↗</span></a></div></section>
-<section class="directory"><h2>探索 Michael Agent Lab</h2><div>
-<a href="learning.html">學習路徑 ↗</a>
-<a href="tutorial-library.html">教材文章 ↗</a>
-<a href="journal.html">學習日誌 ↗</a>
-<a href="ai-agent-daily.html">AI Agent 每日熱門 ↗</a>
-<a href="local-agent-radar.html">本地 Agent 雷達 ↗</a>
-<a href="github-skills.html">GitHub Skills ↗</a>
-<a href="ai-video-library.html">AI 影音資源 ↗</a>
-<a href="hermes-agent-resources.html">Hermes Agent 資源 ↗</a>
-<a href="openclaw-cases.html">OpenClaw 案例 ↗</a>
-<a href="ai-gods.html">AI 人物 ↗</a>
-<a href="journal-pyramid-building.html">金字塔建造實驗 ↗</a>
-<a href="services.html">合作服務 ↗</a>
-<a href="about.html">關於本站 ↗</a>
-<a href="/ai-world/">AI 自主世界 ↗</a>
-<a href="https://mm7382.github.io/">依分類查看作品 ↗</a>
-</div></section></main><footer class="end">Michael Agent Lab · Michael Chuang<nav aria-label="個人 App 作品"><a href="https://mm7382.github.io/yijian-web/">易見</a><a href="https://mm7382.github.io/bazi-web/">八字</a><a href="https://mm7382.github.io/ziwei-web/">紫微</a><a href="https://mm7382.github.io/astrology-web/">星座</a></nav></footer>
+</main><footer class="home-footer"><details><summary>更多資源</summary><nav aria-label="個人 App 作品"><a href="tutorial-library.html">教材文章</a><a href="https://mm7382.github.io/yijian-web/">易見</a><a href="https://mm7382.github.io/bazi-web/">八字</a><a href="https://mm7382.github.io/ziwei-web/">紫微</a><a href="https://mm7382.github.io/astrology-web/">星座</a></nav></details></footer>
 </body></html>
