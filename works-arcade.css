@@ -1,0 +1,244 @@
+.arcade-page {
+  background: #0b121c;
+  color: #ffefd0;
+}
+
+.arcade-page .lab-header {
+  background: #0c141f;
+  color: #f6e9d5;
+  border-color: #755b38;
+}
+
+.arcade-page .lab-header a[aria-current],
+.arcade-page .lab-header a:hover {
+  color: #ecc989;
+}
+
+.arcade-page .lab-header .site-language-bar button[aria-pressed=true] {
+  background: #ead5ac;
+  color: #0c141f;
+}
+
+.arcade {
+  --arcade-gold: #bb9765;
+  isolation: isolate;
+  position: relative;
+  max-width: 112rem;
+  margin-inline: auto;
+  aspect-ratio: 8 / 5;
+  background: #121b25 url('assets/campaign/works-arcade.webp') center / cover;
+}
+
+.arcade h1,
+.arcade h2 {
+  font-family: Georgia, 'Songti TC', serif;
+  font-weight: 500;
+  line-height: 1.14;
+  margin: 0;
+}
+
+.arcade h1 {
+  position: absolute;
+  top: 5%;
+  left: 4%;
+  font-size: clamp(2rem, 4.2vw, 4.65rem);
+  text-shadow: 0 2px 18px #080d15;
+}
+
+.exhibit {
+  position: absolute;
+}
+
+.exhibit-copy {
+  box-sizing: border-box;
+  padding: .65rem .7rem;
+  border: 1px solid var(--arcade-gold);
+  border-radius: .25rem;
+  background: linear-gradient(145deg, #1c2632, #090f18 68%);
+  box-shadow: 0 2px 16px #070b11b5, inset 0 0 0 3px #151d27;
+  text-align: center;
+}
+
+.exhibit h2 {
+  font-size: clamp(1.15rem, 2vw, 2.15rem);
+}
+
+.exhibit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .25rem .65rem;
+  margin-top: .35rem;
+}
+
+.exhibit-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  color: #ffdf9c;
+  font: 600 clamp(.81rem, 1.12vw, 1rem)/1.2 system-ui, sans-serif;
+  text-underline-offset: .26em;
+}
+
+.exhibit-actions a:first-child {
+  padding-inline: .85em;
+  border: 1px solid #b9945f;
+  border-radius: 1.5rem;
+  background: linear-gradient(#f3d8a5, #ba8852);
+  color: #1a1410;
+  text-decoration: none;
+}
+
+.exhibit-actions a:first-child:hover {
+  background: #ffe0a3;
+  color: #1a1410;
+}
+
+.exhibit-actions a:hover {
+  color: #fff8e8;
+}
+
+.arcade a:focus-visible,
+.arcade-page .lab-header :is(a, button):focus-visible {
+  outline: 2px solid #fff1b0;
+  outline-offset: 4px;
+}
+
+.exhibit-app {
+  top: 25%;
+  left: 4%;
+  width: 31%;
+  height: 48%;
+}
+
+.arcade-screens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+
+.arcade-screens img {
+  display: block;
+  box-sizing: border-box;
+  height: 92%;
+  width: auto;
+  max-width: 45%;
+  object-fit: contain;
+  border: 2px solid #d2ac78;
+  border-radius: clamp(6px, 1.1vw, 1rem);
+  box-shadow: 0 8px 16px #080d14b0;
+}
+
+.exhibit-app .exhibit-copy {
+  margin-inline: 4%;
+}
+
+.exhibit-world {
+  left: 41%;
+  bottom: 25%;
+  width: 24%;
+}
+
+.exhibit-future {
+  left: 73%;
+  top: 32%;
+  width: 12%;
+}
+
+.exhibit-status {
+  color: #e3c798;
+  font: .84rem/1.3 system-ui, sans-serif;
+}
+
+.exhibit-future h2,
+.exhibit-costume h2 {
+  font-size: clamp(1.05rem, 1.65vw, 1.8rem);
+}
+
+.exhibit-costume {
+  left: 85.5%;
+  bottom: 18%;
+  width: 13%;
+}
+
+@media (max-width: 940px) {
+  .arcade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.3rem 4vw 2.2rem;
+    aspect-ratio: auto;
+    background: radial-gradient(ellipse at top, #1e2d3c, #0b121c 70%);
+  }
+
+  .arcade h1 {
+    position: static;
+    grid-column: 1 / -1;
+  }
+
+  .exhibit {
+    position: static;
+    width: auto;
+    height: auto;
+    display: grid;
+    align-content: end;
+    overflow: hidden;
+    border: 1px solid var(--arcade-gold);
+    border-radius: .35rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .exhibit-copy {
+    border: 0;
+    border-top: 1px solid var(--arcade-gold);
+    border-radius: 0;
+  }
+
+  .exhibit-app {
+    background-image: url('assets/campaign/cabinet-app.webp');
+  }
+
+  .arcade-screens {
+    padding: .9rem 0;
+    background: radial-gradient(ellipse at top, #b5815840, #10151d70 72%);
+    border: 0;
+  }
+
+  .arcade-screens img {
+    width: min(40%, 8rem);
+    height: auto;
+  }
+
+  .exhibit-app .exhibit-copy {
+    margin-inline: 0;
+  }
+
+  .exhibit-world {
+    min-height: 17rem;
+    background-image: url('assets/campaign/cabinet-world.webp');
+  }
+
+  .exhibit-future,
+  .exhibit-costume {
+    min-height: 13rem;
+  }
+
+  .exhibit-future {
+    background-image: url('assets/campaign/cabinet-drawer.webp');
+    background-position: 78% center;
+  }
+
+  .exhibit-costume {
+    background-image: url('assets/campaign/silk.webp');
+  }
+}
+
+@media (max-width: 540px) {
+  .arcade {
+    grid-template-columns: 1fr;
+  }
+}
