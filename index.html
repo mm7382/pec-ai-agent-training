@@ -9,7 +9,7 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={dictionary:{"更多資源":{"zh":"更多資源","en":"More resources"},"易見・紫微 App": {"zh": "易見・紫微 App", "en": "YiJian & Zi Wei Apps"}, "易見・2027 年度指南 ↗": {"zh": "易見・2027 年度指南 ↗", "en": "YiJian · 2027 annual guide ↗"}, "探索紫微 ↗": {"zh": "探索紫微 ↗", "en": "Explore Zi Wei ↗"}, "進入世界 ↗": {"zh": "進入世界 ↗", "en": "Enter the worlds ↗"}, "未來世界": {"zh": "未來世界", "en": "Future World"}, "開發中 ↗": {"zh": "開發中 ↗", "en": "In development ↗"}, "易見學習首頁": {"zh": "易見學習首頁", "en": "YiJian learning home"}, "易見 2027 年度易經指南": {"zh": "易見 2027 年度易經指南", "en": "YiJian 2027 annual guide"}}};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
+<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={dictionary:{"易見・紫微 App":{"zh":"易見・紫微 App","en":"YiJian & Zi Wei Apps"},"易見・2027 年度指南 ↗":{"zh":"易見・2027 年度指南 ↗","en":"YiJian · 2027 annual guide ↗"},"探索紫微 ↗":{"zh":"探索紫微 ↗","en":"Explore Zi Wei ↗"},"進入世界 ↗":{"zh":"進入世界 ↗","en":"Enter the worlds ↗"},"未來世界":{"zh":"未來世界","en":"Future World"},"開發中 ↗":{"zh":"開發中 ↗","en":"In development ↗"},"易見學習首頁":{"zh":"易見學習首頁","en":"YiJian learning home"},"易見 2027 年度易經指南":{"zh":"易見 2027 年度易經指南","en":"YiJian 2027 annual guide"},"從易經互動課入門，也能排出自己的紫微命盤。":{"zh":"從易經互動課入門，也能排出自己的紫微命盤。","en":"Learn the I Ching through interactive lessons or create your own Zi Wei chart."},"觀察 AI 角色如何生活、分工，並一起建造聚落。":{"zh":"觀察 AI 角色如何生活、分工，並一起建造聚落。","en":"Watch AI residents live, coordinate their work, and build settlements together."},"隱私說明":{"zh":"隱私說明","en":"Privacy"}}};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
   <style>
     #site-tour {
       position:relative;
@@ -38,9 +38,6 @@
     #site-tour h2 {margin:0;font:500 1rem Georgia,serif}
     #site-tour button {min-height:40px;border:0;background:transparent;color:inherit;cursor:pointer}
     #site-tour [data-video-error] {grid-column:1/-1}
-    .home-footer {padding:.4rem 4vw;background:#0b131e;color:#ded1b8;font:.8rem system-ui}
-    .home-footer summary {cursor:pointer;width:max-content;padding:.4rem 0}
-    .home-footer nav {display:flex;flex-wrap:wrap;gap:1rem;padding:.5rem 0}.home-footer a {color:inherit}
     #site-tour button [data-on],#site-tour button[aria-pressed="true"] [data-off]{display:none!important}
     #site-tour button[aria-pressed="true"] [data-on]{display:inline!important}
     #site-tour [hidden]{display:none!important}
@@ -60,7 +57,9 @@
     .cabinet-app { display:flex; flex-direction:column; justify-content:flex-end; align-items:center; padding:4% 4% 5%; background-image:url('assets/campaign/cabinet-app.webp'); }
     .cabinet-world {
       display:grid;
-      place-items:center;
+      place-content:center;
+      justify-items:center;
+      grid-template-columns:minmax(0,1fr);
       min-width:0;
       padding:clamp(10px,1.25vw,22px);
       border:1px solid #725c3e;
@@ -90,6 +89,38 @@
       overflow-wrap:anywhere;
       text-wrap:balance;
     }
+    .cabinet-copy {
+      max-width:28ch;
+      margin:.45rem auto .8rem;
+      color:#f2e6d1;
+      font:400 clamp(.8rem,1.12vw,.95rem)/1.55 system-ui,sans-serif;
+      text-wrap:pretty;
+    }
+    .cabinet-world .cabinet-copy {
+      margin:.7rem auto 0;
+      padding-inline:.5rem;
+      text-align:center;
+    }
+    .home-meta {
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      min-height:2.25rem;
+      padding:.1rem 4vw;
+      border-top:1px solid #5a4830;
+      background:#0b131e;
+      color:#d9cdb7;
+      font:400 .75rem/1.4 system-ui,sans-serif;
+    }
+    .home-meta a {
+      display:inline-flex;
+      align-items:center;
+      min-height:32px;
+      color:inherit;
+      text-decoration:underline;
+      text-underline-offset:.28em;
+    }
+    .home-meta a:focus-visible { outline:2px solid #ecc989;outline-offset:2px; }
     .cabinet-caption { text-shadow:0 2px 9px #060a12,0 0 22px #050912; }
     .cabinet-caption :is(h1,h2),.cabinet-drawer span { font:500 clamp(28px,3.5vw,64px)/1.15 Georgia,'Songti TC',serif; margin:0 0 .3em; }
     .cabinet-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:.4rem; }
@@ -128,7 +159,9 @@
       <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，請重新整理再試一次。</span><span lang="en">The video could not play. Please refresh and try again.</span></p>
     </section>
     <section class="cabinet-app">
-      <div class="cabinet-caption"><h2>易見・紫微 App</h2>
+      <div class="cabinet-caption">
+        <h2>易見・紫微 App</h2>
+        <p class="cabinet-copy">從易經互動課入門，也能排出自己的紫微命盤。</p>
         <div class="cabinet-actions"><a href="yijian-app.html">易見・2027 年度指南 ↗</a><a href="ziwei-app.html">探索紫微 ↗</a></div>
       </div>
       <div class="cabinet-screens">
@@ -144,6 +177,7 @@
           <a href="worlds.html">進入世界 ↗</a>
         </div>
       </div>
+      <p class="cabinet-copy">觀察 AI 角色如何生活、分工，並一起建造聚落。</p>
     </section>
     <a class="cabinet-drawer" href="https://mm7382.github.io/future-world/"><span>未來世界</span><small>開發中 ↗</small></a>
   </div>
@@ -178,5 +212,8 @@
       })();
     </script>
 
-</main><footer class="home-footer"><details><summary>更多資源</summary><nav aria-label="個人 App 作品"><a href="tutorial-library.html">教材文章</a><a href="https://mm7382.github.io/yijian-web/">易見</a><a href="https://mm7382.github.io/bazi-web/">八字</a><a href="https://mm7382.github.io/ziwei-web/">紫微</a><a href="https://mm7382.github.io/astrology-web/">星座</a></nav></details></footer>
+</main>
+<footer class="home-meta mal-privacy-notice">
+  <a href="privacy.html">隱私說明</a>
+</footer>
 </body></html>
