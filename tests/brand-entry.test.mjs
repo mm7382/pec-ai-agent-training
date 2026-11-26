@@ -17,7 +17,8 @@ test('the home entry features AI worlds and retains the learning and app links',
 });
 
 test('the learning entry leads with tasks and shows the catalog counts', () => {
-  assert.match(learning, /<h1[^>]*>[^<]*今天想完成什麼？[^<]*<\/h1>/);
+  assert.match(learning, /<h1[^>]*>學習資源<\/h1>/);
+  assert.match(learning, /<h2[^>]*>今天想完成什麼？<\/h2>/);
   assert.match(learning, new RegExp(`<dt id="totalCount">${index.items.length}<\\/dt>`));
   assert.match(learning, new RegExp(`<dt>${categories.size}<\\/dt>`));
 });

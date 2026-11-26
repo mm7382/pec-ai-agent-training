@@ -10,100 +10,90 @@
   <script src="./site-config.js?v=20260711-resource-library"></script>
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
 <style>[data-language-secondary]{display:none!important}</style><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
-<link rel="stylesheet" href="campaign.css"></head>
-<body class="home-page"><header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a href="index.html">首頁</a><a href="worlds.html">AI 世界</a><a href="works.html">作品</a><a aria-current="page" href="learning.html">學習資源</a><a href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header>
-  <main class="app-shell">
-    <header class="topbar" aria-label="網站導覽">
-      <a class="brand" href="./index.html?v=20261124b" aria-label="Michael AI Agent Lab 首頁">
-        <span class="brand-mark" aria-hidden="true">M</span>
-        <span>
-          <strong>Michael AI Agent Lab</strong>
-          <small>AI 學習入口</small>
-        </span>
-      </a>
-    </header>
+<link rel="stylesheet" href="campaign.css">
+  <link rel="stylesheet" href="learning-reading-room.css">
+  <script>
+    window.SitePageTranslations = { dictionary: {
+      "搜尋": { zh: "搜尋", en: "Search" },
+      "搜尋教材": { zh: "搜尋教材", en: "Search lessons" },
+      "今天想完成什麼？": { zh: "今天想完成什麼？", en: "What would you like to do today?" },
+      "整理測試紀錄": { zh: "整理測試紀錄", en: "Organize test records" },
+      "寫出提示詞": { zh: "寫出提示詞", en: "Write a prompt" },
+      "檢查 AI 輸出": { zh: "檢查 AI 輸出", en: "Review AI output" },
+      "30 天入門": { zh: "30 天入門", en: "Get started in 30 days" },
+      "最新教材": { zh: "最新教材", en: "Latest lessons" },
+      "AI 學習雷達": { zh: "AI 學習雷達", en: "AI Learning Radar" },
+      "教材目錄": { zh: "教材目錄", en: "Lesson catalog" }
+    } };
+  </script>
+</head>
+<body class="reading-room-page"><header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a href="index.html">首頁</a><a href="worlds.html">AI 世界</a><a href="works.html">作品</a><a aria-current="page" href="learning.html">學習資源</a><a href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header>
+  <main class="reading-room">
+    <section class="reading-hero" aria-labelledby="reading-heading">
+      <h1 id="reading-heading">學習資源</h1>
+      <form class="reading-search" id="readingSearch" role="search" action="./tutorial-library.html">
+        <input id="searchInput" name="q" type="search" autocomplete="off" aria-label="搜尋教材" placeholder="搜尋教材">
+        <button type="submit">搜尋 <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
 
-    <section class="lab-split"><div><h1>今天想完成什麼？</h1><div class="lab-tasks"><a class="lab-link" href="pec-training/engineering-prompt-writing.html">寫出提示詞 →</a><a class="lab-link" href="pec-training/ai-30-day-learning-path.html">整理測試紀錄 →</a><a class="lab-link" href="pec-training/claude-codex-cross-review.html">檢查 AI 輸出 →</a></div><a class="lab-link" href="pec-training/ai-30-day-learning-path.html">30 天入門 →</a></div><img src="assets/campaign/lesson.webp" alt="有手寫註記的工程測試單"></section><section class="workspace" id="learningRadar">
-      <div class="left-rail">
-        <aside class="summary-panel" aria-label="資料庫摘要">
-          <div class="summary-visual" aria-hidden="true">
-            <span>Michael AI Agent Lab</span>
+    <section class="reading-tasks reading-frame" aria-labelledby="reading-task-heading">
+      <h2 id="reading-task-heading">今天想完成什麼？</h2>
+      <div class="reading-task-links">
+        <a href="pec-training/engineering-prompt-writing.html">寫出提示詞 <span aria-hidden="true">→</span></a>
+        <a href="pec-training/task-definition-brief.html">整理測試紀錄 <span aria-hidden="true">→</span></a>
+        <a href="pec-training/claude-codex-cross-review.html">檢查 AI 輸出 <span aria-hidden="true">→</span></a>
+        <a href="pec-training/ai-30-day-learning-path.html">30 天入門 <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="reading-shortcuts">
+        <a href="#reading-latest">最新教材 <span aria-hidden="true">→</span></a>
+        <a href="#learningRadar">AI 學習雷達 <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <div class="reading-content reading-frame">
+      <div class="reading-library-stack">
+        <section class="reading-panel" id="reading-latest" aria-labelledby="lessonUpdateTitle">
+          <h2 id="lessonUpdateTitle">最新教材</h2>
+          <ul class="recent-update-list lesson-update-list" id="recentUpdateList"></ul>
+        </section>
+
+        <section class="reading-panel" id="reading-catalog" aria-labelledby="reading-catalog-title">
+          <div class="reading-catalog-head">
+            <h2 id="reading-catalog-title" tabindex="-1">教材目錄</h2>
+            <a href="./tutorial-library.html">完整分類目錄</a>
           </div>
-          <div class="summary-copy">
-            <p class="section-label">你好，我是 Michael。</p>
-            <h2>教材目錄</h2>
-            <p class="hero-motto" lang="en" data-language-secondary="">透過實用且可靠的工作流程學習 AI Agent。</p>
-            <p>
-              博學、審問、慎思、明辨、篤行。先找到想解決的問題，再讀教材、動手做，最後檢查做出來的東西是否真的可靠。
-            </p>
-          </div>
-          <dl class="metric-grid">
-            <div>
-              <dt id="totalCount">47</dt>
-              <dd>上架教材</dd>
-            </div>
-            <div>
-              <dt>9</dt>
-              <dd>任務分類</dd>
-            </div>
+          <dl class="reading-counts">
+            <div><dt id="totalCount">47</dt><dd>上架教材</dd></div>
+            <div><dt>9</dt><dd>任務分類</dd></div>
           </dl>
-        </aside>
-
-        <section class="library-panel" aria-label="教材列表">
-          <div class="library-toolbar">
-            <div>
-              <h2><a class="library-title-link" href="./tutorial-library.html" target="_blank" rel="noopener">教材入口</a></h2>
-              <p>依分類或關鍵字找教學檔，最新教材也會放在這裡。</p>
-            </div>
-            <a class="library-open-link" href="./tutorial-library.html" target="_blank" rel="noopener">完整分類目錄</a>
-          </div>
-
-          <section class="lesson-update-section lesson-update-section--priority" aria-labelledby="lessonUpdateTitle">
-            <div class="lesson-update-heading">
-              <h3 id="lessonUpdateTitle">最新更新教材</h3>
-              <span>最新發布的五篇</span>
-            </div>
-            <ul class="recent-update-list lesson-update-list" id="recentUpdateList"></ul>
-          </section>
-
-          <label class="search-box">
-            <span>搜尋教材</span>
-            <input id="searchInput" type="search" autocomplete="off" placeholder="輸入 Claude、提示詞、Skill、MarkItDown...">
-          </label>
-
           <div class="filter-row" id="categoryFilters" aria-label="分類篩選"></div>
-
           <div class="result-meta" aria-live="polite">
             <span id="resultCount">載入中...</span>
             <button type="button" id="clearFiltersButton">清除篩選</button>
           </div>
-
-          <section class="card-grid" id="tutorialGrid" aria-label="教材卡片"></section>
+          <div class="card-grid" id="tutorialGrid" aria-label="教材卡片"></div>
           <p class="empty-state" id="emptyState" hidden>找不到符合的教材。換個關鍵字，或先清除分類篩選。</p>
         </section>
-
-        <div class="side-notices" aria-label="使用與著作權說明">
-          <p><strong>著作權：</strong>教材內容、分類整理與教學編排由 Michael Agent Lab 製作與維護。除原始品牌與第三方資料來源外，未經同意請勿轉載、改作或商用。</p>
-          <p><strong>隱私：</strong>網站僅用匿名流量分析了解熱門頁面、來源與互動趨勢；留言 / 討論只處理你主動送出的內容。</p>
-        </div>
       </div>
 
-      <section class="focus-panel" aria-label="AI 學習雷達">
-        <div class="focus-copy">
-          <p class="section-label">AI 學習雷達</p>
-          <h2>每天先看這裡。</h2>
-          <p>把 GitHub Skill、AI Agent 新聞、本地 Agent、OpenClaw 案例、YouTube 教學與 Hermes 資料庫放在同一個入口。先看最新重點，再決定今天要深入哪一塊。</p>
-        </div>
-        <section class="recent-updates" aria-labelledby="homepageUpdatesTitle">
-          <div class="recent-updates-header">
-            <h3 id="homepageUpdatesTitle">重點入口</h3>
-            <span>每張卡片都會顯示最新一筆</span>
-          </div>
-          <div class="feature-entry-grid" id="featureEntryGrid"></div>
-        </section>
+      <section class="reading-panel" id="learningRadar" aria-labelledby="reading-radar-title">
+        <h2 id="reading-radar-title">AI 學習雷達</h2>
+        <div class="feature-entry-grid" id="featureEntryGrid"></div>
       </section>
-    </section>
+    </div>
+
+    <footer class="reading-footer reading-frame" aria-label="使用與著作權說明">
+      <p><strong>著作權：</strong>教材內容、分類整理與教學編排由 Michael Agent Lab 製作與維護。除原始品牌與第三方資料來源外，未經同意請勿轉載、改作或商用。</p>
+      <p><strong>隱私：</strong>網站僅用匿名流量分析了解熱門頁面、來源與互動趨勢；留言 / 討論只處理你主動送出的內容。</p>
+    </footer>
   </main>
+  <script>
+    document.getElementById("readingSearch").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.getElementById("reading-catalog-title").focus();
+    });
+  </script>
 
   <script src="./learning-path.js?v=20260711-resource-library"></script>
   <script src="./app.js?v=20260724-home-analytics"></script>
