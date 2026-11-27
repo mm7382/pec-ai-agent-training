@@ -11,94 +11,135 @@
   <meta property="og:title" content="技術合作｜Michael Agent Lab">
   <meta property="og:description" content="一起研究 AI Agent、工作流程、App 與網站原型。">
   <meta property="og:url" content="https://mm7382.github.io/pec-ai-agent-training/services.html">
-  <script>window.SitePageTranslations={"dictionary":{"技術合作｜Michael Agent Lab":{"zh":"技術合作｜Michael Agent Lab","en":"Technical Collaboration | Michael Agent Lab"},"怎麼開頭？":{"zh":"怎麼開頭？","en":"How to start"},"寄封信，簡單說說這三件事就好：":{"zh":"寄封信，簡單說說這三件事就好：","en":"Send a short email covering these three things:"},"你現在想做什麼？":{"zh":"你現在想做什麼？","en":"What are you trying to do?"},"目前卡在哪裡？":{"zh":"目前卡在哪裡？","en":"Where are you stuck?"},"希望一起先試哪一步？":{"zh":"希望一起先試哪一步？","en":"What would you like to try together first?"},"寫信給我":{"zh":"寫信給我","en":"Email me"},"複製信箱":{"zh":"複製信箱","en":"Copy email address"},"已複製信箱。":{"zh":"已複製信箱。","en":"Email address copied."},"紅色紙帶上的網站與 App 原型":{"zh":"紅色紙帶上的網站與 App 原型","en":"Website and app prototypes on a red ribbon of paper"},"從需求釐清到原型驗證":{"zh":"從需求釐清到原型驗證","en":"From defining the problem to validating a prototype"},"聚焦 AI Agent、工作流程與數位原型。我們先釐清要解決的問題，再選一個可驗證的場景動手實作。":{"zh":"聚焦 AI Agent、工作流程與數位原型。我們先釐清要解決的問題，再選一個可驗證的場景動手實作。","en":"I collaborate on AI agents, workflows and digital prototypes. We start by defining the problem, then build and test in one focused scenario."},"討論合作方向":{"zh":"討論合作方向","en":"Discuss a collaboration"},"合作方向":{"zh":"合作方向","en":"Areas of collaboration"},"AI Agent 與流程自動化":{"zh":"AI Agent 與流程自動化","en":"AI agents and workflow automation"},"盤點資料與流程，找出可自動化的步驟，並保留人工確認點。":{"zh":"盤點資料與流程，找出可自動化的步驟，並保留人工確認點。","en":"Review the data and workflow, identify steps to automate and retain checkpoints for human review."},"App 與網站原型":{"zh":"App 與網站原型","en":"App and website prototypes"},"把核心功能做成可操作的原型，驗證使用流程與技術可行性。":{"zh":"把核心功能做成可操作的原型，驗證使用流程與技術可行性。","en":"Build a working prototype of the core features to test usability and technical feasibility."},"技術研究與驗證":{"zh":"技術研究與驗證","en":"Technical research and validation"},"針對具體問題比較工具、模型與實作方式，記錄測試結果與限制。":{"zh":"針對具體問題比較工具、模型與實作方式，記錄測試結果與限制。","en":"Compare tools, models and approaches for a specific problem, then document the results and limitations."},"無法自動複製，請使用「寫信給我」。":{"zh":"無法自動複製，請使用「寫信給我」。","en":"Automatic copying is unavailable. Please use “Email me.”"}}};</script>
+  <script>window.SitePageTranslations={"dictionary":{"技術合作｜Michael Agent Lab":{"zh":"技術合作｜Michael Agent Lab","en":"Technical Collaboration | Michael Agent Lab"},"怎麼開頭？":{"zh":"怎麼開頭？","en":"How to start"},"寄封信，簡單說說這三件事就好：":{"zh":"寄封信，簡單說說這三件事就好：","en":"Send a short email covering these three things:"},"你現在想做什麼？":{"zh":"你現在想做什麼？","en":"What are you trying to do?"},"目前卡在哪裡？":{"zh":"目前卡在哪裡？","en":"Where are you stuck?"},"希望一起先試哪一步？":{"zh":"希望一起先試哪一步？","en":"What would you like to try together first?"},"寫信給我":{"zh":"寫信給我","en":"Email me"},"複製信箱":{"zh":"複製信箱","en":"Copy email address"},"已複製信箱。":{"zh":"已複製信箱。","en":"Email address copied."},"無法自動複製，請使用「寫信給我」。":{"zh":"無法自動複製，請使用「寫信給我」。","en":"Automatic copying is unavailable. Please use “Email me.”"},"共同試作":{"zh":"共同試作","en":"Build together"},"從一個問題開始":{"zh":"從一個問題開始","en":"Start with a question"},"一起創作":{"zh":"一起創作","en":"Create together"}}};</script>
   <script defer src="assets/site-languages.js?v=20261127-collaboration"></script>
   <script defer src="/assets/site-analytics.js?v=20261030"></script>
   <link rel="stylesheet" href="sunlit.css?v=20261124b">
   <link rel="stylesheet" href="campaign.css">
   <style>
-    .services-page { color: #2d241d; font: 16px/1.6 system-ui, sans-serif; }
-    .collab-shell { width: min(100% - 32px, 1200px); margin: 14px auto 22px; }
-    .services-page .collab-hero { grid-template-columns: minmax(0, 1fr) clamp(146px, 25vw, 292px); align-items: center; gap: 16px; border-bottom: 1px solid #c8b29a; padding: 10px 16px; }
-    .collab-hero > div { padding: clamp(5px, 1.2vw, 16px) 0; }
-    html.sunlit .services-page .collab-hero h1 {
-      animation: none;
-      margin: 0 0 6px;
-      font-size: clamp(1.7rem, 3.6vw, 3.1rem);
-      line-height: 1.12;
-      text-wrap: balance;
+    html.sunlit body.services-page {
+      color: #fff2dd;
+      background: #191714;
+      font: 16px/1.6 system-ui, sans-serif;
     }
-    .collab-hero p { margin: 0 0 6px; font-size: .98rem; line-height: 1.55; }
-    .collab-hero > img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
-    .collab-layout {
+    .services-page .lab-header { background: #191714; color: #f9ecd6; border-color: #554638; }
+    .services-page .lab-header a:is(:hover,[aria-current]) { color: #ffd295; }
+    .services-page .lab-header .site-language-bar button[aria-pressed=true] { background: #ffd295; color: #271d15; }
+    .workshop { max-width: 1600px; margin: 0 auto; }
+    .workshop-hall {
+      box-sizing: border-box;
+      position: relative;
+      isolation: isolate;
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: clamp(16px, 3vw, 38px);
-      margin-top: 14px;
-      align-items: start;
+      align-items: end;
+      min-height: clamp(440px, calc(100svh - 135px), 820px);
+      padding: clamp(24px, 5.4vw, 90px);
+      background: #211c17;
     }
-    .collab-layout h2 { font-size: clamp(1.35rem, 2.6vw, 2rem); margin: 0 0 5px; }
-    .collab-topics { border-top: 2px solid #b39070; padding-top: 7px; }
-    .collab-topics ul { margin: 0; padding: 0; list-style: none; }
-    .collab-topics li { padding: 7px 0; border-top: 1px solid #d8c9b8; }
-    .collab-topics h3 { margin: 0; font-size: 1.03rem; }
-    .collab-topics p { margin: 2px 0 0; color: #50453b; }
-    .collab-contact { scroll-margin-top: 16px; padding: 11px 15px; border: 1px solid #ccb79f; border-top: 2px solid #97351e; background: #fff9ef; color: #30261e; }
-    .collab-contact p { margin: 0; }
-    .collab-contact ol { margin: 3px 0 8px; padding-left: 1.4em; }
-    .collab-actions { display: flex; gap: 8px 12px; align-items: center; flex-wrap: wrap; }
-    .collab-email, .collab-copy { font: 650 .92rem/1.35 system-ui, sans-serif; padding: 9px 12px; color: #fffaf1; background: #31251f; border: 1px solid #31251f; text-decoration: none; }
-    .collab-copy { background: transparent; color: #31251f; cursor: pointer; }
-    .collab-contact .collab-status:not(:empty) { margin: 8px 0 0; }
-    .collab-shell :is(a,button):focus-visible { outline: 2px solid #97351e; outline-offset: 3px; }
-    @media (max-width: 720px) {
-      .collab-shell { margin-top: 12px; }
-      .services-page .collab-hero { grid-template-columns: minmax(0, 1fr) minmax(72px, 28%); gap: 7px; padding: 7px 9px; }
-      html.sunlit .services-page .collab-hero h1 { font-size: clamp(1.45rem, 6vw, 1.9rem); }
-      .collab-hero p { font-size: .92rem; }
-      .collab-layout { grid-template-columns: minmax(0, 1fr); gap: 10px; }
-      .collab-layout h2 { font-size: 1.25rem; }
-      .collab-topics p, .collab-contact { font-size: .94rem; }
+    .workshop-hall::after, .workshop-art { position: absolute; inset: 0; }
+    .workshop-art {
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 63% center;
+    }
+    .workshop-hall::after {
+      content: "";
+      z-index: -1;
+      background: linear-gradient(12deg, #18130ff7 0%, #18130fcc 16%, #18130f35 44%, transparent 60%);
+      pointer-events: none;
+    }
+    .workshop-copy { max-width: 38rem; }
+    html.sunlit .services-page .workshop-copy h1 {
+      margin: 0;
+      color: #fff1db;
+      font: 750 clamp(3rem, 8.1vw, 7.8rem)/1.05 system-ui, "PingFang TC", sans-serif;
+      letter-spacing: -.07em;
+      animation: none;
+    }
+    .workshop-copy > p { margin: 5px 0 18px; color: #f4ddbd; font-size: clamp(1.04rem, 2.2vw, 1.65rem); letter-spacing: .04em; }
+    .workshop-contact { width: fit-content; max-width: 100%; scroll-margin-block-start: 20px; }
+    .workshop-contact > summary {
+      box-sizing: border-box;
+      width: fit-content;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 7px 19px;
+      list-style: none;
+      background: #ffc884;
+      color: #231911;
+      border: 1px solid #ffdaab;
+      border-radius: 2px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .workshop-contact > summary::-webkit-details-marker { display: none; }
+    .workshop-contact > summary:hover { background: #ffdcad; }
+    .workshop-contact[open] > summary > span { transform: rotate(45deg); }
+    .workshop-note {
+      margin-top: 8px;
+      width: min(25rem, 100%);
+      box-sizing: border-box;
+      padding: 12px 15px;
+      border: 1px solid #9b7150;
+      background: #221b15;
+      color: #fff2dd;
+    }
+    .workshop-note h2 { margin: 0 0 2px; font-size: 1.15rem; }
+    .workshop-note p { margin: 0; }
+    .workshop-note ol { margin: 4px 0 10px; padding-left: 1.4em; }
+    .collab-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .collab-email, .collab-copy { min-height: 38px; box-sizing: border-box; padding: 6px 10px; border: 1px solid #d7ab7d; color: #2a1e14; background: #ffdfb0; font: 650 .92rem/1.5 system-ui, sans-serif; text-decoration: none; }
+    .collab-copy { color: #fff2dd; background: transparent; cursor: pointer; }
+    .collab-status:not(:empty) { margin-top: 6px; }
+    .workshop :is(summary, a, button):focus-visible { outline: 2px solid #ffe0af; outline-offset: 4px; }
+    @media (max-width: 620px) {
+      .workshop-hall { min-height: clamp(350px, calc(100svh - 146px), 670px); padding: 22px 20px; }
+      .workshop-art { object-position: 61% center; }
+      .workshop-hall::after { background: linear-gradient(0deg, #17120ff9, #17120f9e 31%, transparent 60%); }
     }
   </style>
 </head>
 <body class="services-page">
   <header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a href="index.html">首頁</a><a href="worlds.html">AI 世界</a><a href="works.html">作品</a><a href="learning.html">學習資源</a><a href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a aria-current="page" href="services.html">技術合作</a></nav></header>
-  <main class="collab-shell">
-    <section class="lab-split collab-hero" aria-labelledby="servicesTitle">
-      <div>
-        <h1 id="servicesTitle">從需求釐清到原型驗證</h1>
-        <p>聚焦 AI Agent、工作流程與數位原型。我們先釐清要解決的問題，再選一個可驗證的場景動手實作。</p>
-        <a class="lab-link" href="#project-contact">討論合作方向 <span aria-hidden="true">↓</span></a>
+  <main class="workshop">
+    <section class="workshop-hall" aria-labelledby="servicesTitle">
+      <img class="workshop-art" src="assets/campaign/collaboration-light-rail.webp" width="1536" height="1024" alt="" fetchpriority="high">
+      <div class="workshop-copy">
+        <h1 id="servicesTitle">共同試作</h1>
+        <p>從一個問題開始</p>
+        <details class="workshop-contact" id="project-contact">
+          <summary>一起創作 <span aria-hidden="true">↗</span></summary>
+          <section class="workshop-note" aria-labelledby="inquiryBriefTitle">
+            <h2 id="inquiryBriefTitle">怎麼開頭？</h2>
+            <p id="inquiry-brief">寄封信，簡單說說這三件事就好：</p>
+            <ol>
+              <li>你現在想做什麼？</li>
+              <li>目前卡在哪裡？</li>
+              <li>希望一起先試哪一步？</li>
+            </ol>
+            <div class="collab-actions">
+              <a class="collab-email" href="mailto:mm7382@gmail.com" data-static-mail>寫信給我</a>
+              <button class="collab-copy" type="button" id="copyContactAddress">複製信箱</button>
+            </div>
+            <p class="collab-status" id="copyContactStatus" role="status"></p>
+          </section>
+        </details>
       </div>
-      <img src="assets/campaign/prototype-complete.webp" width="1536" height="1024" alt="紅色紙帶上的網站與 App 原型">
     </section>
-    <div class="collab-layout">
-      <section class="collab-topics" aria-labelledby="servicesWhatTitle">
-        <h2 id="servicesWhatTitle">合作方向</h2>
-        <ul>
-          <li><h3>AI Agent 與流程自動化</h3><p>盤點資料與流程，找出可自動化的步驟，並保留人工確認點。</p></li>
-          <li><h3>App 與網站原型</h3><p>把核心功能做成可操作的原型，驗證使用流程與技術可行性。</p></li>
-          <li><h3>技術研究與驗證</h3><p>針對具體問題比較工具、模型與實作方式，記錄測試結果與限制。</p></li>
-        </ul>
-      </section>
-      <section class="collab-contact" id="project-contact" aria-labelledby="inquiryBriefTitle">
-        <h2 id="inquiryBriefTitle">怎麼開頭？</h2>
-        <p id="inquiry-brief">寄封信，簡單說說這三件事就好：</p>
-        <ol>
-          <li>你現在想做什麼？</li>
-          <li>目前卡在哪裡？</li>
-          <li>希望一起先試哪一步？</li>
-        </ol>
-        <div class="collab-actions">
-          <a class="collab-email" href="mailto:mm7382@gmail.com" data-static-mail>寫信給我</a>
-          <button class="collab-copy" type="button" id="copyContactAddress">複製信箱</button>
-        </div>
-        <p class="collab-status" id="copyContactStatus" role="status"></p>
-      </section>
-    </div>
   </main>
   <script>
+    function openContactFromLink() {
+      if (!['#project-contact', '#inquiry-brief'].includes(location.hash)) return;
+      const contact = document.getElementById('project-contact');
+      contact.open = true;
+      requestAnimationFrame(() => contact.scrollIntoView({ block: 'nearest' }));
+    }
+    addEventListener('hashchange', openContactFromLink);
+    openContactFromLink();
     document.getElementById('copyContactAddress').addEventListener('click', async () => {
       const status = document.getElementById('copyContactStatus');
       const address = new URL(document.querySelector('.collab-email').href).pathname;
