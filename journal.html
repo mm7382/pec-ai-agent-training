@@ -9,27 +9,203 @@
   <link rel="stylesheet" href="./journal.css?v=20260813-bilingual-2">
   <script src="./site-config.js?v=20260711-resource-library"></script>
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={"dictionary":{"AI 要怎麼真的走進一家公司？從燈塔專案談起":{"zh":"AI 要怎麼真的走進一家公司？從燈塔專案談起","en":"How does AI become part of a company? Start with a lighthouse project"},"看完商周訪談後，我從 CEO 和工程師兩個角度，想了一遍怎麼把個人省下的時間，變成公司量得到的成果。":{"zh":"看完商周訪談後，我從 CEO 和工程師兩個角度，想了一遍怎麼把個人省下的時間，變成公司量得到的成果。","en":"After watching the Business Weekly interview, I looked at how CEOs and engineers can turn time saved by individuals into results a company can measure."},"工作方法・訪談心得":{"zh":"工作方法・訪談心得","en":"Work Methods · Interview Reflections"},"岸邊燈塔與遠處的月亮":{"zh":"岸邊燈塔與遠處的月亮","en":"A coastal lighthouse and a distant moon"},"閱讀心得":{"zh":"閱讀心得","en":"Read the reflection"}},"paths":["/pec-ai-agent-training/journal-ai-transformation-lighthouse.html"]};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
-<link rel="stylesheet" href="campaign.css"></head>
+<style>[data-language-secondary]{display:none!important}</style><script>window.SitePageTranslations={"dictionary":{"AI 要怎麼真的走進一家公司？從燈塔專案談起":{"zh":"AI 要怎麼真的走進一家公司？從燈塔專案談起","en":"How does AI become part of a company? Start with a lighthouse project"},"看完商周訪談後，我從 CEO 和工程師兩個角度，想了一遍怎麼把個人省下的時間，變成公司量得到的成果。":{"zh":"看完商周訪談後，我從 CEO 和工程師兩個角度，想了一遍怎麼把個人省下的時間，變成公司量得到的成果。","en":"After watching the Business Weekly interview, I looked at how CEOs and engineers can turn time saved by individuals into results a company can measure."},"工作方法・訪談心得":{"zh":"工作方法・訪談心得","en":"Work Methods · Interview Reflections"},"岸邊燈塔與遠處的月亮":{"zh":"岸邊燈塔與遠處的月亮","en":"A coastal lighthouse and a distant moon"},"閱讀心得":{"zh":"閱讀心得","en":"Read the reflection"},"AI 要怎麼真的走進一家公司？":{"zh":"AI 要怎麼真的走進一家公司？","en":"How does AI become part of a company?"},"實作筆記":{"zh":"實作筆記","en":"Practice notes"},"全部文章":{"zh":"全部文章","en":"All articles"},"閱讀專題":{"zh":"閱讀專題","en":"Read the feature"},"目錄":{"zh":"目錄","en":"Contents"},"上一頁":{"zh":"上一頁","en":"Previous page"},"下一頁":{"zh":"下一頁","en":"Next page"}},"paths":["/pec-ai-agent-training/journal-ai-transformation-lighthouse.html"]};</script><script defer src="assets/site-languages.js?v=20261125"></script><link rel="stylesheet" href="sunlit.css?v=20261124b">
+<link rel="stylesheet" href="campaign.css">
+<style>
+  html.sunlit .journal-page {
+    --press-ink: #211d19;
+    --press-paper: #f2ddba;
+    --press-red: #ab2a17;
+    background: #f3e6ce;
+    color: var(--press-ink);
+  }
+  .journal-page .journal-shell {
+    width: min(100% - 48px, 1240px);
+    padding-top: 24px;
+  }
+  .journal-press {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto 1fr;
+    align-items: start;
+    min-height: clamp(514px, 48vw, 650px);
+    margin-inline: calc((100% - min(100vw - 24px, 1512px)) / 2);
+    overflow: hidden;
+    background: var(--press-paper);
+    color: var(--press-ink);
+    border: 1px solid #a38b70;
+    font-family: "Songti TC", "Noto Serif TC", "Noto Serif CJK TC", Georgia, serif;
+  }
+  .journal-press-art {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .journal-press-name {
+    justify-self: start;
+    background: var(--press-paper);
+    padding: clamp(18px, 3vw, 48px) clamp(20px, 4vw, 60px) 16px;
+  }
+  .journal-press-name p { margin: 0 0 4px; font-weight: 700; font-size: clamp(16px, 1.8vw, 25px); }
+  html.sunlit .journal-page .journal-press-name h1 {
+    margin: 0;
+    animation: none;
+    color: var(--press-ink);
+    font: 900 clamp(44px, 6.2vw, 100px)/1.03 "Songti TC", "Noto Serif TC", Georgia, serif;
+    letter-spacing: -.055em;
+  }
+  .journal-press-index {
+    justify-self: start;
+    align-self: start;
+    display: grid;
+    gap: 2px;
+    padding: 5px clamp(20px, 4vw, 60px) 15px;
+    background: var(--press-paper);
+    font-size: clamp(16px, 2vw, 25px);
+    font-weight: 750;
+  }
+  .journal-press-index a, .journal-press-title a, .journal-press-read { color: var(--press-ink); }
+  .journal-press-index a { min-height: 34px; width: fit-content; }
+  .journal-press-title {
+    align-self: center;
+    margin: 0;
+    background: #f5e3c6;
+    box-shadow: 0 4px 0 #36261942;
+    padding: .18em clamp(18px, 3.4vw, 52px) .25em;
+    font-weight: 900;
+    font-size: clamp(30px, 6.1vw, 95px);
+    line-height: 1.22;
+    letter-spacing: -.07em;
+    text-wrap: balance;
+  }
+  .journal-press-title a { text-decoration: none; }
+  .journal-press-read {
+    align-self: end;
+    justify-self: start;
+    margin: 28px clamp(20px, 4vw, 60px);
+    box-shadow: 0 0 0 7px var(--press-paper);
+    background: var(--press-paper);
+    padding: 7px 0;
+    font-weight: 750;
+    font-size: clamp(18px, 2.15vw, 30px);
+    text-underline-offset: .25em;
+    text-decoration-thickness: 2px;
+  }
+  .journal-press a:hover { color: var(--press-red); }
+  .journal-press a:focus-visible { outline: 2px solid var(--press-red); outline-offset: 4px; }
+  html[lang="en"] .journal-press-title { letter-spacing: -.045em; font-size: clamp(32px, 5.4vw, 84px); }
+  html.sunlit .journal-page .journal-feature {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 0;
+    min-height: 0;
+    margin: 22px 0;
+    border: 0;
+    border-block: 1px solid #46372a;
+    background: #f8ecd6;
+  }
+  html.sunlit .journal-page .journal-feature-copy { padding: clamp(12px, 1.6vw, 23px); }
+  html.sunlit .journal-page .journal-feature h2 { margin: 3px 0; font: 750 clamp(19px, 2.3vw, 32px)/1.2 "Songti TC", Georgia, serif; }
+  html.sunlit .journal-page .journal-feature-copy > p { margin-block: 5px; }
+  html.sunlit .journal-page .journal-feature-copy > a { margin-top: 4px; color: var(--press-red); }
+  .journal-page .journal-shell { padding-bottom: 24px; }
+  .journal-contents > h2 {
+    margin: 0;
+    padding: 14px 18px;
+    border-top: 4px solid var(--press-red);
+    background: #30241c url("./assets/journal/print-edition-cover.webp") right 32% / cover no-repeat;
+    color: var(--press-ink);
+    font-size: clamp(24px, 3vw, 39px);
+    position: relative;
+    isolation: isolate;
+  }
+  .journal-contents > h2::before { content: ""; position: absolute; z-index: -1; inset: 0; background: #f5e3c6; width: 30%; min-width: 110px; }
+  .journal-contents details {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #9d8367;
+    scroll-margin-top: 18px;
+    background: #f8ecd6;
+  }
+  .journal-contents summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 16px;
+    cursor: pointer;
+  }
+  .journal-contents summary::-webkit-details-marker { display: none; }
+  .journal-contents summary::after { content: ""; width: 8px; height: 8px; flex: 0 0 8px; border: solid var(--press-red); border-width: 0 2px 2px 0; transform: rotate(45deg); margin: -4px 2px 0; }
+  .journal-contents details[open] > summary::after { transform: rotate(225deg); margin-top: 4px; }
+  .journal-contents summary:hover, .journal-contents details[open] > summary { background: #eed5b2; }
+  .journal-contents summary h2 { margin: 0; font: 750 clamp(18px, 2.1vw, 27px)/1.35 "Songti TC", Georgia, serif; }
+  .journal-fold-body { padding: 0 16px 12px; border-left: 3px solid var(--press-red); }
+  .journal-fold-body :is(.journal-kicker, .journal-page-number, .journal-note-meta time) { color: var(--press-red); }
+  .journal-fold-body .journal-path-head, .journal-fold-body .journal-archive-heading { padding-top: 10px; }
+  .journal-fold-body .journal-path-list { margin-top: 12px; }
+  .journal-fold-body .journal-path-list a { padding-block: 9px 12px; }
+  .journal-fold-body .journal-path-list a::before { color: var(--press-red); }
+  html.sunlit .journal-fold-body .journal-note {
+    grid-template-columns: 76px minmax(0, 1fr) 24px;
+    gap: 5px 12px;
+    min-height: 0;
+    padding: 9px 0;
+    border-color: #ba9e7e;
+  }
+  .journal-fold-body .journal-note .lab-thumb { grid-row: span 2; aspect-ratio: 1.35; width: 100%; object-fit: cover; filter: saturate(.65); }
+  .journal-fold-body .journal-note-meta { grid-column: 2; display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: .72rem; }
+  .journal-fold-body .journal-note-meta br { display: none; }
+  .journal-fold-body .journal-note > div:last-of-type { grid-column: 2; }
+  .journal-fold-body .journal-note h3 { font: 700 clamp(16px, 2vw, 23px)/1.35 "Songti TC", Georgia, serif; }
+  .journal-fold-body .journal-note p { display: none; }
+  .journal-fold-body .journal-note .journal-note-arrow { display: block; grid-column: 3; grid-row: span 2; color: var(--press-red); }
+  html.sunlit .journal-fold-body .journal-note[hidden], .journal-pagination[hidden] { display: none; }
+  .journal-pagination { display: flex; align-items: center; justify-content: end; gap: 12px; padding-top: 10px; }
+  .journal-pagination button { width: 40px; height: 37px; border: 1px solid #9d8367; background: transparent; color: var(--press-ink); cursor: pointer; font-size: 19px; }
+  .journal-pagination button:disabled { opacity: .4; cursor: default; }
+  .journal-pagination button:not(:disabled):hover { background: #eed5b2; }
+  .journal-contents :is(summary, a, button):focus-visible { outline: 2px solid var(--press-red); outline-offset: 2px; }
+  .journal-page .journal-footer { margin-top: 18px; padding-top: 10px; }
+  @media (max-width: 600px) {
+    .journal-page .journal-shell { width: calc(100% - 32px); padding-top: 12px; }
+    .journal-press {
+      min-height: 510px;
+      grid-template-rows: auto 1fr auto auto;
+    }
+    .journal-press-art { object-position: 53% center; }
+    .journal-press-title { font-size: clamp(31px, 8.8vw, 48px); }
+    .journal-press-read { margin-block: 22px; }
+    html.sunlit .journal-page .journal-feature-copy > p { display: none; }
+    .journal-page .journal-footer { flex-direction: row; align-items: center; }
+  }
+</style>
+</head>
 <body class="journal-page"><header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a href="index.html">首頁</a><a href="worlds.html">AI 世界</a><a href="works.html">作品</a><a href="learning.html">學習資源</a><a aria-current="page" href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header>
   <main class="journal-shell">
-    <header class="journal-masthead">
-      <p class="journal-kicker">學習日誌</p>
-      <h1>學習日誌 <span class="journal-en" data-language-secondary="">學習日誌</span></h1>
-      <p class="journal-intro">記下我怎麼理解問題、試做工具，再把真正有效的方法留下來。<span class="journal-intro-en">記錄如何理解問題、試驗想法，並留下有效做法。</span></p>
+    <header class="journal-press" id="ai-transformation-lighthouse" aria-labelledby="journal-title">
+      <img class="journal-press-art" src="./assets/journal/print-edition-cover.webp" width="1536" height="1024" alt="" fetchpriority="high">
+      <div class="journal-press-name">
+        <p>Michael Agent Lab</p>
+        <h1 id="journal-title">學習日誌</h1>
+      </div>
+      <nav class="journal-press-index" aria-label="日誌分類 Journal categories">
+        <a href="#journal-path-ai-title">實作筆記</a>
+        <a href="#recentNotesTitle">全部文章</a>
+      </nav>
+      <h2 class="journal-press-title"><a href="https://mm7382.github.io/pec-ai-agent-training/journal-ai-transformation-lighthouse.html">AI 要怎麼真的走進一家公司？</a></h2>
+      <a class="journal-press-read" href="https://mm7382.github.io/pec-ai-agent-training/journal-ai-transformation-lighthouse.html">閱讀專題 <span aria-hidden="true">↗</span></a>
     </header>
 
-    <nav class="journal-categories" aria-label="日誌分類 Journal categories">
-      <a href="#learning-notes">學習札記 Learning Notes</a>
-      <a href="#work-methods">工作方法 Work Methods</a>
-      <a href="#tool-experiments">工具實驗 Tool Experiments</a>
-      <a href="#reflections">個人反思 Reflections</a>
-    </nav>
-
-    <article class="journal-feature" id="ai-transformation-lighthouse"><figure class="journal-feature-media"><img src="./assets/journal/ai-transformation-lighthouse.webp" width="1280" height="720" alt="岸邊燈塔與遠處的月亮" loading="lazy"></figure><div class="journal-feature-copy"><div class="journal-meta"><span>工作方法・訪談心得</span><time datetime="2026-11-27">2026.11.27</time></div><h2>AI 要怎麼真的走進一家公司？從燈塔專案談起</h2><p>看完商周訪談後，我從 CEO 和工程師兩個角度，想了一遍怎麼把個人省下的時間，變成公司量得到的成果。</p><a href="./journal-ai-transformation-lighthouse.html">閱讀心得 <span aria-hidden="true">→</span></a></div></article>
-
     <article class="journal-feature" id="learning-notes">
-      <figure class="journal-feature-media"><img src="./assets/journal/models-workflow.webp" alt="書桌上的文件與工作筆記示意" width="1672" height="941"></figure>
       <div class="journal-feature-copy">
         <div class="journal-meta"><span>工具實驗 Tool Experiment</span><time datetime="2026-08-20">2026.08.20</time></div>
         <h2>高價值的 RD 時間，不該消耗在料號、BOM 和 ECN<span class="journal-en" data-language-secondary="">高價值的研發時間，不該消耗在料號、物料清單與工程變更。</span></h2>
@@ -38,22 +214,31 @@
       </div>
     </article>
 
+    <section class="journal-contents" aria-labelledby="journal-contents-title">
+      <h2 id="journal-contents-title">目錄</h2>
 <!-- journal-path:ai:start -->
-<section class="journal-path" id="journal-path-ai" aria-labelledby="journal-path-ai-title">
-  <div class="journal-path-head"><p class="journal-kicker">閱讀路線 01</p><h2 id="journal-path-ai-title">AI Agent 實作與學習<span class="journal-en" lang="en" data-language-secondary="">AI 實作筆記</span></h2><p>從模型、工作流、工具實驗到安全檢查，依真實實作紀錄繼續閱讀。</p></div>
+<details class="journal-path" id="journal-path-ai" aria-labelledby="journal-path-ai-title" name="journal-contents"><summary><h2 id="journal-path-ai-title">AI Agent 實作與學習<span class="journal-en" lang="en" data-language-secondary="">AI 實作筆記</span></h2></summary>
+      <div class="journal-fold-body">
+  <div class="journal-path-head"><p class="journal-kicker">閱讀路線 01</p><p>從模型、工作流、工具實驗到安全檢查，依真實實作紀錄繼續閱讀。</p></div>
   <ol class="journal-path-list"><li><a href="./journal-ai-future-uncertainty.html"><strong>AI 會改變世界，但我們真的知道它會變成什麼樣嗎？</strong><span>從 Ilya Sutskever 與 Yoshua Bengio 的觀點，思考 AI 未來的不確定性，以及保留修正想法的能力。</span></a></li><li><a href="./journal-astra-pcb-layout.html"><strong>Agent 能檢查線路圖，那 電路板佈局 呢？</strong><span>從 Adom 的 Astra 電路板佈局 示範，思考工程師如何 審查 AI 提出的元件擺放與佈線方案。</span></a></li><li><a href="./journal-models-workflow.html"><strong>模型一直在換，但你的流程要站得住</strong><span>新模型來得很快；真正可以累積的，是量測任務、設定權限邊界與驗收結果的工作方法。</span></a></li><li><a href="./journal-api-key-security.html"><strong>API 金鑰 不是設定，是權限</strong><span>一次事件後的 30 分鐘 API 金鑰 安全盤點：找出憑證、輪替有疑慮的 key，並設好上限與通知。</span></a></li><li><a href="./journal-claude-codex-hooks.html"><strong>讓規則真的發生：Claude Code 與 Codex Hooks</strong><span>Hook 把反覆提醒 Agent 的工作，改成固定時機、固定範圍、固定回應的工作規則。</span></a></li><li><a href="./journal-ai-device-open-platform.html"><strong>下一代 AI 裝置，應該是一個能持續生長的平台</strong><span>AI 眼鏡、手錶與智慧家電的競爭，不只在硬體與內建功能，也在它是否能讓開發者與使用者持續擴充。</span></a></li><li><a href="./journal-message-integration-app.html"><strong>訊息整合 App</strong><span>把分散訊息集中處理，同時保留人工確認。</span></a></li><li><a href="./journal-personal-message-relay.html"><strong>私人訊息中繼站</strong><span>把跨平台訊息放回同一個工作脈絡。</span></a></li><li><a href="./journal-ai-code-review-depth.html"><strong>AI Code 審查深度</strong><span>AI 產生的程式碼，審查深度應跟著風險調整。</span></a></li><li><a href="./journal-voice-brief-agent.html"><strong>用語音 需求簡報 Agent</strong><span>從寫 提示詞 到用語音整理 Agent 上下文。</span></a></li><li><a href="./journal-ai-schematic-review.html"><strong>AI Agent 協助線路圖檢查</strong><span>讓 AI Agent 先處理線路圖重複檢查，再由 EE 判斷。</span></a></li><li><a href="./journal-public-learning-website.html"><strong>把學習整理成一個公開入口</strong><span>我想做的不是另一個資訊列表，而是把散落的 AI Agent 資料整理成能理解、比較，也能真正動手做的入口。</span></a></li><li><a href="./journal-one-brain-many-agents.html"><strong>共用知識，協作多個 Agent</strong><span>換一個 AI 工具，不應該等於重新介紹自己；記憶應該跟著人，而不是跟著聊天視窗消失。</span></a></li><li><a href="./journal-pageindex-rag.html"><strong>下一代 RAG，不只是更多 文字切塊</strong><span>大型知識庫搜尋不該只找到看起來相似的段落，而要能沿著文件結構找到真正相關的頁面與證據。</span></a></li><li><a href="./journal-plm-agent-for-rd.html"><strong>高價值的 RD 時間，不該消耗在料號、BOM 和 ECN</strong><span>保留既有 PLM，讓受控的 AI Agent 處理料號、BOM 與工程變更流程，減少 RD 的重複系統操作。</span></a></li></ol>
-</section>
+</div>
+    </details>
 <!-- journal-path:ai:end -->
 <!-- journal-path:engineering:start -->
-<section class="journal-path" id="journal-path-engineering" aria-labelledby="journal-path-engineering-title">
-  <div class="journal-path-head"><p class="journal-kicker">閱讀路線 02</p><h2 id="journal-path-engineering-title">工程思維與工作方法<span class="journal-en" lang="en" data-language-secondary="">工程思維與工作方法</span></h2><p>從系統工程、可靠性、專案取捨到工作溝通，看看這些方法如何形成 AI 實作的底層判斷。</p></div>
+<details class="journal-path" id="journal-path-engineering" aria-labelledby="journal-path-engineering-title" name="journal-contents"><summary><h2 id="journal-path-engineering-title">工程思維與工作方法<span class="journal-en" lang="en" data-language-secondary="">工程思維與工作方法</span></h2></summary>
+      <div class="journal-fold-body">
+  <div class="journal-path-head"><p class="journal-kicker">閱讀路線 02</p><p>從系統工程、可靠性、專案取捨到工作溝通，看看這些方法如何形成 AI 實作的底層判斷。</p></div>
   <ol class="journal-path-list"><li><a href="./journal-engineering-procurement.html"><strong>工程設計與採購現實的三角平衡</strong><span>最低報價不一定能製造；如果設計、價格與時效沒有一起看，工程與採購都會被流程卡住。</span></a></li><li><a href="./journal-ipc-test-toolkit.html"><strong>把 IPC 測試指令整理成一個工具箱</strong><span>好的測試工具會把散落指令變成一鍵執行、選單與 API，讓驗證從記憶工作變成可靠流程。</span></a></li><li><a href="./journal-dfmea-systems.html"><strong>把複雜需求拆成可執行的 DFMEA</strong><span>DFMEA 不只是填表，而是從客戶需求、系統邊界與功能結構，走到風險與驗證計畫的共同語言。</span></a></li><li><a href="./journal-waterproof-cable.html"><strong>帶纜線防水裝置的設計思考</strong><span>防水不是多加一個密封圈，而是讓外殼接面、溝槽、壓縮量與纜線通道共同形成可靠界面。</span></a></li><li><a href="./journal-teamwork-award.html"><strong>團隊的每個小成就，都值得被看見</strong><span>困難工作裡，真誠而具體的鼓勵不是裝飾，而是讓團隊願意繼續往前的推進力。</span></a></li><li><a href="./journal-project-triangle.html"><strong>專案管理裡，不可能同時最大化一切</strong><span>預算、時程與範圍之間永遠存在限制；成熟的管理不是假裝沒有取捨，而是把取捨變成明確決策。</span></a></li><li><a href="./journal-professional-communication.html"><strong>專業被質疑時，先把對話帶回證據</strong><span>冷靜、事實、傾聽與可執行方案，比立刻防衛更能建立信任，也更容易讓對話繼續。</span></a></li><li><a href="./journal-industrial-systems-engineer.html"><strong>系統工程師看的，不只是硬體規格</strong><span>一個工業電腦系統能不能長期成立，取決於需求、架構、風險、可靠性、散熱、成本、生產與維護是否被一起考慮。</span></a></li></ol>
-</section>
+</div>
+    </details>
 <!-- journal-path:engineering:end -->
-    <section class="journal-path" id="tool-experiments" aria-labelledby="recentToolExperiments"><div class="journal-path-head"><p class="journal-kicker">Tool Experiments</p><h2 id="recentToolExperiments">近期工具實驗</h2></div><ul class="journal-path-list"><li><a href="./journal-ai-world-lab-civilization-test.html"><strong>AI 自主世界日記：說好一起蓋屋，然後呢？</strong><span>從新芽世界、曙光世界到文明起源測試：亞當換路採到野果，夏娃搭成共用遮蔽處，但找水還沒解決。</span></a></li><li><a href="./journal-ai-world-lab-local-models.html"><strong>AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？</strong><span>我試了 gpt-oss 20B、千問 8B 和 9B。原本只想省下 API 費用，最後發現更難的是：模型成功回覆之後，角色能不能長時間做出有進展的決定？</span></a></li><li><a href="./journal-ai-world-lab-adam-eve-day15.html"><strong>AI 自主世界日記：下雨之後，亞當和夏娃怎麼活下去？</strong><span>從一次人工降雨，到亞當找不到水、夏娃獨自生活到第 15 天。我想知道：AI 說了要合作，接下來真的會做什麼？</span></a></li><li><a href="./journal-ai-world-lab.html"><strong>AI 自主世界：五個角色的七天，與亞當、夏娃的新開局</strong><span>記錄 AIWorldLab 的純文字模擬：從固定回合、五個角色的七日實驗，到用身體需求與事件推動的兩人世界。</span></a></li><li><a href="./journal-future-world-skybridge.html"><strong>未來世界空橋：畫面能前進之後，為什麼先暫停</strong><span>三個視角的試走版已能前進、返回，但連續畫質與手機驗收仍未達標。記下 11 月 8–12 日的嘗試與取捨。</span></a></li><li><a href="./journal-costume-photo-gemini.html"><strong>古裝留影：多版迭代，走到 Gemini 串接</strong><span>從照片與造型選擇，到 Gemini 串接，記下古裝 App 的進展，以及完整生成流程的驗證邊界。</span></a></li><li><a href="./journal-message-integration-app.html"><strong>訊息整合 App</strong><span>保留既有工具實驗紀錄。</span></a></li></ul></section>
-    <section class="journal-archive" id="recent-notes" aria-labelledby="recentNotesTitle">
-      <div class="journal-archive-heading"><p class="journal-kicker">全部筆記</p><h2 id="recentNotesTitle">全部紀錄<span class="journal-en" data-language-secondary="">全部紀錄</span></h2></div>
-      <div class="journal-note-list">
+    <details class="journal-path" id="tool-experiments" aria-labelledby="recentToolExperiments" name="journal-contents"><summary><h2 id="recentToolExperiments">近期工具實驗</h2></summary>
+      <div class="journal-fold-body"><div class="journal-path-head"><p class="journal-kicker">Tool Experiments</p></div><ul class="journal-path-list"><li><a href="./journal-ai-world-lab-civilization-test.html"><strong>AI 自主世界日記：說好一起蓋屋，然後呢？</strong><span>從新芽世界、曙光世界到文明起源測試：亞當換路採到野果，夏娃搭成共用遮蔽處，但找水還沒解決。</span></a></li><li><a href="./journal-ai-world-lab-local-models.html"><strong>AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？</strong><span>我試了 gpt-oss 20B、千問 8B 和 9B。原本只想省下 API 費用，最後發現更難的是：模型成功回覆之後，角色能不能長時間做出有進展的決定？</span></a></li><li><a href="./journal-ai-world-lab-adam-eve-day15.html"><strong>AI 自主世界日記：下雨之後，亞當和夏娃怎麼活下去？</strong><span>從一次人工降雨，到亞當找不到水、夏娃獨自生活到第 15 天。我想知道：AI 說了要合作，接下來真的會做什麼？</span></a></li><li><a href="./journal-ai-world-lab.html"><strong>AI 自主世界：五個角色的七天，與亞當、夏娃的新開局</strong><span>記錄 AIWorldLab 的純文字模擬：從固定回合、五個角色的七日實驗，到用身體需求與事件推動的兩人世界。</span></a></li><li><a href="./journal-future-world-skybridge.html"><strong>未來世界空橋：畫面能前進之後，為什麼先暫停</strong><span>三個視角的試走版已能前進、返回，但連續畫質與手機驗收仍未達標。記下 11 月 8–12 日的嘗試與取捨。</span></a></li><li><a href="./journal-costume-photo-gemini.html"><strong>古裝留影：多版迭代，走到 Gemini 串接</strong><span>從照片與造型選擇，到 Gemini 串接，記下古裝 App 的進展，以及完整生成流程的驗證邊界。</span></a></li><li><a href="./journal-message-integration-app.html"><strong>訊息整合 App</strong><span>保留既有工具實驗紀錄。</span></a></li></ul></div>
+    </details>
+    <details class="journal-archive" id="recent-notes" aria-labelledby="recentNotesTitle" name="journal-contents"><summary><h2 id="recentNotesTitle">全部紀錄<span class="journal-en" data-language-secondary="">全部紀錄</span></h2></summary>
+      <div class="journal-fold-body">
+
+<div class="journal-note-list">
 <a class="journal-note" href="./journal-pyramid-building.html"><img class="lab-thumb" loading="lazy" src="assets/campaign/egypt.webp" alt=""><div class="journal-note-meta"><span>工具實驗・開發心得</span><time datetime="2026-11-23">2026.11.23</time></div><div><h3>我等的那座金字塔</h3><p>石頭還在程式裡，金字塔還在回覆裡。我已經問了好幾次：現在可以看了嗎？</p></div><span class="journal-note-arrow" aria-hidden="true">→</span></a>
 <a class="journal-note" href="./journal-ai-world-lab-civilization-test.html"><img class="lab-thumb" loading="lazy" src="assets/journal/ai-world-nov20-civilization-test.webp" alt=""><div class="journal-note-meta"><span>工具實驗</span><time datetime="2026-11-20">2026.11.20</time></div><div><h3>AI 自主世界日記：說好一起蓋屋，然後呢？</h3><p>從新芽世界、曙光世界到文明起源測試：亞當換路採到野果，夏娃搭成共用遮蔽處，但找水還沒解決。</p></div><span class="journal-note-arrow" aria-hidden="true">&rarr;</span></a>
 <a class="journal-note" href="./journal-ai-world-lab-local-models.html"><img class="lab-thumb" loading="lazy" src="assets/journal/ai-world-local-mac.webp" alt=""><div class="journal-note-meta"><span>工具實驗</span><time datetime="2026-11-20">2026.11.20</time></div><div><h3>AI 自主世界日記：在 16 GB Mac mini 跑本地模型，我卡在哪裡？</h3><p>我試了 gpt-oss 20B、千問 8B 和 9B。原本只想省下 API 費用，最後發現更難的是：模型成功回覆之後，角色能不能長時間做出有進展的決定？</p></div><span class="journal-note-arrow" aria-hidden="true">&rarr;</span></a>
@@ -85,11 +270,65 @@
         <a class="journal-note" href="./journal-professional-communication.html"><img class="lab-thumb" loading="lazy" src="assets/journal/professional-communication.webp" alt=""><div class="journal-note-meta"><span>工作方法<br>工作方法</span><time datetime="2023-10-26">2023.10.26</time></div><div><h3>專業被質疑時，先把對話帶回證據<span class="journal-en" data-language-secondary="">專業遭質疑時，回到證據。</span></h3><p>冷靜、事實、傾聽與方案，比立刻防衛更有力量。<span class="journal-intro-en">冷靜、證據、傾聽與可行方案能建立信任。</span></p></div><span class="journal-note-arrow">→</span></a>
         <a class="journal-note" href="./journal-industrial-systems-engineer.html"><img class="lab-thumb" loading="lazy" src="assets/journal/industrial-systems-engineer.webp" alt=""><div class="journal-note-meta"><span>學習札記<br>學習札記</span><time datetime="2023-09-16">2023.09.16</time></div><div><h3>系統工程師看的，不只是硬體規格<span class="journal-en" data-language-secondary="">系統工程師看見的不只是硬體規格。</span></h3><p>需求、架構、風險、可靠性、散熱、成本與維護必須一起考慮。<span class="journal-intro-en">需求、風險、可靠性、成本與維護應一起考慮。</span></p></div><span class="journal-note-arrow">→</span></a>
       </div>
+        <nav class="journal-pagination" aria-label="全部文章" hidden>
+          <button type="button" data-page-step="-1" aria-label="上一頁"><span aria-hidden="true">←</span></button>
+          <span class="journal-page-number" role="status"></span>
+          <button type="button" data-page-step="1" aria-label="下一頁"><span aria-hidden="true">→</span></button>
+        </nav>
+      </div>
+    </details>
+
+    <details class="journal-empty-category" id="reflections" aria-labelledby="reflectionsTitle" name="journal-contents"><summary><h2 id="reflectionsTitle">個人反思 <span class="journal-en" data-language-secondary="">反思札記</span></h2></summary>
+      <div class="journal-fold-body"><p class="journal-kicker">個人反思</p><p>學習不只留下結論，也留下我如何改變做法。<span class="journal-intro-en">學習不只記下結論，也記錄做法的改變。</span></p><p><a href="./journal-apps-after-launch.html">App 上架之後：下載還不理想，仍持續更新</a></p></div>
+    </details>
     </section>
 
-    <section class="journal-empty-category" id="reflections" aria-labelledby="reflectionsTitle"><p class="journal-kicker">個人反思</p><h2 id="reflectionsTitle">個人反思 <span class="journal-en" data-language-secondary="">反思札記</span></h2><p>學習不只留下結論，也留下我如何改變做法。<span class="journal-intro-en">學習不只記下結論，也記錄做法的改變。</span></p><p><a href="./journal-apps-after-launch.html">App 上架之後：下載還不理想，仍持續更新</a></p></section>
     <footer class="journal-footer"><p>持續記錄 AI 與工程實作的完整筆記。</p><a href="./privacy.html">隱私說明 Privacy</a></footer>
   </main>
+  <script>
+    (() => {
+      const archive = document.querySelector('#recent-notes');
+      const entries = [...archive.querySelectorAll('.journal-note')];
+      const pager = archive.querySelector('.journal-pagination');
+      const [previous, next] = pager.querySelectorAll('button');
+      const pageNumber = pager.querySelector('.journal-page-number');
+      const pageSize = 6;
+      const lastPage = Math.max(0, Math.ceil(entries.length / pageSize) - 1);
+      let page = 0;
+
+      function showPage(index) {
+        page = Math.min(lastPage, Math.max(0, index));
+        entries.forEach((entry, i) => { entry.hidden = Math.floor(i / pageSize) !== page; });
+        pageNumber.textContent = `${page + 1} / ${lastPage + 1}`;
+        previous.disabled = page === 0;
+        next.disabled = page === lastPage;
+      }
+
+      function followSectionLink() {
+        let target;
+        try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
+        catch { return; }
+        const section = target?.closest('.journal-contents details');
+        if (!section) return;
+        if (section === archive) {
+          const index = entries.indexOf(target.closest('.journal-note'));
+          if (index >= 0) showPage(Math.floor(index / pageSize));
+        }
+        section.open = true;
+        requestAnimationFrame(() => target.scrollIntoView({block: 'start'}));
+      }
+
+      previous.addEventListener('click', () => showPage(page - 1));
+      next.addEventListener('click', () => showPage(page + 1));
+      document.querySelector('.journal-press-index').addEventListener('click', (event) => {
+        if (event.target.closest('a')?.hash === location.hash) followSectionLink();
+      });
+      pager.hidden = lastPage === 0;
+      showPage(0);
+      addEventListener('hashchange', followSectionLink);
+      followSectionLink();
+    })();
+  </script>
   <script src="./tutorial-gate.js?v=20261124b"></script>
 </body>
 </html>

@@ -104,7 +104,7 @@
     worlds.textContent = "AI 世界";
     const services = document.createElement("a");
     services.href = `${prefix}services.html`;
-    services.textContent = "合作服務";
+    services.textContent = "技術合作";
     const returning = document.createElement("a");
     returning.href = "https://mm7382.github.io/future-world/";
     returning.textContent = "回來以後";

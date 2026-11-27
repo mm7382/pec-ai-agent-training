@@ -23,9 +23,32 @@
       "30 天入門": { zh: "30 天入門", en: "Get started in 30 days" },
       "最新教材": { zh: "最新教材", en: "Latest lessons" },
       "AI 學習雷達": { zh: "AI 學習雷達", en: "AI Learning Radar" },
+      "使用與著作權說明": { zh: "使用與著作權說明", en: "Copyright and privacy" },
       "教材目錄": { zh: "教材目錄", en: "Lesson catalog" }
     } };
   </script>
+  <style>
+    .reading-room-page .reading-hero { min-height: clamp(190px, 25vw, 320px); padding: clamp(16px, 3.5vw, 44px) 12px 18px; gap: 16px; }
+    html.sunlit .reading-room-page .reading-hero h1 { font-size: clamp(2rem, 5.9vw, 4.8rem); animation: none; }
+    .reading-room-page .reading-tasks { padding-block: 16px 9px; }
+    .reading-room-page .reading-tasks h2 { margin: 0 0 12px; font-size: clamp(1.1rem, 3vw, 1.85rem); }
+    .reading-room-page .reading-task-links { gap: 8px; }
+    .reading-room-page .reading-task-links a { min-height: 42px; padding: 5px 8px; }
+    .reading-room-page .reading-shortcuts { margin-top: 12px; padding-block: 7px; gap: 5px 12px; }
+    .reading-room-page .reading-shortcuts a { padding: 4px 10px; font-size: 1rem; }
+    .reading-room-page .reading-shortcuts a[aria-expanded=true] { background: #24353f; color: #fff0d1; text-decoration: none; }
+    .reading-room-page .reading-content, .reading-room-page .reading-library-stack { display: block; }
+    .reading-room-page .reading-panel[hidden] { display: none; }
+    .reading-room-page .reading-panel { padding: 12px 15px; }
+    .reading-room-page #tutorialGrid { max-height: min(50vh, 420px); overflow-y: auto; padding: 4px 6px 6px 4px; }
+    .reading-room-page #featureEntryGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 9px; }
+    .reading-room-page .reading-footer { margin-top: 10px; padding-block: 8px; }
+    .reading-room-page .reading-footer summary { cursor: pointer; }
+    @media(max-width: 620px) {
+      .reading-room-page .reading-task-links { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .reading-room-page .reading-search { width: min(100%, 34rem); }
+    }
+  </style>
 </head>
 <body class="reading-room-page"><header class="lab-header"><a href="index.html" class="lab-brand">Michael Agent Lab</a><nav aria-label="主要分頁"><a href="index.html">首頁</a><a href="worlds.html">AI 世界</a><a href="works.html">作品</a><a aria-current="page" href="learning.html">學習資源</a><a href="journal.html">學習日誌</a><a href="about.html">關於本站</a><a href="services.html">合作服務</a></nav></header>
   <main class="reading-room">
@@ -46,8 +69,9 @@
         <a href="pec-training/ai-30-day-learning-path.html">30 天入門 <span aria-hidden="true">→</span></a>
       </div>
       <div class="reading-shortcuts">
-        <a href="#reading-latest">最新教材 <span aria-hidden="true">→</span></a>
-        <a href="#learningRadar">AI 學習雷達 <span aria-hidden="true">→</span></a>
+        <a href="#reading-latest" aria-controls="reading-latest">最新教材 <span aria-hidden="true">→</span></a>
+        <a href="#reading-catalog" aria-controls="reading-catalog">教材目錄 <span aria-hidden="true">→</span></a>
+        <a href="#learningRadar" aria-controls="learningRadar">AI 學習雷達 <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -72,7 +96,7 @@
             <span id="resultCount">載入中...</span>
             <button type="button" id="clearFiltersButton">清除篩選</button>
           </div>
-          <div class="card-grid" id="tutorialGrid" aria-label="教材卡片"></div>
+          <div class="card-grid" id="tutorialGrid" tabindex="0" role="region" aria-label="教材卡片"></div>
           <p class="empty-state" id="emptyState" hidden>找不到符合的教材。換個關鍵字，或先清除分類篩選。</p>
         </section>
       </div>
@@ -83,16 +107,43 @@
       </section>
     </div>
 
-    <footer class="reading-footer reading-frame" aria-label="使用與著作權說明">
+    <footer class="reading-footer reading-frame">
+      <details><summary>使用與著作權說明</summary>
       <p><strong>著作權：</strong>教材內容、分類整理與教學編排由 Michael Agent Lab 製作與維護。除原始品牌與第三方資料來源外，未經同意請勿轉載、改作或商用。</p>
       <p><strong>隱私：</strong>網站僅用匿名流量分析了解熱門頁面、來源與互動趨勢；留言 / 討論只處理你主動送出的內容。</p>
+      </details>
     </footer>
   </main>
   <script>
-    document.getElementById("readingSearch").addEventListener("submit", (event) => {
-      event.preventDefault();
-      document.getElementById("reading-catalog-title").focus();
-    });
+    (() => {
+      const links = [...document.querySelectorAll(".reading-shortcuts a[aria-controls]")];
+      const panels = links.map(link => document.getElementById(link.getAttribute("aria-controls")));
+
+      function showPanel(id) {
+        panels.forEach((panel, index) => {
+          const selected = panel.id === id;
+          panel.hidden = !selected;
+          links[index].setAttribute("aria-expanded", String(selected));
+        });
+      }
+
+      function followHash() {
+        const id = location.hash.slice(1);
+        if (!id || panels.some(panel => panel.id === id)) showPanel(id);
+      }
+
+      links.forEach(link => link.addEventListener("click", () => {
+        showPanel(link.getAttribute("aria-controls"));
+      }));
+      document.getElementById("readingSearch").addEventListener("submit", (event) => {
+        event.preventDefault();
+        showPanel("reading-catalog");
+        document.getElementById("reading-catalog-title").focus();
+      });
+      addEventListener("hashchange", followHash);
+      showPanel("");
+      followHash();
+    })();
   </script>
 
   <script src="./learning-path.js?v=20260711-resource-library"></script>
