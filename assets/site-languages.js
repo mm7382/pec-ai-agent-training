@@ -24,6 +24,17 @@ function translated(original){const s=normalize(original);if(current==='en'){if(
  for(const t of templates){const m=s.match(t.re);if(!m)continue;let out=current==='en'?t.p.en:t.p.zh;t.tokens.forEach((token,i)=>{let capture=m[i+1];if(current==='en'&&!/\b(?:record|friend|own|from|to|saved|profile|person)\b|^\$?\{(?:name|source|target|firstName|secondName|nickname)\}$/i.test(token))capture=captureText(capture);out=out.split(token).join(capture)});if(normalize(out)!==s)return out;}
  if(current==='en'){if(calendarText(s)!==s)return calendarText(s);if(domain.has(s))return domain.get(s);if(s.endsWith('位')&&domain.has(s.slice(0,-1)))return domain.get(s.slice(0,-1))+' position';if(domainOnly?.test(s)&&domainRE)return s.replace(domainRE,m=>domain.get(m));let m=s.match(/^(\d{4}\/\d{2}\/\d{2} · )(.*)$/);if(m&&pairs.has(m[2]))return m[1]+pairs.get(m[2]).en;m=s.match(/^顯示 (\d+) \/ (\d+) 份教材$/);if(m)return `Showing ${m[1]} of ${m[2]} guides`;m=s.match(/^(\d+) 份教材$/);if(m)return `${m[1]} guides`;m=s.match(/^第\s*(\d+)\s*(卦|爻)(.*)$/);if(m)return `${m[2]==='卦'?'Hexagram':'Line'} ${m[1]}${translated(m[3])}`;}
  return original;}
+function addReturningLink(root) {
+ for (const nav of root.querySelectorAll('.lab-header > nav:not([data-language-control])')) {
+   const works = nav.querySelector('a[href="works.html"], a[href^="works.html?"], a[href="./works.html"], a[href^="./works.html?"]');
+   if (!works || nav.querySelector('[data-returning-link]')) continue;
+   const link = document.createElement('a');
+   link.dataset.returningLink = '';
+   link.href = 'https://mm7382.github.io/future-world/';
+   link.textContent = '回來以後';
+   works.after(link);
+ }
+}
 function placeLanguageBar(bar) {
  const header = document.querySelector('.lab-header, .training-site-nav');
  if (header) {
@@ -31,7 +42,7 @@ function placeLanguageBar(bar) {
  } else if (document.body.firstElementChild !== bar) document.body.prepend(bar);
 }
 function apply(root=document.body){if(!root||applying)return;applying=true;observer?.disconnect();
- try{const bar=document.querySelector('.site-language-bar');if(bar)placeLanguageBar(bar);
+ try{addReturningLink(root);const bar=document.querySelector('.site-language-bar');if(bar)placeLanguageBar(bar);
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while((n=walker.nextNode())){if(skip(n.parentElement)||!normalize(n.nodeValue))continue;let p=textMemory.get(n);if(!p||n.nodeValue!==p.last){p={source:n.nodeValue,last:n.nodeValue};textMemory.set(n,p)}let val=translated(p.source);if(current==='en'&&normalize(val)&&!n.parentElement.closest('pre'))val=' '+normalize(val)+' ';if(n.nodeValue!==val)n.nodeValue=val;p.last=val;}
  for(const el of [...(root.nodeType===1?[root]:[]),...root.querySelectorAll('[alt],[aria-label],[placeholder],[title]')]){if(el.closest('script,style,code,pre,[data-language-control],[data-language-secondary],[data-user-content]'))continue;let saved=attrMemory.get(el);if(!saved){saved={};attrMemory.set(el,saved)}for(const a of ['alt','aria-label','placeholder','title']){if(!el.hasAttribute(a))continue;let p=saved[a],s=el.getAttribute(a);if(!p||s!==p.last)p=saved[a]={source:s,last:s};const v=translated(p.source);if(s!==v)el.setAttribute(a,v);p.last=v;}}
  for(const el of document.querySelectorAll('img[src],a[href]')){const at=el.tagName==='IMG'?'src':'href';const s=el.getAttribute(at);let o=el.dataset.zhAsset;if(!o){if(!IMAGE_EN[s])continue;o=el.dataset.zhAsset=s}const v=current==='en'?IMAGE_EN[o]:o;if(s!==v)el.setAttribute(at,v)}

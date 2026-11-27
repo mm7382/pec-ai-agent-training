@@ -105,7 +105,10 @@
     const services = document.createElement("a");
     services.href = `${prefix}services.html`;
     services.textContent = "合作服務";
-    primary.append(home, worlds, works, learning, journal, about, services, explore);
+    const returning = document.createElement("a");
+    returning.href = "https://mm7382.github.io/future-world/";
+    returning.textContent = "回來以後";
+    primary.append(home, worlds, works, returning, learning, journal, about, services, explore);
 
     nav.append(brand, primary);
 
