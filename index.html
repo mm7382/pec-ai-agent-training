@@ -173,7 +173,7 @@
         </button>
 
       </div>
-      <video id="site-tour-video" class="tour-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="site-tour-title"><source src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-google-flow-site-opening.mp4" type="video/mp4"></video>
+      <video id="site-tour-video" class="tour-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="site-tour-title"><source src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-future-lab-opening.mp4" type="video/mp4"></video>
       <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，請再點一次「播放導覽」。</span><span lang="en">The video could not play. Tap “Play tour” to retry.</span></p>
     </section>
     <section class="cabinet-app">
@@ -245,9 +245,10 @@
         video.addEventListener('error',showError);
         video.querySelector('source').addEventListener('error',showError);
         if(video.error)showError();
+        if(!reduced.matches&&!document.hidden)start(false);
         if('IntersectionObserver' in window)new IntersectionObserver(entries=>{
           if(manual||!video.muted)return;
-          if(entries.some(entry=>entry.isIntersecting)){if(!reduced.matches&&!video.ended)start(false);}
+          if(entries.some(entry=>entry.isIntersecting)){if(!reduced.matches&&!document.hidden&&video.paused&&!video.ended)start(false);}
           else if(!video.paused)video.pause();
         },{threshold:.25}).observe(video);
       })();
