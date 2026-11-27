@@ -186,7 +186,7 @@
     const response = await fetch(config.dataUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`無法載入 ${config.title || "資料庫"}`);
     state.data = await response.json();
-    document.title = `${state.data.title || config.title} - Michael AI Agent Lab`;
+    document.title = `${state.data.title || config.title} - Future Lab`;
     renderMeta();
     renderFilters();
     renderCards();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>把瀏覽器工作交給 Agent：ChatGPT Chrome 實作 - Michael Agent Lab</title>
+  <title>把瀏覽器工作交給 Agent：ChatGPT Chrome 實作 - 未來實驗室</title>
   <meta name="description" content="分清楚正式 App、Chrome 擴充功能與內建瀏覽器的使用情境，從跨頁整理與草稿工作流開始，建立每一步都保留人工核准權的瀏覽器協作方式。">
   <script src="../site-config.js?v=20260827-browser"></script>
   <style>
@@ -11,11 +11,11 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/d7dd870fd24e5379.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script><link rel="stylesheet" href="../sunlit.css?v=20261124b">
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/d7dd870fd24e5379.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261127-future-lab"></script><link rel="stylesheet" href="../sunlit.css?v=20261124b">
 </head>
 <body>
   <main class="page">
-    <header class="topbar"><strong class="brand">Michael Agent Lab</strong><span class="badge">公開教學・2026.08.27</span></header>
+    <header class="topbar"><strong class="brand">未來實驗室</strong><span class="badge">公開教學・2026.08.27</span></header>
     <section class="hero"><div class="hero-copy"><p class="eyebrow">瀏覽器工作流程／Agent</p><h1>把瀏覽器裡的<br>雜事，交給 代理。</h1><p class="lead">當工作需要沿用已登入的網站、開著的分頁與瀏覽器擴充功能時，ChatGPT in Chrome 能協助完成查找、整理與跨頁準備。真正重要的不是讓它代替你按下所有按鈕，而是把工作切在正確的人工關卡之前。</p><p class="hero-note"><b>核心原則：</b>讓 代理 蒐集、比對、填寫草稿；寄送、發布、刪除、付款與對外承諾，永遠停在最後確認畫面。</p></div><aside class="hero-visual" aria-label="瀏覽器任務工作模型"><p class="flow-title">先定義任務，再決定它可以走到哪一步。</p><div class="flow"><div class="flow-step"><b class="flow-num">1</b><strong>準備</strong><span>帳號與範圍</span></div><div class="arrow"></div><div class="flow-step"><b class="flow-num">2</b><strong>研究</strong><span>跨頁蒐集</span></div><div class="arrow"></div><div class="flow-step"><b class="flow-num">3</b><strong>草擬</strong><span>整理成草稿</span></div><div class="arrow"></div><div class="flow-step"><b class="flow-num">4</b><strong>核准</strong><span>人工最後確認</span></div></div></aside></section>
     <div class="facts"><div class="fact"><b>沿用現有環境</b><span>適合需要既有 Chrome Profile、登入狀態、開啟分頁或已安裝擴充功能的任務。</span></div><div class="fact"><b>跨頁協作</b><span>把查資料、比較內容、建立文件與準備草稿拆成可檢視的步驟。</span></div><div class="fact"><b>權限先於效率</b><span>網站存取、上傳下載與敏感動作都要逐次確認；不要把帳密貼進對話。</span></div></div>
     <section><div class="section-head"><div><p class="section-label">決策圖</p><h2>先選對入口，<br>再談自動化。</h2></div><p>三種瀏覽器工作方式的差別，不在誰比較聰明，而在它使用哪一個瀏覽器環境、能否沿用既有登入狀態，以及你希望隔離到什麼程度。</p></div><div class="decision"><article><span class="num">01／已連接的應用程式</span><h3>有正式 App 或 API</h3><p>若服務已有官方 App、Connector 或 API，優先使用結構化連接。資料範圍較清楚，也比模擬點擊更容易維護。</p><div class="choose"><b>適合：</b>固定資料查詢、可重複的讀寫流程、需要權限與紀錄的工作。</div></article><article><span class="num">02／Chrome 擴充功能</span><h3>要沿用現在的 Chrome</h3><p>當任務需要你已登入的帳號、正在開的網站、現有分頁或 Chrome 擴充功能時，使用 Chrome 擴充功能較自然。</p><div class="choose"><b>適合：</b>跨網站查找、彙整、填寫草稿，以及沒有正式整合入口的網頁工作。</div></article><article><span class="num">03／內建瀏覽器</span><h3>要隔離一個任務</h3><p>ChatGPT 桌面 App 的內建瀏覽器有自己的瀏覽狀態。需要本機測試、公開資料查找，或想和日常 Chrome 分開時較適合。</p><div class="choose"><b>適合：</b>獨立研究、測試流程、想降低與私人分頁互相干擾的任務。</div></article></div></section>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hook 實戰：讓規則真的發生 - Michael Agent Lab</title>
+  <title>Hook 實戰：讓規則真的發生 - 未來實驗室</title>
   <meta name="description" content="把 Claude Code 與 Codex 的 Hook 拆成事件、範圍、處理與停止規則，整理 15 個安全可落地的情境，讓常被遺忘的邊界變成可驗證的工作流。">
   <script src="../site-config.js?v=20260818-hooks"></script>
   <style>
@@ -16,11 +16,11 @@
   </style>
   <link rel="stylesheet" href="../lesson-related.css?v=20261024">
 <script defer src="/assets/site-analytics.js?v=20261030"></script>
-<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/fd62bbaf349c1d37.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261102b"></script><link rel="stylesheet" href="../sunlit.css?v=20261124b">
+<script>(()=>{let l='zh-Hant';try{l=(new URL(location.href).searchParams.get('lang')||localStorage.getItem('mal.siteLanguage.v1'))==='en'?'en':'zh-Hant'}catch{}document.documentElement.lang=l;const r=null;if(r&&location.pathname!==r[l]&&location.pathname!==r[l]+'index.html'){const u=new URL(location.href);u.pathname=r[l];u.searchParams.set('lang',l);location.replace(u.href)}})();</script><style>[data-language-secondary]{display:none!important}</style><script defer src="/assets/i18n-pages/fd62bbaf349c1d37.js?v=20261102b"></script><script defer src="/assets/site-languages.js?v=20261127-future-lab"></script><link rel="stylesheet" href="../sunlit.css?v=20261124b">
 </head>
 <body>
   <main class="page">
-    <header class="topbar"><strong class="brand">Michael Agent Lab</strong><span class="draft">公開教學・2026.08.18</span></header>
+    <header class="topbar"><strong class="brand">未來實驗室</strong><span class="draft">公開教學・2026.08.18</span></header>
     <section class="hero"><div class="hero-copy"><p class="eyebrow">Agent 工作流程／掛鉤</p><h1>讓規則<br>真的發生。</h1><p class="lead">掛鉤 把反覆提醒 代理 的工作，改成固定時機、固定範圍、固定回應的系統規則。它不取代人，而是把容易忘記的邊界守住。</p><p class="hero-note"><b>這份實作採安全預設：</b>不自動刪除、提交、發布或傳送資料；每個阻擋與提醒都能被檢查、停用與修改。</p></div><aside class="hero-visual" aria-label="Hook 工作模型"><p class="flow-title">每一個 掛鉤，都應該先回答四件事。</p><div class="flow"><div class="flow-step"><b class="flow-num">1</b><strong>事件</strong><span>什麼時候發生</span></div><div class="arrow"></div><div class="flow-step"><b class="flow-num">2</b><strong>比對條件</strong><span>哪些情況才跑</span></div><div class="arrow"></div><div class="flow-step"><b class="flow-num">3</b><strong>處理程序</strong><span>要檢查或回應什麼</span></div><div class="arrow"></div><div class="flow-step"><b class="flow-num">4</b><strong>停止規則</strong><span>何時放行或交給人</span></div></div></aside></section>
     <div class="facts"><div class="fact"><b>確定性</b><span>規則被觸發就會執行，不依模型是否剛好記得。</span></div><div class="fact"><b>窄範圍</b><span>用 比對條件 限制時機，避免每個動作都被慢檢查拖住。</span></div><div class="fact"><b>可回復</b><span>先用提醒與阻擋，不做自動修復；有問題可直接停用。</span></div></div>
     <figure class="editorial-cover"><img src="../assets/hooks-editorial-cover.png" alt="筆記本上以箭頭、空白方框與核取記號呈現 Hook 工作流程的示意圖"></figure>
