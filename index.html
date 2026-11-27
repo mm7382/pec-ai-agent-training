@@ -36,8 +36,12 @@
       border-radius:3px;background:linear-gradient(90deg,#4c371d,#c7a562,#5d4829);
     }
     #site-tour::before {top:12%} #site-tour::after {bottom:12%}
-    #site-tour .tour-video {order:-1;grid-column:1/-1;display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#09101a;border:2px solid #a88b5f;border-radius:6px}
+    #site-tour .tour-video {box-sizing:border-box;min-width:0;order:-1;grid-column:1/-1;display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#09101a;border:2px solid #a88b5f;border-radius:6px}
     #site-tour h2 {margin:0;font:500 1rem Georgia,serif}
+    #site-tour .tour-actions {display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.4rem;min-width:0}
+    #site-tour .tour-actions button {min-height:44px;padding:.45rem .7rem;border:1px solid #bba373;border-radius:.5rem}
+    #site-tour button:focus-visible {outline:2px solid #ecc989;outline-offset:2px}
+    #site-tour [data-play][aria-pressed="true"] [data-start],#site-tour [data-play][aria-pressed="false"] [data-pause]{display:none!important}
     #site-tour button {min-height:40px;border:0;background:transparent;color:inherit;cursor:pointer}
     #site-tour [data-video-error] {grid-column:1/-1}
     #site-tour button [data-on],#site-tour button[aria-pressed="true"] [data-off]{display:none!important}
@@ -140,7 +144,15 @@
     }
     @media(max-width:620px) {
       .cabinet {grid-template-columns:minmax(0,1fr);}
-      #site-tour {padding:clamp(100px,34vw,205px) 1rem 1.4rem;}
+      #site-tour {padding:clamp(54px,16vw,92px) .85rem 1.15rem;}
+      #site-tour .tour-actions {justify-content:flex-start;}
+      .cinema .lab-header {grid-template-columns:minmax(0,1fr) auto;gap:.45rem .65rem;padding:.65rem .85rem;}
+      .cinema .lab-header nav:not([data-language-control]) {min-width:0;gap:.25rem .75rem;}
+      .cinema .lab-header nav:not([data-language-control]) a {font-size:.86rem;line-height:1.7;overflow-wrap:anywhere;}
+      .cabinet-screens {width:100%;gap:.5rem;}
+      .cabinet-screens img {box-sizing:border-box;width:calc(50% - .25rem);max-width:126px;min-width:0;height:auto;object-fit:contain;}
+      .cabinet-world-frame,.cabinet-caption {min-width:0;}
+      .cabinet-drawer span {overflow-wrap:anywhere;}
       .cabinet-app {min-height:300px;padding:1.25rem 1rem;}
       .cabinet-drawer {min-height:120px;flex-wrap:wrap;gap:.4rem .65rem;}
     }
@@ -151,14 +163,18 @@
     <section id="site-tour" aria-labelledby="site-tour-title">
       <h2 id="site-tour-title"><span lang="zh-Hant">Lucy 導覽</span><span lang="en">Lucy’s tour</span></h2>
       <div class="tour-actions">
-        <button type="button" aria-pressed="false" aria-controls="site-tour-video" hidden>
+        <button type="button" data-play aria-pressed="false" aria-controls="site-tour-video" hidden>
+          <span data-start><span lang="zh-Hant">播放導覽</span><span lang="en">Play tour</span></span>
+          <span data-pause><span lang="zh-Hant">暫停</span><span lang="en">Pause</span></span>
+        </button>
+        <button type="button" data-sound aria-pressed="false" aria-controls="site-tour-video" hidden>
           <span data-off><span aria-hidden="true">♪ </span><span lang="zh-Hant">開啟聲音</span><span lang="en">Turn on sound</span></span>
           <span data-on><span lang="zh-Hant">關閉聲音</span><span lang="en">Mute</span></span>
         </button>
 
       </div>
-      <video id="site-tour-video" class="tour-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="site-tour-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-google-flow-site-opening.mp4"></video>
-      <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，請重新整理再試一次。</span><span lang="en">The video could not play. Please refresh and try again.</span></p>
+      <video id="site-tour-video" class="tour-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="site-tour-title"><source src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/lucy-google-flow-site-opening.mp4" type="video/mp4"></video>
+      <p class="tour-note" role="status" data-video-error hidden><span lang="zh-Hant">影片暫時無法播放，請再點一次「播放導覽」。</span><span lang="en">The video could not play. Tap “Play tour” to retry.</span></p>
     </section>
     <section class="cabinet-app">
       <div class="cabinet-caption">
@@ -186,29 +202,52 @@
     <script>
       (() => {
         const section=document.getElementById('site-tour');
-        const button=section.querySelector('button');
         const video=document.getElementById('site-tour-video');
+        const playButton=section.querySelector('[data-play]');
+        const soundButton=section.querySelector('[data-sound]');
+        const message=section.querySelector('[data-video-error]');
         const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-        let manual=false;
-        button.hidden=false;
-        const sync=()=>button.setAttribute('aria-pressed',String(!video.muted&&video.volume>0));
-        const play=()=>video.play().catch(()=>{});
-        button.addEventListener('click',()=>{
+        let manual=false, sourceFailed=false;
+        video.defaultMuted=true;
+        video.muted=true;
+        playButton.hidden=false;
+        soundButton.hidden=false;
+        const sync=()=>{
+          playButton.setAttribute('aria-pressed',String(!video.paused&&!video.ended));
+          soundButton.setAttribute('aria-pressed',String(!video.muted&&video.volume>0));
+        };
+        const start=(explicit)=>{
+          if(explicit){
+            message.hidden=true;
+            if(sourceFailed||video.error||video.networkState===3){sourceFailed=false;video.load();}
+            if(video.ended)video.currentTime=0;
+          }
+          const playback=video.play();
+          playback?.catch(error=>{if(explicit&&error.name!=='AbortError')message.hidden=false;});
+        };
+        playButton.addEventListener('click',()=>{
+          manual=true;
+          if(!video.paused&&!video.ended){video.pause();return;}
+          start(true);
+        });
+        soundButton.addEventListener('click',()=>{
           manual=true;
           if(!video.muted&&video.volume>0){video.muted=true;sync();return;}
           video.muted=false;
           if(video.volume===0)video.volume=1;
-          video.currentTime=0;
-          sync();play();
+          start(true);
+          sync();
         });
-        video.addEventListener('volumechange',sync);
-        ['pointerdown','keydown'].forEach(type=>video.addEventListener(type,()=>{manual=true}));
-        const showError=()=>{button.hidden=true;section.querySelector('[data-video-error]').hidden=false};
+        ['play','pause','ended','volumechange'].forEach(type=>video.addEventListener(type,sync));
+        video.addEventListener('playing',()=>{message.hidden=true;sync();});
+        ['pointerdown','keydown','touchstart'].forEach(type=>video.addEventListener(type,()=>{manual=true},{passive:true}));
+        const showError=()=>{sourceFailed=true;message.hidden=false;sync();};
         video.addEventListener('error',showError);
+        video.querySelector('source').addEventListener('error',showError);
         if(video.error)showError();
         if('IntersectionObserver' in window)new IntersectionObserver(entries=>{
           if(manual||!video.muted)return;
-          if(entries.some(entry=>entry.isIntersecting)){if(!reduced.matches&&!video.ended)play()}
+          if(entries.some(entry=>entry.isIntersecting)){if(!reduced.matches&&!video.ended)start(false);}
           else if(!video.paused)video.pause();
         },{threshold:.25}).observe(video);
       })();
